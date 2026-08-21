@@ -109,32 +109,3 @@ def generos() -> dict[int, str]:
     return {g["id"]: g["name"] for g in lista}
 
 
-def melhor_resultado(consulta: str, ano: int | None = None) -> dict[str, Any] | None:
-    """Busca + detalhes do filme mais relevante.
-
-    O TMDB ja ordena por popularidade, mas empurramos para cima quem tem
-    titulo praticamente identico ao que o usuario escreveu.
-    """
-    resultados = buscar_filmes(consulta, ano=ano)
-    if not resultados:
-        return None
-
-    alvo = consulta.casefold().strip()
-
-    def pontuacao(filme: dict[str, Any]) -> tuple[int, float]:
-        titulos = {
-            (filme.get("title") or "").casefold(),
-            (filme.get("original_title") or "").casefold(),
-        }
-        exato = 1 if alvo in titulos else 0
-        return (exato, filme.get("popularity", 0.0))
-
-    escolhido = max(resultados, key=pontuacao)
-    return detalhes_filme(escolhido["id"])
-
-
-def url_imagem(caminho: str | None, tamanho: str = "w500") -> str | None:
-    """Monta a URL do poster/backdrop (a API devolve so o caminho relativo)."""
-    if not caminho:
-        return None
-    return f"{config.TMDB_IMAGE_URL}/{tamanho}{caminho}"
