@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>API de Filmes (TMDB)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>API de Filmes (TMDB)</h1>
+    <div id="status" class="status status--pendente">verificando servidor...</div>
+  </header>
+
+  <main>
+    <form id="form-busca">
+      <input type="text" id="campo-titulo" placeholder="Titulo do filme (ex: matrix)" required />
+      <input type="number" id="campo-ano" placeholder="Ano (opcional)" min="1874" />
+      <button type="submit">Buscar</button>
+    </form>
+
+    <p id="mensagem" class="mensagem"></p>
+
+    <section id="resultados" class="grid"></section>
+  </main>
+
+  <div id="modal" class="modal oculto">
+    <div class="modal__conteudo">
+      <button id="fechar-modal" class="modal__fechar">&times;</button>
+      <div id="modal-corpo"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
