@@ -1,0 +1,55 @@
+[
+  {
+    "route": "/saude",
+    "params": {},
+    "http_status": 200,
+    "mode": null,
+    "results": 0,
+    "movie_id": null,
+    "interpretation": null
+  },
+  {
+    "route": "/pesquisa",
+    "params": {
+      "q": "Matrix",
+      "modo": "auto"
+    },
+    "http_status": 200,
+    "mode": "titulo",
+    "results": 20,
+    "movie_id": null,
+    "interpretation": {}
+  },
+  {
+    "route": "/pesquisa",
+    "params": {
+      "q": "drama depois de 2015 e antes de 2020 sem terror",
+      "modo": "descoberta"
+    },
+    "http_status": 200,
+    "mode": "descoberta",
+    "results": 20,
+    "movie_id": null,
+    "interpretation": {
+      "generos_incluidos": [
+        "Drama"
+      ],
+      "generos_excluidos": [
+        "Terror"
+      ],
+      "nota_minima": null,
+      "votos_minimos": null,
+      "lancado_apos": "2015-01-01",
+      "lancado_antes": "2019-12-31"
+    }
+  },
+  {
+    "route": "/filmes/603",
+    "params": {},
+    "http_status": 200,
+    "mode": null,
+    "results": 0,
+    "movie_id": 603,
+    "interpretation": null
+  }
+]

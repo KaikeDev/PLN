@@ -1,0 +1,413 @@
+{
+  "page": 1,
+  "results": [
+    {
+      "adult": false,
+      "backdrop_path": "/bVSOgrxasVJF6V71T7v2KfBRSzu.jpg",
+      "genre_ids": [
+        27,
+        878
+      ],
+      "id": 933260,
+      "title": "A Substância",
+      "original_language": "en",
+      "original_title": "The Substance",
+      "overview": "Uma estrela em declínio descobre uma substância misteriosa que lhe permite criar uma versão mais jovem e perfeita de si mesma. No entanto, o que parece ser uma solução milagrosa para recuperar sua glória logo se transforma em um pesadelo perturbador quando as consequências desta decisão começam a se manifestar de formas sombrias e irreversíveis.",
+      "popularity": 30.4743,
+      "poster_path": "/vWeOgzlhnP1sS23H3rzctGHB9Nb.jpg",
+      "release_date": "2024-09-07",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.131,
+      "vote_count": 6443
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/nAxGnGHOsfzufThz20zgmRwKur3.jpg",
+      "genre_ids": [
+        27,
+        28,
+        53
+      ],
+      "id": 1233413,
+      "title": "Pecadores",
+      "original_language": "en",
+      "original_title": "Sinners",
+      "overview": "Dispostos a deixar suas vidas conturbadas para trás, irmãos gêmeos retornam à sua cidade natal para recomeçar suas vidas do zero, quando descobrem que um mal ainda maior está à espera deles para recebê-los de volta.",
+      "popularity": 29.0572,
+      "poster_path": "/v0Ljeti537c6cNKweuEN0iaU3x4.jpg",
+      "release_date": "2025-04-16",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.512,
+      "vote_count": 5155
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/1ldfkNbf3joNG8mA6idXoEL1fZV.jpg",
+      "genre_ids": [
+        27
+      ],
+      "id": 1569947,
+      "title": "O Padre: Massacre no Dia de Ação de Graças",
+      "original_language": "en",
+      "original_title": "The Priest: Thanksgiving Massacre",
+      "overview": "Durante o Dia de Ação de Graças, um padre se vê no centro de uma onda de violência quando um massacre atinge sua comunidade. À medida que o caos se instala, ele precisa confrontar não apenas a brutalidade ao seu redor, mas também seus próprios limites de fé e sobrevivência",
+      "popularity": 25.6577,
+      "poster_path": "/gH8pWTFrJcVQv5EsLgc9XAUFfFr.jpg",
+      "release_date": "2025-08-08",
+      "softcore": false,
+      "video": false,
+      "vote_average": 3.817,
+      "vote_count": 71
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/8VyTWJrNEyV2MTWvniDVp0MpOAe.jpg",
+      "genre_ids": [
+        27,
+        9648
+      ],
+      "id": 1078605,
+      "title": "A Hora do Mal",
+      "original_language": "en",
+      "original_title": "Weapons",
+      "overview": "Quando todas as crianças de uma mesma classe, exceto uma, somem misteriosamente, na mesma noite e exatamente ao mesmo tempo, todos da cidade começam a se questionar quem ou o que está por trás deste estranho desaparecimento.",
+      "popularity": 25.364,
+      "poster_path": "/psEJSjQr6I9GSJTdW28CKC4Kffs.jpg",
+      "release_date": "2025-08-04",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.257,
+      "vote_count": 3912
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/bBQHALHRAaaORlPNXv7fNcRXYdx.jpg",
+      "genre_ids": [
+        9648,
+        53,
+        27
+      ],
+      "id": 419430,
+      "title": "Corra!",
+      "original_language": "en",
+      "original_title": "Get Out",
+      "overview": "Agora que Chris e sua namorada, Rose, chegaram à fase de conhecer os pais no namoro, ela o convida para um fim de semana no interior com Missy e Dean. A princípio, Chris acha que o comportamento excessivamente agradável dos dois como tentativas nervosas de lidar com o relacionamento inter-racial da filha, mas, conforme o fim de semana avança, uma série de descobertas cada vez mais perturbadoras o levam a uma verdade que ele jamais poderia ter imaginado.",
+      "popularity": 24.5488,
+      "poster_path": "/A0RoSZh8PEYJgDMgM2EV7Ycz3dR.jpg",
+      "release_date": "2017-02-24",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.625,
+      "vote_count": 19317
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/i2GVEvltEu3BXn5crBSxgKuTaca.jpg",
+      "genre_ids": [
+        27,
+        53
+      ],
+      "id": 614479,
+      "title": "Sobrenatural: A Porta Vermelha",
+      "original_language": "en",
+      "original_title": "Insidious: The Red Door",
+      "overview": "Josh Lambert segue para o leste para deixar seu filho, Dalton, na faculdade. Mas demônios reprimidos do passado voltam repentinamente para assombrar os dois.",
+      "popularity": 24.5442,
+      "poster_path": "/6lp4uDxLqLEw1CzW1SUOYJ3zdKD.jpg",
+      "release_date": "2023-07-05",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.521,
+      "vote_count": 2100
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/brnfCYyz8EMbBrHgmh8sCwBi5i1.jpg",
+      "genre_ids": [
+        28,
+        27,
+        53,
+        12
+      ],
+      "id": 396535,
+      "title": "Invasão Zumbi",
+      "original_language": "ko",
+      "original_title": "부산행",
+      "overview": "A Coreia do Sul decreta estado de emergência após um vírus desconhecido tomar conta do país. Algumas pessoas tentam fugir de zumbis e ficam presas em um trem-bala que está a caminho de Busan, a única cidade que não foi afetada pelo vírus.",
+      "popularity": 24.4443,
+      "poster_path": "/QqHtwk0oHYed26zra9WGQGyBSm.jpg",
+      "release_date": "2016-07-20",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.748,
+      "vote_count": 8716
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/q1r0QUf4UVTqtkxOSMnTD8RyTaL.jpg",
+      "genre_ids": [
+        27,
+        53
+      ],
+      "id": 406563,
+      "title": "Sobrenatural: A Última Chave",
+      "original_language": "en",
+      "original_title": "Insidious: The Last Key",
+      "overview": "A Doutora Elise Rainier é chamada para resolver o caso de uma assombração no Novo México, localizada justamente na casa em que ela passou a infância. Enquanto tenta resolver o caso do morador de sua antiga casa, ela será obrigada a confrontar vários fantasmas e demônios de sua infância, alguns literais. Ao lado de Specs e Tucker, Elise se depara com seu caso mais pessoal.",
+      "popularity": 23.6764,
+      "poster_path": "/bQuliBxybV8qrnuIz8ByiCyr5b6.jpg",
+      "release_date": "2018-01-03",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.281,
+      "vote_count": 3272
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/iYqSQaWDttQIQzsxg9xHyg0bttG.jpg",
+      "genre_ids": [
+        27,
+        878
+      ],
+      "id": 945961,
+      "title": "Alien: Romulus",
+      "original_language": "en",
+      "original_title": "Alien: Romulus",
+      "overview": "Enquanto vasculham as profundezas de uma estação espacial abandonada, um grupo de jovens colonizadores espaciais se depara com a forma de vida mais aterrorizante do universo.",
+      "popularity": 23.6704,
+      "poster_path": "/jB0W9tn4w07MFn7sTfqRTBLVytF.jpg",
+      "release_date": "2024-08-13",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.158,
+      "vote_count": 4871
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/1fpwEe2GvNjAq2MN2xxdifNZLBT.jpg",
+      "genre_ids": [
+        27,
+        53
+      ],
+      "id": 280092,
+      "title": "Sobrenatural: A Origem",
+      "original_language": "en",
+      "original_title": "Insidious: Chapter 3",
+      "overview": "Vítima de uma entidade sobrenatural perigosa, a adolescente Quinn Brenner busca a ajuda da médium Elise Rainier, que por meio de suas habilidades paranormais descobre a existência de um demônio com sede de almas humanas.",
+      "popularity": 23.3128,
+      "poster_path": "/6qzaF7IH9pYg2wOiOwfyf9thRkt.jpg",
+      "release_date": "2015-05-28",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.299,
+      "vote_count": 3757
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/ikaRI4yMxKOje5SmOlAhOBUnicL.jpg",
+      "genre_ids": [
+        27,
+        9648
+      ],
+      "id": 270303,
+      "title": "Corrente do Mal",
+      "original_language": "en",
+      "original_title": "It Follows",
+      "overview": "A jovem Jay leva uma vida tranquila entre escola, paqueras e passeios no lago. Após uma transa, o garoto com quem passou a noite explica que ele carregava no corpo uma força maligna, transmissível às pessoas apenas pelo sexo. Enquanto vive o dilema de carregar a sina ou passá-la adiante, a jovem começa a ser perseguida por figuras estranhas que tentam matá-la e não são vistas por mais ninguém.",
+      "popularity": 22.8915,
+      "poster_path": "/rGH9NafHyg3Of2cMY5oOVb7p4HA.jpg",
+      "release_date": "2015-02-04",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.582,
+      "vote_count": 7136
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/6WqqEjiycNvDLjbEClM1zCwIbDD.jpg",
+      "genre_ids": [
+        27,
+        53,
+        878
+      ],
+      "id": 1100988,
+      "title": "Extermínio: A Evolução",
+      "original_language": "en",
+      "original_title": "28 Years Later",
+      "overview": "Já se passaram quase três décadas desde que o vírus da raiva escapou de um laboratório de armas biológicas. Agora, sob uma quarentena rigidamente imposta, alguns conseguiram encontrar maneiras de sobreviver em meio aos infectados. Um desses grupos vive em uma pequena ilha, ligada ao continente por uma única passagem fortemente protegida. Quando um dos membros parte em uma missão rumo ao sombrio coração do continente, ele descobre segredos, maravilhas e horrores que transformaram não apenas os infectados, mas também outros sobreviventes.",
+      "popularity": 22.7844,
+      "poster_path": "/2K5LCXOqlbzRu7mWHbDnLdDQj6I.jpg",
+      "release_date": "2025-06-18",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.606,
+      "vote_count": 2938
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/hD9zZYKYb1xBgcm8XIfyvclSkjs.jpg",
+      "genre_ids": [
+        27
+      ],
+      "id": 259693,
+      "title": "Invocação do Mal 2",
+      "original_language": "en",
+      "original_title": "The Conjuring 2",
+      "overview": "Lorraine e Ed Warren ajudam uma mãe solteira a criar seus quatro filhos numa casa assombrada por espíritos malignos. Conhecido como a Amityville da Inglaterra, o Poltergeist de Enfield foi o caso mais documentado na história da paranormalidade. Descubra a verdade por trás do evento que chocou o mundo.",
+      "popularity": 22.2465,
+      "poster_path": "/dOPVzDQdRQtSan36LpLwWcfzCgu.jpg",
+      "release_date": "2016-06-08",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.295,
+      "vote_count": 9397
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/uIpJPDNFoeX0TVml9smPrs9KUVx.jpg",
+      "genre_ids": [
+        27,
+        9648
+      ],
+      "id": 574475,
+      "title": "Premonição 6: Laços de Sangue",
+      "original_language": "en",
+      "original_title": "Final Destination Bloodlines",
+      "overview": "Atormentada por um pesadelo violento recorrente, a estudante universitária Stefanie volta para casa para encontrar a única pessoa que pode quebrar o ciclo e salvar sua família do destino horrível que inevitavelmente os aguarda.",
+      "popularity": 21.8689,
+      "poster_path": "/x3J781PsdMrjenzQKM5eJXqK5Nd.jpg",
+      "release_date": "2025-05-14",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.032,
+      "vote_count": 3104
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/8LYxSH8ZJzKbS3kNIELsVc05RNH.jpg",
+      "genre_ids": [
+        27,
+        18,
+        878
+      ],
+      "id": 287424,
+      "title": "Maggie - A Transformação",
+      "original_language": "en",
+      "original_title": "Maggie",
+      "overview": "Maggie é uma adolescente que vive numa pequena cidade americana e acaba sendo contaminada por um zumbi. Mas sua transformação demora seis meses para se completar. Mesmo assim, seu pai decide continuar ao seu lado, enquanto ela deve se acostumar à sua nova personalidade monstruosa.",
+      "popularity": 21.6107,
+      "poster_path": "/2Qusc8k4d2UbryDu1lIJQqcHk3Y.jpg",
+      "release_date": "2015-05-08",
+      "softcore": false,
+      "video": false,
+      "vote_average": 5.408,
+      "vote_count": 1711
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/vHvEJwTDXFu4E2fC6a1vxdZKHND.jpg",
+      "genre_ids": [
+        27,
+        53
+      ],
+      "id": 587424,
+      "title": "Infecção",
+      "original_language": "es",
+      "original_title": "Infección",
+      "overview": "Em Caracas, um russo sob a influência da droga Krokodil está infectado com um vírus da raiva e desencadeia uma epidemia de comedores de carne. Em meio a tudo isso, um médico embarca em uma jornada hostil em uma Venezuela destruída para salvar seu filho da infecção.",
+      "popularity": 20.2637,
+      "poster_path": "/geIocq5mRL9LerAHK8vrBJmzAL4.jpg",
+      "release_date": "2019-08-11",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.72,
+      "vote_count": 198
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/nHRUtBwFNnNN70vcQ7lAsjc2T6S.jpg",
+      "genre_ids": [
+        27,
+        18,
+        878
+      ],
+      "id": 447332,
+      "title": "Um Lugar Silencioso",
+      "original_language": "en",
+      "original_title": "A Quiet Place",
+      "overview": "Em uma fazenda dos Estados Unidos, uma família do meio-oeste é perseguida por uma entidade fantasmagórica assustadora. Para se protegerem, eles devem permanecer em silêncio absoluto, a qualquer custo, pois o perigo é ativado pela percepção do som.",
+      "popularity": 20.2401,
+      "poster_path": "/jk1LYcbiuUr0tv37cVcmp4u9KcN.jpg",
+      "release_date": "2018-04-03",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.395,
+      "vote_count": 15700
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/i8MupUe4xgmYXoRNAQMYvuoexSU.jpg",
+      "genre_ids": [
+        27
+      ],
+      "id": 1038392,
+      "title": "Invocação do Mal 4: O Último Ritual",
+      "original_language": "en",
+      "original_title": "The Conjuring: Last Rites",
+      "overview": "O casal de investigadores Ed e Lorraine Warren assume um novo caso de horror sobrenatural que os força a um confronto derradeiro. Para vencer esta batalha final contra as forças malignas, eles são obrigados a encarar seus medos mais profundos, colocando suas vidas em extremo risco.",
+      "popularity": 20.0299,
+      "poster_path": "/aXpMqIPndxuDxDA3d2uoNlwc4L.jpg",
+      "release_date": "2025-09-03",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.953,
+      "vote_count": 2111
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/hpXBJxLD2SEf8l2CspmSeiHrBKX.jpg",
+      "genre_ids": [
+        18,
+        14,
+        27
+      ],
+      "id": 1062722,
+      "title": "Frankenstein",
+      "original_language": "en",
+      "original_title": "Frankenstein",
+      "overview": "Dr. Victor Frankenstein, um cientista brilhante, mas egoísta, dá vida a uma criatura em um experimento monstruoso que acaba levando à ruína tanto do criador quanto de sua trágica criação.",
+      "popularity": 19.4931,
+      "poster_path": "/rB0tZwNImTT8febX5qVycZ5YVeF.jpg",
+      "release_date": "2025-10-17",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.6,
+      "vote_count": 3833
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/gJbTXKNTL6O7r7PzF6ZRkJGBlPp.jpg",
+      "genre_ids": [
+        27,
+        9648,
+        53
+      ],
+      "id": 493922,
+      "title": "Hereditário",
+      "original_language": "en",
+      "original_title": "Hereditary",
+      "overview": "Após a morte da reclusa avó, a família Graham começa a desvendar algumas coisas. Mesmo após a partida da matriarca, ela permanece como se fosse uma sombra sobre a família, especialmente sobre a solitária neta adolescente, Charlie, por quem ela sempre manteve uma fascinação não usual. Com um crescente terror tomando conta da casa, a família explora lugares mais escuros para escapar do infeliz destino que herdaram.",
+      "popularity": 19.3114,
+      "poster_path": "/x9tUYQj6WrdVwoKimSdoMzkDABS.jpg",
+      "release_date": "2018-06-07",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.297,
+      "vote_count": 8873
+    }
+  ],
+  "total_pages": 102,
+  "total_results": 2032
+}

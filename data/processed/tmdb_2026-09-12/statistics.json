@@ -1,0 +1,1547 @@
+{
+  "unique_movies": 430,
+  "valid_overviews": 428,
+  "missing_overviews": 2,
+  "missing_overviews_percent": 0.46511627906976744,
+  "mean_characters_original": 347.4392523364486,
+  "median_characters_original": 327.0,
+  "original": {
+    "documents": 428,
+    "tokens": 25013,
+    "types": 6261,
+    "type_token_ratio": 0.25030983888378044,
+    "mean_tokens": 58.441588785046726,
+    "median_tokens": 54.0,
+    "most_frequent": [
+      [
+        "de",
+        1126
+      ],
+      [
+        "a",
+        741
+      ],
+      [
+        "e",
+        720
+      ],
+      [
+        "que",
+        680
+      ],
+      [
+        "um",
+        625
+      ],
+      [
+        "o",
+        608
+      ],
+      [
+        "uma",
+        457
+      ],
+      [
+        "para",
+        390
+      ],
+      [
+        "em",
+        331
+      ],
+      [
+        "do",
+        295
+      ],
+      [
+        "com",
+        278
+      ],
+      [
+        "se",
+        268
+      ],
+      [
+        "é",
+        254
+      ],
+      [
+        "da",
+        245
+      ],
+      [
+        "os",
+        215
+      ],
+      [
+        "seu",
+        202
+      ],
+      [
+        "sua",
+        191
+      ],
+      [
+        "por",
+        160
+      ],
+      [
+        "ele",
+        123
+      ],
+      [
+        "no",
+        113
+      ]
+    ]
+  },
+  "normalized_without_punctuation": {
+    "documents": 428,
+    "tokens": 25013,
+    "types": 5988,
+    "type_token_ratio": 0.23939551433254708,
+    "mean_tokens": 58.441588785046726,
+    "median_tokens": 54.0,
+    "most_frequent": [
+      [
+        "de",
+        1128
+      ],
+      [
+        "a",
+        807
+      ],
+      [
+        "e",
+        727
+      ],
+      [
+        "o",
+        696
+      ],
+      [
+        "que",
+        680
+      ],
+      [
+        "um",
+        674
+      ],
+      [
+        "uma",
+        476
+      ],
+      [
+        "para",
+        419
+      ],
+      [
+        "em",
+        373
+      ],
+      [
+        "com",
+        305
+      ],
+      [
+        "do",
+        295
+      ],
+      [
+        "se",
+        271
+      ],
+      [
+        "é",
+        258
+      ],
+      [
+        "da",
+        245
+      ],
+      [
+        "os",
+        242
+      ],
+      [
+        "seu",
+        203
+      ],
+      [
+        "sua",
+        198
+      ],
+      [
+        "por",
+        164
+      ],
+      [
+        "ele",
+        148
+      ],
+      [
+        "no",
+        146
+      ]
+    ]
+  },
+  "filtered": {
+    "documents": 428,
+    "tokens": 14769,
+    "types": 5921,
+    "type_token_ratio": 0.40090730584332046,
+    "mean_tokens": 34.507009345794394,
+    "median_tokens": 32.0,
+    "most_frequent": [
+      [
+        "não",
+        90
+      ],
+      [
+        "está",
+        87
+      ],
+      [
+        "ser",
+        80
+      ],
+      [
+        "após",
+        73
+      ],
+      [
+        "anos",
+        67
+      ],
+      [
+        "família",
+        67
+      ],
+      [
+        "vida",
+        66
+      ],
+      [
+        "jovem",
+        61
+      ],
+      [
+        "dois",
+        53
+      ],
+      [
+        "mundo",
+        51
+      ],
+      [
+        "casa",
+        51
+      ],
+      [
+        "agora",
+        48
+      ],
+      [
+        "amigos",
+        47
+      ],
+      [
+        "cidade",
+        45
+      ],
+      [
+        "grupo",
+        44
+      ],
+      [
+        "nova",
+        40
+      ],
+      [
+        "enquanto",
+        40
+      ],
+      [
+        "depois",
+        38
+      ],
+      [
+        "homem",
+        35
+      ],
+      [
+        "novo",
+        34
+      ]
+    ]
+  },
+  "original_languages": {
+    "en": 386,
+    "fr": 7,
+    "ja": 8,
+    "pt": 1,
+    "it": 4,
+    "es": 7,
+    "fi": 1,
+    "cn": 4,
+    "zh": 2,
+    "ru": 2,
+    "hi": 1,
+    "sr": 1,
+    "de": 1,
+    "ko": 4,
+    "pl": 1
+  },
+  "release_decades": {
+    "1990": 97,
+    "2000": 83,
+    "1980": 45,
+    "2010": 120,
+    "2020": 85
+  },
+  "genre_memberships": {
+    "35": 138,
+    "18": 137,
+    "10749": 41,
+    "878": 144,
+    "28": 134,
+    "12": 127,
+    "10402": 3,
+    "53": 94,
+    "9648": 45,
+    "80": 50,
+    "10751": 63,
+    "14": 56,
+    "16": 61,
+    "27": 120,
+    "36": 12,
+    "10752": 14,
+    "37": 4,
+    "10770": 1
+  },
+  "changed_by_cleaning": 4,
+  "slices": {
+    "genre_18_1980_1999": {
+      "movies": 40,
+      "valid_overviews": 40,
+      "filtered": {
+        "documents": 40,
+        "tokens": 1316,
+        "types": 984,
+        "type_token_ratio": 0.7477203647416414,
+        "mean_tokens": 32.9,
+        "median_tokens": 30.5,
+        "most_frequent": [
+          [
+            "está",
+            12
+          ],
+          [
+            "jovem",
+            11
+          ],
+          [
+            "não",
+            10
+          ],
+          [
+            "vida",
+            10
+          ],
+          [
+            "anos",
+            8
+          ],
+          [
+            "ser",
+            7
+          ],
+          [
+            "terra",
+            6
+          ],
+          [
+            "morte",
+            6
+          ],
+          [
+            "família",
+            6
+          ],
+          [
+            "homem",
+            6
+          ],
+          [
+            "história",
+            5
+          ],
+          [
+            "guerra",
+            5
+          ],
+          [
+            "amor",
+            5
+          ],
+          [
+            "ajuda",
+            5
+          ],
+          [
+            "dois",
+            5
+          ],
+          [
+            "crime",
+            4
+          ],
+          [
+            "prisão",
+            4
+          ],
+          [
+            "replicantes",
+            4
+          ],
+          [
+            "outros",
+            4
+          ],
+          [
+            "chefe",
+            4
+          ]
+        ]
+      }
+    },
+    "genre_18_2000_2014": {
+      "movies": 40,
+      "valid_overviews": 40,
+      "filtered": {
+        "documents": 40,
+        "tokens": 1399,
+        "types": 1034,
+        "type_token_ratio": 0.7390993566833453,
+        "mean_tokens": 34.975,
+        "median_tokens": 33.5,
+        "most_frequent": [
+          [
+            "jovem",
+            11
+          ],
+          [
+            "anos",
+            10
+          ],
+          [
+            "vida",
+            9
+          ],
+          [
+            "ser",
+            8
+          ],
+          [
+            "não",
+            8
+          ],
+          [
+            "pai",
+            6
+          ],
+          [
+            "após",
+            6
+          ],
+          [
+            "mundial",
+            6
+          ],
+          [
+            "decide",
+            5
+          ],
+          [
+            "enquanto",
+            5
+          ],
+          [
+            "filho",
+            5
+          ],
+          [
+            "segunda",
+            5
+          ],
+          [
+            "guerra",
+            5
+          ],
+          [
+            "durante",
+            5
+          ],
+          [
+            "missão",
+            5
+          ],
+          [
+            "grupo",
+            5
+          ],
+          [
+            "polícia",
+            5
+          ],
+          [
+            "logo",
+            4
+          ],
+          [
+            "mesmo",
+            4
+          ],
+          [
+            "morte",
+            4
+          ]
+        ]
+      }
+    },
+    "genre_18_2015_2025": {
+      "movies": 40,
+      "valid_overviews": 40,
+      "filtered": {
+        "documents": 40,
+        "tokens": 1316,
+        "types": 966,
+        "type_token_ratio": 0.7340425531914894,
+        "mean_tokens": 32.9,
+        "median_tokens": 30.0,
+        "most_frequent": [
+          [
+            "vida",
+            11
+          ],
+          [
+            "durante",
+            9
+          ],
+          [
+            "anos",
+            8
+          ],
+          [
+            "após",
+            8
+          ],
+          [
+            "ser",
+            8
+          ],
+          [
+            "jovem",
+            7
+          ],
+          [
+            "família",
+            7
+          ],
+          [
+            "dois",
+            7
+          ],
+          [
+            "agora",
+            6
+          ],
+          [
+            "ter",
+            6
+          ],
+          [
+            "amor",
+            6
+          ],
+          [
+            "enquanto",
+            6
+          ],
+          [
+            "relacionamento",
+            6
+          ],
+          [
+            "não",
+            6
+          ],
+          [
+            "cidade",
+            5
+          ],
+          [
+            "conhece",
+            5
+          ],
+          [
+            "história",
+            5
+          ],
+          [
+            "ainda",
+            5
+          ],
+          [
+            "nick",
+            5
+          ],
+          [
+            "mundo",
+            4
+          ]
+        ]
+      }
+    },
+    "genre_27_1980_1999": {
+      "movies": 40,
+      "valid_overviews": 39,
+      "filtered": {
+        "documents": 39,
+        "tokens": 1496,
+        "types": 1036,
+        "type_token_ratio": 0.6925133689839572,
+        "mean_tokens": 38.35897435897436,
+        "median_tokens": 36,
+        "most_frequent": [
+          [
+            "está",
+            15
+          ],
+          [
+            "ser",
+            14
+          ],
+          [
+            "após",
+            11
+          ],
+          [
+            "livro",
+            9
+          ],
+          [
+            "nova",
+            9
+          ],
+          [
+            "cidade",
+            9
+          ],
+          [
+            "não",
+            9
+          ],
+          [
+            "jovem",
+            8
+          ],
+          [
+            "grupo",
+            7
+          ],
+          [
+            "anos",
+            7
+          ],
+          [
+            "casa",
+            7
+          ],
+          [
+            "ash",
+            7
+          ],
+          [
+            "homem",
+            6
+          ],
+          [
+            "descobre",
+            6
+          ],
+          [
+            "dois",
+            6
+          ],
+          [
+            "mortos",
+            6
+          ],
+          [
+            "amigos",
+            6
+          ],
+          [
+            "mulher",
+            5
+          ],
+          [
+            "lá",
+            5
+          ],
+          [
+            "começa",
+            5
+          ]
+        ]
+      }
+    },
+    "genre_27_2000_2014": {
+      "movies": 40,
+      "valid_overviews": 40,
+      "filtered": {
+        "documents": 40,
+        "tokens": 1450,
+        "types": 998,
+        "type_token_ratio": 0.6882758620689655,
+        "mean_tokens": 36.25,
+        "median_tokens": 32.0,
+        "most_frequent": [
+          [
+            "está",
+            15
+          ],
+          [
+            "casa",
+            11
+          ],
+          [
+            "grupo",
+            11
+          ],
+          [
+            "morte",
+            10
+          ],
+          [
+            "após",
+            10
+          ],
+          [
+            "não",
+            9
+          ],
+          [
+            "família",
+            9
+          ],
+          [
+            "agora",
+            8
+          ],
+          [
+            "cidade",
+            8
+          ],
+          [
+            "amigos",
+            8
+          ],
+          [
+            "vírus",
+            7
+          ],
+          [
+            "pessoas",
+            7
+          ],
+          [
+            "começa",
+            7
+          ],
+          [
+            "humana",
+            6
+          ],
+          [
+            "estranho",
+            6
+          ],
+          [
+            "acidente",
+            6
+          ],
+          [
+            "ter",
+            6
+          ],
+          [
+            "ser",
+            6
+          ],
+          [
+            "descobrir",
+            5
+          ],
+          [
+            "local",
+            5
+          ]
+        ]
+      }
+    },
+    "genre_27_2015_2025": {
+      "movies": 40,
+      "valid_overviews": 40,
+      "filtered": {
+        "documents": 40,
+        "tokens": 1211,
+        "types": 892,
+        "type_token_ratio": 0.7365813377374071,
+        "mean_tokens": 30.275,
+        "median_tokens": 27.5,
+        "most_frequent": [
+          [
+            "família",
+            11
+          ],
+          [
+            "após",
+            8
+          ],
+          [
+            "cidade",
+            8
+          ],
+          [
+            "caso",
+            7
+          ],
+          [
+            "casa",
+            6
+          ],
+          [
+            "verdade",
+            6
+          ],
+          [
+            "jovem",
+            6
+          ],
+          [
+            "enquanto",
+            6
+          ],
+          [
+            "não",
+            6
+          ],
+          [
+            "trás",
+            5
+          ],
+          [
+            "vida",
+            5
+          ],
+          [
+            "começa",
+            5
+          ],
+          [
+            "ser",
+            5
+          ],
+          [
+            "está",
+            5
+          ],
+          [
+            "dois",
+            5
+          ],
+          [
+            "vidas",
+            5
+          ],
+          [
+            "grupo",
+            5
+          ],
+          [
+            "força",
+            4
+          ],
+          [
+            "descobre",
+            4
+          ],
+          [
+            "acaba",
+            4
+          ]
+        ]
+      }
+    },
+    "genre_35_1980_1999": {
+      "movies": 40,
+      "valid_overviews": 39,
+      "filtered": {
+        "documents": 39,
+        "tokens": 1401,
+        "types": 1035,
+        "type_token_ratio": 0.7387580299785867,
+        "mean_tokens": 35.92307692307692,
+        "median_tokens": 33,
+        "most_frequent": [
+          [
+            "dois",
+            12
+          ],
+          [
+            "vida",
+            9
+          ],
+          [
+            "polícia",
+            9
+          ],
+          [
+            "não",
+            7
+          ],
+          [
+            "família",
+            7
+          ],
+          [
+            "casa",
+            7
+          ],
+          [
+            "agora",
+            7
+          ],
+          [
+            "após",
+            7
+          ],
+          [
+            "volta",
+            6
+          ],
+          [
+            "tempo",
+            6
+          ],
+          [
+            "fazer",
+            6
+          ],
+          [
+            "ajuda",
+            6
+          ],
+          [
+            "anos",
+            5
+          ],
+          [
+            "nova",
+            5
+          ],
+          [
+            "cidade",
+            5
+          ],
+          [
+            "está",
+            5
+          ],
+          [
+            "vão",
+            5
+          ],
+          [
+            "poderes",
+            5
+          ],
+          [
+            "amigos",
+            5
+          ],
+          [
+            "consegue",
+            4
+          ]
+        ]
+      }
+    },
+    "genre_35_2000_2014": {
+      "movies": 40,
+      "valid_overviews": 40,
+      "filtered": {
+        "documents": 40,
+        "tokens": 1528,
+        "types": 1087,
+        "type_token_ratio": 0.7113874345549738,
+        "mean_tokens": 38.2,
+        "median_tokens": 35.0,
+        "most_frequent": [
+          [
+            "amigos",
+            15
+          ],
+          [
+            "não",
+            14
+          ],
+          [
+            "mundo",
+            12
+          ],
+          [
+            "ser",
+            10
+          ],
+          [
+            "anos",
+            9
+          ],
+          [
+            "casa",
+            8
+          ],
+          [
+            "dois",
+            8
+          ],
+          [
+            "faz",
+            7
+          ],
+          [
+            "onde",
+            7
+          ],
+          [
+            "shrek",
+            7
+          ],
+          [
+            "fiona",
+            7
+          ],
+          [
+            "decide",
+            6
+          ],
+          [
+            "novo",
+            6
+          ],
+          [
+            "grande",
+            6
+          ],
+          [
+            "tão",
+            6
+          ],
+          [
+            "agora",
+            6
+          ],
+          [
+            "gato",
+            6
+          ],
+          [
+            "sempre",
+            6
+          ],
+          [
+            "grupo",
+            6
+          ],
+          [
+            "vida",
+            5
+          ]
+        ]
+      }
+    },
+    "genre_35_2015_2025": {
+      "movies": 40,
+      "valid_overviews": 40,
+      "filtered": {
+        "documents": 40,
+        "tokens": 1207,
+        "types": 895,
+        "type_token_ratio": 0.7415078707539354,
+        "mean_tokens": 30.175,
+        "median_tokens": 30.0,
+        "most_frequent": [
+          [
+            "família",
+            12
+          ],
+          [
+            "está",
+            10
+          ],
+          [
+            "mundo",
+            9
+          ],
+          [
+            "não",
+            7
+          ],
+          [
+            "aventura",
+            6
+          ],
+          [
+            "novo",
+            6
+          ],
+          [
+            "faz",
+            5
+          ],
+          [
+            "ser",
+            5
+          ],
+          [
+            "thor",
+            5
+          ],
+          [
+            "vida",
+            5
+          ],
+          [
+            "descobre",
+            5
+          ],
+          [
+            "planeta",
+            5
+          ],
+          [
+            "anos",
+            4
+          ],
+          [
+            "jovem",
+            4
+          ],
+          [
+            "juntos",
+            4
+          ],
+          [
+            "precisa",
+            4
+          ],
+          [
+            "depois",
+            4
+          ],
+          [
+            "deadpool",
+            4
+          ],
+          [
+            "agora",
+            4
+          ],
+          [
+            "parte",
+            4
+          ]
+        ]
+      }
+    },
+    "genre_878_1980_1999": {
+      "movies": 40,
+      "valid_overviews": 40,
+      "filtered": {
+        "documents": 40,
+        "tokens": 1599,
+        "types": 1124,
+        "type_token_ratio": 0.7029393370856786,
+        "mean_tokens": 39.975,
+        "median_tokens": 36.0,
+        "most_frequent": [
+          [
+            "terra",
+            13
+          ],
+          [
+            "anos",
+            10
+          ],
+          [
+            "futuro",
+            9
+          ],
+          [
+            "não",
+            9
+          ],
+          [
+            "planeta",
+            9
+          ],
+          [
+            "missão",
+            8
+          ],
+          [
+            "está",
+            8
+          ],
+          [
+            "ser",
+            7
+          ],
+          [
+            "ano",
+            7
+          ],
+          [
+            "volta",
+            6
+          ],
+          [
+            "única",
+            6
+          ],
+          [
+            "angeles",
+            6
+          ],
+          [
+            "vida",
+            6
+          ],
+          [
+            "contra",
+            6
+          ],
+          [
+            "agora",
+            6
+          ],
+          [
+            "nova",
+            5
+          ],
+          [
+            "encontrar",
+            5
+          ],
+          [
+            "passado",
+            5
+          ],
+          [
+            "los",
+            5
+          ],
+          [
+            "destruir",
+            5
+          ]
+        ]
+      }
+    },
+    "genre_878_2000_2014": {
+      "movies": 40,
+      "valid_overviews": 40,
+      "filtered": {
+        "documents": 40,
+        "tokens": 1376,
+        "types": 970,
+        "type_token_ratio": 0.7049418604651163,
+        "mean_tokens": 34.4,
+        "median_tokens": 35.0,
+        "most_frequent": [
+          [
+            "não",
+            10
+          ],
+          [
+            "está",
+            9
+          ],
+          [
+            "planeta",
+            7
+          ],
+          [
+            "peter",
+            7
+          ],
+          [
+            "contra",
+            7
+          ],
+          [
+            "humanidade",
+            7
+          ],
+          [
+            "homem",
+            7
+          ],
+          [
+            "mundo",
+            7
+          ],
+          [
+            "ser",
+            6
+          ],
+          [
+            "tempo",
+            6
+          ],
+          [
+            "inimigo",
+            6
+          ],
+          [
+            "descobrir",
+            6
+          ],
+          [
+            "robôs",
+            6
+          ],
+          [
+            "humanos",
+            6
+          ],
+          [
+            "mesmo",
+            5
+          ],
+          [
+            "faz",
+            5
+          ],
+          [
+            "lado",
+            5
+          ],
+          [
+            "após",
+            5
+          ],
+          [
+            "terra",
+            5
+          ],
+          [
+            "gru",
+            5
+          ]
+        ]
+      }
+    },
+    "genre_878_2015_2025": {
+      "movies": 40,
+      "valid_overviews": 40,
+      "filtered": {
+        "documents": 40,
+        "tokens": 1163,
+        "types": 824,
+        "type_token_ratio": 0.708512467755804,
+        "mean_tokens": 29.075,
+        "median_tokens": 26.0,
+        "most_frequent": [
+          [
+            "após",
+            11
+          ],
+          [
+            "está",
+            9
+          ],
+          [
+            "planeta",
+            9
+          ],
+          [
+            "mundo",
+            8
+          ],
+          [
+            "não",
+            8
+          ],
+          [
+            "família",
+            8
+          ],
+          [
+            "ser",
+            7
+          ],
+          [
+            "anos",
+            7
+          ],
+          [
+            "deve",
+            7
+          ],
+          [
+            "peter",
+            7
+          ],
+          [
+            "vingadores",
+            6
+          ],
+          [
+            "já",
+            6
+          ],
+          [
+            "universo",
+            6
+          ],
+          [
+            "missão",
+            6
+          ],
+          [
+            "guerra",
+            5
+          ],
+          [
+            "ainda",
+            5
+          ],
+          [
+            "depois",
+            5
+          ],
+          [
+            "futuro",
+            5
+          ],
+          [
+            "proteger",
+            5
+          ],
+          [
+            "vida",
+            5
+          ]
+        ]
+      }
+    },
+    "seed_603": {
+      "movies": 1,
+      "valid_overviews": 1,
+      "filtered": {
+        "documents": 1,
+        "tokens": 47,
+        "types": 45,
+        "type_token_ratio": 0.9574468085106383,
+        "mean_tokens": 47,
+        "median_tokens": 47,
+        "most_frequent": [
+          [
+            "thomas",
+            2
+          ],
+          [
+            "sistema",
+            2
+          ],
+          [
+            "jovem",
+            1
+          ],
+          [
+            "programador",
+            1
+          ],
+          [
+            "anderson",
+            1
+          ],
+          [
+            "atormentado",
+            1
+          ],
+          [
+            "estranhos",
+            1
+          ],
+          [
+            "pesadelos",
+            1
+          ],
+          [
+            "está",
+            1
+          ],
+          [
+            "sempre",
+            1
+          ],
+          [
+            "conectado",
+            1
+          ],
+          [
+            "cabos",
+            1
+          ],
+          [
+            "imenso",
+            1
+          ],
+          [
+            "computadores",
+            1
+          ],
+          [
+            "futuro",
+            1
+          ],
+          [
+            "medida",
+            1
+          ],
+          [
+            "sonho",
+            1
+          ],
+          [
+            "repete",
+            1
+          ],
+          [
+            "começa",
+            1
+          ],
+          [
+            "desconfiar",
+            1
+          ]
+        ]
+      }
+    }
+  }
+}

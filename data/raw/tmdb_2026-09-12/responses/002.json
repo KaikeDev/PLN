@@ -1,0 +1,413 @@
+{
+  "page": 1,
+  "results": [
+    {
+      "adult": false,
+      "backdrop_path": "/v8xVDqt8uCul3c3mgx4VpGCwxJC.jpg",
+      "genre_ids": [
+        18,
+        80
+      ],
+      "id": 278,
+      "title": "Um Sonho de Liberdade",
+      "original_language": "en",
+      "original_title": "The Shawshank Redemption",
+      "overview": "Em 1946, Andy Dufresne, um banqueiro jovem e bem sucedido, tem a sua vida radicalmente modificada ao ser condenado por um crime que nunca cometeu, o homicídio de sua esposa e do amante dela. Ele é mandado para uma prisão que é o pesadelo de qualquer detento, a Penitenciária Estadual de Shawshank, no Maine. Lá ele irá cumprir a pena perpétua. Andy logo será apresentado a Warden Norton, o corrupto e cruel agente penitenciário, que usa a Bíblia como arma de controle e ao Capitão Byron Hadley que trata os internos como animais. Andy faz amizade com Ellis Boyd Redding, um prisioneiro que cumpre pena há 20 anos e controla o mercado negro da instituição.",
+      "popularity": 77.754,
+      "poster_path": "/umX3lBhHoTV7Lsci140Yr8VpXyN.jpg",
+      "release_date": "1994-09-23",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.73,
+      "vote_count": 31302
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/znCviSD3g65irVaIQjxmavpiiZE.jpg",
+      "genre_ids": [
+        80,
+        18
+      ],
+      "id": 53653,
+      "title": "Prisioneiro do Inferno",
+      "original_language": "cn",
+      "original_title": "監獄風雲",
+      "overview": "Lo Ka Yiu, um jovem designer de publicidade que foi condenado à prisão por homicídio culposo, se mete em problemas com os guardas corruptos e com os companheiros de prisão da Tríade. Chung Tin Ching, um detento veterano e mentor de Yiu, é forçado a confrontar os inimigos de seu companheiro várias vezes, até chegar ao confronto final com o chefe de segurança.",
+      "popularity": 56.134,
+      "poster_path": "/ywFyD2t6QylShE8ARjVuftS9iD4.jpg",
+      "release_date": "1987-11-13",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.0,
+      "vote_count": 109
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/xXCuto8YVp5RFqBJ7yKmVmLOWpF.jpg",
+      "genre_ids": [
+        18,
+        10749
+      ],
+      "id": 597,
+      "title": "Titanic",
+      "original_language": "en",
+      "original_title": "Titanic",
+      "overview": "Um artista pobre e uma jovem rica se conhecem e se apaixonam na fatídica jornada do Titanic, em 1912. Embora esteja noiva do arrogante herdeiro de uma siderúrgica, a jovem desafia sua família e amigos em busca do verdadeiro amor.",
+      "popularity": 42.5936,
+      "poster_path": "/As0zX43h3w6kD2NS4uVHu9HKdEh.jpg",
+      "release_date": "1997-12-18",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.9,
+      "vote_count": 27714
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/c6OLXfKAk5BKeR6broC8pYiCquX.jpg",
+      "genre_ids": [
+        18,
+        53
+      ],
+      "id": 550,
+      "title": "Clube da Luta",
+      "original_language": "en",
+      "original_title": "Fight Club",
+      "overview": "Um homem deprimido que sofre de insônia conhece um estranho vendedor de sabonetes chamado Tyler Durden. Eles formam um clube clandestino com regras rígidas onde lutam com outros homens cansados de suas vidas mundanas. Mas sua parceria perfeita é comprometida quando Marla chama a atenção de Tyler.",
+      "popularity": 37.9973,
+      "poster_path": "/mCICnh7QBH0gzYaTQChBDDVIKdm.jpg",
+      "release_date": "1999-10-15",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.437,
+      "vote_count": 32834
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/zb6fM1CX41D9rF9hdgclu0peUmy.jpg",
+      "genre_ids": [
+        18,
+        36,
+        10752
+      ],
+      "id": 424,
+      "title": "A Lista de Schindler",
+      "original_language": "en",
+      "original_title": "Schindler's List",
+      "overview": "O alemão Oskar Schindler viu na mão de obra judia uma solução barata e viável para lucrar com negócios durante a guerra. Com sua forte influência dentro do partido nazista, foi fácil conseguir as autorizações e abrir uma fábrica. O que poderia parecer uma atitude de um homem não muito bondoso, transformou-se em um dos maiores casos de amor à vida da História, pois este alemão abdicou de toda sua fortuna para salvar a vida de mais de mil judeus em plena luta contra o extermínio alemão.",
+      "popularity": 36.461,
+      "poster_path": "/jbnF7dVi8iu80zTsWAC0Om8ZYOu.jpg",
+      "release_date": "1993-12-15",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.57,
+      "vote_count": 17889
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/amZavErrjrdgDwhsIdpWxHNenIx.jpg",
+      "genre_ids": [
+        14,
+        18,
+        80
+      ],
+      "id": 497,
+      "title": "À Espera de um Milagre",
+      "original_language": "en",
+      "original_title": "The Green Mile",
+      "overview": "Milagres acontecem em lugares inesperados, mesmo no bloco de celas para o corredor da morte na Penitenciária Cold Mountain. Lá, John Coffey, um gentil e gigante prisioneiro com poderes sobrenaturais, traz um senso de espírito e humanidade aos seus guardas e colegas de cela.",
+      "popularity": 35.9003,
+      "poster_path": "/14hEqW67IiHlKpzKMLUXyktzZIV.jpg",
+      "release_date": "1999-12-10",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.506,
+      "vote_count": 19788
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/66Kn4XWhkuPkJxOJyPEx4U2CUfN.jpg",
+      "genre_ids": [
+        35,
+        18,
+        10749
+      ],
+      "id": 13,
+      "title": "Forrest Gump: O Contador de Histórias",
+      "original_language": "en",
+      "original_title": "Forrest Gump",
+      "overview": "Quarenta anos da história dos Estados Unidos, vistos pelos olhos de Forrest Gump, um rapaz com QI abaixo da média e com boas intenções. Por obra do acaso, ele consegue participar de momentos cruciais, como a Guerra do Vietnã e o Caso Watergate, mas continua pensando no seu amor de infância, Jenny Curran.",
+      "popularity": 34.4583,
+      "poster_path": "/d74WpIsH8379TIL4wUxDneRCYv2.jpg",
+      "release_date": "1994-06-23",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.462,
+      "vote_count": 30435
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/bqFxtuGNsz30HTk5mzgGs8m9Po.jpg",
+      "genre_ids": [
+        16,
+        10751,
+        18
+      ],
+      "id": 8587,
+      "title": "O Rei Leão",
+      "original_language": "en",
+      "original_title": "The Lion King",
+      "overview": "Mufasa, o Rei Leão, e a rainha Sarabi apresentam ao reino o herdeiro do trono, Simba. O recém-nascido recebe a bênção do sábio babuíno Rafiki, mas ao crescer é envolvido nas artimanhas de seu tio Scar, o invejoso e maquiavélico irmão de Mufasa, que planeja livrar-se do sobrinho e herdar o trono.",
+      "popularity": 33.07,
+      "poster_path": "/8aIvm8OaJISOpVTt7rMIh7X35G5.jpg",
+      "release_date": "1994-06-15",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.251,
+      "vote_count": 20124
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/bBiZN1epQTu3F8iFLBuMhc4TRzr.jpg",
+      "genre_ids": [
+        18
+      ],
+      "id": 10997,
+      "title": "Adeus, Minha Concubina",
+      "original_language": "zh",
+      "original_title": "霸王别姬",
+      "overview": "Em 1924, dois meninos se conhecem em uma escola de formação em ópera em Pequim. A amizade que surge entre eles durará quase 70 anos e resistirá a alguns dos momentos mais conturbados da história da China.",
+      "popularity": 31.6983,
+      "poster_path": "/gsCvaK3jYniSCBJKxKu8Qwr3jf2.jpg",
+      "release_date": "1993-01-01",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.932,
+      "vote_count": 707
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/fj0hwDJEOOHllRim2BMt5L7tbjf.jpg",
+      "genre_ids": [
+        80,
+        18,
+        28
+      ],
+      "id": 101,
+      "title": "O Profissional",
+      "original_language": "fr",
+      "original_title": "Léon",
+      "overview": "Mathilda tem apenas 12 anos de idade mas já conhece o lado obscuro da vida: seu pai abusivo guarda drogas para policiais corruptos e a mãe a negligencia. O vizinho Léon gosta de cuidar de plantas, mas é um assassino de aluguel para o gângster Tony. Quando sua família é assassinada por um agente antidrogas desonesto, Mathilda se une a um relutante Léon para aprender o negócio mortal e vingar a morte da família.",
+      "popularity": 27.2791,
+      "poster_path": "/lNyuX5XibtzRImuhACGy42jHXIs.jpg",
+      "release_date": "1994-09-14",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.292,
+      "vote_count": 16493
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/rmiG2uwcNoGFmBKMoa1pIcf514L.jpg",
+      "genre_ids": [
+        35,
+        18
+      ],
+      "id": 37165,
+      "title": "O Show de Truman: O Show da Vida",
+      "original_language": "en",
+      "original_title": "The Truman Show",
+      "overview": "Truman Burbank é um pacato vendedor de seguros que leva um vida simples com sua esposa Meryl Burbank. Porém algumas coisas ao seu redor fazem com que ele passe a estranhar sua cidade, seus supostos amigos e até sua mulher. Após conhecer a misteriosa Lauren, ele fica intrigado e acaba descobrindo que toda sua vida foi monitorada por câmeras e transmitida em rede nacional.",
+      "popularity": 25.92,
+      "poster_path": "/3mEoGWyJCZTSoYyjFD3gFd6hzU4.jpg",
+      "release_date": "1998-06-04",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.158,
+      "vote_count": 20816
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/cCvp5Sni75agCtyJkNOMapORUQV.jpg",
+      "genre_ids": [
+        28,
+        80,
+        18
+      ],
+      "id": 111,
+      "title": "Scarface",
+      "original_language": "en",
+      "original_title": "Scarface",
+      "overview": "Após receber residência permanente nos EUA em troca do assassinato de um oficial do governo cubano, Tony Montana se torna chefe do tráfico de drogas em Miami. A pressão da polícia, as guerras com cartéis colombianos e sua própria paranoia servem para alimentar as chamas de sua eventual queda.",
+      "popularity": 25.873,
+      "poster_path": "/b089YkBDJjOGDQxXkOXBR06Lz2Y.jpg",
+      "release_date": "1983-12-09",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.151,
+      "vote_count": 13405
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/gILte6Zd7m1YneIr6MVhh30S9pr.jpg",
+      "genre_ids": [
+        18,
+        80
+      ],
+      "id": 769,
+      "title": "Os Bons Companheiros",
+      "original_language": "en",
+      "original_title": "GoodFellas",
+      "overview": "A história real de Henry Hill, um garoto meio irlandês e meio siciliano do Brooklyn que é adotado por gangsters do bairro ainda jovem e sobe na hierarquia de uma família da máfia sob a orientação de Jimmy Conway.",
+      "popularity": 24.5617,
+      "poster_path": "/sTReXuaND1AjkXUfjl1gqRcuGfI.jpg",
+      "release_date": "1990-09-12",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.452,
+      "vote_count": 14736
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/6TjllWT3cGrPFyqDXurVZ3L8bBi.jpg",
+      "genre_ids": [
+        9648,
+        53,
+        18
+      ],
+      "id": 745,
+      "title": "O Sexto Sentido",
+      "original_language": "en",
+      "original_title": "The Sixth Sense",
+      "overview": "Dr. Malcolm Crowe é um conceituado psicólogo infantil, que vive atormentado pela terrível lembrança de um jovem paciente que ele não foi capaz de ajudar. Quando ele encontra Cole Sear, um garoto de 8 anos assustado e confuso, com um problema similar, Dr. Crowe procura redimir seu erro do passado, fazendo tudo que pode pelo menino. Apesar disso, Malcolm não está preparado para descobrir a verdade que aterroriza Cole.",
+      "popularity": 24.2033,
+      "poster_path": "/ds7jw0WYCd6k7hBzMnzgFsTfg96.jpg",
+      "release_date": "1999-08-06",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.954,
+      "vote_count": 13273
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/xlDUjb0Q5Dv6jPQRF5VE4IMjIy.jpg",
+      "genre_ids": [
+        18,
+        80
+      ],
+      "id": 311,
+      "title": "Era Uma Vez na América",
+      "original_language": "en",
+      "original_title": "Once Upon a Time in America",
+      "overview": "Depois de crescer no gueto judeu de Nova Iorque e se destacar no crime organizado da Era da Proibição, um gângster de idade retorna a Brooklyn para enfrentar seu passado.",
+      "popularity": 23.4224,
+      "poster_path": "/ojfEiNOBX7eqh4fDhRhNDTwb38R.jpg",
+      "release_date": "1984-05-23",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.373,
+      "vote_count": 6199
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/aC6wW62V6b0csr5iUnbOjYAqfhg.jpg",
+      "genre_ids": [
+        18,
+        53,
+        9648
+      ],
+      "id": 345,
+      "title": "De Olhos Bem Fechados",
+      "original_language": "en",
+      "original_title": "Eyes Wide Shut",
+      "overview": "Alice, uma curadora de arte, é casada com o doutor Bill Harford. Juntos formam um casal perfeito, porém depois de participarem de uma festa, Alice confessa ter tido atração e fantasias sexuais com outro homem, que também estava na festa. Os dois começam a discutir e Bill passa a se perguntar o porquê disto estar acontecendo com ele, então ele vai procurar seu amigo Nick Nightingale, que irá lhe mostrar um mundo de fantasias e jogos sexuais.",
+      "popularity": 22.5986,
+      "poster_path": "/pmU8WQ2fOdxLuYaNe1kHE2L8SlI.jpg",
+      "release_date": "1999-07-16",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.5,
+      "vote_count": 7285
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/4cd9YihTHx1j8oRdlwEa1emKiAl.jpg",
+      "genre_ids": [
+        35,
+        18
+      ],
+      "id": 81774,
+      "title": "A Iniciação",
+      "original_language": "fr",
+      "original_title": "Les Exploits d'un jeune Don Juan",
+      "overview": "O filme mostra a iniciação sexual de Roger um menino de 16 anos que passa férias em uma mansão cheia de mulheres.",
+      "popularity": 22.5134,
+      "poster_path": "/jp8LYiQzEoUuMqu2lGSZZ1A4Nsf.jpg",
+      "release_date": "1986-11-04",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.161,
+      "vote_count": 335
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/lFIXZpwwlF9hg8NM3RazaIJDuaj.jpg",
+      "genre_ids": [
+        18
+      ],
+      "id": 207,
+      "title": "Sociedade dos Poetas Mortos",
+      "original_language": "en",
+      "original_title": "Dead Poets Society",
+      "overview": "Em 1959 na Welton Academy, uma tradicional escola preparatória, um ex-aluno se torna o novo professor de literatura, mas logo seus métodos de incentivar os alunos a pensarem por si mesmos cria um choque com a ortodoxa direção do colégio, principalmente quando ele fala aos seus alunos sobre a \"Sociedade dos Poetas Mortos\".",
+      "popularity": 22.3126,
+      "poster_path": "/gMmbJEqEzupp4BYTcRkNsPDPvQE.jpg",
+      "release_date": "1989-06-02",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.296,
+      "vote_count": 12947
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/xj1Sv1xm4Y0ydBueGuf10Y9qM0O.jpg",
+      "genre_ids": [
+        18
+      ],
+      "id": 489,
+      "title": "Gênio Indomável",
+      "original_language": "en",
+      "original_title": "Good Will Hunting",
+      "overview": "Um professor do MIT descobre que um faxineiro da universidade é um gênio da matemática, e um psicólogo pouco ortodoxo ajuda o jovem a desenvolver seu potencial.",
+      "popularity": 22.1898,
+      "poster_path": "/dTe3EpJGnfUeR5swLbWv61iRyFc.jpg",
+      "release_date": "1997-12-05",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.167,
+      "vote_count": 14283
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/bdD39MpSVhKjxarTxLSfX6baoMP.jpg",
+      "genre_ids": [
+        10752,
+        18,
+        36
+      ],
+      "id": 857,
+      "title": "O Resgate do Soldado Ryan",
+      "original_language": "en",
+      "original_title": "Saving Private Ryan",
+      "overview": "Ao desembarcar na Normandia, no dia 6 de junho de 1944, o capitão Miller recebe a missão de comandar um grupo do segundo batalhão para o resgate do soldado James Ryan, caçula de quatro irmãos, dentre os quais três morreram em combate. Por ordens do chefe George C. Marshall, eles precisam procurar o soldado e garantir o seu retorno, com vida, para casa.",
+      "popularity": 21.8844,
+      "poster_path": "/hMLxNLCXRDd62acfCBn6mIyW1HU.jpg",
+      "release_date": "1998-07-24",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.233,
+      "vote_count": 17753
+    }
+  ],
+  "total_pages": 128,
+  "total_results": 2548
+}

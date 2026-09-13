@@ -1,0 +1,421 @@
+{
+  "page": 1,
+  "results": [
+    {
+      "adult": false,
+      "backdrop_path": "/4BtL2vvEufDXDP4u6xQjjQ1Y2aT.jpg",
+      "genre_ids": [
+        28,
+        80,
+        18,
+        53
+      ],
+      "id": 1419406,
+      "title": "Operação Sombra",
+      "original_language": "zh",
+      "original_title": "捕风追影",
+      "overview": "Um policial aposentado, especialista em rastreamento, é convocado de volta à ativa em Macau para desmantelar uma gangue de ladrões de alta tecnologia, colocando suas táticas tradicionais contra a tecnologia avançada, num jogo de gato e rato com uma equipe de jovens detetives de elite.",
+      "popularity": 66.0309,
+      "poster_path": "/zI4UdGnD4KMjiaGQTgF5PMiagVF.jpg",
+      "release_date": "2025-08-16",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.245,
+      "vote_count": 1383
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/7CENyUim29IEsaJhUxIGymCRvPu.jpg",
+      "genre_ids": [
+        18,
+        36
+      ],
+      "id": 872585,
+      "title": "Oppenheimer",
+      "original_language": "en",
+      "original_title": "Oppenheimer",
+      "overview": "A história do físico americano J. Robert Oppenheimer, seu papel no Projeto Manhattan e no desenvolvimento da bomba atômica durante a Segunda Guerra Mundial, e o quanto isso mudaria a história do mundo para sempre.",
+      "popularity": 41.9564,
+      "poster_path": "/uqrrZICcZFHqlNuZIR3iM1h0Rst.jpg",
+      "release_date": "2023-07-19",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.022,
+      "vote_count": 12454
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/hiKmpZMGZsrkA3cdce8a7Dpos1j.jpg",
+      "genre_ids": [
+        35,
+        53,
+        18
+      ],
+      "id": 496243,
+      "title": "Parasita",
+      "original_language": "ko",
+      "original_title": "기생충",
+      "overview": "Toda a família de Ki-taek está desempregada, vivendo num porão sujo e apertado. Uma obra do acaso faz com que o filho adolescente da família comece a dar aulas de inglês à garota de uma família rica. Fascinados com a vida luxuosa destas pessoas, pai, mãe, filho e filha bolam um plano para se infiltrarem também na família glamorosa, um a um. No entanto, os segredos e mentiras necessários à ascensão social custarão caro a todos.",
+      "popularity": 36.3011,
+      "poster_path": "/igw938inb6Fy0YVcwIyxQ7Lu5FO.jpg",
+      "release_date": "2019-05-30",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.49,
+      "vote_count": 21280
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/AaV1YIdWKnjAIAOe8UUKBFm327v.jpg",
+      "genre_ids": [
+        28,
+        18
+      ],
+      "id": 361743,
+      "title": "Top Gun: Maverick",
+      "original_language": "en",
+      "original_title": "Top Gun: Maverick",
+      "overview": "Depois de mais de 30 anos de serviço como um dos principais aviadores da Marinha, Pete \"Maverick\" Mitchell está de volta, rompendo os limites como um piloto de testes corajoso. No mundo contemporâneo das guerras tecnológicas, Maverick enfrenta drones e prova que o fator humano ainda é essencial.",
+      "popularity": 35.8434,
+      "poster_path": "/kPbuLGVSJHATkW9fX9L3h1wM0Pa.jpg",
+      "release_date": "2022-05-21",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.157,
+      "vote_count": 11526
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/jJKZaTBNenlFclQyjrnvzkRmvWE.jpg",
+      "genre_ids": [
+        16,
+        10751,
+        12,
+        18,
+        35
+      ],
+      "id": 150540,
+      "title": "Divertida Mente",
+      "original_language": "en",
+      "original_title": "Inside Out",
+      "overview": "Quando Riley, de 11 anos, se muda para uma nova cidade, suas Emoções - Alegria, Medo, Raiva, Nojinho e Tristeza trabalham juntas para ajudá-la na transição. Porém, uma série de eventos faz com que Alegria e Tristeza se envolvam em uma perigosa aventura que virará o mundo de Riley de cabeça para baixo.",
+      "popularity": 32.6097,
+      "poster_path": "/62SAZfLfzhxJWUFJvfIPMw6QUpE.jpg",
+      "release_date": "2015-06-17",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.906,
+      "vote_count": 23870
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/gNdLJU9TxrpGx4dkZidjys3fyy0.jpg",
+      "genre_ids": [
+        878,
+        18
+      ],
+      "id": 335984,
+      "title": "Blade Runner 2049",
+      "original_language": "en",
+      "original_title": "Blade Runner 2049",
+      "overview": "Trinta anos após os acontecimentos do primeiro filme, um novo blade runner, o oficial K da polícia de Los Angeles, desenterra um segredo há muito enterrado que tem o potencial de mergulhar o que resta da sociedade no caos. A descoberta de K o leva a uma busca para encontrar Rick Deckard, um ex-blade runner do LAPD que está desaparecido há 30 anos.",
+      "popularity": 31.49,
+      "poster_path": "/49pANIZXRAdHUiWjjBv4vxPeqRC.jpg",
+      "release_date": "2017-10-04",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.605,
+      "vote_count": 15648
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/rlay2M5QYvi6igbGcFjq8jxeusY.jpg",
+      "genre_ids": [
+        80,
+        53,
+        18
+      ],
+      "id": 475557,
+      "title": "Coringa",
+      "original_language": "en",
+      "original_title": "Joker",
+      "overview": "Isolado, intimidado e desconsiderado pela sociedade, o fracassado comediante Arthur Fleck inicia seu caminho como uma mente criminosa após assassinar três homens em pleno metrô. Sua ação inicia um movimento popular contra a elite de Gotham City, da qual Thomas Wayne é seu maior representante.",
+      "popularity": 31.1249,
+      "poster_path": "/xLxgVxFWvb9hhUyCDDXxRPPnFck.jpg",
+      "release_date": "2019-10-01",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.116,
+      "vote_count": 28287
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/ruXhaYwgUGAzpLN3GfbG032ETaw.jpg",
+      "genre_ids": [
+        18
+      ],
+      "id": 299710,
+      "title": "Aos 14",
+      "original_language": "fr",
+      "original_title": "À 14 ans",
+      "overview": "As vidas e as aventuras turbulentas de um bando de adolescentes de catorze anos, através dos olhos de três jovens garotas - Sarah, Jade e Louise - com um último ano antes do ensino médio.",
+      "popularity": 29.849,
+      "poster_path": "/l8st7M90EBpGz5CpL12SFvswc56.jpg",
+      "release_date": "2015-02-25",
+      "softcore": false,
+      "video": false,
+      "vote_average": 4.1,
+      "vote_count": 65
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/lkDYN0whyE82mcM20rwtwjbniKF.jpg",
+      "genre_ids": [
+        28,
+        18
+      ],
+      "id": 911430,
+      "title": "F1: O Filme",
+      "original_language": "en",
+      "original_title": "F1",
+      "overview": "Sonny Hayes, a lenda do automobilismo, é persuadido a deixar a aposentadoria para liderar uma equipe de Fórmula 1 em dificuldades—e ser mentor de um jovem piloto famoso—enquanto busca mais uma oportunidade de glória.",
+      "popularity": 29.746,
+      "poster_path": "/fMcY5hpVZQ0cLKHvFM1mo6GrAr0.jpg",
+      "release_date": "2025-06-25",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.82,
+      "vote_count": 4634
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/oz4U9eA6ilYf1tyiVuGmkftdLac.jpg",
+      "genre_ids": [
+        18,
+        10749,
+        53
+      ],
+      "id": 1010581,
+      "title": "Minha Culpa",
+      "original_language": "es",
+      "original_title": "Culpa mía",
+      "overview": "Noah é obrigada a mudar de cidade, deixando seus amigos e namorado para trás, após sua mãe se casar com um novo marido rico. Lá ela conhece Nick, seu novo meio-irmão, e os dois se apaixonam loucamente, vivendo um grande romance proibido.",
+      "popularity": 29.0995,
+      "poster_path": "/a59iGvF609yAZ5tfZUoQ3XipeQH.jpg",
+      "release_date": "2023-06-08",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.726,
+      "vote_count": 4188
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/xwgBHC2FgoIrQitl8jZwXXdsR9u.jpg",
+      "genre_ids": [
+        35,
+        18,
+        53
+      ],
+      "id": 466272,
+      "title": "Era Uma Vez em… Hollywood",
+      "original_language": "en",
+      "original_title": "Once Upon a Time... in Hollywood",
+      "overview": "Los Angeles, 1969. O astro de TV Rick Dalton, um ator em dificuldades especializado em faroestes, e o dublê Cliff Booth, seu melhor amigo, tentam sobreviver em uma indústria cinematográfica em constante mudança. Dalton é vizinho da jovem e promissora atriz e modelo Sharon Tate, que acaba de se casar com o prestigiado diretor polonês Roman Polanski.",
+      "popularity": 28.0279,
+      "poster_path": "/zgr02U2Fh0sR5JtaAXY5yBU1wka.jpg",
+      "release_date": "2019-07-24",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.42,
+      "vote_count": 15219
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/8gBOpyW6iTDGZJR93YuF3L7dDuI.jpg",
+      "genre_ids": [
+        18,
+        10770
+      ],
+      "id": 441168,
+      "title": "Aluna Exemplar e Estrela Pornô",
+      "original_language": "en",
+      "original_title": "From Straight A's to XXX",
+      "overview": "Miriam Weeks, também conhecida como Belle Knox, ganhou notoriedade por estrelar em filmes pornográficos para pagar suas despesas na Duke University. Uma decisão que mudou sua vida para sempre.",
+      "popularity": 25.4537,
+      "poster_path": "/7o7qmymPy1D9mASODsrOHq41Fye.jpg",
+      "release_date": "2017-02-11",
+      "softcore": false,
+      "video": false,
+      "vote_average": 5.9,
+      "vote_count": 171
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/hmZnqijPaaACjenDkrbWcCmcADI.jpg",
+      "genre_ids": [
+        18
+      ],
+      "id": 549509,
+      "title": "O Brutalista",
+      "original_language": "en",
+      "original_title": "The Brutalist",
+      "overview": "Fugindo da Europa pós-guerra, um arquiteto visionário chega à América para reconstruir sua vida, carreira e casamento. Sozinho em um novo país estranho, ele se estabelece na Pensilvânia, onde um rico e proeminente industrial reconhece seu talento.",
+      "popularity": 25.3575,
+      "poster_path": "/52iVP3AtNtpjFiBxlOYCUPXhr47.jpg",
+      "release_date": "2024-12-20",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.928,
+      "vote_count": 1806
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/clFFCapyGpE7KD4Jsu5pUbFBZF4.jpg",
+      "genre_ids": [
+        28,
+        53,
+        18
+      ],
+      "id": 359410,
+      "title": "Matador de Aluguel",
+      "original_language": "en",
+      "original_title": "Road House",
+      "overview": "Um ex lutador de UFC aceita um trabalho como segurança em uma taberna em Florida Keys, apenas para descobrir que este não é o paraíso que parecia ser.",
+      "popularity": 25.1798,
+      "poster_path": "/h2xDLj6CtzItwQEFyBjIXh5z3QD.jpg",
+      "release_date": "2024-03-08",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.944,
+      "vote_count": 3224
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/70AV2Xx5FQYj20labp0EGdbjI6E.jpg",
+      "genre_ids": [
+        53,
+        80,
+        18
+      ],
+      "id": 637649,
+      "title": "Infiltrado",
+      "original_language": "en",
+      "original_title": "Wrath of Man",
+      "overview": "Harry, conhecido apenas como H, é um homem misterioso que trabalha para uma empresa de carros-fortes e movimenta grandes quantias de dinheiro pela cidade de Los Angeles. Quando, ao impedir um assalto, ele surpreende a todos com suas habilidades de combate, suas verdadeiras intenções começam a ser questionadas e um plano maior é revelado.",
+      "popularity": 24.981,
+      "poster_path": "/rNz8wy63GAabztAUkO4xMGk3upx.jpg",
+      "release_date": "2021-04-22",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.571,
+      "vote_count": 6290
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/lzMS0CI3FLQYC5EgJoWeIaEt0lm.jpg",
+      "genre_ids": [
+        878,
+        18,
+        12
+      ],
+      "id": 286217,
+      "title": "Perdido em Marte",
+      "original_language": "en",
+      "original_title": "The Martian",
+      "overview": "O astronauta Mark Watney é enviado a uma missão em Marte. Após uma severa tempestade ele é dado como morto, abandonado pelos colegas e acorda sozinho no misterioso planeta com escassos suprimentos, sem saber como reencontrar os companheiros ou retornar à Terra.",
+      "popularity": 24.7987,
+      "poster_path": "/fG3S4zdgnsaF77tJGK3rA9tHBu4.jpg",
+      "release_date": "2015-09-30",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.707,
+      "vote_count": 21788
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/4mlS1MitcOqdPLhxEFyk9Qwf5rr.jpg",
+      "genre_ids": [
+        16,
+        18,
+        10751,
+        12
+      ],
+      "id": 260514,
+      "title": "Carros 3",
+      "original_language": "en",
+      "original_title": "Cars 3",
+      "overview": "Durante mais uma disputa eletrizante nas pistas, o campeão Relâmpago McQueen acelerou demais e acabou perdendo o controle. Agora, após ter capotando várias vezes e quase ter partido dessa para melhor, o vermelhinho vai ter sua vida alterada para sempre. O acidente foi tão grave que, com os estragos, McQueen pode ter que se aposentar de vez.",
+      "popularity": 24.5341,
+      "poster_path": "/oEmdfjqQnAWe1t23WiiW0icFhGv.jpg",
+      "release_date": "2017-06-15",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.866,
+      "vote_count": 6567
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/mMtUybQ6hL24FXo0F3Z4j2KG7kZ.jpg",
+      "genre_ids": [
+        16,
+        10749,
+        18
+      ],
+      "id": 372058,
+      "title": "Your Name.",
+      "original_language": "ja",
+      "original_title": "君の名は。",
+      "overview": "Mitsuha é a filha do prefeito de uma pequena cidade, mas sonha em tentar a sorte em Tóquio. Taki trabalha em um restaurante em Tóquio e deseja largar o seu emprego. Os dois não se conhecem, mas estão conectados pelas imagens de seus sonhos.",
+      "popularity": 24.2537,
+      "poster_path": "/bMOKAjTU1TNUjRSF7icldbii06u.jpg",
+      "release_date": "2016-07-01",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.486,
+      "vote_count": 12974
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/zBG5Mg29NH9xxpWMMG7BIvKwYhL.jpg",
+      "genre_ids": [
+        10749,
+        18
+      ],
+      "id": 829557,
+      "title": "365 Dias: Hoje",
+      "original_language": "pl",
+      "original_title": "365 dni: Ten dzień",
+      "overview": "Em 365 Dias: Hoje, após os acontecimentos de 365 Dias, Laura Biel se casa com Don Massimo, o chefe da máfia siciliana que a sequestrou. Sua vida parece um conto de fadas: ela tem um marido amoroso, uma casa linda e um bebê a caminho. Mas Massimo tem muitos inimigos, e eles sabem que a melhor maneira de lhe causar dor é ferir aqueles que ama. Depois de um mal-entendido conjugal, Laura e sua melhor amiga, Olga, fogem da Sicília para a Polônia natal. Mas sem a proteção do marido, Laura é sequestrada por Marcelo \"Nacho\" Matos, filho do chefe da máfia rival, e levada para as Ilhas Canárias pela máfia espanhola. Agora Massimo moverá qualquer montanha para resgatá-la. Mas o que o chefe da máfia siciliana não espera é que Laura começa a ter sentimentos pelo seu raptor, lindo e extremamente perigoso, enquanto é mantida refém.",
+      "popularity": 24.0411,
+      "poster_path": "/3104lH1U1XfUXo0ZLawnIjXS0NC.jpg",
+      "release_date": "2022-04-26",
+      "softcore": false,
+      "video": false,
+      "vote_average": 5.946,
+      "vote_count": 1872
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/acvE3RWjDLgvbL2RtcyzkrsAyNV.jpg",
+      "genre_ids": [
+        80,
+        36,
+        18
+      ],
+      "id": 466420,
+      "title": "Assassinos da Lua das Flores",
+      "original_language": "en",
+      "original_title": "Killers of the Flower Moon",
+      "overview": "Na década de 1920, em Oklahoma, o povo da tribo Osage começa a ser assassinado após petróleo ser descoberto sob suas terras. O mistério começa a ser investigado por uma organização que ficaria conhecida como FBI.",
+      "popularity": 22.5456,
+      "poster_path": "/kBLMPD5BCmcrHKIhjZ86uWHZG5K.jpg",
+      "release_date": "2023-10-18",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.39,
+      "vote_count": 4323
+    }
+  ],
+  "total_pages": 281,
+  "total_results": 5612
+}

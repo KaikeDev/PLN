@@ -1,0 +1,425 @@
+{
+  "page": 2,
+  "results": [
+    {
+      "adult": false,
+      "backdrop_path": "/oHBhHoNe59VH6bUMazDtJmWOFSS.jpg",
+      "genre_ids": [
+        878,
+        27,
+        28
+      ],
+      "id": 940721,
+      "title": "Godzilla Minus One",
+      "original_language": "ja",
+      "original_title": "ゴジラ-1.0",
+      "overview": "Em um Japão social e economicamente devastado após o término da Segunda Guerra Mundial, a situação chega a um nível ainda mais crítico quando uma gigantesca e misteriosa criatura surge do mar para assolar o país.",
+      "popularity": 18.9792,
+      "poster_path": "/9XSOyim1pivuSHQqlrDj5gj2J5w.jpg",
+      "release_date": "2023-11-03",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.596,
+      "vote_count": 3399
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/5mzr6JZbrqnqD8rCEvPhuCE5Fw2.jpg",
+      "genre_ids": [
+        28,
+        878,
+        27
+      ],
+      "id": 615656,
+      "title": "Megatubarão 2",
+      "original_language": "en",
+      "original_title": "Meg 2: The Trench",
+      "overview": "Um mergulho exploratório nas profundezas do oceano de uma ousada equipe de pesquisa se transforma em caos quando uma operação de mineração malévola ameaça sua missão e os força a uma batalha de alto risco pela sobrevivência.",
+      "popularity": 18.6792,
+      "poster_path": "/x3uhIodq56mlGBwpDTZ52trGb35.jpg",
+      "release_date": "2023-08-02",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.363,
+      "vote_count": 4106
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/p26c040MErns7DJYhisa1CpVB5i.jpg",
+      "genre_ids": [
+        27,
+        9648,
+        53
+      ],
+      "id": 423108,
+      "title": "Invocação do Mal 3: A Ordem do Demônio",
+      "original_language": "en",
+      "original_title": "The Conjuring: The Devil Made Me Do It",
+      "overview": "Um dos casos mais sensacionais de seus arquivos começa com a luta pela alma de um garoto e depois os leva para além de qualquer coisa que já tenham visto. Esse caso marcou a primeira vez na história dos Estados Unidos em que um suspeito de assassinato alegou possessão demoníaca como defesa.",
+      "popularity": 18.6619,
+      "poster_path": "/fNu88PdpStJGe09AUYmqTn6NEXB.jpg",
+      "release_date": "2021-05-25",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.338,
+      "vote_count": 6697
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/iR79ciqhtaZ9BE7YFA1HpCHQgX4.jpg",
+      "genre_ids": [
+        27,
+        9648
+      ],
+      "id": 1100782,
+      "title": "Sorria 2",
+      "original_language": "en",
+      "original_title": "Smile 2",
+      "overview": "Prestes a embarcar em uma nova turnê mundial, a sensação pop global Skye Riley (Naomi Scott) começa a vivenciar acontecimentos cada vez mais aterrorizantes e inexplicáveis. Sobrecarregada pelos horrores crescentes e pelas pressões da fama, Skye é forçada a encarar o passado sombrio para retomar o controle de sua vida antes que ela saia do controle.",
+      "popularity": 18.4593,
+      "poster_path": "/ypHiYvSJmHIyRDRiosZuE595uir.jpg",
+      "release_date": "2024-10-16",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.588,
+      "vote_count": 2325
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/2dlt9I2ga6hweywz9zsFUz1PVii.jpg",
+      "genre_ids": [
+        878,
+        53,
+        27
+      ],
+      "id": 604079,
+      "title": "A Longa Marcha: Caminhe ou Morra",
+      "original_language": "en",
+      "original_title": "The Long Walk",
+      "overview": "Um grupo de adolescentes compete em uma competição anual conhecida como \"A Longa Marcha\", onde eles devem manter uma certa velocidade de caminhada ou levar um tiro.",
+      "popularity": 18.2463,
+      "poster_path": "/qE0XKOHZvXtiM4aBLlTPUVZiIc5.jpg",
+      "release_date": "2025-09-10",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.873,
+      "vote_count": 1914
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/co7oxvpWxgd6FZU24DnljDDHYQA.jpg",
+      "genre_ids": [
+        27,
+        878,
+        53
+      ],
+      "id": 1064028,
+      "title": "Alice: Subservience",
+      "original_language": "en",
+      "original_title": "Subservience",
+      "overview": "Um pai de família compra uma robô com inteligência artificial para auxiliar nos afazeres domésticos. No entanto, todos seus planos mudam quando a ferramenta acaba adquirindo consciência, com consequências devastadoras.",
+      "popularity": 18.0685,
+      "poster_path": "/6EO0cjZt2vzAOmuDJZGED6GQmi4.jpg",
+      "release_date": "2024-08-15",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.65,
+      "vote_count": 1107
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/cjZ7No0DX2L3ielLSoUOMYPw7C.jpg",
+      "genre_ids": [
+        27,
+        35
+      ],
+      "id": 1124620,
+      "title": "O Macaco",
+      "original_language": "en",
+      "original_title": "The Monkey",
+      "overview": "Dois irmãos gêmeos encontram um macaco de brinquedo que pertenceu ao seu pai. Quando percebem coisas sinistras acontecendo à sua volta, os dois se desfazem do boneco e seguem com suas vidas. Após anos afastados, eventos terríveis começam a se desdobrar e os irmãos precisam se reunir para destruir o brinquedo antes que todos que amam morram.",
+      "popularity": 17.9316,
+      "poster_path": "/2jME1L29XGE3T4f0zUHgpiKsPrV.jpg",
+      "release_date": "2025-02-10",
+      "softcore": false,
+      "video": false,
+      "vote_average": 5.97,
+      "vote_count": 1447
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/k6ANeyxAfMRi5xhxIXv1Scn9vc2.jpg",
+      "genre_ids": [
+        27,
+        53,
+        80
+      ],
+      "id": 934433,
+      "title": "Pânico VI",
+      "original_language": "en",
+      "original_title": "Scream VI",
+      "overview": "Sam, Tara, Chad e Mindy, os quatro sobreviventes do massacre realizado pelo Ghostface, decidem deixar Woodsboro para trás em busca de um novo começo em uma cidade diferente. Mas não demora muito para eles se tornarem alvo de um novo serial killer mascarado.",
+      "popularity": 17.7722,
+      "poster_path": "/aKmjs235LlPInyqhITgCHbSTacf.jpg",
+      "release_date": "2023-03-08",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.927,
+      "vote_count": 3319
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/be5SIsRGMckO8tU9lrLcIik70Dy.jpg",
+      "genre_ids": [
+        27,
+        14,
+        10749
+      ],
+      "id": 1246049,
+      "title": "Drácula - Uma História de Amor Eterno",
+      "original_language": "fr",
+      "original_title": "Dracula",
+      "overview": "No século XV, o príncipe Vlad II perde o seu amor, a princesa Elisabeta. Tomado pela dor, rejeita a Deus e herda uma maldição eterna: vira o Conde Drácula, um vampiro condenado a vagar pelos séculos na esperança de reencontrar a amada.",
+      "popularity": 17.6328,
+      "poster_path": "/eypGGvlpSiEpbeGkczyJCKboS4F.jpg",
+      "release_date": "2025-07-30",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.246,
+      "vote_count": 1473
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/cMnVmutb5mVgIBeiMOncAbwNjvG.jpg",
+      "genre_ids": [
+        27
+      ],
+      "id": 439079,
+      "title": "A Freira",
+      "original_language": "en",
+      "original_title": "The Nun",
+      "overview": "Presa em um convento na Romênia, uma freira comete suicídio. Para investigar o caso, o Vaticano envia um padre assombrado e uma noviça prestes a se tornar freira. Arriscando suas vidas, a fé e até suas almas, os dois descobrem um segredo profano e se confrontam com uma força do mal que toma a forma de uma freira demoníaca e transforma o convento em um campo de batalha.",
+      "popularity": 17.583,
+      "poster_path": "/8RkHWJFDuzm0mrsJUxTbPTnsPe7.jpg",
+      "release_date": "2018-09-05",
+      "softcore": false,
+      "video": false,
+      "vote_average": 5.91,
+      "vote_count": 7300
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/ibKeXahq4JD63z6uWQphqoJLvNw.jpg",
+      "genre_ids": [
+        28,
+        878,
+        27
+      ],
+      "id": 345940,
+      "title": "Megatubarão",
+      "original_language": "en",
+      "original_title": "The Meg",
+      "overview": "Na fossa mais profunda do Oceano Pacífico, a tripulação de um submarino fica presa dentro do local após ser atacada por uma criatura pré-histórica que se achava estar extinta, um tubarão de mais de 20 metros de comprimento, o Megalodon. Para salvá-los, um oceanógrafo chinês contrata Jonas Taylor, um mergulhador especializado em resgates em água profundas que já encontrou com a criatura anteriormente.",
+      "popularity": 17.2601,
+      "poster_path": "/wrJkShDPK4TcV0nHix3HASEmkul.jpg",
+      "release_date": "2018-08-08",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.252,
+      "vote_count": 8374
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/aAM3cQmYGjjLQ24m0F0RWfjKQ57.jpg",
+      "genre_ids": [
+        27,
+        18,
+        9648
+      ],
+      "id": 530385,
+      "title": "Midsommar: O Mal Não Espera a Noite",
+      "original_language": "en",
+      "original_title": "Midsommar",
+      "overview": "Dani e Christian formam um jovem casal americano com um relacionamento prestes a desmoronar. Mas depois que uma tragédia familiar os mantém juntos, Dani, que está de luto, convida-se para se juntar a Christian e seus amigos em uma viagem para um festival de verão único em uma remota vila sueca. O que começa como férias despreocupadas de verão em uma terra de luz eterna toma um rumo sinistro quando os moradores do vilarejo convidam o grupo a participar de festividades que tornam o paraíso pastoral cada vez mais preocupante e visceralmente perturbador.",
+      "popularity": 17.255,
+      "poster_path": "/hR4dXPlWq5Nekwjqbp3gFGeiiZS.jpg",
+      "release_date": "2019-07-03",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.145,
+      "vote_count": 8394
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/54BOXpX2ieTXMDzHymdDMnUIzYG.jpg",
+      "genre_ids": [
+        27,
+        53
+      ],
+      "id": 1228246,
+      "title": "Five Nights at Freddy's 2",
+      "original_language": "en",
+      "original_title": "Five Nights at Freddy's 2",
+      "overview": "Um ano após o pesadelo sobrenatural na Freddy Fazbear's Pizza, as histórias sobre o que aconteceu ali foram distorcidas, transformando-se em uma lenda local exagerada, inspirando o primeiro Fazfest da cidade. Sem saber a verdade sobre o ocorrido, Abby sai escondida para se reconectar com Freddy, Bonnie, Chica e Foxy, dando início a uma aterrorizante série de eventos que revelarão segredos sombrios sobre a verdadeira origem da Freddy's e libertarão um horror há muito esquecido, escondido por décadas.",
+      "popularity": 16.9668,
+      "poster_path": "/12H82Xrr2ijDF0lJWUarqGFV7bC.jpg",
+      "release_date": "2025-12-03",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.587,
+      "vote_count": 1172
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/7bWxAsNPv9CXHOhZbJVlj2KxgfP.jpg",
+      "genre_ids": [
+        27,
+        53
+      ],
+      "id": 713704,
+      "title": "A Morte do Demônio: A Ascensão",
+      "original_language": "en",
+      "original_title": "Evil Dead Rise",
+      "overview": "Duas irmãs distantes cujo reencontro é interrompido por demônios devoradores de carne que aparecem de repente, levando-as a uma batalha primal pela sobrevivência, enfrentando a versão mais assustadora que se possa imaginar de uma família.",
+      "popularity": 16.9356,
+      "poster_path": "/pYHypEGMKtFTSQqfWC6IJFeaz1J.jpg",
+      "release_date": "2023-04-12",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.962,
+      "vote_count": 3976
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/swxhEJsAWms6X1fDZ4HdbvYBSf9.jpg",
+      "genre_ids": [
+        12,
+        35,
+        27
+      ],
+      "id": 1234731,
+      "title": "Anaconda",
+      "original_language": "en",
+      "original_title": "Anaconda",
+      "overview": "Uma crise de meia-idade inspira Doug e Griff a irem até a floresta amazônica para refazer o filme favorito da juventude, mas tudo muda quando uma anaconda gigante de verdade aparece, transformando o cenário comicamente caótico em uma situação mortal. O filme que eles estão morrendo de vontade de fazer? Pode acabar matando-os.",
+      "popularity": 16.7156,
+      "poster_path": "/hRzpf8QELtzJnMt4SiDoFUmZ9KM.jpg",
+      "release_date": "2025-12-24",
+      "softcore": false,
+      "video": false,
+      "vote_average": 5.811,
+      "vote_count": 1446
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/oJ1MIABA0WF0a7MDVQnnMvBdex8.jpg",
+      "genre_ids": [
+        27,
+        35
+      ],
+      "id": 567609,
+      "title": "Casamento Sangrento",
+      "original_language": "en",
+      "original_title": "Ready or Not",
+      "overview": "Grace acaba de se casar com o herdeiro milionário de uma família especializada em jogos de tabuleiro. Antes de realmente integrar a família, no entanto, ela é obrigada a participar de uma tradição familiar: um jogo de esconde-esconde pela mansão dos Le Domas. Aos poucos, Grace percebe que a brincadeira inocente é na verdade uma caçada sangrenta contra a recém-casada, em que todas as armas e golpes são permitidos para assassiná-la. A jovem terá a difícil missão de sobreviver aos ataques até o amanhecer.",
+      "popularity": 16.6343,
+      "poster_path": "/k5dJuAdjv1wCq2Vzj1GZfwGmLoU.jpg",
+      "release_date": "2019-08-21",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.095,
+      "vote_count": 5860
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/h2SEtzuABKmcZAnKBJ1za3kETTY.jpg",
+      "genre_ids": [
+        16,
+        35,
+        27,
+        12,
+        878,
+        10751
+      ],
+      "id": 1205229,
+      "title": "Zoopocalipse - Uma Aventura Animal",
+      "original_language": "en",
+      "original_title": "Night of the Zoopocalypse",
+      "overview": "Quando um meteoro cai no zoológico, ele transforma alguns dos animais em zumbis coloridos. Para salvar seus amigos, a jovem loba Gracie se une ao ranzinza leão-da-montanha Dan. Juntos, eles contam com a ajuda de um grupo para lá de especial: Xavier, o lêmure fã de cinema, Frida, a capivara confiante, Ash, o avestruz cheio de estilo, e Felix, um macaquinho atrapalhado. Agora, essa turma improvável precisa encontrar um jeito de salvar o zoológico e os outros animais.",
+      "popularity": 16.2901,
+      "poster_path": "/3LebEv3p6sOA9HyLGlEISYagoPF.jpg",
+      "release_date": "2025-01-23",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.745,
+      "vote_count": 100
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/zi2oYYNSSv7t44iSt5YrxHX9PYs.jpg",
+      "genre_ids": [
+        27,
+        18,
+        9648,
+        14,
+        53
+      ],
+      "id": 310131,
+      "title": "A Bruxa",
+      "original_language": "en",
+      "original_title": "The Witch",
+      "overview": "O casal William e Katherine leva uma vida cristã com suas cinco crianças em uma comunidade extremamente religiosa, até serem expulsos do local por sua fé diferente daquela permitida pelas autoridades. A família passa a morar num local isolado, à beira do bosque, sofrendo com a escassez de comida. Um dia, o bebê recém-nascido desaparece. Enquanto buscam respostas, cada membro da família descobre seus piores medos.",
+      "popularity": 16.246,
+      "poster_path": "/opuDnG7MX2eKb4s0r1a1GVJmUXE.jpg",
+      "release_date": "2016-02-19",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.003,
+      "vote_count": 7867
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/wYtEvBmpBRXPdwGgr1gcWiwJSI7.jpg",
+      "genre_ids": [
+        28,
+        27,
+        878
+      ],
+      "id": 460458,
+      "title": "Resident Evil: Bem-Vindo a Raccoon City",
+      "original_language": "en",
+      "original_title": "Resident Evil: Welcome to Raccoon City",
+      "overview": "O que já foi um dia a casa da gigante farmacêutica em expansão Umbrella Corporation, Raccoon City, é agora uma cidade agonizante do meio-oeste. O êxodo da empresa transformou a cidade em um deserto, com um grande mal fermentando escondido abaixo da superfície. Quando esse mal é libertado, um grupo de sobreviventes deve trabalhar juntos para descobrir a verdade por trás da Umbrella enquanto buscam viver por mais uma noite.",
+      "popularity": 16.2433,
+      "poster_path": "/eStYYbyaxyDMzHVkGrmkiSrMi0h.jpg",
+      "release_date": "2021-11-24",
+      "softcore": false,
+      "video": false,
+      "vote_average": 5.93,
+      "vote_count": 2780
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/sc1abgWNXc29wSBaerrjGBih06l.jpg",
+      "genre_ids": [
+        27,
+        878,
+        53
+      ],
+      "id": 1084199,
+      "title": "Acompanhante Perfeita",
+      "original_language": "en",
+      "original_title": "Companion",
+      "overview": "Josh e Iris parecem ser o casal ideal, até que um incidente mortal em uma viagem com amigos revela um segredo sombrio: Iris é uma androide criada para satisfazer Josh. E o que era para ser perfeito logo se torna incontrolável.",
+      "popularity": 15.9584,
+      "poster_path": "/7LbrEQvturE05hljvTCWST7rLQL.jpg",
+      "release_date": "2025-01-22",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.007,
+      "vote_count": 2614
+    }
+  ],
+  "total_pages": 102,
+  "total_results": 2032
+}

@@ -1,0 +1,421 @@
+{
+  "page": 2,
+  "results": [
+    {
+      "adult": false,
+      "backdrop_path": "/4DZxWNSAyksN6N3JkvpJ53Yq6zU.jpg",
+      "genre_ids": [
+        28,
+        18,
+        878
+      ],
+      "id": 263115,
+      "title": "Logan",
+      "original_language": "en",
+      "original_title": "Logan",
+      "overview": "Em um futuro próximo, um cansado Logan cuida do doente Professor Xavier em um esconderijo na fronteira mexicana. Mas as tentativas de Logan de se esconder do mundo e de seu legado são interrompidas com a chegada de uma jovem mutante, perseguida por forças sombrias.",
+      "popularity": 22.4315,
+      "poster_path": "/f0CtZbae9cXj8bkWdCHzUHx5lsR.jpg",
+      "release_date": "2017-02-28",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.82,
+      "vote_count": 20816
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/vDKRMZGFTKP9nQolzeSB1rB1w6p.jpg",
+      "genre_ids": [
+        18,
+        36,
+        10752
+      ],
+      "id": 324786,
+      "title": "Até o Último Homem",
+      "original_language": "en",
+      "original_title": "Hacksaw Ridge",
+      "overview": "Desmond T. Doss, foi o médico do Exército Americano da Segunda Guerra Mundial, que serviu durante a Batalha de Okinawa, se recusando a matar pessoas, tornando-se o primeiro homem da história americana a receber a Medalha de Honra sem disparar um tiro.",
+      "popularity": 22.2661,
+      "poster_path": "/mPnU3yKuZpmLjkVXGplhkpX31LY.jpg",
+      "release_date": "2016-10-07",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.194,
+      "vote_count": 15274
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/8LYxSH8ZJzKbS3kNIELsVc05RNH.jpg",
+      "genre_ids": [
+        27,
+        18,
+        878
+      ],
+      "id": 287424,
+      "title": "Maggie - A Transformação",
+      "original_language": "en",
+      "original_title": "Maggie",
+      "overview": "Maggie é uma adolescente que vive numa pequena cidade americana e acaba sendo contaminada por um zumbi. Mas sua transformação demora seis meses para se completar. Mesmo assim, seu pai decide continuar ao seu lado, enquanto ela deve se acostumar à sua nova personalidade monstruosa.",
+      "popularity": 21.6107,
+      "poster_path": "/2Qusc8k4d2UbryDu1lIJQqcHk3Y.jpg",
+      "release_date": "2015-05-08",
+      "softcore": false,
+      "video": false,
+      "vote_average": 5.408,
+      "vote_count": 1711
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/7IGKrY1f1KfwMipx9wZC4NRgIdF.jpg",
+      "genre_ids": [
+        18,
+        10749,
+        53
+      ],
+      "id": 216015,
+      "title": "Cinquenta Tons de Cinza",
+      "original_language": "en",
+      "original_title": "Fifty Shades of Grey",
+      "overview": "Anastasia Steele (Dakota Johnson) é uma estudante de literatura de 21 anos, recatada e virgem. Uma dia ela deve entrevistar para o jornal da faculdade o poderoso magnata Christian Grey (Jamie Dornan). Nasce uma complexa relação entre ambos: com a descoberta amorosa e sexual, Anastasia conhece os prazeres do sadomasoquismo, tornando-se o objeto de submissão do sádico Grey.",
+      "popularity": 21.3855,
+      "poster_path": "/fAfsfaRyQV5LKNvYoqlav0Gr3uC.jpg",
+      "release_date": "2015-02-11",
+      "softcore": false,
+      "video": false,
+      "vote_average": 5.859,
+      "vote_count": 12542
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/jnFmHDHmPZrQ7vyHmxXHcoxp25j.jpg",
+      "genre_ids": [
+        53,
+        18,
+        10749
+      ],
+      "id": 290098,
+      "title": "A Criada",
+      "original_language": "ko",
+      "original_title": "아가씨",
+      "overview": "Coreia do Sul, anos 1930. Durante a ocupação japonesa, a jovem Sookee é contratada para trabalhar para uma herdeira nipônica, Hideko, que leva uma vida isolada ao lado do tio autoritário. Só que Sookee guarda um segredo: ela e um vigarista planejam desposar a herdeira, roubar sua fortuna e trancafiá-la em um sanatório. Tudo corre bem com o plano, até que Sookee aos poucos começa a compreender as motivações de Hideko.",
+      "popularity": 21.2463,
+      "poster_path": "/q6ngYthHXCvA2ZubO4FHTFNRrmc.jpg",
+      "release_date": "2016-06-01",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.2,
+      "vote_count": 4480
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/8MUZz7oPXQftFTslZpRP3CVMOoq.jpg",
+      "genre_ids": [
+        18,
+        878,
+        9648
+      ],
+      "id": 329865,
+      "title": "A Chegada",
+      "original_language": "en",
+      "original_title": "Arrival",
+      "overview": "Quando seres interplanetários deixam marcas na Terra, a Dra. Louise Banks, uma linguista especialista no assunto, é procurada por militares para traduzir os sinais e desvendar se os alienígenas representam uma ameaça. No entanto, a resposta para todas as perguntas e mistérios coloca em risco  a vida de Louise e a de toda a humanidade.",
+      "popularity": 21.2023,
+      "poster_path": "/3rDwbFpn6z5HJUgDjpfhEePx8VI.jpg",
+      "release_date": "2016-11-10",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.634,
+      "vote_count": 19845
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/tOqIwliWMovSIZ9DyvHcHI7p2im.jpg",
+      "genre_ids": [
+        28,
+        12,
+        18
+      ],
+      "id": 558449,
+      "title": "Gladiador 2",
+      "original_language": "en",
+      "original_title": "Gladiator II",
+      "overview": "Anos depois de testemunhar a trágica morte do reverenciado herói Maximus nas mãos de seu tio malvado, Lucius se vê forçado a lutar no Coliseu depois que sua terra natal é conquistada por dois imperadores tirânicos, que agora governam Roma. Com o coração ardendo de raiva e o destino do Império pendurado por um fio, Lucius deve enfrentar perigos e inimigos, redescobrindo em seu passado a força e a honra necessárias para trazer a glória de Roma de volta ao seu povo.",
+      "popularity": 21.1675,
+      "poster_path": "/342bly9MqveL65TnEFzx8TTUxcL.jpg",
+      "release_date": "2024-11-13",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.593,
+      "vote_count": 4726
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/iJtsrvr9fWPpx9QO3PwuqMz58wy.jpg",
+      "genre_ids": [
+        18
+      ],
+      "id": 570508,
+      "title": "Testemunha Inocente",
+      "original_language": "ko",
+      "original_title": "증인",
+      "overview": "Soon-Ho é um advogado pobre. Ele defende uma suspeita em um caso de assassinato de um idoso por sua governanta. Enquanto trabalha no caso, Soon-Ho conhece Ji-Woo. Ela é a única testemunha no caso de assassinato e ela tem autismo.",
+      "popularity": 20.823,
+      "poster_path": "/hKOambSGr2WTWqDZiVSzYlbLrWQ.jpg",
+      "release_date": "2019-02-13",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.767,
+      "vote_count": 86
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/mxdiaM2tsx8M6W3zLgiPwAkhQfq.jpg",
+      "genre_ids": [
+        18,
+        10749
+      ],
+      "id": 744275,
+      "title": "After: Depois do Desencontro",
+      "original_language": "en",
+      "original_title": "After We Fell",
+      "overview": "Embora a história de amor entre Tessa Young e Hardin Scott tenha passado por muitas complicações, desta vez o problema é mais complexo do que nunca. Agora que Tessa tomou uma das decisões mais importantes de sua vida, tudo mudou completamente. Os segredos que vêm à tona sobre suas famílias colocam em risco seu relacionamento e seu futuro juntos. Embora a jovem saiba que Hardin a ama, os dois estão cercados de ciúme, ódio e perdão. Será que o amor entre os dois será o suficiente para manter seu relacionamento?",
+      "popularity": 20.6135,
+      "poster_path": "/us14PtA89IjtR1JOdDamamPth7e.jpg",
+      "release_date": "2021-09-01",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.996,
+      "vote_count": 2780
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/nHRUtBwFNnNN70vcQ7lAsjc2T6S.jpg",
+      "genre_ids": [
+        27,
+        18,
+        878
+      ],
+      "id": 447332,
+      "title": "Um Lugar Silencioso",
+      "original_language": "en",
+      "original_title": "A Quiet Place",
+      "overview": "Em uma fazenda dos Estados Unidos, uma família do meio-oeste é perseguida por uma entidade fantasmagórica assustadora. Para se protegerem, eles devem permanecer em silêncio absoluto, a qualquer custo, pois o perigo é ativado pela percepção do som.",
+      "popularity": 20.2401,
+      "poster_path": "/jk1LYcbiuUr0tv37cVcmp4u9KcN.jpg",
+      "release_date": "2018-04-03",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.395,
+      "vote_count": 15700
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/5En0fmDagt3Pk8d7P3uTwfeQceg.jpg",
+      "genre_ids": [
+        18,
+        35,
+        36
+      ],
+      "id": 490132,
+      "title": "Green Book: O Guia",
+      "original_language": "en",
+      "original_title": "Green Book",
+      "overview": "Quando Tony Lip, um segurança ítalo-americano, é contratado como motorista do Dr. Don Shirley, um pianista negro de classe alta, durante uma turnê pelo sul dos Estados Unidos, eles devem seguir o \"O Guia\" para leva-los aos poucos estabelecimentos que eram seguros para os afro-americanos. Confrontados com o racismo, o perigo, assim como pela humanidade e o humor inesperados, eles são forçados a deixar de lado as diferenças para sobreviver e prosperar nessa jornada.",
+      "popularity": 20.2084,
+      "poster_path": "/u9dldwRwQjTZGlIxKaAtAPLAjOv.jpg",
+      "release_date": "2018-11-16",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.223,
+      "vote_count": 13218
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/7QirCB1o80NEFpQGlQRZerZbQEp.jpg",
+      "genre_ids": [
+        10749,
+        18
+      ],
+      "id": 1156594,
+      "title": "Nossa Culpa",
+      "original_language": "es",
+      "original_title": "Culpa nuestra",
+      "overview": "O casamento de Jenna e Lion marca o tão esperado reencontro entre Noah e Nick após o término. A incapacidade de Nick de perdoar Noah é uma barreira intransponível. Ele, herdeiro dos negócios do avô, e ela, iniciando a vida profissional, evitam alimentar uma chama ainda acesa. Mas, agora que seus caminhos se cruzaram novamente, será o amor mais forte que o ressentimento?",
+      "popularity": 20.1235,
+      "poster_path": "/tPq8xqhsTYZzUGwMKuksa0eyeGZ.jpg",
+      "release_date": "2025-10-15",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.367,
+      "vote_count": 744
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/7g1zO5t0bd27Iqn5ZUDJmksOGPJ.jpg",
+      "genre_ids": [
+        18,
+        9648,
+        37
+      ],
+      "id": 273248,
+      "title": "Os Oito Odiados",
+      "original_language": "en",
+      "original_title": "The Hateful Eight",
+      "overview": "Durante uma nevasca, um carrasco, uma prisioneira, um caçador de recompensas e um homem que alega ser xerife buscam abrigo no Armazém da Minnie, onde quatro outros desconhecidos estão abrigados. Aos poucos, os oito viajantes no local começam a descobrir os segredos sangrentos uns dos outros, levando a um inevitável confronto entre eles.",
+      "popularity": 20.0637,
+      "poster_path": "/jfTo9U9OgOXODEEspNnYFuZdR1q.jpg",
+      "release_date": "2015-12-25",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.755,
+      "vote_count": 15590
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/w22GVYotTIVC1dUd58mRhwPqiS.jpg",
+      "genre_ids": [
+        18,
+        10749,
+        14
+      ],
+      "id": 402431,
+      "title": "Wicked",
+      "original_language": "en",
+      "original_title": "Wicked",
+      "overview": "Elphaba é uma jovem como outra qualquer do Reino de Oz, mas incompreendida por causa de sua pele verde incomum e por ainda não ter descoberto seu verdadeiro poder. Sua rotina é tranquila e pouco interessante, mas ao iniciar seus estudos na Universidade de Shiz, seu destino encontra Glinda, uma jovem popular e ambiciosa, nascida em berço de ouro, que só quer garantir seus privilégios e ainda não conhece sua verdadeira alma. As duas iniciam uma inesperada amizade; no entanto, suas diferenças, como o desejo de Glinda pela popularidade e poder, e a determinação de Elphaba em permanecer fiel a si mesma, entram no caminho, o que pode perpetuar no futuro de cada uma e em como as pessoas de Oz as enxergam.",
+      "popularity": 19.8883,
+      "poster_path": "/qcaKkLwIXCAxJtpetVYHniCvLZj.jpg",
+      "release_date": "2024-10-16",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.904,
+      "vote_count": 3232
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/hpXBJxLD2SEf8l2CspmSeiHrBKX.jpg",
+      "genre_ids": [
+        18,
+        14,
+        27
+      ],
+      "id": 1062722,
+      "title": "Frankenstein",
+      "original_language": "en",
+      "original_title": "Frankenstein",
+      "overview": "Dr. Victor Frankenstein, um cientista brilhante, mas egoísta, dá vida a uma criatura em um experimento monstruoso que acaba levando à ruína tanto do criador quanto de sua trágica criação.",
+      "popularity": 19.4931,
+      "poster_path": "/rB0tZwNImTT8febX5qVycZ5YVeF.jpg",
+      "release_date": "2025-10-17",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.6,
+      "vote_count": 3833
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/hEQYZq2CDB2LSJVxxlazdBOKeyW.jpg",
+      "genre_ids": [
+        37,
+        18,
+        12
+      ],
+      "id": 281957,
+      "title": "O Regresso",
+      "original_language": "en",
+      "original_title": "The Revenant",
+      "overview": "Durante uma expedição em uma selvagem região americana, o lendário explorador Hugh Glass é brutalmente atacado por um urso e deixado para morrer por membros de seu próprio grupo de caça. Em sua cruzada pela sobrevivência, Glass supera tribulações inimagináveis, bem como a traição de seu confidente John Fitzgerald. Guiado por pura determinação e pelo amor de sua família, Glass precisa superar um inverno rigoroso enquanto busca incansavelmente um motivo para seguir em frente e encontrar a redenção.",
+      "popularity": 19.4416,
+      "poster_path": "/x1jViuXsm5ZmrR6uFmxU6AVdXzs.jpg",
+      "release_date": "2015-12-25",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.541,
+      "vote_count": 19683
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/nlPCdZlHtRNcF6C9hzUH4ebmV1w.jpg",
+      "genre_ids": [
+        35,
+        18,
+        10749
+      ],
+      "id": 313369,
+      "title": "La La Land: Cantando Estações",
+      "original_language": "en",
+      "original_title": "La La Land",
+      "overview": "O pianista Sebastian conhece a atriz Mia, e os dois se apaixonam perdidamente. Em busca de oportunidades para suas carreiras na competitiva Los Angeles, os jovens tentam fazer o relacionamento amoroso dar certo, enquanto perseguem fama e sucesso.",
+      "popularity": 19.1996,
+      "poster_path": "/AvMietG6xuobpSSdmVnKuTjv4bL.jpg",
+      "release_date": "2016-12-01",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.9,
+      "vote_count": 18457
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/9ywA15OAiwjSTvg3cBs9B7kOCBF.jpg",
+      "genre_ids": [
+        18,
+        10749
+      ],
+      "id": 337167,
+      "title": "Cinquenta Tons de Liberdade",
+      "original_language": "en",
+      "original_title": "Fifty Shades Freed",
+      "overview": "Superados os principais problemas, Anastasia e Christian agora têm amor, intimidade, dinheiro, sexo, relacionamento estável e um promissor futuro. A vida, no entanto, ainda reserva surpresas para os dois e fantasmas do passado como Jack Hyde e Elena Lincoln voltam a impedir a paz do casal.",
+      "popularity": 18.7971,
+      "poster_path": "/xnaSOAq3oaAbMrsgFe9LWYGE7eP.jpg",
+      "release_date": "2018-01-17",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.7,
+      "vote_count": 8429
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/k24eZq5I3jyz4htPkZCRpnUmBzE.jpg",
+      "genre_ids": [
+        18,
+        10749
+      ],
+      "id": 1156593,
+      "title": "Sua Culpa",
+      "original_language": "es",
+      "original_title": "Culpa tuya",
+      "overview": "O amor entre Noah e Nick aparenta ser inabalável, apesar das tentativas de seus pais de separá-los. Mas o emprego dele, e a entrada dela na faculdade abrem suas vidas para novos relacionamentos. O retorno de uma ex-namorada vingativa e da mãe de Nick, com intenções obscuras, vão balançar não só o relacionamento deles, mas também de toda a família Leister. Quando tantas pessoas buscam destruir um relacionamento, será que ele consegue sobreviver?",
+      "popularity": 18.7057,
+      "poster_path": "/mdaODPyPbAwIeQwgBv7u8CMsxIl.jpg",
+      "release_date": "2024-12-26",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.09,
+      "vote_count": 1625
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/ddIkmH3TpR6XSc47jj0BrGK5Rbz.jpg",
+      "genre_ids": [
+        10752,
+        28,
+        18
+      ],
+      "id": 374720,
+      "title": "Dunkirk",
+      "original_language": "en",
+      "original_title": "Dunkirk",
+      "overview": "Durante a Segunda Guerra Mundial, em maio de 1940, cerca de 400.000 soldados britânicos, franceses e belgas viram-se cercados pelas tropas alemãs na bolsa de Dunquerque. A Operação Dínamo foi lançada para evacuar a Força Expedicionária Britânica para Inglaterra. A história segue os destinos entrelaçados de soldados, pilotos, marinheiros e civis britânicos durante a evacuação de Dunquerque.",
+      "popularity": 18.5785,
+      "poster_path": "/mXJOgvCZm4PJ9I4zEbAH3CVCjfa.jpg",
+      "release_date": "2017-07-19",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.45,
+      "vote_count": 17955
+    }
+  ],
+  "total_pages": 281,
+  "total_results": 5612
+}

@@ -1,0 +1,429 @@
+{
+  "page": 1,
+  "results": [
+    {
+      "adult": false,
+      "backdrop_path": "/8sNiAPPYU14PUepFNeSNGUTiHW.jpg",
+      "genre_ids": [
+        12,
+        18,
+        878
+      ],
+      "id": 157336,
+      "title": "Interestelar",
+      "original_language": "en",
+      "original_title": "Interstellar",
+      "overview": "As reservas naturais da Terra estão chegando ao fim e um grupo de astronautas recebe a missão de verificar possíveis planetas para receberem a população mundial, possibilitando a continuação da espécie. Cooper é chamado para liderar o grupo e aceita a missão sabendo que pode nunca mais ver os filhos. Ao lado de Brand, Jenkins e Doyle, ele seguirá em busca de um novo lar.",
+      "popularity": 59.086,
+      "poster_path": "/tR1XVa5bxgdh2bRw2u0DzrgkO2l.jpg",
+      "release_date": "2014-11-05",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.487,
+      "vote_count": 41119
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/9BBTo63ANSmhC4e6r62OJFuK2GL.jpg",
+      "genre_ids": [
+        878,
+        28,
+        12
+      ],
+      "id": 24428,
+      "title": "Os Vingadores: The Avengers",
+      "original_language": "en",
+      "original_title": "The Avengers",
+      "overview": "Loki, o irmão de Thor, ganha acesso ao poder ilimitado do cubo cósmico ao roubá-lo de dentro das instalações da S.H.I.E.L.D. Nick Fury, o diretor desta agência internacional que mantém a paz, logo reúne os únicos super-heróis que serão capazes de defender a Terra de ameaças sem precedentes. Homem de Ferro, Capitão América, Hulk, Thor, Viúva Negra e Gavião Arqueiro formam o time dos sonhos de Fury, mas eles precisam aprender a colocar os egos de lado e agir como um grupo em prol da humanidade.",
+      "popularity": 55.5512,
+      "poster_path": "/PtSapjHdDjlVcsqdEo0u7rDE6i.jpg",
+      "release_date": "2012-04-25",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.075,
+      "vote_count": 39678
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/vL5LR6WdxWPjLPFRLe133jXWsh5.jpg",
+      "genre_ids": [
+        878,
+        28,
+        12
+      ],
+      "id": 19995,
+      "title": "Avatar",
+      "original_language": "en",
+      "original_title": "Avatar",
+      "overview": "Apesar de não ter mais os movimentos da perna, o ex-fuzileiro naval Jake Sully ainda sente que pode ser um guerreiro. Sua intuição começa a se tornar realidade quando ele viaja anos-luz até a estação espacial montada no Planeta Pandora. Habitado por grandes seres azuis, os Na´vi, o local tem uma atmosfera fatal para qualquer terrestre. Por isso, oficiais criaram o programa Avatar, em que um corpo biológico, híbrido de humano e Na´vi, pode ser comandado a distância.",
+      "popularity": 54.0382,
+      "poster_path": "/lRRMQhlOLM9xgvjKKFndOmptqKR.jpg",
+      "release_date": "2009-12-16",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.609,
+      "vote_count": 34639
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/ii8QGacT3MXESqBckQlyrATY0lT.jpg",
+      "genre_ids": [
+        28,
+        878,
+        12
+      ],
+      "id": 27205,
+      "title": "A Origem",
+      "original_language": "en",
+      "original_title": "Inception",
+      "overview": "Cobb é um ladrão habilidoso que comete espionagem corporativa infiltrando-se no subconsciente de seus alvos durante o estado de sono. Impedido de retornar para sua família, ele recebe a oportunidade de se redimir ao realizar uma tarefa aparentemente impossível: plantar uma ideia na mente do herdeiro de um império. Para realizar o crime perfeito, ele conta com a ajuda do parceiro Arthur, o discreto Eames e a arquiteta de sonhos Ariadne. Juntos, eles correm para que o inimigo não antecipe seus passos.",
+      "popularity": 50.9672,
+      "poster_path": "/9e3Dz7aCANy5aRUQF745IlNloJ1.jpg",
+      "release_date": "2010-07-15",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.373,
+      "vote_count": 40158
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/zQ8AxTPiCiS5nnwXpwTBPBHSaa5.jpg",
+      "genre_ids": [
+        28,
+        878
+      ],
+      "id": 557,
+      "title": "Homem-Aranha",
+      "original_language": "en",
+      "original_title": "Spider-Man",
+      "overview": "Peter Parker é um jovem estudioso que vive com seus tios, Ben e May, desde que seus pais faleceram. Peter tem dificuldade em se relacionar com seus colegas, por ser tímido e por eles o considerarem um nerd. Até que, em uma demonstração científica, um acidente inesperado faz com que uma aranha modificada geneticamente pique Peter. A partir de então seu corpo é quimicamente alterado pela picada da aranha.",
+      "popularity": 47.3647,
+      "poster_path": "/RbZQL5hXmydecu82UHw9ZGyytB.jpg",
+      "release_date": "2002-05-01",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.354,
+      "vote_count": 21395
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/cKvDv2LpwVEqbdXWoQl4XgGN6le.jpg",
+      "genre_ids": [
+        28,
+        878,
+        12
+      ],
+      "id": 1726,
+      "title": "Homem de Ferro",
+      "original_language": "en",
+      "original_title": "Iron Man",
+      "overview": "Tony Stark é um industrial bilionário, que também é um brilhante inventor. Ao ser sequestrado ele é obrigado por terroristas a construir uma arma devastadora mas, ao invés disto, constrói uma armadura de alta tecnologia que permite que fuja de seu cativeiro. A partir de então ele passa a usá-la para combater o crime, sob o alter ego do Homem de Ferro.",
+      "popularity": 42.1093,
+      "poster_path": "/mqN7RxojEiPoh3FTSTwOtwg7KAu.jpg",
+      "release_date": "2008-04-30",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.665,
+      "vote_count": 28793
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/7lmBufEG7P7Y1HClYK3gCxYrkgS.jpg",
+      "genre_ids": [
+        12,
+        28,
+        878
+      ],
+      "id": 10138,
+      "title": "Homem de Ferro 2",
+      "original_language": "en",
+      "original_title": "Iron Man 2",
+      "overview": "Em um mundo ciente da existência do Homem de Ferro, o inventor bilionário Tony Stark sofre pressão de todos os lados para compartilhar sua tecnologia com as forças armadas. Ele resiste para divulgar os segredos de sua inigualável armadura, com medo de que estas informações caiam nas mãos erradas.",
+      "popularity": 33.8317,
+      "poster_path": "/vzROjQbgKWMVf2EldXipCcjpuBL.jpg",
+      "release_date": "2010-04-28",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.855,
+      "vote_count": 22892
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/FfAU0PUs8AJkMU2VbkVNFtRXR4.jpg",
+      "genre_ids": [
+        28,
+        12,
+        878
+      ],
+      "id": 559,
+      "title": "Homem-Aranha 3",
+      "original_language": "en",
+      "original_title": "Spider-Man 3",
+      "overview": "O relacionamento entre Peter Parker e Mary Jane parece estar dando certo, mas outros problemas começam a surgir. A roupa de Homem-Aranha torna-se preta e acaba controlando Peter, que apesar de aumentar seus poderes, revela o lado obscuro de sua personalidade. Os vilões Venon e Homem-Areia tentam destruir o super-herói.",
+      "popularity": 33.5428,
+      "poster_path": "/5831VrgpYNPEokBwxurLVpQ3twM.jpg",
+      "release_date": "2007-05-01",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.481,
+      "vote_count": 15748
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/HVcza6tJtWFrLriuh3Ano4Vt46.jpg",
+      "genre_ids": [
+        28,
+        12,
+        878
+      ],
+      "id": 1930,
+      "title": "O Espetacular Homem-Aranha",
+      "original_language": "en",
+      "original_title": "The Amazing Spider-Man",
+      "overview": "Peter Parker está tentando saber mais sobre sua origem. Ele encontra uma pasta que pertenceu ao seu pai e quer descobrir por que seus pais desapareceram. Sua busca o leva a Oscorp e ao dr. Curt Connors, que tem como alterego o letal Lagarto.",
+      "popularity": 33.0942,
+      "poster_path": "/gxSsFBCFuDhVQMCuIDoZcmHOqlY.jpg",
+      "release_date": "2012-06-23",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.761,
+      "vote_count": 19077
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/eTlcNXGv32zkVI7ZDHhfeaKHXKQ.jpg",
+      "genre_ids": [
+        28,
+        9648,
+        878,
+        53
+      ],
+      "id": 198663,
+      "title": "Maze Runner: Correr ou Morrer",
+      "original_language": "en",
+      "original_title": "The Maze Runner",
+      "overview": "Num cenário pós-apocalíptico, uma comunidade de rapazes descobre que estão presos num labirinto misterioso. Juntos, terão de descobrir como escapar, resolver o enigma e revelar o arrepiante segredo acerca de quem os colocou ali e por que razão.",
+      "popularity": 29.1496,
+      "poster_path": "/efAJzIyjYlgdO7fzfMBJcFZqI5v.jpg",
+      "release_date": "2014-09-10",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.19,
+      "vote_count": 18448
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/nYs4ZwnJBK4AgljhvzwNz7fpr3E.jpg",
+      "genre_ids": [
+        16,
+        10751,
+        878
+      ],
+      "id": 10681,
+      "title": "WALL-E",
+      "original_language": "en",
+      "original_title": "WALL·E",
+      "overview": "No ano 2800, num planeta Terra devastado e sem vida, depois de centenas de anos solitários a fazer aquilo para que foi construído - limpar o planeta de lixo - o pequeno robô WALL-E descobre uma nova missão na sua vida quando conhece uma moderna e brilhante robô exploradora chamada EVE. Os dois vão viajar pela galáxia e viver uma aventura emocionante e inesquecível.",
+      "popularity": 28.8689,
+      "poster_path": "/qNiwJPVCO4cgiM8LVtxwPV2HxHS.jpg",
+      "release_date": "2008-06-26",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.123,
+      "vote_count": 20837
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/jPu8yiadqgzwFPGKJmGo637ASVP.jpg",
+      "genre_ids": [
+        878,
+        28,
+        12
+      ],
+      "id": 1724,
+      "title": "O Incrível Hulk",
+      "original_language": "en",
+      "original_title": "The Incredible Hulk",
+      "overview": "Vivendo escondido e longe de Betty Ross, a mulher que ama, o cientista Bruce Banner busca um meio de retirar a radiação gama que está em seu sangue. Ao mesmo tempo ele precisa fugir da perseguição do general Ross, seu grande inimigo, e da máquina militar que tenta capturá-lo, na intenção de explorar o poder que faz com que Banner se transforme no Hulk.",
+      "popularity": 27.9249,
+      "poster_path": "/v1UXe9WlwkkZ5YrffUSPdYNeJz3.jpg",
+      "release_date": "2008-06-12",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.26,
+      "vote_count": 13120
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/2XSeKDmIa2KxaiJy4J9e8FrIZhk.jpg",
+      "genre_ids": [
+        16,
+        35,
+        80,
+        878,
+        10751
+      ],
+      "id": 20352,
+      "title": "Meu Malvado Favorito",
+      "original_language": "en",
+      "original_title": "Despicable Me",
+      "overview": "Um homem que adora todas as coisas diabólicas, o supervilão Gru traça um plano para roubar a lua. Rodeado de um exército de pequenos ajudantes e seu arsenal de armas e máquinas de guerra, Gru se prepara para destruir quem atravessar seu caminho. Mas ele não esperava pelo seu maior desafio: três adoráveis órfãs que querem ter Gru como pai.",
+      "popularity": 27.6545,
+      "poster_path": "/rYZzutMXxvirK9gK01iLo3Blaj3.jpg",
+      "release_date": "2010-07-08",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.26,
+      "vote_count": 16368
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/k0hlAzTryCYX1O1LyC6P8tAa8s0.jpg",
+      "genre_ids": [
+        28,
+        12,
+        878
+      ],
+      "id": 102382,
+      "title": "O Espetacular Homem-Aranha 2: A Ameaça de Electro",
+      "original_language": "en",
+      "original_title": "The Amazing Spider-Man 2",
+      "overview": "O jovem Peter Parker está fascinado com as habilidades que adquiriu como Homem-Aranha. Agora, ele precisa lidar com dois problemas: o retorno de um velho amigo, Harry Osborn, e a chegada de um vilão mais forte e poderoso, Electro.",
+      "popularity": 27.5976,
+      "poster_path": "/cyMz4OfmNqpuQ02QQOQCbGxQjwK.jpg",
+      "release_date": "2014-04-16",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.561,
+      "vote_count": 14715
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/lV1P1Q5gLDXVG1ZYCxZHStkcQC3.jpg",
+      "genre_ids": [
+        878,
+        12,
+        53
+      ],
+      "id": 131631,
+      "title": "Jogos Vorazes: A Esperança - Parte 1",
+      "original_language": "en",
+      "original_title": "The Hunger Games: Mockingjay - Part 1",
+      "overview": "Após sobreviver à temível arena dos Jogos Vorazes, Katniss Everdeen está desanimada e destruída. Depois que a Capital reduziu o Distrito 12 a destroços, ela se refugiou no Distrito 13. Peeta Mellark foi submetido a uma lavagem cerebral, e agora está sob o domínio de Snow. Então, a presidência quer que Katniss lidere uma \"resistência\" e mobilize a população em uma empreitada que irá colocá-la no centro da trama para desmascarar Snow.",
+      "popularity": 26.6927,
+      "poster_path": "/hekpVNWOROZm57RS4OLW0ySkxx9.jpg",
+      "release_date": "2014-11-19",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.815,
+      "vote_count": 16990
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/iVped1djsF0tvGkvnHbzsE3ZPTF.jpg",
+      "genre_ids": [
+        28,
+        12,
+        878
+      ],
+      "id": 68721,
+      "title": "Homem de Ferro 3",
+      "original_language": "en",
+      "original_title": "Iron Man 3",
+      "overview": "Depois de um inimigo reduzir o mundo de Tony Stark a destroços, o Homem de Ferro precisa aprender a confiar em seus instintos para proteger aqueles que ama, especialmente sua namorada, e lutar contra seu maior medo: o fracasso.",
+      "popularity": 26.2038,
+      "poster_path": "/C7MZwRTjvEy7gkWcLJeBGZFE1w.jpg",
+      "release_date": "2013-04-18",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.932,
+      "vote_count": 23853
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/3czpqXzFy5UcNuD1AubecRLWkwD.jpg",
+      "genre_ids": [
+        28,
+        12,
+        878
+      ],
+      "id": 127585,
+      "title": "X-Men: Dias de um Futuro Esquecido",
+      "original_language": "en",
+      "original_title": "X-Men: Days of Future Past",
+      "overview": "O Dr. Bolivar Trask acredita que os mutantes são uma ameaça para a humanidade. Ele desenvolve gigantescos robôs chamados Sentinelas, que perseguem impiedosamente os mutantes. Os poucos sobreviventes precisam viver escondidos. Wolverine viaja no tempo para procurar os jovens Xavier e Magneto e impedir que eles sejam caçados e aniquilados no futuro.",
+      "popularity": 24.9403,
+      "poster_path": "/cAGrjXVQoNyqHgxPoXr68JGqmp0.jpg",
+      "release_date": "2014-05-15",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.535,
+      "vote_count": 16636
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/sFEYsEfzTx7hhjetlNrme8B5OUo.jpg",
+      "genre_ids": [
+        28,
+        53,
+        878
+      ],
+      "id": 752,
+      "title": "V de Vingança",
+      "original_language": "en",
+      "original_title": "V for Vendetta",
+      "overview": "Após uma guerra mundial, a Inglaterra é ocupada por um governo fascista e vive sob um regime totalitário. Na luta pela liberdade, um vigilante, conhecido apenas como V, utiliza-se de táticas terroristas para enfrentar os opressores da sociedade. V salva uma jovem chamada Evey da polícia secreta e encontra nela uma nova aliada em busca de liberdade e justiça para o seu país.",
+      "popularity": 24.6185,
+      "poster_path": "/Awk4uagfl0wz6WiqlCitfswHwcT.jpg",
+      "release_date": "2006-02-23",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.897,
+      "vote_count": 15913
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/yaExZh6qE2cfyK3o4kAMEq0mkgy.jpg",
+      "genre_ids": [
+        18,
+        9648,
+        878
+      ],
+      "id": 1124,
+      "title": "O Grande Truque",
+      "original_language": "en",
+      "original_title": "The Prestige",
+      "overview": "No século 19, em Londres, dois amigos ilusionistas e mágicos, Alfred Borden e Rupert Angier, acabam construindo uma rivalidade, uma batalha por supremacia, que se estende ao longo dos anos e que se transforma em obsessão, cujos resultados serão inevitavelmente trágicos.",
+      "popularity": 23.4878,
+      "poster_path": "/4AUW2bGbQjWACUREckGJWXmyF0d.jpg",
+      "release_date": "2006-10-19",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.211,
+      "vote_count": 18099
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/tY98hSDUlDqfgjSI6dInHiytoKH.jpg",
+      "genre_ids": [
+        53,
+        878,
+        9648
+      ],
+      "id": 45612,
+      "title": "Contra o Tempo",
+      "original_language": "en",
+      "original_title": "Source Code",
+      "overview": "Um soldado assume a mente de um homem nos últimos oito minutos de sua vida, antes da explosão de um trem. Sua missão é voltar diversas vezes ao mesmo momento e descobrir quem plantou a bomba e como impedir a tragédia.",
+      "popularity": 23.2437,
+      "poster_path": "/ovBAZ3QIOwX64yVafnSdXjRpcya.jpg",
+      "release_date": "2011-03-30",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.312,
+      "vote_count": 9393
+    }
+  ],
+  "total_pages": 53,
+  "total_results": 1053
+}

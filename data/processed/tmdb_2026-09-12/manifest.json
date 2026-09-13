@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-09-12T21:10:43.354045+00:00",
+  "collection_status": "complete",
+  "source_movies_sha256": "d8a2a3ab3460cad0487438fab4424341be4b7cd0487e169c1ae17381809ce60e",
+  "collection_manifest_sha256": "b8d97f965b3838285671220dd358ad7e68fbaf8590466684a0568ab8159dda77",
+  "source_identity": {
+    "source_sha256": {
+      "__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "api/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "api/router.py": "cc59ea20826f41ccf9b867b37edf29e50066ac8ab860a1764820f6c9ed8e4655",
+      "api/routes/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "api/routes/filmes.py": "696643f610c42ea9d2e2b040f53819c6aac9c004620d35ea27824d87305b20db",
+      "api/routes/health.py": "9fdfdb284656341c292bfe0b3a9c3f933e86523883141fbe157a6ec1632bcd73",
+      "core/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "core/config.py": "d2b4619eca92f6a6f115ad0706c5990ecf5b86bafcc6e964b728caa9ed1f69be",
+      "corpus/__init__.py": "00554ce91b85b78f33077c4b96375cbc03c69592d21f7f679fb90249f832b231",
+      "corpus/__main__.py": "cced3be84b3495ee0f1e5f76341c43b2653d3bbe502b8d60507eefe7b5442790",
+      "corpus/collect.py": "baf40f98710256cf3285740128cfc3a36ec80279cfd5152fa392bf2c2f1fbe37",
+      "corpus/io.py": "4d47fbb1b78a6f29021cbec82fdff095570d2bee0b2e13322c1e11893062e2bf",
+      "corpus/process.py": "143bbfb67125c85ff67568ed9d8fa120187ddacb8593bd7cfea7d52c8a2e810e",
+      "corpus/transform.py": "40fc9b2976d9eee1bff4d4fa6d0058f7e13d05e713d99bcce0ed2294e911de1f",
+      "exceptions/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "exceptions/tmdb.py": "ab6b0653a52368647bfa37edc6345e029bc83429736371cc5b82b5e0c5c77ec6",
+      "main.py": "a642b96a25d53dc50f3519ed09f37e8c7fd2d9c5774ab250266a64b7eae6e1e6",
+      "services/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "services/pln/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "services/pln/extrator.py": "688c8ff39b2726e4fcb3be0c50a710c02d53a5ab6747275cae2e90dd1d046f17",
+      "services/pln/generos_cache.py": "7139f3ea4594d31e9f11c3aaf1ec460bf5c1bff0e914024aacdec56e57e53a64",
+      "services/pln/lexico.py": "c478d4a78623b356de9ab7a97de71f5bbdd270e5f03cfaada538c776372e5933",
+      "services/pln/negacao.py": "d5a4d9f830fe5031457edca4f323a2bb76b20a0a8dd9cf4ed39bdb9028aa1cbc",
+      "services/pln/normalizacao.py": "5160bbee537b9b353b0ac8fc7cbc66b149817b160a33b00400abace77ed40bfd",
+      "services/pln/periodo.py": "8cebeb6cc65541dff92236a9a035403729ba3ece5f501862f5d4be842d4784cc",
+      "services/pln/pesquisa.py": "acc601df25c90909ca45e35400dd5802b8282e0e15febcf835f5fbfe3c6c8efb",
+      "services/tmdb/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "services/tmdb/client.py": "c72b005c90131f05f155bbce8de20d6ddd6db449c0fefee3f010e7b3f83b72c2",
+      "services/tmdb/filmes.py": "ecb819e6b1ee86573fafad83afa107ec783ace5e6d785e01423158fed477b1a8"
+    }
+  },
+  "python": "3.14.7",
+  "normalization": "NFC na limpeza; casefold na representação normalizada; acentos preservados",
+  "token_pattern": "\\w+(?:['’\\-]\\w+)*|[^\\w\\s]",
+  "preserved_negations": [
+    "nem",
+    "nunca",
+    "não",
+    "sem"
+  ],
+  "stopwords_source_sha256": "a3bae02360a3858741122961b878bb3805762ffd4e33562e10912eaab93b6cce",
+  "stages": {
+    "01_original.jsonl": "original",
+    "02_clean.jsonl": "clean",
+    "03_normalized.jsonl": "normalized",
+    "04_tokens.jsonl": "tokens",
+    "05_without_punctuation.jsonl": "words",
+    "06_without_stopwords.jsonl": "filtered"
+  },
+  "files": {
+    "01_original.jsonl": "e3e7b1a6aa86833228047d6a01d32df3cec7880d81cda804cf48914c11445a59",
+    "02_clean.jsonl": "ca1cbd9f9dc0e942000d4491be76ebd8ed2137423403d1a0d0377fe8a92f0f0a",
+    "03_normalized.jsonl": "986f89e8a77bb07f743b0400edb1e4d84094f3925ba55df8f2fa2451880d2945",
+    "04_tokens.jsonl": "040b51018208e05478818b089bf62017641dbb9613a454741e1adccd2f5032ff",
+    "05_without_punctuation.jsonl": "ad5441c20f2f35c0f404a69fe7b9e89b0e93b61765e15b9c44c47520cc15952d",
+    "06_without_stopwords.jsonl": "f542a4db2ca67c8bee1d45b61dc5b93f8874293088515f33e402f994b919e487",
+    "examples.json": "6c530c0ca2f21eb7fdf191e28b1b284d443c05e72672fc73f335d9d8ded8353e",
+    "genres.json": "783d56c70865c7ce2246d3db84c7f29abcc83a2ed2dc6721c90d443fd0207644",
+    "memberships.json": "086879815dbac860de175c63db0f3d62073cba7b3f596d562badc10e9b2d9978",
+    "metadata.jsonl": "939939b314693d52b2dcf16527f49d0f53236e82a98db3de022b2804256dc0d3",
+    "report.md": "4d1ecd07e6032b4ea7b329d7cb53cd718c20fbf50d2d497f93beb776768b5540",
+    "statistics.json": "50d8c076bab06682f4a1ed9126c7911d1dade2355023cec384c57748fe835cb3",
+    "stopwords_used.json": "051e5b04c288c0bef3ae7da83b1b13eb6b055cba054826b26007555e7c0297fb"
+  }
+}

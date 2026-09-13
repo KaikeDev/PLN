@@ -1,0 +1,425 @@
+{
+  "page": 2,
+  "results": [
+    {
+      "adult": false,
+      "backdrop_path": "/zRKQW58MBEY078AxkHxEJzUskCl.jpg",
+      "genre_ids": [
+        878,
+        12
+      ],
+      "id": 438631,
+      "title": "Duna",
+      "original_language": "en",
+      "original_title": "Dune",
+      "overview": "Em um futuro distante, planetas são comandados por casas nobres que fazem parte de um império feudal intergalático. Paul Atreides é um jovem cuja família toma o controle do planeta deserto Arrakis, também conhecido como Duna. A única fonte da especiaria Melange, a substância mais importante do cosmos, Arrakis se mostra ser um planeta nem um pouco fácil de governar.",
+      "popularity": 32.3595,
+      "poster_path": "/uzERcfV2rSHNhW5eViQiO9hNiA7.jpg",
+      "release_date": "2021-09-15",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.8,
+      "vote_count": 15509
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/gNdLJU9TxrpGx4dkZidjys3fyy0.jpg",
+      "genre_ids": [
+        878,
+        18
+      ],
+      "id": 335984,
+      "title": "Blade Runner 2049",
+      "original_language": "en",
+      "original_title": "Blade Runner 2049",
+      "overview": "Trinta anos após os acontecimentos do primeiro filme, um novo blade runner, o oficial K da polícia de Los Angeles, desenterra um segredo há muito enterrado que tem o potencial de mergulhar o que resta da sociedade no caos. A descoberta de K o leva a uma busca para encontrar Rick Deckard, um ex-blade runner do LAPD que está desaparecido há 30 anos.",
+      "popularity": 31.49,
+      "poster_path": "/49pANIZXRAdHUiWjjBv4vxPeqRC.jpg",
+      "release_date": "2017-10-04",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.605,
+      "vote_count": 15648
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/bVSOgrxasVJF6V71T7v2KfBRSzu.jpg",
+      "genre_ids": [
+        27,
+        878
+      ],
+      "id": 933260,
+      "title": "A Substância",
+      "original_language": "en",
+      "original_title": "The Substance",
+      "overview": "Uma estrela em declínio descobre uma substância misteriosa que lhe permite criar uma versão mais jovem e perfeita de si mesma. No entanto, o que parece ser uma solução milagrosa para recuperar sua glória logo se transforma em um pesadelo perturbador quando as consequências desta decisão começam a se manifestar de formas sombrias e irreversíveis.",
+      "popularity": 30.4743,
+      "poster_path": "/vWeOgzlhnP1sS23H3rzctGHB9Nb.jpg",
+      "release_date": "2024-09-07",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.131,
+      "vote_count": 6443
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/vamhMTvh9m9zFHDoR0v1nRtf6T4.jpg",
+      "genre_ids": [
+        28,
+        12,
+        878
+      ],
+      "id": 429617,
+      "title": "Homem-Aranha: Longe de Casa",
+      "original_language": "en",
+      "original_title": "Spider-Man: Far From Home",
+      "overview": "Peter Parker está em uma viagem de duas semanas pela Europa, ao lado de seus amigos de colégio, quando é surpreendido pela visita de Nick Fury. Convocado para mais uma missão heroica, ele precisa enfrentar vários vilões que surgem em cidades-símbolo do continente, como Londres, Paris e Veneza, e também a aparição do enigmático Mysterio.",
+      "popularity": 30.4385,
+      "poster_path": "/tX0o4AdHpidgniTWwfzK0dNTKrc.jpg",
+      "release_date": "2019-06-28",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.393,
+      "vote_count": 17582
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/9nhjGaFLKtddDPtPaX5EmKqsWdH.jpg",
+      "genre_ids": [
+        10749,
+        878,
+        53
+      ],
+      "id": 950396,
+      "title": "Entre Montanhas",
+      "original_language": "en",
+      "original_title": "The Gorge",
+      "overview": "Dois agentes altamente treinados se aproximam à distância após serem enviados para proteger lados opostos de um desfiladeiro misterioso. Quando um mal emerge, eles precisam trabalhar juntos para sobreviver ao que está lá dentro.",
+      "popularity": 29.5848,
+      "poster_path": "/7zL6RxMPmpPSdU5OTdVC4dtiKcr.jpg",
+      "release_date": "2025-02-13",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.694,
+      "vote_count": 4179
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/kJsPVzdyBrYHLomuNv5SJDXUQ2f.jpg",
+      "genre_ids": [
+        28,
+        12,
+        878
+      ],
+      "id": 76600,
+      "title": "Avatar: O Caminho da Água",
+      "original_language": "en",
+      "original_title": "Avatar: The Way of Water",
+      "overview": "12 anos depois de explorar Pandora e se juntar aos Na'vi, Jake Sully formou uma família com Neytiri e se estabeleceu entre os clãs do novo mundo. Porém, a paz não durará para sempre.",
+      "popularity": 29.2711,
+      "poster_path": "/hm6nONQOgVpKmRK5YUX9EqfJ0NH.jpg",
+      "release_date": "2022-12-14",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.585,
+      "vote_count": 14606
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/rthMuZfFv4fqEU4JVbgSW9wQ8rs.jpg",
+      "genre_ids": [
+        28,
+        878,
+        12
+      ],
+      "id": 986056,
+      "title": "Thunderbolts*",
+      "original_language": "en",
+      "original_title": "Thunderbolts*",
+      "overview": "Depois de se verem presos em uma armadilha mortal, uma equipe não convencional de sete anti-heróis deve embarcar em uma missão perigosa que os forçará a confrontar os cantos mais sombrios de seus passados.",
+      "popularity": 29.1258,
+      "poster_path": "/zkysYSX51ddSPQuiDTjkGCS6vyh.jpg",
+      "release_date": "2025-04-30",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.298,
+      "vote_count": 4030
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/83H0C66AcvkwpG2738VCTHMY9uv.jpg",
+      "genre_ids": [
+        28,
+        12,
+        878
+      ],
+      "id": 505642,
+      "title": "Pantera Negra: Wakanda para Sempre",
+      "original_language": "en",
+      "original_title": "Black Panther: Wakanda Forever",
+      "overview": "A rainha Ramonda, Shuri, M'Baku, Okoye e as poderosas Dora Milaje lutam para proteger sua nação após a morte do rei T'Challa. Com a ajuda da Cão de Guerra Nakia e de Everett Ross, eles tentam encontrar um novo caminho para Wakanda.",
+      "popularity": 26.2563,
+      "poster_path": "/cryEN3sWlgB2wTzcUNVtDGI8bkM.jpg",
+      "release_date": "2022-11-09",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.993,
+      "vote_count": 7758
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/vLmHH8jAy8Jq8uBsLucd3592WGh.jpg",
+      "genre_ids": [
+        28,
+        878,
+        35,
+        12
+      ],
+      "id": 284053,
+      "title": "Thor: Ragnarok",
+      "original_language": "en",
+      "original_title": "Thor: Ragnarok",
+      "overview": "Thor está preso do outro lado do universo. Ele precisa correr contra o tempo para voltar a Asgard e parar Ragnarok, a destruição de seu mundo, que está nas mãos da poderosa e implacável vilã Hela.",
+      "popularity": 25.2917,
+      "poster_path": "/2K45Fp6koAVoeeYS6aMb9BeNt4F.jpg",
+      "release_date": "2017-10-02",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.58,
+      "vote_count": 22461
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/aJn9XeesqsrSLKcHfHP4u5985hn.jpg",
+      "genre_ids": [
+        878,
+        12,
+        28
+      ],
+      "id": 283995,
+      "title": "Guardiões da Galáxia - Vol. 2",
+      "original_language": "en",
+      "original_title": "Guardians of the Galaxy Vol. 2",
+      "overview": "Os Guardiões precisam lutar para manter sua recém descoberta família unida, enquanto descobrem os mistérios sobre o verdadeiro pai de Peter Quill.",
+      "popularity": 24.9549,
+      "poster_path": "/jGtBLu0JAKf5JxhWgmF68HROzCA.jpg",
+      "release_date": "2017-04-25",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.61,
+      "vote_count": 23418
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/82lM4GJ9uuNvNDOEpxFy77uv4Ak.jpg",
+      "genre_ids": [
+        28,
+        878,
+        12
+      ],
+      "id": 1242898,
+      "title": "Predador: Terras Selvagens",
+      "original_language": "en",
+      "original_title": "Predator: Badlands",
+      "overview": "No futuro, em um planeta remoto, um jovem Predador, rejeitado por seu clã, encontra em Thia uma aliada improvável e embarca em uma jornada traiçoeira em busca do adversário supremo.",
+      "popularity": 24.9503,
+      "poster_path": "/f3yLlUrJDdDL8d4nxywyotN45SL.jpg",
+      "release_date": "2025-11-05",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.834,
+      "vote_count": 3629
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/7Zx3wDG5bBtcfk8lcnCWDOLM4Y4.jpg",
+      "genre_ids": [
+        10751,
+        878,
+        35
+      ],
+      "id": 552524,
+      "title": "Lilo & Stitch",
+      "original_language": "en",
+      "original_title": "Lilo & Stitch",
+      "overview": "Stitch, um alienígena, chega ao planeta Terra após fugir de sua prisão e tenta se passar por um cachorro para se camuflar. As coisas mudam quando Lilo, uma travessa menina, o adota de um abrigo de animais. Juntos, eles aprendem os valores da amizade e família.",
+      "popularity": 24.9155,
+      "poster_path": "/m58Oxr3OZZbP2kTX2tj8TiAMLSv.jpg",
+      "release_date": "2025-05-17",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.182,
+      "vote_count": 2277
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/lzMS0CI3FLQYC5EgJoWeIaEt0lm.jpg",
+      "genre_ids": [
+        878,
+        18,
+        12
+      ],
+      "id": 286217,
+      "title": "Perdido em Marte",
+      "original_language": "en",
+      "original_title": "The Martian",
+      "overview": "O astronauta Mark Watney é enviado a uma missão em Marte. Após uma severa tempestade ele é dado como morto, abandonado pelos colegas e acorda sozinho no misterioso planeta com escassos suprimentos, sem saber como reencontrar os companheiros ou retornar à Terra.",
+      "popularity": 24.7987,
+      "poster_path": "/fG3S4zdgnsaF77tJGK3rA9tHBu4.jpg",
+      "release_date": "2015-09-30",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.707,
+      "vote_count": 21788
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/zOpe0eHsq0A2NvNyBbtT6sj53qV.jpg",
+      "genre_ids": [
+        28,
+        878,
+        35,
+        10751
+      ],
+      "id": 939243,
+      "title": "Sonic 3: O Filme",
+      "original_language": "en",
+      "original_title": "Sonic the Hedgehog 3",
+      "overview": "Sonic, Knuckles e Tails se reúnem contra um novo e poderoso adversário, Shadow, um vilão misterioso com poderes diferentes de tudo que eles já enfrentaram antes. Com suas habilidades superadas em todos os sentidos, a Equipe Sonic deve buscar uma aliança improvável na esperança de parar Shadow e proteger o planeta.",
+      "popularity": 23.9585,
+      "poster_path": "/tfM1T6tAivjvy0sLwt6Y9WvlmzB.jpg",
+      "release_date": "2024-12-19",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.599,
+      "vote_count": 3454
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/bQXAqRx2Fgc46uCVWgoPz5L5Dtr.jpg",
+      "genre_ids": [
+        28,
+        12,
+        878
+      ],
+      "id": 436270,
+      "title": "Adão Negro",
+      "original_language": "en",
+      "original_title": "Black Adam",
+      "overview": "Quase 5.000 anos depois de ter sido concedido com os poderes onipotentes dos deuses egípcios - e de ter sido preso, - Adão Negro se ergue de seu túmulo, pronto para trazer sua justiça ao mundo moderno.",
+      "popularity": 23.695,
+      "poster_path": "/ZTzxi5aKXua2eIlmaMbxxcoW7v.jpg",
+      "release_date": "2022-10-19",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.769,
+      "vote_count": 7242
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/iYqSQaWDttQIQzsxg9xHyg0bttG.jpg",
+      "genre_ids": [
+        27,
+        878
+      ],
+      "id": 945961,
+      "title": "Alien: Romulus",
+      "original_language": "en",
+      "original_title": "Alien: Romulus",
+      "overview": "Enquanto vasculham as profundezas de uma estação espacial abandonada, um grupo de jovens colonizadores espaciais se depara com a forma de vida mais aterrorizante do universo.",
+      "popularity": 23.6704,
+      "poster_path": "/jB0W9tn4w07MFn7sTfqRTBLVytF.jpg",
+      "release_date": "2024-08-13",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.158,
+      "vote_count": 4871
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/b6ZJZHUdMEFECvGiDpJjlfUWela.jpg",
+      "genre_ids": [
+        28,
+        12,
+        878
+      ],
+      "id": 284054,
+      "title": "Pantera Negra",
+      "original_language": "en",
+      "original_title": "Black Panther",
+      "overview": "O príncipe T'Challa retorna a Wakanda para ser coroado rei. Assumindo o manto de Pantera Negra, ele vai à caça de um vilão que roubou um precioso metal de seu país.",
+      "popularity": 23.6438,
+      "poster_path": "/ubXNpxL2ASSzY0f8Hxv08pOsV2L.jpg",
+      "release_date": "2018-02-13",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.362,
+      "vote_count": 23937
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/sTQNRqLbfCXolrb5CizAW1dj528.jpg",
+      "genre_ids": [
+        878,
+        14,
+        28
+      ],
+      "id": 246655,
+      "title": "X-Men: Apocalipse",
+      "original_language": "en",
+      "original_title": "X-Men: Apocalypse",
+      "overview": "Apocalipse, o primeiro mutante de todos, consegue retornar à vida após milhares de anos. Agora, ele sai à procura de seguidores para dominar o mundo. Caberá aos X-Men se unirem para impedir os planos do vilão e evitar uma catástofre mundial.",
+      "popularity": 23.5591,
+      "poster_path": "/czKpsvSmpzMoOuuJXGjBHMoH1qq.jpg",
+      "release_date": "2016-05-18",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.528,
+      "vote_count": 14091
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/keIxh0wPr2Ymj0Btjh4gW7JJ89e.jpg",
+      "genre_ids": [
+        28,
+        12,
+        878
+      ],
+      "id": 497698,
+      "title": "Viúva Negra",
+      "original_language": "en",
+      "original_title": "Black Widow",
+      "overview": "Natasha Romanoff, também conhecida como Viúva Negra, confronta o lado mais sombrio de sua história quando surge uma perigosa conspiração ligada ao seu passado. Perseguida por uma força implacável disposta a tudo para destruí-la, Natasha precisa agora lidar com seu passado como espiã e com as relações que deixou para trás muito antes de se tornar uma Vingadora.",
+      "popularity": 22.8113,
+      "poster_path": "/lrJ9QI2HMbO8N2S2r2v7fjtou5c.jpg",
+      "release_date": "2021-07-07",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.15,
+      "vote_count": 11597
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/6WqqEjiycNvDLjbEClM1zCwIbDD.jpg",
+      "genre_ids": [
+        27,
+        53,
+        878
+      ],
+      "id": 1100988,
+      "title": "Extermínio: A Evolução",
+      "original_language": "en",
+      "original_title": "28 Years Later",
+      "overview": "Já se passaram quase três décadas desde que o vírus da raiva escapou de um laboratório de armas biológicas. Agora, sob uma quarentena rigidamente imposta, alguns conseguiram encontrar maneiras de sobreviver em meio aos infectados. Um desses grupos vive em uma pequena ilha, ligada ao continente por uma única passagem fortemente protegida. Quando um dos membros parte em uma missão rumo ao sombrio coração do continente, ele descobre segredos, maravilhas e horrores que transformaram não apenas os infectados, mas também outros sobreviventes.",
+      "popularity": 22.7844,
+      "poster_path": "/2K5LCXOqlbzRu7mWHbDnLdDQj6I.jpg",
+      "release_date": "2025-06-18",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.606,
+      "vote_count": 2938
+    }
+  ],
+  "total_pages": 57,
+  "total_results": 1129
+}
