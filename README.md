@@ -70,8 +70,9 @@ A coleta devolve código de saída 0 quando completa e 2 quando parcial. Em falh
 | `04_tokens.jsonl` | Tokens lexicais e pontuação separados | Normalizada |
 | `05_without_punctuation.jsonl` | Apenas tokens com letras ou números | Tokenizada |
 | `06_without_stopwords.jsonl` | Filtro pela lista conservadora versionada | Sem pontuação |
+| `07_bag_of_words.json` | Vetores numéricos de frequência (Bag of Words) e vocabulário | Sem stopwords |
 
-Cada linha possui o mesmo `id` da correspondente nas demais etapas. `metadata.jsonl` mantém títulos originais/localizados e metadados; `memberships.json` registra os recortes que retornaram cada filme. As versões intermediárias continuam disponíveis: mais transformação não significa melhor recuperação.
+Cada linha possui o mesmo `id` da correspondente nas demais etapas. `metadata.jsonl` mantém títulos originais/localizados e metadados; `memberships.json` registra os recortes que retornaram cada filme. As versões intermediárias continuam disponíveis: mais transformação não significa melhor recuperação. Veja mais em [Representação Bag of Words](docs/bag_of_words.md).
 
 ## Demonstração auxiliar
 

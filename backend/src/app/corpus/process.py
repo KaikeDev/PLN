@@ -105,6 +105,9 @@ def process(raw: Path, output: Path, stopwords_path: Path) -> dict:
     example_ids = ([603] if 603 in ids else []) + [i for i in ids if i != 603][:2]
     examples = [{"id": i, "title": next(m["title"] for m in metadata if m["id"] == i), **transformed[i]} for i in example_ids]
     write_json(output / "examples.json", examples)
+    from app.corpus.bow import generate_bow_dataset
+    bow_data = generate_bow_dataset(output)
+    write_json(output / "07_bag_of_words.json", bow_data)
     report = make_report(stats, collection, examples)
     (output / "report.md").write_text(report, encoding="utf-8")
     manifest = {
