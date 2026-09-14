@@ -1,0 +1,418 @@
+{
+  "page": 2,
+  "results": [
+    {
+      "adult": false,
+      "backdrop_path": "/oG9dcGSSu13fjFp1Uly15ZXjRKV.jpg",
+      "genre_ids": [
+        16,
+        10751,
+        14,
+        12,
+        35,
+        10749
+      ],
+      "id": 11970,
+      "title": "Hércules",
+      "original_language": "en",
+      "original_title": "Hercules",
+      "overview": "Dono de uma força sobre-humana, o jovem mortal Hércules precisa provar que é um herói para seu pai, o grande Zeus. Junto com seus amigos Pégaso e Phil, ele é enganado pelo esquentadinho vilão Hades e agora terá que se decidir entre seus poderes e o verdadeiro amor.",
+      "popularity": 16.0115,
+      "poster_path": "/gjWApgKrmg6s10GxIcni64dDzOE.jpg",
+      "release_date": "1997-06-13",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.498,
+      "vote_count": 8095
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/y3zUOMWRoI2vC4ck2GBJyFWhzyA.jpg",
+      "genre_ids": [
+        35,
+        10751,
+        10749
+      ],
+      "id": 9820,
+      "title": "Operação Cupido",
+      "original_language": "en",
+      "original_title": "The Parent Trap",
+      "overview": "As gêmeas Hallie e Annie foram separadas ainda pequenas. Uma ficou com a mãe, Elizabeth, e outra com o pai, Nicholas. Um dia as duas se encontram num acampamento de verão e se dão conta do parentesco até então desconhecido. Elas trocam de lugar na volta para a casa e elaboram um plano para que o casal volte às boas e a família enfim possa se reunir.",
+      "popularity": 15.8954,
+      "poster_path": "/3VUKjD23w6nnmTTjCc2AqBefQzt.jpg",
+      "release_date": "1998-07-28",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.215,
+      "vote_count": 4641
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/8uBTDGRcNHhYChcoazP5rleRME7.jpg",
+      "genre_ids": [
+        35
+      ],
+      "id": 8467,
+      "title": "Debi & Lóide: Dois Idiotas em Apuros",
+      "original_language": "en",
+      "original_title": "Dumb and Dumber",
+      "overview": "Dois amigos debilóides vão para Aspen, no estado do Colorado, para tentar devolver uma maleta esquecida pela passageira da limusine que um deles estava dirigindo para o aeroporto. Sem saber que na mala havia uma quantia enorme de dinheiro, que serviria para pagar o resgate de um sequestro, os dois acabam sendo perseguidos pela polícia e por assassinos profissionais.",
+      "popularity": 15.5722,
+      "poster_path": "/3pJwSxO8L2MOGXGaJIOAAq35LAP.jpg",
+      "release_date": "1994-12-16",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.663,
+      "vote_count": 6914
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/wOLTJxfv98miIQcn0oNXq9fIgXM.jpg",
+      "genre_ids": [
+        28,
+        53,
+        80,
+        35
+      ],
+      "id": 9737,
+      "title": "Os Bad Boys",
+      "original_language": "en",
+      "original_title": "Bad Boys",
+      "overview": "Um carregamento de heroína confiscada avaliada em um milhão de dólares foi simplesmente roubado do depósito da polícia. O sumiço das dorgas pode destruir as carreiras dos detetives Mike Lawrey e Marcus Burnett e acabar com a divisão de narcóticos do Departamento de Polícia de Miami. Quando as investigações ameaçam os traficantes e eles raptam a única testemunha do caso – uma bela informante da polícia que se torna amiga dos Bad Boys – as coisas se tornam pessoais!",
+      "popularity": 15.5375,
+      "poster_path": "/8fkDLt6Fbr2yyBqt3MEwiumnsar.jpg",
+      "release_date": "1995-04-07",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.833,
+      "vote_count": 7132
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/4W6RYDNe4OByNryOCvJprrutm9h.jpg",
+      "genre_ids": [
+        10749,
+        14,
+        35
+      ],
+      "id": 137,
+      "title": "Feitiço do Tempo",
+      "original_language": "en",
+      "original_title": "Groundhog Day",
+      "overview": "Phil, um arrogante meteorologista de um canal de televisão, fica preso em uma espécie de túnel do tempo, condenado a reviver indefinidamente o mesmo dia até que mude suas atitudes.",
+      "popularity": 15.2955,
+      "poster_path": "/rhiOgetrHuYAIJkGjReCDkbEBJ5.jpg",
+      "release_date": "1993-02-11",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.636,
+      "vote_count": 9154
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/f9X91dUckoRzOZlw4XBUOfkN9FC.jpg",
+      "genre_ids": [
+        35,
+        18,
+        10751
+      ],
+      "id": 788,
+      "title": "Uma Babá Quase Perfeita",
+      "original_language": "en",
+      "original_title": "Mrs. Doubtfire",
+      "overview": "Daniel Hillard está passando por uma fase complicada, acaba de se separar de Miranda e perdeu o seu emprego. Impedido pela ex-esposa de passar mais tempo com os filhos, ele tem uma idéia inusitada para recuperar a relação com as crianças. Daniel veste-se como uma senhora idosa escocesa e tenta conseguir o cargo de babá no seu antigo lar.",
+      "popularity": 15.2538,
+      "poster_path": "/zrZsqBnGl1zd7T8zxB3OiBOJWcj.jpg",
+      "release_date": "1993-11-24",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.196,
+      "vote_count": 6783
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/5j77rB8NRa7lXuu1Sgmm6wfgrzZ.jpg",
+      "genre_ids": [
+        35,
+        878
+      ],
+      "id": 957,
+      "title": "S.O.S.: Tem um Louco Solto no Espaço",
+      "original_language": "en",
+      "original_title": "Spaceballs",
+      "overview": "O planeta Spaceball está em crise, após seus vilões atrapalhados desperdiçarem a atmosfera do lugar. Agora, eles vão tentar roubar o ar de um planeta mais fraco, fazendo com que a princesa Vespa peça ajuda de dois mercenários intergalácticos.",
+      "popularity": 15.2086,
+      "poster_path": "/heDFcfJUuo93GFsfQYTlOuqLSkA.jpg",
+      "release_date": "1987-06-24",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.891,
+      "vote_count": 3543
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/77ElMccPnTMPouRxSdbJ4nEjf69.jpg",
+      "genre_ids": [
+        35,
+        80
+      ],
+      "id": 115,
+      "title": "O Grande Lebowski",
+      "original_language": "en",
+      "original_title": "The Big Lebowski",
+      "overview": "Em Los Angeles, 1991, Jeff Lebowski, mais conhecido como \"O Cara\", é um desocupado que gasta o seu tempo ouvindo rock dos anos 1960 e jogando boliche. Mas sua vida vai mudar. Confundido com um milionário da Califórnia, ele se vê envolvido com bandidos da pesada, advogados atrapalhados, detetives, sequestradores e, como se não bastasse, com a polícia. Com sua vida ameaçada, Lebowski procura seu amigo Walter, um veterano da Guerra do Vietnã que irá ajudá-lo com seus métodos pouco ortodoxos.",
+      "popularity": 15.0413,
+      "poster_path": "/d1Qxhvg2l3f2ow1Q6WAkOTkIWv2.jpg",
+      "release_date": "1998-03-06",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.8,
+      "vote_count": 12472
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/yRKyJJYIzfeiVDHBe4LXguPQCvD.jpg",
+      "genre_ids": [
+        14,
+        35
+      ],
+      "id": 4011,
+      "title": "Os Fantasmas se Divertem",
+      "original_language": "en",
+      "original_title": "Beetlejuice",
+      "overview": "O casarão de uma dupla de fantasmas super atrapalhados foi invadido por novaiorquinos sofisticados. Para espantá-los, eles contratam um profissional: um fantasma especialista em assustar humanos, que vai tentar de tudo - adotar formas estranhas, armar ciladas e engraçadíssimas armadilhas.",
+      "popularity": 14.8887,
+      "poster_path": "/mLSJNejuGDegsMDiWWwIP7VDiyz.jpg",
+      "release_date": "1988-03-30",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.368,
+      "vote_count": 8664
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/yvPbncYhMu9FfTjDhq0N5lgnVkO.jpg",
+      "genre_ids": [
+        35,
+        10749,
+        18
+      ],
+      "id": 4951,
+      "title": "10 Coisas Que Eu Odeio em Você",
+      "original_language": "en",
+      "original_title": "10 Things I Hate About You",
+      "overview": "Em seu primeiro dia na nova escola, Cameron se apaixona por Bianca. Mas ela só poderá sair com rapazes até que Kat, sua irmã mais velha, arrume um namorado. O problema é que ela é insuportável. Cameron, então, negocia com o único garoto que talvez consiga sair com Kat – um misterioso bad-boy com uma péssima reputação.",
+      "popularity": 14.3241,
+      "poster_path": "/lRy6impzDHOqTX3A2T5dxI6Lwfu.jpg",
+      "release_date": "1999-03-30",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.597,
+      "vote_count": 9131
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/rleTwPqymtOpeD2bR7asJGEmldV.jpg",
+      "genre_ids": [
+        10749,
+        35
+      ],
+      "id": 114,
+      "title": "Uma Linda Mulher",
+      "original_language": "en",
+      "original_title": "Pretty Woman",
+      "overview": "Um magnata perdido pede ajuda à uma prostituta que \"trabalha\" no Hollywood Boulevard e acaba contratando-a por uma semana. Neste período, ela se transforma em uma elegante jovem para poder acompanhá-lo em seus compromissos sociais, mas os dois começam a se envolver e a relação patrão/empregada se modifica para um relacionamento entre homem e mulher.",
+      "popularity": 14.2878,
+      "poster_path": "/biKuy0cj1ABfitVwMgnRqIPRfPB.jpg",
+      "release_date": "1990-03-23",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.441,
+      "vote_count": 9159
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/t3HVA7XdVnQneMjI5hYjEhXmHY3.jpg",
+      "genre_ids": [
+        35,
+        10751,
+        14
+      ],
+      "id": 10830,
+      "title": "Matilda",
+      "original_language": "en",
+      "original_title": "Matilda",
+      "overview": "Matilda é uma criança brilhante que cresceu ignorada pelos pais, a ponto de esquecerem de matriculá-la na escola. Quando a menina descobre que possui poderes mágicos e seu pai a manda estudar, ela precisa proteger os colegas da malvada diretora.",
+      "popularity": 13.768,
+      "poster_path": "/anKGylXCQ8NUv41TusuxIxbA06i.jpg",
+      "release_date": "1996-08-02",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.2,
+      "vote_count": 4937
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/5UX6M0aEphiW6Xmy5rpYX75glbo.jpg",
+      "genre_ids": [
+        14,
+        27,
+        35
+      ],
+      "id": 927,
+      "title": "Gremlins",
+      "original_language": "en",
+      "original_title": "Gremlins",
+      "overview": "Depois de receber um pequeno animal exótico como presente de Natal, um jovem erroneamente quebra três regras importantes sobre seu novo animal de estimação, o que libera uma horda de criaturas malévolas e travessas em uma pequena cidade.",
+      "popularity": 13.1961,
+      "poster_path": "/zqeVsCO1j1RNT0oJjAOTVcHQH0K.jpg",
+      "release_date": "1984-06-08",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.145,
+      "vote_count": 7141
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/tgHO1DdnaS0xHcRxBHxE4kOQeIm.jpg",
+      "genre_ids": [
+        35,
+        14
+      ],
+      "id": 2978,
+      "title": "Os Caça-Fantasmas 2",
+      "original_language": "en",
+      "original_title": "Ghostbusters II",
+      "overview": "Após uma agitada caça viscosa a um fantasma, que custou milhões a cidade de Nova York, os Caça-Fantasmas encontram-se sem trabalho. Enquanto isso, um antigo tirano prepara sua volta para dominar a Terra usando seu retrato que está no Museu de Arte de Manhattan e possuindo o bebê de Dana Barrett como lar de sua maligna alma! Com a ajuda do enfeitiçado curador do museu, ele planeja tornar Nova York um assustador lugar para se viver!  Usando seus equipamentos contra pestes paranormais, apenas os Caça Fantasmas podem salvar a cidade!",
+      "popularity": 13.1311,
+      "poster_path": "/hacjLeFkaqtsb3r9waXUeSoPUnn.jpg",
+      "release_date": "1989-06-16",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.604,
+      "vote_count": 4983
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/wQyvrsNSTzFVEGgarZbFkFyIciy.jpg",
+      "genre_ids": [
+        35
+      ],
+      "id": 813,
+      "title": "Apertem os Cintos, o Piloto Sumiu",
+      "original_language": "en",
+      "original_title": "Airplane!",
+      "overview": "O piloto Ted Striker, ex-combatente de guerra, é forçado a assumir os controles de um avião quando a tripulação sucumbe à comida contaminada. Elaine, sua namorada, tem de ser aeromoça e co-piloto. Juntos, eles vão tentar salvar os passageiros e terminar o voo com sucesso, mas existe um problema: ele é neurótico.",
+      "popularity": 13.0451,
+      "poster_path": "/7pPDjwmlNKhOui2CTuSZDBCmGZG.jpg",
+      "release_date": "1980-06-27",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.302,
+      "vote_count": 5244
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/gwHVYWTYZIW6MM8EgFEiQEMWAAR.jpg",
+      "genre_ids": [
+        35
+      ],
+      "id": 61930,
+      "title": "Bagnomaria",
+      "original_language": "it",
+      "original_title": "Bagnomaria",
+      "overview": "",
+      "popularity": 13.0339,
+      "poster_path": "/eep5DZWeI1hximf4rU2PxtX8tgE.jpg",
+      "release_date": "1999-02-12",
+      "softcore": false,
+      "video": false,
+      "vote_average": 5.9,
+      "vote_count": 116
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/eYDAnSidN4rIEuneS5gEJkTyk3l.jpg",
+      "genre_ids": [
+        28,
+        80,
+        35
+      ],
+      "id": 9056,
+      "title": "Police Story: A Guerra das Drogas",
+      "original_language": "cn",
+      "original_title": "警察故事",
+      "overview": "O policial Chan Ka-Kui consegue botar atrás das grades um grande traficante de drogas de Hong Kong praticamente sozinho após um tiroteio e uma impressionante perseguição dentro de uma favela. Agora, ele deve proteger a secretária do chefão, Salina, que testemunhará contra o gângster no tribunal.",
+      "popularity": 12.9395,
+      "poster_path": "/7xT1ukY1zDksLbSX2eeguXi7TRK.jpg",
+      "release_date": "1985-12-14",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.561,
+      "vote_count": 1097
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/w6tPctxWAsHoQXeKxxNOT6lYKpx.jpg",
+      "genre_ids": [
+        12,
+        35,
+        878
+      ],
+      "id": 165,
+      "title": "De Volta para o Futuro II",
+      "original_language": "en",
+      "original_title": "Back to the Future Part II",
+      "overview": "Uma despretensiosa visita de McFly e Doc ao ano de 2015 revela alguns problemas com a futura família de McFly. Mas quando os dois voltam para casa, logo descobrem que alguém alterou a linha temporal e criou uma terrível Hill Valley em 1985. A única esperança é poder voltar de novo para o ano de 1995 e salvar o futuro.",
+      "popularity": 12.9035,
+      "poster_path": "/pbX7hM03cHmpMPbpZ3lYmF2aABK.jpg",
+      "release_date": "1989-11-22",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.785,
+      "vote_count": 14265
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/6qAYgsvnH4wUS9fAcrxUvUtCM6x.jpg",
+      "genre_ids": [
+        35,
+        80
+      ],
+      "id": 9336,
+      "title": "Loucademia de Polícia",
+      "original_language": "en",
+      "original_title": "Police Academy",
+      "overview": "O prefeito resolve mudar a lei, afirmando que fatores como sexo, peso e inteligência não devem influenciar nas aplicações para a força policial. Liderado por Carey Mahoney, um grupo de jovens incompetentes, mas de bom coração, ingressa na Academia de Polícia para o desespero dos instrutores, que buscarão impedir de toda as formas as brincadeiras da turma.",
+      "popularity": 12.6864,
+      "poster_path": "/vZUNkWNoqogFqhlgl8L517xeQSL.jpg",
+      "release_date": "1984-03-22",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.722,
+      "vote_count": 3088
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/7OxGhxUYAdtuike29VMzEFxJx7y.jpg",
+      "genre_ids": [
+        35,
+        14
+      ],
+      "id": 2907,
+      "title": "A Família Addams",
+      "original_language": "en",
+      "original_title": "The Addams Family",
+      "overview": "Quando um homem dizendo ser Fester Addams (o irmão desaparecido de Gomez Addams) chega à casa dos Addams, a família está feliz. No entanto, Mortícia começa a suspeitar que Fester é uma fraude, já que ele não consegue se lembrar de detalhes da sua vida. Com a ajuda do advogado Tully Alford, Fester consegue fazer com que o clã Addams seja despejado de sua casa. Gomez percebe que os dois homens estão conspirando para roubar a fortuna de sua família.",
+      "popularity": 12.5343,
+      "poster_path": "/sFwaszCIbVXGnsJG6dg6WUY7d6P.jpg",
+      "release_date": "1991-11-22",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.08,
+      "vote_count": 5185
+    }
+  ],
+  "total_pages": 123,
+  "total_results": 2456
+}

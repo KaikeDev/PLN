@@ -1,0 +1,415 @@
+{
+  "page": 2,
+  "results": [
+    {
+      "adult": false,
+      "backdrop_path": "/jovIEk4cAxWmA2dBcPrfhn3jzYN.jpg",
+      "genre_ids": [
+        27,
+        53,
+        9648
+      ],
+      "id": 82507,
+      "title": "A Entidade",
+      "original_language": "en",
+      "original_title": "Sinister",
+      "overview": "Ellison (Ethan Hawke) é um escritor de romances policias que acaba de se mudar com a família. No sótão da nova casa ele descobre antigos rolos de filme, que trazem imagens de pessoas sendo mortas. Intrigado com o que elas representam e com um estranho símbolo presente nas imagens, ele e sua família logo passam a correr sério risco de morte.",
+      "popularity": 13.6682,
+      "poster_path": "/uTaCFSTQ29LKqLXJU75owdir04h.jpg",
+      "release_date": "2012-10-04",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.872,
+      "vote_count": 6207
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/tKnmfO5lAyu8hpTZMyMaI4lhZpJ.jpg",
+      "genre_ids": [
+        27,
+        9648
+      ],
+      "id": 9358,
+      "title": "Premonição 2",
+      "original_language": "en",
+      "original_title": "Final Destination 2",
+      "overview": "Kimberly está na estrada com amigos quando tem a visão de um acidente com inúmeros carros e mortes, inclusive a sua. Apavorada, ela para na tentativa de evitar a ocorrência. Mas, infelizmente, o acidente acontece. Contudo, algumas das pessoas que deveriam ter morrido acabam se salvando. E é aí que o pesadelo começa. Agora, a Morte voltará para levar, um a um, todos aqueles que tiveram o traçado de seu destino alterado pela premonição da garota.",
+      "popularity": 13.3578,
+      "poster_path": "/v1HSfT3BjDRGfHji30VvHeCBJHu.jpg",
+      "release_date": "2003-01-31",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.314,
+      "vote_count": 5019
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/mj49FvpUhjDHYKNjqCogAtzvZo4.jpg",
+      "genre_ids": [
+        53,
+        27,
+        80
+      ],
+      "id": 10375,
+      "title": "D-Tox",
+      "original_language": "en",
+      "original_title": "D-Tox",
+      "overview": "Jake Malloy é um policial especializado em capturar serial killers, até que se vê às voltas com um psicopata que assassina sua namorada e logo após comete suicídio. Abalado com tal acontecimento, Malloy é então enviado para um clínica especializada em recuperar policiais com distúrbios psicológicos. Porém, pouco após chegar à clínica seus residentes começam a ser mortos um a um, fazendo com que Malloy tenha que assumir as investigações do caso.",
+      "popularity": 13.077,
+      "poster_path": "/aUnDfGWIeHfW3eCwc8UM0SaufrJ.jpg",
+      "release_date": "2002-01-04",
+      "softcore": false,
+      "video": false,
+      "vote_average": 5.576,
+      "vote_count": 739
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/wb34q3VgzHgL8frVMywrN3wXmqx.jpg",
+      "genre_ids": [
+        27,
+        35
+      ],
+      "id": 747,
+      "title": "Todo Mundo Quase Morto",
+      "original_language": "en",
+      "original_title": "Shaun of the Dead",
+      "overview": "Shaun trabalha como vendedor e divide uma casa com Ed, seu melhor amigo, e Pete. Ele costuma ir sempre ao pub local, mas Liz, sua namorada, está cansada de lá. Além disto ela sempre reclama que ele não se separa de Ed, apesar de suas piadas bobas e seu desinteresse em fazer algo útil. Para resolver a questão Shaun aceita marcar um encontro com Liz em outro restaurante, mas se esquece de fazer a reserva. Irritada, ela decide terminar com ele. Shaun, arrasado, se embebeda no seu pub predileto ao lado de Ed, sem notar que as pessoas à sua volta estão se tornando zumbis, devido a um estranho fenômeno.",
+      "popularity": 12.5928,
+      "poster_path": "/cu9CgaxcJ3UG1Up3l5bsG2wNtfY.jpg",
+      "release_date": "2004-04-09",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.545,
+      "vote_count": 9613
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/xfrguTH6maYiGsC8FXiQ9N3lZXw.jpg",
+      "genre_ids": [
+        27,
+        9648
+      ],
+      "id": 8329,
+      "title": "[REC]",
+      "original_language": "es",
+      "original_title": "[REC]",
+      "overview": "Ao longo de uma noite, uma repórter e seu cameraman acompanham um grupo de bombeiros chamados para resgatar uma mulher presa em um edifício, com resultados apavorantes. Antes de se darem conta, moradores, ajudantes e equipe de resgate são trancados dentro do edifício devido a um vírus desconhecido.",
+      "popularity": 12.4726,
+      "poster_path": "/nfbO00NKXSzBIzcN3KbUMdPT1EU.jpg",
+      "release_date": "2007-11-23",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.238,
+      "vote_count": 5008
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/e8CS8iisJ7PCJUwWUm0KLbsnKWl.jpg",
+      "genre_ids": [
+        27,
+        53
+      ],
+      "id": 9902,
+      "title": "Pânico na Floresta",
+      "original_language": "en",
+      "original_title": "Wrong Turn",
+      "overview": "Cinco amigos percorrem uma trilha na floresta, em pleno estado da Virginia. Após pegarem o caminho errado, eles se deparam com uma família de canibais, que possui o rosto desfigurado devido a diversas gerações cosanguíneas terem nascido. Desesperados após serem capturados, os amigos agora querem apenas fugir do local o mais rápido possível.",
+      "popularity": 12.407,
+      "poster_path": "/mQVIIUXHo3Qpd6nu0api7UyMpas.jpg",
+      "release_date": "2003-05-30",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.4,
+      "vote_count": 3111
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/nSV1NIAK0Sp5dM1oiobtqbJ8Jrv.jpg",
+      "genre_ids": [
+        27,
+        9648
+      ],
+      "id": 9286,
+      "title": "Premonição 3",
+      "original_language": "en",
+      "original_title": "Final Destination 3",
+      "overview": "Seis anos depois que um grupo de estudantes enganam pela primeira vez a morte, uma adolescente tem o pressentimento de que ela e seus amigos vão ter um acidente em uma montanha-russa. Quando a visão prova ser verdadeira, a estudante e os sobreviventes precisarão lidar com as repercussões de enganar a morte.",
+      "popularity": 11.7956,
+      "poster_path": "/zdW7TWFc9DOG8gCElBBsj5pvpuK.jpg",
+      "release_date": "2006-02-09",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.159,
+      "vote_count": 4731
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/63eAFgJtN6ZTyFFzlAOoZLhlYqc.jpg",
+      "genre_ids": [
+        28,
+        27,
+        878
+      ],
+      "id": 36648,
+      "title": "Blade Trinity",
+      "original_language": "en",
+      "original_title": "Blade: Trinity",
+      "overview": "Blade, agora um homem procurado pelo FBI, deve unir forças com os Nightstalkers para enfrentar seu inimigo mais desafiador ainda: Drácula.",
+      "popularity": 11.7221,
+      "poster_path": "/O8iPtrxt7G4nIh5rrx4BwOwc1M.jpg",
+      "release_date": "2004-12-08",
+      "softcore": false,
+      "video": false,
+      "vote_average": 5.863,
+      "vote_count": 4452
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/48TM0HjZSRjIr4QMuDTsMWcz7gX.jpg",
+      "genre_ids": [
+        27,
+        9648
+      ],
+      "id": 588,
+      "title": "Terror em Silent Hill",
+      "original_language": "en",
+      "original_title": "Silent Hill",
+      "overview": "Rose, uma mãe desesperada leva sua filha adotiva, Sharon, para a cidade de Silent Hill na tentativa de curá-la de seu sofrimento. Após um violento acidente de carro, Sharon desaparece e Rose começa sua busca desesperada para recuperá-la. Ela entra em uma neblina de cinzas e vai de encontro ao terrível segredo da cidade. Perseguida por grotescas criaturas deformadas e outras pessoas da cidade presas em um permanente purgatório, Rose começa a desvendar a verdade por trás do apocalíptico desastre que queimou a cidade há 30 anos.",
+      "popularity": 11.5867,
+      "poster_path": "/7CLiGJbAlJNlbMbgeVbLhaEx8XD.jpg",
+      "release_date": "2006-04-21",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.648,
+      "vote_count": 5081
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/nQ7uBnLum3SB5LbCCBTKBYWnEzL.jpg",
+      "genre_ids": [
+        27,
+        53
+      ],
+      "id": 13207,
+      "title": "Sexta-Feira 13",
+      "original_language": "en",
+      "original_title": "Friday the 13th",
+      "overview": "Em Crystal Lake, o que começou como o melhor fim semana de suas vidas rapidamente poderia se tornar o último. Um grupo de adolescentes, a quilômetros de distância da civilização estão prestes a descobrir, um a um, que o lago tem um sangrento passado... e está pronto para vingança.",
+      "popularity": 11.4495,
+      "poster_path": "/9tXjmu3J8ad4IpvrjEMS4ZxmsjN.jpg",
+      "release_date": "2009-02-11",
+      "softcore": false,
+      "video": false,
+      "vote_average": 5.774,
+      "vote_count": 2930
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/blfZnm6StMPnTY35kaooPBCsSVp.jpg",
+      "genre_ids": [
+        27,
+        53
+      ],
+      "id": 238636,
+      "title": "Uma Noite de Crime: Anarquia",
+      "original_language": "en",
+      "original_title": "The Purge: Anarchy",
+      "overview": "Assim que a Noite de Crime deste ano começa, Leo, um enigmático solitário, assombrado pela morte de seu filho, quer vingança. Eva, uma mãe solteira, é forçada, junto com sua filha Cali, a sair de seu apartamento quando são atacadas. Shane e Liz, um jovem casal, tornamse vítimas de um roubo de carro. Buscando refúgio no carro blindado de Leo, Shane e Liz formam um grupo com esses outros três estranhos. Agora, essa improvável equipe vai descobrir até aonde serão capazes de chegar para se proteger entre si, enquanto lutam para sobreviver à terrível noite.",
+      "popularity": 11.38,
+      "poster_path": "/ht1MWx0ZMgqKzvAUBp1WhsOQLWN.jpg",
+      "release_date": "2014-07-17",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.617,
+      "vote_count": 6805
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/6tuNQ16hC4Qp7wjTweKzUnnLBkI.jpg",
+      "genre_ids": [
+        27,
+        9648
+      ],
+      "id": 565,
+      "title": "O Chamado",
+      "original_language": "en",
+      "original_title": "The Ring",
+      "overview": "Rachel Keller é uma jornalista que decide investigar a misteriosa morte de sua sobrinha. Ela percebe a relação da morte dela e de várias outras mortes com um estranho vídeo, que faz com que todas as pessoas que o assistam morram exatamente sete dias depois. Intrigada com a história, ela agora precisa descobrir um meio que impeça que a profecia se realize, já que ela e seu filho assistiram ao vídeo.",
+      "popularity": 11.357,
+      "poster_path": "/4skN151KEKtJQSLJ7zkWSDGE0DJ.jpg",
+      "release_date": "2002-10-18",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.707,
+      "vote_count": 6859
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/3avI4nJ3WNweQFHa2UwRMOO8cbL.jpg",
+      "genre_ids": [
+        18,
+        27,
+        80
+      ],
+      "id": 74997,
+      "title": "A Centopéia Humana 2",
+      "original_language": "en",
+      "original_title": "The Human Centipede 2 (Full Sequence)",
+      "overview": "Escrito e dirigido novamente por Six, a sequência foca em Martin, um homem solitário e mentalmente perturbado que mora com sua mãe e trabalha como guarda noturno em uma estacionamento-garagem no subsolo. Para escapar de sua triste existência, Martin se perde na fantasia do filme de terror cult A Centopéia Humana, fantasiando com as meticulosas habilidades cirurgicas do Dr. Heiter, cujo conhecimento do sistema gastrointestinal inspira Martin a praticar o impensável.",
+      "popularity": 11.296,
+      "poster_path": "/o4d70dggYAho6PUNBHlrRqircHv.jpg",
+      "release_date": "2011-10-06",
+      "softcore": false,
+      "video": false,
+      "vote_average": 4.754,
+      "vote_count": 1489
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/86b0NGY1i0bt3ckhkcHxiCSMxk1.jpg",
+      "genre_ids": [
+        14,
+        27,
+        28,
+        53
+      ],
+      "id": 36586,
+      "title": "Blade II: O Caçador de Vampiros",
+      "original_language": "en",
+      "original_title": "Blade II",
+      "overview": "Blade é um ser meio homem, meio vampiro que é consumido pelo desejo de vingança contra os seres que atacaram sua mãe antes mesmo dele nascer e fizeram com que ele se tornasse o que é atualmente. Com isso, ao crescer Blade iniciou uma verdadeira cruzada pessoal para combater e eliminar os vampiros, mas agora uma nova raça mais poderosa chamada reapers, criada a partir de cruzamentos genéticos entre humanos e vampiros, ameaça eliminar ambas as raças. Visto isso, Blade se alia aos seus maiores inimigos para que, juntos, possam combater esta nova raça de seres.",
+      "popularity": 11.2934,
+      "poster_path": "/85FiSIRQpKyzNFqzUAe9RmPOdYY.jpg",
+      "release_date": "2002-03-22",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.572,
+      "vote_count": 5390
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/9T5D5RGuCsC6CeqYZJTv4rT4RPy.jpg",
+      "genre_ids": [
+        12,
+        27
+      ],
+      "id": 9392,
+      "title": "Abismo do Medo",
+      "original_language": "en",
+      "original_title": "The Descent",
+      "overview": "Um ano após um grave trauma emocional, Sarah passa o tempo explorando cavernas com suas amigas. Depois de descerem ao subsolo, as mulheres encontram provas de uma expedição anterior e descobrem que não estão sozinhas. Predadores subterrâneos habitam as fendas e gostam de carne humana.",
+      "popularity": 11.2138,
+      "poster_path": "/dSi7PfC9MiKZwntUZBArUpwbXZa.jpg",
+      "release_date": "2005-07-08",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.988,
+      "vote_count": 4571
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/wJffMiCnrszaNclKggGixYWB7D7.jpg",
+      "genre_ids": [
+        27,
+        9648,
+        35
+      ],
+      "id": 22970,
+      "title": "O Segredo da Cabana",
+      "original_language": "en",
+      "original_title": "The Cabin in the Woods",
+      "overview": "Cinco amigos fazem uma pausa em uma cabana remota, onde conseguem mais do que esperavam, descobrindo a verdade atrás da cabana na floresta.",
+      "popularity": 11.1318,
+      "poster_path": "/raOYAZFVpWyL9teEzLDEwtP8lm9.jpg",
+      "release_date": "2012-04-12",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.657,
+      "vote_count": 8796
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/m0yTFeh8vrsMP0fQDdYGSh4xthX.jpg",
+      "genre_ids": [
+        27,
+        9648
+      ],
+      "id": 8922,
+      "title": "Olhos Famintos",
+      "original_language": "en",
+      "original_title": "Jeepers Creepers",
+      "overview": "Ao voltarem para casa por uma estrada sem movimento, os irmãos Trish e Darry veem um vulto atirando o que parece ser um corpo embrulhado. Parando para investigar, eles descobrem centenas de corpos mutilados, pendurados embaixo de uma antiga igreja.",
+      "popularity": 10.9901,
+      "poster_path": "/1fLcbixpuHLFkPEoh5omWuHfAZm.jpg",
+      "release_date": "2001-07-01",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.487,
+      "vote_count": 3409
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/w2IVckABEbAZOhuuLcQRHdyI6uk.jpg",
+      "genre_ids": [
+        27,
+        53
+      ],
+      "id": 256274,
+      "title": "Assim na Terra Como no Inferno",
+      "original_language": "en",
+      "original_title": "As Above, So Below",
+      "overview": "Um grupo de arqueólogos está em busca de um tesouro perdido e, para isso, explora o desconhecido labirinto de ossos nas catacumbas abaixo de Paris. Aquela região, conhecida como a cidade dos mortos, revela um segredo que mexerá com a psique humana de modo que os demônios pessoais de cada um voltarão para assombrá-los.",
+      "popularity": 10.8719,
+      "poster_path": "/gxhnKDwnNIWp5wPcVUBO9OPOL5H.jpg",
+      "release_date": "2014-08-14",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.757,
+      "vote_count": 3978
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/f4QIQvecRkKD5t7aPclyIr3SEP.jpg",
+      "genre_ids": [
+        53,
+        80,
+        27
+      ],
+      "id": 43947,
+      "title": "Doce Vingança",
+      "original_language": "en",
+      "original_title": "I Spit on Your Grave",
+      "overview": "A escritora Jennifer aluga uma cabana isolada para escrever sua mais recente novela. A paz e o silêncio do local são quebrados por uma gangue local que a estupra e tortura, deixando-a como morta. Mas Jennifer retorna para se vingar, capturando os homens um a um e lhes causando muito mais dor do que ela sofreu.",
+      "popularity": 10.8317,
+      "poster_path": "/3Awd26Ktx3E9VuIcHkRcIIIp9G0.jpg",
+      "release_date": "2010-06-17",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.512,
+      "vote_count": 2662
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/5cG2XcylxUIclQsGPBKTtfoqcBV.jpg",
+      "genre_ids": [
+        27,
+        9648
+      ],
+      "id": 55779,
+      "title": "Premonição 5",
+      "original_language": "en",
+      "original_title": "Final Destination 5",
+      "overview": "A Morte está mais onipresente do que nunca, e inicia seu ataque após a premonição de um homem que salva um grupo de colegas de trabalho de um terrível colapso em uma ponte suspensa. Mas este grupo de almas inocentes não deveria sobreviver e, em uma aterrorizante corrida contra o tempo, o grupo tenta freneticamente descobrir uma maneira de escapar dos planos sinistros da Morte.",
+      "popularity": 10.8105,
+      "poster_path": "/A0C3juaReSw8vQD3aWEZnOgolFL.jpg",
+      "release_date": "2011-08-12",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.158,
+      "vote_count": 4224
+    }
+  ],
+  "total_pages": 83,
+  "total_results": 1660
+}

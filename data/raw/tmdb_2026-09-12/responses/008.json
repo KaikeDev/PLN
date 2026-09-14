@@ -1,0 +1,428 @@
+{
+  "page": 1,
+  "results": [
+    {
+      "adult": false,
+      "backdrop_path": "/mGznDQ8opBuRd004ChVWhDqjAyW.jpg",
+      "genre_ids": [
+        10749,
+        14,
+        35
+      ],
+      "id": 6435,
+      "title": "Da Magia à Sedução",
+      "original_language": "en",
+      "original_title": "Practical Magic",
+      "overview": "As mulheres da família Owens tem poderes mágicos. Mas uma maldição as persegue há mais de duzentos anos: qualquer homem que se apaixona por uma delas, morre. Descendentes da bruxa que começou este feitiço, Sally (Sandra Bullock) e Gillian (Nicole Kidman) são duas irmãs que foram criadas por suas tias (Dianne Wiest e Stockard Channing). Já adultas, enquanto Sally se mostra bastante reservada, Gillian foge de casa para ter o primeiro de muitos namorados. Após algum tempo, Sally se casa e tem duas filhas, mas seu marido acaba morrendo atropelado. Até que chega o momento em que ela deve ajudar Gillian, que se envolveu com Jimmy Angelov (Goran Visnjic), um búlgaro agressivo que as ameaça. Sentindo que correm perigo, as duas o envenenam, mas, temendo as conseqüências de tal ato, Gillian convence Sally que o melhor é trazê-lo de volta a vida. Uma decisão que trará uma série de complicações com polícia e com seus próprios poderes.",
+      "popularity": 55.9267,
+      "poster_path": "/84LJR9XekzXvGJgBGhC13eboL4b.jpg",
+      "release_date": "1998-10-16",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.792,
+      "vote_count": 1874
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/suaEOtk1N1sgg2MTM7oZd2cfVp3.jpg",
+      "genre_ids": [
+        53,
+        80,
+        35
+      ],
+      "id": 680,
+      "title": "Pulp Fiction: Tempo de Violência",
+      "original_language": "en",
+      "original_title": "Pulp Fiction",
+      "overview": "Vincent Vega e Jules Winnfield são dois assassinos profissionais que trabalham fazendo cobranças para Marsellus Wallace, um poderosos gângster. Vega é forçado a sair com a garota do chefe, temendo passar dos limites. Enquanto isso, o pugilista Butch Coolidge se mete em apuros por ganhar uma luta que deveria perder.",
+      "popularity": 36.9862,
+      "poster_path": "/tptjnB2LDbuUWya9Cx5sQtv5hqb.jpg",
+      "release_date": "1994-09-10",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.48,
+      "vote_count": 30845
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/3Rfvhy1Nl6sSGJwyjb0QiZzZYlB.jpg",
+      "genre_ids": [
+        10751,
+        35,
+        16,
+        12
+      ],
+      "id": 862,
+      "title": "Toy Story: Um Mundo de Aventuras",
+      "original_language": "en",
+      "original_title": "Toy Story",
+      "overview": "Buzz Lightyear é o novo e sofisticado astronauta de brinquedo do garoto Andy. Buzz não imaginava que encontraria um rival: Woody, um cowboy de brinquedo que, dominado pelo ciúme, acredita ter perdido um lugar precioso no coração do seu dono. Os dois brinquedos vivem brigando até que vão parar nas garras do vizinho, um verdadeiro destruidor de brinquedos. Agora, mais do que nunca, Buzz e Woody precisam precisam se unir para escapar do perigo. Com a ajuda de seus amigos da caixa de brinquedos, eles vão viver uma incrível aventura.",
+      "popularity": 36.6103,
+      "poster_path": "/686F0CEPmI4ZXjFbWtIHQOBwnfI.jpg",
+      "release_date": "1995-11-22",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.988,
+      "vote_count": 20497
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/66Kn4XWhkuPkJxOJyPEx4U2CUfN.jpg",
+      "genre_ids": [
+        35,
+        18,
+        10749
+      ],
+      "id": 13,
+      "title": "Forrest Gump: O Contador de Histórias",
+      "original_language": "en",
+      "original_title": "Forrest Gump",
+      "overview": "Quarenta anos da história dos Estados Unidos, vistos pelos olhos de Forrest Gump, um rapaz com QI abaixo da média e com boas intenções. Por obra do acaso, ele consegue participar de momentos cruciais, como a Guerra do Vietnã e o Caso Watergate, mas continua pensando no seu amor de infância, Jenny Curran.",
+      "popularity": 34.4583,
+      "poster_path": "/d74WpIsH8379TIL4wUxDneRCYv2.jpg",
+      "release_date": "1994-06-23",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.462,
+      "vote_count": 30435
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/5bzPWQ2dFUl2aZKkp7ILJVVkRed.jpg",
+      "genre_ids": [
+        12,
+        35,
+        878
+      ],
+      "id": 105,
+      "title": "De Volta para o Futuro",
+      "original_language": "en",
+      "original_title": "Back to the Future",
+      "overview": "Marty McFly, um típico adolescente americano dos anos 80, acidentalmente é enviado de volta ao ano de 1955 em um carro modificado para ser uma máquino do tempo, inventada por um cientista louco. Durante sua fantástica e maluca viagem no tempo, McFly tem que fazer com que seus futuros pais se encontrem e se apaixonem, para que assim ele possa ir de volta para o futuro.",
+      "popularity": 30.2819,
+      "poster_path": "/i996T0lI1fGtFEowiH3V6eZthL0.jpg",
+      "release_date": "1985-07-03",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.329,
+      "vote_count": 22365
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/nsfVr4QbbunUrHINN9N7JdVAMTf.jpg",
+      "genre_ids": [
+        16,
+        35,
+        10751
+      ],
+      "id": 863,
+      "title": "Toy Story 2",
+      "original_language": "en",
+      "original_title": "Toy Story 2",
+      "overview": "Quando Andy viaja para um acampamento de verão, Woody é sequestrado por Al, um ambiocioso colecionador, que precisa do brinquedo favorito de Andy para completar sua coleção da Gangue do Rodeio. Junto com Jessie, Bala no Alvo e Mineiro, Woody corre o risco de ter que passar o resto de sua vida em exposição num museu. Agora, Buzz, Sr. Cabeça de Batata, Porquinho, Rex e Slinky terão que salvar seu amigo e trazê-lo de volta à vida de brinquedos.",
+      "popularity": 30.0413,
+      "poster_path": "/xVhEI1WCgNCCa5I86AqiwuZoog3.jpg",
+      "release_date": "1999-10-30",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.62,
+      "vote_count": 15340
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/nPLS4lsCl34nIIMb1MBYtHsd5hY.jpg",
+      "genre_ids": [
+        35,
+        10749
+      ],
+      "id": 26827,
+      "title": "Quem é Essa Garota?",
+      "original_language": "en",
+      "original_title": "Who's That Girl",
+      "overview": "Nikki Finn (Madonna) é uma jovem acusada de ter participado de um crime com o qual nada teve a ver. Tentando provar sua inocência, ela pede ajuda ao advogado Louden Trott (Griffin Dunne), um cara com fama de certinho que agora precisa lidar com esta garota um tanto quanto amalucada.",
+      "popularity": 27.1677,
+      "poster_path": "/y45tshg5BB1kkPzK6Vi5aeGcolN.jpg",
+      "release_date": "1987-08-07",
+      "softcore": false,
+      "video": false,
+      "vote_average": 5.513,
+      "vote_count": 261
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/rmiG2uwcNoGFmBKMoa1pIcf514L.jpg",
+      "genre_ids": [
+        35,
+        18
+      ],
+      "id": 37165,
+      "title": "O Show de Truman: O Show da Vida",
+      "original_language": "en",
+      "original_title": "The Truman Show",
+      "overview": "Truman Burbank é um pacato vendedor de seguros que leva um vida simples com sua esposa Meryl Burbank. Porém algumas coisas ao seu redor fazem com que ele passe a estranhar sua cidade, seus supostos amigos e até sua mulher. Após conhecer a misteriosa Lauren, ele fica intrigado e acaba descobrindo que toda sua vida foi monitorada por câmeras e transmitida em rede nacional.",
+      "popularity": 25.92,
+      "poster_path": "/3mEoGWyJCZTSoYyjFD3gFd6hzU4.jpg",
+      "release_date": "1998-06-04",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.158,
+      "vote_count": 20816
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/4cd9YihTHx1j8oRdlwEa1emKiAl.jpg",
+      "genre_ids": [
+        35,
+        18
+      ],
+      "id": 81774,
+      "title": "A Iniciação",
+      "original_language": "fr",
+      "original_title": "Les Exploits d'un jeune Don Juan",
+      "overview": "O filme mostra a iniciação sexual de Roger um menino de 16 anos que passa férias em uma mansão cheia de mulheres.",
+      "popularity": 22.5134,
+      "poster_path": "/jp8LYiQzEoUuMqu2lGSZZ1A4Nsf.jpg",
+      "release_date": "1986-11-04",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.161,
+      "vote_count": 335
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/6aNKD81RHR1DqUUa8kOZ1TBY1Lp.jpg",
+      "genre_ids": [
+        35,
+        18
+      ],
+      "id": 637,
+      "title": "A Vida é Bela",
+      "original_language": "it",
+      "original_title": "La vita è bella",
+      "overview": "Durante a Segunda Guerra Mundial na Itália, o judeu Guido e seu filho Giosué são levados para um campo de concentração nazista. Afastado da mulher, ele tem que usar sua imaginação para fazer o menino acreditar que estão participando de uma grande brincadeira, com o intuito de protegê-lo do terror e da violência que os cercam.",
+      "popularity": 20.9971,
+      "poster_path": "/dkK48wCY4aVpWFDdPpS6DxQ1bvB.jpg",
+      "release_date": "1997-12-20",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.437,
+      "vote_count": 14227
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/8fnYJPoXxwAN4valDLgz2whMGTH.jpg",
+      "genre_ids": [
+        35,
+        10751,
+        12
+      ],
+      "id": 772,
+      "title": "Esqueceram de Mim 2: Perdido em Nova York",
+      "original_language": "en",
+      "original_title": "Home Alone 2: Lost in New York",
+      "overview": "Garoto se vê novamente sozinho, quando em virtude de uma confusão no aeroporto que fez com que ele ao invés de embarcar com a família para a Flórida partisse sozinho para Nova York. Mas como tinha o cartão de crédito do pai, ele se hospeda no melhor hotel da cidade, mas também encontra os dois ladrões que tinha enfrentado no passado e que agora planejam se vingar dele.",
+      "popularity": 20.1019,
+      "poster_path": "/qffLHZU9mU0zqmOISnjir2oDEsR.jpg",
+      "release_date": "1992-11-15",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.793,
+      "vote_count": 10883
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/hbZT53Kng9UXWAq2oHaPPbp4B83.jpg",
+      "genre_ids": [
+        28,
+        12,
+        14,
+        35,
+        10749,
+        18
+      ],
+      "id": 21835,
+      "title": "Uma Odisséia Chinesa: Parte Dois – Cinderela",
+      "original_language": "cn",
+      "original_title": "西遊記大結局之仙履奇緣",
+      "overview": "Segunda parte do épico Chinês sobre a chegada do budismo na China.",
+      "popularity": 19.5373,
+      "poster_path": "/xK5I5ikVC8FCCggNzNlanC7GI92.jpg",
+      "release_date": "1995-02-04",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.7,
+      "vote_count": 271
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/9FrpAtF87VKblKkDEiIZzYgO40K.jpg",
+      "genre_ids": [
+        28,
+        35,
+        80
+      ],
+      "id": 2109,
+      "title": "A Hora do Rush",
+      "original_language": "en",
+      "original_title": "Rush Hour",
+      "overview": "Quando a filha de um diplomata chinês é sequestrada em Los Angeles, o cônsul chama o inspector Lee em Hong Kong para ajudar o FBI com o caso. O FBI não se importa com Lee e o deixa de lado no Departamento de Polícia de Los Angeles, pedindo ao detetive James Carter que o vigie. Apesar de Lee e Carter não se suportarem, eles resolvem trabalhar juntos para resolver o caso por conta própria ao descobrirem que foram abandonados tanto pelo FBI quanto pela polícia.",
+      "popularity": 19.3731,
+      "poster_path": "/sdzr7YU2fPoTwjfsO4gN7ri0S5e.jpg",
+      "release_date": "1998-09-18",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.084,
+      "vote_count": 5896
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/cvH1gNIMRITdLzoWv1HNAbRyH3n.jpg",
+      "genre_ids": [
+        35,
+        10749
+      ],
+      "id": 2105,
+      "title": "American Pie: A Primeira Vez é Inesquecível",
+      "original_language": "en",
+      "original_title": "American Pie",
+      "overview": "Jim Kevin, Oz e Finch são quatro amigos às vésperas do baile de formatura de escola. Entre tentativas frustradas de fazer sexo com as namoradas, vigiar garotas nuas pela Internet e até atacar uma torta recém-saída do forno, os rapazes fazem um pacto: deixar a virgindade para trás antes do baile de formatura. Começam, então, as investidas mais hilariantes em busca de sexo e, principalmente, mulheres.",
+      "popularity": 17.871,
+      "poster_path": "/4GxuPJxUcArRpfBGJL6BG3B4Cb9.jpg",
+      "release_date": "1999-07-09",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.617,
+      "vote_count": 8548
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/5qsyqA7FeYRymBmNbPBqBgqWPO4.jpg",
+      "genre_ids": [
+        12,
+        35,
+        10751
+      ],
+      "id": 9340,
+      "title": "Os Goonies",
+      "original_language": "en",
+      "original_title": "The Goonies",
+      "overview": "Após encontrar um mapa do tesouro no sótão de sua casa, Mickey, Brand, Bocão (Mouth), Dado (Data) e Gordo (Chunk) partem em busca do tesouro de Willy Caolho. Juntam-se a eles nessa aventura Andy e Stef mas, além das armadilhas deixadas por Willy Caolho por entre as cavernas e trilhas subterrâneas, os garotos terão de enfrentar também uma família de bandidos italianos, os Fratelli. Para salvá-los resta somente o valente e destemido Sloth.",
+      "popularity": 17.4627,
+      "poster_path": "/6YGlQxEzEqQ5VYj64NvzbItXKPX.jpg",
+      "release_date": "1985-06-07",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.513,
+      "vote_count": 6397
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/84beTJf26mfhoasUlKSOiNSutyS.jpg",
+      "genre_ids": [
+        35,
+        18,
+        10749
+      ],
+      "id": 19404,
+      "title": "Dilwale vai levar a noiva",
+      "original_language": "hi",
+      "original_title": "दिलवाले दुल्हनिया ले जायेंगे",
+      "overview": "Raj e Simran são dois jovens indianos vivendo em Londres que, acidentalmente, se conhecem durante uma viagem pela Europa. Eles se apaixonam, mas Simran está prometida a um indiano. Raj não desanima e segue seu amor até a Índia, onde os dois tentam convencer a todos que precisam ficar juntos.",
+      "popularity": 17.0654,
+      "poster_path": "/2CAL2433ZeIihfX1Hb2139CX0pW.jpg",
+      "release_date": "1995-10-20",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.5,
+      "vote_count": 4620
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/c6yfABGVKuB5cjoOwdX4AJMlzUz.jpg",
+      "genre_ids": [
+        35,
+        14
+      ],
+      "id": 620,
+      "title": "Os Caça-Fantasmas",
+      "original_language": "en",
+      "original_title": "Ghostbusters",
+      "overview": "Em Nova York, Peter Venkman, Ray Stantz e Egon Spengler são três cientistas do departamento de psicologia da Universidade de Columbia que se dedicam ao estudo de casos paranormais. Quando a subvenção termina, eles são despedidos e Venkman sugere que abram um negócio próprio, a exterminadora de fantasmas Ghostbusters. Inicialmente eles só têm despesas e nenhum cliente, mas eis que surge Dana Barrett, uma violoncelista que teve uma experiência assustadora em seu apartamento.",
+      "popularity": 16.7948,
+      "poster_path": "/6RjSQGuqwY2kqpNN7ibono0e1Cc.jpg",
+      "release_date": "1984-06-08",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.498,
+      "vote_count": 9980
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/bQlw59HncOXX9alFlOYKHAvSnm.jpg",
+      "genre_ids": [
+        35,
+        14,
+        80,
+        10749
+      ],
+      "id": 854,
+      "title": "O Máskara",
+      "original_language": "en",
+      "original_title": "The Mask",
+      "overview": "Em Edge City vive Stanley Ipkiss, um cara decente que trabalha em um banco, mas é socialmente desajeitado e sem muito sucesso com as mulheres. Após um dos piores dias da sua vida, ele acha no mar a estranha máscara de Loki, um deus escandinavo. Quando Stanley coloca a máscara, se transforma em \"O Máskara\", um ser com o rosto verde que possui a coragem para fazer as coisas mais arriscadas e divertidas que Stanley receia fazer, inclusive flertar com Tina Carlyle, a bela e sensual cantora que se apresenta no Coco Bongo, a discoteca do momento. O Máskara tem velocidade sobre-humana e um humor não-convencional e, enquanto isto, o gângster Dorian Tyrrell, que namora Tina, se esforça para destruir o Máskara e se apoderar da máscara para usar seus poderes para o mal.",
+      "popularity": 16.4949,
+      "poster_path": "/zLLC7AldfrYUot7lsw3ePFSs87e.jpg",
+      "release_date": "1994-07-29",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.995,
+      "vote_count": 11565
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/hwwFyowfcbLRVmRBOkvnABBNIOs.jpg",
+      "genre_ids": [
+        12,
+        16,
+        35,
+        10751
+      ],
+      "id": 9487,
+      "title": "Vida de Inseto",
+      "original_language": "en",
+      "original_title": "A Bug's Life",
+      "overview": "Em nome de todos os insetos oprimidos, uma formiga chamada Flik contrata uma tropa de insetos guerreiros para defender seu formigueiro de um bando de gafanhotos famintos liderados por Hopper.",
+      "popularity": 16.3895,
+      "poster_path": "/vvlbdBCuLt7nkQG7anNE6xHNbAO.jpg",
+      "release_date": "1998-11-25",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.982,
+      "vote_count": 9906
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/aJMhYOP80cVBtq5ku3uyqASF3Ol.jpg",
+      "genre_ids": [
+        28,
+        12,
+        35,
+        878
+      ],
+      "id": 607,
+      "title": "MIB - Homens de Preto",
+      "original_language": "en",
+      "original_title": "Men in Black",
+      "overview": "Kay e Jay, os Homens de Preto, são o maior segredo já mantido no universo. Eles são agentes de uma agência não-oficial do governo e responsáveis por monitorar todos os encontros com alienígenas na Terra. Ao investigar uma série de atividades extraterrestres, descobrem um terrorista intergaláctico cuja missão é assassinar dois embaixadores de galáxias opostas.",
+      "popularity": 16.031,
+      "poster_path": "/bUA0TD2COayMP6ur9Qbewdbbm2e.jpg",
+      "release_date": "1997-07-02",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.229,
+      "vote_count": 15167
+    }
+  ],
+  "total_pages": 123,
+  "total_results": 2456
+}

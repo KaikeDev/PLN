@@ -1,0 +1,422 @@
+{
+  "page": 2,
+  "results": [
+    {
+      "adult": false,
+      "backdrop_path": "/uI22JkEMediWyiRqhllNqeeGtW0.jpg",
+      "genre_ids": [
+        80,
+        18,
+        28
+      ],
+      "id": 949,
+      "title": "Fogo Contra Fogo",
+      "original_language": "en",
+      "original_title": "Heat",
+      "overview": "O ladrão obsessivo Neil McCauley lidera uma equipe de primeira linha em vários assaltos ousados ​​por Los Angeles, enquanto o determinado detetive Vincent Hanna o persegue sem descanso. Cada homem reconhece e respeita a capacidade e a dedicação do outro, mesmo sabendo que o seu jogo de gato e rato pode terminar em violência.",
+      "popularity": 21.1828,
+      "poster_path": "/fv2mQTMJxjMY5EKG3epvjuVUVKJ.jpg",
+      "release_date": "1995-12-15",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.944,
+      "vote_count": 8664
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/6aNKD81RHR1DqUUa8kOZ1TBY1Lp.jpg",
+      "genre_ids": [
+        35,
+        18
+      ],
+      "id": 637,
+      "title": "A Vida é Bela",
+      "original_language": "it",
+      "original_title": "La vita è bella",
+      "overview": "Durante a Segunda Guerra Mundial na Itália, o judeu Guido e seu filho Giosué são levados para um campo de concentração nazista. Afastado da mulher, ele tem que usar sua imaginação para fazer o menino acreditar que estão participando de uma grande brincadeira, com o intuito de protegê-lo do terror e da violência que os cercam.",
+      "popularity": 20.9971,
+      "poster_path": "/dkK48wCY4aVpWFDdPpS6DxQ1bvB.jpg",
+      "release_date": "1997-12-20",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.437,
+      "vote_count": 14227
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/2spEHYDcyE9r9mS7AFEscfKVDzO.jpg",
+      "genre_ids": [
+        878,
+        18,
+        53
+      ],
+      "id": 78,
+      "title": "Blade Runner: O Caçador de Andróides",
+      "original_language": "en",
+      "original_title": "Blade Runner",
+      "overview": "No início do século 21, uma grande corporação desenvolve um robô que é mais forte e ágil que o ser humano e se equiparando em inteligência. São conhecidos como \"replicantes\" e utilizados como escravos na colonização e exploração de outros planetas. Mas, quando um grupo dos robôs mais evoluídos provoca um motim em uma colônia fora da Terra, este incidente faz os replicantes serem considerados ilegais na Terra, sob pena de morte. A partir de então, policiais de um esquadrão de elite conhecidos como \"Blade Runner\", têm ordem de atirar para matar em replicantes encontrados na Terra. Mas tal ato não é chamado de \"execução\" e sim de \"remoção\". Até que, em novembro de 2019, em Los Angeles, quando cinco replicantes chegam à Terra, o ex-Blade Runner, Deckard, é encarregado de caçá-los.",
+      "popularity": 20.1338,
+      "poster_path": "/y5ibL0vFnzsRiIHosw0WOfHtIj1.jpg",
+      "release_date": "1982-06-25",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.9,
+      "vote_count": 15386
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/hy0Hx9fMPk2fmw26Li60z1S2giU.jpg",
+      "genre_ids": [
+        18,
+        80,
+        53
+      ],
+      "id": 629,
+      "title": "Os Suspeitos",
+      "original_language": "en",
+      "original_title": "The Usual Suspects",
+      "overview": "Um detetive interroga um dos únicos sobreviventes de uma explosão no cais que provocou dezenas de mortes. O suspeito conta uma história sobre os eventos que levaram ele e mais quatro criminosos ao local do crime, deixando dúvidas sobre a verdade.",
+      "popularity": 19.9249,
+      "poster_path": "/8RrGQ3kSiu2JJatkQ3o0DdXUGUU.jpg",
+      "release_date": "1995-07-19",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.164,
+      "vote_count": 11724
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/hbZT53Kng9UXWAq2oHaPPbp4B83.jpg",
+      "genre_ids": [
+        28,
+        12,
+        14,
+        35,
+        10749,
+        18
+      ],
+      "id": 21835,
+      "title": "Uma Odisséia Chinesa: Parte Dois – Cinderela",
+      "original_language": "cn",
+      "original_title": "西遊記大結局之仙履奇緣",
+      "overview": "Segunda parte do épico Chinês sobre a chegada do budismo na China.",
+      "popularity": 19.5373,
+      "poster_path": "/xK5I5ikVC8FCCggNzNlanC7GI92.jpg",
+      "release_date": "1995-02-04",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.7,
+      "vote_count": 271
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/dBgxEkWe17R0AJDAvAhpeVELQx2.jpg",
+      "genre_ids": [
+        28,
+        18,
+        10749
+      ],
+      "id": 744,
+      "title": "Top Gun - Ases Indomáveis",
+      "original_language": "en",
+      "original_title": "Top Gun",
+      "overview": "A escola naval de pilotos é onde o melhor dos melhores treinam para refinar suas habilidades de voo de elite. Quando o piloto Maverick é enviado para a escola, sua atitude irresponsável e comportamento arrogante o colocam em desacordo com os outros pilotos, especialmente Iceman. Porém Maverick não está apenas competindo para ser o piloto superior de caça, ele também está lutando pela atenção de sua bonita instrutora de voo, Charlotte Blackwood.",
+      "popularity": 19.4234,
+      "poster_path": "/dDrMtnVgtDeecIgNchb9F8JcO5w.jpg",
+      "release_date": "1986-05-16",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.072,
+      "vote_count": 9893
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/hCxxOJojCUFyuahDx167glJgp7E.jpg",
+      "genre_ids": [
+        28,
+        53,
+        18
+      ],
+      "id": 1368,
+      "title": "Rambo: Programado Para Matar",
+      "original_language": "en",
+      "original_title": "First Blood",
+      "overview": "Quando o ex-Boina Verde John Rambo é assediado pelas autoridades locais e preso por vadiagem, ele é forçado a fugir para as montanhas e travar uma guerra crescente de um homem só contra seus perseguidores.",
+      "popularity": 18.7435,
+      "poster_path": "/eZlxLq2iNpDKvjpjLhEJV2gK6Kk.jpg",
+      "release_date": "1982-10-22",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.519,
+      "vote_count": 7079
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/zNnjHLDtV8Ti3aworltaeaLMov4.jpg",
+      "genre_ids": [
+        80,
+        18,
+        53
+      ],
+      "id": 242,
+      "title": "O Poderoso Chefão: Parte III",
+      "original_language": "en",
+      "original_title": "The Godfather Part III",
+      "overview": "Don Michael Corleone está envelhecendo e, com a ajuda do sobrinho Vicente Mancini, busca a legitimação dos interesses da família, em Nova York e na Itália, antes de sua morte. Mas seu protegido não está só interessado em parte do império da família. Ele também deseja a filha de Michael, Mary.",
+      "popularity": 17.6188,
+      "poster_path": "/y8GROCjgD8amoFufSx2USKrOy7d.jpg",
+      "release_date": "1990-12-25",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.417,
+      "vote_count": 7042
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/b9diKSmofRcgjbUxDrSPms82yAN.jpg",
+      "genre_ids": [
+        18
+      ],
+      "id": 9769,
+      "title": "Lolita",
+      "original_language": "en",
+      "original_title": "Lolita",
+      "overview": "Um homem (Humbert) e uma menina precoce (Lolita) embarcam numa excursão pecaminosa pelos Estados Unidos, seguidos por alguém que nós sabemos, desde logo, ser Clare Quilty. Lolita torna-se numa obsessão para Humbert, e este aproveita para a usar ao serviço dos seus interesses. Mas, o paraíso está longe de ser o que Humbert sonhara…",
+      "popularity": 17.4904,
+      "poster_path": "/fABjUtQdvRpjqdw1UYJmmlnpCtz.jpg",
+      "release_date": "1997-09-27",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.097,
+      "vote_count": 2031
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/1m1c5gIWWkb1FEC9lzsoXHhhs7b.jpg",
+      "genre_ids": [
+        28,
+        18,
+        36,
+        10752
+      ],
+      "id": 197,
+      "title": "Coração Valente",
+      "original_language": "en",
+      "original_title": "Braveheart",
+      "overview": "No século XIII, soldados ingleses matam a mulher do escocês William Wallace, bem na sua noite de núpcias. Para vingar a amada, ele resolve liderar seu povo em uma luta contra o cruel Rei inglês Edward I. Com a ajuda de Robert e Bruce, ele vai deflagrar uma violenta batalha com o objetivo de libertar a Escócia de uma vez por todas.",
+      "popularity": 17.2785,
+      "poster_path": "/cfnhpDzEV5zTsuaa4dCHFRzPHXx.jpg",
+      "release_date": "1995-05-24",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.943,
+      "vote_count": 11414
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/747dgDfL5d8esobk7h4odaOFhUq.jpg",
+      "genre_ids": [
+        80,
+        18,
+        53
+      ],
+      "id": 275,
+      "title": "Fargo: Uma Comédia de Erros",
+      "original_language": "en",
+      "original_title": "Fargo",
+      "overview": "Jerry Lundegaard é um vendedor de carros que se endividou e está desesperado por dinheiro. Ele contrata dois bandidos para sequestrar sua própria esposa e seu sogro o ajuda a pagar o resgate. Tudo acontece como o planejado até o momento em que os bandidos atiram em um policial.",
+      "popularity": 17.1446,
+      "poster_path": "/JrnxuijI6XCKyZaiPPrJ3TbZi.jpg",
+      "release_date": "1996-03-08",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.849,
+      "vote_count": 9358
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/tHF5OIcguut0Y83BXzqHtGdJOAf.jpg",
+      "genre_ids": [
+        18
+      ],
+      "id": 7974,
+      "title": "A Garota da Fábrica de Caixas de Fósforos",
+      "original_language": "fi",
+      "original_title": "Tulitikkutehtaan tyttö",
+      "overview": "Iris é uma jovem tímida com uma vida monótona que trabalha numa fábrica de caixas de fósforos e vive com os pais negligentes. Ela sonha em encontrar o amor no salão de baile local. Mas ao descobrir que está grávida após uma aventura de uma noite, anos de raiva acumulada explodem numa crise chocante.",
+      "popularity": 17.1136,
+      "poster_path": "/gAx3zjkUT1nH4rElucUUs8MSAVK.jpg",
+      "release_date": "1990-01-12",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.412,
+      "vote_count": 306
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/84beTJf26mfhoasUlKSOiNSutyS.jpg",
+      "genre_ids": [
+        35,
+        18,
+        10749
+      ],
+      "id": 19404,
+      "title": "Dilwale vai levar a noiva",
+      "original_language": "hi",
+      "original_title": "दिलवाले दुल्हनिया ले जायेंगे",
+      "overview": "Raj e Simran são dois jovens indianos vivendo em Londres que, acidentalmente, se conhecem durante uma viagem pela Europa. Eles se apaixonam, mas Simran está prometida a um indiano. Raj não desanima e segue seu amor até a Índia, onde os dois tentam convencer a todos que precisam ficar juntos.",
+      "popularity": 17.0654,
+      "poster_path": "/2CAL2433ZeIihfX1Hb2139CX0pW.jpg",
+      "release_date": "1995-10-20",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.5,
+      "vote_count": 4620
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/2ndw55F40IkALzWyjCCza3M6nqM.jpg",
+      "genre_ids": [
+        18
+      ],
+      "id": 14,
+      "title": "Beleza Americana",
+      "original_language": "en",
+      "original_title": "American Beauty",
+      "overview": "Lester Burham não aguenta mais o emprego e se sente impotente perante sua vida. Casado com Carolyn e pai da \"aborrecente\" Jane, o melhor momento de seu dia quando se masturba no chuveiro. Até que conhece Angela Hayes, amiga de Jane. Encantado com sua beleza e disposto a dar a volta por cima, Lester pede demissão e começa a reconstruir sua vida, com a ajuda de seu vizinho Ricky.",
+      "popularity": 16.4916,
+      "poster_path": "/9PJKsH7Btz2xjYIvLLtJ7qcJlL3.jpg",
+      "release_date": "1999-09-15",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.996,
+      "vote_count": 13331
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/2Y6Q7eYDXoolcHjYCAyJQlE2CVT.jpg",
+      "genre_ids": [
+        27,
+        18,
+        9648
+      ],
+      "id": 1813,
+      "title": "Advogado do Diabo",
+      "original_language": "en",
+      "original_title": "The Devil's Advocate",
+      "overview": "Kevin Lomax, advogado de uma pequena cidade da Flórida que nunca perdeu um caso, é contratado por John Milton, dono da maior firma de advocacia de Nova York. No início tudo parece correr bem, mas Mary Ann, a esposa do advogado, começa a testemunhar aparições demoníacas. Kevin está empenhado em defender o cliente e cada vez dá menos atenção a sua mulher, enquanto seu misterioso chefe parece sempre saber como contornar cada problema e tudo que perturba o jovem advogado.",
+      "popularity": 16.4287,
+      "poster_path": "/u6gFTFI22YAnjoUCUyRveN48S06.jpg",
+      "release_date": "1997-10-17",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.482,
+      "vote_count": 7025
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/6qHI1IYj7QlLSCwHRzkL62X175s.jpg",
+      "genre_ids": [
+        18
+      ],
+      "id": 73,
+      "title": "A Outra História Americana",
+      "original_language": "en",
+      "original_title": "American History X",
+      "overview": "Derek busca vazão para suas agruras tornando-se líder de uma gangue de racistas. A violência o leva a um assassinato, e ele é condenado pelo crime. Três anos mais tarde, ele sai da prisão e tem que convencer seu irmão, que está prestes a assumir a liderança do grupo, a não trilhar o mesmo caminho.",
+      "popularity": 16.3696,
+      "poster_path": "/hgvKHv8d9bQEiQV5JE8nx0I2zhr.jpg",
+      "release_date": "1998-07-01",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.324,
+      "vote_count": 12892
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/ywWva4trKw7f3wtbz81Fe3FnrtC.jpg",
+      "genre_ids": [
+        12,
+        18,
+        37
+      ],
+      "id": 581,
+      "title": "Dança com Lobos",
+      "original_language": "en",
+      "original_title": "Dances with Wolves",
+      "overview": "Durante a Guerra Civil, um jovem soldado pratica uma ato ousado, é considerado herói e vai servir por sua escolha em um lugar com forte predominância do povo Sioux. Com o tempo, ele assimila os costumes dos nativos, acontecendo uma aculturação às avessas.",
+      "popularity": 16.0642,
+      "poster_path": "/uWsXlrzsHKCwI2fPrrpW0QFwjMZ.jpg",
+      "release_date": "1990-11-09",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.841,
+      "vote_count": 4820
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/uNLIMPxknsV4n3IAEDpS1iqF5dm.jpg",
+      "genre_ids": [
+        14,
+        18,
+        10749
+      ],
+      "id": 162,
+      "title": "Edward Mãos de Tesoura",
+      "original_language": "en",
+      "original_title": "Edward Scissorhands",
+      "overview": "Peg Boggs é uma vendedora que acidentalmente descobre Edward, jovem que mora sozinho em um castelo no topo de uma montanha, criado por um inventor que morreu antes de dar mãos ao estranho ser, que possui apenas enormes lâminas no lugar delas. Isto o impede de poder se aproximar dos humanos, a não ser para criar revolucionários cortes de cabelos. No entanto, Edward é vítima da sua inocência e, se é amado por uns, é perseguido e usado por outros.",
+      "popularity": 16.0325,
+      "poster_path": "/8vmYMcvWaqqhEWt9EnTPdXDdy2F.jpg",
+      "release_date": "1990-12-07",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.7,
+      "vote_count": 14025
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/uMBByiSDpgFwWVegAtwwnuzvogJ.jpg",
+      "genre_ids": [
+        14,
+        18,
+        10749
+      ],
+      "id": 297,
+      "title": "Encontro Marcado",
+      "original_language": "en",
+      "original_title": "Meet Joe Black",
+      "overview": "Quando o Anjo da Morte chega à Terra para buscar um magnata da mídia, suas experiências como mortal o levam a se apaixonar pela filha do milionário. A Morte então decide fazer um acordo com o empresário para que ambos possam permanecer mais tempo na Terra.",
+      "popularity": 15.6658,
+      "poster_path": "/xpIVnmEHEYq70tVMjtITfyvw6XB.jpg",
+      "release_date": "1998-11-12",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.37,
+      "vote_count": 5936
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/f9X91dUckoRzOZlw4XBUOfkN9FC.jpg",
+      "genre_ids": [
+        35,
+        18,
+        10751
+      ],
+      "id": 788,
+      "title": "Uma Babá Quase Perfeita",
+      "original_language": "en",
+      "original_title": "Mrs. Doubtfire",
+      "overview": "Daniel Hillard está passando por uma fase complicada, acaba de se separar de Miranda e perdeu o seu emprego. Impedido pela ex-esposa de passar mais tempo com os filhos, ele tem uma idéia inusitada para recuperar a relação com as crianças. Daniel veste-se como uma senhora idosa escocesa e tenta conseguir o cargo de babá no seu antigo lar.",
+      "popularity": 15.2538,
+      "poster_path": "/zrZsqBnGl1zd7T8zxB3OiBOJWcj.jpg",
+      "release_date": "1993-11-24",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.196,
+      "vote_count": 6783
+    }
+  ],
+  "total_pages": 128,
+  "total_results": 2548
+}

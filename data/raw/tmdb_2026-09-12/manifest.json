@@ -1,0 +1,510 @@
+{
+  "schema_version": 1,
+  "source": "TMDB",
+  "started_at": "2026-09-12T21:08:39.057492+00:00",
+  "status": "complete",
+  "sampling": "amostra intencional por gênero e período; ordenação por popularidade",
+  "config_sha256": "de15c13c8d2e25ce13c3242bb015ec1089df31d81a2ba3bc156b650fbce883c1",
+  "source_identity": {
+    "source_sha256": {
+      "__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "api/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "api/router.py": "cc59ea20826f41ccf9b867b37edf29e50066ac8ab860a1764820f6c9ed8e4655",
+      "api/routes/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "api/routes/filmes.py": "3bfb35189532dc031a5d49c609cd38d31c58b51192445d9a52564deb7ba9a954",
+      "api/routes/health.py": "9fdfdb284656341c292bfe0b3a9c3f933e86523883141fbe157a6ec1632bcd73",
+      "core/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "core/config.py": "d2b4619eca92f6a6f115ad0706c5990ecf5b86bafcc6e964b728caa9ed1f69be",
+      "corpus/__init__.py": "00554ce91b85b78f33077c4b96375cbc03c69592d21f7f679fb90249f832b231",
+      "corpus/__main__.py": "cced3be84b3495ee0f1e5f76341c43b2653d3bbe502b8d60507eefe7b5442790",
+      "corpus/collect.py": "baf40f98710256cf3285740128cfc3a36ec80279cfd5152fa392bf2c2f1fbe37",
+      "corpus/io.py": "4d47fbb1b78a6f29021cbec82fdff095570d2bee0b2e13322c1e11893062e2bf",
+      "corpus/process.py": "143bbfb67125c85ff67568ed9d8fa120187ddacb8593bd7cfea7d52c8a2e810e",
+      "corpus/transform.py": "40fc9b2976d9eee1bff4d4fa6d0058f7e13d05e713d99bcce0ed2294e911de1f",
+      "exceptions/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "exceptions/tmdb.py": "ab6b0653a52368647bfa37edc6345e029bc83429736371cc5b82b5e0c5c77ec6",
+      "main.py": "a642b96a25d53dc50f3519ed09f37e8c7fd2d9c5774ab250266a64b7eae6e1e6",
+      "services/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "services/pln/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "services/pln/extrator.py": "688c8ff39b2726e4fcb3be0c50a710c02d53a5ab6747275cae2e90dd1d046f17",
+      "services/pln/generos_cache.py": "7139f3ea4594d31e9f11c3aaf1ec460bf5c1bff0e914024aacdec56e57e53a64",
+      "services/pln/lexico.py": "8ca2138de5b88f6346f34d2c80e0bbdc0474dd214808cce236fb4b771f43b265",
+      "services/pln/negacao.py": "d5a4d9f830fe5031457edca4f323a2bb76b20a0a8dd9cf4ed39bdb9028aa1cbc",
+      "services/pln/normalizacao.py": "5160bbee537b9b353b0ac8fc7cbc66b149817b160a33b00400abace77ed40bfd",
+      "services/pln/periodo.py": "53ee522fb0e9dc911551aa4d851c1df187dc160454c3f11332070d597cfeb0c3",
+      "services/pln/pesquisa.py": "f1ac4c4339f648042a1ed5c0fbc6a8122fdb9efb31f2f2bb26d8c5f4496a4928",
+      "services/tmdb/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "services/tmdb/client.py": "c72b005c90131f05f155bbce8de20d6ddd6db449c0fefee3f010e7b3f83b72c2",
+      "services/tmdb/filmes.py": "142e252720502bc944ecb4ecbbd3755dd6059d155145d13b224c5f83a318fc78"
+    }
+  },
+  "requests": [
+    {
+      "endpoint": "/genre/movie/list",
+      "params": {
+        "language": "pt-BR"
+      },
+      "slice": "genre_map",
+      "collected_at": "2026-09-12T21:08:39.358918+00:00",
+      "status": "ok",
+      "file": "responses/001.json",
+      "sha256": "783d56c70865c7ce2246d3db84c7f29abcc83a2ed2dc6721c90d443fd0207644"
+    },
+    {
+      "endpoint": "/discover/movie",
+      "params": {
+        "language": "pt-BR",
+        "with_genres": "18",
+        "primary_release_date.gte": "1980-01-01",
+        "primary_release_date.lte": "1999-12-31",
+        "vote_count.gte": 50,
+        "sort_by": "popularity.desc",
+        "include_adult": "false",
+        "page": 1
+      },
+      "slice": "genre_18_1980_1999",
+      "collected_at": "2026-09-12T21:08:50.747309+00:00",
+      "status": "ok",
+      "file": "responses/002.json",
+      "sha256": "0f508122d39da058fa5bb497823d7813513dae44d0c0109000e518e6a2d6ad29"
+    },
+    {
+      "endpoint": "/discover/movie",
+      "params": {
+        "language": "pt-BR",
+        "with_genres": "18",
+        "primary_release_date.gte": "1980-01-01",
+        "primary_release_date.lte": "1999-12-31",
+        "vote_count.gte": 50,
+        "sort_by": "popularity.desc",
+        "include_adult": "false",
+        "page": 2
+      },
+      "slice": "genre_18_1980_1999",
+      "collected_at": "2026-09-12T21:08:51.161495+00:00",
+      "status": "ok",
+      "file": "responses/003.json",
+      "sha256": "c48ad194951a1ab0737452dabdde1cabc39cda41e8071d9cb17d108daa6ed23b"
+    },
+    {
+      "endpoint": "/discover/movie",
+      "params": {
+        "language": "pt-BR",
+        "with_genres": "18",
+        "primary_release_date.gte": "2000-01-01",
+        "primary_release_date.lte": "2014-12-31",
+        "vote_count.gte": 50,
+        "sort_by": "popularity.desc",
+        "include_adult": "false",
+        "page": 1
+      },
+      "slice": "genre_18_2000_2014",
+      "collected_at": "2026-09-12T21:08:51.580956+00:00",
+      "status": "ok",
+      "file": "responses/004.json",
+      "sha256": "b3a52198d7fbfb647abef0fedd141ee156aa3ffa5a8cefa3f083fdc551ce2c2f"
+    },
+    {
+      "endpoint": "/discover/movie",
+      "params": {
+        "language": "pt-BR",
+        "with_genres": "18",
+        "primary_release_date.gte": "2000-01-01",
+        "primary_release_date.lte": "2014-12-31",
+        "vote_count.gte": 50,
+        "sort_by": "popularity.desc",
+        "include_adult": "false",
+        "page": 2
+      },
+      "slice": "genre_18_2000_2014",
+      "collected_at": "2026-09-12T21:08:51.997152+00:00",
+      "status": "ok",
+      "file": "responses/005.json",
+      "sha256": "1ea4d561704b44f66ab73cd8c1e833f70ed79d5ae585171531167ee444e8db35"
+    },
+    {
+      "endpoint": "/discover/movie",
+      "params": {
+        "language": "pt-BR",
+        "with_genres": "18",
+        "primary_release_date.gte": "2015-01-01",
+        "primary_release_date.lte": "2025-12-31",
+        "vote_count.gte": 50,
+        "sort_by": "popularity.desc",
+        "include_adult": "false",
+        "page": 1
+      },
+      "slice": "genre_18_2015_2025",
+      "collected_at": "2026-09-12T21:08:52.427615+00:00",
+      "status": "ok",
+      "file": "responses/006.json",
+      "sha256": "e2e72edb4bdd50717bb0a58ba8dab3608d1ab442f32ffa5fc07bc6d923418d25"
+    },
+    {
+      "endpoint": "/discover/movie",
+      "params": {
+        "language": "pt-BR",
+        "with_genres": "18",
+        "primary_release_date.gte": "2015-01-01",
+        "primary_release_date.lte": "2025-12-31",
+        "vote_count.gte": 50,
+        "sort_by": "popularity.desc",
+        "include_adult": "false",
+        "page": 2
+      },
+      "slice": "genre_18_2015_2025",
+      "collected_at": "2026-09-12T21:08:52.856705+00:00",
+      "status": "ok",
+      "file": "responses/007.json",
+      "sha256": "1baa0c2b5a7ee8b1f2f48910b96337cc7e9dad772532fd001604d6c85c9c6c9e"
+    },
+    {
+      "endpoint": "/discover/movie",
+      "params": {
+        "language": "pt-BR",
+        "with_genres": "35",
+        "primary_release_date.gte": "1980-01-01",
+        "primary_release_date.lte": "1999-12-31",
+        "vote_count.gte": 50,
+        "sort_by": "popularity.desc",
+        "include_adult": "false",
+        "page": 1
+      },
+      "slice": "genre_35_1980_1999",
+      "collected_at": "2026-09-12T21:08:53.278442+00:00",
+      "status": "ok",
+      "file": "responses/008.json",
+      "sha256": "d6f678aefb7f9bef63e0726501b5ca4903c4bb3525d6251c31721343ed695620"
+    },
+    {
+      "endpoint": "/discover/movie",
+      "params": {
+        "language": "pt-BR",
+        "with_genres": "35",
+        "primary_release_date.gte": "1980-01-01",
+        "primary_release_date.lte": "1999-12-31",
+        "vote_count.gte": 50,
+        "sort_by": "popularity.desc",
+        "include_adult": "false",
+        "page": 2
+      },
+      "slice": "genre_35_1980_1999",
+      "collected_at": "2026-09-12T21:08:53.754021+00:00",
+      "status": "ok",
+      "file": "responses/009.json",
+      "sha256": "899861076a6304157edb1fa20f94443e8a9f61259af8c06ceb703fc438b9a0e8"
+    },
+    {
+      "endpoint": "/discover/movie",
+      "params": {
+        "language": "pt-BR",
+        "with_genres": "35",
+        "primary_release_date.gte": "2000-01-01",
+        "primary_release_date.lte": "2014-12-31",
+        "vote_count.gte": 50,
+        "sort_by": "popularity.desc",
+        "include_adult": "false",
+        "page": 1
+      },
+      "slice": "genre_35_2000_2014",
+      "collected_at": "2026-09-12T21:08:54.180819+00:00",
+      "status": "ok",
+      "file": "responses/010.json",
+      "sha256": "a49db7fecb2f57a6fb62b28746140cc4f0547aac827516609c48a44a95bbff0f"
+    },
+    {
+      "endpoint": "/discover/movie",
+      "params": {
+        "language": "pt-BR",
+        "with_genres": "35",
+        "primary_release_date.gte": "2000-01-01",
+        "primary_release_date.lte": "2014-12-31",
+        "vote_count.gte": 50,
+        "sort_by": "popularity.desc",
+        "include_adult": "false",
+        "page": 2
+      },
+      "slice": "genre_35_2000_2014",
+      "collected_at": "2026-09-12T21:08:54.609784+00:00",
+      "status": "ok",
+      "file": "responses/011.json",
+      "sha256": "68e8edf7d1a52958777d2aa8e367cf0d7f1b84ba8bb056fe6d7a36e2d47ea717"
+    },
+    {
+      "endpoint": "/discover/movie",
+      "params": {
+        "language": "pt-BR",
+        "with_genres": "35",
+        "primary_release_date.gte": "2015-01-01",
+        "primary_release_date.lte": "2025-12-31",
+        "vote_count.gte": 50,
+        "sort_by": "popularity.desc",
+        "include_adult": "false",
+        "page": 1
+      },
+      "slice": "genre_35_2015_2025",
+      "collected_at": "2026-09-12T21:08:55.037062+00:00",
+      "status": "ok",
+      "file": "responses/012.json",
+      "sha256": "b3e832ad581a8f0c59177ae0ecab49a95c1ec54fde425092d8cd25af14734768"
+    },
+    {
+      "endpoint": "/discover/movie",
+      "params": {
+        "language": "pt-BR",
+        "with_genres": "35",
+        "primary_release_date.gte": "2015-01-01",
+        "primary_release_date.lte": "2025-12-31",
+        "vote_count.gte": 50,
+        "sort_by": "popularity.desc",
+        "include_adult": "false",
+        "page": 2
+      },
+      "slice": "genre_35_2015_2025",
+      "collected_at": "2026-09-12T21:08:55.461123+00:00",
+      "status": "ok",
+      "file": "responses/013.json",
+      "sha256": "d8a4ad208fa3ef657ac538a54409f87c4f4082660679a0c13bb7496f50e58022"
+    },
+    {
+      "endpoint": "/discover/movie",
+      "params": {
+        "language": "pt-BR",
+        "with_genres": "27",
+        "primary_release_date.gte": "1980-01-01",
+        "primary_release_date.lte": "1999-12-31",
+        "vote_count.gte": 50,
+        "sort_by": "popularity.desc",
+        "include_adult": "false",
+        "page": 1
+      },
+      "slice": "genre_27_1980_1999",
+      "collected_at": "2026-09-12T21:08:55.881377+00:00",
+      "status": "ok",
+      "file": "responses/014.json",
+      "sha256": "f9370cc729fbc394fb0429844a2393b7cbe16189dce2e0ff4cbb7e9b597e664e"
+    },
+    {
+      "endpoint": "/discover/movie",
+      "params": {
+        "language": "pt-BR",
+        "with_genres": "27",
+        "primary_release_date.gte": "1980-01-01",
+        "primary_release_date.lte": "1999-12-31",
+        "vote_count.gte": 50,
+        "sort_by": "popularity.desc",
+        "include_adult": "false",
+        "page": 2
+      },
+      "slice": "genre_27_1980_1999",
+      "collected_at": "2026-09-12T21:08:56.297600+00:00",
+      "status": "ok",
+      "file": "responses/015.json",
+      "sha256": "22040e10fb812de0174c00a9349fc6cad5e06d568d8a975ae66d349c2e602b19"
+    },
+    {
+      "endpoint": "/discover/movie",
+      "params": {
+        "language": "pt-BR",
+        "with_genres": "27",
+        "primary_release_date.gte": "2000-01-01",
+        "primary_release_date.lte": "2014-12-31",
+        "vote_count.gte": 50,
+        "sort_by": "popularity.desc",
+        "include_adult": "false",
+        "page": 1
+      },
+      "slice": "genre_27_2000_2014",
+      "collected_at": "2026-09-12T21:08:56.717970+00:00",
+      "status": "ok",
+      "file": "responses/016.json",
+      "sha256": "f995a9b442fa66ae1756feede51f0dcd8562a51a87b4e7d2163ad0292864144b"
+    },
+    {
+      "endpoint": "/discover/movie",
+      "params": {
+        "language": "pt-BR",
+        "with_genres": "27",
+        "primary_release_date.gte": "2000-01-01",
+        "primary_release_date.lte": "2014-12-31",
+        "vote_count.gte": 50,
+        "sort_by": "popularity.desc",
+        "include_adult": "false",
+        "page": 2
+      },
+      "slice": "genre_27_2000_2014",
+      "collected_at": "2026-09-12T21:08:57.184770+00:00",
+      "status": "ok",
+      "file": "responses/017.json",
+      "sha256": "d274ad8c535023d39215d82e929b26124358111692eadbcd2d1353419c4faf5f"
+    },
+    {
+      "endpoint": "/discover/movie",
+      "params": {
+        "language": "pt-BR",
+        "with_genres": "27",
+        "primary_release_date.gte": "2015-01-01",
+        "primary_release_date.lte": "2025-12-31",
+        "vote_count.gte": 50,
+        "sort_by": "popularity.desc",
+        "include_adult": "false",
+        "page": 1
+      },
+      "slice": "genre_27_2015_2025",
+      "collected_at": "2026-09-12T21:08:57.603149+00:00",
+      "status": "ok",
+      "file": "responses/018.json",
+      "sha256": "17d3f90a83af12e835ea28feb3211a5e087a221d3032ddef3741a35cb883965e"
+    },
+    {
+      "endpoint": "/discover/movie",
+      "params": {
+        "language": "pt-BR",
+        "with_genres": "27",
+        "primary_release_date.gte": "2015-01-01",
+        "primary_release_date.lte": "2025-12-31",
+        "vote_count.gte": 50,
+        "sort_by": "popularity.desc",
+        "include_adult": "false",
+        "page": 2
+      },
+      "slice": "genre_27_2015_2025",
+      "collected_at": "2026-09-12T21:08:58.028195+00:00",
+      "status": "ok",
+      "file": "responses/019.json",
+      "sha256": "20bcd46fac645284dabda1bc6775bdcc0be1789762c28793996f96c72e5e717d"
+    },
+    {
+      "endpoint": "/discover/movie",
+      "params": {
+        "language": "pt-BR",
+        "with_genres": "878",
+        "primary_release_date.gte": "1980-01-01",
+        "primary_release_date.lte": "1999-12-31",
+        "vote_count.gte": 50,
+        "sort_by": "popularity.desc",
+        "include_adult": "false",
+        "page": 1
+      },
+      "slice": "genre_878_1980_1999",
+      "collected_at": "2026-09-12T21:08:58.445239+00:00",
+      "status": "ok",
+      "file": "responses/020.json",
+      "sha256": "c5fbc52505188d21b6065f0d2a946820914e4ddda42b2afb1cadb5ec501ecb9f"
+    },
+    {
+      "endpoint": "/discover/movie",
+      "params": {
+        "language": "pt-BR",
+        "with_genres": "878",
+        "primary_release_date.gte": "1980-01-01",
+        "primary_release_date.lte": "1999-12-31",
+        "vote_count.gte": 50,
+        "sort_by": "popularity.desc",
+        "include_adult": "false",
+        "page": 2
+      },
+      "slice": "genre_878_1980_1999",
+      "collected_at": "2026-09-12T21:08:58.904227+00:00",
+      "status": "ok",
+      "file": "responses/021.json",
+      "sha256": "b1d5b8c11b32d5e694cc4d0538ad690875fd2f9f3db44afd90c58cca1580a539"
+    },
+    {
+      "endpoint": "/discover/movie",
+      "params": {
+        "language": "pt-BR",
+        "with_genres": "878",
+        "primary_release_date.gte": "2000-01-01",
+        "primary_release_date.lte": "2014-12-31",
+        "vote_count.gte": 50,
+        "sort_by": "popularity.desc",
+        "include_adult": "false",
+        "page": 1
+      },
+      "slice": "genre_878_2000_2014",
+      "collected_at": "2026-09-12T21:08:59.332605+00:00",
+      "status": "ok",
+      "file": "responses/022.json",
+      "sha256": "98703d51091d71f64e0e523909788bb0c161c6a97b0faeb6da06f6ecbd3568db"
+    },
+    {
+      "endpoint": "/discover/movie",
+      "params": {
+        "language": "pt-BR",
+        "with_genres": "878",
+        "primary_release_date.gte": "2000-01-01",
+        "primary_release_date.lte": "2014-12-31",
+        "vote_count.gte": 50,
+        "sort_by": "popularity.desc",
+        "include_adult": "false",
+        "page": 2
+      },
+      "slice": "genre_878_2000_2014",
+      "collected_at": "2026-09-12T21:08:59.749944+00:00",
+      "status": "ok",
+      "file": "responses/023.json",
+      "sha256": "2c2d1f39f9f005bacc048a5db0605f43b19e2e13f80f50121516d598285b815b"
+    },
+    {
+      "endpoint": "/discover/movie",
+      "params": {
+        "language": "pt-BR",
+        "with_genres": "878",
+        "primary_release_date.gte": "2015-01-01",
+        "primary_release_date.lte": "2025-12-31",
+        "vote_count.gte": 50,
+        "sort_by": "popularity.desc",
+        "include_adult": "false",
+        "page": 1
+      },
+      "slice": "genre_878_2015_2025",
+      "collected_at": "2026-09-12T21:09:00.163508+00:00",
+      "status": "ok",
+      "file": "responses/024.json",
+      "sha256": "dd44be348dfed2c3e4f47e364da8326fa823139c434e80526189dfb7cb434005"
+    },
+    {
+      "endpoint": "/discover/movie",
+      "params": {
+        "language": "pt-BR",
+        "with_genres": "878",
+        "primary_release_date.gte": "2015-01-01",
+        "primary_release_date.lte": "2025-12-31",
+        "vote_count.gte": 50,
+        "sort_by": "popularity.desc",
+        "include_adult": "false",
+        "page": 2
+      },
+      "slice": "genre_878_2015_2025",
+      "collected_at": "2026-09-12T21:09:00.589983+00:00",
+      "status": "ok",
+      "file": "responses/025.json",
+      "sha256": "fedc28dc8c46e8a634f589b21e9465f9fdd7d20511003591ec7bce7b765dff55"
+    },
+    {
+      "endpoint": "/movie/603",
+      "params": {
+        "language": "pt-BR"
+      },
+      "slice": "seed_603",
+      "collected_at": "2026-09-12T21:09:01.051576+00:00",
+      "status": "ok",
+      "file": "responses/026.json",
+      "sha256": "debbb64a4e0407783693b7e6f730d7a93c8178fd53c11e6ac38d3f020daf8ecf"
+    }
+  ],
+  "errors": [],
+  "stopped_slices": [],
+  "finished_at": "2026-09-12T21:09:01.128231+00:00",
+  "records_received": 481,
+  "unique_movies": 430,
+  "duplicates_removed": 51,
+  "movies_sha256": "d8a2a3ab3460cad0487438fab4424341be4b7cd0487e169c1ae17381809ce60e",
+  "artifact_sha256": {
+    "config.json": "bdb3ea2694cf7f5f56ac1ea97f121435c91053ec4d28b4bbd60850c07dfdc647",
+    "movies.jsonl": "d8a2a3ab3460cad0487438fab4424341be4b7cd0487e169c1ae17381809ce60e",
+    "genres.json": "783d56c70865c7ce2246d3db84c7f29abcc83a2ed2dc6721c90d443fd0207644",
+    "memberships.json": "086879815dbac860de175c63db0f3d62073cba7b3f596d562badc10e9b2d9978"
+  }
+}

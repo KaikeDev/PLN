@@ -1,0 +1,427 @@
+{
+  "page": 1,
+  "results": [
+    {
+      "adult": false,
+      "backdrop_path": "/ffdqHMWkh1h9MABwIfbfRJhgFW6.jpg",
+      "genre_ids": [
+        28,
+        53,
+        878
+      ],
+      "id": 218,
+      "title": "O Exterminador do Futuro",
+      "original_language": "en",
+      "original_title": "The Terminator",
+      "overview": "Em um futuro próximo, a guerra entre humanos e máquinas foi iniciada. Com a tecnologia a seu dispor, um plano inusitado é arquitetado pelas máquinas ao enviar para o passado um andróide com a missão de matar a mãe daquele que viria a se transformar num líder e seu pior inimigo. Contudo, os humanos também conseguem enviar seu representante para proteger a mulher e tentar garantir o futuro da humanidade.",
+      "popularity": 69.1889,
+      "poster_path": "/fo4SSoNT1ASI4JP7dOLrosWNWKa.jpg",
+      "release_date": "1984-10-26",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.691,
+      "vote_count": 15088
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/lrtSb1skJayPydZk0OSMAKjBOVe.jpg",
+      "genre_ids": [
+        28,
+        878
+      ],
+      "id": 603,
+      "title": "Matrix",
+      "original_language": "en",
+      "original_title": "The Matrix",
+      "overview": "O jovem programador Thomas Anderson é atormentado por estranhos pesadelos em que está sempre conectado por cabos a um imenso sistema de computadores do futuro. À medida que o sonho se repete, ele começa a desconfiar da realidade. Thomas conhece os misteriosos Morpheus e Trinity e descobre que é vítima de um sistema inteligente e artificial chamado Matrix, que manipula a mente das pessoas e cria a ilusão de um mundo real enquanto usa os cérebros e corpos dos indivíduos para produzir energia.",
+      "popularity": 47.5327,
+      "poster_path": "/lDqMDI3xpbB9UQRyeXfei0MXhqb.jpg",
+      "release_date": "1999-03-31",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.3,
+      "vote_count": 28695
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/izkMjmhauFx9DjoBQqM5sM5WAwE.jpg",
+      "genre_ids": [
+        28,
+        53,
+        878
+      ],
+      "id": 280,
+      "title": "O Exterminador do Futuro 2: O Julgamento Final",
+      "original_language": "en",
+      "original_title": "Terminator 2: Judgment Day",
+      "overview": "O jovem John Connor é a chave para a vitória da civilização sobre uma rebelião de robôs do futuro. No entanto, ele torna-se alvo de T-1000, um exterminador que pode assumir a forma que desejar e que foi enviado do futuro para matá-lo. Outro exterminador, o renovado T-800, também é enviado de volta ao passado para proteger o garoto. Quando John e sua mãe embarcam na fuga com T-800, o menino cria um vínculo forte e inesperado com o robô.",
+      "popularity": 31.9871,
+      "poster_path": "/eTIY2LO5cDclxgKtCHuvIKdF3c3.jpg",
+      "release_date": "1991-07-03",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.167,
+      "vote_count": 14821
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/5bzPWQ2dFUl2aZKkp7ILJVVkRed.jpg",
+      "genre_ids": [
+        12,
+        35,
+        878
+      ],
+      "id": 105,
+      "title": "De Volta para o Futuro",
+      "original_language": "en",
+      "original_title": "Back to the Future",
+      "overview": "Marty McFly, um típico adolescente americano dos anos 80, acidentalmente é enviado de volta ao ano de 1955 em um carro modificado para ser uma máquino do tempo, inventada por um cientista louco. Durante sua fantástica e maluca viagem no tempo, McFly tem que fazer com que seus futuros pais se encontrem e se apaixonem, para que assim ele possa ir de volta para o futuro.",
+      "popularity": 30.2819,
+      "poster_path": "/i996T0lI1fGtFEowiH3V6eZthL0.jpg",
+      "release_date": "1985-07-03",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.329,
+      "vote_count": 22365
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/5wJ2tckpvwcxGCAgZiccodwEJpf.jpg",
+      "genre_ids": [
+        28,
+        878,
+        12
+      ],
+      "id": 841,
+      "title": "Duna",
+      "original_language": "en",
+      "original_title": "Dune",
+      "overview": "Em 10.190 D.C., um duque e sua família são mandados pelo Imperador para Arrakis, um árido planeta conhecido como Duna, que tem uma matéria essencial às viagens interplanetárias: a Especiaria. O motivo desta mudança é que o Imperador planeja destruir o duque e sua família, mas seu filho escapa e procura se vingar usando a ecologia deste mundo como uma de suas armas.",
+      "popularity": 20.6309,
+      "poster_path": "/jNudhkxXRHkug5nzOVTYCQt2Tf9.jpg",
+      "release_date": "1984-12-14",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.197,
+      "vote_count": 3538
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/jW21PoKwqs79wk6bfiYezox63mK.jpg",
+      "genre_ids": [
+        878,
+        28,
+        12
+      ],
+      "id": 18,
+      "title": "O Quinto Elemento",
+      "original_language": "fr",
+      "original_title": "Le Cinquième Élément",
+      "overview": "No século XXIII, um motorista de taxi de Nova York se envolve em uma aventura na qual tem de deter um ser demoníaco que percorre a galáxia a cada cinco mil anos. Se nada for feito, a Terra será destruída. Mas para isto, ele precisa encontrar quatro pedras antigas que representam os elementos e colocá-las em volta de uma bela mulher, que é o quinto elemento.",
+      "popularity": 20.4982,
+      "poster_path": "/t2fanPUgCGty1tmU9t3jtYEOEMS.jpg",
+      "release_date": "1997-05-02",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.591,
+      "vote_count": 12127
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/2spEHYDcyE9r9mS7AFEscfKVDzO.jpg",
+      "genre_ids": [
+        878,
+        18,
+        53
+      ],
+      "id": 78,
+      "title": "Blade Runner: O Caçador de Andróides",
+      "original_language": "en",
+      "original_title": "Blade Runner",
+      "overview": "No início do século 21, uma grande corporação desenvolve um robô que é mais forte e ágil que o ser humano e se equiparando em inteligência. São conhecidos como \"replicantes\" e utilizados como escravos na colonização e exploração de outros planetas. Mas, quando um grupo dos robôs mais evoluídos provoca um motim em uma colônia fora da Terra, este incidente faz os replicantes serem considerados ilegais na Terra, sob pena de morte. A partir de então, policiais de um esquadrão de elite conhecidos como \"Blade Runner\", têm ordem de atirar para matar em replicantes encontrados na Terra. Mas tal ato não é chamado de \"execução\" e sim de \"remoção\". Até que, em novembro de 2019, em Los Angeles, quando cinco replicantes chegam à Terra, o ex-Blade Runner, Deckard, é encarregado de caçá-los.",
+      "popularity": 20.1338,
+      "poster_path": "/y5ibL0vFnzsRiIHosw0WOfHtIj1.jpg",
+      "release_date": "1982-06-25",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.9,
+      "vote_count": 15386
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/fK40VGYIm7hmKrLJ26fgPQU0qRG.jpg",
+      "genre_ids": [
+        16,
+        878,
+        28
+      ],
+      "id": 149,
+      "title": "Akira",
+      "original_language": "ja",
+      "original_title": "AKIRA",
+      "overview": "Uma grande explosão fez com que Tóquio fosse destruída em 1988. Em seu lugar, foi construída Neo-Tóquio, que, em 2019, sofre com atentados terroristas por toda a cidade. Kaneda e Tetsuo são amigos que integram uma gangue de motoqueiros. Eles disputam rachas violentos com uma gangue rival, os Palhaços, até que um dia, Tetsuo encontra Takashi, uma estranha criança com poderes que fugiu do hospital onde era mantido como cobaia. Tetsuo é ferido no encontro e, antes de receber a ajuda dos amigos, é levado por integrantes do exército, liderados pelo coronel Shikishima. A partir de então, Tetsuo passa a desenvolver poderes inimagináveis, o que faz com que seja comparado ao lendário Akira, responsável pela explosão de 1988. Paralelamente, Kaneda se interessa por Kei, uma garota envolvida com espiões, que tenta decifrar o enigma por trás das cobaias controladas pelo exército.",
+      "popularity": 20.0296,
+      "poster_path": "/tbwwTQ3EqSdotbQ3ZcIl6vKBv7q.jpg",
+      "release_date": "1988-06-10",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.941,
+      "vote_count": 4974
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/r9leYNa8nTRCceZrZhP1DXkgKVb.jpg",
+      "genre_ids": [
+        27,
+        9648,
+        878
+      ],
+      "id": 1091,
+      "title": "O Enigma de Outro Mundo",
+      "original_language": "en",
+      "original_title": "The Thing",
+      "overview": "Na remota Antártida, um grupo de cientistas americanos é perturbado em sua base quando, de um helicóptero, alguém atira em um cão do acampamento. À medida que socorrem o cão baleado, o bicho começa a atacar os cientistas e os outros cachorros e logo eles descobrem que o animal pode assumir a forma de suas vítimas. Isto significa que membros da equipe podem ser mortos e a cópia assumir o lugar deles. Com isso, um piloto e um médico precisam capturar a fera antes que seja tarde demais.",
+      "popularity": 18.9272,
+      "poster_path": "/bazlgJAKWCBF7OllC3JtyJ2DV1n.jpg",
+      "release_date": "1982-06-25",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.073,
+      "vote_count": 8241
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/YL3GPOiDcNraIJOVDCZsoOBoDy.jpg",
+      "genre_ids": [
+        878,
+        28,
+        12,
+        53
+      ],
+      "id": 106,
+      "title": "O Predador",
+      "original_language": "en",
+      "original_title": "Predator",
+      "overview": "O major Alan \"Dutch\" Schaefer lidera uma equipe de resgate em uma selva da América Central, para tentar encontrar um ministro estrangeiro e funcionários do governo que saíram da rota e se perderam. O exército acredita que eles estejam nas mãos de guerrilheiros, mas o que eles não imaginam é que a floresta esconde uma ameaça mortal, um ser de outro planeta, fortemente armado, que sente enorme prazer em matar.",
+      "popularity": 18.4404,
+      "poster_path": "/3RuuLeX487syJrV1olkQCFbHrIv.jpg",
+      "release_date": "1987-06-12",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.579,
+      "vote_count": 9487
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/4kix6fAblJIH6eMs0Ku2loyZJXK.jpg",
+      "genre_ids": [
+        28,
+        53,
+        878
+      ],
+      "id": 679,
+      "title": "Aliens: O Resgate",
+      "original_language": "en",
+      "original_title": "Aliens",
+      "overview": "Cinquenta e quatro anos após escapar da \"Nostromo\", a tenente Ripley é encontrada a flutuar, perdida no espaço, ainda adormecida. De volta ao nosso planeta, ela conta tudo o que lhe aconteceu, mas ninguém acredita realmente nela, ou lhe parece dar crédito, até que uma colônia de humanos, criada no planeta onde ela encontrou o primeiro Alienígena, deixa de emitir comunicações subitamente. Ela então é convocada para auxiliar uma expedição militar ao local, sendo a única aparentemente consciente de que o pesadelo está longe do fim.",
+      "popularity": 18.2059,
+      "poster_path": "/dopA5H3VYKcTE1lDXkTwRx7uy2G.jpg",
+      "release_date": "1986-07-18",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.965,
+      "vote_count": 11167
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/x2wOlXuK4NzPDQ0OBZiJjNNOp6Y.jpg",
+      "genre_ids": [
+        28,
+        12,
+        878
+      ],
+      "id": 861,
+      "title": "O Vingador do Futuro",
+      "original_language": "en",
+      "original_title": "Total Recall",
+      "overview": "No ano de 2084, o operário Doug Quaid recorre a um implante de memória para poder simular uma viagem a Marte. Mas algo sai errado e ele começa a se lembrar de quem realmente era e de fatos que, até então, desconhecia. Agora, Quaid quer vingança contra aqueles que o enganaram.",
+      "popularity": 16.2816,
+      "poster_path": "/cCaj2DvRVnzkb3T4rkwyY56UGNR.jpg",
+      "release_date": "1990-06-01",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.329,
+      "vote_count": 6678
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/aJMhYOP80cVBtq5ku3uyqASF3Ol.jpg",
+      "genre_ids": [
+        28,
+        12,
+        35,
+        878
+      ],
+      "id": 607,
+      "title": "MIB - Homens de Preto",
+      "original_language": "en",
+      "original_title": "Men in Black",
+      "overview": "Kay e Jay, os Homens de Preto, são o maior segredo já mantido no universo. Eles são agentes de uma agência não-oficial do governo e responsáveis por monitorar todos os encontros com alienígenas na Terra. Ao investigar uma série de atividades extraterrestres, descobrem um terrorista intergaláctico cuja missão é assassinar dois embaixadores de galáxias opostas.",
+      "popularity": 16.031,
+      "poster_path": "/bUA0TD2COayMP6ur9Qbewdbbm2e.jpg",
+      "release_date": "1997-07-02",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.229,
+      "vote_count": 15167
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/k9pshruhCpJAdH9RaGJO6jaWQ4X.jpg",
+      "genre_ids": [
+        12,
+        28,
+        878
+      ],
+      "id": 1891,
+      "title": "Guerra nas Estrelas: O Império Contra-Ataca",
+      "original_language": "en",
+      "original_title": "The Empire Strikes Back",
+      "overview": "As forças imperais comandadas por Darth Vader lançam um ataque contra os membros da resistência, que são obrigados a fugir. Enquanto isso Luke Skywalker tenta encontrar o Mestre Yoda, que poderá ensiná-lo a dominar a \"Força\" e torná-lo um cavaleiro jedi. No entanto, Darth Vader planeja levá-lo para o lado negro da \"Força\".",
+      "popularity": 15.7157,
+      "poster_path": "/dLGT8b4Ut10z44uYLaip4QiwKta.jpg",
+      "release_date": "1980-05-20",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.393,
+      "vote_count": 18830
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/g1FzhbtWYKk9WMJYi1X26kf2Q4Q.jpg",
+      "genre_ids": [
+        27,
+        878
+      ],
+      "id": 9426,
+      "title": "A Mosca",
+      "original_language": "en",
+      "original_title": "The Fly",
+      "overview": "Seth Brundie é um cientista excêntrico que trabalha numa nova invenção, uma máquina de teletransporte - a TelePod. Ao seu lado, tem Veronica, uma jornalista que acompanha seus projetos acreditando ser essa a história do ano. Ao experimentar seu novo invento, Seth não percebe que uma mosca entrou na cabine do teletransporte. O imprevisto faz com que os padrões moleculares do homem e do inseto se misturem e, pouco a pouco, o cientista vai sofrendo terríveis transformações.",
+      "popularity": 15.3142,
+      "poster_path": "/dQWmNTzZBRuxDGiLsuKuPXJQES1.jpg",
+      "release_date": "1986-08-15",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.447,
+      "vote_count": 5133
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/mKIkGoyuR71qz6FdiEiOjxvBQcS.jpg",
+      "genre_ids": [
+        878,
+        53,
+        9648
+      ],
+      "id": 63,
+      "title": "Os 12 Macacos",
+      "original_language": "en",
+      "original_title": "Twelve Monkeys",
+      "overview": "No ano de 2035, James Cole aceita a missão de voltar ao passado para tentar decifrar um mistério envolvendo um vírus mortal que atacou grande parte da população mundial. Tomado como louco, no passado, ele tenta provar a sua sanidade para a médica Kathryn Railly, sua única esperança de mudar o futuro.",
+      "popularity": 15.223,
+      "poster_path": "/iqwq8DOZFwcEIChbuAXCWIdThJT.jpg",
+      "release_date": "1995-12-29",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.613,
+      "vote_count": 9377
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/5j77rB8NRa7lXuu1Sgmm6wfgrzZ.jpg",
+      "genre_ids": [
+        35,
+        878
+      ],
+      "id": 957,
+      "title": "S.O.S.: Tem um Louco Solto no Espaço",
+      "original_language": "en",
+      "original_title": "Spaceballs",
+      "overview": "O planeta Spaceball está em crise, após seus vilões atrapalhados desperdiçarem a atmosfera do lugar. Agora, eles vão tentar roubar o ar de um planeta mais fraco, fazendo com que a princesa Vespa peça ajuda de dois mercenários intergalácticos.",
+      "popularity": 15.2086,
+      "poster_path": "/heDFcfJUuo93GFsfQYTlOuqLSkA.jpg",
+      "release_date": "1987-06-24",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.891,
+      "vote_count": 3543
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/mXLVA0YL6tcXi6SJSuAh9ONXFj5.jpg",
+      "genre_ids": [
+        12,
+        878,
+        10751
+      ],
+      "id": 601,
+      "title": "E.T.: O Extraterrestre",
+      "original_language": "en",
+      "original_title": "E.T. the Extra-Terrestrial",
+      "overview": "Um alienígena é deixado para trás na Terra e é salvo por Elliot, um garoto de 10 anos, que decide mantê-lo escondido em sua casa. Enquanto uma força-tarefa caça o extraterrestre, Elliot, seu irmão e sua irmã mais nova, Gertie, formam um vínculo emocional com seu novo amigo e tentam ajudá-lo a encontrar o caminho de casa.",
+      "popularity": 15.055,
+      "poster_path": "/8j5igb0iuV9TYudw9SuMV5GT9K9.jpg",
+      "release_date": "1982-06-11",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.517,
+      "vote_count": 12249
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/7iEfnj3rfyunky6BzvnlwqfoEF0.jpg",
+      "genre_ids": [
+        12,
+        28,
+        53,
+        878
+      ],
+      "id": 563,
+      "title": "Tropas Estelares",
+      "original_language": "en",
+      "original_title": "Starship Troopers",
+      "overview": "Em um futuro distante, a Terra está em guerra contra uma raça de insetos gigantes alienígenas. Pouco se sabe sobre eles, exceto que têm a intenção de eliminar toda forma de vida humana. Mas houve um tempo, antes da guerra, em que a Infantaria Móvel viajava para planetas distantes a fim de combater os insetos, inimigos implacáveis, com apenas uma missão: garantir a sobrevivência de sua espécie a qualquer custo.",
+      "popularity": 14.834,
+      "poster_path": "/xb6NkoDkbep6lhn8K6YDPitALpr.jpg",
+      "release_date": "1997-11-07",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.12,
+      "vote_count": 5695
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/jIpagj2Dud9g3ZVJFvaWikEWsYz.jpg",
+      "genre_ids": [
+        28,
+        16,
+        878
+      ],
+      "id": 9323,
+      "title": "Ghost in the Shell: O Fantasma do Futuro",
+      "original_language": "ja",
+      "original_title": "GHOST IN THE SHELL / 攻殻機動隊",
+      "overview": "Major Motoko Kusanagi, uma ciborgue do Setor de Segurança Pública 9, recebe a missão de capturar um hacker que está dominando a mente de humanos aperfeiçoados por computador. Mas ela acaba se envolvendo em uma trama de conspirações, que atinge interesses da alta cópula da política.",
+      "popularity": 14.0733,
+      "poster_path": "/4YgDy47HKxcSwUPQWrg0J39lEZA.jpg",
+      "release_date": "1995-11-18",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.928,
+      "vote_count": 4039
+    }
+  ],
+  "total_pages": 34,
+  "total_results": 666
+}

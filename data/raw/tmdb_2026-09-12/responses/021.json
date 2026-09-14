@@ -1,0 +1,431 @@
+{
+  "page": 2,
+  "results": [
+    {
+      "adult": false,
+      "backdrop_path": "/4SyDTF02R5BepqSdQmOaNCHObzF.jpg",
+      "genre_ids": [
+        12,
+        878
+      ],
+      "id": 329,
+      "title": "Jurassic Park: O Parque dos Dinossauros",
+      "original_language": "en",
+      "original_title": "Jurassic Park",
+      "overview": "Um parque construído por um milionário tem dinossauros diversos como habitantes, extintos a sessenta e cinco milhões de anos. Isto é possível por ter sido encontrado um inseto fossilizado, que tinha sugado sangue destes dinossauros, de onde pôde-se isolar o DNA, o código químico da vida e, a partir deste ponto, recriá-los em laboratório. Mas, o que parecia ser um sonho se torna um pesadelo, quando a experiência sai do controle de seus criadores.",
+      "popularity": 13.992,
+      "poster_path": "/mgjJ7FH4V3exsmoHwXrmsUhn0h1.jpg",
+      "release_date": "1993-06-11",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.0,
+      "vote_count": 18325
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/3TeGmKJfkik1D1rIoqGb1aR4k9c.jpg",
+      "genre_ids": [
+        12,
+        28,
+        878
+      ],
+      "id": 1893,
+      "title": "Star Wars: Episódio I - A Ameaça Fantasma",
+      "original_language": "en",
+      "original_title": "Star Wars: Episode I - The Phantom Menace",
+      "overview": "Enquanto resgatam a Rainha Amidala, governante de um planeta pacífico invadido por forças ameaçadoras, os Cavaleiros Jedi Obi-Wan Kenobi e Qui-Gon Jinn descobrem Anakin Skywalker, uma criança prodígio de 9 anos excepcionalmente poderosa na Força.",
+      "popularity": 13.9109,
+      "poster_path": "/gNk8UNAumXlfCdtaxDqsQe7ZGlt.jpg",
+      "release_date": "1999-05-19",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.583,
+      "vote_count": 16193
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/nByMcYBhChTs2TF9fEFcTSsjme5.jpg",
+      "genre_ids": [
+        27,
+        878,
+        9648
+      ],
+      "id": 8413,
+      "title": "O Enigma do Horizonte",
+      "original_language": "en",
+      "original_title": "Event Horizon",
+      "overview": "Em 2047, uma missão de resgate é mandada para encontrar a \"Event Horizon\", uma nave que desapareceu misteriosamente sete anos atrás, quando explorava os limites do sistema solar. Mas ao encontrá-la os astronautas que integram a missão de resgate vão gradativamente tomando consciência do terrível mistério que os cerca.",
+      "popularity": 13.5714,
+      "poster_path": "/h5R7WZGLLELUoFlYz2zHHYgpk2W.jpg",
+      "release_date": "1997-08-15",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.597,
+      "vote_count": 3464
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/4pl165EUdvveHCr4J4YcHVA1MnD.jpg",
+      "genre_ids": [
+        80,
+        28,
+        878
+      ],
+      "id": 9739,
+      "title": "O Demolidor",
+      "original_language": "en",
+      "original_title": "Demolition Man",
+      "overview": "O policial John Spartan e o violento bandido Simon Phoenix são condenados a um encarceramento criogênico conhecido como CryoPrison. Quando Spartan é finalmente descongelado 36 anos depois, já é 2032 e Los Angeles é agora uma utopia pacifista chamada San Angeles (junção de Los Angeles com San Francisco). Porém com Phoenix novamente à solta, Spartan deve colaborar com uma policial, Lenina, para apreender o assassino.",
+      "popularity": 13.4597,
+      "poster_path": "/crso1eVKclHwkLq7tnxRU446q7I.jpg",
+      "release_date": "1993-10-08",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.772,
+      "vote_count": 4257
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/ziECpBRIyclmBNaFSWlvCfsKbMD.jpg",
+      "genre_ids": [
+        12,
+        28,
+        878
+      ],
+      "id": 1892,
+      "title": "Guerra nas Estrelas: O Retorno de Jedi",
+      "original_language": "en",
+      "original_title": "Return of the Jedi",
+      "overview": "O imperador está supervisionando a construção de uma nova Estrela da Morte. Enquanto isso Luke Skywalker liberta Han Solo e a Princesa Leia das mãos de Jaba. Luke só se tornará um cavaleiro jedi quando destruir Darth Vader, que ainda pretende atraí-lo para o lado sombrio da Força.",
+      "popularity": 13.445,
+      "poster_path": "/llaJ35p5e23ygDbqd0H3otJLWsA.jpg",
+      "release_date": "1983-05-25",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.911,
+      "vote_count": 17283
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/kFI1oF6KVnLEbUT7yLIbKXeyvu.jpg",
+      "genre_ids": [
+        28,
+        12,
+        878
+      ],
+      "id": 602,
+      "title": "Independence Day",
+      "original_language": "en",
+      "original_title": "Independence Day",
+      "overview": "Na véspera do Dia da Independência dos Estados Unidos, naves gigantescas aparecem no céu. O estupor inicial da população se transforma em terror ao ver como atacam o planeta lançando raios destrutivos nas maiores cidades do mundo. Agora a única esperança para a salvação da Terra reside na coragem de alguns sobreviventes, que se unem planejando o último ataque massivo contra os alienígenas, antes que seja tarde demais para a humanidade.",
+      "popularity": 13.4024,
+      "poster_path": "/7KGNAWjp0QFcynhtLoLXXa3F4Hc.jpg",
+      "release_date": "1996-07-02",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.9,
+      "vote_count": 10718
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/tsSWHgaFlzzkp3o976juBZbmcs2.jpg",
+      "genre_ids": [
+        28,
+        80,
+        878
+      ],
+      "id": 754,
+      "title": "A Outra Face",
+      "original_language": "en",
+      "original_title": "Face/Off",
+      "overview": "Obcecado em trazer o terrorista Castor Troy à justiça, o agente do FBI Sean Archer rastreia Troy, que embarcou em um avião em Los Angeles. Depois que o avião cai e Troy fica gravemente ferido, Archer passa por uma cirurgia para remover seu rosto e substituí-lo pelo do criminoso. Quando Archer tenta usar seu disfarce para obter informações do irmão de Troy sobre uma bomba, Troy acorda de um coma e obriga o médico que realizou a cirurgia a dar-lhe o rosto de Archer.",
+      "popularity": 13.1078,
+      "poster_path": "/sygN65yWJeK9SwI4deLZMRZjgns.jpg",
+      "release_date": "1997-06-27",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.061,
+      "vote_count": 6106
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/ni5cXCrrGzoiIEoIwOzGiIwMZlH.jpg",
+      "genre_ids": [
+        16,
+        18,
+        10751,
+        878,
+        12
+      ],
+      "id": 10386,
+      "title": "O Gigante de Ferro",
+      "original_language": "en",
+      "original_title": "The Iron Giant",
+      "overview": "Em 1957, um robô alienígena gigante aterrissa perto da pequena cidade de Rockwell, Maine (EUA). Hogarth, um garoto de nove anos que estava explorando a área, encontra o robô e os dois ficam amigos. Mas um agente do governo completamente obcecado surge com o objetivo de destruir o extraterrestre a qualquer custo.",
+      "popularity": 12.9863,
+      "poster_path": "/qxPusltlonoWMUD5ClEZfdGW0pt.jpg",
+      "release_date": "1999-08-06",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.962,
+      "vote_count": 6358
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/w6tPctxWAsHoQXeKxxNOT6lYKpx.jpg",
+      "genre_ids": [
+        12,
+        35,
+        878
+      ],
+      "id": 165,
+      "title": "De Volta para o Futuro II",
+      "original_language": "en",
+      "original_title": "Back to the Future Part II",
+      "overview": "Uma despretensiosa visita de McFly e Doc ao ano de 2015 revela alguns problemas com a futura família de McFly. Mas quando os dois voltam para casa, logo descobrem que alguém alterou a linha temporal e criou uma terrível Hill Valley em 1985. A única esperança é poder voltar de novo para o ano de 1995 e salvar o futuro.",
+      "popularity": 12.9035,
+      "poster_path": "/pbX7hM03cHmpMPbpZ3lYmF2aABK.jpg",
+      "release_date": "1989-11-22",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.785,
+      "vote_count": 14265
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/kEuQWHte2erRpAICrYqkAZaZAAY.jpg",
+      "genre_ids": [
+        28,
+        878,
+        12
+      ],
+      "id": 415,
+      "title": "Batman & Robin",
+      "original_language": "en",
+      "original_title": "Batman & Robin",
+      "overview": "A dupla dinâmica enfrenta os supervilões Mr. Freeze e sedutora ecoterrorista Hera Venenosa. Mas, para poder livrar Gotham City das garras dos vilões, Batman e Robin contam com uma nova companheira, a Batgirl.",
+      "popularity": 12.8914,
+      "poster_path": "/i7hEUpDuMN2LOrCEifFyGSHZQSY.jpg",
+      "release_date": "1997-06-20",
+      "softcore": false,
+      "video": false,
+      "vote_average": 4.395,
+      "vote_count": 5538
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/AfyuI3glMCBDFmNPj9PY6DwbgGp.jpg",
+      "genre_ids": [
+        16,
+        878,
+        18,
+        14,
+        28
+      ],
+      "id": 18491,
+      "title": "Neon Genesis Evangelion: O Fim do Evangelho",
+      "original_language": "ja",
+      "original_title": "新世紀エヴァンゲリオン劇場版 Air／まごころを、君に",
+      "overview": "Um final alternativo para a série de anime \"Neon Genesis Evangelion\". Em The End of Evangelion, A SEELE ordena um ataque à NERV para destruir os EVAs antes que Gendo consiga provocar o Terceiro Impacto e a união das almas humanas.",
+      "popularity": 12.455,
+      "poster_path": "/984vnfPmcerjkz8aEbqulbc2X32.jpg",
+      "release_date": "1997-07-19",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.263,
+      "vote_count": 1952
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/yFkUPqBuUnbhYbQL8VFpTrAT9za.jpg",
+      "genre_ids": [
+        18,
+        878,
+        9648
+      ],
+      "id": 686,
+      "title": "Contato",
+      "original_language": "en",
+      "original_title": "Contact",
+      "overview": "Desde quando era menina, Ellie Arroway tentou manter contato com vidas extraterrestres inteligentes. Deixou de lado sua vida particular e até mesmo o amor do teólogo Palmer Joss. Depois de anos seu sonho se tornou realidade. Com origem na distante estrela Vega, chega à Terra uma informação cifrada e Ellie é a primeira pessoa á captá-la e a única disposta a seguir cegamente a mensagem alienígena. Esta é a sua grande chance de fazer contato, mesmo que para isso tenha que correr risco de vida.",
+      "popularity": 11.9989,
+      "poster_path": "/h0gZKEAFCjVUhvRf33lHHSxKFWu.jpg",
+      "release_date": "1997-07-11",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.45,
+      "vote_count": 5178
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/pWmJBkdb0EMb3PSd2f9wjza0krb.jpg",
+      "genre_ids": [
+        28,
+        18,
+        878
+      ],
+      "id": 8656,
+      "title": "Impacto Profundo",
+      "original_language": "en",
+      "original_title": "Deep Impact",
+      "overview": "Um astrônomo-mirim e seu professor acidentalmente descobrem que um cometa com 11 mil metros de diâmetro vai colidir com a Terra, mas um dos descobridores morre em um desastre de automóvel. Após um ano, um repórter tentando investigar um possível escândalo sexual chega à conclusão de que a \"amante\" é o cometa, que está prestes a se chocar com nosso planeta. Se isto vier a acontecer os danos causados serão incalculáveis e a vida animal e vegetal em pouco tempo deixará de existir. No entanto, uma equipe formada por americanos e russos planeja colocar detonadores nucleares, para fragmentar o cometa e salvar a Terra.",
+      "popularity": 11.8864,
+      "poster_path": "/32CAzrGEHZu8Go6QLLVCjPglHTX.jpg",
+      "release_date": "1998-05-08",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.25,
+      "vote_count": 3452
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/8GGAXEXaTPMDGa0sCPyFcitvlD9.jpg",
+      "genre_ids": [
+        878,
+        28,
+        53
+      ],
+      "id": 169,
+      "title": "O Predador 2: A Caçada Continua",
+      "original_language": "en",
+      "original_title": "Predator 2",
+      "overview": "Um alienígena predador, invisível e equipado com armas poderosas, desembarca em Los Angeles, devastada pelo conflito de gangues de traficantes rivais, para iniciar seu festival de matança, deixando um rastro de corpos mutilados em seu caminho.",
+      "popularity": 11.528,
+      "poster_path": "/xBNOmNi4SSB5JAXGlsvgYtWDOuD.jpg",
+      "release_date": "1990-11-21",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.312,
+      "vote_count": 3983
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/1cO6OQJxz7YhTZ4V1OlkYfebeJa.jpg",
+      "genre_ids": [
+        28,
+        878,
+        12
+      ],
+      "id": 95,
+      "title": "Armageddon",
+      "original_language": "en",
+      "original_title": "Armageddon",
+      "overview": "Um asteroide ameaça colidir com a Terra e destruir todas as formas de vida. A solução é colocar uma bomba nuclear no interior do asteroide. Para realizar esta missão, convocam um perfurador de petróleo, e ele monta uma equipe nada convencional para os padrões do governo.",
+      "popularity": 11.3969,
+      "poster_path": "/uSS6G9K14Qe6Ywh4IMkgjQBM3a3.jpg",
+      "release_date": "1998-07-01",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.8,
+      "vote_count": 8823
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/sWi4SSeVPii4NU365Df9vzX1yOX.jpg",
+      "genre_ids": [
+        9648,
+        878
+      ],
+      "id": 2666,
+      "title": "Cidade das Sombras",
+      "original_language": "en",
+      "original_title": "Dark City",
+      "overview": "Um homem luta com as lembranças de seu passado, que incluem uma esposa da qual não se lembra e um mundo de pesadelo sem um sol. Separado da esposa Emma, John Murdoch acorda sozinho em um estranho hotel e descobre que é procurado por vários assassinatos brutais, mas não lembra se é ou não o assassino.",
+      "popularity": 11.0349,
+      "poster_path": "/m2KJScX50mOsFi5ejdTyOMH5D8A.jpg",
+      "release_date": "1998-02-27",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.332,
+      "vote_count": 3329
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/lWybXICZZpxnSvWSOW53XxTERUg.jpg",
+      "genre_ids": [
+        10751,
+        16,
+        878,
+        14,
+        35
+      ],
+      "id": 2300,
+      "title": "Space Jam: O Jogo do Século",
+      "original_language": "en",
+      "original_title": "Space Jam",
+      "overview": "Um poderoso vilão intergalático decide que Pernalonga e sua turma são a atração perfeita para seu novo parque de diversões. Ele envia um grupo de pequenos alienígenas para capturá-los. Para evitar o seu próprio sequestro, Pernalonga propõe um jogo de basquete em troca de sua liberdade. Mas os pequenos alienígenas têm uma arma secreta: Eles roubaram as habilidades dos melhores jogadores da NBA e formaram um time da pesada. Agora só existe uma chance de Pernalonga e seus amigos ganharem esta partida. Eles precisam da ajuda do mais famoso jogador de basquete de todos os tempos: Michael Jordan!",
+      "popularity": 10.9724,
+      "poster_path": "/zgenqfTIvoEs6jcmokKfbi1ZURS.jpg",
+      "release_date": "1996-11-15",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.808,
+      "vote_count": 6551
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/xcaX6BZ1JUPSVMH2gBkWIckLLaA.jpg",
+      "genre_ids": [
+        28,
+        53,
+        878
+      ],
+      "id": 5548,
+      "title": "RoboCop - O Policial do Futuro",
+      "original_language": "en",
+      "original_title": "RoboCop",
+      "overview": "Em uma Detroit violenta e quase apocalíptica, a malvada corporação Omni Consumer Products (OCP) ganha um contrato do governo municipal para privatizar a força policial. Para testar seus ciborgues de erradicação do crime, a empresa leva o policial de rua Alex Murphy a um confronto armado com o senhor do crime Boddicker para que eles possam usar seu corpo para apoiar seu protótipo não testado do RoboCop. Mas quando RoboCop descobre os planos nefastos da empresa, ele se volta contra seus mestres.",
+      "popularity": 10.9397,
+      "poster_path": "/uZ27cWusfoGFh7sOiUsIENxW48S.jpg",
+      "release_date": "1987-07-17",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.367,
+      "vote_count": 5941
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/bdDTda15ZPbNumwkKa9eH9RplIe.jpg",
+      "genre_ids": [
+        28,
+        27,
+        878
+      ],
+      "id": 8914,
+      "title": "Do Fundo do Mar",
+      "original_language": "en",
+      "original_title": "Deep Blue Sea",
+      "overview": "A Dra. Susan McAlester está fazendo pesquisa com tubarões, pois pretende através deles descobrir a cura para o Mal de Alzheimer. Russell Franklin, um empresário, é o principal patrocinador e doou 200 milhões de dólares para o projeto. Quando um tubarão escapa e ataca um barco, a reação de Russell não é boa, mas Susan consegue reverter a situação e ele decide visitar Aquática, uma antiga base de submarinos no meio do oceano agora convertida em laboratório. Neste local Susan faz alterações genéticas nos tubarões, deixando-os mais inteligentes, para que sua experiência seja bem sucedida. O problema é que os animais se tornam também mais rápidos e não sentem vontade de colaborar, pois anseiam ir para mar aberto.",
+      "popularity": 10.8845,
+      "poster_path": "/gbDNaZJt9bqEaDB6OU3aYEskj72.jpg",
+      "release_date": "1999-07-28",
+      "softcore": false,
+      "video": false,
+      "vote_average": 5.999,
+      "vote_count": 2735
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/mW6XzxelLY8T2oW2NjciG9LpZT5.jpg",
+      "genre_ids": [
+        12,
+        53,
+        878
+      ],
+      "id": 2756,
+      "title": "O Segredo do Abismo",
+      "original_language": "en",
+      "original_title": "The Abyss",
+      "overview": "Um submarino para de funcionar e deixa 156 tripulantes presos no fundo do oceano. Com um furacão se aproximando, a única saída é que cientistas de uma plataforma de petróleo façam o resgate. Numa corrida contra o relógio, os salvadores embarcam numa experiência surpreendente pelo desconhecido.",
+      "popularity": 10.7709,
+      "poster_path": "/iUmlHbK05F38QNnVDTDXa5qXFgF.jpg",
+      "release_date": "1989-08-09",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.358,
+      "vote_count": 3590
+    }
+  ],
+  "total_pages": 34,
+  "total_results": 666
+}

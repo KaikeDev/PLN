@@ -1,0 +1,415 @@
+{
+  "page": 1,
+  "results": [
+    {
+      "adult": false,
+      "backdrop_path": "/AdKA2F1SzYPhSZdEbjH1Zh75UVQ.jpg",
+      "genre_ids": [
+        27,
+        53
+      ],
+      "id": 694,
+      "title": "O Iluminado",
+      "original_language": "en",
+      "original_title": "The Shining",
+      "overview": "Durante o inverno, um homem é contratado para ficar como vigia em um hotel no Colorado e vai para lá com a esposa e seu filho. Porém, o contínuo isolamento começa a lhe causar problemas mentais sérios e ele vai se tornado cada vez mais agressivo e perigoso, ao mesmo tempo que seu filho passa a ter visões de acontecimentos ocorridos no passado, que também foram causados pelo isolamento excessivo.",
+      "popularity": 23.7795,
+      "poster_path": "/47BdQqDWnj3VIzpH9bd2agho2PN.jpg",
+      "release_date": "1980-05-23",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.2,
+      "vote_count": 19353
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/r9leYNa8nTRCceZrZhP1DXkgKVb.jpg",
+      "genre_ids": [
+        27,
+        9648,
+        878
+      ],
+      "id": 1091,
+      "title": "O Enigma de Outro Mundo",
+      "original_language": "en",
+      "original_title": "The Thing",
+      "overview": "Na remota Antártida, um grupo de cientistas americanos é perturbado em sua base quando, de um helicóptero, alguém atira em um cão do acampamento. À medida que socorrem o cão baleado, o bicho começa a atacar os cientistas e os outros cachorros e logo eles descobrem que o animal pode assumir a forma de suas vítimas. Isto significa que membros da equipe podem ser mortos e a cópia assumir o lugar deles. Com isso, um piloto e um médico precisam capturar a fera antes que seja tarde demais.",
+      "popularity": 18.9272,
+      "poster_path": "/bazlgJAKWCBF7OllC3JtyJ2DV1n.jpg",
+      "release_date": "1982-06-25",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.073,
+      "vote_count": 8241
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/4w6nQYAY0eb7B0VVRDXilXcgAUV.jpg",
+      "genre_ids": [
+        80,
+        27,
+        9648
+      ],
+      "id": 4232,
+      "title": "Pânico",
+      "original_language": "en",
+      "original_title": "Scream",
+      "overview": "Após uma série de mortes misteriosas, um grupo de amigos são ameaçados por um assassino. Em uma mistura de emoções fortes e muitos sustos, aqui a única coisa que se pode ter certeza é que todos são vítimas e todos são suspeitos.",
+      "popularity": 17.5684,
+      "poster_path": "/cJj2gYzkPFSqYGGOhfLgeANlXkB.jpg",
+      "release_date": "1996-12-20",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.434,
+      "vote_count": 8217
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/nzSjTiecdosBfwMGAdpt9CxltCI.jpg",
+      "genre_ids": [
+        27
+      ],
+      "id": 377,
+      "title": "A Hora do Pesadelo",
+      "original_language": "en",
+      "original_title": "A Nightmare on Elm Street",
+      "overview": "Um grupo de adolescentes tem pesadelos horríveis, onde são atacados por um homem deformado com garras de aço. Ele apenas aparece durante o sono e, para escapar, é preciso acordar. Os crimes vão ocorrendo seguidamente, até que se descobre que o ser misterioso é na verdade Freddy Krueger, um homem que molestou crianças na rua Elm e que foi queimado vivo pela vizinhança. Agora Krueger pode retornar para se vingar daqueles que o mataram, através do sono.",
+      "popularity": 17.1236,
+      "poster_path": "/8cXxfVhSdTL1tC5ivC0mX74QQyI.jpg",
+      "release_date": "1984-11-09",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.352,
+      "vote_count": 5921
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/2Y6Q7eYDXoolcHjYCAyJQlE2CVT.jpg",
+      "genre_ids": [
+        27,
+        18,
+        9648
+      ],
+      "id": 1813,
+      "title": "Advogado do Diabo",
+      "original_language": "en",
+      "original_title": "The Devil's Advocate",
+      "overview": "Kevin Lomax, advogado de uma pequena cidade da Flórida que nunca perdeu um caso, é contratado por John Milton, dono da maior firma de advocacia de Nova York. No início tudo parece correr bem, mas Mary Ann, a esposa do advogado, começa a testemunhar aparições demoníacas. Kevin está empenhado em defender o cliente e cada vez dá menos atenção a sua mulher, enquanto seu misterioso chefe parece sempre saber como contornar cada problema e tudo que perturba o jovem advogado.",
+      "popularity": 16.4287,
+      "poster_path": "/u6gFTFI22YAnjoUCUyRveN48S06.jpg",
+      "release_date": "1997-10-17",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.482,
+      "vote_count": 7025
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/m8t7K3LcAY7bpyQ7iQ5kGsrcjnh.jpg",
+      "genre_ids": [
+        14,
+        53,
+        9648,
+        27
+      ],
+      "id": 2668,
+      "title": "A Lenda do Cavaleiro Sem Cabeça",
+      "original_language": "en",
+      "original_title": "Sleepy Hollow",
+      "overview": "O jovem e cético detetive Ichabod Crane é transferido para a aldeia de Sleepy Hollow, em Nova Iorque, onde é encarregado de investigar as decapitações de três pessoas - assassinatos que os habitantes da cidade atribuem a um fantasma lendário, O Cavaleiro Sem Cabeça.",
+      "popularity": 15.496,
+      "poster_path": "/zxOuNnW2qrOOFtiPVJtx5aRAJoX.jpg",
+      "release_date": "1999-11-19",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.2,
+      "vote_count": 7560
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/7NKfxJrQn053UJeLftlx4m4NTzo.jpg",
+      "genre_ids": [
+        27,
+        28
+      ],
+      "id": 36647,
+      "title": "Blade: O Caçador de Vampiros",
+      "original_language": "en",
+      "original_title": "Blade",
+      "overview": "Após ser contaminado pelo sangue de uma criatura das trevas, Blade transformou-se num guerreiro imortal, metade-homem, metade-vampiro. Desde então, ele dedica-se a caçar o líder dos mortos-vivos Deacon Frost e seus asseclas, que estão planejando um grande plano para aumentar sua dominação sobre a raça humana.",
+      "popularity": 15.3649,
+      "poster_path": "/u6PrOGJwwQuvhoIaJL25INbS3Z8.jpg",
+      "release_date": "1998-08-21",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.853,
+      "vote_count": 6950
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/g1FzhbtWYKk9WMJYi1X26kf2Q4Q.jpg",
+      "genre_ids": [
+        27,
+        878
+      ],
+      "id": 9426,
+      "title": "A Mosca",
+      "original_language": "en",
+      "original_title": "The Fly",
+      "overview": "Seth Brundie é um cientista excêntrico que trabalha numa nova invenção, uma máquina de teletransporte - a TelePod. Ao seu lado, tem Veronica, uma jornalista que acompanha seus projetos acreditando ser essa a história do ano. Ao experimentar seu novo invento, Seth não percebe que uma mosca entrou na cabine do teletransporte. O imprevisto faz com que os padrões moleculares do homem e do inseto se misturem e, pouco a pouco, o cientista vai sofrendo terríveis transformações.",
+      "popularity": 15.3142,
+      "poster_path": "/dQWmNTzZBRuxDGiLsuKuPXJQES1.jpg",
+      "release_date": "1986-08-15",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.447,
+      "vote_count": 5133
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/7QBBvE6tA1kUlo7AKeZZMygdSHp.jpg",
+      "genre_ids": [
+        27
+      ],
+      "id": 8689,
+      "title": "Holocausto Canibal",
+      "original_language": "it",
+      "original_title": "Cannibal Holocaust",
+      "overview": "O filme conta a história de quatro documentaristas de tribos que embrenham-se na selva para filmar indígenas. Dois meses mais tarde, depois que o grupo não retorna, o famoso antropólogo Harold Monroe (Robert Kerman) viaja em uma missão de resgate para encontrá-los. Ele consegue recuperar as latas de filme perdidas, que revelam o destino dos cineastas desaparecidos.",
+      "popularity": 15.2173,
+      "poster_path": "/9W5sAaT7nXQx4Sr5aBBfINEWvKS.jpg",
+      "release_date": "1980-02-07",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.3,
+      "vote_count": 1937
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/onq6lsJLX8ay5iwxEbKX3qJKeO9.jpg",
+      "genre_ids": [
+        27
+      ],
+      "id": 764,
+      "title": "Uma Noite Alucinante: A Morte do Demônio",
+      "original_language": "en",
+      "original_title": "The Evil Dead",
+      "overview": "Cinco estudantes da Universidade de Michigan decidem passar um final de semana em uma casa isolada. Lá eles encontram o livro dos mortos, um documento que data da época da Babilônia e que está relacionado ao livro dos mortos egípcio. Enquanto vasculham a casa os amigos gravam em fita alguns encantamentos demoníacos, escritos no livro. A partir de então eles são possuídos por espíritos, um a um. O primeiro alvo é Cheryl, brutalmente estuprada pelas forças do mal. Ash, seu irmão, resolve levá-la a uma cidade próxima, mas descobre que a única ponte que leva ao local está destruída. Logo a transformação de Cheryl em demônio é concluída, resultando em seu ataque aos amigos.",
+      "popularity": 13.8283,
+      "poster_path": "/dCdXagFYR7WwaHuVmZgzw4F0KpP.jpg",
+      "release_date": "1983-01-16",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.261,
+      "vote_count": 4706
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/nByMcYBhChTs2TF9fEFcTSsjme5.jpg",
+      "genre_ids": [
+        27,
+        878,
+        9648
+      ],
+      "id": 8413,
+      "title": "O Enigma do Horizonte",
+      "original_language": "en",
+      "original_title": "Event Horizon",
+      "overview": "Em 2047, uma missão de resgate é mandada para encontrar a \"Event Horizon\", uma nave que desapareceu misteriosamente sete anos atrás, quando explorava os limites do sistema solar. Mas ao encontrá-la os astronautas que integram a missão de resgate vão gradativamente tomando consciência do terrível mistério que os cerca.",
+      "popularity": 13.5714,
+      "poster_path": "/h5R7WZGLLELUoFlYz2zHHYgpk2W.jpg",
+      "release_date": "1997-08-15",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.597,
+      "vote_count": 3464
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/edghRD7vw1XgWEpMLpGt1VSGB5w.jpg",
+      "genre_ids": [
+        27
+      ],
+      "id": 10585,
+      "title": "Brinquedo Assassino",
+      "original_language": "en",
+      "original_title": "Child's Play",
+      "overview": "Após a babá do garotinho de seis anos, Andy Barclay, ser violentamente arremessada pela janela, ninguém acredita nele quando diz que \"Chucky\", o boneco que ganhou de aniversário, foi o culpado! Até que as coisas começam a dar errado... mortalmente errado. E quando uma série de terríveis assassinatos leva um detetive de volta ao mesmo brinquedo, ele descobre que o verdadeiro terror tinha apenas começado – o boneco perturbado planeja transferir seu espírito mau para um ser vivo – o pequeno Andy.",
+      "popularity": 13.5178,
+      "poster_path": "/pdnXDnuAWIc9pwobTQ5XknlcbbS.jpg",
+      "release_date": "1988-11-09",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.765,
+      "vote_count": 3465
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/fGuhbAlDpvmNuC0vkz1vsIzYwsq.jpg",
+      "genre_ids": [
+        10749,
+        27
+      ],
+      "id": 6114,
+      "title": "Drácula de Bram Stoker",
+      "original_language": "en",
+      "original_title": "Bram Stoker's Dracula",
+      "overview": "O vampiro Conde Drácula vem à Inglaterra atrás de quem ele acredita ser sua antiga paixão, de quando ainda era um mortal.",
+      "popularity": 13.3729,
+      "poster_path": "/ecuP4ZaIHawKmmIaXD5mS55UlhL.jpg",
+      "release_date": "1992-11-13",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.448,
+      "vote_count": 5916
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/5UX6M0aEphiW6Xmy5rpYX75glbo.jpg",
+      "genre_ids": [
+        14,
+        27,
+        35
+      ],
+      "id": 927,
+      "title": "Gremlins",
+      "original_language": "en",
+      "original_title": "Gremlins",
+      "overview": "Depois de receber um pequeno animal exótico como presente de Natal, um jovem erroneamente quebra três regras importantes sobre seu novo animal de estimação, o que libera uma horda de criaturas malévolas e travessas em uma pequena cidade.",
+      "popularity": 13.1961,
+      "poster_path": "/zqeVsCO1j1RNT0oJjAOTVcHQH0K.jpg",
+      "release_date": "1984-06-08",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.145,
+      "vote_count": 7141
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/3fChciF2G1wXHsyTfJD9y7uN6Il.jpg",
+      "genre_ids": [
+        27,
+        18,
+        14
+      ],
+      "id": 628,
+      "title": "Entrevista com o Vampiro",
+      "original_language": "en",
+      "original_title": "Interview with the Vampire",
+      "overview": "Na São Francisco dos anos 1990, um jornalista entrevista um jovem que afirma ser vampiro, narrando suas experiências dos últimos 200 anos. Em flash-back, conhecemos Louis de Pointe du Lac (Brad Pitt), um homem que perdeu a mulher, morta durante o parto, e também a vontade de viver. Com a ajuda de uma criatura da noite, Lestat de Lioncourt (Tom Cruise), ele se torna um vampiro e precisa aprender uma nova forma de vida.",
+      "popularity": 13.147,
+      "poster_path": "/oKqRTSEeOaO6x4pqc5y36qnnHsq.jpg",
+      "release_date": "1994-11-11",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.4,
+      "vote_count": 6601
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/lVmcX3hlJqsUGkEOEZkRFiOQdLv.jpg",
+      "genre_ids": [
+        27,
+        9648
+      ],
+      "id": 4233,
+      "title": "Pânico 2",
+      "original_language": "en",
+      "original_title": "Scream 2",
+      "overview": "Dois anos após o massacre em Woodsboro, Sidney Prescott e Randy Meeks estão tentando refazer suas vidas em uma nova cidade. Estudando no colégio de Windsor, eles vão lidar com uma nova onda de assassinatos quando o terrível psicopata retorna para assombrá-los nas vésperas do lançamento do filme baseado nos seus crimes.",
+      "popularity": 12.9269,
+      "poster_path": "/ylcoIk1WzHp6zCkDeLipFJ3ZJbd.jpg",
+      "release_date": "1997-12-12",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.522,
+      "vote_count": 4887
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/phiRQhfwZZeMMn3osvQUmGYmJbp.jpg",
+      "genre_ids": [
+        27,
+        28,
+        80
+      ],
+      "id": 755,
+      "title": "Um Drink no Inferno",
+      "original_language": "en",
+      "original_title": "From Dusk Till Dawn",
+      "overview": "Dois irmãos procurados pela polícia por 16 mortes sequestram um ex-pastor e seu casal de filhos, para poderem atravessar a fronteira com o México, e lá se dirigem à uma casa noturna frequentada por caminhoneiros e motoqueiros, que é uma mistura de cabaré e prostíbulo. Porém, ao chegarem lá eles se deparam com algo totalmente inacreditável.",
+      "popularity": 12.4363,
+      "poster_path": "/e94hzzORbyNlCObOR6nd8XneAuf.jpg",
+      "release_date": "1996-01-19",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.052,
+      "vote_count": 6688
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/e2oO1FPwMiDEi119rJJspYI6TiG.jpg",
+      "genre_ids": [
+        12,
+        27,
+        53
+      ],
+      "id": 9360,
+      "title": "Anaconda",
+      "original_language": "en",
+      "original_title": "Anaconda",
+      "overview": "Uma equipe de filmagem chega à Amazônia para fazer um documentário sobre a tribo shirishama. Guiados pelo misterioso Paul Sarone, o grupo descobre que está envolvido em uma perigosa caçada à serpente rara e gigantesca conhecida como Anaconda. O jogo vira quando o grupo percebe que o animal é inteligente e tem um plano bem elaborado para devorar um a um.",
+      "popularity": 12.218,
+      "poster_path": "/cdZInQF7FNhiA622Ut9PcOXMDiM.jpg",
+      "release_date": "1997-04-11",
+      "softcore": false,
+      "video": false,
+      "vote_average": 5.284,
+      "vote_count": 2893
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/vDFhaKEMKPIUePtQH2nOwSHfgPy.jpg",
+      "genre_ids": [
+        35,
+        14,
+        27
+      ],
+      "id": 9374,
+      "title": "A Morte lhe Cai Bem",
+      "original_language": "en",
+      "original_title": "Death Becomes Her",
+      "overview": "Uma famosa atriz egocêntrica (Meryl Streep) rouba de uma aspirante a escritora (Goldie Hawn) seu noivo (Bruce Willis), um famoso cirurgião plástico. A noiva rejeitada se torna extremamente complexada e gorda, mas após 14 anos, lança o livro “Eternamente Jovem” e na noite de autógrafos está mais linda do que nunca. Ela desperta a atenção de todos, principalmente da atriz que, sentindo-se cada dia mais velha, acaba indo se consultar com uma mulher sensual, bela e misteriosa (Isabella Rossellini), que tem uma poção da juventude que proporciona resultados inimagináveis.",
+      "popularity": 11.9063,
+      "poster_path": "/gSiwGufscvXq2TiRBxr8foNj84Z.jpg",
+      "release_date": "1992-07-30",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.781,
+      "vote_count": 3068
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/tId87yE7JnQsQsqOpnGXjz9PoEe.jpg",
+      "genre_ids": [
+        18,
+        35,
+        27
+      ],
+      "id": 329505,
+      "title": "Il peccato di Lola",
+      "original_language": "it",
+      "original_title": "Il peccato di Lola",
+      "overview": "",
+      "popularity": 11.9018,
+      "poster_path": "/iQt9Kydd8yn9xfBvYeKec56glyv.jpg",
+      "release_date": "1984-05-04",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.049,
+      "vote_count": 71
+    }
+  ],
+  "total_pages": 47,
+  "total_results": 932
+}

@@ -1,0 +1,427 @@
+{
+  "page": 1,
+  "results": [
+    {
+      "adult": false,
+      "backdrop_path": "/vSQd7eW6fMrmI1vUFi0QoQ783a5.jpg",
+      "genre_ids": [
+        12,
+        18
+      ],
+      "id": 49494,
+      "title": "A Águia da Legião Perdida",
+      "original_language": "en",
+      "original_title": "The Eagle",
+      "overview": "Após o desaparecimento da legião de seu pai, um jovem centurião tenta solucionar o mistério. Acompanhado do escravo Esca, ele enfrenta tribos selvagens para encontrar a águia de ouro, símbolo daquele exército.",
+      "popularity": 64.4912,
+      "poster_path": "/jJ52P7T6SW9DZCveZJll0XcVxeb.jpg",
+      "release_date": "2011-02-08",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.242,
+      "vote_count": 1468
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/8sNiAPPYU14PUepFNeSNGUTiHW.jpg",
+      "genre_ids": [
+        12,
+        18,
+        878
+      ],
+      "id": 157336,
+      "title": "Interestelar",
+      "original_language": "en",
+      "original_title": "Interstellar",
+      "overview": "As reservas naturais da Terra estão chegando ao fim e um grupo de astronautas recebe a missão de verificar possíveis planetas para receberem a população mundial, possibilitando a continuação da espécie. Cooper é chamado para liderar o grupo e aceita a missão sabendo que pode nunca mais ver os filhos. Ao lado de Brand, Jenkins e Doyle, ele seguirá em busca de um novo lar.",
+      "popularity": 59.086,
+      "poster_path": "/tR1XVa5bxgdh2bRw2u0DzrgkO2l.jpg",
+      "release_date": "2014-11-05",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.487,
+      "vote_count": 41119
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/y2DB71C4nyIdMrANijz8mzvQtk6.jpg",
+      "genre_ids": [
+        28,
+        80,
+        18,
+        53
+      ],
+      "id": 49026,
+      "title": "Batman: O Cavaleiro das Trevas Ressurge",
+      "original_language": "en",
+      "original_title": "The Dark Knight Rises",
+      "overview": "Após ser culpado pela morte de Harvey Dent e passar de herói a vilão, Batman desaparece. As coisas mudam com a chegada de uma ladra misteriosa, a Mulher-Gato, e Bane, um terrorista mascarado, que fazem Batman abandonar seu exílio forçado.",
+      "popularity": 54.0531,
+      "poster_path": "/j4z01cnbTCaVX69bik1612pSuH6.jpg",
+      "release_date": "2012-07-17",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.797,
+      "vote_count": 24909
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/2oZklIzUbvZXXzIFzv7Hi68d6xf.jpg",
+      "genre_ids": [
+        18,
+        37
+      ],
+      "id": 68718,
+      "title": "Django Livre",
+      "original_language": "en",
+      "original_title": "Django Unchained",
+      "overview": "Django é um escravo, comprado pelo caçador de recompensas alemão Dr. King Schultz para auxiliá-lo em uma missão. A dupla acaba fazendo amizade e, após resolver os problemas do caçador, parte em busca por Broomhilda, esposa de Django. Para isso, eles devem enfrentar o vilão Calvin Candie, proprietário da escrava.",
+      "popularity": 33.9311,
+      "poster_path": "/ar63Sx8jeqk0OOu2uchS477S2zE.jpg",
+      "release_date": "2012-12-25",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.193,
+      "vote_count": 28574
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/Ar7QuJ7sJEiC0oP3I8fKBKIQD9u.jpg",
+      "genre_ids": [
+        28,
+        18,
+        12
+      ],
+      "id": 98,
+      "title": "Gladiador",
+      "original_language": "en",
+      "original_title": "Gladiator",
+      "overview": "Nos dias finais do reinado de Marcus Aurelius, o imperador desperta a ira de seu filho Commodus ao tornar pública sua predileção em deixar o trono para Maximus, o comandante do exército romano. Sedento pelo poder, Commodus mata seu pai, assume a coroa e ordena a morte de Maximus, que consegue fugir antes de ser pego e passa a se esconder sob a identidade de um escravo e gladiador do Império Romano.",
+      "popularity": 32.9595,
+      "poster_path": "/4DUClyGA6OqjXv6yC0Imf6THGfp.jpg",
+      "release_date": "2000-05-04",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.231,
+      "vote_count": 21468
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/hwNtEmmugU5Yd7hpfprNWI0DGIn.jpg",
+      "genre_ids": [
+        18,
+        53,
+        10752
+      ],
+      "id": 16869,
+      "title": "Bastardos Inglórios",
+      "original_language": "en",
+      "original_title": "Inglourious Basterds",
+      "overview": "Durante a Segunda Guerra Mundial, na França, um grupo de judeus americanos conhecidos como Bastardos espalha o terror entre o terceiro Reich. Ao mesmo tempo, Shosanna, uma judia que fugiu dos nazistas, planeja vingança quando um evento em seu cinema reunirá os líderes do partido.",
+      "popularity": 28.6349,
+      "poster_path": "/6UjYycIR6VLYgggfNpmSPJHmFS0.jpg",
+      "release_date": "2009-08-02",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.217,
+      "vote_count": 24733
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/gkh6Nt8DtY1XT4gQsyFq9XAVJlJ.jpg",
+      "genre_ids": [
+        18,
+        35
+      ],
+      "id": 350,
+      "title": "O Diabo Veste Prada",
+      "original_language": "en",
+      "original_title": "The Devil Wears Prada",
+      "overview": "Andrea Sachs é uma jovem que conseguiu um emprego na Runaway Magazine, a mais importante revista de moda de Nova York. Ela passa a trabalhar como assistente de Miranda Priestly, principal executiva da revista. Apesar da chance que muitos sonhariam em conseguir, logo Andrea nota que trabalhar com Miranda não é tão simples assim.",
+      "popularity": 28.1449,
+      "poster_path": "/xXzee1atwujY58q0VnhscHYvOXs.jpg",
+      "release_date": "2006-06-29",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.436,
+      "vote_count": 14215
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/gxSWwZyYPA50f5T2IJzFX4NzxAG.jpg",
+      "genre_ids": [
+        28,
+        80,
+        18,
+        53
+      ],
+      "id": 414419,
+      "title": "Kill Bill: The Whole Bloody Affair",
+      "original_language": "en",
+      "original_title": "Kill Bill: The Whole Bloody Affair",
+      "overview": "A Noiva, dada como morta após seu ex-chefe e amante, Bill, emboscar seu ensaio de casamento, atirar em sua cabeça e roubar seu filho ainda não nascido. Para se vingar, ela precisa primeiro caçar os quatro membros restantes do Esquadrão antes de confrontar o próprio Bill.",
+      "popularity": 28.0755,
+      "poster_path": "/p5c1N2ygxVDGULgMnDo0geOYzi7.jpg",
+      "release_date": "2011-03-27",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.118,
+      "vote_count": 1417
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/wcUohmHc9oDZXarXDp905TYVui4.jpg",
+      "genre_ids": [
+        18,
+        10749
+      ],
+      "id": 82023,
+      "title": "Hotel Desire",
+      "original_language": "de",
+      "original_title": "Hotel Desire",
+      "overview": "O filme conta a história de mãe solteira Antonia. Nos oito anos que se passaram desde o nascimento de seu filho, ela parou para tomar, além de deveres maternos e seu lugar como uma mulher. E parece que ela já chegou a um acordo com o seu triste destino. Resignada, ela observa que é para os homens da sua idade tornaram-se aparentemente invisível. Eles rotineiramente realizada neste dia insuportavelmente quente, o seu trabalho no Mare Mira hotel. É um dia como todos os outros. Até seu caminho cruza com um convidado que vê o mundo com olhos diferentes ...",
+      "popularity": 27.6817,
+      "poster_path": "/nHVz2ME3HXn6vS7fHfugSudEsWX.jpg",
+      "release_date": "2011-12-07",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.2,
+      "vote_count": 164
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/fRGxZuo7jJUWQsVg9PREb98Aclp.jpg",
+      "genre_ids": [
+        18,
+        10402,
+        53
+      ],
+      "id": 244786,
+      "title": "Whiplash: Em Busca da Perfeição",
+      "original_language": "en",
+      "original_title": "Whiplash",
+      "overview": "Andrew sonha em ser o melhor baterista de sua geração. Ele chama a atenção do impiedoso mestre do jazz Terence Fletcher, que ultrapassa os limites e transforma seu sonho em uma obsessão, colocando em risco a saúde física e mental do jovem músico.",
+      "popularity": 26.7202,
+      "poster_path": "/2msJb27jMeuA101ox4MuTQK4mDa.jpg",
+      "release_date": "2014-10-10",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.4,
+      "vote_count": 17059
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/4Mm5l3TcKGynSNto0eyRJgBrkJ7.jpg",
+      "genre_ids": [
+        18,
+        28,
+        53,
+        80,
+        9648
+      ],
+      "id": 10775,
+      "title": "Conflitos Internos",
+      "original_language": "cn",
+      "original_title": "無間道",
+      "overview": "Chan Wing Yan é um policial experiente, enviado sob disfarce para infiltrar-se em um perigoso círculo criminoso. Especialista em desfazer quadrilhas, ele acredita que esta será mais uma missão rotineira. Mas um espião foi plantado no departamento de polícia... e agora Chang corre perigo.",
+      "popularity": 26.5461,
+      "poster_path": "/6FfpFaxAkFesG4HhLEWsl6lkpK4.jpg",
+      "release_date": "2002-12-12",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.808,
+      "vote_count": 1920
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/iWak7wT0j6ycCc8lKr4NBz9c7n5.jpg",
+      "genre_ids": [
+        9648,
+        53,
+        18
+      ],
+      "id": 210577,
+      "title": "Garota Exemplar",
+      "original_language": "en",
+      "original_title": "Gone Girl",
+      "overview": "Amy Dunne desaparece no dia do seu aniversário de casamento, deixando o marido Nick em apuros. Ele começa a agir descontroladamente, abusando das mentiras, e se torna o suspeito número um da polícia. Com o apoio da sua irmã gêmea, Margo, Nick tenta provar a sua inocência e, ao mesmo tempo, procura descobrir o que aconteceu com Amy.",
+      "popularity": 26.3034,
+      "poster_path": "/54nI3vSKlPp42WhJmKVRdmMbkzl.jpg",
+      "release_date": "2014-10-01",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.89,
+      "vote_count": 20378
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/7Nwnmyzrtd0FkcRyPqmdzTPppQa.jpg",
+      "genre_ids": [
+        80,
+        18,
+        35
+      ],
+      "id": 106646,
+      "title": "O Lobo de Wall Street",
+      "original_language": "en",
+      "original_title": "The Wolf of Wall Street",
+      "overview": "Durante seis meses, Jordan Belfort trabalhou duro em uma corretora de Wall Street, seguindo os ensinamentos de seu mentor Mark Hanna. Quando finalmente consegue ser contratado como corretor da firma, acontece o Black Monday, que faz com que as bolsas de vários países caiam repentinamente. Sem emprego e bastante ambicioso, ele acaba trabalhando para uma empresa de fundo de quintal que lida com papéis de baixo valor, que não estão na bolsa de valores. É lá que Belfort tem a idéia de montar uma empresa focada neste tipo de negócio, cujas vendas são de valores mais baixos mas, em compensação, o retorno para o corretor é bem mais vantajoso. Ao lado de Donnie e outros amigos dos velhos tempos, ele cria a Stratton Oakmont, uma empresa que faz com que todos enriqueçam rapidamente e, também, levem uma vida dedicada ao prazer.",
+      "popularity": 26.0569,
+      "poster_path": "/sIy0jXDkaMf3SDZGaWcmkC2IOl.jpg",
+      "release_date": "2013-12-25",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.0,
+      "vote_count": 26488
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/rbZvGN1A1QyZuoKzhCw8QPmf2q0.jpg",
+      "genre_ids": [
+        18,
+        53,
+        9648
+      ],
+      "id": 11324,
+      "title": "Ilha do Medo",
+      "original_language": "en",
+      "original_title": "Shutter Island",
+      "overview": "No verão de 1954, os agentes judiciais Teddy Daniels (DiCaprio) e Chuck Aule (Ruffalo) foram designados para uma ilha remota do porto de Boston para investigar o desaparecimento de uma perigosa assassina (Mortimer) que estava reclusa no hospital psiquiátrico Ashecliffe, um centro penitenciário para criminosos perturbados dirigido pelo sinistro médico John Cawley. (Kingsley). Logo eles descobrem que o centro guarda muitos segredos e que a ilha esconde algo mais perigoso que os pacientes.",
+      "popularity": 25.6283,
+      "poster_path": "/erl801HYIodoIBGZeFk0GTwCUBh.jpg",
+      "release_date": "2010-02-14",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.197,
+      "vote_count": 26400
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/95ckrV6wQgbffurAVmETQ5YKASL.jpg",
+      "genre_ids": [
+        10752,
+        18,
+        28
+      ],
+      "id": 228150,
+      "title": "Corações de Ferro",
+      "original_language": "en",
+      "original_title": "Fury",
+      "overview": "Durante o final da Segunda Guerra Mundial, um grupo de cinco soldados americanos é encarregado de atacar os nazistas dentro da própria Alemanha. Apesar de estarem em quantidade inferior e terem poucas armas, eles são liderados pelo enfurecido Wardaddy, sargento que pretende levá-los à vitória, enquanto ensina o novato Norman a lutar.",
+      "popularity": 25.4384,
+      "poster_path": "/tVZXsjBC9HIoKv6WnAv0nWObbrT.jpg",
+      "release_date": "2014-10-15",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.546,
+      "vote_count": 13216
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/ew5FcYiRhTYNJAkxoVPMNlCOdVn.jpg",
+      "genre_ids": [
+        18,
+        80,
+        28
+      ],
+      "id": 272,
+      "title": "Batman Begins",
+      "original_language": "en",
+      "original_title": "Batman Begins",
+      "overview": "Marcado pelo assassinato de seus pais quando ainda era criança, o milionário Bruce Wayne decide viajar pelo mundo em busca de encontrar meios que lhe permitam combater a injustiça e provocar medo em seus adversários. Após retornar a Gotham City, sua cidade-natal, ele idealiza seu alter-ego: Batman, um justiceiro mascarado que usa força, inteligência e um arsenal tecnológico para combater o crime.",
+      "popularity": 25.2509,
+      "poster_path": "/7EyhcdfiLtH0xa6CZkyYuoWL2GJ.jpg",
+      "release_date": "2005-06-10",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.729,
+      "vote_count": 23149
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/q6OGlZ1KMEb14AC8KbPCxyNOal6.jpg",
+      "genre_ids": [
+        18,
+        35
+      ],
+      "id": 77338,
+      "title": "Intocáveis",
+      "original_language": "fr",
+      "original_title": "Intouchables",
+      "overview": "Quando um ex-presidiário é contratado para cuidar de um aristocrata francês, seu novo trabalho se torna uma aventura imprevisível. Acelerar uma Maserati em Paris, seduzir mulheres, e fazer parapente sobre os Alpes é apenas o começo, pois ele vira o mundo da classe alta de Paris de cabeça para baixo.",
+      "popularity": 24.4996,
+      "poster_path": "/2tAzFC2xUAXEx96l5Xixb6WLAyO.jpg",
+      "release_date": "2011-11-02",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.272,
+      "vote_count": 18791
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/usuRn9DUKQQr4nBWnrQzlOuZ1Q4.jpg",
+      "genre_ids": [
+        36,
+        18,
+        53,
+        10752
+      ],
+      "id": 205596,
+      "title": "O Jogo da Imitação",
+      "original_language": "en",
+      "original_title": "The Imitation Game",
+      "overview": "Em 1939, a recém-criada agência de inteligência britânica MI6 recruta Alan Turing, um aluno da Universidade de Cambridge, para entender códigos nazistas, incluindo o \"Enigma\", que criptógrafos acreditavam ser inquebrável. A equipe de Turing, incluindo Joan Clarke, analisa as mensagens de \"Enigma\", enquanto ele constrói uma máquina para decifrá-las.",
+      "popularity": 24.0439,
+      "poster_path": "/pNa7vGKv04X2jnKifxLCTHPmWUT.jpg",
+      "release_date": "2014-11-14",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.98,
+      "vote_count": 18397
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/yaExZh6qE2cfyK3o4kAMEq0mkgy.jpg",
+      "genre_ids": [
+        18,
+        9648,
+        878
+      ],
+      "id": 1124,
+      "title": "O Grande Truque",
+      "original_language": "en",
+      "original_title": "The Prestige",
+      "overview": "No século 19, em Londres, dois amigos ilusionistas e mágicos, Alfred Borden e Rupert Angier, acabam construindo uma rivalidade, uma batalha por supremacia, que se estende ao longo dos anos e que se transforma em obsessão, cujos resultados serão inevitavelmente trágicos.",
+      "popularity": 23.4878,
+      "poster_path": "/4AUW2bGbQjWACUREckGJWXmyF0d.jpg",
+      "release_date": "2006-10-19",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.211,
+      "vote_count": 18099
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/6WRrGYalXXveItfpnipYdayFkQB.jpg",
+      "genre_ids": [
+        18,
+        53,
+        80
+      ],
+      "id": 1422,
+      "title": "Os Infiltrados",
+      "original_language": "en",
+      "original_title": "The Departed",
+      "overview": "Billy Costigan, um jovem policial, recebe a missão de se infiltrar na máfia, mais especificamente no grupo comandado por Frank Costello. Billy conquista sua confiança ao mesmo tempo em que Colin Sullivan, um criminoso que atuou na polícia como informante de Costello, também ascende dentro da corporação. Tanto Billy quanto Colin se sentem aflitos devido à vida dupla que levam. Mas quando a máfia e a polícia descobrem que há um espião entre eles, a vida de ambos passa a correr perigo.",
+      "popularity": 23.4809,
+      "poster_path": "/qtnAwzDapzOML4Q9p7lv2bk5gvz.jpg",
+      "release_date": "2006-10-04",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.159,
+      "vote_count": 16617
+    }
+  ],
+  "total_pages": 266,
+  "total_results": 5308
+}

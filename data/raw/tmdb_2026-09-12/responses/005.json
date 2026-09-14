@@ -1,0 +1,421 @@
+{
+  "page": 2,
+  "results": [
+    {
+      "adult": false,
+      "backdrop_path": "/zdXnJqBaGFVtLoPNuMeKfEYUViZ.jpg",
+      "genre_ids": [
+        10749,
+        18
+      ],
+      "id": 11036,
+      "title": "Diário de uma Paixão",
+      "original_language": "en",
+      "original_title": "The Notebook",
+      "overview": "Na década de 40, o operário Noah Calhoun e a rica Allie estão desesperadamente apaixonados, mas os pais da jovem não aprovam o namoro. Quando Noah vai para a Segunda Guerra Mundial, parece ser o fim do romance. Enquanto isso, Allie se envolve com outro homem. Mas quando Noah retorna para a pequena cidade anos mais tarde, próximo ao casamento de Allie, logo se torna claro que a paixão ainda não acabou.",
+      "popularity": 22.7407,
+      "poster_path": "/hO6k34ZNDwWzgcnzFbqYf2Rjg5W.jpg",
+      "release_date": "2004-06-25",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.891,
+      "vote_count": 12852
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/pjlxrd646cBYznHoPBWTzz6FujX.jpg",
+      "genre_ids": [
+        28,
+        878,
+        18
+      ],
+      "id": 39254,
+      "title": "Gigantes de Aço",
+      "original_language": "en",
+      "original_title": "Real Steel",
+      "overview": "Em um futuro próximo, as máquinas substituem os seres humanos no ringue. As lutas de boxe, nesse contexto, acontecem entre robôs de alta tecnologia e Charlie, um ex-lutador frustrado, não consegue se adaptar a isso. Quando tudo parece perdido, ele se une ao filho para construir um competidor imbatível.",
+      "popularity": 22.1721,
+      "poster_path": "/pp74uUjwQTknGPqNrerj4FvU0ce.jpg",
+      "release_date": "2011-09-28",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.142,
+      "vote_count": 9526
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/8itHQecANtOevcCdr3AhVxFCYkw.jpg",
+      "genre_ids": [
+        18,
+        28,
+        12,
+        36,
+        10752
+      ],
+      "id": 1495,
+      "title": "Cruzada",
+      "original_language": "en",
+      "original_title": "Kingdom of Heaven",
+      "overview": "Ainda em luto pela repentina morte de sua esposa, o ferreiro Balian junta-se ao seu distante pai, Baron Godfrey, nas cruzadas a caminho de Jerusalém. Após uma jornada muito difícil até à cidade santa, o jovem valente entra no séquito do rei leproso Balduíno IV, que deseja lutar contra os muçulmanos para seu próprio ganho político e pessoal.",
+      "popularity": 21.8421,
+      "poster_path": "/unb9egsteLvvcXaWpgeK0RUorcD.jpg",
+      "release_date": "2005-05-03",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.086,
+      "vote_count": 5216
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/e6LS0VXLHc4JJLXnzPXX5Aslvrs.jpg",
+      "genre_ids": [
+        10752,
+        18,
+        36
+      ],
+      "id": 14097,
+      "title": "9º Pelotão",
+      "original_language": "ru",
+      "original_title": "9 рота",
+      "overview": "Anos 80. A sangrenta luta entre soviéticos e mujahidin, no Afeganistão, levou à morte milhares de soldados de ambos os lados. O cansado oficial Khokkol (Fyodor Bondarchuk) acompanha a luta dos jovens soldados soviéticos que, acreditando estar servindo ao país, morrem em uma batalha ocorrida na montanha conhecida como \"Cume 3234\".",
+      "popularity": 21.7709,
+      "poster_path": "/j7Dyb6cs5td1DJWh1efMpi2HTa7.jpg",
+      "release_date": "2005-09-19",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.656,
+      "vote_count": 320
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/ggC3Brchf4RqPitEh7cROFoeAWn.jpg",
+      "genre_ids": [
+        18,
+        80
+      ],
+      "id": 640,
+      "title": "Prenda-Me se For Capaz",
+      "original_language": "en",
+      "original_title": "Catch Me If You Can",
+      "overview": "Frank Abagnale Jr. já foi médico, advogado e co-piloto, tudo isso com apenas 18 anos. Mestre na arte do disfarce, ele aproveita suas habilidades para viver a vida como quer e praticar golpes milionários, que fazem com que se torne o ladrão de banco mais bem-sucedido da história dos Estados Unidos com apenas 17 anos. Mas em seu encalço está o agente do FBI Carl Hanratty, que usa todos os meios que tem ao seu dispor para encontrá-lo e capturá-lo.",
+      "popularity": 21.4891,
+      "poster_path": "/pSaqcj3pwTKt34cyn6NrBE7V4eH.jpg",
+      "release_date": "2002-12-16",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.978,
+      "vote_count": 17531
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/ojgXOhVi9Yk8irDpRfDkIzdD1LK.jpg",
+      "genre_ids": [
+        35,
+        10749,
+        18
+      ],
+      "id": 18240,
+      "title": "A Proposta",
+      "original_language": "en",
+      "original_title": "The Proposal",
+      "overview": "Margaret Tate é uma poderosa editora de livros, que se vê em apuros ao ser comunicada de sua deportação para o país-natal, o Canadá. Para evitar que isto ocorra ela declara estar noiva de Andrew Paxton, seu assistente. Perseguido por Margaret há anos, ele aceita participar da farsa mas impõe algumas condições.",
+      "popularity": 21.0451,
+      "poster_path": "/uIhags0jXoe78JJjCDZbByciesQ.jpg",
+      "release_date": "2009-06-02",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.18,
+      "vote_count": 7754
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/uvitbjFU4JqvMwIkMWHp69bmUzG.jpg",
+      "genre_ids": [
+        18,
+        80
+      ],
+      "id": 598,
+      "title": "Cidade de Deus",
+      "original_language": "pt",
+      "original_title": "Cidade de Deus",
+      "overview": "Buscapé é um jovem morador da Cidade de Deus que cresce em meio à violência. Com medo de se tornar um bandido, enxerga na fotografia uma oportunidade de ter uma vida digna.",
+      "popularity": 20.7395,
+      "poster_path": "/gfnXixcGC060QcG6JPxN6AMdVsq.jpg",
+      "release_date": "2002-08-30",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.427,
+      "vote_count": 8434
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/W1ffLQGHoxfAOq0ZYdPtJlvAdb.jpg",
+      "genre_ids": [
+        878,
+        18,
+        10749
+      ],
+      "id": 38,
+      "title": "Brilho Eterno de uma Mente sem Lembranças",
+      "original_language": "en",
+      "original_title": "Eternal Sunshine of the Spotless Mind",
+      "overview": "Joel se surpreende ao saber que seu amor verdadeiro, Clementine, o apagou completamente de sua memória. Ele decide fazer o mesmo, mas muda de ideia. Preso dentro da própria mente enquanto os especialistas se mantêm ocupados em seu apartamento, Joel precisa avisá-los para parar.",
+      "popularity": 20.7198,
+      "poster_path": "/zqbwK2ugTPauBQwzcNAM3PxVoww.jpg",
+      "release_date": "2004-03-19",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.089,
+      "vote_count": 16714
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/weAYfu6FfrNxEDJ3xH1XpgQcqUv.jpg",
+      "genre_ids": [
+        14,
+        18,
+        10749
+      ],
+      "id": 8966,
+      "title": "Crepúsculo",
+      "original_language": "en",
+      "original_title": "Twilight",
+      "overview": "Isabella Swan é uma adolescente que vai morar com seu pai em uma nova cidade depois que sua mãe decide casar-se novamente. No colégio, ela fica fascinada por Edward Cullen, um garoto que esconde um segredo obscuro. Eles se apaixonam, mas Edward sabe que quanto mais avançam no relacionamento, mais ele está colocando Bella e aqueles à sua volta em perigo.",
+      "popularity": 20.3186,
+      "poster_path": "/o4ki1gYHkP6IWNdwjHvI9vzfpuC.jpg",
+      "release_date": "2008-11-20",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.274,
+      "vote_count": 14662
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/1Onam6oWyFAUCcoxtdWkACtEiNr.jpg",
+      "genre_ids": [
+        18,
+        10749
+      ],
+      "id": 4348,
+      "title": "Orgulho e Preconceito",
+      "original_language": "en",
+      "original_title": "Pride & Prejudice",
+      "overview": "Elizabeth Bennet vive com sua mãe, pai e irmãs no campo, na Inglaterra. Por ser a filha mais velha, ela enfrenta uma crescente pressão de seus pais para se casar. Quando Elizabeth é apresentada ao belo e rico Darcy, faíscas voam. Embora haja uma química óbvia entre os dois, a natureza excessivamente reservada de Darcy ameaça a relação.",
+      "popularity": 20.0718,
+      "poster_path": "/dmnY0Zs8uMSHkMiol7M3xOlvvkK.jpg",
+      "release_date": "2005-09-16",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.052,
+      "vote_count": 8943
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/nP3y0TkR6XniFs9J53qQkg4Bnnk.jpg",
+      "genre_ids": [
+        18,
+        35
+      ],
+      "id": 10625,
+      "title": "Meninas Malvadas",
+      "original_language": "en",
+      "original_title": "Mean Girls",
+      "overview": "Criada na selva africana por seus pais zoólogos, Cady acha que sabe tudo sobre \"sobrevivência dos mais bem dotados\". Mas a lei da selva toma um significado totalmente novo, quando a garota, entra na escola pública.",
+      "popularity": 19.7973,
+      "poster_path": "/iV7YxvjdmRZo0amjGA2BZW5kkAu.jpg",
+      "release_date": "2004-04-30",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.2,
+      "vote_count": 9653
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/cpAgb6knQT3BZ7VtP9uyIg5kNRd.jpg",
+      "genre_ids": [
+        18
+      ],
+      "id": 21966,
+      "title": "Consumido pelo Ódio",
+      "original_language": "ja",
+      "original_title": "血と骨",
+      "overview": "Em 1923 Kim Shun-Pei vai da Coreia do Sul para o Japão em busca de melhores condições de trabalho. Uma vida de muito trabalho pesado e discriminação tornam Kim um homem frio e violento, fazendo da vida de sua esposa e filhos um grande sofrimento.",
+      "popularity": 19.1997,
+      "poster_path": "/2mVaoLy9gBEMMmuBtwEcbFHnCHk.jpg",
+      "release_date": "2004-11-06",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.605,
+      "vote_count": 57
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/c0fB9xk7D1aVb3Bg2rk2SVJcGn.jpg",
+      "genre_ids": [
+        18,
+        10752
+      ],
+      "id": 423,
+      "title": "O Pianista",
+      "original_language": "en",
+      "original_title": "The Pianist",
+      "overview": "Um pianista judeu polonês vê Varsóvia mudar gradualmente à medida que a Segunda Guerra Mundial começa. Szpilman é forçado a ir para o Gueto de Varsóvia, mas depois é separado de sua família durante a Operação Reinhard. A partir deste momento até que os prisioneiros dos campos de concentração sejam liberados, Szpilman se esconde em vários locais entre as ruínas de Varsóvia.",
+      "popularity": 19.061,
+      "poster_path": "/g0s9Yb5tfka73UKxFAPxO9lPHBW.jpg",
+      "release_date": "2002-09-17",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.371,
+      "vote_count": 10425
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/3RFmTz5h2UuFWEV4oH00XICBR9y.jpg",
+      "genre_ids": [
+        18,
+        53,
+        80
+      ],
+      "id": 146233,
+      "title": "Os Suspeitos",
+      "original_language": "en",
+      "original_title": "Prisoners",
+      "overview": "Depois que sua filha de seis anos e uma amiga dela são sequestradas, Keller Dove, um carpinteiro de Boston, enfrenta o departamento de polícia e o jovem detetive encarregado do caso para fazer justiça com as próprias mãos.",
+      "popularity": 19.0193,
+      "poster_path": "/30YtzPOimO7eG30r8K8rUkqTGNj.jpg",
+      "release_date": "2013-09-19",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.105,
+      "vote_count": 13481
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/qU7tNIMpRqkizIObXfkJY3haTqh.jpg",
+      "genre_ids": [
+        18,
+        10402,
+        10749
+      ],
+      "id": 27,
+      "title": "9 Canções",
+      "original_language": "en",
+      "original_title": "9 Songs",
+      "overview": "Londres, verão de 2003. Matt conhece Lisa, uma jovem estudante americana, em meio a um show. Eles logo se apaixonam, vivendo um intenso relacionamento sexual entremeado por vários shows que acompanham.",
+      "popularity": 18.5854,
+      "poster_path": "/91O7z0vo7MiNWd5xD2BoivwbQsb.jpg",
+      "release_date": "2004-07-16",
+      "softcore": false,
+      "video": false,
+      "vote_average": 5.531,
+      "vote_count": 600
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/bdI6U1mT0kCdTJ6TWtiFxQ42GSn.jpg",
+      "genre_ids": [
+        80,
+        18,
+        53
+      ],
+      "id": 242582,
+      "title": "O Abutre",
+      "original_language": "en",
+      "original_title": "Nightcrawler",
+      "overview": "Enfrentando dificuldades para conseguir um emprego formal, o jovem Louis Bloom decide entrar no agitado submundo do jornalismo criminal independente de Los Angeles. A fórmula é correr atrás de crimes e acidentes chocantes, registrar tudo e vender a história para veículos interessados.",
+      "popularity": 18.534,
+      "poster_path": "/4dJp8HOCyr7gwiBijhBG46qf7vU.jpg",
+      "release_date": "2014-10-23",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.709,
+      "vote_count": 12036
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/egVj5Y9f79xPnyAQJmeDR0Uwow3.jpg",
+      "genre_ids": [
+        53,
+        18,
+        10749
+      ],
+      "id": 2251,
+      "title": "Infidelidade",
+      "original_language": "en",
+      "original_title": "Unfaithful",
+      "overview": "Num subúrbio de Nova York, Connie Sumner (Diane Lane) leva uma vida feliz e segura ao lado de Edward (Richard Gere), com quem está casada há 11 anos, e seu filho Charlie (Erik Per Sullivan). Aparentemente nada poderia se interpor na felicidade do casal, mas o amor é posto à prova quando Connie esbarra com Paul Martel (Olivier Martinez), um belo e sensual francês. Os dois se tornam amantes e são dominados por uma paixão que não para de crescer, enquanto o comportamento da mulher começa a gerar suspeitas em Edward.",
+      "popularity": 18.3646,
+      "poster_path": "/ina8zdMp5CHRd59cupyRbMFCTAz.jpg",
+      "release_date": "2002-05-10",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.721,
+      "vote_count": 1793
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/eDLp4uFdqP1gpy9oMrutwH6Q64I.jpg",
+      "genre_ids": [
+        18,
+        53,
+        27
+      ],
+      "id": 44214,
+      "title": "Cisne Negro",
+      "original_language": "en",
+      "original_title": "Black Swan",
+      "overview": "Nina é uma bailarina cuja obsessão pela dança supera todas as facetas de sua vida. Quando o diretor artístico da companhia decide substituir sua prima ballerina para a produção de estreia de \"O Lago dos Cisnes\", Nina é sua primeira escolha. Sua concorrente é a novata Lily. Embora Nina seja perfeita para o papel do Cisne Branco, Lily personifica o Cisne Negro. A rivalidade entre as duas bailarinas se transforma em uma amizade distorcida e o lado obscuro de Nina começa a vir à tona.",
+      "popularity": 18.3083,
+      "poster_path": "/tqlmLBt2i5SHNpXEj2nqk10Crwa.jpg",
+      "release_date": "2010-12-03",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.683,
+      "vote_count": 15858
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/6G6nqSW9S7EHA9HrYl0Z8uo2H7f.jpg",
+      "genre_ids": [
+        14,
+        18,
+        10752
+      ],
+      "id": 1417,
+      "title": "O Labirinto do Fauno",
+      "original_language": "es",
+      "original_title": "El laberinto del fauno",
+      "overview": "Espanha, 1944. Ofelia se muda com sua mãe para uma guarnição dirigida por seu padrasto, Vidal, um capitão autoritário do exército de Franco. Perto da casa da família, a jovem descobre um estranho labirinto guardado por uma criatura, um fauno chamado Pan. O monstro revela que ela é nada menos que a princesa de um reino encantado. Para descobrir a verdade, Ofelia precisa enfrentar três provas para as quais não está preparada.",
+      "popularity": 18.2607,
+      "poster_path": "/5hMcZCR8qpJzeebm38Zi68XwcoA.jpg",
+      "release_date": "2006-10-11",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.768,
+      "vote_count": 11721
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/6aRuABAdhuuDypLGscM7HoEWHx4.jpg",
+      "genre_ids": [
+        18,
+        10752,
+        36
+      ],
+      "id": 14574,
+      "title": "O Menino do Pijama Listrado",
+      "original_language": "en",
+      "original_title": "The Boy in the Striped Pyjamas",
+      "overview": "Durante a Segunda Guerra Mundial, Bruno, um garoto de oito anos, e sua família saem de Berlim para residir próximo a um campo de concentração, onde seu pai acaba de se tornar comandante. Infeliz e solitário, ele vagueia fora de sua casa e certo dia encontra Shmuel, um menino judeu de sua idade. Embora a cerca de arame farpado do campo os separem, os meninos começam uma amizade proibida.",
+      "popularity": 18.2149,
+      "poster_path": "/zYRk58BJd7bLErTWlx3tVsUUbbV.jpg",
+      "release_date": "2008-05-07",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.818,
+      "vote_count": 7822
+    }
+  ],
+  "total_pages": 266,
+  "total_results": 5308
+}

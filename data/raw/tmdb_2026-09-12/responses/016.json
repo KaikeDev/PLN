@@ -1,0 +1,420 @@
+{
+  "page": 1,
+  "results": [
+    {
+      "adult": false,
+      "backdrop_path": "/ecKQlAEG95k62SMGhvX83oEqANK.jpg",
+      "genre_ids": [
+        27,
+        53
+      ],
+      "id": 138843,
+      "title": "Invocação do Mal",
+      "original_language": "en",
+      "original_title": "The Conjuring",
+      "overview": "Harrisville, Rhode Island, Estados Unidos, 1968. Os investigadores paranormais Ed e Lorraine Warren trabalham para ajudar uma família aterrorizada por uma presença sombria em sua fazenda. Forçados a confrontar uma entidade poderosa, os Warrens se vêem presos no caso mais aterrorizante de suas vidas. Baseado numa história real.",
+      "popularity": 31.6337,
+      "poster_path": "/1NxHKZW5DPbUFtbF3MxbdSyxRqU.jpg",
+      "release_date": "2013-07-18",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.5,
+      "vote_count": 13044
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/tJvRdhlkonjBLBUpTqp0RPPujxJ.jpg",
+      "genre_ids": [
+        27,
+        53
+      ],
+      "id": 49018,
+      "title": "Sobrenatural",
+      "original_language": "en",
+      "original_title": "Insidious",
+      "overview": "Josh e Renai se mudam com a família para uma casa maior. Lá, o filho Dalton sofre um estranho acidente e entra em coma. Enquanto eles tentam salvar o menino, entidades malignas atormentam a família.",
+      "popularity": 30.4499,
+      "poster_path": "/4ObTwWSADRETMEqrlpXiubZrOc1.jpg",
+      "release_date": "2011-03-31",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.957,
+      "vote_count": 7583
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/wa0UGYppc6uWOdVow4Ko2CG4jk9.jpg",
+      "genre_ids": [
+        80,
+        27,
+        53
+      ],
+      "id": 73861,
+      "title": "A Serbian Film - Terror sem Limites",
+      "original_language": "sr",
+      "original_title": "Srpski film",
+      "overview": "Milos (Srdjan Todorovic), um ator pornô aposentado, é convidado a participar de um filme erótico de arte. Como enfrenta problemas financeiros ele aceita a oferta, sem imaginar que está entrando num \"snuff movie\" da sua própria vida.",
+      "popularity": 22.1934,
+      "poster_path": "/r7MR0GmKe4pE0OX43LXMztNz8Z8.jpg",
+      "release_date": "2010-01-06",
+      "softcore": false,
+      "video": false,
+      "vote_average": 5.447,
+      "vote_count": 2267
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/kg2FOT2Oe5PSCgs3L4vLel6B7ck.jpg",
+      "genre_ids": [
+        28,
+        27,
+        878
+      ],
+      "id": 72190,
+      "title": "Guerra Mundial Z",
+      "original_language": "en",
+      "original_title": "World War Z",
+      "overview": "Um vírus letal se espalha rapidamente e transforma seres humanos em zumbis. O ex-agente da ONU Gerry Lane é chamado para investigar a epidemia que está acabando com a humanidade, iniciando uma verdadeira corrida contra o tempo.",
+      "popularity": 20.5897,
+      "poster_path": "/2Sdz5gGrwN92pRanlJKeUqkIjRk.jpg",
+      "release_date": "2013-06-19",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.85,
+      "vote_count": 17019
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/i9oyhCYxIYH2082J0Rc3a3jQjRB.jpg",
+      "genre_ids": [
+        27,
+        53
+      ],
+      "id": 91586,
+      "title": "Sobrenatural: Capítulo 2",
+      "original_language": "en",
+      "original_title": "Insidious: Chapter 2",
+      "overview": "Renai e Josh Lambert estão prontos para suas vidas voltarem ao normal, mas não sabem que Josh está possuído. A fim de derrotar as forças malévolas em torno deles, Lorraine Lambert e seus amigos investigam o passado para salvar o futuro da família.",
+      "popularity": 20.2817,
+      "poster_path": "/9NyTTmE6H1qUcmx4bNxF6R8CTil.jpg",
+      "release_date": "2013-09-12",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.701,
+      "vote_count": 4745
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/aJFwk1clMal1prxAvKAgHxKPAf.jpg",
+      "genre_ids": [
+        27,
+        53,
+        878
+      ],
+      "id": 170,
+      "title": "Extermínio",
+      "original_language": "en",
+      "original_title": "28 Days Later",
+      "overview": "Um poderoso vírus está a solta. Transmitido em uma gota de sangue e com efeito devastador em alguns segundos, o vírus mantém os infectados em um estado permanente de descontrole assassino. Dentro de 28 dias, o país está tomado e um punhado de sobreviventes inicia esforços para garantir algum futuro à raça humana, mas o que não percebem é que o vírus mortal não é a única coisa que os ameaça.",
+      "popularity": 20.2753,
+      "poster_path": "/pVTtJSvJoOofD1YoyPSGwWEWmJd.jpg",
+      "release_date": "2002-10-31",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.246,
+      "vote_count": 8861
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/eDLp4uFdqP1gpy9oMrutwH6Q64I.jpg",
+      "genre_ids": [
+        18,
+        53,
+        27
+      ],
+      "id": 44214,
+      "title": "Cisne Negro",
+      "original_language": "en",
+      "original_title": "Black Swan",
+      "overview": "Nina é uma bailarina cuja obsessão pela dança supera todas as facetas de sua vida. Quando o diretor artístico da companhia decide substituir sua prima ballerina para a produção de estreia de \"O Lago dos Cisnes\", Nina é sua primeira escolha. Sua concorrente é a novata Lily. Embora Nina seja perfeita para o papel do Cisne Branco, Lily personifica o Cisne Negro. A rivalidade entre as duas bailarinas se transforma em uma amizade distorcida e o lado obscuro de Nina começa a vir à tona.",
+      "popularity": 18.3083,
+      "poster_path": "/tqlmLBt2i5SHNpXEj2nqk10Crwa.jpg",
+      "release_date": "2010-12-03",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.683,
+      "vote_count": 15858
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/ok4ot3YbfDYZcINXf91JUfq3maB.jpg",
+      "genre_ids": [
+        27,
+        9648,
+        80
+      ],
+      "id": 176,
+      "title": "Jogos Mortais",
+      "original_language": "en",
+      "original_title": "Saw",
+      "overview": "Dois homens acordam acorrentados em um banheiro como prisioneiros de um assassino em série que leva suas vítimas a situações limítrofes em um jogo macabro. Para sobreviver, eles terão de desvendar juntos as peças desse quebra-cabeças doentio.",
+      "popularity": 18.2184,
+      "poster_path": "/jByGeGsJtoghNFHF5TgVvcSJ4Oc.jpg",
+      "release_date": "2004-10-01",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.427,
+      "vote_count": 10311
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/qDG5SlGkWNsjSJWiGTBMFI8DpzA.jpg",
+      "genre_ids": [
+        878,
+        9648,
+        27
+      ],
+      "id": 70981,
+      "title": "Prometheus",
+      "original_language": "en",
+      "original_title": "Prometheus",
+      "overview": "Uma equipe de cientistas embarca em uma jornada espacial para descobrir a verdade sobre a origem da raça humana. No planeta de destino, eles encontram criaturas poderosas e revelações assustadoras.",
+      "popularity": 17.0906,
+      "poster_path": "/k1GZVllOORTiN0XTPdumt9CSAcc.jpg",
+      "release_date": "2012-05-30",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.609,
+      "vote_count": 13618
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/d72ROyJqXQtw2OupW0l15eicRAF.jpg",
+      "genre_ids": [
+        27,
+        12,
+        28
+      ],
+      "id": 7131,
+      "title": "Van Helsing: O Caçador de Monstros",
+      "original_language": "en",
+      "original_title": "Van Helsing",
+      "overview": "O famoso caçador de monstros Van Helsing é enviado à Transilvânia para ajudar os últimos da linhagem Valerious a derrotar o Conde Drácula. Anna Valerious revela que Drácula formou uma aliança profana com o monstro do Dr. Frankenstein e está determinado a lançar uma maldição secular sobre sua família.",
+      "popularity": 16.315,
+      "poster_path": "/s8fhGCLWbFDbBAOitRzVlMPk5pd.jpg",
+      "release_date": "2004-05-03",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.426,
+      "vote_count": 6842
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/x3YFn10ehQKMRIJwIfiDAX8S9Xt.jpg",
+      "genre_ids": [
+        14,
+        28,
+        27
+      ],
+      "id": 561,
+      "title": "Constantine",
+      "original_language": "en",
+      "original_title": "Constantine",
+      "overview": "John Constantine (Keanu Reeves) é um experiente ocultista e exorcista, que literalmente chegou ao inferno. Juntamente com Angela Dodson (Rachel Weisz), uma policial cética, ele investiga o misterioso assassinato da irmã gêmea dela, Isabel. As investigações levam a dupla a um mundo sombrio, em que precisam lidar com demônios e anjos malvados.",
+      "popularity": 16.0327,
+      "poster_path": "/dd4uzgUAbBIiRW7dcY0AcgSWohJ.jpg",
+      "release_date": "2005-02-08",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.206,
+      "vote_count": 8525
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/rNvn89IcEJPqRKxIgwTAPXl9qjJ.jpg",
+      "genre_ids": [
+        27,
+        35
+      ],
+      "id": 19994,
+      "title": "Garota Infernal",
+      "original_language": "en",
+      "original_title": "Jennifer's Body",
+      "overview": "Ao ser possuída por um demônio, a estudante Jennifer se torna muito brava com os rapazes que nunca a deram uma chance. Enquanto a maldosa Jennifer satisfaz seu apetite com carne humana de meninos da escola, sua amiga nerd Needy descobre o que está acontecendo e promete colocar um fim na carnificina.",
+      "popularity": 15.6605,
+      "poster_path": "/lIHXfHgVPDP0r5tKuysqpNkQQmV.jpg",
+      "release_date": "2009-09-18",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.0,
+      "vote_count": 4391
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/76J14zgwVWyOciri7X7F3DGP3TA.jpg",
+      "genre_ids": [
+        27,
+        878,
+        53
+      ],
+      "id": 5876,
+      "title": "O Nevoeiro",
+      "original_language": "en",
+      "original_title": "The Mist",
+      "overview": "Após uma violenta tempestade devastar a cidade de Maine, David Drayton e Billy, seu filho de 8 anos, correm rumo ao supermercado, temendo que os suprimentos se esgotem. Porém um estranho nevoeiro toma conta da cidade, o que faz com que David, Billy e outras pessoas fiquem presas no supermercado. Logo David descobre que há algo de sobrenatural envolvido e que, caso deixem o local, isto pode ser fatal.",
+      "popularity": 15.0001,
+      "poster_path": "/nhK5Np3A9wBXAYzropa298TylCa.jpg",
+      "release_date": "2007-11-21",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.953,
+      "vote_count": 6078
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/c1bejD7jTTf8qSUkcv32Gmv8N50.jpg",
+      "genre_ids": [
+        27,
+        878,
+        28
+      ],
+      "id": 924,
+      "title": "Madrugada dos Mortos",
+      "original_language": "en",
+      "original_title": "Dawn of the Dead",
+      "overview": "Após mais um dia de trabalho, tudo que Ana quer é tomar um banho ao lado do marido e dormir. Mas nas primeiras horas da manhã, ela é violentamente atacada por uma legião de mortos-vivos, e se descobre um pesadelo real: o mundo inteiro está tomado por zumbis. Em fuga desesperada, Ana se une a um pequeno grupo de sobreviventes, que se refugiam num shopping center enquanto o mundo lá fora se transforma literalmente no inferno.",
+      "popularity": 14.9277,
+      "poster_path": "/xrYKXXO7z6pFe4LtQ6fz6sNvvte.jpg",
+      "release_date": "2004-03-19",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.09,
+      "vote_count": 4690
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/83ownpZPvBHJD5UVNShzQfa3LaW.jpg",
+      "genre_ids": [
+        27,
+        53,
+        878
+      ],
+      "id": 1562,
+      "title": "Extermínio 2",
+      "original_language": "en",
+      "original_title": "28 Weeks Later",
+      "overview": "Seis meses depois de um vírus ter destruído um grande número de pessoas na Grã-Betanha, o exército americano declara que o perigo já passou e começa a reconstrução da cidade. Os refugiados retornam, mas um deles carrega um segredo mortal. O vírus não está morto e agora está mais perigoso.",
+      "popularity": 14.7971,
+      "poster_path": "/mZVFtNKPv3aiESKKeUDV61DaQ90.jpg",
+      "release_date": "2007-04-26",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.591,
+      "vote_count": 5845
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/rbBe9WQ1OqCxzgwskOTnaY6JdUA.jpg",
+      "genre_ids": [
+        27,
+        9648,
+        53
+      ],
+      "id": 1933,
+      "title": "Os Outros",
+      "original_language": "en",
+      "original_title": "The Others",
+      "overview": "Grace Stewart vive em uma casa velha com seus dois filhos e os criados. Uma condição rara das crianças, que são fotossensíveis, faz com que eles vivam na escuridão, algo que complica a rotina diária de todos. Acontece que coisas esquisitas têm acontecido na casa e Grace começa a suspeitar que sua casa é assombrada.",
+      "popularity": 14.7834,
+      "poster_path": "/50cwEV5MvT1Kr8OxcmBjbhLOFsk.jpg",
+      "release_date": "2001-08-02",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.618,
+      "vote_count": 7397
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/aDnCTWpWMHcQxOeGWsITmoLuEGy.jpg",
+      "genre_ids": [
+        16,
+        35,
+        10751,
+        14,
+        27
+      ],
+      "id": 9297,
+      "title": "A Casa Monstro",
+      "original_language": "en",
+      "original_title": "Monster House",
+      "overview": "D.J. Walters é um garoto de 12 anos que acredita que há algo de estranho na casa do velho Epaminondas, localizada do outro lado da rua. Tudo que passa perto da casa simplesmente desaparece, incluindo triciclos, brinquedos e animais de estimação. Na véspera do Dia das Bruxas, D.J. e seu amigo Bocão deixam a bola de basquete com a qual estão jogando cair no terreno de Epaminondas, que logo some misteriosamente. Logo em seguida, a casa tenta devorar Jenny, uma vendedora de doces, que é salva do ataque. Eles tentam avisar a todos do perigo que é a casa, mas ninguém acredita neles.",
+      "popularity": 14.0106,
+      "poster_path": "/hVtsIdJ9CogLz0NuqMKnfIu1uzR.jpg",
+      "release_date": "2006-06-30",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.71,
+      "vote_count": 4446
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/7isarjYDEKZ5t1CgcvbuqEUby8P.jpg",
+      "genre_ids": [
+        27
+      ],
+      "id": 9532,
+      "title": "Premonição",
+      "original_language": "en",
+      "original_title": "Final Destination",
+      "overview": "Pouco antes de decolar no vôo 180 para Paris, Alex experimenta a angustiante visão do avião transformando-se numa bola de fogo gigante em pleno vôo. Em pânico, o estudante é retirado da aeronave com uma professora e alguns colegas de classe. Irritado e decepcionado, o grupo assiste seu vôo partir. É quando o inimaginável acontece, o avião explode matando todo mundo a bordo! Confuso entre a idéia de Alex ter salvo a todos e a possibilidade de ele ter provocado o acidente, o grupo não sabe como reagir. Para Alex, porém, o fato de ter escapado da tragédia não traz alívio, pois presságios terríveis continuam a perturbá-lo. Neles Alex vê, um a um, seus amigos morrerem. Então percebe que, ao saírem do avião, eles desafiaram a ordem natural das coisas e agora terão de acertar suas contas com a própria Morte.",
+      "popularity": 13.9801,
+      "poster_path": "/w2QfY0poYNieZ7Js8P0zaopzrbq.jpg",
+      "release_date": "2000-03-17",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.641,
+      "vote_count": 6928
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/oihWVx3imvRKujnGmSDYhfG1gI5.jpg",
+      "genre_ids": [
+        35,
+        27
+      ],
+      "id": 19908,
+      "title": "Zumbilândia",
+      "original_language": "en",
+      "original_title": "Zombieland",
+      "overview": "Um estudante tímido tentando chegar até sua família em Ohio, um cara durão armado tentando encontrar o último Twinkie e duas irmãs tentando encontrar um parque de diversões se unem para viajar através de uma América cheia de zumbis.",
+      "popularity": 13.882,
+      "poster_path": "/mXuFhb5U2FgVq8uu4k3luQVRwLK.jpg",
+      "release_date": "2009-10-02",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.26,
+      "vote_count": 13462
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/6RDgtEBzjuF7W25DVziXRABchpX.jpg",
+      "genre_ids": [
+        27
+      ],
+      "id": 109428,
+      "title": "A Morte do Demônio",
+      "original_language": "en",
+      "original_title": "Evil Dead",
+      "overview": "Um chalé abandonado. Uma antiga maldição. Um mal implacável. Os produtores originais se reúnem para apresentar uma genuinamente aterrorizante reinvenção de suas obras-primas de horror. Para ajudar Mia a se livrar das drogas, cinco amigos se isolam em um chalé na floresta. Quando descobrem o Livro dos Mortos, eles inconscientemente invocam demônios adormecidos. A partir deste acontecimento, os jovens, um após outro, vão sendo possuídos. Cabe a David, irmão de Mia, lutar pela sua sobrevivência e de sua irmã.",
+      "popularity": 13.7271,
+      "poster_path": "/7b2oD1oxUxdDft486Q7oPNPzMlf.jpg",
+      "release_date": "2013-04-05",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.662,
+      "vote_count": 5344
+    }
+  ],
+  "total_pages": 83,
+  "total_results": 1660
+}
