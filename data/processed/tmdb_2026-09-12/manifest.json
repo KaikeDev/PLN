@@ -68,6 +68,7 @@
     "metadata.jsonl": "939939b314693d52b2dcf16527f49d0f53236e82a98db3de022b2804256dc0d3",
     "report.md": "4d1ecd07e6032b4ea7b329d7cb53cd718c20fbf50d2d497f93beb776768b5540",
     "statistics.json": "50d8c076bab06682f4a1ed9126c7911d1dade2355023cec384c57748fe835cb3",
-    "stopwords_used.json": "051e5b04c288c0bef3ae7da83b1b13eb6b055cba054826b26007555e7c0297fb"
+    "stopwords_used.json": "051e5b04c288c0bef3ae7da83b1b13eb6b055cba054826b26007555e7c0297fb",
+    "07_bag_of_words.json": "e393887bf3edd49d5fb0a87ebfbf523b40fa63c9b30743098416b7103415fe92"
   }
 }

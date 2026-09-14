@@ -40,6 +40,7 @@ Campos principais das respostas de filmes:
 | `04_tokens.jsonl` → `tokens` | Lista de textos | Tokenização com pontuação; usa a expressão documentada no manifesto. |
 | `05_without_punctuation.jsonl` → `tokens` | Lista de textos | Mantém tokens com pelo menos uma letra ou dígito. |
 | `06_without_stopwords.jsonl` → `tokens` | Lista de textos | Aplica a lista versionada; conserva não, nem, nunca e sem. |
+| `07_bag_of_words.json` | Objeto JSON | Vetorização numélica Bag of Words (frequências de termos, vocabulário e vetores esparsos por filme). |
 | `metadata.jsonl` | Objeto por linha | `id`, `title`, `original_title`, `original_language`, `release_date`, `genre_ids`, `vote_average`, `vote_count`, `overview_missing`. |
 | `overview_missing` | Booleano | True quando a sinopse original é null, ausente, vazia ou só contém espaços. |
 | `stopwords_used.json` | Lista de textos | Lista efetivamente aplicada, normalizada e sem as exceções de negação. |
