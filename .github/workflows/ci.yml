@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: "3.14"
+          enable-cache: true
+      - name: Instalar dependências (sem o extra semantico)
+        run: uv sync --frozen
+      - name: Lint
+        run: uv run --frozen ruff check src tests
+      - name: Formatação
+        run: uv run --frozen ruff format --check src tests
+      - name: Tipos
+        run: uv run --frozen mypy
+      - name: Testes
+        run: uv run --frozen python -m unittest discover -s tests -v
+      - name: Integridade dos dados entregues
+        run: |
+          uv run --frozen python -m app.corpus verify --input ../data/processed/tmdb_2026-09-12
+          uv run --frozen python -m app.vectors verify --input ../data/vectors/tmdb_2026-09-12
+
+  frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Sintaxe do JavaScript
+        run: node --check frontend/script.js

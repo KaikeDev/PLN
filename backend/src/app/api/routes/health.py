@@ -1,13 +1,13 @@
 """Rotas de infraestrutura."""
-from __future__ import annotations
 
 from fastapi import APIRouter
+
+from app.api.schemas import Health
 
 router = APIRouter(tags=["infra"])
 
 
 @router.get("/saude")
-def saude() -> dict[str, str]:
-    """Healthcheck: confirma que o servidor subiu."""
-    return {"status": "ok"}
-
+def health() -> Health:
+    """Confirma que o servidor está no ar; não consulta o TMDB nem conta no limite de requisições."""
+    return Health()

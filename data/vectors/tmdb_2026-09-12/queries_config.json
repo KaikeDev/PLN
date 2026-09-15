@@ -1,0 +1,18 @@
+[
+  {
+    "id": "matrix_literal",
+    "text": "programador conectado a um sistema de computadores",
+    "relevant_ids": [
+      603
+    ],
+    "note": "Controle literal: todos os termos de conteúdo aparecem na sinopse coletada de Matrix."
+  },
+  {
+    "id": "matrix_simulacao",
+    "text": "filme sobre simulação da realidade",
+    "relevant_ids": [
+      603
+    ],
+    "note": "Caso da orientação do professor: “simulação” não aparece literalmente na sinopse coletada de Matrix."
+  }
+]

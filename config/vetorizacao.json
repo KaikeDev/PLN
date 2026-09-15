@@ -1,0 +1,14 @@
+{
+  "representations": [
+    {"name": "bow_sem_pontuacao", "method": "bow", "stage": "05_without_punctuation.jsonl"},
+    {"name": "bow_sem_stopwords", "method": "bow", "stage": "06_without_stopwords.jsonl"},
+    {"name": "tfidf_sem_pontuacao", "method": "tfidf", "stage": "05_without_punctuation.jsonl"},
+    {"name": "tfidf_sem_stopwords", "method": "tfidf", "stage": "06_without_stopwords.jsonl"}
+  ],
+  "min_df": 1,
+  "neighbors_k": 5,
+  "example_ids": [603, 13, 14],
+  "clusters": 4,
+  "top_terms": 10,
+  "random_state": 42
+}

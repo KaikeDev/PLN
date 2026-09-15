@@ -1,0 +1,64 @@
+{
+  "representations": [
+    {
+      "name": "bow_sem_pontuacao",
+      "method": "bow",
+      "stage": "05_without_punctuation.jsonl",
+      "model": null,
+      "revision": null
+    },
+    {
+      "name": "bow_sem_stopwords",
+      "method": "bow",
+      "stage": "06_without_stopwords.jsonl",
+      "model": null,
+      "revision": null
+    },
+    {
+      "name": "tfidf_sem_pontuacao",
+      "method": "tfidf",
+      "stage": "05_without_punctuation.jsonl",
+      "model": null,
+      "revision": null
+    },
+    {
+      "name": "tfidf_sem_stopwords",
+      "method": "tfidf",
+      "stage": "06_without_stopwords.jsonl",
+      "model": null,
+      "revision": null
+    },
+    {
+      "name": "word2vec_sem_stopwords",
+      "method": "word2vec",
+      "stage": "06_without_stopwords.jsonl",
+      "model": "pt-mteb/average_pt_nilc_word2vec_skip_s300",
+      "revision": "27facc2558330d2e9af54611734b94e957aa8301"
+    },
+    {
+      "name": "contextual_minilm",
+      "method": "contextual",
+      "stage": "02_clean.jsonl",
+      "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+    }
+  ],
+  "min_df": 1,
+  "neighbors_k": 5,
+  "example_ids": [
+    603,
+    13,
+    14
+  ],
+  "clusters": 4,
+  "top_terms": 10,
+  "random_state": 42,
+  "probe_words": [
+    "simulação",
+    "realidade",
+    "robô",
+    "fantasma",
+    "amor",
+    "guerra"
+  ]
+}

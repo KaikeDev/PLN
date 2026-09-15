@@ -1,33 +1,32 @@
-# Decisões da Etapa Prática 1
+# Decisões e limitações
+
+As decisões estão registradas, com contexto, alternativas e consequências, nas [ADRs](adr/README.md). Esta página resume o que cada uma implica para a entrega.
 
 ## Escopo orientado pelo professor
 
-Na orientação em vídeo de 31/08/2026, o professor pede representações sucessivas dos mesmos dados (00:00–00:46), comparação futura e vetorização (00:46–01:25), além de repositório navegável com dados e transformações localizáveis no README (01:38–02:15). Esta implementação entrega o corpus e as evidências; não afirma que a recomendação semântica esteja concluída.
+Na orientação em vídeo de 31/08/2026, o professor pede representações sucessivas dos mesmos dados (00:00–00:46), comparação futura e vetorização (00:46–01:25) e um repositório navegável, com dados e transformações localizáveis no README (01:38–02:15). A implementação entrega o corpus, as representações vetoriais e as evidências; não afirma que a recomendação semântica esteja concluída.
 
-## Amostra intencional
+## Resumo
 
-Selecionamos Drama (18), Comédia (35), Terror (27) e Ficção científica (878), cruzados com 1980–1999, 2000–2014 e 2015–2025. São duas páginas por recorte, ordenadas por popularidade, com pelo menos 50 votos e conteúdo adulto excluído. Os cortes e o limite de páginas são decisões de viabilidade da experiência, não exigências numéricas do professor. Incluímos o ID 603 como caso didático de Matrix. A amostra tem viés de popularidade e disponibilidade de metadados.
+| Tema | Decisão | ADR |
+|---|---|---|
+| Amostra | Quatro gêneros × três períodos, 2 páginas por popularidade, ≥ 50 votos, sem adulto, Matrix (603) como semente | [0014](adr/0014-amostragem-intencional.md) |
+| Transformações | Seis saídas com todos os IDs; acentos, números e negações preservados no corpus; sem stemming ou lematização por padrão | [0003](adr/0003-normalizacao-do-corpus-e-da-pesquisa.md) |
+| Reprodutibilidade | Pasta nova a cada execução, manifesto SHA-256, saída determinística com LF; a amostra salva é a referência | [0009](adr/0009-saidas-imutaveis-e-verificaveis.md), [0010](adr/0010-dados-versionados-no-git.md) |
+| Falhas de coleta | Timeout, até 3 retries com backoff para 429/5xx, intervalo entre chamadas; erros guardam só tipo e status | [0007](adr/0007-cliente-http-e-cache.md) |
+| Credencial e API | Só Bearer em cabeçalho, API em localhost, CORS restrito, limite de requisições | [0002](adr/0002-credencial-e-exposicao-da-api.md) |
+| Pesquisa auxiliar | Regras léxicas com limiares nomeados; título exato tem prioridade no modo automático | [0005](adr/0005-pesquisa-por-regras-lexicas.md), [0006](adr/0006-prioridade-de-titulo-exato.md) |
+| Vetorização | Tokens da Etapa 1, cosseno com norma L2, K-Means com k = 4, SVD 2D, modelos com revisão fixa | [0011](adr/0011-formatos-e-modelos-seguros.md), [0012](adr/0012-parametros-do-experimento-vetorial.md) |
+| Código | Camadas com portas e adaptadores; identificadores em inglês e contrato em português; ruff, mypy e CI | [0004](adr/0004-arquitetura-em-camadas.md), [0008](adr/0008-idioma-do-codigo-e-do-contrato.md), [0013](adr/0013-ferramentas-de-qualidade.md) |
 
-## Transformações comparáveis
+## Limitações
 
-As seis saídas mantêm todos os IDs. A limpeza e o `casefold` não substituem os textos originais. Acentos são preservados no corpus; a normalização sem acentos do extrator de perguntas é um fluxo auxiliar diferente. A lista de stopwords é conservadora e explicitamente versionada, sem pretensão de cobrir todas as palavras funcionais do português. Negação e números são conservados. Títulos não são filtrados.
-
-Não há reconhecimento automático de nomes próprios. Por isso, preservamos a versão original e não aplicamos stemming ou lematização como padrão. A versão em minúsculas já remove uma pista de identificação de nomes. As variantes morfológicas podem ser acrescentadas separadamente, nunca aplicando stemming sobre os lemas ou usando a redução lexical como prova de melhor recuperação.
-
-## Reprodutibilidade e falhas
-
-A coleta online é variável; a amostra salva é a referência. Cada chamada bem-sucedida guarda JSON e hash. Erros guardam somente tipo e status, sem URLs com credenciais nem mensagens potencialmente secretas. O transporte possui timeout e até três retries com backoff para 429 e erros transitórios. A coleta aplica intervalo mínimo entre chamadas. Não há retomada automática: falhas parciais ficam no manifesto e a próxima execução usa outra pasta.
-
-O processamento offline conserva resultados idênticos com os mesmos textos e regras. Horário e identidade da execução ficam em manifesto separado. No caso de interrupção durante a gravação do processamento, a ausência de manifesto completo impede validar a pasta como uma entrega íntegra; deve-se usar outra pasta na nova execução.
-
-## Consulta auxiliar por regras
-
-O serviço de descoberta e a rota `/pesquisa` foram conectados para remover a chamada a uma função inexistente. Em modo automático, títulos localizados/originais com correspondência exata têm prioridade sobre gatilhos de gênero. O modo explícito de título resolve ambiguidades restantes. Títulos alternativos e perguntas com contexto adicional ainda podem não ser reconhecidos.
-
-A consulta usa regras: nota mínima 7 e 100 votos para boa avaliação, 8 e 200 para expressões mais fortes; recência de dez anos e antiguidade de 25. O código não deduz premiações a partir da nota. Uma janela local evita tratar algumas expressões de qualidade negadas como preferência positiva; não interpreta toda a semântica da negação. O tratamento de gêneros continua por janela de três tokens.
-
-O limite inicial do ano explícito continua inclusivo: “depois de 2015” é tratado como a partir de 01/01/2015, mantendo a convenção do protótipo; “antes de 2020” termina em 31/12/2019. Essa convenção deve ser refinada em uma avaliação futura da linguagem. Ambos os limites são considerados, e um ano informado separadamente é intersectado com o período extraído.
+- A amostra tem viés de popularidade e de disponibilidade de metadados. O parâmetro `pt-BR` pede tradução, mas não comprova o idioma de cada sinopse.
+- Não há reconhecimento automático de nomes próprios. A versão em minúsculas remove uma pista de identificação de nomes, por isso a versão original é preservada.
+- Não há retomada automática da coleta: falhas parciais ficam no manifesto e a próxima execução usa outra pasta. Uma interrupção durante o processamento deixa a pasta sem manifesto completo, portanto inválida como entrega.
+- A pesquisa auxiliar não interpreta toda a semântica da negação, títulos alternativos nem perguntas com contexto adicional. "Depois de X" é inclusivo por convenção do protótipo, a refinar em avaliação futura.
+- As consultas anotadas da Etapa 2 são poucas e a lista de relevantes é parcial.
 
 ## Próximas experiências
 
-Comparar representações com as mesmas consultas e filmes relevantes anotados. Analisar recuperação de Matrix por temas, documentando a ausência literal de “simulação” na sinopse obtida. Selecionar a técnica pela qualidade da recuperação, não somente por redução de tokens ou aumento de TTR. Não foram incorporadas bases externas, avaliações textuais de usuários nem modelos treinados nesta etapa.
+Comparar representações com mais consultas e filmes relevantes anotados e selecionar a técnica pela qualidade da recuperação, não só pela redução de tokens ou pelo aumento de TTR. Não foram incorporadas bases externas, avaliações textuais de usuários nem modelos treinados pela equipe.

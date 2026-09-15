@@ -1,8 +1,10 @@
-// Tela simples para testar a API de Filmes (TMDB) sem depender do /docs.
-// Ajuste API_BASE se o backend estiver rodando em outra porta/host.
-const API_BASE = "http://127.0.0.1:8000";
+"use strict";
+
+const API_BASE = document.querySelector('meta[name="api-base"]').content.replace(/\/$/, "");
 const TMDB_IMAGE_BASE = "https://image.tmdb.org/t/p/w200";
-const SEM_POSTER = "https://placehold.co/200x300?text=Sem+imagem";
+const SEM_POSTER = "sem-poster.svg";
+const POSTER_PATH = /^\/[\w.-]+$/;
+const ELENCO_EXIBIDO = 6;
 
 const elStatus = document.getElementById("status");
 const elForm = document.getElementById("form-busca");
@@ -15,18 +17,42 @@ const elModal = document.getElementById("modal");
 const elModalCorpo = document.getElementById("modal-corpo");
 const elFecharModal = document.getElementById("fechar-modal");
 
-// TMDB e' um servico de terceiros: nunca confiar em titulo/sinopse/nomes
-// como HTML seguro antes de jogar no DOM.
-function escaparHtml(texto) {
-  const div = document.createElement("div");
-  div.textContent = texto ?? "";
-  return div.innerHTML;
+function elemento(tag, { classe, texto, atributos = {} } = {}, filhos = []) {
+  const el = document.createElement(tag);
+  if (classe) el.className = classe;
+  if (texto !== undefined) el.textContent = texto;
+  for (const [nome, valor] of Object.entries(atributos)) el.setAttribute(nome, valor);
+  el.append(...filhos);
+  return el;
+}
+
+function urlPoster(caminho) {
+  return typeof caminho === "string" && POSTER_PATH.test(caminho) ? `${TMDB_IMAGE_BASE}${caminho}` : SEM_POSTER;
+}
+
+function anoDe(data) {
+  const ano = String(data ?? "").slice(0, 4);
+  return /^\d{4}$/.test(ano) ? ano : "?";
+}
+
+function nota(valor) {
+  const numero = Number(valor);
+  return Number.isFinite(numero) ? numero.toFixed(1) : "0.0";
+}
+
+async function obterJson(caminho, mensagemPadrao) {
+  const resposta = await fetch(`${API_BASE}${caminho}`, { headers: { accept: "application/json" } });
+  const dados = await resposta.json().catch(() => ({}));
+  if (!resposta.ok) {
+    const detalhe = typeof dados.detail === "string" ? dados.detail : mensagemPadrao;
+    throw new Error(detalhe);
+  }
+  return dados;
 }
 
 async function verificarSaude() {
   try {
-    const resposta = await fetch(`${API_BASE}/saude`);
-    if (!resposta.ok) throw new Error();
+    await obterJson("/saude", "offline");
     elStatus.textContent = "servidor online";
     elStatus.className = "status status--ok";
   } catch {
@@ -35,114 +61,92 @@ async function verificarSaude() {
   }
 }
 
-async function buscarFilmes(titulo, ano) {
-  const params = new URLSearchParams({ q: titulo, modo: elModo.value });
+async function buscarFilmes(texto, ano, modo) {
+  const params = new URLSearchParams({ q: texto, modo });
   if (ano) params.set("ano", ano);
-
-  const resposta = await fetch(`${API_BASE}/pesquisa?${params}`);
-  const dados = await resposta.json();
-
-  if (!resposta.ok) {
-    throw new Error(dados.detail || "Falha ao buscar filmes.");
-  }
-  return dados.resultados;
+  const dados = await obterJson(`/pesquisa?${params}`, "Falha ao buscar filmes.");
+  return Array.isArray(dados.resultados) ? dados.resultados : [];
 }
 
-async function buscarDetalhes(filmeId) {
-  const resposta = await fetch(`${API_BASE}/filmes/${filmeId}`);
-  const dados = await resposta.json();
+function buscarDetalhes(filmeId) {
+  return obterJson(`/filmes/${encodeURIComponent(filmeId)}`, "Falha ao carregar o filme.");
+}
 
-  if (!resposta.ok) {
-    throw new Error(dados.detail || "Falha ao carregar o filme.");
-  }
-  return dados;
+function criarCard(filme) {
+  const titulo = filme.title ?? "Sem título";
+  const card = elemento("article", { classe: "card", atributos: { tabindex: "0" } }, [
+    elemento("img", { atributos: { src: urlPoster(filme.poster_path), alt: `Pôster de ${titulo}`, loading: "lazy" } }),
+    elemento("div", { classe: "card__corpo" }, [
+      elemento("p", { classe: "card__titulo", texto: titulo }),
+      elemento("p", { classe: "card__meta", texto: `${anoDe(filme.release_date)} · ⭐ ${nota(filme.vote_average)}` }),
+    ]),
+  ]);
+  const abrir = () => abrirDetalhes(filme.id);
+  card.addEventListener("click", abrir);
+  card.addEventListener("keydown", (evento) => {
+    if (evento.key === "Enter" || evento.key === " ") {
+      evento.preventDefault();
+      abrir();
+    }
+  });
+  return card;
 }
 
 function renderizarResultados(filmes) {
-  elResultados.innerHTML = "";
+  elResultados.replaceChildren(...filmes.filter((filme) => Number.isInteger(filme.id)).map(criarCard));
+  if (filmes.length === 0) elMensagem.textContent = "Nenhum filme encontrado.";
+}
 
-  if (filmes.length === 0) {
-    elMensagem.textContent = "Nenhum filme encontrado.";
-    return;
+function criarDetalhe(filme) {
+  const titulo = filme.title ?? "Sem título";
+  const generos = (filme.genres ?? []).map((genero) => elemento("span", { classe: "tag", texto: genero.name }));
+  const elenco = (filme.credits?.cast ?? []).slice(0, ELENCO_EXIBIDO).map((pessoa) => pessoa.name).join(", ");
+  const info = elemento("div", { classe: "detalhe__info" }, [
+    elemento("h2", { texto: `${titulo} (${anoDe(filme.release_date)})` }),
+    elemento("div", { classe: "detalhe__generos" }, generos),
+    elemento("p", { texto: filme.overview || "Sem sinopse disponível." }),
+  ]);
+  if (elenco) {
+    info.append(elemento("p", { classe: "elenco" }, [elemento("strong", { texto: "Elenco:" }), ` ${elenco}`]));
   }
-
-  for (const filme of filmes) {
-    const card = document.createElement("article");
-    card.className = "card";
-    card.addEventListener("click", () => abrirDetalhes(filme.id));
-
-    const poster = filme.poster_path
-      ? `${TMDB_IMAGE_BASE}${filme.poster_path}`
-      : SEM_POSTER;
-    const ano = (filme.release_date || "").slice(0, 4) || "?";
-
-    const titulo = escaparHtml(filme.title);
-    card.innerHTML = `
-      <img src="${poster}" alt="Poster de ${titulo}" loading="lazy" />
-      <div class="card__corpo">
-        <p class="card__titulo">${titulo}</p>
-        <p class="card__meta">${ano} · ⭐ ${(filme.vote_average ?? 0).toFixed(1)}</p>
-      </div>
-    `;
-    elResultados.appendChild(card);
-  }
+  return elemento("div", { classe: "detalhe" }, [
+    elemento("img", { atributos: { src: urlPoster(filme.poster_path), alt: `Pôster de ${titulo}` } }),
+    info,
+  ]);
 }
 
 async function abrirDetalhes(filmeId) {
-  elModalCorpo.innerHTML = "<p>Carregando...</p>";
+  elModalCorpo.replaceChildren(elemento("p", { texto: "Carregando..." }));
   elModal.classList.remove("oculto");
-
+  elFecharModal.focus();
   try {
-    const filme = await buscarDetalhes(filmeId);
-    const poster = filme.poster_path
-      ? `${TMDB_IMAGE_BASE}${filme.poster_path}`
-      : SEM_POSTER;
-    const generos = (filme.genres || [])
-      .map((g) => `<span class="tag">${escaparHtml(g.name)}</span>`)
-      .join("");
-    const elenco = (filme.credits?.cast || [])
-      .slice(0, 6)
-      .map((p) => escaparHtml(p.name))
-      .join(", ");
-    const titulo = escaparHtml(filme.title);
-    const overview = escaparHtml(filme.overview) || "Sem sinopse disponivel.";
-
-    elModalCorpo.innerHTML = `
-      <div class="detalhe">
-        <img src="${poster}" alt="Poster de ${titulo}" />
-        <div class="detalhe__info">
-          <h2>${titulo} (${(filme.release_date || "").slice(0, 4) || "?"})</h2>
-          <div class="detalhe__generos">${generos}</div>
-          <p>${overview}</p>
-          ${elenco ? `<p class="elenco"><strong>Elenco:</strong> ${elenco}</p>` : ""}
-        </div>
-      </div>
-    `;
+    elModalCorpo.replaceChildren(criarDetalhe(await buscarDetalhes(filmeId)));
   } catch (erro) {
-    elModalCorpo.innerHTML = `<p class="mensagem">${escaparHtml(erro.message)}</p>`;
+    elModalCorpo.replaceChildren(elemento("p", { classe: "mensagem", texto: erro.message }));
   }
+}
+
+function fecharModal() {
+  elModal.classList.add("oculto");
 }
 
 elForm.addEventListener("submit", async (evento) => {
   evento.preventDefault();
   elMensagem.textContent = "";
-  elResultados.innerHTML = "";
-
-  const titulo = elTitulo.value.trim();
-  const ano = elAno.value.trim();
-
+  elResultados.replaceChildren();
   try {
-    const filmes = await buscarFilmes(titulo, ano);
-    renderizarResultados(filmes);
+    renderizarResultados(await buscarFilmes(elTitulo.value.trim(), elAno.value.trim(), elModo.value));
   } catch (erro) {
     elMensagem.textContent = erro.message;
   }
 });
 
-elFecharModal.addEventListener("click", () => elModal.classList.add("oculto"));
+elFecharModal.addEventListener("click", fecharModal);
 elModal.addEventListener("click", (evento) => {
-  if (evento.target === elModal) elModal.classList.add("oculto");
+  if (evento.target === elModal) fecharModal();
+});
+document.addEventListener("keydown", (evento) => {
+  if (evento.key === "Escape") fecharModal();
 });
 
 verificarSaude();
-

@@ -69,7 +69,7 @@ main {
   width: 140px;
 }
 
-input, button {
+input, select, button {
   font: inherit;
   padding: 0.6rem 0.8rem;
   border-radius: 8px;
@@ -213,5 +213,7 @@ button:hover {
   color: var(--cor-texto-fraco);
 }
 
-
-#modo-busca { font: inherit; padding: .6rem; border: 1px solid #777; border-radius: .3rem; }
+.card:focus-visible {
+  outline: 2px solid var(--cor-destaque);
+  outline-offset: 2px;
+}

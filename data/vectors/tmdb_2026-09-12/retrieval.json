@@ -1,0 +1,748 @@
+{
+  "bow_sem_pontuacao": {
+    "k": 5,
+    "mean_reciprocal_rank": 0.507247,
+    "hit_rate_at_k": 0.5,
+    "queries": [
+      {
+        "id": "matrix_literal",
+        "text": "programador conectado a um sistema de computadores",
+        "note": "Controle literal: todos os termos de conteúdo aparecem na sinopse coletada de Matrix.",
+        "tokens": [
+          "programador",
+          "conectado",
+          "a",
+          "um",
+          "sistema",
+          "de",
+          "computadores"
+        ],
+        "out_of_vocabulary": [],
+        "null_vector": false,
+        "retrieved": 424,
+        "relevant": [
+          {
+            "id": 603,
+            "title": "Matrix",
+            "rank": 1,
+            "explanation": [
+              "a",
+              "de",
+              "um",
+              "sistema",
+              "computadores"
+            ]
+          }
+        ],
+        "reciprocal_rank": 1.0,
+        "hit_at_k": true,
+        "top": [
+          {
+            "rank": 1,
+            "id": 603,
+            "title": "Matrix",
+            "score": 0.461375
+          },
+          {
+            "rank": 2,
+            "id": 256274,
+            "title": "Assim na Terra Como no Inferno",
+            "score": 0.449089
+          },
+          {
+            "rank": 3,
+            "id": 45612,
+            "title": "Contra o Tempo",
+            "score": 0.428571
+          },
+          {
+            "rank": 4,
+            "id": 617126,
+            "title": "Quarteto Fantástico: Primeiros Passos",
+            "score": 0.425243
+          },
+          {
+            "rank": 5,
+            "id": 563,
+            "title": "Tropas Estelares",
+            "score": 0.421332
+          }
+        ]
+      },
+      {
+        "id": "matrix_simulacao",
+        "text": "filme sobre simulação da realidade",
+        "note": "Caso da orientação do professor: “simulação” não aparece literalmente na sinopse coletada de Matrix.",
+        "tokens": [
+          "filme",
+          "sobre",
+          "simulação",
+          "da",
+          "realidade"
+        ],
+        "out_of_vocabulary": [
+          "simulação"
+        ],
+        "null_vector": false,
+        "retrieved": 193,
+        "relevant": [
+          {
+            "id": 603,
+            "title": "Matrix",
+            "rank": 69,
+            "explanation": [
+              "da",
+              "realidade"
+            ]
+          }
+        ],
+        "reciprocal_rank": 0.014493,
+        "hit_at_k": false,
+        "top": [
+          {
+            "rank": 1,
+            "id": 1228246,
+            "title": "Five Nights at Freddy's 2",
+            "score": 0.234146
+          },
+          {
+            "rank": 2,
+            "id": 493922,
+            "title": "Hereditário",
+            "score": 0.220113
+          },
+          {
+            "rank": 3,
+            "id": 460458,
+            "title": "Resident Evil: Bem-Vindo a Raccoon City",
+            "score": 0.185695
+          },
+          {
+            "rank": 4,
+            "id": 99861,
+            "title": "Vingadores: Era de Ultron",
+            "score": 0.172062
+          },
+          {
+            "rank": 5,
+            "id": 746036,
+            "title": "O Dublê",
+            "score": 0.169031
+          }
+        ]
+      }
+    ]
+  },
+  "bow_sem_stopwords": {
+    "k": 5,
+    "mean_reciprocal_rank": 0.538462,
+    "hit_rate_at_k": 0.5,
+    "queries": [
+      {
+        "id": "matrix_literal",
+        "text": "programador conectado a um sistema de computadores",
+        "note": "Controle literal: todos os termos de conteúdo aparecem na sinopse coletada de Matrix.",
+        "tokens": [
+          "programador",
+          "conectado",
+          "sistema",
+          "computadores"
+        ],
+        "out_of_vocabulary": [],
+        "null_vector": false,
+        "retrieved": 4,
+        "relevant": [
+          {
+            "id": 603,
+            "title": "Matrix",
+            "rank": 1,
+            "explanation": [
+              "sistema",
+              "computadores",
+              "conectado",
+              "programador"
+            ]
+          }
+        ],
+        "reciprocal_rank": 1.0,
+        "hit_at_k": true,
+        "top": [
+          {
+            "rank": 1,
+            "id": 603,
+            "title": "Matrix",
+            "score": 0.35007
+          },
+          {
+            "rank": 2,
+            "id": 99861,
+            "title": "Vingadores: Era de Ultron",
+            "score": 0.089803
+          },
+          {
+            "rank": 3,
+            "id": 8413,
+            "title": "O Enigma do Horizonte",
+            "score": 0.087039
+          },
+          {
+            "rank": 4,
+            "id": 74997,
+            "title": "A Centopéia Humana 2",
+            "score": 0.071429
+          }
+        ]
+      },
+      {
+        "id": "matrix_simulacao",
+        "text": "filme sobre simulação da realidade",
+        "note": "Caso da orientação do professor: “simulação” não aparece literalmente na sinopse coletada de Matrix.",
+        "tokens": [
+          "filme",
+          "simulação",
+          "realidade"
+        ],
+        "out_of_vocabulary": [
+          "simulação"
+        ],
+        "null_vector": false,
+        "retrieved": 16,
+        "relevant": [
+          {
+            "id": 603,
+            "title": "Matrix",
+            "rank": 13,
+            "explanation": [
+              "realidade"
+            ]
+          }
+        ],
+        "reciprocal_rank": 0.076923,
+        "hit_at_k": false,
+        "top": [
+          {
+            "rank": 1,
+            "id": 746036,
+            "title": "O Dublê",
+            "score": 0.333333
+          },
+          {
+            "rank": 2,
+            "id": 1234731,
+            "title": "Anaconda",
+            "score": 0.242536
+          },
+          {
+            "rank": 3,
+            "id": 8689,
+            "title": "Holocausto Canibal",
+            "score": 0.229416
+          },
+          {
+            "rank": 4,
+            "id": 81774,
+            "title": "A Iniciação",
+            "score": 0.196116
+          },
+          {
+            "rank": 5,
+            "id": 73861,
+            "title": "A Serbian Film - Terror sem Limites",
+            "score": 0.141421
+          }
+        ]
+      }
+    ]
+  },
+  "tfidf_sem_pontuacao": {
+    "k": 5,
+    "mean_reciprocal_rank": 0.527778,
+    "hit_rate_at_k": 0.5,
+    "queries": [
+      {
+        "id": "matrix_literal",
+        "text": "programador conectado a um sistema de computadores",
+        "note": "Controle literal: todos os termos de conteúdo aparecem na sinopse coletada de Matrix.",
+        "tokens": [
+          "programador",
+          "conectado",
+          "a",
+          "um",
+          "sistema",
+          "de",
+          "computadores"
+        ],
+        "out_of_vocabulary": [],
+        "null_vector": false,
+        "retrieved": 424,
+        "relevant": [
+          {
+            "id": 603,
+            "title": "Matrix",
+            "rank": 1,
+            "explanation": [
+              "sistema",
+              "computadores",
+              "conectado",
+              "programador",
+              "a"
+            ]
+          }
+        ],
+        "reciprocal_rank": 1.0,
+        "hit_at_k": true,
+        "top": [
+          {
+            "rank": 1,
+            "id": 603,
+            "title": "Matrix",
+            "score": 0.375812
+          },
+          {
+            "rank": 2,
+            "id": 99861,
+            "title": "Vingadores: Era de Ultron",
+            "score": 0.093367
+          },
+          {
+            "rank": 3,
+            "id": 8413,
+            "title": "O Enigma do Horizonte",
+            "score": 0.087275
+          },
+          {
+            "rank": 4,
+            "id": 74997,
+            "title": "A Centopéia Humana 2",
+            "score": 0.071793
+          },
+          {
+            "rank": 5,
+            "id": 256274,
+            "title": "Assim na Terra Como no Inferno",
+            "score": 0.042023
+          }
+        ]
+      },
+      {
+        "id": "matrix_simulacao",
+        "text": "filme sobre simulação da realidade",
+        "note": "Caso da orientação do professor: “simulação” não aparece literalmente na sinopse coletada de Matrix.",
+        "tokens": [
+          "filme",
+          "sobre",
+          "simulação",
+          "da",
+          "realidade"
+        ],
+        "out_of_vocabulary": [
+          "simulação"
+        ],
+        "null_vector": false,
+        "retrieved": 193,
+        "relevant": [
+          {
+            "id": 603,
+            "title": "Matrix",
+            "rank": 18,
+            "explanation": [
+              "realidade",
+              "da"
+            ]
+          }
+        ],
+        "reciprocal_rank": 0.055556,
+        "hit_at_k": false,
+        "top": [
+          {
+            "rank": 1,
+            "id": 746036,
+            "title": "O Dublê",
+            "score": 0.226661
+          },
+          {
+            "rank": 2,
+            "id": 1234731,
+            "title": "Anaconda",
+            "score": 0.173851
+          },
+          {
+            "rank": 3,
+            "id": 299536,
+            "title": "Vingadores: Guerra Infinita",
+            "score": 0.173348
+          },
+          {
+            "rank": 4,
+            "id": 8689,
+            "title": "Holocausto Canibal",
+            "score": 0.155855
+          },
+          {
+            "rank": 5,
+            "id": 1228246,
+            "title": "Five Nights at Freddy's 2",
+            "score": 0.150056
+          }
+        ]
+      }
+    ]
+  },
+  "tfidf_sem_stopwords": {
+    "k": 5,
+    "mean_reciprocal_rank": 0.545454,
+    "hit_rate_at_k": 0.5,
+    "queries": [
+      {
+        "id": "matrix_literal",
+        "text": "programador conectado a um sistema de computadores",
+        "note": "Controle literal: todos os termos de conteúdo aparecem na sinopse coletada de Matrix.",
+        "tokens": [
+          "programador",
+          "conectado",
+          "sistema",
+          "computadores"
+        ],
+        "out_of_vocabulary": [],
+        "null_vector": false,
+        "retrieved": 4,
+        "relevant": [
+          {
+            "id": 603,
+            "title": "Matrix",
+            "rank": 1,
+            "explanation": [
+              "sistema",
+              "computadores",
+              "conectado",
+              "programador"
+            ]
+          }
+        ],
+        "reciprocal_rank": 1.0,
+        "hit_at_k": true,
+        "top": [
+          {
+            "rank": 1,
+            "id": 603,
+            "title": "Matrix",
+            "score": 0.377037
+          },
+          {
+            "rank": 2,
+            "id": 99861,
+            "title": "Vingadores: Era de Ultron",
+            "score": 0.085064
+          },
+          {
+            "rank": 3,
+            "id": 8413,
+            "title": "O Enigma do Horizonte",
+            "score": 0.079079
+          },
+          {
+            "rank": 4,
+            "id": 74997,
+            "title": "A Centopéia Humana 2",
+            "score": 0.059152
+          }
+        ]
+      },
+      {
+        "id": "matrix_simulacao",
+        "text": "filme sobre simulação da realidade",
+        "note": "Caso da orientação do professor: “simulação” não aparece literalmente na sinopse coletada de Matrix.",
+        "tokens": [
+          "filme",
+          "simulação",
+          "realidade"
+        ],
+        "out_of_vocabulary": [
+          "simulação"
+        ],
+        "null_vector": false,
+        "retrieved": 16,
+        "relevant": [
+          {
+            "id": 603,
+            "title": "Matrix",
+            "rank": 11,
+            "explanation": [
+              "realidade"
+            ]
+          }
+        ],
+        "reciprocal_rank": 0.090909,
+        "hit_at_k": false,
+        "top": [
+          {
+            "rank": 1,
+            "id": 746036,
+            "title": "O Dublê",
+            "score": 0.283958
+          },
+          {
+            "rank": 2,
+            "id": 1234731,
+            "title": "Anaconda",
+            "score": 0.198359
+          },
+          {
+            "rank": 3,
+            "id": 8689,
+            "title": "Holocausto Canibal",
+            "score": 0.192765
+          },
+          {
+            "rank": 4,
+            "id": 81774,
+            "title": "A Iniciação",
+            "score": 0.162469
+          },
+          {
+            "rank": 5,
+            "id": 550988,
+            "title": "Free Guy: Assumindo o Controle",
+            "score": 0.139075
+          }
+        ]
+      }
+    ]
+  },
+  "word2vec_sem_stopwords": {
+    "k": 5,
+    "mean_reciprocal_rank": 0.6,
+    "hit_rate_at_k": 1.0,
+    "queries": [
+      {
+        "id": "matrix_literal",
+        "text": "programador conectado a um sistema de computadores",
+        "note": "Controle literal: todos os termos de conteúdo aparecem na sinopse coletada de Matrix.",
+        "tokens": [
+          "programador",
+          "conectado",
+          "sistema",
+          "computadores"
+        ],
+        "out_of_vocabulary": [],
+        "null_vector": false,
+        "retrieved": 428,
+        "relevant": [
+          {
+            "id": 603,
+            "title": "Matrix",
+            "rank": 1,
+            "explanation": [
+              "conectado",
+              "sistema",
+              "programador",
+              "computadores"
+            ]
+          }
+        ],
+        "reciprocal_rank": 1.0,
+        "hit_at_k": true,
+        "top": [
+          {
+            "rank": 1,
+            "id": 603,
+            "title": "Matrix",
+            "score": 0.573211
+          },
+          {
+            "rank": 2,
+            "id": 2048,
+            "title": "Eu, Robô",
+            "score": 0.455313
+          },
+          {
+            "rank": 3,
+            "id": 205596,
+            "title": "O Jogo da Imitação",
+            "score": 0.428389
+          },
+          {
+            "rank": 4,
+            "id": 39254,
+            "title": "Gigantes de Aço",
+            "score": 0.419314
+          },
+          {
+            "rank": 5,
+            "id": 9426,
+            "title": "A Mosca",
+            "score": 0.409846
+          }
+        ]
+      },
+      {
+        "id": "matrix_simulacao",
+        "text": "filme sobre simulação da realidade",
+        "note": "Caso da orientação do professor: “simulação” não aparece literalmente na sinopse coletada de Matrix.",
+        "tokens": [
+          "filme",
+          "simulação",
+          "realidade"
+        ],
+        "out_of_vocabulary": [],
+        "null_vector": false,
+        "retrieved": 428,
+        "relevant": [
+          {
+            "id": 603,
+            "title": "Matrix",
+            "rank": 5,
+            "explanation": [
+              "realidade",
+              "filme ≈ matrix",
+              "simulação ≈ artificial"
+            ]
+          }
+        ],
+        "reciprocal_rank": 0.2,
+        "hit_at_k": true,
+        "top": [
+          {
+            "rank": 1,
+            "id": 550988,
+            "title": "Free Guy: Assumindo o Controle",
+            "score": 0.565299
+          },
+          {
+            "rank": 2,
+            "id": 1234731,
+            "title": "Anaconda",
+            "score": 0.540319
+          },
+          {
+            "rank": 3,
+            "id": 746036,
+            "title": "O Dublê",
+            "score": 0.539957
+          },
+          {
+            "rank": 4,
+            "id": 73861,
+            "title": "A Serbian Film - Terror sem Limites",
+            "score": 0.53377
+          },
+          {
+            "rank": 5,
+            "id": 603,
+            "title": "Matrix",
+            "score": 0.525917
+          }
+        ]
+      }
+    ]
+  },
+  "contextual_minilm": {
+    "k": 5,
+    "mean_reciprocal_rank": 0.75,
+    "hit_rate_at_k": 1.0,
+    "queries": [
+      {
+        "id": "matrix_literal",
+        "text": "programador conectado a um sistema de computadores",
+        "note": "Controle literal: todos os termos de conteúdo aparecem na sinopse coletada de Matrix.",
+        "tokens": [],
+        "out_of_vocabulary": [],
+        "null_vector": false,
+        "retrieved": 371,
+        "relevant": [
+          {
+            "id": 603,
+            "title": "Matrix",
+            "rank": 1,
+            "explanation": []
+          }
+        ],
+        "reciprocal_rank": 1.0,
+        "hit_at_k": true,
+        "top": [
+          {
+            "rank": 1,
+            "id": 603,
+            "title": "Matrix",
+            "score": 0.370904
+          },
+          {
+            "rank": 2,
+            "id": 9323,
+            "title": "Ghost in the Shell: O Fantasma do Futuro",
+            "score": 0.351617
+          },
+          {
+            "rank": 3,
+            "id": 205596,
+            "title": "O Jogo da Imitação",
+            "score": 0.326145
+          },
+          {
+            "rank": 4,
+            "id": 218,
+            "title": "O Exterminador do Futuro",
+            "score": 0.325345
+          },
+          {
+            "rank": 5,
+            "id": 489,
+            "title": "Gênio Indomável",
+            "score": 0.309162
+          }
+        ]
+      },
+      {
+        "id": "matrix_simulacao",
+        "text": "filme sobre simulação da realidade",
+        "note": "Caso da orientação do professor: “simulação” não aparece literalmente na sinopse coletada de Matrix.",
+        "tokens": [],
+        "out_of_vocabulary": [],
+        "null_vector": false,
+        "retrieved": 425,
+        "relevant": [
+          {
+            "id": 603,
+            "title": "Matrix",
+            "rank": 2,
+            "explanation": []
+          }
+        ],
+        "reciprocal_rank": 0.5,
+        "hit_at_k": true,
+        "top": [
+          {
+            "rank": 1,
+            "id": 550988,
+            "title": "Free Guy: Assumindo o Controle",
+            "score": 0.533239
+          },
+          {
+            "rank": 2,
+            "id": 603,
+            "title": "Matrix",
+            "score": 0.483634
+          },
+          {
+            "rank": 3,
+            "id": 82507,
+            "title": "A Entidade",
+            "score": 0.423297
+          },
+          {
+            "rank": 4,
+            "id": 2667,
+            "title": "A Bruxa de Blair",
+            "score": 0.404345
+          },
+          {
+            "rank": 5,
+            "id": 565,
+            "title": "O Chamado",
+            "score": 0.398264
+          }
+        ]
+      }
+    ]
+  }
+}

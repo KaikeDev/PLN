@@ -1,15 +1,23 @@
 [project]
 name = "pln-main"
 version = "0.1.0"
-description = "Coleta e preparação rastreável de sinopses do TMDB"
+description = "Coleta, preparação e vetorização rastreáveis de sinopses do TMDB"
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
     "fastapi>=0.115",
+    "numpy>=2.3",
     "pydantic>=2.7",
-    "python-dotenv>=1.0",
+    "pydantic-settings>=2.4",
     "requests>=2.32",
+    "scikit-learn>=1.7",
+    "scipy>=1.16",
     "uvicorn[standard]>=0.30",
+]
+
+[project.optional-dependencies]
+semantico = [
+    "sentence-transformers>=5",
 ]
 
 [build-system]
@@ -19,3 +27,36 @@ build-backend = "uv_build"
 [tool.uv.build-backend]
 module-name = "app"
 
+[dependency-groups]
+dev = [
+    "httpx>=0.27",
+    "mypy>=1.11",
+    "ruff>=0.6",
+]
+
+[tool.ruff]
+line-length = 140
+target-version = "py314"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "S", "SIM", "RUF"]
+ignore = ["E501", "RUF001", "RUF002", "RUF003"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S101", "S105", "S106"]
+"src/app/corpus/transform.py" = ["S105"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["app", "tests"]
+
+[tool.mypy]
+plugins = ["pydantic.mypy"]
+python_version = "3.14"
+files = ["src"]
+mypy_path = "src"
+warn_unused_ignores = true
+warn_redundant_casts = true
+no_implicit_optional = true
+check_untyped_defs = true
+ignore_missing_imports = true

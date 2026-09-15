@@ -1,1 +1,1 @@
-
+"""Rotas agrupadas por assunto."""

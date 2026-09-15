@@ -1,0 +1,932 @@
+{
+  "bow_sem_pontuacao": {
+    "algorithm": "KMeans (k-means++, n_init=10) sobre linhas com norma L2",
+    "k": 4,
+    "labeled_documents": 378,
+    "adjusted_rand_index": 0.003363,
+    "normalized_mutual_information": 0.012615,
+    "purity": 0.301587,
+    "silhouette_cosine": 0.032672,
+    "clusters": [
+      {
+        "cluster": 0,
+        "size": 120,
+        "descriptive_terms": [
+          "ser",
+          "grupo",
+          "não",
+          "anos",
+          "jovem",
+          "depois",
+          "amigos",
+          "está",
+          "mundo",
+          "todos"
+        ],
+        "genres": {
+          "Comédia": 43,
+          "Drama": 34,
+          "Terror": 34,
+          "Ficção científica": 27
+        },
+        "closest_to_centroid": [
+          {
+            "id": 55779,
+            "title": "Premonição 5"
+          },
+          {
+            "id": 256274,
+            "title": "Assim na Terra Como no Inferno"
+          },
+          {
+            "id": 530385,
+            "title": "Midsommar: O Mal Não Espera a Noite"
+          }
+        ]
+      },
+      {
+        "cluster": 1,
+        "size": 110,
+        "descriptive_terms": [
+          "ser",
+          "está",
+          "agora",
+          "não",
+          "mundo",
+          "anos",
+          "dois",
+          "planeta",
+          "após",
+          "amigos"
+        ],
+        "genres": {
+          "Ficção científica": 35,
+          "Comédia": 33,
+          "Drama": 30,
+          "Terror": 24
+        },
+        "closest_to_centroid": [
+          {
+            "id": 280,
+            "title": "O Exterminador do Futuro 2: O Julgamento Final"
+          },
+          {
+            "id": 419430,
+            "title": "Corra!"
+          },
+          {
+            "id": 27205,
+            "title": "A Origem"
+          }
+        ]
+      },
+      {
+        "cluster": 2,
+        "size": 85,
+        "descriptive_terms": [
+          "dois",
+          "novo",
+          "família",
+          "jovem",
+          "cidade",
+          "após",
+          "não",
+          "nova",
+          "trás",
+          "passado"
+        ],
+        "genres": {
+          "Terror": 28,
+          "Drama": 27,
+          "Ficção científica": 22,
+          "Comédia": 17
+        },
+        "closest_to_centroid": [
+          {
+            "id": 439079,
+            "title": "A Freira"
+          },
+          {
+            "id": 114,
+            "title": "Uma Linda Mulher"
+          },
+          {
+            "id": 601,
+            "title": "E.T.: O Extraterrestre"
+          }
+        ]
+      },
+      {
+        "cluster": 3,
+        "size": 113,
+        "descriptive_terms": [
+          "está",
+          "família",
+          "casa",
+          "vida",
+          "não",
+          "após",
+          "começa",
+          "ser",
+          "morte",
+          "contra"
+        ],
+        "genres": {
+          "Ficção científica": 36,
+          "Terror": 33,
+          "Drama": 29,
+          "Comédia": 26
+        },
+        "closest_to_centroid": [
+          {
+            "id": 194,
+            "title": "O Fabuloso Destino de Amélie Poulain"
+          },
+          {
+            "id": 8656,
+            "title": "Impacto Profundo"
+          },
+          {
+            "id": 9358,
+            "title": "Premonição 2"
+          }
+        ]
+      }
+    ]
+  },
+  "bow_sem_stopwords": {
+    "algorithm": "KMeans (k-means++, n_init=10) sobre linhas com norma L2",
+    "k": 4,
+    "labeled_documents": 378,
+    "adjusted_rand_index": 0.002191,
+    "normalized_mutual_information": 0.009818,
+    "purity": 0.304233,
+    "silhouette_cosine": 0.005966,
+    "clusters": [
+      {
+        "cluster": 0,
+        "size": 140,
+        "descriptive_terms": [
+          "família",
+          "dois",
+          "jovem",
+          "casa",
+          "história",
+          "pai",
+          "mãe",
+          "relacionamento",
+          "futuro",
+          "jornada"
+        ],
+        "genres": {
+          "Comédia": 40,
+          "Drama": 40,
+          "Ficção científica": 37,
+          "Terror": 37
+        },
+        "closest_to_centroid": [
+          {
+            "id": 496243,
+            "title": "Parasita"
+          },
+          {
+            "id": 940551,
+            "title": "Patos!"
+          },
+          {
+            "id": 49018,
+            "title": "Sobrenatural"
+          }
+        ]
+      },
+      {
+        "cluster": 1,
+        "size": 127,
+        "descriptive_terms": [
+          "está",
+          "não",
+          "após",
+          "cidade",
+          "grupo",
+          "vírus",
+          "jovem",
+          "caminho",
+          "anos",
+          "encontrar"
+        ],
+        "genres": {
+          "Terror": 47,
+          "Ficção científica": 33,
+          "Comédia": 31,
+          "Drama": 31
+        },
+        "closest_to_centroid": [
+          {
+            "id": 396535,
+            "title": "Invasão Zumbi"
+          },
+          {
+            "id": 1562,
+            "title": "Extermínio 2"
+          },
+          {
+            "id": 242,
+            "title": "O Poderoso Chefão: Parte III"
+          }
+        ]
+      },
+      {
+        "cluster": 2,
+        "size": 112,
+        "descriptive_terms": [
+          "ser",
+          "vida",
+          "anos",
+          "ter",
+          "onde",
+          "não",
+          "andy",
+          "jovem",
+          "amigos",
+          "após"
+        ],
+        "genres": {
+          "Drama": 34,
+          "Ficção científica": 33,
+          "Comédia": 32,
+          "Terror": 27
+        },
+        "closest_to_centroid": [
+          {
+            "id": 466420,
+            "title": "Assassinos da Lua das Flores"
+          },
+          {
+            "id": 634649,
+            "title": "Homem-Aranha: Sem Volta Para Casa"
+          },
+          {
+            "id": 628,
+            "title": "Entrevista com o Vampiro"
+          }
+        ]
+      },
+      {
+        "cluster": 3,
+        "size": 49,
+        "descriptive_terms": [
+          "tempo",
+          "mesmo",
+          "dia",
+          "preso",
+          "mundo",
+          "soldado",
+          "precisa",
+          "decide",
+          "terra",
+          "está"
+        ],
+        "genres": {
+          "Ficção científica": 17,
+          "Comédia": 16,
+          "Drama": 15,
+          "Terror": 8
+        },
+        "closest_to_centroid": [
+          {
+            "id": 137,
+            "title": "Feitiço do Tempo"
+          },
+          {
+            "id": 284053,
+            "title": "Thor: Ragnarok"
+          },
+          {
+            "id": 207703,
+            "title": "Kingsman: Serviço Secreto"
+          }
+        ]
+      }
+    ]
+  },
+  "tfidf_sem_pontuacao": {
+    "algorithm": "KMeans (k-means++, n_init=10) sobre linhas com norma L2",
+    "k": 4,
+    "labeled_documents": 378,
+    "adjusted_rand_index": 0.002174,
+    "normalized_mutual_information": 0.011545,
+    "purity": 0.301587,
+    "silhouette_cosine": 0.000851,
+    "clusters": [
+      {
+        "cluster": 0,
+        "size": 132,
+        "descriptive_terms": [
+          "guerra",
+          "está",
+          "grupo",
+          "tempo",
+          "futuro",
+          "missão",
+          "terra",
+          "família",
+          "mundial",
+          "não"
+        ],
+        "genres": {
+          "Ficção científica": 47,
+          "Terror": 40,
+          "Drama": 35,
+          "Comédia": 28
+        },
+        "closest_to_centroid": [
+          {
+            "id": 563,
+            "title": "Tropas Estelares"
+          },
+          {
+            "id": 55779,
+            "title": "Premonição 5"
+          },
+          {
+            "id": 764,
+            "title": "Uma Noite Alucinante: A Morte do Demônio"
+          }
+        ]
+      },
+      {
+        "cluster": 1,
+        "size": 73,
+        "descriptive_terms": [
+          "não",
+          "ser",
+          "vida",
+          "anos",
+          "após",
+          "começa",
+          "mundo",
+          "depois",
+          "mãe",
+          "está"
+        ],
+        "genres": {
+          "Comédia": 23,
+          "Terror": 23,
+          "Drama": 22,
+          "Ficção científica": 13
+        },
+        "closest_to_centroid": [
+          {
+            "id": 82023,
+            "title": "Hotel Desire"
+          },
+          {
+            "id": 53064,
+            "title": "Midori"
+          },
+          {
+            "id": 194,
+            "title": "O Fabuloso Destino de Amélie Poulain"
+          }
+        ]
+      },
+      {
+        "cluster": 2,
+        "size": 118,
+        "descriptive_terms": [
+          "família",
+          "ser",
+          "não",
+          "jovem",
+          "após",
+          "está",
+          "dois",
+          "anos",
+          "crime",
+          "casa"
+        ],
+        "genres": {
+          "Comédia": 38,
+          "Drama": 37,
+          "Terror": 27,
+          "Ficção científica": 26
+        },
+        "closest_to_centroid": [
+          {
+            "id": 27205,
+            "title": "A Origem"
+          },
+          {
+            "id": 106646,
+            "title": "O Lobo de Wall Street"
+          },
+          {
+            "id": 73,
+            "title": "A Outra História Americana"
+          }
+        ]
+      },
+      {
+        "cluster": 3,
+        "size": 105,
+        "descriptive_terms": [
+          "está",
+          "mundo",
+          "fazer",
+          "deve",
+          "anos",
+          "agora",
+          "filho",
+          "casa",
+          "dois",
+          "descobre"
+        ],
+        "genres": {
+          "Ficção científica": 34,
+          "Comédia": 30,
+          "Terror": 29,
+          "Drama": 26
+        },
+        "closest_to_centroid": [
+          {
+            "id": 9946,
+            "title": "Fim dos Dias"
+          },
+          {
+            "id": 49521,
+            "title": "O Homem de Aço"
+          },
+          {
+            "id": 854,
+            "title": "O Máskara"
+          }
+        ]
+      }
+    ]
+  },
+  "tfidf_sem_stopwords": {
+    "algorithm": "KMeans (k-means++, n_init=10) sobre linhas com norma L2",
+    "k": 4,
+    "labeled_documents": 378,
+    "adjusted_rand_index": 0.021615,
+    "normalized_mutual_information": 0.034787,
+    "purity": 0.333333,
+    "silhouette_cosine": 0.00089,
+    "clusters": [
+      {
+        "cluster": 0,
+        "size": 143,
+        "descriptive_terms": [
+          "morte",
+          "família",
+          "após",
+          "jovem",
+          "depois",
+          "não",
+          "anos",
+          "agora",
+          "mundo",
+          "já"
+        ],
+        "genres": {
+          "Drama": 46,
+          "Terror": 43,
+          "Ficção científica": 41,
+          "Comédia": 34
+        },
+        "closest_to_centroid": [
+          {
+            "id": 565,
+            "title": "O Chamado"
+          },
+          {
+            "id": 1562,
+            "title": "Extermínio 2"
+          },
+          {
+            "id": 55779,
+            "title": "Premonição 5"
+          }
+        ]
+      },
+      {
+        "cluster": 1,
+        "size": 99,
+        "descriptive_terms": [
+          "dois",
+          "não",
+          "está",
+          "amor",
+          "juntos",
+          "vida",
+          "anos",
+          "durante",
+          "precisam",
+          "família"
+        ],
+        "genres": {
+          "Comédia": 35,
+          "Drama": 33,
+          "Ficção científica": 23,
+          "Terror": 18
+        },
+        "closest_to_centroid": [
+          {
+            "id": 19404,
+            "title": "Dilwale vai levar a noiva"
+          },
+          {
+            "id": 744275,
+            "title": "After: Depois do Desencontro"
+          },
+          {
+            "id": 1156593,
+            "title": "Sua Culpa"
+          }
+        ]
+      },
+      {
+        "cluster": 2,
+        "size": 72,
+        "descriptive_terms": [
+          "ser",
+          "homem",
+          "passa",
+          "combater",
+          "vida",
+          "depois",
+          "alta",
+          "ferro",
+          "tecnologia",
+          "tony"
+        ],
+        "genres": {
+          "Drama": 27,
+          "Ficção científica": 27,
+          "Comédia": 15,
+          "Terror": 12
+        },
+        "closest_to_centroid": [
+          {
+            "id": 1726,
+            "title": "Homem de Ferro"
+          },
+          {
+            "id": 36586,
+            "title": "Blade II: O Caçador de Vampiros"
+          },
+          {
+            "id": 68721,
+            "title": "Homem de Ferro 3"
+          }
+        ]
+      },
+      {
+        "cluster": 3,
+        "size": 114,
+        "descriptive_terms": [
+          "casa",
+          "está",
+          "amigos",
+          "enquanto",
+          "família",
+          "anos",
+          "cidade",
+          "após",
+          "grupo",
+          "única"
+        ],
+        "genres": {
+          "Terror": 46,
+          "Comédia": 35,
+          "Ficção científica": 29,
+          "Drama": 14
+        },
+        "closest_to_centroid": [
+          {
+            "id": 764,
+            "title": "Uma Noite Alucinante: A Morte do Demônio"
+          },
+          {
+            "id": 601,
+            "title": "E.T.: O Extraterrestre"
+          },
+          {
+            "id": 9297,
+            "title": "A Casa Monstro"
+          }
+        ]
+      }
+    ]
+  },
+  "word2vec_sem_stopwords": {
+    "algorithm": "KMeans (k-means++, n_init=10) sobre linhas com norma L2",
+    "k": 4,
+    "labeled_documents": 378,
+    "adjusted_rand_index": 0.058172,
+    "normalized_mutual_information": 0.074784,
+    "purity": 0.396825,
+    "silhouette_cosine": 0.062131,
+    "clusters": [
+      {
+        "cluster": 0,
+        "size": 122,
+        "descriptive_terms": [
+          "está",
+          "grupo",
+          "dois",
+          "ter",
+          "após",
+          "não",
+          "missão",
+          "terra",
+          "vírus",
+          "depois"
+        ],
+        "genres": {
+          "Terror": 52,
+          "Ficção científica": 47,
+          "Comédia": 24,
+          "Drama": 16
+        },
+        "closest_to_centroid": [
+          {
+            "id": 109428,
+            "title": "A Morte do Demônio"
+          },
+          {
+            "id": 9276,
+            "title": "Prova Final"
+          },
+          {
+            "id": 9902,
+            "title": "Pânico na Floresta"
+          }
+        ]
+      },
+      {
+        "cluster": 1,
+        "size": 120,
+        "descriptive_terms": [
+          "família",
+          "casa",
+          "não",
+          "está",
+          "vida",
+          "anos",
+          "jovem",
+          "dois",
+          "mãe",
+          "enquanto"
+        ],
+        "genres": {
+          "Drama": 46,
+          "Comédia": 38,
+          "Terror": 38,
+          "Ficção científica": 11
+        },
+        "closest_to_centroid": [
+          {
+            "id": 238636,
+            "title": "Uma Noite de Crime: Anarquia"
+          },
+          {
+            "id": 6435,
+            "title": "Da Magia à Sedução"
+          },
+          {
+            "id": 8966,
+            "title": "Crepúsculo"
+          }
+        ]
+      },
+      {
+        "cluster": 2,
+        "size": 85,
+        "descriptive_terms": [
+          "polícia",
+          "ser",
+          "jovem",
+          "anos",
+          "guerra",
+          "história",
+          "policial",
+          "mundial",
+          "vida",
+          "angeles"
+        ],
+        "genres": {
+          "Drama": 45,
+          "Comédia": 25,
+          "Ficção científica": 15,
+          "Terror": 11
+        },
+        "closest_to_centroid": [
+          {
+            "id": 640,
+            "title": "Prenda-Me se For Capaz"
+          },
+          {
+            "id": 115,
+            "title": "O Grande Lebowski"
+          },
+          {
+            "id": 1422,
+            "title": "Os Infiltrados"
+          }
+        ]
+      },
+      {
+        "cluster": 3,
+        "size": 101,
+        "descriptive_terms": [
+          "ser",
+          "precisa",
+          "peter",
+          "mundo",
+          "jovem",
+          "está",
+          "ainda",
+          "vilão",
+          "após",
+          "força"
+        ],
+        "genres": {
+          "Ficção científica": 47,
+          "Comédia": 32,
+          "Terror": 18,
+          "Drama": 13
+        },
+        "closest_to_centroid": [
+          {
+            "id": 616037,
+            "title": "Thor: Amor e Trovão"
+          },
+          {
+            "id": 383498,
+            "title": "Deadpool 2"
+          },
+          {
+            "id": 76341,
+            "title": "Mad Max: Estrada da Fúria"
+          }
+        ]
+      }
+    ]
+  },
+  "contextual_minilm": {
+    "algorithm": "KMeans (k-means++, n_init=10) sobre linhas com norma L2",
+    "k": 4,
+    "labeled_documents": 378,
+    "adjusted_rand_index": 0.079687,
+    "normalized_mutual_information": 0.107699,
+    "purity": 0.436508,
+    "silhouette_cosine": 0.058011,
+    "clusters": [
+      {
+        "cluster": 0,
+        "size": 114,
+        "descriptive_terms": [
+          "família",
+          "casa",
+          "dois",
+          "está",
+          "não",
+          "amigos",
+          "começa",
+          "vida",
+          "anos",
+          "morte"
+        ],
+        "genres": {
+          "Terror": 51,
+          "Drama": 41,
+          "Comédia": 31,
+          "Ficção científica": 4
+        },
+        "closest_to_centroid": [
+          {
+            "id": 238636,
+            "title": "Uma Noite de Crime: Anarquia"
+          },
+          {
+            "id": 109428,
+            "title": "A Morte do Demônio"
+          },
+          {
+            "id": 82023,
+            "title": "Hotel Desire"
+          }
+        ]
+      },
+      {
+        "cluster": 1,
+        "size": 136,
+        "descriptive_terms": [
+          "ser",
+          "jovem",
+          "homem",
+          "vida",
+          "não",
+          "peter",
+          "está",
+          "mundo",
+          "durante",
+          "policial"
+        ],
+        "genres": {
+          "Drama": 55,
+          "Ficção científica": 38,
+          "Comédia": 37,
+          "Terror": 20
+        },
+        "closest_to_centroid": [
+          {
+            "id": 2978,
+            "title": "Os Caça-Fantasmas 2"
+          },
+          {
+            "id": 100402,
+            "title": "Capitão América: O Soldado Invernal"
+          },
+          {
+            "id": 27205,
+            "title": "A Origem"
+          }
+        ]
+      },
+      {
+        "cluster": 2,
+        "size": 86,
+        "descriptive_terms": [
+          "missão",
+          "grupo",
+          "planeta",
+          "terra",
+          "está",
+          "vírus",
+          "após",
+          "equipe",
+          "robô",
+          "não"
+        ],
+        "genres": {
+          "Ficção científica": 53,
+          "Terror": 25,
+          "Comédia": 12,
+          "Drama": 12
+        },
+        "closest_to_centroid": [
+          {
+            "id": 1100988,
+            "title": "Extermínio: A Evolução"
+          },
+          {
+            "id": 986056,
+            "title": "Thunderbolts*"
+          },
+          {
+            "id": 602,
+            "title": "Independence Day"
+          }
+        ]
+      },
+      {
+        "cluster": 3,
+        "size": 92,
+        "descriptive_terms": [
+          "família",
+          "novo",
+          "anos",
+          "mundo",
+          "encontrar",
+          "não",
+          "casa",
+          "pai",
+          "amigos",
+          "agora"
+        ],
+        "genres": {
+          "Comédia": 39,
+          "Ficção científica": 25,
+          "Terror": 23,
+          "Drama": 12
+        },
+        "closest_to_centroid": [
+          {
+            "id": 417859,
+            "title": "Gato de Botas"
+          },
+          {
+            "id": 9340,
+            "title": "Os Goonies"
+          },
+          {
+            "id": 1417,
+            "title": "O Labirinto do Fauno"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,2 @@
+data/** -text
+backend/src/app/**/templates/** text eol=lf

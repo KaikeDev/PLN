@@ -1,0 +1,150 @@
+{
+  "schema_version": 2,
+  "created_at": "2026-09-15T00:04:41.480171+00:00",
+  "source_processed_manifest_sha256": "b56018c90e14fc40453f2332a0254281effb96ddfe265ea5e0b154e1e92542c4",
+  "config_sha256": "31e60d621635efaeced1acc50575a04e1b6060fb70975413899b76b38b3cee2a",
+  "queries_sha256": "e54c33c6b3fc3fecaed68f67715f32ba6c7a755c6556c4cb09d601c849156862",
+  "source_identity": {
+    "source_sha256": {
+      "__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "api\\__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "api\\router.py": "cc59ea20826f41ccf9b867b37edf29e50066ac8ab860a1764820f6c9ed8e4655",
+      "api\\routes\\__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "api\\routes\\filmes.py": "696643f610c42ea9d2e2b040f53819c6aac9c004620d35ea27824d87305b20db",
+      "api\\routes\\health.py": "9fdfdb284656341c292bfe0b3a9c3f933e86523883141fbe157a6ec1632bcd73",
+      "core\\__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "core\\config.py": "d2b4619eca92f6a6f115ad0706c5990ecf5b86bafcc6e964b728caa9ed1f69be",
+      "corpus\\__init__.py": "00554ce91b85b78f33077c4b96375cbc03c69592d21f7f679fb90249f832b231",
+      "corpus\\__main__.py": "cced3be84b3495ee0f1e5f76341c43b2653d3bbe502b8d60507eefe7b5442790",
+      "corpus\\collect.py": "baf40f98710256cf3285740128cfc3a36ec80279cfd5152fa392bf2c2f1fbe37",
+      "corpus\\io.py": "760da72c73b5959b70c5da36d94b7748dd286749fcd03ed3d1136f6e37b93569",
+      "corpus\\process.py": "143bbfb67125c85ff67568ed9d8fa120187ddacb8593bd7cfea7d52c8a2e810e",
+      "corpus\\transform.py": "40fc9b2976d9eee1bff4d4fa6d0058f7e13d05e713d99bcce0ed2294e911de1f",
+      "exceptions\\__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "exceptions\\tmdb.py": "ab6b0653a52368647bfa37edc6345e029bc83429736371cc5b82b5e0c5c77ec6",
+      "main.py": "a642b96a25d53dc50f3519ed09f37e8c7fd2d9c5774ab250266a64b7eae6e1e6",
+      "services\\__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "services\\pln\\__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "services\\pln\\extrator.py": "688c8ff39b2726e4fcb3be0c50a710c02d53a5ab6747275cae2e90dd1d046f17",
+      "services\\pln\\generos_cache.py": "7139f3ea4594d31e9f11c3aaf1ec460bf5c1bff0e914024aacdec56e57e53a64",
+      "services\\pln\\lexico.py": "c478d4a78623b356de9ab7a97de71f5bbdd270e5f03cfaada538c776372e5933",
+      "services\\pln\\negacao.py": "d5a4d9f830fe5031457edca4f323a2bb76b20a0a8dd9cf4ed39bdb9028aa1cbc",
+      "services\\pln\\normalizacao.py": "5160bbee537b9b353b0ac8fc7cbc66b149817b160a33b00400abace77ed40bfd",
+      "services\\pln\\periodo.py": "8cebeb6cc65541dff92236a9a035403729ba3ece5f501862f5d4be842d4784cc",
+      "services\\pln\\pesquisa.py": "acc601df25c90909ca45e35400dd5802b8282e0e15febcf835f5fbfe3c6c8efb",
+      "services\\tmdb\\__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "services\\tmdb\\client.py": "c72b005c90131f05f155bbce8de20d6ddd6db449c0fefee3f010e7b3f83b72c2",
+      "services\\tmdb\\filmes.py": "ecb819e6b1ee86573fafad83afa107ec783ace5e6d785e01423158fed477b1a8",
+      "vectors\\__init__.py": "43940060212cd46c509ad389ddc01584b0f4bbb1e9b184dc0e83a6aefaefc0c4",
+      "vectors\\__main__.py": "e103ca9d43e7dc22bb5e4473587991fd32dac7b6a8366fdf8834d2fc00913764",
+      "vectors\\analyses.py": "4ab72c5e52124c9d2c7ebc5d6bd9ce3b0dd54abc29605267527e595b2cfe9f88",
+      "vectors\\config.py": "d836414c73c567603c2b6fb15e79f462b85ea2880efb2adb2faaf143d24a28d5",
+      "vectors\\corpus.py": "2299d8871e9fc97fbef8d6db846ad4589bbe3ef8091adbeb21d9eb4003ab1499",
+      "vectors\\embeddings.py": "71cc9b9e5b4d6ccbfdbc4915cff2c55ba131616a548d2aed25cca4b3ac15b671",
+      "vectors\\methods.py": "07aadaceb2fc2e09bf1beecf2591450ed0761918fd0c956eebda18a6f4f4ed78",
+      "vectors\\metrics.py": "22332bafbe8af9967cbd7b250e8df1693430ed48675d17a82c1919c971ca4717",
+      "vectors\\pipeline.py": "f8709f18d0c92cab945a5122a742c7fedc45d4587b24eb04b205349c844d7306",
+      "vectors\\report.py": "954d207d7a48d65c6f1c741b124c93a38ad95bfc89abf1ac70f2ae7f650a57c2",
+      "vectors\\retrieval.py": "184aabdb254df94cd56bf675dfc5cdc74114465433650771349ccf92147adbb8",
+      "vectors\\space.py": "9c2f0942415bba2e1c7399f6700745b22a645c2272538d3aadc585a9cdf9c6f8",
+      "vectors\\svg.py": "1af5a8999c2e261766d28ab4043bc7a873af53bf21a4cb4941d2e6bf7f778370"
+    }
+  },
+  "python": "3.14.0",
+  "libraries": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "torch": "2.14.0",
+    "transformers": "5.17.0",
+    "sentence-transformers": "6.0.1"
+  },
+  "representations": [
+    {
+      "name": "bow_sem_pontuacao",
+      "method": "bow",
+      "stage": "05_without_punctuation.jsonl",
+      "model": null,
+      "revision": null
+    },
+    {
+      "name": "bow_sem_stopwords",
+      "method": "bow",
+      "stage": "06_without_stopwords.jsonl",
+      "model": null,
+      "revision": null
+    },
+    {
+      "name": "tfidf_sem_pontuacao",
+      "method": "tfidf",
+      "stage": "05_without_punctuation.jsonl",
+      "model": null,
+      "revision": null
+    },
+    {
+      "name": "tfidf_sem_stopwords",
+      "method": "tfidf",
+      "stage": "06_without_stopwords.jsonl",
+      "model": null,
+      "revision": null
+    },
+    {
+      "name": "word2vec_sem_stopwords",
+      "method": "word2vec",
+      "stage": "06_without_stopwords.jsonl",
+      "model": "pt-mteb/average_pt_nilc_word2vec_skip_s300",
+      "revision": "27facc2558330d2e9af54611734b94e957aa8301"
+    },
+    {
+      "name": "contextual_minilm",
+      "method": "contextual",
+      "stage": "02_clean.jsonl",
+      "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+    }
+  ],
+  "analyses": [
+    "dimensions",
+    "neighbors",
+    "clustering",
+    "projection",
+    "word_neighbors",
+    "retrieval"
+  ],
+  "row_files": [
+    "bow_sem_pontuacao.matrix.jsonl",
+    "bow_sem_stopwords.matrix.jsonl",
+    "tfidf_sem_pontuacao.matrix.jsonl",
+    "tfidf_sem_stopwords.matrix.jsonl",
+    "word2vec_sem_stopwords.embeddings.jsonl",
+    "contextual_minilm.embeddings.jsonl"
+  ],
+  "files": {
+    "bow_sem_pontuacao.matrix.jsonl": "3f8e6d3d41ea6a0e363d01d7ce1c8b14e6487986e31f07c7e055a26cf697f56d",
+    "bow_sem_pontuacao.projection.svg": "f3ef80ff3f56ffc42816fde94fa241a02754da4e3f104ea6f02a66683a37cec2",
+    "bow_sem_pontuacao.vocabulary.json": "73fec3619ba65b284e6982d514cda7dfda73481479b7a441ae7408f51b36bc25",
+    "bow_sem_stopwords.matrix.jsonl": "ef8a3643dfc93e43ed46f96ccd83354cb695f973555d3a44086e9625fec271f6",
+    "bow_sem_stopwords.projection.svg": "db6356f30767c3c71fb105bbca6e57eab59bf08a98e874cbb2a40e736666b9b0",
+    "bow_sem_stopwords.vocabulary.json": "00b0ad18ec0742a922f9e7b211ed3ef27abcebf1aa845459b2af1f9148f5e62c",
+    "clustering.json": "adcb63deb2e4cab7bc5496608497f2bdd55848c71be63d6750a05cf84859d8f7",
+    "config.json": "a1466390942dac7ea97d8a006286a14b2fdcc86bf680aaa9bd8fe69f33d9f8a9",
+    "contextual_minilm.embeddings.jsonl": "dcf0d5de0c7172a3e19c6c66ef5ef94971adde5968a70c15e27d6cf43992af31",
+    "contextual_minilm.projection.svg": "862b3738f6a10b50556c792c02815f602ae4bcdabaeb269190840f835058af23",
+    "dimensions.json": "334d084640884de2e6f4dbb5a84907ae586c705f135182d86991209da591d62c",
+    "documents.json": "1f0355731c4af9c4b14e122e9a23b6e09c596c2e3bbc5e0def5b7c3f02a4924d",
+    "neighbors.json": "d80a2278b27250a8a79f01e1679be5c1ab3127da925e04a9af49eaf8cedb974c",
+    "projection.json": "214c3f21501465aee41e4e705e55ed9b24d759bacdf72017d99e4e7b89d3d4e6",
+    "queries_config.json": "d395444fffc4adaa6f5f361514afa45067eca3f49bac728ec5bc59f46912eb62",
+    "report.md": "f43d43b9164abed5594bb8030be4d9d9c544b49a08a61c6f8eb9abd8f5b8a1cc",
+    "retrieval.json": "c39ada4e9ce52843f5af5a438cd90951fe6b1240f6bb500d9cd68df21e2439c1",
+    "tfidf_sem_pontuacao.matrix.jsonl": "8e8bf762be8e607fafafc23a299c67f4979aa9dcc8983d5bf1e7196a06f1f444",
+    "tfidf_sem_pontuacao.projection.svg": "3bb00acef6d9f1f985571673a0142ef907bf77df92d959b593c4cc0232bb89e5",
+    "tfidf_sem_pontuacao.vocabulary.json": "13b48c67f475260681e363adf589eee7f2290a2f386fb9efc06c6e5cef867ca7",
+    "tfidf_sem_stopwords.matrix.jsonl": "65d719eacbbcd9541674c06c0434ab6197b73f785ae07fb25b2853158edc4a1a",
+    "tfidf_sem_stopwords.projection.svg": "1668c2a1890ea9adffb5a35b29818bfe4f6b1e89ee16abe16ccf0598dc92e04e",
+    "tfidf_sem_stopwords.vocabulary.json": "b732a1d720ff2173ba4fe1c637ff138b4318599d0b4925a035a2d417b0e3a96e",
+    "word2vec_sem_stopwords.embeddings.jsonl": "3f9366a3826f63420cc9571ea19b9d6e026672dc49d2f4140cbef4cbb0a22029",
+    "word2vec_sem_stopwords.projection.svg": "a07c4758ce5f749159dbed369cfd68820ea8abcda1b3b3b96ecc6e1023d8aaa1",
+    "word_neighbors.json": "56d03e7fa127ea18e09af7b12d34150fe30651e7daf4fcc5b1725fe19fb25c5f"
+  }
+}

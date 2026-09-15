@@ -1,0 +1,239 @@
+{
+  "bow_sem_pontuacao": {
+    "method": "bow",
+    "stage": "05_without_punctuation.jsonl",
+    "documents": 428,
+    "dimensions": 5988,
+    "sparse": true,
+    "nonzero": 20219,
+    "density": 0.007889,
+    "mean_nonzero_per_document": 47.240654,
+    "top_terms": [
+      [
+        "de",
+        1128.0
+      ],
+      [
+        "a",
+        807.0
+      ],
+      [
+        "e",
+        727.0
+      ],
+      [
+        "o",
+        696.0
+      ],
+      [
+        "que",
+        680.0
+      ],
+      [
+        "um",
+        674.0
+      ],
+      [
+        "uma",
+        476.0
+      ],
+      [
+        "para",
+        419.0
+      ],
+      [
+        "em",
+        373.0
+      ],
+      [
+        "com",
+        305.0
+      ]
+    ]
+  },
+  "bow_sem_stopwords": {
+    "method": "bow",
+    "stage": "06_without_stopwords.jsonl",
+    "documents": 428,
+    "dimensions": 5921,
+    "sparse": true,
+    "nonzero": 13915,
+    "density": 0.005491,
+    "mean_nonzero_per_document": 32.511682,
+    "top_terms": [
+      [
+        "não",
+        90.0
+      ],
+      [
+        "está",
+        87.0
+      ],
+      [
+        "ser",
+        80.0
+      ],
+      [
+        "após",
+        73.0
+      ],
+      [
+        "anos",
+        67.0
+      ],
+      [
+        "família",
+        67.0
+      ],
+      [
+        "vida",
+        66.0
+      ],
+      [
+        "jovem",
+        61.0
+      ],
+      [
+        "dois",
+        53.0
+      ],
+      [
+        "casa",
+        51.0
+      ]
+    ]
+  },
+  "tfidf_sem_pontuacao": {
+    "method": "tfidf",
+    "stage": "05_without_punctuation.jsonl",
+    "documents": 428,
+    "dimensions": 5988,
+    "sparse": true,
+    "nonzero": 20219,
+    "density": 0.007889,
+    "mean_nonzero_per_document": 47.240654,
+    "top_terms": [
+      [
+        "de",
+        35.186913
+      ],
+      [
+        "a",
+        26.802685
+      ],
+      [
+        "o",
+        24.967823
+      ],
+      [
+        "um",
+        24.602271
+      ],
+      [
+        "e",
+        23.993358
+      ],
+      [
+        "que",
+        23.532769
+      ],
+      [
+        "uma",
+        19.07325
+      ],
+      [
+        "para",
+        17.3221
+      ],
+      [
+        "em",
+        16.071503
+      ],
+      [
+        "do",
+        14.578668
+      ]
+    ]
+  },
+  "tfidf_sem_stopwords": {
+    "method": "tfidf",
+    "stage": "06_without_stopwords.jsonl",
+    "documents": 428,
+    "dimensions": 5921,
+    "sparse": true,
+    "nonzero": 13915,
+    "density": 0.005491,
+    "mean_nonzero_per_document": 32.511682,
+    "top_terms": [
+      [
+        "está",
+        7.340645
+      ],
+      [
+        "não",
+        7.096238
+      ],
+      [
+        "ser",
+        6.936855
+      ],
+      [
+        "família",
+        6.402887
+      ],
+      [
+        "após",
+        6.094942
+      ],
+      [
+        "anos",
+        5.844128
+      ],
+      [
+        "vida",
+        5.822232
+      ],
+      [
+        "jovem",
+        5.780671
+      ],
+      [
+        "dois",
+        5.404174
+      ],
+      [
+        "mundo",
+        5.176726
+      ]
+    ]
+  },
+  "word2vec_sem_stopwords": {
+    "method": "word2vec",
+    "stage": "06_without_stopwords.jsonl",
+    "documents": 428,
+    "dimensions": 300,
+    "sparse": false,
+    "nonzero": 128400,
+    "density": 1.0,
+    "mean_nonzero_per_document": 300.0,
+    "model": "pt-mteb/average_pt_nilc_word2vec_skip_s300",
+    "revision": "27facc2558330d2e9af54611734b94e957aa8301",
+    "token_coverage": 0.996885,
+    "documents_without_known_words": 0,
+    "corpus_words_in_model": 5879
+  },
+  "contextual_minilm": {
+    "method": "contextual",
+    "stage": "02_clean.jsonl",
+    "documents": 428,
+    "dimensions": 384,
+    "sparse": false,
+    "nonzero": 164352,
+    "density": 1.0,
+    "mean_nonzero_per_document": 384.0,
+    "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+    "max_tokens": 128,
+    "truncated_documents": 40
+  }
+}

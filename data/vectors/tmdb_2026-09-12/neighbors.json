@@ -1,0 +1,1101 @@
+{
+  "bow_sem_pontuacao": {
+    "k": 5,
+    "documents_evaluated": 428,
+    "genre_agreement_at_k": 0.369626,
+    "genre_agreement_baseline": 0.307131,
+    "examples": [
+      {
+        "id": 603,
+        "title": "Matrix",
+        "neighbors": [
+          {
+            "id": 1091,
+            "title": "O Enigma de Outro Mundo",
+            "score": 0.601893,
+            "explanation": [
+              "e",
+              "a",
+              "que",
+              "um",
+              "de"
+            ]
+          },
+          {
+            "id": 278,
+            "title": "Um Sonho de Liberdade",
+            "score": 0.599448,
+            "explanation": [
+              "e",
+              "a",
+              "que",
+              "de",
+              "um"
+            ]
+          },
+          {
+            "id": 8656,
+            "title": "Impacto Profundo",
+            "score": 0.595829,
+            "explanation": [
+              "e",
+              "a",
+              "um",
+              "de",
+              "que"
+            ]
+          },
+          {
+            "id": 9946,
+            "title": "Fim dos Dias",
+            "score": 0.56665,
+            "explanation": [
+              "de",
+              "e",
+              "um",
+              "a",
+              "que"
+            ]
+          },
+          {
+            "id": 21484,
+            "title": "Possessão",
+            "score": 0.561295,
+            "explanation": [
+              "a",
+              "e",
+              "que",
+              "um",
+              "de"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "title": "Forrest Gump: O Contador de Histórias",
+        "neighbors": [
+          {
+            "id": 9737,
+            "title": "Os Bad Boys",
+            "score": 0.437634,
+            "explanation": [
+              "de",
+              "do",
+              "e",
+              "da",
+              "a"
+            ]
+          },
+          {
+            "id": 755898,
+            "title": "A Guerra dos Mundos",
+            "score": 0.43641,
+            "explanation": [
+              "de",
+              "do",
+              "um",
+              "e",
+              "o"
+            ]
+          },
+          {
+            "id": 299710,
+            "title": "Aos 14",
+            "score": 0.427679,
+            "explanation": [
+              "de",
+              "e",
+              "com",
+              "do",
+              "um"
+            ]
+          },
+          {
+            "id": 82690,
+            "title": "Detona Ralph",
+            "score": 0.427593,
+            "explanation": [
+              "de",
+              "e",
+              "a",
+              "com",
+              "do"
+            ]
+          },
+          {
+            "id": 1156593,
+            "title": "Sua Culpa",
+            "score": 0.425572,
+            "explanation": [
+              "de",
+              "e",
+              "o",
+              "a",
+              "com"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "title": "Beleza Americana",
+        "neighbors": [
+          {
+            "id": 686,
+            "title": "Contato",
+            "score": 0.53535,
+            "explanation": [
+              "a",
+              "e",
+              "de",
+              "com",
+              "sua"
+            ]
+          },
+          {
+            "id": 558449,
+            "title": "Gladiador 2",
+            "score": 0.526229,
+            "explanation": [
+              "a",
+              "de",
+              "e",
+              "seu",
+              "o"
+            ]
+          },
+          {
+            "id": 194,
+            "title": "O Fabuloso Destino de Amélie Poulain",
+            "score": 0.515414,
+            "explanation": [
+              "a",
+              "de",
+              "e",
+              "sua",
+              "que"
+            ]
+          },
+          {
+            "id": 9820,
+            "title": "Operação Cupido",
+            "score": 0.504938,
+            "explanation": [
+              "e",
+              "a",
+              "se",
+              "com",
+              "de"
+            ]
+          },
+          {
+            "id": 98,
+            "title": "Gladiador",
+            "score": 0.491233,
+            "explanation": [
+              "a",
+              "de",
+              "e",
+              "o",
+              "seu"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "bow_sem_stopwords": {
+    "k": 5,
+    "documents_evaluated": 428,
+    "genre_agreement_at_k": 0.48785,
+    "genre_agreement_baseline": 0.307131,
+    "examples": [
+      {
+        "id": 603,
+        "title": "Matrix",
+        "neighbors": [
+          {
+            "id": 346698,
+            "title": "Barbie",
+            "score": 0.168034,
+            "explanation": [
+              "mundo",
+              "começa",
+              "descobre",
+              "está",
+              "real"
+            ]
+          },
+          {
+            "id": 21484,
+            "title": "Possessão",
+            "score": 0.150899,
+            "explanation": [
+              "está",
+              "começa",
+              "descobre",
+              "estranhos",
+              "jovem"
+            ]
+          },
+          {
+            "id": 924,
+            "title": "Madrugada dos Mortos",
+            "score": 0.121268,
+            "explanation": [
+              "mundo",
+              "descobre",
+              "enquanto",
+              "está",
+              "real"
+            ]
+          },
+          {
+            "id": 270303,
+            "title": "Corrente do Mal",
+            "score": 0.10677,
+            "explanation": [
+              "jovem",
+              "começa",
+              "enquanto",
+              "pessoas"
+            ]
+          },
+          {
+            "id": 550988,
+            "title": "Free Guy: Assumindo o Controle",
+            "score": 0.10401,
+            "explanation": [
+              "mundo",
+              "descobre",
+              "realidade"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "title": "Forrest Gump: O Contador de Histórias",
+        "neighbors": [
+          {
+            "id": 423108,
+            "title": "Invocação do Mal 3: A Ordem do Demônio",
+            "score": 0.135769,
+            "explanation": [
+              "caso",
+              "estados",
+              "história",
+              "unidos"
+            ]
+          },
+          {
+            "id": 640,
+            "title": "Prenda-Me se For Capaz",
+            "score": 0.12829,
+            "explanation": [
+              "anos",
+              "estados",
+              "história",
+              "unidos"
+            ]
+          },
+          {
+            "id": 138843,
+            "title": "Invocação do Mal",
+            "score": 0.127,
+            "explanation": [
+              "caso",
+              "estados",
+              "história",
+              "unidos"
+            ]
+          },
+          {
+            "id": 406563,
+            "title": "Sobrenatural: A Última Chave",
+            "score": 0.125749,
+            "explanation": [
+              "caso",
+              "infância"
+            ]
+          },
+          {
+            "id": 10997,
+            "title": "Adeus, Minha Concubina",
+            "score": 0.120483,
+            "explanation": [
+              "anos",
+              "história",
+              "momentos"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "title": "Beleza Americana",
+        "neighbors": [
+          {
+            "id": 634649,
+            "title": "Homem-Aranha: Sem Volta Para Casa",
+            "score": 0.136083,
+            "explanation": [
+              "vida",
+              "ajuda",
+              "não",
+              "pede"
+            ]
+          },
+          {
+            "id": 315635,
+            "title": "Homem-Aranha: De Volta ao Lar",
+            "score": 0.11547,
+            "explanation": [
+              "vida",
+              "não"
+            ]
+          },
+          {
+            "id": 10681,
+            "title": "WALL-E",
+            "score": 0.109897,
+            "explanation": [
+              "vida",
+              "conhece"
+            ]
+          },
+          {
+            "id": 101,
+            "title": "O Profissional",
+            "score": 0.107583,
+            "explanation": [
+              "vida",
+              "conhece",
+              "pai",
+              "vizinho"
+            ]
+          },
+          {
+            "id": 115,
+            "title": "O Grande Lebowski",
+            "score": 0.104371,
+            "explanation": [
+              "vida",
+              "não"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "tfidf_sem_pontuacao": {
+    "k": 5,
+    "documents_evaluated": 428,
+    "genre_agreement_at_k": 0.502336,
+    "genre_agreement_baseline": 0.307131,
+    "examples": [
+      {
+        "id": 603,
+        "title": "Matrix",
+        "neighbors": [
+          {
+            "id": 21484,
+            "title": "Possessão",
+            "score": 0.145403,
+            "explanation": [
+              "a",
+              "estranhos",
+              "e",
+              "que",
+              "está"
+            ]
+          },
+          {
+            "id": 99861,
+            "title": "Vingadores: Era de Ultron",
+            "score": 0.134358,
+            "explanation": [
+              "sistema",
+              "artificial",
+              "o",
+              "que",
+              "da"
+            ]
+          },
+          {
+            "id": 346698,
+            "title": "Barbie",
+            "score": 0.131998,
+            "explanation": [
+              "real",
+              "das",
+              "mundo",
+              "que",
+              "começa"
+            ]
+          },
+          {
+            "id": 924,
+            "title": "Madrugada dos Mortos",
+            "score": 0.126003,
+            "explanation": [
+              "real",
+              "mundo",
+              "um",
+              "por",
+              "e"
+            ]
+          },
+          {
+            "id": 550988,
+            "title": "Free Guy: Assumindo o Controle",
+            "score": 0.125747,
+            "explanation": [
+              "realidade",
+              "mundo",
+              "que",
+              "de",
+              "é"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "title": "Forrest Gump: O Contador de Histórias",
+        "neighbors": [
+          {
+            "id": 406563,
+            "title": "Sobrenatural: A Última Chave",
+            "score": 0.130747,
+            "explanation": [
+              "infância",
+              "caso",
+              "de",
+              "do",
+              "com"
+            ]
+          },
+          {
+            "id": 423108,
+            "title": "Invocação do Mal 3: A Ordem do Demônio",
+            "score": 0.126291,
+            "explanation": [
+              "estados",
+              "unidos",
+              "caso",
+              "história",
+              "de"
+            ]
+          },
+          {
+            "id": 640,
+            "title": "Prenda-Me se For Capaz",
+            "score": 0.12558,
+            "explanation": [
+              "estados",
+              "unidos",
+              "com",
+              "anos",
+              "história"
+            ]
+          },
+          {
+            "id": 115,
+            "title": "O Grande Lebowski",
+            "score": 0.124407,
+            "explanation": [
+              "vietnã",
+              "com",
+              "da",
+              "guerra",
+              "como"
+            ]
+          },
+          {
+            "id": 1156593,
+            "title": "Sua Culpa",
+            "score": 0.109041,
+            "explanation": [
+              "intenções",
+              "consegue",
+              "de",
+              "amor",
+              "mas"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "title": "Beleza Americana",
+        "neighbors": [
+          {
+            "id": 194,
+            "title": "O Fabuloso Destino de Amélie Poulain",
+            "score": 0.122071,
+            "explanation": [
+              "a",
+              "sente",
+              "sua",
+              "de",
+              "vida"
+            ]
+          },
+          {
+            "id": 101,
+            "title": "O Profissional",
+            "score": 0.121917,
+            "explanation": [
+              "vizinho",
+              "a",
+              "conhece",
+              "vida",
+              "de"
+            ]
+          },
+          {
+            "id": 634649,
+            "title": "Homem-Aranha: Sem Volta Para Casa",
+            "score": 0.120689,
+            "explanation": [
+              "pede",
+              "vida",
+              "ajuda",
+              "mais",
+              "sua"
+            ]
+          },
+          {
+            "id": 37165,
+            "title": "O Show de Truman: O Show da Vida",
+            "score": 0.114419,
+            "explanation": [
+              "sua",
+              "vida",
+              "com",
+              "e",
+              "a"
+            ]
+          },
+          {
+            "id": 115,
+            "title": "O Grande Lebowski",
+            "score": 0.11389,
+            "explanation": [
+              "com",
+              "vida",
+              "sua",
+              "seu",
+              "se"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "tfidf_sem_stopwords": {
+    "k": 5,
+    "documents_evaluated": 428,
+    "genre_agreement_at_k": 0.516355,
+    "genre_agreement_baseline": 0.307131,
+    "examples": [
+      {
+        "id": 603,
+        "title": "Matrix",
+        "neighbors": [
+          {
+            "id": 346698,
+            "title": "Barbie",
+            "score": 0.085835,
+            "explanation": [
+              "real",
+              "mundo",
+              "começa",
+              "descobre",
+              "está"
+            ]
+          },
+          {
+            "id": 99861,
+            "title": "Vingadores: Era de Ultron",
+            "score": 0.080426,
+            "explanation": [
+              "sistema",
+              "artificial"
+            ]
+          },
+          {
+            "id": 475557,
+            "title": "Coringa",
+            "score": 0.078444,
+            "explanation": [
+              "thomas",
+              "mente"
+            ]
+          },
+          {
+            "id": 21484,
+            "title": "Possessão",
+            "score": 0.074471,
+            "explanation": [
+              "estranhos",
+              "está",
+              "começa",
+              "descobre",
+              "jovem"
+            ]
+          },
+          {
+            "id": 814,
+            "title": "Um Lobisomem Americano em Londres",
+            "score": 0.063326,
+            "explanation": [
+              "atormentado",
+              "pesadelos",
+              "enquanto",
+              "está"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "title": "Forrest Gump: O Contador de Histórias",
+        "neighbors": [
+          {
+            "id": 406563,
+            "title": "Sobrenatural: A Última Chave",
+            "score": 0.103047,
+            "explanation": [
+              "infância",
+              "caso"
+            ]
+          },
+          {
+            "id": 423108,
+            "title": "Invocação do Mal 3: A Ordem do Demônio",
+            "score": 0.086448,
+            "explanation": [
+              "estados",
+              "unidos",
+              "caso",
+              "história"
+            ]
+          },
+          {
+            "id": 10997,
+            "title": "Adeus, Minha Concubina",
+            "score": 0.078638,
+            "explanation": [
+              "momentos",
+              "história",
+              "anos"
+            ]
+          },
+          {
+            "id": 138843,
+            "title": "Invocação do Mal",
+            "score": 0.077135,
+            "explanation": [
+              "estados",
+              "unidos",
+              "caso",
+              "história"
+            ]
+          },
+          {
+            "id": 640,
+            "title": "Prenda-Me se For Capaz",
+            "score": 0.065706,
+            "explanation": [
+              "estados",
+              "unidos",
+              "anos",
+              "história"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "title": "Beleza Americana",
+        "neighbors": [
+          {
+            "id": 634649,
+            "title": "Homem-Aranha: Sem Volta Para Casa",
+            "score": 0.067329,
+            "explanation": [
+              "pede",
+              "vida",
+              "ajuda",
+              "não"
+            ]
+          },
+          {
+            "id": 346698,
+            "title": "Barbie",
+            "score": 0.064161,
+            "explanation": [
+              "beleza",
+              "começa",
+              "não"
+            ]
+          },
+          {
+            "id": 616037,
+            "title": "Thor: Amor e Trovão",
+            "score": 0.061622,
+            "explanation": [
+              "jane",
+              "pede",
+              "ajuda"
+            ]
+          },
+          {
+            "id": 101,
+            "title": "O Profissional",
+            "score": 0.059478,
+            "explanation": [
+              "vizinho",
+              "conhece",
+              "vida",
+              "pai"
+            ]
+          },
+          {
+            "id": 559,
+            "title": "Homem-Aranha 3",
+            "score": 0.05674,
+            "explanation": [
+              "jane"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "word2vec_sem_stopwords": {
+    "k": 5,
+    "documents_evaluated": 428,
+    "genre_agreement_at_k": 0.516822,
+    "genre_agreement_baseline": 0.307131,
+    "examples": [
+      {
+        "id": 603,
+        "title": "Matrix",
+        "neighbors": [
+          {
+            "id": 9426,
+            "title": "A Mosca",
+            "score": 0.78678,
+            "explanation": [
+              "descobre ≈ percebe",
+              "pesadelos ≈ terríveis",
+              "começa ≈ vai",
+              "jovem ≈ homem",
+              "sempre ≈ não"
+            ]
+          },
+          {
+            "id": 854,
+            "title": "O Máskara",
+            "score": 0.738026,
+            "explanation": [
+              "enquanto",
+              "pessoas ≈ mulheres",
+              "usa ≈ usar",
+              "thomas ≈ carlyle",
+              "repete ≈ transforma"
+            ]
+          },
+          {
+            "id": 68726,
+            "title": "Círculo de Fogo",
+            "score": 0.737626,
+            "explanation": [
+              "pessoas",
+              "começa ≈ começam",
+              "enquanto ≈ entretanto",
+              "misteriosos ≈ gigantescos",
+              "morpheus ≈ kaiju"
+            ]
+          },
+          {
+            "id": 19995,
+            "title": "Avatar",
+            "score": 0.737457,
+            "explanation": [
+              "começa",
+              "realidade",
+              "ilusão ≈ intuição",
+              "mundo ≈ planeta",
+              "anderson ≈ jake"
+            ]
+          },
+          {
+            "id": 10386,
+            "title": "O Gigante de Ferro",
+            "score": 0.735664,
+            "explanation": [
+              "está ≈ estava",
+              "jovem ≈ garoto",
+              "atormentado ≈ obcecado",
+              "conhece ≈ encontra",
+              "morpheus ≈ robô"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "title": "Forrest Gump: O Contador de Histórias",
+        "neighbors": [
+          {
+            "id": 640,
+            "title": "Prenda-Me se For Capaz",
+            "score": 0.694875,
+            "explanation": [
+              "estados",
+              "anos",
+              "história",
+              "unidos",
+              "continua ≈ está"
+            ]
+          },
+          {
+            "id": 115,
+            "title": "O Grande Lebowski",
+            "score": 0.671669,
+            "explanation": [
+              "anos",
+              "vietnã",
+              "guerra",
+              "continua ≈ vai",
+              "consegue ≈ irá"
+            ]
+          },
+          {
+            "id": 628,
+            "title": "Entrevista com o Vampiro",
+            "score": 0.67151,
+            "explanation": [
+              "anos",
+              "rapaz ≈ homem",
+              "consegue ≈ precisa",
+              "história ≈ vida",
+              "jenny ≈ brad"
+            ]
+          },
+          {
+            "id": 9769,
+            "title": "Lolita",
+            "score": 0.669898,
+            "explanation": [
+              "estados",
+              "unidos",
+              "rapaz ≈ homem",
+              "continua ≈ está",
+              "jenny ≈ clare"
+            ]
+          },
+          {
+            "id": 6435,
+            "title": "Da Magia à Sedução",
+            "score": 0.666605,
+            "explanation": [
+              "anos",
+              "quarenta ≈ duzentos",
+              "jenny ≈ sally",
+              "rapaz ≈ homem",
+              "consegue ≈ convence"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "title": "Beleza Americana",
+        "neighbors": [
+          {
+            "id": 210577,
+            "title": "Garota Exemplar",
+            "score": 0.808021,
+            "explanation": [
+              "começa",
+              "dia",
+              "pai ≈ marido",
+              "amiga ≈ irmã",
+              "jane ≈ margo"
+            ]
+          },
+          {
+            "id": 6435,
+            "title": "Da Magia à Sedução",
+            "score": 0.796161,
+            "explanation": [
+              "melhor",
+              "vida",
+              "volta",
+              "momento",
+              "pai ≈ marido"
+            ]
+          },
+          {
+            "id": 4951,
+            "title": "10 Coisas Que Eu Odeio em Você",
+            "score": 0.794727,
+            "explanation": [
+              "dia",
+              "amiga ≈ irmã",
+              "pai ≈ namorado",
+              "conhece ≈ apaixona",
+              "impotente ≈ insuportável"
+            ]
+          },
+          {
+            "id": 8966,
+            "title": "Crepúsculo",
+            "score": 0.794233,
+            "explanation": [
+              "pai",
+              "volta",
+              "amiga ≈ mãe",
+              "conhece ≈ sabe",
+              "jane ≈ isabella"
+            ]
+          },
+          {
+            "id": 2251,
+            "title": "Infidelidade",
+            "score": 0.775297,
+            "explanation": [
+              "começa",
+              "não",
+              "vida",
+              "casado ≈ casada",
+              "pai ≈ filho"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "contextual_minilm": {
+    "k": 5,
+    "documents_evaluated": 428,
+    "genre_agreement_at_k": 0.548598,
+    "genre_agreement_baseline": 0.307131,
+    "examples": [
+      {
+        "id": 603,
+        "title": "Matrix",
+        "neighbors": [
+          {
+            "id": 686,
+            "title": "Contato",
+            "score": 0.588017,
+            "explanation": []
+          },
+          {
+            "id": 585,
+            "title": "Monstros S.A.",
+            "score": 0.584114,
+            "explanation": []
+          },
+          {
+            "id": 377,
+            "title": "A Hora do Pesadelo",
+            "score": 0.57685,
+            "explanation": []
+          },
+          {
+            "id": 9426,
+            "title": "A Mosca",
+            "score": 0.56689,
+            "explanation": []
+          },
+          {
+            "id": 550988,
+            "title": "Free Guy: Assumindo o Controle",
+            "score": 0.540256,
+            "explanation": []
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "title": "Forrest Gump: O Contador de Histórias",
+        "neighbors": [
+          {
+            "id": 640,
+            "title": "Prenda-Me se For Capaz",
+            "score": 0.543191,
+            "explanation": []
+          },
+          {
+            "id": 37165,
+            "title": "O Show de Truman: O Show da Vida",
+            "score": 0.452075,
+            "explanation": []
+          },
+          {
+            "id": 115,
+            "title": "O Grande Lebowski",
+            "score": 0.451963,
+            "explanation": []
+          },
+          {
+            "id": 335984,
+            "title": "Blade Runner 2049",
+            "score": 0.427695,
+            "explanation": []
+          },
+          {
+            "id": 822119,
+            "title": "Capitão América: Admirável Mundo Novo",
+            "score": 0.427673,
+            "explanation": []
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "title": "Beleza Americana",
+        "neighbors": [
+          {
+            "id": 2251,
+            "title": "Infidelidade",
+            "score": 0.532029,
+            "explanation": []
+          },
+          {
+            "id": 765,
+            "title": "Uma Noite Alucinante 2",
+            "score": 0.483565,
+            "explanation": []
+          },
+          {
+            "id": 829557,
+            "title": "365 Dias: Hoje",
+            "score": 0.4791,
+            "explanation": []
+          },
+          {
+            "id": 1813,
+            "title": "Advogado do Diabo",
+            "score": 0.473525,
+            "explanation": []
+          },
+          {
+            "id": 345,
+            "title": "De Olhos Bem Fechados",
+            "score": 0.470614,
+            "explanation": []
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,9 +1,94 @@
+# ----------------------------------------------------------------------------
+# Segredos e credenciais: nunca versionar. Só os modelos .env.example entram.
+# ----------------------------------------------------------------------------
 .env
+.env.*
+*.env
+!.env.example
+!**/.env.example
+.secrets/
+*.pem
+*.key
+
+# ----------------------------------------------------------------------------
+# Python: ambientes, bytecode e empacotamento
+# ----------------------------------------------------------------------------
 .venv/
+venv/
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+wheels/
 
+# Ferramentas de teste, cobertura, lint e tipos
+.pytest_cache/
+.hypothesis/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+.tox/
+.nox/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.pytype/
 
+# Jupyter
+.ipynb_checkpoints/
 
+# ----------------------------------------------------------------------------
+# Modelos pré-treinados e caches (word2vec/transformers chegam a GBs).
+# O cache do Hugging Face fica fora do repositório; estes padrões evitam
+# commits acidentais caso HF_HOME ou uma cópia local aponte para cá.
+# ----------------------------------------------------------------------------
+.cache/
+.hf_cache/
+# Ancorados na raiz: um pacote de código como app/models/ não pode ser ignorado.
+/huggingface/
+/models/
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.h5
+pytorch_model.bin
 
+# ----------------------------------------------------------------------------
+# Dados: só a amostra entregue é versionada. Reproduções locais sugeridas no
+# README (reproducao, minha_execucao, nova_coleta, lexical, completo...) ficam
+# fora. Ao entregar uma nova coleta, acrescente uma exceção como as abaixo.
+# ----------------------------------------------------------------------------
+data/raw/*
+!data/raw/tmdb_2026-09-12/
+data/processed/*
+!data/processed/tmdb_2026-09-12/
+data/vectors/*
+!data/vectors/tmdb_2026-09-12/
 
+# ----------------------------------------------------------------------------
+# Front-end (caso ferramentas de build sejam adotadas)
+# ----------------------------------------------------------------------------
+node_modules/
+.parcel-cache/
+
+# ----------------------------------------------------------------------------
+# Sistema operacional, OneDrive/Office e editores
+# ----------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+~$*
+*.tmp
+*.log
+*.swp
+*~
+.idea/
+.vscode/*
+!.vscode/extensions.json

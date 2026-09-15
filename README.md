@@ -1,4 +1,4 @@
-# PLN 2026/2 — Etapa Prática 1
+# PLN 2026/2 — Etapas Práticas 1 e 2
 
 **Coleta e preparação de sinopses de filmes para comparação posterior de técnicas de PLN.** O projeto preserva o corpus original e seis representações alinhadas pelo ID do TMDB. A consulta de filmes na interface é uma demonstração auxiliar; a entrega desta etapa está nos dados, scripts e evidências abaixo.
 
@@ -17,11 +17,12 @@ A amostra real de 12/09/2026 contém **430 filmes únicos**, **428 sinopses pree
 | Stopwords e pontuação — 0,3 | [Lista versionada](config/stopwords_pt.txt), [lista efetivamente usada](data/processed/tmdb_2026-09-12/stopwords_used.json) | Acentos, números e negações preservados; títulos fora do filtro |
 | Comparação entre recortes e coleta automatizada — bônus a avaliar | [Resultados calculados](data/processed/tmdb_2026-09-12/report.md) | Comparação dos 12 recortes e coleta de múltiplas páginas em um comando |
 
-Os pesos identificam dimensões da rubrica; não são notas atribuídas à entrega. Stemming, lematização e vetorização **não foram executados** nesta versão. A comparação entre recortes e a coleta automatizada estão implementadas, mas a concessão do bônus cabe ao professor.
+Os pesos identificam dimensões da rubrica; não são notas atribuídas à entrega. Stemming, lematização e vetorização **não foram executados** na Etapa 1; a vetorização está na [Etapa 2](#etapa-2--representações-vetoriais). A comparação entre recortes e a coleta automatizada estão implementadas, mas a concessão do bônus cabe ao professor.
 
 - [Documento Word da entrega](docs/PLN_2026_2_Avaliacao_Pratica_1_Atualizado.docx)
 - [Validação técnica](docs/validacao.md)
-- [Decisões e limitações](docs/decisoes.md)
+- [Decisões e limitações](docs/decisoes.md) e [registros de decisão (ADRs)](docs/adr/README.md)
+- [Arquitetura do código](docs/arquitetura.md)
 
 ## Ambiente e reprodução
 
@@ -31,9 +32,12 @@ Requisitos: Git, [uv](https://docs.astral.sh/uv/) e Python 3.14 ou superior, con
 cd backend
 uv sync --frozen
 uv run --frozen python -m unittest discover -s tests -v
+uv run --frozen ruff check src tests
+uv run --frozen ruff format --check src tests
+uv run --frozen mypy
 ```
 
-O arquivo `uv.lock` fixa as dependências resolvidas. Os módulos do corpus usam a biblioteca padrão do Python; a coleta utiliza o cliente HTTP do projeto. Os testes usam dados controlados, identificados como testes, sem consultas à API.
+As mesmas verificações rodam no CI (`.github/workflows/ci.yml`). O arquivo `uv.lock` fixa as dependências resolvidas. Os módulos do corpus usam a biblioteca padrão do Python; a coleta utiliza o cliente HTTP do projeto. Os testes usam dados controlados, identificados como testes, sem consultas à API.
 
 ### Repetir as transformações sem rede
 
@@ -44,11 +48,11 @@ uv run --frozen python -m app.corpus process --input ../data/raw/tmdb_2026-09-12
 uv run --frozen python -m app.corpus verify --input ../data/processed/minha_execucao
 ```
 
-Não é necessário token para esses dois comandos. A pasta de saída não pode existir: isso evita substituir uma execução anterior. Para repetir outra vez, escolha outro nome. Com as mesmas entradas e regras, os arquivos de conteúdo são idênticos; o manifesto varia por registrar a hora da execução e a identidade do código.
+Não é necessário token para esses dois comandos. A pasta de saída não pode existir: isso evita substituir uma execução anterior. Para repetir outra vez, escolha outro nome. Com as mesmas entradas e regras, os arquivos de conteúdo são idênticos byte a byte em qualquer sistema operacional (sempre com quebra de linha LF); o manifesto varia por registrar a hora da execução e a identidade do código.
 
 ### Fazer uma nova coleta real
 
-Crie `backend/.env` a partir de `backend/.env.example` e preencha `TMDB_BEARER_TOKEN` com sua credencial. O arquivo local é ignorado pelo Git. Variáveis de ambiente também são aceitas. Nunca copie a credencial para comandos versionados, notebooks, saídas ou screenshots.
+Crie `backend/.env` a partir de `backend/.env.example` e preencha `TMDB_BEARER_TOKEN` com o token de leitura (Bearer) do TMDB; a chave `api_key` não é mais aceita. O `.env` é ignorado pelo Git, e variáveis de ambiente têm precedência sobre ele. Nunca copie a credencial para comandos versionados, notebooks, saídas, screenshots ou CI. Uma credencial chegou a ser versionada em um commit antigo e precisa ser revogada no TMDB ([ADR 0002](docs/adr/0002-credencial-e-exposicao-da-api.md)).
 
 Em `backend`:
 
@@ -78,10 +82,10 @@ Cada linha possui o mesmo `id` da correspondente nas demais etapas. `metadata.js
 Com a credencial configurada, em `backend`:
 
 ```bash
-uv run --frozen uvicorn app.main:app --reload
+uv run --frozen uvicorn app.main:app --host 127.0.0.1 --reload
 ```
 
-API: <http://127.0.0.1:8000/docs>. Em outro terminal, a partir da raiz:
+A API não inicia sem `TMDB_BEARER_TOKEN`. API: <http://127.0.0.1:8000/docs>. Em outro terminal, a partir da raiz:
 
 ```bash
 cd frontend
@@ -93,15 +97,38 @@ Interface: <http://127.0.0.1:5500>. A pesquisa permite escolher título, prefer�
 | Rota implementada | Função |
 |---|---|
 | `GET /saude` | Saúde da aplicação |
-| `GET /busca?q=Matrix` | Busca direta por título |
-| `GET /filmes/603` | Detalhes do filme |
-| `GET /pesquisa?q=...&modo=auto` | Título ou preferências reconhecidas; `modo=titulo` e `modo=descoberta` também disponíveis |
+| `GET /filmes/603` | Detalhes do filme, com elenco e vídeos |
+| `GET /pesquisa?q=...&modo=auto` | Título ou preferências reconhecidas; `modo=titulo` e `modo=descoberta` também disponíveis; `q` com até 200 caracteres |
 
-O cliente chama `/discover/movie` para preferências; não há rota pública local `/descobrir`. O CORS permite apenas as duas origens locais da interface, definidas em `backend/src/app/main.py`.
+A rota `/busca` foi removida: `GET /pesquisa?q=...&modo=titulo` faz a mesma busca por título. O cliente chama `/discover/movie` para preferências. Configurações opcionais em `backend/.env`: `TMDB_LANGUAGE`, `TMDB_TIMEOUT`, `CORS_ORIGINS` e `RATE_LIMIT_PER_MINUTE` (padrão 60 requisições por minuto por IP; acima disso, HTTP 429). O CORS só libera as origens da interface e não é controle de acesso; por isso a API roda em `127.0.0.1` e tem limite de requisições. A interface lê o endereço da API na meta tag `api-base` de `frontend/index.html`, que também define a política de segurança de conteúdo (CSP).
+
+## Etapa 2 — Representações vetoriais
+
+O módulo `app.vectors` compara seis representações das mesmas sinopses:
+- BoW e TF-IDF, a partir das etapas `05` e `06`;
+- word2vec pré-treinado do NILC;
+- um modelo contextual multilíngue (sentence-transformers).
+
+Sobre cada uma, calcula similaridade do cosseno, clustering K-Means, projeção 2D, palavras vizinhas e avaliação de consultas anotadas. Em `backend`:
+
+```bash
+# somente BoW e TF-IDF (leve)
+uv run --frozen python -m app.vectors build --input ../data/processed/tmdb_2026-09-12 --output ../data/vectors/lexical --config ../config/vetorizacao.json --queries ../config/consultas.json
+# completo: instala o extra opcional (torch CPU) e baixa ~1,6 GB de modelos na primeira vez
+uv sync --frozen --extra semantico
+uv run --frozen --extra semantico python -m app.vectors build --input ../data/processed/tmdb_2026-09-12 --output ../data/vectors/completo --config ../config/vetorizacao_semantica.json --queries ../config/consultas.json
+uv run --frozen python -m app.vectors verify --input ../data/vectors/completo
+```
+
+No caso da orientação do professor, a consulta “filme sobre simulação da realidade” coloca Matrix em 11º a 69º lugar nas representações lexicais, porque “simulação” não aparece na sinopse. Com word2vec, Matrix sobe para 5º; com o modelo contextual, para 2º.
+
+- [Decisões, arquitetura e segurança](docs/vetorizacao.md)
+- [Resultados calculados](data/vectors/tmdb_2026-09-12/report.md)
+- Configurações [lexical](config/vetorizacao.json) e [completa](config/vetorizacao_semantica.json); [consultas anotadas](config/consultas.json)
 
 ## Próxima etapa
 
-Usar as mesmas sinopses e consultas de avaliação para comparar representações vetoriais e recuperação. O exemplo de Matrix envolve encontrar assuntos relacionados à sinopse; a mera filtragem por gênero não satisfaz esse objetivo. A palavra “simulação” não aparece literalmente na sinopse coletada de Matrix, portanto busca por contagem de palavras não garante recuperá-lo por esse termo.
+Ampliar as consultas anotadas e a lista de filmes relevantes antes de escolher uma representação. As métricas atuais usam só dois casos de Matrix e servem de ilustração, não de avaliação estatística.
 
 ## Fonte e atribuição
 

@@ -1,0 +1,455 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 540" width="760" height="540" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" role="img">
+<title>word2vec_sem_stopwords: projeção 2D das sinopses</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="48" y="48" font-size="15" font-weight="600" fill="#1f1f1f">word2vec_sem_stopwords: projeção 2D das sinopses</text>
+<rect x="48" y="76" width="454" height="416" fill="none" stroke="#d9d9d9"/>
+<text x="275.0" y="526" text-anchor="middle" fill="#555555">Componente 1 (1.0% da variância)</text>
+<text x="16" y="284.0" text-anchor="middle" fill="#555555" transform="rotate(-90 16 284.0)">Componente 2 (7.4% da variância)</text>
+<circle cx="176.2" cy="286.4" r="3.5" fill="#9A9A9A" fill-opacity="0.8"><title>Forrest Gump: O Contador de Histórias (13) — Mais de um gênero de coleta</title></circle>
+<circle cx="127.9" cy="319.8" r="3.5" fill="#9A9A9A" fill-opacity="0.8"><title>Brilho Eterno de uma Mente sem Lembranças (38) — Mais de um gênero de coleta</title></circle>
+<circle cx="155.2" cy="134.4" r="3.5" fill="#9A9A9A" fill-opacity="0.8"><title>Blade Runner: O Caçador de Andróides (78) — Mais de um gênero de coleta</title></circle>
+<circle cx="123.9" cy="321.7" r="3.5" fill="#9A9A9A" fill-opacity="0.8"><title>De Volta para o Futuro (105) — Mais de um gênero de coleta</title></circle>
+<circle cx="156.4" cy="303.8" r="3.5" fill="#9A9A9A" fill-opacity="0.8"><title>De Volta para o Futuro II (165) — Mais de um gênero de coleta</title></circle>
+<circle cx="202.6" cy="148.6" r="3.5" fill="#9A9A9A" fill-opacity="0.8"><title>Extermínio (170) — Mais de um gênero de coleta</title></circle>
+<circle cx="268.6" cy="372.8" r="3.5" fill="#9A9A9A" fill-opacity="0.8"><title>O Diabo Veste Prada (350) — Mais de um gênero de coleta</title></circle>
+<circle cx="164.2" cy="167.1" r="3.5" fill="#9A9A9A" fill-opacity="0.8"><title>MIB - Homens de Preto (607) — Mais de um gênero de coleta</title></circle>
+<circle cx="166.2" cy="253.4" r="3.5" fill="#9A9A9A" fill-opacity="0.8"><title>A Vida é Bela (637) — Mais de um gênero de coleta</title></circle>
+<circle cx="167.0" cy="374.6" r="3.5" fill="#9A9A9A" fill-opacity="0.8"><title>Uma Babá Quase Perfeita (788) — Mais de um gênero de coleta</title></circle>
+<circle cx="214.6" cy="172.2" r="3.5" fill="#9A9A9A" fill-opacity="0.8"><title>Gremlins (927) — Mais de um gênero de coleta</title></circle>
+<circle cx="135.9" cy="166.1" r="3.5" fill="#9A9A9A" fill-opacity="0.8"><title>S.O.S.: Tem um Louco Solto no Espaço (957) — Mais de um gênero de coleta</title></circle>
+<circle cx="111.3" cy="175.5" r="3.5" fill="#9A9A9A" fill-opacity="0.8"><title>O Enigma de Outro Mundo (1091) — Mais de um gênero de coleta</title></circle>
+<circle cx="183.8" cy="233.0" r="3.5" fill="#9A9A9A" fill-opacity="0.8"><title>O Grande Truque (1124) — Mais de um gênero de coleta</title></circle>
+<circle cx="123.7" cy="409.7" r="3.5" fill="#9A9A9A" fill-opacity="0.8"><title>Advogado do Diabo (1813) — Mais de um gênero de coleta</title></circle>
+<circle cx="199.7" cy="171.4" r="3.5" fill="#9A9A9A" fill-opacity="0.8"><title>O Enigma do Horizonte (8413) — Mais de um gênero de coleta</title></circle>
+<circle cx="103.2" cy="221.1" r="3.5" fill="#9A9A9A" fill-opacity="0.8"><title>Do Fundo do Mar (8914) — Mais de um gênero de coleta</title></circle>
+<circle cx="110.4" cy="314.1" r="3.5" fill="#9A9A9A" fill-opacity="0.8"><title>A Mosca (9426) — Mais de um gênero de coleta</title></circle>
+<circle cx="212.5" cy="268.0" r="3.5" fill="#9A9A9A" fill-opacity="0.8"><title>Meninas Malvadas (10625) — Mais de um gênero de coleta</title></circle>
+<circle cx="168.9" cy="316.4" r="3.5" fill="#9A9A9A" fill-opacity="0.8"><title>Lilo &amp; Stitch (11544) — Mais de um gênero de coleta</title></circle>
+<circle cx="189.3" cy="405.3" r="3.5" fill="#9A9A9A" fill-opacity="0.8"><title>A Proposta (18240) — Mais de um gênero de coleta</title></circle>
+<circle cx="181.4" cy="251.2" r="3.5" fill="#9A9A9A" fill-opacity="0.8"><title>Dilwale vai levar a noiva (19404) — Mais de um gênero de coleta</title></circle>
+<circle cx="135.9" cy="206.0" r="3.5" fill="#9A9A9A" fill-opacity="0.8"><title>Meu Malvado Favorito (20352) — Mais de um gênero de coleta</title></circle>
+<circle cx="492.0" cy="224.4" r="3.5" fill="#9A9A9A" fill-opacity="0.8"><title>Uma Odisséia Chinesa: Parte Dois – Cinderela (21835) — Mais de um gênero de coleta</title></circle>
+<circle cx="129.7" cy="330.5" r="3.5" fill="#9A9A9A" fill-opacity="0.8"><title>O Show de Truman: O Show da Vida (37165) — Mais de um gênero de coleta</title></circle>
+<circle cx="189.0" cy="248.7" r="3.5" fill="#9A9A9A" fill-opacity="0.8"><title>Gigantes de Aço (39254) — Mais de um gênero de coleta</title></circle>
+<circle cx="189.7" cy="403.2" r="3.5" fill="#9A9A9A" fill-opacity="0.8"><title>Cisne Negro (44214) — Mais de um gênero de coleta</title></circle>
+<circle cx="244.1" cy="149.2" r="3.5" fill="#9A9A9A" fill-opacity="0.8"><title>Prometheus (70981) — Mais de um gênero de coleta</title></circle>
+<circle cx="191.0" cy="214.1" r="3.5" fill="#9A9A9A" fill-opacity="0.8"><title>Guerra Mundial Z (72190) — Mais de um gênero de coleta</title></circle>
+<circle cx="188.7" cy="286.8" r="3.5" fill="#9A9A9A" fill-opacity="0.8"><title>Intocáveis (77338) — Mais de um gênero de coleta</title></circle>
+<circle cx="232.7" cy="310.1" r="3.5" fill="#9A9A9A" fill-opacity="0.8"><title>A Iniciação (81774) — Mais de um gênero de coleta</title></circle>
+<circle cx="159.4" cy="269.4" r="3.5" fill="#9A9A9A" fill-opacity="0.8"><title>O Lobo de Wall Street (106646) — Mais de um gênero de coleta</title></circle>
+<circle cx="161.6" cy="276.9" r="3.5" fill="#9A9A9A" fill-opacity="0.8"><title>Divertida Mente (150540) — Mais de um gênero de coleta</title></circle>
+<circle cx="145.2" cy="202.3" r="3.5" fill="#9A9A9A" fill-opacity="0.8"><title>Interestelar (157336) — Mais de um gênero de coleta</title></circle>
+<circle cx="154.0" cy="255.1" r="3.5" fill="#9A9A9A" fill-opacity="0.8"><title>Thor: Ragnarok (284053) — Mais de um gênero de coleta</title></circle>
+<circle cx="140.7" cy="271.2" r="3.5" fill="#9A9A9A" fill-opacity="0.8"><title>Perdido em Marte (286217) — Mais de um gênero de coleta</title></circle>
+<circle cx="127.0" cy="296.9" r="3.5" fill="#9A9A9A" fill-opacity="0.8"><title>Maggie - A Transformação (287424) — Mais de um gênero de coleta</title></circle>
+<circle cx="206.1" cy="371.0" r="3.5" fill="#9A9A9A" fill-opacity="0.8"><title>La La Land: Cantando Estações (313369) — Mais de um gênero de coleta</title></circle>
+<circle cx="189.6" cy="305.3" r="3.5" fill="#9A9A9A" fill-opacity="0.8"><title>Blade Runner 2049 (335984) — Mais de um gênero de coleta</title></circle>
+<circle cx="243.2" cy="194.8" r="3.5" fill="#9A9A9A" fill-opacity="0.8"><title>Um Lugar Silencioso (447332) — Mais de um gênero de coleta</title></circle>
+<circle cx="235.4" cy="482.0" r="3.5" fill="#9A9A9A" fill-opacity="0.8"><title>Era Uma Vez em… Hollywood (466272) — Mais de um gênero de coleta</title></circle>
+<circle cx="155.0" cy="254.3" r="3.5" fill="#9A9A9A" fill-opacity="0.8"><title>Green Book: O Guia (490132) — Mais de um gênero de coleta</title></circle>
+<circle cx="161.7" cy="319.1" r="3.5" fill="#9A9A9A" fill-opacity="0.8"><title>Parasita (496243) — Mais de um gênero de coleta</title></circle>
+<circle cx="152.7" cy="371.5" r="3.5" fill="#9A9A9A" fill-opacity="0.8"><title>Deadpool &amp; Wolverine (533535) — Mais de um gênero de coleta</title></circle>
+<circle cx="143.5" cy="240.4" r="3.5" fill="#9A9A9A" fill-opacity="0.8"><title>Lilo &amp; Stitch (552524) — Mais de um gênero de coleta</title></circle>
+<circle cx="202.0" cy="230.2" r="3.5" fill="#9A9A9A" fill-opacity="0.8"><title>A Substância (933260) — Mais de um gênero de coleta</title></circle>
+<circle cx="182.6" cy="226.4" r="3.5" fill="#9A9A9A" fill-opacity="0.8"><title>Sonic 3: O Filme (939243) — Mais de um gênero de coleta</title></circle>
+<circle cx="214.1" cy="134.3" r="3.5" fill="#9A9A9A" fill-opacity="0.8"><title>Alien: Romulus (945961) — Mais de um gênero de coleta</title></circle>
+<circle cx="187.6" cy="362.7" r="3.5" fill="#9A9A9A" fill-opacity="0.8"><title>Frankenstein (1062722) — Mais de um gênero de coleta</title></circle>
+<circle cx="162.3" cy="90.9" r="3.5" fill="#9A9A9A" fill-opacity="0.8"><title>Extermínio: A Evolução (1100988) — Mais de um gênero de coleta</title></circle>
+<circle cx="179.6" cy="478.4" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Beleza Americana (14) — Drama</title></circle>
+<circle cx="199.5" cy="187.5" r="3.5" fill="#009E73" fill-opacity="0.8"><title>O Quinto Elemento (18) — Ficção científica</title></circle>
+<circle cx="197.4" cy="353.2" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>9 Canções (27) — Drama</title></circle>
+<circle cx="129.4" cy="303.8" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Os 12 Macacos (63) — Ficção científica</title></circle>
+<circle cx="153.7" cy="291.8" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>A Outra História Americana (73) — Drama</title></circle>
+<circle cx="87.3" cy="282.3" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Guerra dos Mundos (74) — Ficção científica</title></circle>
+<circle cx="295.7" cy="159.5" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Armageddon (95) — Ficção científica</title></circle>
+<circle cx="239.6" cy="331.1" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Gladiador (98) — Drama</title></circle>
+<circle cx="120.6" cy="390.0" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>O Profissional (101) — Drama</title></circle>
+<circle cx="116.7" cy="217.5" r="3.5" fill="#009E73" fill-opacity="0.8"><title>O Predador (106) — Ficção científica</title></circle>
+<circle cx="179.7" cy="213.4" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Snatch: Porcos e Diamantes (107) — Comédia</title></circle>
+<circle cx="254.0" cy="216.8" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Scarface (111) — Drama</title></circle>
+<circle cx="141.5" cy="355.0" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Uma Linda Mulher (114) — Comédia</title></circle>
+<circle cx="116.0" cy="336.7" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>O Grande Lebowski (115) — Comédia</title></circle>
+<circle cx="196.6" cy="295.8" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>A Fantástica Fábrica de Chocolate (118) — Comédia</title></circle>
+<circle cx="253.2" cy="330.8" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Feitiço do Tempo (137) — Comédia</title></circle>
+<circle cx="117.9" cy="253.8" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Akira (149) — Ficção científica</title></circle>
+<circle cx="96.8" cy="318.1" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Edward Mãos de Tesoura (162) — Drama</title></circle>
+<circle cx="214.5" cy="159.3" r="3.5" fill="#009E73" fill-opacity="0.8"><title>O Predador 2: A Caçada Continua (169) — Ficção científica</title></circle>
+<circle cx="191.4" cy="155.1" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Jogos Mortais (176) — Terror</title></circle>
+<circle cx="128.4" cy="305.4" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>O Fabuloso Destino de Amélie Poulain (194) — Comédia</title></circle>
+<circle cx="186.5" cy="350.7" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Coração Valente (197) — Drama</title></circle>
+<circle cx="301.2" cy="239.4" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Sociedade dos Poetas Mortos (207) — Drama</title></circle>
+<circle cx="181.2" cy="210.7" r="3.5" fill="#009E73" fill-opacity="0.8"><title>O Exterminador do Futuro (218) — Ficção científica</title></circle>
+<circle cx="187.4" cy="404.7" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>O Poderoso Chefão: Parte III (242) — Drama</title></circle>
+<circle cx="101.9" cy="326.3" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Batman Begins (272) — Drama</title></circle>
+<circle cx="167.1" cy="308.2" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Fargo: Uma Comédia de Erros (275) — Drama</title></circle>
+<circle cx="153.7" cy="412.6" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Um Sonho de Liberdade (278) — Drama</title></circle>
+<circle cx="148.3" cy="346.7" r="3.5" fill="#009E73" fill-opacity="0.8"><title>O Exterminador do Futuro 2: O Julgamento Final (280) — Ficção científica</title></circle>
+<circle cx="130.9" cy="313.1" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Encontro Marcado (297) — Drama</title></circle>
+<circle cx="245.6" cy="319.3" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Era Uma Vez na América (311) — Drama</title></circle>
+<circle cx="202.4" cy="143.9" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Jurassic Park: O Parque dos Dinossauros (329) — Ficção científica</title></circle>
+<circle cx="108.2" cy="357.7" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>De Olhos Bem Fechados (345) — Drama</title></circle>
+<circle cx="92.0" cy="261.7" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>A Hora do Pesadelo (377) — Terror</title></circle>
+<circle cx="197.4" cy="345.6" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Batman &amp; Robin (415) — Ficção científica</title></circle>
+<circle cx="236.9" cy="210.4" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>O Pianista (423) — Drama</title></circle>
+<circle cx="187.9" cy="236.6" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>A Lista de Schindler (424) — Drama</title></circle>
+<circle cx="132.9" cy="224.3" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>A Era do Gelo (425) — Comédia</title></circle>
+<circle cx="359.5" cy="391.4" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Gênio Indomável (489) — Drama</title></circle>
+<circle cx="164.1" cy="261.4" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>À Espera de um Milagre (497) — Drama</title></circle>
+<circle cx="142.2" cy="329.4" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Clube da Luta (550) — Drama</title></circle>
+<circle cx="173.9" cy="374.2" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Homem-Aranha (557) — Ficção científica</title></circle>
+<circle cx="115.6" cy="353.6" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Homem-Aranha 3 (559) — Ficção científica</title></circle>
+<circle cx="161.4" cy="454.8" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Constantine (561) — Terror</title></circle>
+<circle cx="200.9" cy="86.0" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Tropas Estelares (563) — Ficção científica</title></circle>
+<circle cx="133.4" cy="303.4" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>O Chamado (565) — Terror</title></circle>
+<circle cx="216.5" cy="230.9" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Dança com Lobos (581) — Drama</title></circle>
+<circle cx="134.7" cy="204.8" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Monstros S.A. (585) — Comédia</title></circle>
+<circle cx="83.1" cy="308.2" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Terror em Silent Hill (588) — Terror</title></circle>
+<circle cx="162.7" cy="379.7" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Titanic (597) — Drama</title></circle>
+<circle cx="186.5" cy="313.1" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Cidade de Deus (598) — Drama</title></circle>
+<circle cx="83.5" cy="353.0" r="3.5" fill="#009E73" fill-opacity="0.8"><title>E.T.: O Extraterrestre (601) — Ficção científica</title></circle>
+<circle cx="157.7" cy="91.9" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Independence Day (602) — Ficção científica</title></circle>
+<circle cx="115.8" cy="268.8" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Matrix (603) — Ficção científica</title></circle>
+<circle cx="137.6" cy="186.6" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Matrix Reloaded (604) — Ficção científica</title></circle>
+<circle cx="189.1" cy="349.8" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Os Caça-Fantasmas (620) — Comédia</title></circle>
+<circle cx="110.5" cy="283.7" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>O Último Portal (622) — Terror</title></circle>
+<circle cx="130.4" cy="400.8" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Entrevista com o Vampiro (628) — Terror</title></circle>
+<circle cx="228.2" cy="166.5" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Os Suspeitos (629) — Drama</title></circle>
+<circle cx="111.1" cy="321.2" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Prenda-Me se For Capaz (640) — Drama</title></circle>
+<circle cx="109.9" cy="206.0" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Aliens: O Resgate (679) — Ficção científica</title></circle>
+<circle cx="161.1" cy="389.6" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Pulp Fiction: Tempo de Violência (680) — Comédia</title></circle>
+<circle cx="86.7" cy="308.0" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Contato (686) — Ficção científica</title></circle>
+<circle cx="204.9" cy="230.7" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>O Iluminado (694) — Terror</title></circle>
+<circle cx="187.5" cy="258.1" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Top Gun - Ases Indomáveis (744) — Drama</title></circle>
+<circle cx="122.7" cy="420.3" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>O Sexto Sentido (745) — Drama</title></circle>
+<circle cx="114.8" cy="368.5" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Todo Mundo Quase Morto (747) — Terror</title></circle>
+<circle cx="202.3" cy="227.3" r="3.5" fill="#009E73" fill-opacity="0.8"><title>V de Vingança (752) — Ficção científica</title></circle>
+<circle cx="173.1" cy="412.6" r="3.5" fill="#009E73" fill-opacity="0.8"><title>A Outra Face (754) — Ficção científica</title></circle>
+<circle cx="164.1" cy="198.9" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Um Drink no Inferno (755) — Terror</title></circle>
+<circle cx="81.4" cy="227.5" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Uma Noite Alucinante: A Morte do Demônio (764) — Terror</title></circle>
+<circle cx="107.9" cy="344.2" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Uma Noite Alucinante 2 (765) — Terror</title></circle>
+<circle cx="124.6" cy="249.3" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Uma Noite Alucinante 3 (766) — Terror</title></circle>
+<circle cx="208.1" cy="402.4" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Os Bons Companheiros (769) — Drama</title></circle>
+<circle cx="154.1" cy="297.0" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Esqueceram de Mim 2: Perdido em Nova York (772) — Comédia</title></circle>
+<circle cx="106.9" cy="273.7" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Shrek (808) — Comédia</title></circle>
+<circle cx="137.2" cy="392.3" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Shrek 2 (809) — Comédia</title></circle>
+<circle cx="166.7" cy="423.3" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Shrek Terceiro (810) — Comédia</title></circle>
+<circle cx="175.1" cy="321.8" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Apertem os Cintos, o Piloto Sumiu (813) — Comédia</title></circle>
+<circle cx="156.1" cy="387.2" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Um Lobisomem Americano em Londres (814) — Terror</title></circle>
+<circle cx="217.9" cy="233.1" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Duna (841) — Ficção científica</title></circle>
+<circle cx="90.8" cy="380.6" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>O Máskara (854) — Comédia</title></circle>
+<circle cx="234.1" cy="301.3" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>O Resgate do Soldado Ryan (857) — Drama</title></circle>
+<circle cx="121.2" cy="318.8" r="3.5" fill="#009E73" fill-opacity="0.8"><title>O Vingador do Futuro (861) — Ficção científica</title></circle>
+<circle cx="106.6" cy="313.4" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Toy Story: Um Mundo de Aventuras (862) — Comédia</title></circle>
+<circle cx="145.8" cy="374.7" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Toy Story 2 (863) — Comédia</title></circle>
+<circle cx="186.0" cy="301.0" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Carros (920) — Comédia</title></circle>
+<circle cx="121.1" cy="220.6" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Madrugada dos Mortos (924) — Terror</title></circle>
+<circle cx="138.1" cy="340.0" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Fogo Contra Fogo (949) — Drama</title></circle>
+<circle cx="96.2" cy="243.8" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Madagascar (953) — Comédia</title></circle>
+<circle cx="200.2" cy="242.1" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Rambo: Programado Para Matar (1368) — Drama</title></circle>
+<circle cx="95.9" cy="360.8" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>O Labirinto do Fauno (1417) — Drama</title></circle>
+<circle cx="135.3" cy="366.9" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Os Infiltrados (1422) — Drama</title></circle>
+<circle cx="187.4" cy="355.5" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Cruzada (1495) — Drama</title></circle>
+<circle cx="98.7" cy="337.6" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Os Garotos Perdidos (1547) — Terror</title></circle>
+<circle cx="157.9" cy="177.5" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Extermínio 2 (1562) — Terror</title></circle>
+<circle cx="89.0" cy="337.7" r="3.5" fill="#009E73" fill-opacity="0.8"><title>O Incrível Hulk (1724) — Ficção científica</title></circle>
+<circle cx="144.8" cy="295.9" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Homem de Ferro (1726) — Ficção científica</title></circle>
+<circle cx="223.7" cy="287.1" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Guerra nas Estrelas: O Império Contra-Ataca (1891) — Ficção científica</title></circle>
+<circle cx="190.1" cy="333.6" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Guerra nas Estrelas: O Retorno de Jedi (1892) — Ficção científica</title></circle>
+<circle cx="247.0" cy="277.2" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Star Wars: Episódio I - A Ameaça Fantasma (1893) — Ficção científica</title></circle>
+<circle cx="197.7" cy="322.4" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Twin Peaks: Os Últimos Dias de Laura Palmer (1923) — Terror</title></circle>
+<circle cx="145.3" cy="394.7" r="3.5" fill="#009E73" fill-opacity="0.8"><title>O Espetacular Homem-Aranha (1930) — Ficção científica</title></circle>
+<circle cx="197.9" cy="254.4" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Os Outros (1933) — Terror</title></circle>
+<circle cx="243.6" cy="150.0" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Eu, Robô (2048) — Ficção científica</title></circle>
+<circle cx="251.7" cy="285.2" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Ratatouille (2062) — Comédia</title></circle>
+<circle cx="177.5" cy="269.0" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>American Pie: A Primeira Vez é Inesquecível (2105) — Comédia</title></circle>
+<circle cx="213.4" cy="384.1" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>A Hora do Rush (2109) — Comédia</title></circle>
+<circle cx="146.2" cy="455.7" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Infidelidade (2251) — Drama</title></circle>
+<circle cx="111.9" cy="241.8" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Space Jam: O Jogo do Século (2300) — Ficção científica</title></circle>
+<circle cx="90.4" cy="361.4" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Cidade das Sombras (2666) — Ficção científica</title></circle>
+<circle cx="214.6" cy="209.3" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>A Bruxa de Blair (2667) — Terror</title></circle>
+<circle cx="172.2" cy="325.8" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>A Lenda do Cavaleiro Sem Cabeça (2668) — Terror</title></circle>
+<circle cx="165.4" cy="300.9" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>O Chamado (2671) — Terror</title></circle>
+<circle cx="231.3" cy="126.8" r="3.5" fill="#009E73" fill-opacity="0.8"><title>O Segredo do Abismo (2756) — Ficção científica</title></circle>
+<circle cx="179.3" cy="411.1" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>A Família Addams (2907) — Comédia</title></circle>
+<circle cx="86.8" cy="249.4" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Os Caça-Fantasmas 2 (2978) — Comédia</title></circle>
+<circle cx="180.6" cy="195.6" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Os Fantasmas se Divertem (4011) — Comédia</title></circle>
+<circle cx="219.2" cy="142.3" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Pânico (4232) — Terror</title></circle>
+<circle cx="150.1" cy="308.2" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Pânico 2 (4233) — Terror</title></circle>
+<circle cx="102.6" cy="325.0" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Todo Mundo em Pânico (4247) — Comédia</title></circle>
+<circle cx="179.2" cy="360.4" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Orgulho e Preconceito (4348) — Drama</title></circle>
+<circle cx="229.0" cy="202.6" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Sexta-Feira 13 (4488) — Terror</title></circle>
+<circle cx="145.0" cy="459.1" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>10 Coisas Que Eu Odeio em Você (4951) — Comédia</title></circle>
+<circle cx="167.1" cy="275.2" r="3.5" fill="#009E73" fill-opacity="0.8"><title>RoboCop - O Policial do Futuro (5548) — Ficção científica</title></circle>
+<circle cx="86.6" cy="271.7" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>O Nevoeiro (5876) — Terror</title></circle>
+<circle cx="196.3" cy="341.5" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Drácula de Bram Stoker (6114) — Terror</title></circle>
+<circle cx="86.6" cy="402.9" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Da Magia à Sedução (6435) — Comédia</title></circle>
+<circle cx="123.8" cy="245.2" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Eu Sou a Lenda (6479) — Ficção científica</title></circle>
+<circle cx="162.0" cy="374.3" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Van Helsing: O Caçador de Monstros (7131) — Terror</title></circle>
+<circle cx="195.3" cy="150.2" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Os Sem-Floresta (7518) — Comédia</title></circle>
+<circle cx="144.2" cy="283.1" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>A Garota da Fábrica de Caixas de Fósforos (7974) — Drama</title></circle>
+<circle cx="146.4" cy="267.5" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Alien³ (8077) — Terror</title></circle>
+<circle cx="97.9" cy="230.8" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Alien: A Ressurreição (8078) — Terror</title></circle>
+<circle cx="208.4" cy="174.3" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>[REC] (8329) — Terror</title></circle>
+<circle cx="185.3" cy="199.1" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>A Era do Gelo 3 (8355) — Comédia</title></circle>
+<circle cx="138.1" cy="242.7" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Meu Nome é Taylor, Drillbit Taylor (8457) — Comédia</title></circle>
+<circle cx="186.8" cy="209.8" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Debi &amp; Lóide: Dois Idiotas em Apuros (8467) — Comédia</title></circle>
+<circle cx="290.7" cy="405.4" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>O Rei Leão (8587) — Drama</title></circle>
+<circle cx="165.8" cy="168.7" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Impacto Profundo (8656) — Ficção científica</title></circle>
+<circle cx="126.5" cy="270.7" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Holocausto Canibal (8689) — Terror</title></circle>
+<circle cx="141.7" cy="191.2" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Cemitério Maldito (8913) — Terror</title></circle>
+<circle cx="218.1" cy="180.7" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Olhos Famintos (8922) — Terror</title></circle>
+<circle cx="125.1" cy="443.4" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Crepúsculo (8966) — Drama</title></circle>
+<circle cx="200.0" cy="275.1" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Police Story: A Guerra das Drogas (9056) — Comédia</title></circle>
+<circle cx="225.7" cy="402.6" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Jovens Bruxas (9100) — Terror</title></circle>
+<circle cx="112.8" cy="171.6" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Prova Final (9276) — Terror</title></circle>
+<circle cx="149.6" cy="228.9" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Premonição 3 (9286) — Terror</title></circle>
+<circle cx="107.0" cy="303.1" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>A Casa Monstro (9297) — Terror</title></circle>
+<circle cx="184.5" cy="215.5" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Ghost in the Shell: O Fantasma do Futuro (9323) — Ficção científica</title></circle>
+<circle cx="181.5" cy="242.1" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Loucademia de Polícia (9336) — Comédia</title></circle>
+<circle cx="142.5" cy="308.9" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Os Goonies (9340) — Comédia</title></circle>
+<circle cx="152.0" cy="205.8" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Premonição 2 (9358) — Terror</title></circle>
+<circle cx="131.8" cy="281.3" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Anaconda (9360) — Terror</title></circle>
+<circle cx="246.3" cy="99.2" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>O Ataque dos Vermes Malditos (9362) — Terror</title></circle>
+<circle cx="179.5" cy="459.5" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>A Morte lhe Cai Bem (9374) — Terror</title></circle>
+<circle cx="205.3" cy="124.1" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Abismo do Medo (9392) — Terror</title></circle>
+<circle cx="278.5" cy="193.7" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Vida de Inseto (9487) — Comédia</title></circle>
+<circle cx="207.3" cy="282.8" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Kung Fu Panda (9502) — Comédia</title></circle>
+<circle cx="109.0" cy="212.1" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Premonição (9532) — Terror</title></circle>
+<circle cx="205.1" cy="290.5" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Os Bad Boys (9737) — Comédia</title></circle>
+<circle cx="260.0" cy="341.8" r="3.5" fill="#009E73" fill-opacity="0.8"><title>O Demolidor (9739) — Ficção científica</title></circle>
+<circle cx="129.2" cy="332.8" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Lolita (9769) — Drama</title></circle>
+<circle cx="151.6" cy="310.6" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Operação Cupido (9820) — Comédia</title></circle>
+<circle cx="125.8" cy="152.7" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Pânico na Floresta (9902) — Terror</title></circle>
+<circle cx="73.3" cy="358.4" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Fim dos Dias (9946) — Terror</title></circle>
+<circle cx="201.1" cy="230.5" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Homem de Ferro 2 (10138) — Ficção científica</title></circle>
+<circle cx="117.3" cy="317.9" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Shrek Para Sempre (10192) — Comédia</title></circle>
+<circle cx="166.8" cy="332.0" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Toy Story 3 (10193) — Comédia</title></circle>
+<circle cx="125.4" cy="315.3" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>D-Tox (10375) — Terror</title></circle>
+<circle cx="89.2" cy="254.8" r="3.5" fill="#009E73" fill-opacity="0.8"><title>O Gigante de Ferro (10386) — Ficção científica</title></circle>
+<circle cx="85.0" cy="357.1" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Brinquedo Assassino (10585) — Terror</title></circle>
+<circle cx="155.6" cy="292.1" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>O Gato (10588) — Comédia</title></circle>
+<circle cx="114.7" cy="228.9" r="3.5" fill="#009E73" fill-opacity="0.8"><title>WALL-E (10681) — Ficção científica</title></circle>
+<circle cx="218.8" cy="324.2" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Conflitos Internos (10775) — Drama</title></circle>
+<circle cx="193.1" cy="354.3" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Matilda (10830) — Comédia</title></circle>
+<circle cx="305.2" cy="191.0" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Adeus, Minha Concubina (10997) — Drama</title></circle>
+<circle cx="109.4" cy="377.5" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Diário de uma Paixão (11036) — Drama</title></circle>
+<circle cx="147.1" cy="350.9" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Ilha do Medo (11324) — Drama</title></circle>
+<circle cx="219.1" cy="411.8" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>A Nova Onda do Imperador (11688) — Comédia</title></circle>
+<circle cx="150.8" cy="362.3" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Hércules (11970) — Comédia</title></circle>
+<circle cx="230.1" cy="152.3" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>As Branquelas (12153) — Comédia</title></circle>
+<circle cx="177.7" cy="218.8" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Sexta-Feira 13 (13207) — Terror</title></circle>
+<circle cx="259.4" cy="140.4" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>9º Pelotão (14097) — Drama</title></circle>
+<circle cx="193.4" cy="229.2" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Crimes Temporais (14139) — Ficção científica</title></circle>
+<circle cx="106.3" cy="349.9" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Up: Altas Aventuras (14160) — Comédia</title></circle>
+<circle cx="168.3" cy="194.9" r="3.5" fill="#009E73" fill-opacity="0.8"><title>2012 (14161) — Ficção científica</title></circle>
+<circle cx="143.0" cy="244.7" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>O Menino do Pijama Listrado (14574) — Drama</title></circle>
+<circle cx="228.8" cy="210.7" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Bastardos Inglórios (16869) — Drama</title></circle>
+<circle cx="336.3" cy="273.2" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Neon Genesis Evangelion: O Fim do Evangelho (18491) — Ficção científica</title></circle>
+<circle cx="177.3" cy="286.2" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Se Beber, Não Case! (18785) — Comédia</title></circle>
+<circle cx="145.5" cy="270.7" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Zumbilândia (19908) — Terror</title></circle>
+<circle cx="116.3" cy="357.6" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Garota Infernal (19994) — Terror</title></circle>
+<circle cx="142.6" cy="197.5" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Avatar (19995) — Ficção científica</title></circle>
+<circle cx="142.1" cy="275.9" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Possessão (21484) — Terror</title></circle>
+<circle cx="228.0" cy="260.1" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Consumido pelo Ódio (21966) — Drama</title></circle>
+<circle cx="246.9" cy="189.6" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>O Segredo da Cabana (22970) — Terror</title></circle>
+<circle cx="133.3" cy="255.6" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Os Vingadores: The Avengers (24428) — Ficção científica</title></circle>
+<circle cx="133.8" cy="238.7" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Vá e Veja (25237) — Terror</title></circle>
+<circle cx="170.6" cy="470.3" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Quem é Essa Garota? (26827) — Comédia</title></circle>
+<circle cx="71.5" cy="316.5" r="3.5" fill="#009E73" fill-opacity="0.8"><title>A Origem (27205) — Ficção científica</title></circle>
+<circle cx="128.7" cy="170.3" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Blade II: O Caçador de Vampiros (36586) — Terror</title></circle>
+<circle cx="123.6" cy="256.2" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Blade: O Caçador de Vampiros (36647) — Terror</title></circle>
+<circle cx="202.3" cy="289.5" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Blade Trinity (36648) — Terror</title></circle>
+<circle cx="249.4" cy="249.2" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Gente Grande (38365) — Comédia</title></circle>
+<circle cx="142.6" cy="337.9" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Doce Vingança (43947) — Terror</title></circle>
+<circle cx="196.0" cy="305.5" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Lanterna Verde (44912) — Ficção científica</title></circle>
+<circle cx="173.7" cy="188.4" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Contra o Tempo (45612) — Ficção científica</title></circle>
+<circle cx="234.7" cy="269.6" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Carros 2 (49013) — Comédia</title></circle>
+<circle cx="165.9" cy="326.5" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Sobrenatural (49018) — Terror</title></circle>
+<circle cx="148.8" cy="356.0" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Batman: O Cavaleiro das Trevas Ressurge (49026) — Drama</title></circle>
+<circle cx="192.0" cy="265.4" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>A Águia da Legião Perdida (49494) — Drama</title></circle>
+<circle cx="265.1" cy="167.3" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Os Croods (49519) — Comédia</title></circle>
+<circle cx="124.3" cy="266.6" r="3.5" fill="#009E73" fill-opacity="0.8"><title>O Homem de Aço (49521) — Ficção científica</title></circle>
+<circle cx="193.6" cy="318.6" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Midori (53064) — Terror</title></circle>
+<circle cx="240.8" cy="338.3" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Prisioneiro do Inferno (53653) — Drama</title></circle>
+<circle cx="83.2" cy="226.7" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Premonição 5 (55779) — Terror</title></circle>
+<circle cx="134.2" cy="206.4" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>A Era do Gelo 4 (57800) — Comédia</title></circle>
+<circle cx="118.3" cy="289.6" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Planeta dos Macacos: A Origem (61791) — Ficção científica</title></circle>
+<circle cx="135.3" cy="401.2" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Django Livre (68718) — Drama</title></circle>
+<circle cx="124.6" cy="256.7" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Homem de Ferro 3 (68721) — Ficção científica</title></circle>
+<circle cx="133.0" cy="134.2" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Círculo de Fogo (68726) — Ficção científica</title></circle>
+<circle cx="214.0" cy="385.7" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>A Serbian Film - Terror sem Limites (73861) — Terror</title></circle>
+<circle cx="121.2" cy="360.5" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>A Centopéia Humana 2 (74997) — Terror</title></circle>
+<circle cx="76.9" cy="333.1" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Mad Max: Estrada da Fúria (76341) — Ficção científica</title></circle>
+<circle cx="108.3" cy="291.0" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Hotel Transilvânia (76492) — Comédia</title></circle>
+<circle cx="171.6" cy="273.7" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Avatar: O Caminho da Água (76600) — Ficção científica</title></circle>
+<circle cx="98.3" cy="241.3" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Madagascar 3: Os Procurados (80321) — Comédia</title></circle>
+<circle cx="120.0" cy="273.2" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Hotel Desire (82023) — Drama</title></circle>
+<circle cx="114.1" cy="285.7" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>A Entidade (82507) — Terror</title></circle>
+<circle cx="156.1" cy="321.4" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Detona Ralph (82690) — Comédia</title></circle>
+<circle cx="142.9" cy="266.7" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Avatar: Fogo e Cinzas (83533) — Ficção científica</title></circle>
+<circle cx="134.5" cy="313.3" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Sobrenatural: Capítulo 2 (91586) — Terror</title></circle>
+<circle cx="90.6" cy="350.7" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Meu Malvado Favorito 2 (93456) — Ficção científica</title></circle>
+<circle cx="123.6" cy="215.8" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Vingadores: Era de Ultron (99861) — Ficção científica</title></circle>
+<circle cx="128.3" cy="326.9" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Capitão América: O Soldado Invernal (100402) — Ficção científica</title></circle>
+<circle cx="275.9" cy="149.3" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Jogos Vorazes: Em Chamas (101299) — Ficção científica</title></circle>
+<circle cx="156.4" cy="413.8" r="3.5" fill="#009E73" fill-opacity="0.8"><title>O Espetacular Homem-Aranha 2: A Ameaça de Electro (102382) — Ficção científica</title></circle>
+<circle cx="65.1" cy="231.8" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>A Morte do Demônio (109428) — Terror</title></circle>
+<circle cx="270.7" cy="199.7" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>O Grande Hotel Budapeste (120467) — Comédia</title></circle>
+<circle cx="162.0" cy="167.0" r="3.5" fill="#009E73" fill-opacity="0.8"><title>X-Men: Dias de um Futuro Esquecido (127585) — Ficção científica</title></circle>
+<circle cx="153.5" cy="274.6" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Jogos Vorazes: A Esperança - Parte 1 (131631) — Ficção científica</title></circle>
+<circle cx="153.1" cy="219.2" r="3.5" fill="#009E73" fill-opacity="0.8"><title>No Limite do Amanhã (137113) — Ficção científica</title></circle>
+<circle cx="166.4" cy="281.1" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Invocação do Mal (138843) — Terror</title></circle>
+<circle cx="201.2" cy="392.5" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Os Suspeitos (146233) — Drama</title></circle>
+<circle cx="131.4" cy="240.4" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Operação Big Hero (177572) — Comédia</title></circle>
+<circle cx="151.7" cy="222.3" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Maze Runner: Correr ou Morrer (198663) — Ficção científica</title></circle>
+<circle cx="273.5" cy="317.4" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>O Jogo da Imitação (205596) — Drama</title></circle>
+<circle cx="132.2" cy="336.1" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Kingsman: Serviço Secreto (207703) — Comédia</title></circle>
+<circle cx="149.1" cy="441.9" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Garota Exemplar (210577) — Drama</title></circle>
+<circle cx="192.7" cy="418.3" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Ted 2 (214756) — Comédia</title></circle>
+<circle cx="191.9" cy="445.6" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Cinquenta Tons de Cinza (216015) — Drama</title></circle>
+<circle cx="188.3" cy="177.9" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Corações de Ferro (228150) — Drama</title></circle>
+<circle cx="58.0" cy="322.1" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Uma Noite de Crime: Anarquia (238636) — Terror</title></circle>
+<circle cx="193.6" cy="261.2" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>O Abutre (242582) — Drama</title></circle>
+<circle cx="184.9" cy="405.0" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Whiplash: Em Busca da Perfeição (244786) — Drama</title></circle>
+<circle cx="136.0" cy="200.4" r="3.5" fill="#009E73" fill-opacity="0.8"><title>X-Men: Apocalipse (246655) — Ficção científica</title></circle>
+<circle cx="160.7" cy="146.0" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Assim na Terra Como no Inferno (256274) — Terror</title></circle>
+<circle cx="132.0" cy="347.5" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Invocação do Mal 2 (259693) — Terror</title></circle>
+<circle cx="213.2" cy="244.1" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Carros 3 (260514) — Drama</title></circle>
+<circle cx="135.9" cy="329.5" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Logan (263115) — Drama</title></circle>
+<circle cx="181.5" cy="265.4" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Zootopia: Essa Cidade é o Bicho (269149) — Comédia</title></circle>
+<circle cx="82.4" cy="285.0" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Corrente do Mal (270303) — Terror</title></circle>
+<circle cx="184.7" cy="162.5" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Capitão América: Guerra Civil (271110) — Ficção científica</title></circle>
+<circle cx="126.5" cy="160.7" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Os Oito Odiados (273248) — Drama</title></circle>
+<circle cx="155.3" cy="339.3" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Sobrenatural: A Origem (280092) — Terror</title></circle>
+<circle cx="101.6" cy="312.6" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>O Regresso (281957) — Drama</title></circle>
+<circle cx="163.0" cy="298.1" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Guardiões da Galáxia - Vol. 2 (283995) — Ficção científica</title></circle>
+<circle cx="244.6" cy="327.3" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Pantera Negra (284054) — Ficção científica</title></circle>
+<circle cx="108.8" cy="320.8" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>A Criada (290098) — Drama</title></circle>
+<circle cx="158.2" cy="345.4" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Deadpool (293660) — Comédia</title></circle>
+<circle cx="174.8" cy="145.6" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Vingadores: Ultimato (299534) — Ficção científica</title></circle>
+<circle cx="193.7" cy="227.5" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Vingadores: Guerra Infinita (299536) — Ficção científica</title></circle>
+<circle cx="263.3" cy="235.3" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Aos 14 (299710) — Drama</title></circle>
+<circle cx="148.3" cy="352.6" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Toy Story 4 (301528) — Comédia</title></circle>
+<circle cx="135.5" cy="230.6" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>A Bruxa (310131) — Terror</title></circle>
+<circle cx="160.6" cy="241.9" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Gato de Botas 2: O Último Pedido (315162) — Comédia</title></circle>
+<circle cx="172.5" cy="326.7" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Homem-Aranha: De Volta ao Lar (315635) — Ficção científica</title></circle>
+<circle cx="249.5" cy="267.6" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Até o Último Homem (324786) — Drama</title></circle>
+<circle cx="122.5" cy="397.5" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Homem-Aranha: No Aranhaverso (324857) — Ficção científica</title></circle>
+<circle cx="181.7" cy="218.4" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>A Chegada (329865) — Drama</title></circle>
+<circle cx="216.5" cy="336.1" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Frozen II (330457) — Comédia</title></circle>
+<circle cx="153.1" cy="301.6" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Cinquenta Tons de Liberdade (337167) — Drama</title></circle>
+<circle cx="211.0" cy="224.7" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Megatubarão (345940) — Terror</title></circle>
+<circle cx="160.9" cy="231.1" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Barbie (346698) — Comédia</title></circle>
+<circle cx="271.1" cy="327.7" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Matador de Aluguel (359410) — Drama</title></circle>
+<circle cx="190.0" cy="224.2" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Top Gun: Maverick (361743) — Drama</title></circle>
+<circle cx="189.3" cy="263.4" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Your Name. (372058) — Drama</title></circle>
+<circle cx="377.2" cy="106.7" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Dunkirk (374720) — Drama</title></circle>
+<circle cx="132.5" cy="392.1" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Deadpool 2 (383498) — Comédia</title></circle>
+<circle cx="248.8" cy="347.9" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Velozes &amp; Furiosos: Hobbs &amp; Shaw (384018) — Comédia</title></circle>
+<circle cx="248.6" cy="115.0" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Invasão Zumbi (396535) — Terror</title></circle>
+<circle cx="107.5" cy="278.5" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Wicked (402431) — Drama</title></circle>
+<circle cx="123.5" cy="342.6" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Sobrenatural: A Última Chave (406563) — Terror</title></circle>
+<circle cx="151.1" cy="353.4" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Kill Bill: The Whole Bloody Affair (414419) — Drama</title></circle>
+<circle cx="147.4" cy="290.2" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Gato de Botas (417859) — Comédia</title></circle>
+<circle cx="126.1" cy="319.3" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Corra! (419430) — Terror</title></circle>
+<circle cx="185.8" cy="229.8" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Invocação do Mal 3: A Ordem do Demônio (423108) — Terror</title></circle>
+<circle cx="150.1" cy="321.3" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Homem-Aranha: Longe de Casa (429617) — Ficção científica</title></circle>
+<circle cx="237.6" cy="208.6" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Adão Negro (436270) — Ficção científica</title></circle>
+<circle cx="211.3" cy="177.6" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>O Esquadrão Suicida (436969) — Comédia</title></circle>
+<circle cx="182.7" cy="194.8" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Duna (438631) — Ficção científica</title></circle>
+<circle cx="170.9" cy="291.3" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>A Freira (439079) — Terror</title></circle>
+<circle cx="340.8" cy="425.9" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Aluna Exemplar e Estrela Pornô (441168) — Drama</title></circle>
+<circle cx="165.1" cy="262.6" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Guardiões da Galáxia: Vol. 3 (447365) — Ficção científica</title></circle>
+<circle cx="130.1" cy="202.6" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Resident Evil: Bem-Vindo a Raccoon City (460458) — Terror</title></circle>
+<circle cx="263.4" cy="259.7" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Assassinos da Lua das Flores (466420) — Drama</title></circle>
+<circle cx="158.1" cy="334.6" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Coringa (475557) — Drama</title></circle>
+<circle cx="112.7" cy="321.4" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Hereditário (493922) — Terror</title></circle>
+<circle cx="137.0" cy="354.1" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Viúva Negra (497698) — Ficção científica</title></circle>
+<circle cx="250.7" cy="219.7" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Super Mario Bros. O Filme (502356) — Comédia</title></circle>
+<circle cx="139.3" cy="331.4" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Pantera Negra: Wakanda para Sempre (505642) — Ficção científica</title></circle>
+<circle cx="226.8" cy="298.4" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Red: Crescer é Uma Fera (508947) — Comédia</title></circle>
+<circle cx="157.8" cy="427.7" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Meu Malvado Favorito 4 (519182) — Comédia</title></circle>
+<circle cx="138.5" cy="220.4" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Magnatas do Crime (522627) — Comédia</title></circle>
+<circle cx="122.4" cy="268.9" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Midsommar: O Mal Não Espera a Noite (530385) — Terror</title></circle>
+<circle cx="143.3" cy="306.9" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Entre Facas e Segredos (546554) — Comédia</title></circle>
+<circle cx="233.7" cy="307.0" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>O Brutalista (549509) — Drama</title></circle>
+<circle cx="148.8" cy="281.8" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Free Guy: Assumindo o Controle (550988) — Comédia</title></circle>
+<circle cx="141.9" cy="250.5" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Gladiador 2 (558449) — Drama</title></circle>
+<circle cx="88.0" cy="317.5" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Casamento Sangrento (567609) — Terror</title></circle>
+<circle cx="135.1" cy="325.6" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Homem-Aranha: Através do Aranhaverso (569094) — Ficção científica</title></circle>
+<circle cx="302.8" cy="401.1" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Testemunha Inocente (570508) — Drama</title></circle>
+<circle cx="148.3" cy="328.3" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Premonição 6: Laços de Sangue (574475) — Terror</title></circle>
+<circle cx="237.4" cy="212.7" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Infecção (587424) — Terror</title></circle>
+<circle cx="355.5" cy="167.6" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>A Longa Marcha: Caminhe ou Morra (604079) — Terror</title></circle>
+<circle cx="186.1" cy="335.7" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Sobrenatural: A Porta Vermelha (614479) — Terror</title></circle>
+<circle cx="252.6" cy="165.6" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Megatubarão 2 (615656) — Terror</title></circle>
+<circle cx="96.9" cy="308.8" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Thor: Amor e Trovão (616037) — Comédia</title></circle>
+<circle cx="146.9" cy="241.7" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Quarteto Fantástico: Primeiros Passos (617126) — Ficção científica</title></circle>
+<circle cx="265.3" cy="328.2" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Os Caras Malvados (629542) — Comédia</title></circle>
+<circle cx="126.5" cy="296.5" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Homem-Aranha: Sem Volta Para Casa (634649) — Ficção científica</title></circle>
+<circle cx="165.1" cy="213.3" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Infiltrado (637649) — Drama</title></circle>
+<circle cx="82.9" cy="264.8" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Duna: Parte Dois (693134) — Ficção científica</title></circle>
+<circle cx="149.7" cy="201.5" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>A Morte do Demônio: A Ascensão (713704) — Terror</title></circle>
+<circle cx="205.8" cy="93.8" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Trem-Bala (718930) — Comédia</title></circle>
+<circle cx="108.5" cy="291.4" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>After: Depois do Desencontro (744275) — Drama</title></circle>
+<circle cx="239.2" cy="375.6" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>O Dublê (746036) — Comédia</title></circle>
+<circle cx="233.5" cy="230.1" r="3.5" fill="#009E73" fill-opacity="0.8"><title>A Guerra dos Mundos (755898) — Ficção científica</title></circle>
+<circle cx="293.1" cy="163.7" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Guerreiras do K-Pop (803796) — Comédia</title></circle>
+<circle cx="149.2" cy="301.6" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Capitão América: Admirável Mundo Novo (822119) — Ficção científica</title></circle>
+<circle cx="111.2" cy="362.8" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>365 Dias: Hoje (829557) — Drama</title></circle>
+<circle cx="162.6" cy="297.7" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Operação Natal (845781) — Comédia</title></circle>
+<circle cx="294.7" cy="285.8" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Oppenheimer (872585) — Drama</title></circle>
+<circle cx="175.2" cy="246.4" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Patrulha Canina: Um Filme Superpoderoso (893723) — Comédia</title></circle>
+<circle cx="221.9" cy="378.3" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>F1: O Filme (911430) — Drama</title></circle>
+<circle cx="212.4" cy="260.6" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Venom: A Última Rodada (912649) — Ficção científica</title></circle>
+<circle cx="130.0" cy="324.0" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Pânico VI (934433) — Terror</title></circle>
+<circle cx="139.0" cy="326.7" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Patos! (940551) — Comédia</title></circle>
+<circle cx="281.5" cy="188.5" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Godzilla Minus One (940721) — Terror</title></circle>
+<circle cx="149.9" cy="218.0" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Um Filme Minecraft (950387) — Comédia</title></circle>
+<circle cx="225.2" cy="93.4" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Entre Montanhas (950396) — Ficção científica</title></circle>
+<circle cx="157.0" cy="144.3" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Thunderbolts* (986056) — Ficção científica</title></circle>
+<circle cx="161.6" cy="417.1" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Minha Culpa (1010581) — Drama</title></circle>
+<circle cx="158.1" cy="290.0" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Divertida Mente 2 (1022789) — Comédia</title></circle>
+<circle cx="172.7" cy="239.5" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Invocação do Mal 4: O Último Ritual (1038392) — Terror</title></circle>
+<circle cx="143.8" cy="410.2" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Uma Batalha Após a Outra (1054867) — Comédia</title></circle>
+<circle cx="229.2" cy="374.0" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Superman (1061474) — Ficção científica</title></circle>
+<circle cx="245.6" cy="179.1" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Alice: Subservience (1064028) — Terror</title></circle>
+<circle cx="232.5" cy="152.4" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>A Hora do Mal (1078605) — Terror</title></circle>
+<circle cx="129.9" cy="368.8" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Acompanhante Perfeita (1084199) — Terror</title></circle>
+<circle cx="228.1" cy="344.9" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Zootopia 2 (1084242) — Comédia</title></circle>
+<circle cx="136.6" cy="274.8" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Sorria 2 (1100782) — Terror</title></circle>
+<circle cx="175.6" cy="159.8" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>O Macaco (1124620) — Terror</title></circle>
+<circle cx="107.7" cy="299.5" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Sua Culpa (1156593) — Drama</title></circle>
+<circle cx="120.9" cy="362.3" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Nossa Culpa (1156594) — Drama</title></circle>
+<circle cx="200.9" cy="281.0" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Robô Selvagem (1184918) — Ficção científica</title></circle>
+<circle cx="117.0" cy="319.1" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Zoopocalipse - Uma Aventura Animal (1205229) — Terror</title></circle>
+<circle cx="114.3" cy="290.2" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Five Nights at Freddy&#x27;s 2 (1228246) — Terror</title></circle>
+<circle cx="179.5" cy="190.8" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Pecadores (1233413) — Terror</title></circle>
+<circle cx="117.4" cy="297.7" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Anaconda (1234731) — Terror</title></circle>
+<circle cx="162.5" cy="101.7" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Jurassic World: Recomeço (1234821) — Ficção científica</title></circle>
+<circle cx="265.8" cy="148.7" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>Moana 2 (1241982) — Comédia</title></circle>
+<circle cx="207.6" cy="278.8" r="3.5" fill="#009E73" fill-opacity="0.8"><title>Predador: Terras Selvagens (1242898) — Ficção científica</title></circle>
+<circle cx="267.7" cy="373.7" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>Drácula - Uma História de Amor Eterno (1246049) — Terror</title></circle>
+<circle cx="86.0" cy="333.4" r="3.5" fill="#0072B2" fill-opacity="0.8"><title>A Sapatona Galáctica (1333141) — Comédia</title></circle>
+<circle cx="227.7" cy="202.9" r="3.5" fill="#E69F00" fill-opacity="0.8"><title>Operação Sombra (1419406) — Drama</title></circle>
+<circle cx="231.7" cy="167.1" r="3.5" fill="#CC79A7" fill-opacity="0.8"><title>O Padre: Massacre no Dia de Ação de Graças (1569947) — Terror</title></circle>
+<circle cx="115.8" cy="268.8" r="7" fill="none" stroke="#1f1f1f" stroke-width="1.5"/>
+<line x1="115.8" y1="268.8" x2="139.8" y2="264.8" stroke="#1f1f1f" stroke-width="1"/>
+<text x="142.8" y="268.8" text-anchor="start" font-weight="600" fill="#1f1f1f" stroke="#ffffff" stroke-width="3" paint-order="stroke">Matrix</text>
+<circle cx="176.2" cy="286.4" r="7" fill="none" stroke="#1f1f1f" stroke-width="1.5"/>
+<line x1="176.2" y1="286.4" x2="200.2" y2="282.8" stroke="#1f1f1f" stroke-width="1"/>
+<text x="203.2" y="286.8" text-anchor="start" font-weight="600" fill="#1f1f1f" stroke="#ffffff" stroke-width="3" paint-order="stroke">Forrest Gump: O Contador de Histórias</text>
+<circle cx="179.6" cy="478.4" r="7" fill="none" stroke="#1f1f1f" stroke-width="1.5"/>
+<line x1="179.6" y1="478.4" x2="203.6" y2="474.4" stroke="#1f1f1f" stroke-width="1"/>
+<text x="206.6" y="478.4" text-anchor="start" font-weight="600" fill="#1f1f1f" stroke="#ffffff" stroke-width="3" paint-order="stroke">Beleza Americana</text>
+<circle cx="526" cy="88" r="5" fill="#0072B2"/>
+<text x="538" y="92" fill="#1f1f1f">Comédia</text>
+<circle cx="526" cy="110" r="5" fill="#E69F00"/>
+<text x="538" y="114" fill="#1f1f1f">Drama</text>
+<circle cx="526" cy="132" r="5" fill="#009E73"/>
+<text x="538" y="136" fill="#1f1f1f">Ficção científica</text>
+<circle cx="526" cy="154" r="5" fill="#CC79A7"/>
+<text x="538" y="158" fill="#1f1f1f">Terror</text>
+<circle cx="526" cy="176" r="5" fill="#9A9A9A"/>
+<text x="538" y="180" fill="#1f1f1f">Mais de um gênero de coleta</text>
+</svg>

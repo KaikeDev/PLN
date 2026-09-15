@@ -1,39 +1,55 @@
-"""Representações comparáveis sem sobrescrever o texto original."""
+"""Representações comparáveis de uma sinopse, sem sobrescrever o texto original.
+
+A limpeza remove marcação HTML, URLs e caracteres de controle e aplica Unicode NFC. A normalização usa
+`casefold` e preserva acentos. A tokenização separa palavras (com apóstrofos e hífens internos) de
+pontuação. O filtro de stopwords nunca remove marcadores de negação.
+"""
+
 import html
 import re
 import unicodedata
 from html.parser import HTMLParser
 
+from app.corpus.contracts import Representations
+from app.shared.language import NEGATION_MARKERS
+
 TOKEN_PATTERN = r"\w+(?:['’\-]\w+)*|[^\w\s]"
 TOKEN_RE = re.compile(TOKEN_PATTERN, re.UNICODE)
 URL_RE = re.compile(r"https?://[^\s<>]+|www\.[^\s<>]+", re.IGNORECASE)
-PRESERVED_NEGATIONS = {"não", "nem", "nunca", "sem"}
+PRESERVED_NEGATIONS = NEGATION_MARKERS
+
+HIDDEN_TAGS = frozenset({"script", "style"})
+BLOCK_START_TAGS = frozenset({"p", "div", "br", "li"})
+BLOCK_END_TAGS = frozenset({"p", "div", "li"})
 
 
 class VisibleText(HTMLParser):
-    def __init__(self):
+    """Extrai o texto visível de um fragmento HTML, separando blocos por espaço."""
+
+    def __init__(self) -> None:
         super().__init__(convert_charrefs=True)
-        self.parts = []
+        self.parts: list[str] = []
         self.hidden = 0
 
-    def handle_starttag(self, tag, attrs):
-        if tag in {"script", "style"}:
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        if tag in HIDDEN_TAGS:
             self.hidden += 1
-        if tag in {"p", "div", "br", "li"}:
+        if tag in BLOCK_START_TAGS:
             self.parts.append(" ")
 
-    def handle_endtag(self, tag):
-        if tag in {"script", "style"} and self.hidden:
+    def handle_endtag(self, tag: str) -> None:
+        if tag in HIDDEN_TAGS and self.hidden:
             self.hidden -= 1
-        if tag in {"p", "div", "li"}:
+        if tag in BLOCK_END_TAGS:
             self.parts.append(" ")
 
-    def handle_data(self, data):
+    def handle_data(self, data: str) -> None:
         if not self.hidden:
             self.parts.append(data)
 
 
 def clean(text: str | None) -> str | None:
+    """Texto visível, sem URLs nem caracteres de controle, em NFC e com espaços uniformizados."""
     if text is None:
         return None
     if not isinstance(text, str):
@@ -47,10 +63,12 @@ def clean(text: str | None) -> str | None:
 
 
 def word_token(token: str) -> bool:
+    """Verdadeiro quando o token contém ao menos uma letra ou dígito."""
     return any(ch.isalnum() for ch in token)
 
 
-def representations(text: str | None, stopwords: set[str]) -> dict:
+def representations(text: str | None, stopwords: set[str]) -> Representations:
+    """Aplica limpeza, normalização, tokenização, remoção de pontuação e filtro de stopwords."""
     cleaned = clean(text)
     normalized = cleaned.casefold() if cleaned is not None else None
     tokens = TOKEN_RE.findall(normalized or "")
