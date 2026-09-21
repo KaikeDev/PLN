@@ -6,6 +6,7 @@ extra semântico não está instalado) e a identidade do código e das entradas.
 """
 
 import platform
+import time
 from collections.abc import Mapping
 from dataclasses import asdict
 from datetime import UTC, datetime
@@ -29,6 +30,7 @@ from app.vectors.config import ExperimentConfig, QuerySpec, RepresentationSpec, 
 from app.vectors.context import AnalysisContext
 from app.vectors.corpus import ProcessedCorpus
 from app.vectors.methods import METHODS, Method
+from app.vectors.probes import ProbeSet, load_probes
 from app.vectors.report import make_report
 from app.vectors.space import TFIDF, Representation
 
@@ -56,15 +58,26 @@ def build(
     output: Path,
     config_path: Path,
     queries_path: Path | None = None,
+    probes_path: Path | None = None,
     analyses: tuple[Analysis, ...] = DEFAULT_ANALYSES,
     methods: Mapping[str, Method] = METHODS,
 ) -> dict:
-    """Constrói todas as representações e análises da configuração numa pasta nova e verifica o resultado."""
+    """Constrói todas as representações e análises da configuração numa pasta nova e verifica o resultado.
+
+    `probes_path` aponta para as sondas linguísticas da Aula 7 (opcional). O tempo de construção de cada
+    representação vai para o manifesto, e não para os arquivos de conteúdo, porque varia entre execuções.
+    """
     if output.exists():
         raise FileExistsError(f"A pasta de saída já existe: {output}")
     corpus, config, queries = prepare(processed, config_path, queries_path, methods)
-    context = AnalysisContext(corpus, config, TFIDF.build(DESCRIPTOR, corpus, config), queries)
-    representations = [methods[spec.method].build(spec, corpus, config) for spec in config.representations]
+    probes = load_probes(probes_path) if probes_path else ProbeSet()
+    context = AnalysisContext(corpus, config, TFIDF.build(DESCRIPTOR, corpus, config), queries, probes)
+    representations: list[Representation] = []
+    build_seconds: dict[str, float] = {}
+    for spec in config.representations:
+        started = time.perf_counter()
+        representations.append(methods[spec.method].build(spec, corpus, config))
+        build_seconds[spec.name] = round(time.perf_counter() - started, 3)
     results = {analysis.name: {rep.spec.name: analysis.run(rep, context) for rep in representations} for analysis in analyses}
 
     files = {
@@ -73,6 +86,8 @@ def build(
     }
     if queries:
         files["queries_config.json"] = json_text([asdict(query) for query in queries])
+    if probes_path:
+        files["probes_config.json"] = json_text(asdict(probes))
     row_files = []
     for representation in representations:
         for suffix, payload in representation.export().items():
@@ -99,12 +114,14 @@ def build(
         "source_processed_manifest_sha256": corpus.manifest_sha256,
         "config_sha256": sha256(config_path),
         "queries_sha256": sha256(queries_path) if queries_path else None,
+        "probes_sha256": sha256(probes_path) if probes_path else None,
         "source_identity": source_identity(),
         "python": platform.python_version(),
         "libraries": _library_versions(),
         "representations": [asdict(spec) for spec in config.representations],
         "analyses": [analysis.name for analysis in analyses],
         "row_files": row_files,
+        "build_seconds": build_seconds,
         "files": hash_files(output),
     }
     write_json(output / MANIFEST_NAME, manifest)

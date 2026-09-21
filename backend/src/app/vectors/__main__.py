@@ -14,7 +14,7 @@ def bounded_k(value: str) -> int:
 
 def main() -> int:
     parser = argparse.ArgumentParser(
-        description="Representações vetoriais das sinopses processadas (BoW, TF-IDF, word2vec e embeddings contextuais)"
+        description="Representações vetoriais das sinopses processadas (BoW, TF-IDF, word2vec, BERT e embeddings de sentença)"
     )
     commands = parser.add_subparsers(dest="command", required=True)
     build = commands.add_parser("build", help="Gerar matrizes, similaridade, clustering, projeção e avaliação de consultas")
@@ -22,6 +22,7 @@ def main() -> int:
     build.add_argument("--output", type=Path, required=True, help="Pasta nova; nunca é sobrescrita")
     build.add_argument("--config", type=Path, required=True)
     build.add_argument("--queries", type=Path, help="Consultas anotadas (opcional)")
+    build.add_argument("--probes", type=Path, help="Sondas linguísticas: pares de frases, pares de palavras e polissemia (opcional)")
     verify = commands.add_parser("verify", help="Validar hashes e alinhamento das matrizes")
     verify.add_argument("--input", type=Path, required=True)
     query = commands.add_parser("query", help="Buscar sinopses por uma consulta em linguagem natural")
@@ -35,7 +36,7 @@ def main() -> int:
         if args.command == "build":
             from app.vectors.pipeline import build as build_vectors
 
-            print(json.dumps(build_vectors(args.input, args.output, args.config, args.queries), ensure_ascii=False))
+            print(json.dumps(build_vectors(args.input, args.output, args.config, args.queries, args.probes), ensure_ascii=False))
         elif args.command == "verify":
             from app.vectors.pipeline import verify as verify_vectors
 

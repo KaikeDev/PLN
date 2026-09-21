@@ -11,13 +11,14 @@ from sklearn.preprocessing import normalize
 
 from app.corpus.collect import collect
 from app.corpus.process import process
-from app.shared.artifacts import read_jsonl, write_json
+from app.shared.artifacts import read_json_object, read_jsonl, write_json
 from app.vectors.config import load_config, load_queries
 from app.vectors.corpus import ProcessedCorpus
 from app.vectors.embeddings import ContextualMethod, Word2VecMethod
 from app.vectors.methods import METHODS
 from app.vectors.metrics import genre_agreement, purity, reciprocal_rank
 from app.vectors.pipeline import build, verify
+from app.vectors.probes import contains_word, load_probes
 from app.vectors.retrieval import search
 from app.vectors.space import TFIDF
 from app.vectors.svg import render_projection
@@ -49,6 +50,7 @@ class FakeWordVectors:
     """Vetores escolhidos à mão: eixo 0 ≈ tecnologia, eixo 1 ≈ luto. “realidade” fica fora do vocabulário."""
 
     dimension = 4
+    parameters = 60
     TABLE: ClassVar[dict[str, list[float]]] = {
         "simulação": [1, 0.1, 0, 0],
         "artificial": [1, 0, 0, 0.1],
@@ -61,6 +63,10 @@ class FakeWordVectors:
         "perda": [0, 0.9, 0.1, 0],
         "família": [0.1, 0.8, 0, 0],
         "vida": [0, 0.6, 0.4, 0],
+        "cachorro": [0.1, 0, 0.9, 0.2],
+        "cão": [0.1, 0, 0.85, 0.25],
+        "banco": [0.4, 0.4, 0.2, 0],
+        "xícara": [0, 0, 0, 1],
     }
 
     def vector(self, word):
@@ -69,9 +75,13 @@ class FakeWordVectors:
 
 
 class FakeEncoder:
-    """Codificador de sentenças falso: conta grupos de palavras temáticas; não depende de palavras idênticas à consulta."""
+    """Codificador contextual falso: conta grupos de palavras temáticas; não depende de palavras idênticas à consulta.
+
+    O vetor de uma palavra dentro de uma frase é o vetor da própria frase, então muda com o contexto.
+    """
 
     max_tokens = 12
+    parameters = 1000
     GROUPS = (
         ("sistema", "artificial", "computador", "robô", "nave", "simulação", "realidade"),
         ("luto", "perda", "família", "vida"),
@@ -85,11 +95,40 @@ class FakeEncoder:
     def count_tokens(self, text):
         return len(text.split())
 
+    def word_vectors(self, text, word):
+        return [self.encode([text])[0]] if contains_word(text, word) else []
+
 
 FAKE_METHODS = {
     **METHODS,
     "word2vec": Word2VecMethod(lambda spec: FakeWordVectors()),
     "contextual": ContextualMethod(lambda spec: FakeEncoder()),
+}
+
+
+PROBES = {
+    "sentence_pairs": [
+        {
+            "id": "parafrase",
+            "left": "O programador usa computadores.",
+            "right": "Um sistema artificial controla robôs.",
+            "expected": "proximas",
+        },
+        {"id": "distantes", "left": "O luto da família.", "right": "Um sistema artificial.", "expected": "distantes"},
+    ],
+    "word_pairs": [["cachorro", "cão"], ["cachorro", "xícara"], ["cachorro", "inexistente"]],
+    "word_senses": [
+        {
+            "id": "banco",
+            "word": "banco",
+            "contexts": [
+                {"sense": "finanças", "text": "O banco da família sofreu uma perda."},
+                {"sense": "finanças", "text": "O banco cobrou a família pela perda da vida."},
+                {"sense": "assento", "text": "O casal sentou no banco da cidade."},
+                {"sense": "assento", "text": "O banco de madeira da cidade quebrou no divórcio."},
+            ],
+        }
+    ],
 }
 
 
@@ -146,8 +185,9 @@ class VectorTests(unittest.TestCase):
                 ]
             },
         )
+        cls.probes = cls.write_config("sondas.json", PROBES)
         cls.output = cls.root / "vectors"
-        build(cls.processed, cls.output, cls.config, cls.queries, methods=FAKE_METHODS)
+        build(cls.processed, cls.output, cls.config, cls.queries, cls.probes, methods=FAKE_METHODS)
 
     @classmethod
     def tearDownClass(cls):
@@ -166,7 +206,7 @@ class VectorTests(unittest.TestCase):
         return self.read("retrieval.json")[representation]["queries"][index]
 
     def test_build_writes_aligned_verified_outputs_without_overwrite(self):
-        self.assertEqual(verify(self.output), {"status": "ok", "documents": 8, "representations": 4, "files_verified": 20})
+        self.assertEqual(verify(self.output), {"status": "ok", "documents": 8, "representations": 4, "files_verified": 24})
         for filename in [
             "bow_sem_pontuacao.matrix.jsonl",
             "tfidf_sem_stopwords.matrix.jsonl",
@@ -176,7 +216,7 @@ class VectorTests(unittest.TestCase):
             self.assertEqual([row["id"] for row in read_jsonl(self.output / filename)], list(range(1, 9)))
         self.assertTrue((self.output / "contextual_teste.projection.svg").read_text(encoding="utf-8").startswith("<svg"))
         with self.assertRaises(FileExistsError):
-            build(self.processed, self.output, self.config, self.queries, methods=FAKE_METHODS)
+            build(self.processed, self.output, self.config, self.queries, self.probes, methods=FAKE_METHODS)
 
     def test_bow_counts_and_tfidf_downweights_common_terms(self):
         bow = {row["id"]: row["weights"] for row in read_jsonl(self.output / "bow_sem_pontuacao.matrix.jsonl")}
@@ -233,9 +273,71 @@ class VectorTests(unittest.TestCase):
         self.assertIn("artificial", [word for word, _ in words["word2vec_teste"]["words"]["simulação"][:3]])
         self.assertIsNone(words["word2vec_teste"]["words"]["inexistente"])
 
+    def test_static_embeddings_ignore_context(self):
+        senses = self.read("word_senses.json")
+        self.assertEqual(senses["tfidf_sem_stopwords"], {"supported": False})
+        word2vec = senses["word2vec_teste"]
+        self.assertEqual(word2vec["family"], "static")
+        banco = word2vec["words"][0]
+        self.assertTrue(all(value == 1.0 for row in banco["similarity"] for value in row))
+        self.assertEqual(banco["gap"], 0.0)
+
+    def test_contextual_embeddings_separate_senses(self):
+        banco = self.read("word_senses.json")["contextual_teste"]["words"][0]
+        self.assertEqual(banco["senses"], ["finanças", "finanças", "assento", "assento"])
+        self.assertGreater(banco["same_sense_mean"], banco["different_sense_mean"])
+        self.assertGreater(banco["gap"], 0.5)
+
+    def test_sentence_pairs_contrast_lexical_and_semantic_similarity(self):
+        pairs = self.read("sentence_pairs.json")
+        lexical, word2vec, contextual = (pairs[name]["pairs"][0] for name in ("tfidf_sem_stopwords", "word2vec_teste", "contextual_teste"))
+        self.assertEqual(lexical["cosine"], 0.0)
+        self.assertEqual(lexical["explanation"], [])
+        self.assertGreater(word2vec["cosine"], 0.8)
+        self.assertTrue(any("≈" in pair for pair in word2vec["explanation"]))
+        self.assertGreater(contextual["cosine"], 0.9)
+        self.assertLess(pairs["contextual_teste"]["pairs"][1]["cosine"], contextual["cosine"])
+
+    def test_word_pairs_follow_distributional_vectors(self):
+        pairs = self.read("word_neighbors.json")["word2vec_teste"]["pairs"]
+        self.assertEqual([left for left, _, _ in pairs], ["cachorro", "cachorro", "cachorro"])
+        self.assertGreater(pairs[0][2], 0.95)
+        self.assertLess(pairs[1][2], pairs[0][2])
+        self.assertIsNone(pairs[2][2])
+
+    def test_synthesis_describes_families_and_cost(self):
+        synthesis = self.read("synthesis.json")
+        self.assertEqual(synthesis["bow_sem_pontuacao"]["family"], "lexical")
+        self.assertTrue(synthesis["bow_sem_pontuacao"]["dimensions_are_vocabulary"])
+        self.assertIsNone(synthesis["bow_sem_pontuacao"]["parameters"])
+        self.assertTrue(synthesis["word2vec_teste"]["learned"])
+        self.assertFalse(synthesis["word2vec_teste"]["word_depends_on_context"])
+        self.assertTrue(synthesis["contextual_teste"]["word_depends_on_context"])
+        self.assertFalse(synthesis["contextual_teste"]["interpretable_by_words"])
+        self.assertEqual(synthesis["contextual_teste"]["parameters"], 1000)
+        manifest = read_json_object(self.output / "manifest.json")
+        self.assertEqual(set(manifest["build_seconds"]), {spec["name"] for spec in REPRESENTATIONS})
+
+    def test_probes_reject_invalid_examples(self):
+        sense = PROBES["word_senses"][0]
+        invalid = [
+            {},
+            {"word_pairs": [["cachorro", "cachorro"]]},
+            {"word_pairs": [["cachorro", "c4o"]]},
+            {"sentence_pairs": [{**PROBES["sentence_pairs"][0], "expected": "talvez"}]},
+            {"word_senses": [{**sense, "contexts": [{"sense": "finanças", "text": "Sem a palavra aqui."}, *sense["contexts"][1:]]}]},
+            {"word_senses": [{**sense, "contexts": sense["contexts"][:2]}]},
+            {"sentence_pairs": [{**PROBES["sentence_pairs"][0], "left": "x" * 501}]},
+            {"campo_desconhecido": []},
+        ]
+        for index, value in enumerate(invalid):
+            with self.subTest(value=value), self.assertRaises(ValueError):
+                load_probes(self.write_config(f"invalid_probes_{index}.json", value))
+        self.assertEqual(len(load_probes(self.probes).word_senses[0].contexts), 4)
+
     def test_build_is_deterministic(self):
         second = self.root / "vectors_second"
-        build(self.processed, second, self.config, self.queries, methods=FAKE_METHODS)
+        build(self.processed, second, self.config, self.queries, self.probes, methods=FAKE_METHODS)
         for path in self.output.iterdir():
             if path.name != "manifest.json":
                 self.assertEqual(path.read_bytes(), (second / path.name).read_bytes(), path.name)

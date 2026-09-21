@@ -5,14 +5,28 @@
     {"name": "tfidf_sem_pontuacao", "method": "tfidf", "stage": "05_without_punctuation.jsonl"},
     {"name": "tfidf_sem_stopwords", "method": "tfidf", "stage": "06_without_stopwords.jsonl"},
     {
-      "name": "word2vec_sem_stopwords",
+      "name": "word2vec_cbow",
+      "method": "word2vec",
+      "stage": "06_without_stopwords.jsonl",
+      "model": "pt-mteb/average_pt_nilc_word2vec_cbow_s300",
+      "revision": "0d556458839fa3a7f39a61dcce56dc50ce7b7314"
+    },
+    {
+      "name": "word2vec_skipgram",
       "method": "word2vec",
       "stage": "06_without_stopwords.jsonl",
       "model": "pt-mteb/average_pt_nilc_word2vec_skip_s300",
       "revision": "27facc2558330d2e9af54611734b94e957aa8301"
     },
     {
-      "name": "contextual_minilm",
+      "name": "bert_base_pt",
+      "method": "contextual",
+      "stage": "02_clean.jsonl",
+      "model": "neuralmind/bert-base-portuguese-cased",
+      "revision": "94d69c95f98f7d5b2a8700c420230ae10def0baa"
+    },
+    {
+      "name": "sentenca_minilm",
       "method": "contextual",
       "stage": "02_clean.jsonl",
       "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
@@ -25,5 +39,5 @@
   "clusters": 4,
   "top_terms": 10,
   "random_state": 42,
-  "probe_words": ["simulação", "realidade", "robô", "fantasma", "amor", "guerra"]
+  "probe_words": ["simulação", "realidade", "robô", "fantasma", "amor", "guerra", "banco", "cachorro"]
 }

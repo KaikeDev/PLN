@@ -34,14 +34,28 @@ def count_nonzero(matrix: np.ndarray | csr_matrix) -> int:
     return int(matrix.nnz) if isinstance(matrix, spmatrix) else int(np.count_nonzero(matrix))
 
 
+def encoded_cosine(left: Encoded, right: Encoded) -> float:
+    """Cosseno entre dois textos codificados (vetores já com norma L2); zero quando um deles é nulo."""
+    product = left.vector @ right.vector.T
+    return float(product.toarray()[0, 0] if issparse(product) else np.asarray(product)[0, 0])
+
+
 class Representation(ABC):
     """Linhas = sinopses na ordem do corpus. As análises dependem só deste contrato (inversão de dependência).
 
-    `supports_words` é verdadeiro quando a representação possui vetores por palavra, o que habilita a
-    análise de palavras vizinhas.
+    Atributos de classe descrevem a família da representação, usados na síntese comparativa:
+
+    - `family`: `lexical` (dimensões = termos do vocabulário), `static` (um vetor aprendido por palavra,
+      igual em qualquer contexto) ou `contextual` (vetor da palavra depende da frase);
+    - `learned`: os vetores vêm de treinamento sobre grandes corpora, e não de contagens;
+    - `supports_words`: há vetores por palavra fora de contexto (vizinhança e pares de palavras);
+    - `supports_word_in_context`: é possível obter o vetor de uma palavra dentro de uma frase (polissemia).
     """
 
+    family = "lexical"
+    learned = False
     supports_words = False
+    supports_word_in_context = False
 
     def __init__(self, spec: RepresentationSpec, ids: tuple[int, ...], matrix: np.ndarray | csr_matrix):
         self.spec, self.ids, self.matrix = spec, ids, matrix
@@ -75,6 +89,18 @@ class Representation(ABC):
 
     def nearest_words(self, word: str, limit: int) -> list[list] | None:
         """Palavras mais próximas de `word`; None quando o método não possui vetores de palavras."""
+        return None
+
+    def word_similarity(self, left: str, right: str) -> float | None:
+        """Cosseno entre duas palavras fora de contexto; None quando não há vetores de palavras ou uma delas é desconhecida."""
+        return None
+
+    def word_in_context(self, text: str, word: str) -> np.ndarray | None:
+        """Vetor com norma L2 de `word` na frase `text`; None quando não suportado ou a palavra não é encontrada."""
+        return None
+
+    def parameters(self) -> int | None:
+        """Quantidade de parâmetros aprendidos do modelo carregado; None para representações sem treinamento."""
         return None
 
     def cosine(self, vectors: np.ndarray | csr_matrix) -> np.ndarray:

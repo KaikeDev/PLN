@@ -1,0 +1,64 @@
+{
+  "description": "Exemplos da Aula 7 (Word2Vec e embeddings modernos), escritos pela equipe e separados do corpus. Servem para comparar sobreposição lexical com proximidade semântica, a hipótese distribucional e a polissemia.",
+  "sentence_pairs": [
+    {
+      "id": "parafrase_cachorro",
+      "left": "O cachorro perseguiu a bola.",
+      "right": "O cão correu atrás do brinquedo.",
+      "expected": "proximas",
+      "note": "Baixa sobreposição lexical, sentido próximo."
+    },
+    {
+      "id": "polissemia_banco",
+      "left": "O banco aprovou o financiamento.",
+      "right": "Ele sentou no banco da praça.",
+      "expected": "distantes",
+      "note": "Compartilham a palavra “banco”, mas com sentidos diferentes."
+    },
+    {
+      "id": "mesmo_sentido_banco",
+      "left": "O banco aprovou o financiamento.",
+      "right": "O banco cobrou juros do empréstimo.",
+      "expected": "proximas",
+      "note": "Controle: “banco” com o mesmo sentido (instituição financeira)."
+    },
+    {
+      "id": "parafrase_filme",
+      "left": "Um programador descobre que vive em uma realidade simulada.",
+      "right": "O mundo que ele conhece é uma ilusão criada por máquinas.",
+      "expected": "proximas",
+      "note": "Paráfrase do tema de Matrix sem palavras de conteúdo em comum."
+    }
+  ],
+  "word_pairs": [
+    ["gato", "cachorro"],
+    ["cão", "cachorro"],
+    ["bola", "brinquedo"],
+    ["leite", "água"],
+    ["banco", "empréstimo"],
+    ["banco", "praça"],
+    ["gato", "financiamento"]
+  ],
+  "word_senses": [
+    {
+      "id": "banco",
+      "word": "banco",
+      "contexts": [
+        {"sense": "instituição financeira", "text": "O banco aprovou o financiamento."},
+        {"sense": "instituição financeira", "text": "O banco cobrou juros do empréstimo."},
+        {"sense": "assento", "text": "Ele sentou no banco da praça."},
+        {"sense": "assento", "text": "As crianças pintaram o banco de madeira do jardim."}
+      ]
+    },
+    {
+      "id": "manga",
+      "word": "manga",
+      "contexts": [
+        {"sense": "fruta", "text": "Ela comeu uma manga madura no café da manhã."},
+        {"sense": "fruta", "text": "O suco de manga estava doce e gelado."},
+        {"sense": "parte da roupa", "text": "A manga da camisa rasgou no prego."},
+        {"sense": "parte da roupa", "text": "Ele dobrou a manga do casaco antes de lavar as mãos."}
+      ]
+    }
+  ]
+}

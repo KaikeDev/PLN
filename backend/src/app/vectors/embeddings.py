@@ -14,23 +14,36 @@ from sklearn.preprocessing import normalize
 from app.vectors.config import ExperimentConfig, RepresentationSpec
 from app.vectors.corpus import ProcessedCorpus
 from app.vectors.metrics import rounded
+from app.vectors.probes import contains_word
 from app.vectors.space import Encoded, Representation
 
 DIGIT_RE = re.compile(r"\d")
 
 
 class WordVectors(Protocol):
+    """Vetores estáticos: uma palavra tem sempre o mesmo vetor, qualquer que seja a frase."""
+
     dimension: int
+    parameters: int
 
     def vector(self, word: str) -> np.ndarray | None: ...
 
 
 class TextEncoder(Protocol):
+    """Codificador contextual: textos inteiros e vetores de uma palavra dentro de uma frase."""
+
     max_tokens: int | None
+    parameters: int | None
 
     def encode(self, texts: list[str]) -> np.ndarray: ...
 
     def count_tokens(self, text: str) -> int: ...
+
+    def word_vectors(self, text: str, word: str) -> list[np.ndarray]: ...
+
+
+def _unit(vector: np.ndarray) -> np.ndarray:
+    return normalize(np.asarray(vector, dtype=np.float64).reshape(1, -1)).ravel()
 
 
 def _dense_rows(representation: Representation) -> list[dict]:
@@ -49,9 +62,16 @@ def _stack_known(words: list[str] | tuple[str, ...], vectors: WordVectors) -> np
 
 
 class Word2VecSpace(Representation):
-    """Cada sinopse é a média dos vetores das suas palavras; palavras desconhecidas pelo modelo são ignoradas."""
+    """Cada sinopse é a média dos vetores das suas palavras; palavras desconhecidas pelo modelo são ignoradas.
 
+    O vetor de uma palavra é estático: `word_in_context` devolve o mesmo vetor em qualquer frase, o que
+    torna visível a limitação do word2vec diante da polissemia.
+    """
+
+    family = "static"
+    learned = True
     supports_words = True
+    supports_word_in_context = True
 
     def __init__(self, spec: RepresentationSpec, ids: tuple[int, ...], tokens: list[list[str]], vectors: WordVectors):
         self.vectors = vectors
@@ -107,6 +127,19 @@ class Word2VecSpace(Representation):
         order = np.lexsort((np.arange(len(scores)), -scores))
         return [[self.vocabulary[i], rounded(scores[i])] for i in order if self.vocabulary[i] != word][:limit]
 
+    def word_similarity(self, left: str, right: str) -> float | None:
+        left_vector, right_vector = self.vectors.vector(left), self.vectors.vector(right)
+        if left_vector is None or right_vector is None:
+            return None
+        return float(_unit(left_vector) @ _unit(right_vector))
+
+    def word_in_context(self, text: str, word: str) -> np.ndarray | None:
+        vector = self.vectors.vector(word)
+        return _unit(vector) if vector is not None and contains_word(text, word) else None
+
+    def parameters(self) -> int | None:
+        return self.vectors.parameters
+
     def summary(self, config: ExperimentConfig) -> dict:
         total = sum(len(document) for document in self.tokens)
         known = sum(self.vectors.vector(token) is not None for document in self.tokens for token in document)
@@ -116,6 +149,7 @@ class Word2VecSpace(Representation):
             "token_coverage": rounded(known / total) if total else None,
             "documents_without_known_words": sum(not np.any(row) for row in self.matrix),
             "corpus_words_in_model": len(self.vocabulary),
+            "parameters": self.vectors.parameters,
         }
 
     def export(self) -> dict[str, list | dict]:
@@ -123,7 +157,16 @@ class Word2VecSpace(Representation):
 
 
 class ContextualSpace(Representation):
-    """Embedding de sentença: o modelo tokeniza em subpalavras e cada token recebe um vetor que depende do contexto."""
+    """Transformer: o modelo tokeniza em subpalavras e cada token recebe um vetor que depende da frase inteira.
+
+    O vetor da sinopse é a média dos vetores dos tokens (mean pooling). Serve tanto a um BERT pré-treinado
+    apenas com modelagem de linguagem mascarada quanto a um modelo ajustado para similaridade de
+    sentenças; a diferença está no modelo configurado, não no código.
+    """
+
+    family = "contextual"
+    learned = True
+    supports_word_in_context = True
 
     def __init__(self, spec: RepresentationSpec, ids: tuple[int, ...], texts: list[str], encoder: TextEncoder):
         self.encoder, self.texts = encoder, texts
@@ -139,7 +182,20 @@ class ContextualSpace(Representation):
     def summary(self, config: ExperimentConfig) -> dict:
         limit = self.encoder.max_tokens
         truncated = sum(self.encoder.count_tokens(text) > limit for text in self.texts) if limit else None
-        return {"model": self.spec.model, "revision": self.spec.revision, "max_tokens": limit, "truncated_documents": truncated}
+        return {
+            "model": self.spec.model,
+            "revision": self.spec.revision,
+            "max_tokens": limit,
+            "truncated_documents": truncated,
+            "parameters": self.encoder.parameters,
+        }
+
+    def word_in_context(self, text: str, word: str) -> np.ndarray | None:
+        vectors = self.encoder.word_vectors(text, word)
+        return _unit(vectors[0]) if vectors else None
+
+    def parameters(self) -> int | None:
+        return self.encoder.parameters
 
     def export(self) -> dict[str, list | dict]:
         return {"embeddings.jsonl": _dense_rows(self)}
@@ -149,8 +205,10 @@ def _sentence_transformer(spec: RepresentationSpec):
     """Carrega o modelo na revisão fixada, com `trust_remote_code=False`: nenhum código do repositório do modelo é executado."""
     try:
         from sentence_transformers import SentenceTransformer
+        from transformers.utils import logging as transformers_logging
     except ImportError as exc:
         raise ValueError("Métodos semânticos exigem o extra opcional: uv sync --frozen --extra semantico") from exc
+    transformers_logging.set_verbosity_error()
     return SentenceTransformer(spec.model, revision=spec.revision, device="cpu", trust_remote_code=False)
 
 
@@ -170,6 +228,7 @@ class SentenceTransformerWordVectors:
         self.index = index
         self.weights = module.emb_layer.weight.detach().cpu().numpy()
         self.dimension = int(self.weights.shape[1])
+        self.parameters = int(self.weights.size)
 
     def vector(self, word: str) -> np.ndarray | None:
         position = self.index.get(DIGIT_RE.sub("0", word))
@@ -177,11 +236,16 @@ class SentenceTransformerWordVectors:
 
 
 class SentenceTransformerEncoder:
-    """Adapta um modelo sentence-transformers ao contrato `TextEncoder`, com embeddings normalizados."""
+    """Adapta um modelo sentence-transformers ao contrato `TextEncoder`, com embeddings normalizados.
+
+    `word_vectors` roda o transformer subjacente e usa os deslocamentos de caracteres do tokenizador
+    para achar as subpalavras de cada ocorrência da palavra; o vetor da ocorrência é a média delas.
+    """
 
     def __init__(self, model):
         self.model = model
         self.max_tokens = getattr(model, "max_seq_length", None)
+        self.parameters = sum(parameter.numel() for parameter in model.parameters())
 
     def encode(self, texts: list[str]) -> np.ndarray:
         return self.model.encode(texts, batch_size=32, convert_to_numpy=True, normalize_embeddings=True, show_progress_bar=False)
@@ -189,6 +253,21 @@ class SentenceTransformerEncoder:
     def count_tokens(self, text: str) -> int:
         """Tokens do texto, só para medir truncamento; `verbose=False` evita o aviso de sequência longa."""
         return len(self.model.tokenizer(text, verbose=False)["input_ids"])
+
+    def word_vectors(self, text: str, word: str) -> list[np.ndarray]:
+        import torch
+
+        encoded = self.model.tokenizer(text, return_offsets_mapping=True, return_tensors="pt", truncation=True, max_length=self.max_tokens)
+        offsets = encoded.pop("offset_mapping")[0].tolist()
+        with torch.no_grad():
+            hidden = self.model[0].auto_model(**encoded).last_hidden_state[0].cpu().numpy()
+        vectors = []
+        for match in re.finditer(rf"(?<!\w){re.escape(word)}(?!\w)", text, flags=re.IGNORECASE):
+            start, end = match.span()
+            rows = [index for index, (left, right) in enumerate(offsets) if right > left and left >= start and right <= end]
+            if rows:
+                vectors.append(hidden[rows].mean(axis=0))
+        return vectors
 
 
 class Word2VecMethod:
