@@ -12019,7 +12019,3012 @@
       }
     ]
   },
-  "word2vec_sem_stopwords": {
+  "word2vec_cbow": {
+    "method": "TruncatedSVD com 2 componentes sobre linhas com norma L2 (LSA nas matrizes lexicais)",
+    "explained_variance_ratio": [
+      0.008574,
+      0.047181
+    ],
+    "points": [
+      {
+        "id": 13,
+        "title": "Forrest Gump: O Contador de Histórias",
+        "genre": null,
+        "x": 0.71641,
+        "y": 0.03924
+      },
+      {
+        "id": 14,
+        "title": "Beleza Americana",
+        "genre": "Drama",
+        "x": 0.73373,
+        "y": 0.41187
+      },
+      {
+        "id": 18,
+        "title": "O Quinto Elemento",
+        "genre": "Ficção científica",
+        "x": 0.63192,
+        "y": -0.13808
+      },
+      {
+        "id": 27,
+        "title": "9 Canções",
+        "genre": "Drama",
+        "x": 0.66125,
+        "y": 0.20528
+      },
+      {
+        "id": 38,
+        "title": "Brilho Eterno de uma Mente sem Lembranças",
+        "genre": null,
+        "x": 0.68412,
+        "y": 0.17112
+      },
+      {
+        "id": 63,
+        "title": "Os 12 Macacos",
+        "genre": "Ficção científica",
+        "x": 0.72788,
+        "y": 0.03309
+      },
+      {
+        "id": 73,
+        "title": "A Outra História Americana",
+        "genre": "Drama",
+        "x": 0.72244,
+        "y": 0.00603
+      },
+      {
+        "id": 74,
+        "title": "Guerra dos Mundos",
+        "genre": "Ficção científica",
+        "x": 0.79378,
+        "y": 0.03606
+      },
+      {
+        "id": 78,
+        "title": "Blade Runner: O Caçador de Andróides",
+        "genre": null,
+        "x": 0.75863,
+        "y": -0.33065
+      },
+      {
+        "id": 95,
+        "title": "Armageddon",
+        "genre": "Ficção científica",
+        "x": 0.60106,
+        "y": -0.29398
+      },
+      {
+        "id": 98,
+        "title": "Gladiador",
+        "genre": "Drama",
+        "x": 0.66903,
+        "y": 0.00134
+      },
+      {
+        "id": 101,
+        "title": "O Profissional",
+        "genre": "Drama",
+        "x": 0.7944,
+        "y": 0.19255
+      },
+      {
+        "id": 105,
+        "title": "De Volta para o Futuro",
+        "genre": null,
+        "x": 0.71689,
+        "y": 0.06834
+      },
+      {
+        "id": 106,
+        "title": "O Predador",
+        "genre": "Ficção científica",
+        "x": 0.7499,
+        "y": -0.14603
+      },
+      {
+        "id": 107,
+        "title": "Snatch: Porcos e Diamantes",
+        "genre": "Comédia",
+        "x": 0.72326,
+        "y": -0.1364
+      },
+      {
+        "id": 111,
+        "title": "Scarface",
+        "genre": "Drama",
+        "x": 0.6293,
+        "y": -0.13726
+      },
+      {
+        "id": 114,
+        "title": "Uma Linda Mulher",
+        "genre": "Comédia",
+        "x": 0.73195,
+        "y": 0.19636
+      },
+      {
+        "id": 115,
+        "title": "O Grande Lebowski",
+        "genre": "Comédia",
+        "x": 0.76735,
+        "y": 0.09375
+      },
+      {
+        "id": 118,
+        "title": "A Fantástica Fábrica de Chocolate",
+        "genre": "Comédia",
+        "x": 0.667,
+        "y": 0.04931
+      },
+      {
+        "id": 137,
+        "title": "Feitiço do Tempo",
+        "genre": "Comédia",
+        "x": 0.59563,
+        "y": 0.10765
+      },
+      {
+        "id": 149,
+        "title": "Akira",
+        "genre": "Ficção científica",
+        "x": 0.81839,
+        "y": -0.10084
+      },
+      {
+        "id": 162,
+        "title": "Edward Mãos de Tesoura",
+        "genre": "Drama",
+        "x": 0.76375,
+        "y": 0.12677
+      },
+      {
+        "id": 165,
+        "title": "De Volta para o Futuro II",
+        "genre": null,
+        "x": 0.71515,
+        "y": 0.06816
+      },
+      {
+        "id": 169,
+        "title": "O Predador 2: A Caçada Continua",
+        "genre": "Ficção científica",
+        "x": 0.6566,
+        "y": -0.32414
+      },
+      {
+        "id": 170,
+        "title": "Extermínio",
+        "genre": null,
+        "x": 0.66345,
+        "y": -0.27687
+      },
+      {
+        "id": 176,
+        "title": "Jogos Mortais",
+        "genre": "Terror",
+        "x": 0.66483,
+        "y": -0.17871
+      },
+      {
+        "id": 194,
+        "title": "O Fabuloso Destino de Amélie Poulain",
+        "genre": "Comédia",
+        "x": 0.78139,
+        "y": 0.15859
+      },
+      {
+        "id": 197,
+        "title": "Coração Valente",
+        "genre": "Drama",
+        "x": 0.71701,
+        "y": 0.07111
+      },
+      {
+        "id": 207,
+        "title": "Sociedade dos Poetas Mortos",
+        "genre": "Drama",
+        "x": 0.58356,
+        "y": -0.05761
+      },
+      {
+        "id": 218,
+        "title": "O Exterminador do Futuro",
+        "genre": "Ficção científica",
+        "x": 0.67862,
+        "y": -0.14528
+      },
+      {
+        "id": 242,
+        "title": "O Poderoso Chefão: Parte III",
+        "genre": "Drama",
+        "x": 0.67344,
+        "y": 0.22937
+      },
+      {
+        "id": 272,
+        "title": "Batman Begins",
+        "genre": "Drama",
+        "x": 0.81069,
+        "y": -0.03087
+      },
+      {
+        "id": 275,
+        "title": "Fargo: Uma Comédia de Erros",
+        "genre": "Drama",
+        "x": 0.72354,
+        "y": 0.04214
+      },
+      {
+        "id": 278,
+        "title": "Um Sonho de Liberdade",
+        "genre": "Drama",
+        "x": 0.76865,
+        "y": 0.22794
+      },
+      {
+        "id": 280,
+        "title": "O Exterminador do Futuro 2: O Julgamento Final",
+        "genre": "Ficção científica",
+        "x": 0.75958,
+        "y": 0.05234
+      },
+      {
+        "id": 297,
+        "title": "Encontro Marcado",
+        "genre": "Drama",
+        "x": 0.75193,
+        "y": 0.04976
+      },
+      {
+        "id": 311,
+        "title": "Era Uma Vez na América",
+        "genre": "Drama",
+        "x": 0.68344,
+        "y": 0.03171
+      },
+      {
+        "id": 329,
+        "title": "Jurassic Park: O Parque dos Dinossauros",
+        "genre": "Ficção científica",
+        "x": 0.66774,
+        "y": -0.23538
+      },
+      {
+        "id": 345,
+        "title": "De Olhos Bem Fechados",
+        "genre": "Drama",
+        "x": 0.73796,
+        "y": 0.29113
+      },
+      {
+        "id": 350,
+        "title": "O Diabo Veste Prada",
+        "genre": null,
+        "x": 0.52586,
+        "y": 0.23971
+      },
+      {
+        "id": 377,
+        "title": "A Hora do Pesadelo",
+        "genre": "Terror",
+        "x": 0.78395,
+        "y": -0.0311
+      },
+      {
+        "id": 415,
+        "title": "Batman & Robin",
+        "genre": "Ficção científica",
+        "x": 0.71294,
+        "y": -0.02773
+      },
+      {
+        "id": 423,
+        "title": "O Pianista",
+        "genre": "Drama",
+        "x": 0.62873,
+        "y": -0.13647
+      },
+      {
+        "id": 424,
+        "title": "A Lista de Schindler",
+        "genre": "Drama",
+        "x": 0.69907,
+        "y": -0.0721
+      },
+      {
+        "id": 425,
+        "title": "A Era do Gelo",
+        "genre": "Comédia",
+        "x": 0.7315,
+        "y": -0.06951
+      },
+      {
+        "id": 489,
+        "title": "Gênio Indomável",
+        "genre": "Drama",
+        "x": 0.5686,
+        "y": 0.17227
+      },
+      {
+        "id": 497,
+        "title": "À Espera de um Milagre",
+        "genre": "Drama",
+        "x": 0.71385,
+        "y": -0.08447
+      },
+      {
+        "id": 550,
+        "title": "Clube da Luta",
+        "genre": "Drama",
+        "x": 0.70282,
+        "y": 0.17155
+      },
+      {
+        "id": 557,
+        "title": "Homem-Aranha",
+        "genre": "Ficção científica",
+        "x": 0.69226,
+        "y": 0.16992
+      },
+      {
+        "id": 559,
+        "title": "Homem-Aranha 3",
+        "genre": "Ficção científica",
+        "x": 0.72139,
+        "y": 0.17603
+      },
+      {
+        "id": 561,
+        "title": "Constantine",
+        "genre": "Terror",
+        "x": 0.74402,
+        "y": 0.24191
+      },
+      {
+        "id": 563,
+        "title": "Tropas Estelares",
+        "genre": "Ficção científica",
+        "x": 0.67365,
+        "y": -0.38903
+      },
+      {
+        "id": 565,
+        "title": "O Chamado",
+        "genre": "Terror",
+        "x": 0.71667,
+        "y": 0.16266
+      },
+      {
+        "id": 581,
+        "title": "Dança com Lobos",
+        "genre": "Drama",
+        "x": 0.68731,
+        "y": -0.10255
+      },
+      {
+        "id": 585,
+        "title": "Monstros S.A.",
+        "genre": "Comédia",
+        "x": 0.78681,
+        "y": -0.12773
+      },
+      {
+        "id": 588,
+        "title": "Terror em Silent Hill",
+        "genre": "Terror",
+        "x": 0.83503,
+        "y": 0.05715
+      },
+      {
+        "id": 597,
+        "title": "Titanic",
+        "genre": "Drama",
+        "x": 0.72769,
+        "y": 0.16231
+      },
+      {
+        "id": 598,
+        "title": "Cidade de Deus",
+        "genre": "Drama",
+        "x": 0.72703,
+        "y": 0.05573
+      },
+      {
+        "id": 601,
+        "title": "E.T.: O Extraterrestre",
+        "genre": "Ficção científica",
+        "x": 0.79889,
+        "y": 0.09611
+      },
+      {
+        "id": 602,
+        "title": "Independence Day",
+        "genre": "Ficção científica",
+        "x": 0.74113,
+        "y": -0.34681
+      },
+      {
+        "id": 603,
+        "title": "Matrix",
+        "genre": "Ficção científica",
+        "x": 0.77012,
+        "y": -0.017
+      },
+      {
+        "id": 604,
+        "title": "Matrix Reloaded",
+        "genre": "Ficção científica",
+        "x": 0.71899,
+        "y": -0.21759
+      },
+      {
+        "id": 607,
+        "title": "MIB - Homens de Preto",
+        "genre": null,
+        "x": 0.6689,
+        "y": -0.30086
+      },
+      {
+        "id": 620,
+        "title": "Os Caça-Fantasmas",
+        "genre": "Comédia",
+        "x": 0.67727,
+        "y": 0.15496
+      },
+      {
+        "id": 622,
+        "title": "O Último Portal",
+        "genre": "Terror",
+        "x": 0.75691,
+        "y": -0.01292
+      },
+      {
+        "id": 628,
+        "title": "Entrevista com o Vampiro",
+        "genre": "Terror",
+        "x": 0.77401,
+        "y": 0.187
+      },
+      {
+        "id": 629,
+        "title": "Os Suspeitos",
+        "genre": "Drama",
+        "x": 0.65013,
+        "y": -0.1577
+      },
+      {
+        "id": 637,
+        "title": "A Vida é Bela",
+        "genre": null,
+        "x": 0.73278,
+        "y": -0.05141
+      },
+      {
+        "id": 640,
+        "title": "Prenda-Me se For Capaz",
+        "genre": "Drama",
+        "x": 0.75527,
+        "y": 0.09394
+      },
+      {
+        "id": 679,
+        "title": "Aliens: O Resgate",
+        "genre": "Ficção científica",
+        "x": 0.74759,
+        "y": -0.1216
+      },
+      {
+        "id": 680,
+        "title": "Pulp Fiction: Tempo de Violência",
+        "genre": "Comédia",
+        "x": 0.71132,
+        "y": 0.13842
+      },
+      {
+        "id": 686,
+        "title": "Contato",
+        "genre": "Ficção científica",
+        "x": 0.77855,
+        "y": 0.07078
+      },
+      {
+        "id": 694,
+        "title": "O Iluminado",
+        "genre": "Terror",
+        "x": 0.63045,
+        "y": 0.04527
+      },
+      {
+        "id": 744,
+        "title": "Top Gun - Ases Indomáveis",
+        "genre": "Drama",
+        "x": 0.65452,
+        "y": -0.07453
+      },
+      {
+        "id": 745,
+        "title": "O Sexto Sentido",
+        "genre": "Drama",
+        "x": 0.74248,
+        "y": 0.26772
+      },
+      {
+        "id": 747,
+        "title": "Todo Mundo Quase Morto",
+        "genre": "Terror",
+        "x": 0.77357,
+        "y": 0.27049
+      },
+      {
+        "id": 752,
+        "title": "V de Vingança",
+        "genre": "Ficção científica",
+        "x": 0.6811,
+        "y": -0.1387
+      },
+      {
+        "id": 754,
+        "title": "A Outra Face",
+        "genre": "Ficção científica",
+        "x": 0.72311,
+        "y": 0.22491
+      },
+      {
+        "id": 755,
+        "title": "Um Drink no Inferno",
+        "genre": "Terror",
+        "x": 0.70673,
+        "y": -0.07142
+      },
+      {
+        "id": 764,
+        "title": "Uma Noite Alucinante: A Morte do Demônio",
+        "genre": "Terror",
+        "x": 0.81995,
+        "y": -0.10599
+      },
+      {
+        "id": 765,
+        "title": "Uma Noite Alucinante 2",
+        "genre": "Terror",
+        "x": 0.79542,
+        "y": 0.13065
+      },
+      {
+        "id": 766,
+        "title": "Uma Noite Alucinante 3",
+        "genre": "Terror",
+        "x": 0.76801,
+        "y": -0.12958
+      },
+      {
+        "id": 769,
+        "title": "Os Bons Companheiros",
+        "genre": "Drama",
+        "x": 0.69793,
+        "y": 0.18215
+      },
+      {
+        "id": 772,
+        "title": "Esqueceram de Mim 2: Perdido em Nova York",
+        "genre": "Comédia",
+        "x": 0.72432,
+        "y": 0.09367
+      },
+      {
+        "id": 788,
+        "title": "Uma Babá Quase Perfeita",
+        "genre": null,
+        "x": 0.74546,
+        "y": 0.21194
+      },
+      {
+        "id": 808,
+        "title": "Shrek",
+        "genre": "Comédia",
+        "x": 0.80603,
+        "y": -0.0623
+      },
+      {
+        "id": 809,
+        "title": "Shrek 2",
+        "genre": "Comédia",
+        "x": 0.76444,
+        "y": 0.23149
+      },
+      {
+        "id": 810,
+        "title": "Shrek Terceiro",
+        "genre": "Comédia",
+        "x": 0.68006,
+        "y": 0.22567
+      },
+      {
+        "id": 813,
+        "title": "Apertem os Cintos, o Piloto Sumiu",
+        "genre": "Comédia",
+        "x": 0.74492,
+        "y": 0.0286
+      },
+      {
+        "id": 814,
+        "title": "Um Lobisomem Americano em Londres",
+        "genre": "Terror",
+        "x": 0.71928,
+        "y": 0.14847
+      },
+      {
+        "id": 841,
+        "title": "Duna",
+        "genre": "Ficção científica",
+        "x": 0.67579,
+        "y": -0.1045
+      },
+      {
+        "id": 854,
+        "title": "O Máskara",
+        "genre": "Comédia",
+        "x": 0.81456,
+        "y": 0.16654
+      },
+      {
+        "id": 857,
+        "title": "O Resgate do Soldado Ryan",
+        "genre": "Drama",
+        "x": 0.69986,
+        "y": -0.01329
+      },
+      {
+        "id": 861,
+        "title": "O Vingador do Futuro",
+        "genre": "Ficção científica",
+        "x": 0.72144,
+        "y": 0.05666
+      },
+      {
+        "id": 862,
+        "title": "Toy Story: Um Mundo de Aventuras",
+        "genre": "Comédia",
+        "x": 0.77932,
+        "y": 0.03325
+      },
+      {
+        "id": 863,
+        "title": "Toy Story 2",
+        "genre": "Comédia",
+        "x": 0.77559,
+        "y": 0.11458
+      },
+      {
+        "id": 920,
+        "title": "Carros",
+        "genre": "Comédia",
+        "x": 0.69332,
+        "y": 0.05424
+      },
+      {
+        "id": 924,
+        "title": "Madrugada dos Mortos",
+        "genre": "Terror",
+        "x": 0.75135,
+        "y": -0.09757
+      },
+      {
+        "id": 927,
+        "title": "Gremlins",
+        "genre": null,
+        "x": 0.67565,
+        "y": -0.15158
+      },
+      {
+        "id": 949,
+        "title": "Fogo Contra Fogo",
+        "genre": "Drama",
+        "x": 0.68404,
+        "y": 0.15779
+      },
+      {
+        "id": 953,
+        "title": "Madagascar",
+        "genre": "Comédia",
+        "x": 0.82709,
+        "y": -0.05928
+      },
+      {
+        "id": 957,
+        "title": "S.O.S.: Tem um Louco Solto no Espaço",
+        "genre": null,
+        "x": 0.7058,
+        "y": -0.21445
+      },
+      {
+        "id": 1091,
+        "title": "O Enigma de Outro Mundo",
+        "genre": null,
+        "x": 0.77107,
+        "y": -0.24173
+      },
+      {
+        "id": 1124,
+        "title": "O Grande Truque",
+        "genre": null,
+        "x": 0.62836,
+        "y": -0.0251
+      },
+      {
+        "id": 1368,
+        "title": "Rambo: Programado Para Matar",
+        "genre": "Drama",
+        "x": 0.61751,
+        "y": -0.119
+      },
+      {
+        "id": 1417,
+        "title": "O Labirinto do Fauno",
+        "genre": "Drama",
+        "x": 0.81587,
+        "y": 0.08157
+      },
+      {
+        "id": 1422,
+        "title": "Os Infiltrados",
+        "genre": "Drama",
+        "x": 0.74286,
+        "y": 0.11817
+      },
+      {
+        "id": 1495,
+        "title": "Cruzada",
+        "genre": "Drama",
+        "x": 0.71252,
+        "y": 0.1139
+      },
+      {
+        "id": 1547,
+        "title": "Os Garotos Perdidos",
+        "genre": "Terror",
+        "x": 0.73924,
+        "y": 0.1284
+      },
+      {
+        "id": 1562,
+        "title": "Extermínio 2",
+        "genre": "Terror",
+        "x": 0.67481,
+        "y": -0.17754
+      },
+      {
+        "id": 1724,
+        "title": "O Incrível Hulk",
+        "genre": "Ficção científica",
+        "x": 0.81398,
+        "y": 0.04694
+      },
+      {
+        "id": 1726,
+        "title": "Homem de Ferro",
+        "genre": "Ficção científica",
+        "x": 0.75784,
+        "y": -0.06944
+      },
+      {
+        "id": 1813,
+        "title": "Advogado do Diabo",
+        "genre": null,
+        "x": 0.74568,
+        "y": 0.30019
+      },
+      {
+        "id": 1891,
+        "title": "Guerra nas Estrelas: O Império Contra-Ataca",
+        "genre": "Ficção científica",
+        "x": 0.66296,
+        "y": -0.13902
+      },
+      {
+        "id": 1892,
+        "title": "Guerra nas Estrelas: O Retorno de Jedi",
+        "genre": "Ficção científica",
+        "x": 0.72539,
+        "y": -0.00601
+      },
+      {
+        "id": 1893,
+        "title": "Star Wars: Episódio I - A Ameaça Fantasma",
+        "genre": "Ficção científica",
+        "x": 0.64056,
+        "y": -0.15907
+      },
+      {
+        "id": 1923,
+        "title": "Twin Peaks: Os Últimos Dias de Laura Palmer",
+        "genre": "Terror",
+        "x": 0.6207,
+        "y": 0.15988
+      },
+      {
+        "id": 1930,
+        "title": "O Espetacular Homem-Aranha",
+        "genre": "Ficção científica",
+        "x": 0.73057,
+        "y": 0.21094
+      },
+      {
+        "id": 1933,
+        "title": "Os Outros",
+        "genre": "Terror",
+        "x": 0.6497,
+        "y": 0.11723
+      },
+      {
+        "id": 2048,
+        "title": "Eu, Robô",
+        "genre": "Ficção científica",
+        "x": 0.62111,
+        "y": -0.26226
+      },
+      {
+        "id": 2062,
+        "title": "Ratatouille",
+        "genre": "Comédia",
+        "x": 0.65632,
+        "y": 0.04154
+      },
+      {
+        "id": 2105,
+        "title": "American Pie: A Primeira Vez é Inesquecível",
+        "genre": "Comédia",
+        "x": 0.73644,
+        "y": 0.02405
+      },
+      {
+        "id": 2109,
+        "title": "A Hora do Rush",
+        "genre": "Comédia",
+        "x": 0.7053,
+        "y": 0.21028
+      },
+      {
+        "id": 2251,
+        "title": "Infidelidade",
+        "genre": "Drama",
+        "x": 0.68776,
+        "y": 0.39902
+      },
+      {
+        "id": 2300,
+        "title": "Space Jam: O Jogo do Século",
+        "genre": "Ficção científica",
+        "x": 0.78671,
+        "y": -0.11064
+      },
+      {
+        "id": 2666,
+        "title": "Cidade das Sombras",
+        "genre": "Ficção científica",
+        "x": 0.7587,
+        "y": 0.22506
+      },
+      {
+        "id": 2667,
+        "title": "A Bruxa de Blair",
+        "genre": "Terror",
+        "x": 0.64938,
+        "y": -0.11592
+      },
+      {
+        "id": 2668,
+        "title": "A Lenda do Cavaleiro Sem Cabeça",
+        "genre": "Terror",
+        "x": 0.68604,
+        "y": 0.01048
+      },
+      {
+        "id": 2671,
+        "title": "O Chamado",
+        "genre": "Terror",
+        "x": 0.66615,
+        "y": 0.09239
+      },
+      {
+        "id": 2756,
+        "title": "O Segredo do Abismo",
+        "genre": "Ficção científica",
+        "x": 0.64792,
+        "y": -0.2823
+      },
+      {
+        "id": 2907,
+        "title": "A Família Addams",
+        "genre": "Comédia",
+        "x": 0.7072,
+        "y": 0.21091
+      },
+      {
+        "id": 2978,
+        "title": "Os Caça-Fantasmas 2",
+        "genre": "Comédia",
+        "x": 0.80738,
+        "y": -0.06563
+      },
+      {
+        "id": 4011,
+        "title": "Os Fantasmas se Divertem",
+        "genre": "Comédia",
+        "x": 0.63247,
+        "y": -0.19827
+      },
+      {
+        "id": 4232,
+        "title": "Pânico",
+        "genre": "Terror",
+        "x": 0.59319,
+        "y": -0.19067
+      },
+      {
+        "id": 4233,
+        "title": "Pânico 2",
+        "genre": "Terror",
+        "x": 0.68938,
+        "y": 0.00881
+      },
+      {
+        "id": 4247,
+        "title": "Todo Mundo em Pânico",
+        "genre": "Comédia",
+        "x": 0.79854,
+        "y": 0.10791
+      },
+      {
+        "id": 4348,
+        "title": "Orgulho e Preconceito",
+        "genre": "Drama",
+        "x": 0.66279,
+        "y": 0.23076
+      },
+      {
+        "id": 4488,
+        "title": "Sexta-Feira 13",
+        "genre": "Terror",
+        "x": 0.6184,
+        "y": -0.12371
+      },
+      {
+        "id": 4951,
+        "title": "10 Coisas Que Eu Odeio em Você",
+        "genre": "Comédia",
+        "x": 0.69415,
+        "y": 0.36643
+      },
+      {
+        "id": 5548,
+        "title": "RoboCop - O Policial do Futuro",
+        "genre": "Ficção científica",
+        "x": 0.72671,
+        "y": -0.06954
+      },
+      {
+        "id": 5876,
+        "title": "O Nevoeiro",
+        "genre": "Terror",
+        "x": 0.74044,
+        "y": 0.08437
+      },
+      {
+        "id": 6114,
+        "title": "Drácula de Bram Stoker",
+        "genre": "Terror",
+        "x": 0.64572,
+        "y": 0.05857
+      },
+      {
+        "id": 6435,
+        "title": "Da Magia à Sedução",
+        "genre": "Comédia",
+        "x": 0.80727,
+        "y": 0.24838
+      },
+      {
+        "id": 6479,
+        "title": "Eu Sou a Lenda",
+        "genre": "Ficção científica",
+        "x": 0.73109,
+        "y": -0.07847
+      },
+      {
+        "id": 7131,
+        "title": "Van Helsing: O Caçador de Monstros",
+        "genre": "Terror",
+        "x": 0.76827,
+        "y": 0.02506
+      },
+      {
+        "id": 7518,
+        "title": "Os Sem-Floresta",
+        "genre": "Comédia",
+        "x": 0.6903,
+        "y": -0.08173
+      },
+      {
+        "id": 7974,
+        "title": "A Garota da Fábrica de Caixas de Fósforos",
+        "genre": "Drama",
+        "x": 0.73695,
+        "y": 0.106
+      },
+      {
+        "id": 8077,
+        "title": "Alien³",
+        "genre": "Terror",
+        "x": 0.69161,
+        "y": -0.07913
+      },
+      {
+        "id": 8078,
+        "title": "Alien: A Ressurreição",
+        "genre": "Terror",
+        "x": 0.72067,
+        "y": -0.0734
+      },
+      {
+        "id": 8329,
+        "title": "[REC]",
+        "genre": "Terror",
+        "x": 0.71119,
+        "y": -0.17668
+      },
+      {
+        "id": 8355,
+        "title": "A Era do Gelo 3",
+        "genre": "Comédia",
+        "x": 0.67318,
+        "y": -0.14418
+      },
+      {
+        "id": 8413,
+        "title": "O Enigma do Horizonte",
+        "genre": null,
+        "x": 0.6744,
+        "y": -0.25315
+      },
+      {
+        "id": 8457,
+        "title": "Meu Nome é Taylor, Drillbit Taylor",
+        "genre": "Comédia",
+        "x": 0.72428,
+        "y": -0.04342
+      },
+      {
+        "id": 8467,
+        "title": "Debi & Lóide: Dois Idiotas em Apuros",
+        "genre": "Comédia",
+        "x": 0.70947,
+        "y": -0.1107
+      },
+      {
+        "id": 8587,
+        "title": "O Rei Leão",
+        "genre": "Drama",
+        "x": 0.63656,
+        "y": 0.10329
+      },
+      {
+        "id": 8656,
+        "title": "Impacto Profundo",
+        "genre": "Ficção científica",
+        "x": 0.72016,
+        "y": -0.18517
+      },
+      {
+        "id": 8689,
+        "title": "Holocausto Canibal",
+        "genre": "Terror",
+        "x": 0.76442,
+        "y": -0.00186
+      },
+      {
+        "id": 8913,
+        "title": "Cemitério Maldito",
+        "genre": "Terror",
+        "x": 0.75041,
+        "y": -0.06346
+      },
+      {
+        "id": 8914,
+        "title": "Do Fundo do Mar",
+        "genre": null,
+        "x": 0.78737,
+        "y": -0.02596
+      },
+      {
+        "id": 8922,
+        "title": "Olhos Famintos",
+        "genre": "Terror",
+        "x": 0.65097,
+        "y": -0.16347
+      },
+      {
+        "id": 8966,
+        "title": "Crepúsculo",
+        "genre": "Drama",
+        "x": 0.74361,
+        "y": 0.3773
+      },
+      {
+        "id": 9056,
+        "title": "Police Story: A Guerra das Drogas",
+        "genre": "Comédia",
+        "x": 0.64093,
+        "y": -0.03581
+      },
+      {
+        "id": 9100,
+        "title": "Jovens Bruxas",
+        "genre": "Terror",
+        "x": 0.64588,
+        "y": 0.2047
+      },
+      {
+        "id": 9276,
+        "title": "Prova Final",
+        "genre": "Terror",
+        "x": 0.73106,
+        "y": -0.109
+      },
+      {
+        "id": 9286,
+        "title": "Premonição 3",
+        "genre": "Terror",
+        "x": 0.7217,
+        "y": -0.05558
+      },
+      {
+        "id": 9297,
+        "title": "A Casa Monstro",
+        "genre": "Terror",
+        "x": 0.80499,
+        "y": 0.08142
+      },
+      {
+        "id": 9323,
+        "title": "Ghost in the Shell: O Fantasma do Futuro",
+        "genre": "Ficção científica",
+        "x": 0.67955,
+        "y": -0.13697
+      },
+      {
+        "id": 9336,
+        "title": "Loucademia de Polícia",
+        "genre": "Comédia",
+        "x": 0.68519,
+        "y": -0.07033
+      },
+      {
+        "id": 9340,
+        "title": "Os Goonies",
+        "genre": "Comédia",
+        "x": 0.75569,
+        "y": 0.00641
+      },
+      {
+        "id": 9358,
+        "title": "Premonição 2",
+        "genre": "Terror",
+        "x": 0.74164,
+        "y": -0.02989
+      },
+      {
+        "id": 9360,
+        "title": "Anaconda",
+        "genre": "Terror",
+        "x": 0.76068,
+        "y": -0.07102
+      },
+      {
+        "id": 9362,
+        "title": "O Ataque dos Vermes Malditos",
+        "genre": "Terror",
+        "x": 0.64786,
+        "y": -0.28077
+      },
+      {
+        "id": 9374,
+        "title": "A Morte lhe Cai Bem",
+        "genre": "Terror",
+        "x": 0.70253,
+        "y": 0.34494
+      },
+      {
+        "id": 9392,
+        "title": "Abismo do Medo",
+        "genre": "Terror",
+        "x": 0.63625,
+        "y": -0.18412
+      },
+      {
+        "id": 9426,
+        "title": "A Mosca",
+        "genre": null,
+        "x": 0.7393,
+        "y": 0.10572
+      },
+      {
+        "id": 9487,
+        "title": "Vida de Inseto",
+        "genre": "Comédia",
+        "x": 0.6037,
+        "y": -0.29128
+      },
+      {
+        "id": 9502,
+        "title": "Kung Fu Panda",
+        "genre": "Comédia",
+        "x": 0.70662,
+        "y": -0.04182
+      },
+      {
+        "id": 9532,
+        "title": "Premonição",
+        "genre": "Terror",
+        "x": 0.80998,
+        "y": -0.09094
+      },
+      {
+        "id": 9737,
+        "title": "Os Bad Boys",
+        "genre": "Comédia",
+        "x": 0.70738,
+        "y": 0.01121
+      },
+      {
+        "id": 9739,
+        "title": "O Demolidor",
+        "genre": "Ficção científica",
+        "x": 0.58342,
+        "y": 0.06081
+      },
+      {
+        "id": 9769,
+        "title": "Lolita",
+        "genre": "Drama",
+        "x": 0.63212,
+        "y": 0.12042
+      },
+      {
+        "id": 9820,
+        "title": "Operação Cupido",
+        "genre": "Comédia",
+        "x": 0.68063,
+        "y": 0.1947
+      },
+      {
+        "id": 9902,
+        "title": "Pânico na Floresta",
+        "genre": "Terror",
+        "x": 0.70955,
+        "y": -0.15108
+      },
+      {
+        "id": 9946,
+        "title": "Fim dos Dias",
+        "genre": "Terror",
+        "x": 0.82742,
+        "y": 0.0964
+      },
+      {
+        "id": 10138,
+        "title": "Homem de Ferro 2",
+        "genre": "Ficção científica",
+        "x": 0.70917,
+        "y": -0.12746
+      },
+      {
+        "id": 10192,
+        "title": "Shrek Para Sempre",
+        "genre": "Comédia",
+        "x": 0.71188,
+        "y": -0.01606
+      },
+      {
+        "id": 10193,
+        "title": "Toy Story 3",
+        "genre": "Comédia",
+        "x": 0.6222,
+        "y": 0.11896
+      },
+      {
+        "id": 10375,
+        "title": "D-Tox",
+        "genre": "Terror",
+        "x": 0.6991,
+        "y": 0.04801
+      },
+      {
+        "id": 10386,
+        "title": "O Gigante de Ferro",
+        "genre": "Ficção científica",
+        "x": 0.77865,
+        "y": -0.0703
+      },
+      {
+        "id": 10585,
+        "title": "Brinquedo Assassino",
+        "genre": "Terror",
+        "x": 0.77755,
+        "y": 0.17468
+      },
+      {
+        "id": 10588,
+        "title": "O Gato",
+        "genre": "Comédia",
+        "x": 0.68461,
+        "y": 0.0742
+      },
+      {
+        "id": 10625,
+        "title": "Meninas Malvadas",
+        "genre": null,
+        "x": 0.6464,
+        "y": 0.03037
+      },
+      {
+        "id": 10681,
+        "title": "WALL-E",
+        "genre": "Ficção científica",
+        "x": 0.73925,
+        "y": -0.11738
+      },
+      {
+        "id": 10775,
+        "title": "Conflitos Internos",
+        "genre": "Drama",
+        "x": 0.65933,
+        "y": -0.00658
+      },
+      {
+        "id": 10830,
+        "title": "Matilda",
+        "genre": "Comédia",
+        "x": 0.68021,
+        "y": 0.15661
+      },
+      {
+        "id": 10997,
+        "title": "Adeus, Minha Concubina",
+        "genre": "Drama",
+        "x": 0.56501,
+        "y": -0.06026
+      },
+      {
+        "id": 11036,
+        "title": "Diário de uma Paixão",
+        "genre": "Drama",
+        "x": 0.73052,
+        "y": 0.25694
+      },
+      {
+        "id": 11324,
+        "title": "Ilha do Medo",
+        "genre": "Drama",
+        "x": 0.7349,
+        "y": 0.08277
+      },
+      {
+        "id": 11544,
+        "title": "Lilo & Stitch",
+        "genre": null,
+        "x": 0.72664,
+        "y": 0.05625
+      },
+      {
+        "id": 11688,
+        "title": "A Nova Onda do Imperador",
+        "genre": "Comédia",
+        "x": 0.70047,
+        "y": 0.20046
+      },
+      {
+        "id": 11970,
+        "title": "Hércules",
+        "genre": "Comédia",
+        "x": 0.73695,
+        "y": 0.06836
+      },
+      {
+        "id": 12153,
+        "title": "As Branquelas",
+        "genre": "Comédia",
+        "x": 0.64511,
+        "y": -0.12149
+      },
+      {
+        "id": 13207,
+        "title": "Sexta-Feira 13",
+        "genre": "Terror",
+        "x": 0.65225,
+        "y": -0.07845
+      },
+      {
+        "id": 14097,
+        "title": "9º Pelotão",
+        "genre": "Drama",
+        "x": 0.63841,
+        "y": -0.30754
+      },
+      {
+        "id": 14139,
+        "title": "Crimes Temporais",
+        "genre": "Ficção científica",
+        "x": 0.61641,
+        "y": -0.00988
+      },
+      {
+        "id": 14160,
+        "title": "Up: Altas Aventuras",
+        "genre": "Comédia",
+        "x": 0.74904,
+        "y": 0.21682
+      },
+      {
+        "id": 14161,
+        "title": "2012",
+        "genre": "Ficção científica",
+        "x": 0.72536,
+        "y": -0.16192
+      },
+      {
+        "id": 14574,
+        "title": "O Menino do Pijama Listrado",
+        "genre": "Drama",
+        "x": 0.77969,
+        "y": -0.0143
+      },
+      {
+        "id": 16869,
+        "title": "Bastardos Inglórios",
+        "genre": "Drama",
+        "x": 0.65195,
+        "y": -0.19866
+      },
+      {
+        "id": 18240,
+        "title": "A Proposta",
+        "genre": null,
+        "x": 0.68557,
+        "y": 0.24015
+      },
+      {
+        "id": 18491,
+        "title": "Neon Genesis Evangelion: O Fim do Evangelho",
+        "genre": "Ficção científica",
+        "x": 0.57502,
+        "y": -0.15998
+      },
+      {
+        "id": 18785,
+        "title": "Se Beber, Não Case!",
+        "genre": "Comédia",
+        "x": 0.70525,
+        "y": 0.09749
+      },
+      {
+        "id": 19404,
+        "title": "Dilwale vai levar a noiva",
+        "genre": null,
+        "x": 0.68078,
+        "y": 0.02171
+      },
+      {
+        "id": 19908,
+        "title": "Zumbilândia",
+        "genre": "Terror",
+        "x": 0.67876,
+        "y": 0.03134
+      },
+      {
+        "id": 19994,
+        "title": "Garota Infernal",
+        "genre": "Terror",
+        "x": 0.74736,
+        "y": 0.15468
+      },
+      {
+        "id": 19995,
+        "title": "Avatar",
+        "genre": "Ficção científica",
+        "x": 0.69918,
+        "y": -0.20635
+      },
+      {
+        "id": 20352,
+        "title": "Meu Malvado Favorito",
+        "genre": null,
+        "x": 0.71154,
+        "y": -0.17464
+      },
+      {
+        "id": 21484,
+        "title": "Possessão",
+        "genre": "Terror",
+        "x": 0.73004,
+        "y": 0.08517
+      },
+      {
+        "id": 21835,
+        "title": "Uma Odisséia Chinesa: Parte Dois – Cinderela",
+        "genre": null,
+        "x": 0.40065,
+        "y": -0.11306
+      },
+      {
+        "id": 21966,
+        "title": "Consumido pelo Ódio",
+        "genre": "Drama",
+        "x": 0.68981,
+        "y": 0.06347
+      },
+      {
+        "id": 22970,
+        "title": "O Segredo da Cabana",
+        "genre": "Terror",
+        "x": 0.54312,
+        "y": -0.07438
+      },
+      {
+        "id": 24428,
+        "title": "Os Vingadores: The Avengers",
+        "genre": "Ficção científica",
+        "x": 0.76802,
+        "y": -0.14463
+      },
+      {
+        "id": 25237,
+        "title": "Vá e Veja",
+        "genre": "Terror",
+        "x": 0.68993,
+        "y": -0.0564
+      },
+      {
+        "id": 26827,
+        "title": "Quem é Essa Garota?",
+        "genre": "Comédia",
+        "x": 0.71258,
+        "y": 0.37163
+      },
+      {
+        "id": 27205,
+        "title": "A Origem",
+        "genre": "Ficção científica",
+        "x": 0.83173,
+        "y": 0.02362
+      },
+      {
+        "id": 36586,
+        "title": "Blade II: O Caçador de Vampiros",
+        "genre": "Terror",
+        "x": 0.70597,
+        "y": -0.28126
+      },
+      {
+        "id": 36647,
+        "title": "Blade: O Caçador de Vampiros",
+        "genre": "Terror",
+        "x": 0.69352,
+        "y": -0.22154
+      },
+      {
+        "id": 36648,
+        "title": "Blade Trinity",
+        "genre": "Terror",
+        "x": 0.57507,
+        "y": -0.07718
+      },
+      {
+        "id": 37165,
+        "title": "O Show de Truman: O Show da Vida",
+        "genre": null,
+        "x": 0.74778,
+        "y": 0.16231
+      },
+      {
+        "id": 38365,
+        "title": "Gente Grande",
+        "genre": "Comédia",
+        "x": 0.59668,
+        "y": 0.07154
+      },
+      {
+        "id": 39254,
+        "title": "Gigantes de Aço",
+        "genre": null,
+        "x": 0.65021,
+        "y": -0.04822
+      },
+      {
+        "id": 43947,
+        "title": "Doce Vingança",
+        "genre": "Terror",
+        "x": 0.72736,
+        "y": 0.11274
+      },
+      {
+        "id": 44214,
+        "title": "Cisne Negro",
+        "genre": null,
+        "x": 0.71139,
+        "y": 0.23051
+      },
+      {
+        "id": 44912,
+        "title": "Lanterna Verde",
+        "genre": "Ficção científica",
+        "x": 0.69198,
+        "y": -0.12263
+      },
+      {
+        "id": 45612,
+        "title": "Contra o Tempo",
+        "genre": "Ficção científica",
+        "x": 0.69789,
+        "y": -0.15939
+      },
+      {
+        "id": 49013,
+        "title": "Carros 2",
+        "genre": "Comédia",
+        "x": 0.6224,
+        "y": -0.06719
+      },
+      {
+        "id": 49018,
+        "title": "Sobrenatural",
+        "genre": "Terror",
+        "x": 0.67926,
+        "y": 0.15335
+      },
+      {
+        "id": 49026,
+        "title": "Batman: O Cavaleiro das Trevas Ressurge",
+        "genre": "Drama",
+        "x": 0.74783,
+        "y": 0.02957
+      },
+      {
+        "id": 49494,
+        "title": "A Águia da Legião Perdida",
+        "genre": "Drama",
+        "x": 0.67195,
+        "y": -0.06767
+      },
+      {
+        "id": 49519,
+        "title": "Os Croods",
+        "genre": "Comédia",
+        "x": 0.62344,
+        "y": -0.18774
+      },
+      {
+        "id": 49521,
+        "title": "O Homem de Aço",
+        "genre": "Ficção científica",
+        "x": 0.73444,
+        "y": -0.001
+      },
+      {
+        "id": 53064,
+        "title": "Midori",
+        "genre": "Terror",
+        "x": 0.66662,
+        "y": 0.11646
+      },
+      {
+        "id": 53653,
+        "title": "Prisioneiro do Inferno",
+        "genre": "Drama",
+        "x": 0.67707,
+        "y": -0.00419
+      },
+      {
+        "id": 55779,
+        "title": "Premonição 5",
+        "genre": "Terror",
+        "x": 0.80983,
+        "y": -0.1549
+      },
+      {
+        "id": 57800,
+        "title": "A Era do Gelo 4",
+        "genre": "Comédia",
+        "x": 0.71322,
+        "y": -0.10539
+      },
+      {
+        "id": 61791,
+        "title": "Planeta dos Macacos: A Origem",
+        "genre": "Ficção científica",
+        "x": 0.77933,
+        "y": -0.02797
+      },
+      {
+        "id": 68718,
+        "title": "Django Livre",
+        "genre": "Drama",
+        "x": 0.7736,
+        "y": 0.1186
+      },
+      {
+        "id": 68721,
+        "title": "Homem de Ferro 3",
+        "genre": "Ficção científica",
+        "x": 0.76742,
+        "y": -0.07076
+      },
+      {
+        "id": 68726,
+        "title": "Círculo de Fogo",
+        "genre": "Ficção científica",
+        "x": 0.72798,
+        "y": -0.28077
+      },
+      {
+        "id": 70981,
+        "title": "Prometheus",
+        "genre": null,
+        "x": 0.63554,
+        "y": -0.26353
+      },
+      {
+        "id": 72190,
+        "title": "Guerra Mundial Z",
+        "genre": null,
+        "x": 0.66866,
+        "y": -0.22412
+      },
+      {
+        "id": 73861,
+        "title": "A Serbian Film - Terror sem Limites",
+        "genre": "Terror",
+        "x": 0.5963,
+        "y": 0.20082
+      },
+      {
+        "id": 74997,
+        "title": "A Centopéia Humana 2",
+        "genre": "Terror",
+        "x": 0.76073,
+        "y": 0.13288
+      },
+      {
+        "id": 76341,
+        "title": "Mad Max: Estrada da Fúria",
+        "genre": "Ficção científica",
+        "x": 0.7414,
+        "y": 0.11273
+      },
+      {
+        "id": 76492,
+        "title": "Hotel Transilvânia",
+        "genre": "Comédia",
+        "x": 0.77249,
+        "y": 0.0371
+      },
+      {
+        "id": 76600,
+        "title": "Avatar: O Caminho da Água",
+        "genre": "Ficção científica",
+        "x": 0.66297,
+        "y": -0.00333
+      },
+      {
+        "id": 77338,
+        "title": "Intocáveis",
+        "genre": null,
+        "x": 0.71392,
+        "y": 0.03313
+      },
+      {
+        "id": 80321,
+        "title": "Madagascar 3: Os Procurados",
+        "genre": "Comédia",
+        "x": 0.82939,
+        "y": -0.04604
+      },
+      {
+        "id": 81774,
+        "title": "A Iniciação",
+        "genre": null,
+        "x": 0.60527,
+        "y": 0.11342
+      },
+      {
+        "id": 82023,
+        "title": "Hotel Desire",
+        "genre": "Drama",
+        "x": 0.74047,
+        "y": 0.126
+      },
+      {
+        "id": 82507,
+        "title": "A Entidade",
+        "genre": "Terror",
+        "x": 0.77853,
+        "y": 0.05515
+      },
+      {
+        "id": 82690,
+        "title": "Detona Ralph",
+        "genre": "Comédia",
+        "x": 0.72658,
+        "y": 0.01559
+      },
+      {
+        "id": 83533,
+        "title": "Avatar: Fogo e Cinzas",
+        "genre": "Ficção científica",
+        "x": 0.76339,
+        "y": -0.08548
+      },
+      {
+        "id": 91586,
+        "title": "Sobrenatural: Capítulo 2",
+        "genre": "Terror",
+        "x": 0.71243,
+        "y": 0.05479
+      },
+      {
+        "id": 93456,
+        "title": "Meu Malvado Favorito 2",
+        "genre": "Ficção científica",
+        "x": 0.77467,
+        "y": 0.12887
+      },
+      {
+        "id": 99861,
+        "title": "Vingadores: Era de Ultron",
+        "genre": "Ficção científica",
+        "x": 0.7714,
+        "y": -0.21149
+      },
+      {
+        "id": 100402,
+        "title": "Capitão América: O Soldado Invernal",
+        "genre": "Ficção científica",
+        "x": 0.78784,
+        "y": 0.01172
+      },
+      {
+        "id": 101299,
+        "title": "Jogos Vorazes: Em Chamas",
+        "genre": "Ficção científica",
+        "x": 0.5729,
+        "y": -0.19966
+      },
+      {
+        "id": 102382,
+        "title": "O Espetacular Homem-Aranha 2: A Ameaça de Electro",
+        "genre": "Ficção científica",
+        "x": 0.68163,
+        "y": 0.18884
+      },
+      {
+        "id": 106646,
+        "title": "O Lobo de Wall Street",
+        "genre": null,
+        "x": 0.7095,
+        "y": 0.08348
+      },
+      {
+        "id": 109428,
+        "title": "A Morte do Demônio",
+        "genre": "Terror",
+        "x": 0.82756,
+        "y": -0.07578
+      },
+      {
+        "id": 120467,
+        "title": "O Grande Hotel Budapeste",
+        "genre": "Comédia",
+        "x": 0.62797,
+        "y": -0.06147
+      },
+      {
+        "id": 127585,
+        "title": "X-Men: Dias de um Futuro Esquecido",
+        "genre": "Ficção científica",
+        "x": 0.71986,
+        "y": -0.28728
+      },
+      {
+        "id": 131631,
+        "title": "Jogos Vorazes: A Esperança - Parte 1",
+        "genre": "Ficção científica",
+        "x": 0.68589,
+        "y": -0.02839
+      },
+      {
+        "id": 137113,
+        "title": "No Limite do Amanhã",
+        "genre": "Ficção científica",
+        "x": 0.71285,
+        "y": -0.15639
+      },
+      {
+        "id": 138843,
+        "title": "Invocação do Mal",
+        "genre": "Terror",
+        "x": 0.71086,
+        "y": -0.01567
+      },
+      {
+        "id": 146233,
+        "title": "Os Suspeitos",
+        "genre": "Drama",
+        "x": 0.68134,
+        "y": 0.23219
+      },
+      {
+        "id": 150540,
+        "title": "Divertida Mente",
+        "genre": null,
+        "x": 0.71178,
+        "y": 0.02386
+      },
+      {
+        "id": 157336,
+        "title": "Interestelar",
+        "genre": null,
+        "x": 0.72523,
+        "y": -0.13929
+      },
+      {
+        "id": 177572,
+        "title": "Operação Big Hero",
+        "genre": "Comédia",
+        "x": 0.69939,
+        "y": -0.10583
+      },
+      {
+        "id": 198663,
+        "title": "Maze Runner: Correr ou Morrer",
+        "genre": "Ficção científica",
+        "x": 0.60989,
+        "y": -0.0969
+      },
+      {
+        "id": 205596,
+        "title": "O Jogo da Imitação",
+        "genre": "Drama",
+        "x": 0.61692,
+        "y": 0.02225
+      },
+      {
+        "id": 207703,
+        "title": "Kingsman: Serviço Secreto",
+        "genre": "Comédia",
+        "x": 0.74932,
+        "y": 0.07413
+      },
+      {
+        "id": 210577,
+        "title": "Garota Exemplar",
+        "genre": "Drama",
+        "x": 0.75656,
+        "y": 0.30596
+      },
+      {
+        "id": 214756,
+        "title": "Ted 2",
+        "genre": "Comédia",
+        "x": 0.66619,
+        "y": 0.24315
+      },
+      {
+        "id": 216015,
+        "title": "Cinquenta Tons de Cinza",
+        "genre": "Drama",
+        "x": 0.68928,
+        "y": 0.30455
+      },
+      {
+        "id": 228150,
+        "title": "Corações de Ferro",
+        "genre": "Drama",
+        "x": 0.66713,
+        "y": -0.21746
+      },
+      {
+        "id": 238636,
+        "title": "Uma Noite de Crime: Anarquia",
+        "genre": "Terror",
+        "x": 0.8364,
+        "y": 0.11139
+      },
+      {
+        "id": 242582,
+        "title": "O Abutre",
+        "genre": "Drama",
+        "x": 0.65829,
+        "y": 0.02055
+      },
+      {
+        "id": 244786,
+        "title": "Whiplash: Em Busca da Perfeição",
+        "genre": "Drama",
+        "x": 0.70958,
+        "y": 0.20279
+      },
+      {
+        "id": 246655,
+        "title": "X-Men: Apocalipse",
+        "genre": "Ficção científica",
+        "x": 0.72116,
+        "y": -0.19922
+      },
+      {
+        "id": 256274,
+        "title": "Assim na Terra Como no Inferno",
+        "genre": "Terror",
+        "x": 0.72397,
+        "y": -0.26429
+      },
+      {
+        "id": 259693,
+        "title": "Invocação do Mal 2",
+        "genre": "Terror",
+        "x": 0.75964,
+        "y": 0.12739
+      },
+      {
+        "id": 260514,
+        "title": "Carros 3",
+        "genre": "Drama",
+        "x": 0.50976,
+        "y": -0.01237
+      },
+      {
+        "id": 263115,
+        "title": "Logan",
+        "genre": "Drama",
+        "x": 0.75211,
+        "y": 0.05928
+      },
+      {
+        "id": 269149,
+        "title": "Zootopia: Essa Cidade é o Bicho",
+        "genre": "Comédia",
+        "x": 0.67978,
+        "y": -0.06083
+      },
+      {
+        "id": 270303,
+        "title": "Corrente do Mal",
+        "genre": "Terror",
+        "x": 0.81516,
+        "y": 0.06139
+      },
+      {
+        "id": 271110,
+        "title": "Capitão América: Guerra Civil",
+        "genre": "Ficção científica",
+        "x": 0.68591,
+        "y": -0.30946
+      },
+      {
+        "id": 273248,
+        "title": "Os Oito Odiados",
+        "genre": "Drama",
+        "x": 0.70949,
+        "y": -0.16378
+      },
+      {
+        "id": 280092,
+        "title": "Sobrenatural: A Origem",
+        "genre": "Terror",
+        "x": 0.76079,
+        "y": 0.03547
+      },
+      {
+        "id": 281957,
+        "title": "O Regresso",
+        "genre": "Drama",
+        "x": 0.77931,
+        "y": -0.01791
+      },
+      {
+        "id": 283995,
+        "title": "Guardiões da Galáxia - Vol. 2",
+        "genre": "Ficção científica",
+        "x": 0.66826,
+        "y": -0.03595
+      },
+      {
+        "id": 284053,
+        "title": "Thor: Ragnarok",
+        "genre": null,
+        "x": 0.72491,
+        "y": -0.1604
+      },
+      {
+        "id": 284054,
+        "title": "Pantera Negra",
+        "genre": "Ficção científica",
+        "x": 0.61862,
+        "y": -0.04082
+      },
+      {
+        "id": 286217,
+        "title": "Perdido em Marte",
+        "genre": null,
+        "x": 0.70902,
+        "y": -0.10844
+      },
+      {
+        "id": 287424,
+        "title": "Maggie - A Transformação",
+        "genre": null,
+        "x": 0.71256,
+        "y": 0.14025
+      },
+      {
+        "id": 290098,
+        "title": "A Criada",
+        "genre": "Drama",
+        "x": 0.78627,
+        "y": 0.09937
+      },
+      {
+        "id": 293660,
+        "title": "Deadpool",
+        "genre": "Comédia",
+        "x": 0.70022,
+        "y": 0.07177
+      },
+      {
+        "id": 299534,
+        "title": "Vingadores: Ultimato",
+        "genre": "Ficção científica",
+        "x": 0.68039,
+        "y": -0.32267
+      },
+      {
+        "id": 299536,
+        "title": "Vingadores: Guerra Infinita",
+        "genre": "Ficção científica",
+        "x": 0.67691,
+        "y": -0.26829
+      },
+      {
+        "id": 299710,
+        "title": "Aos 14",
+        "genre": "Drama",
+        "x": 0.55852,
+        "y": -0.04601
+      },
+      {
+        "id": 301528,
+        "title": "Toy Story 4",
+        "genre": "Comédia",
+        "x": 0.71408,
+        "y": 0.18201
+      },
+      {
+        "id": 310131,
+        "title": "A Bruxa",
+        "genre": "Terror",
+        "x": 0.71653,
+        "y": 0.03643
+      },
+      {
+        "id": 313369,
+        "title": "La La Land: Cantando Estações",
+        "genre": null,
+        "x": 0.6428,
+        "y": 0.22533
+      },
+      {
+        "id": 315162,
+        "title": "Gato de Botas 2: O Último Pedido",
+        "genre": "Comédia",
+        "x": 0.68505,
+        "y": -0.05591
+      },
+      {
+        "id": 315635,
+        "title": "Homem-Aranha: De Volta ao Lar",
+        "genre": "Ficção científica",
+        "x": 0.66386,
+        "y": 0.07616
+      },
+      {
+        "id": 324786,
+        "title": "Até o Último Homem",
+        "genre": "Drama",
+        "x": 0.61606,
+        "y": -0.08853
+      },
+      {
+        "id": 324857,
+        "title": "Homem-Aranha: No Aranhaverso",
+        "genre": "Ficção científica",
+        "x": 0.73925,
+        "y": 0.2154
+      },
+      {
+        "id": 329865,
+        "title": "A Chegada",
+        "genre": "Drama",
+        "x": 0.71234,
+        "y": -0.1012
+      },
+      {
+        "id": 330457,
+        "title": "Frozen II",
+        "genre": "Comédia",
+        "x": 0.64533,
+        "y": 0.06975
+      },
+      {
+        "id": 335984,
+        "title": "Blade Runner 2049",
+        "genre": null,
+        "x": 0.68249,
+        "y": 0.00568
+      },
+      {
+        "id": 337167,
+        "title": "Cinquenta Tons de Liberdade",
+        "genre": "Drama",
+        "x": 0.71847,
+        "y": 0.13652
+      },
+      {
+        "id": 345940,
+        "title": "Megatubarão",
+        "genre": "Terror",
+        "x": 0.64893,
+        "y": -0.10876
+      },
+      {
+        "id": 346698,
+        "title": "Barbie",
+        "genre": "Comédia",
+        "x": 0.68683,
+        "y": -0.00762
+      },
+      {
+        "id": 359410,
+        "title": "Matador de Aluguel",
+        "genre": "Drama",
+        "x": 0.5785,
+        "y": 0.04191
+      },
+      {
+        "id": 361743,
+        "title": "Top Gun: Maverick",
+        "genre": "Drama",
+        "x": 0.66422,
+        "y": -0.15999
+      },
+      {
+        "id": 372058,
+        "title": "Your Name.",
+        "genre": "Drama",
+        "x": 0.70086,
+        "y": 0.08227
+      },
+      {
+        "id": 374720,
+        "title": "Dunkirk",
+        "genre": "Drama",
+        "x": 0.49456,
+        "y": -0.4071
+      },
+      {
+        "id": 383498,
+        "title": "Deadpool 2",
+        "genre": "Comédia",
+        "x": 0.77294,
+        "y": 0.06151
+      },
+      {
+        "id": 384018,
+        "title": "Velozes & Furiosos: Hobbs & Shaw",
+        "genre": "Comédia",
+        "x": 0.52705,
+        "y": -0.00532
+      },
+      {
+        "id": 396535,
+        "title": "Invasão Zumbi",
+        "genre": "Terror",
+        "x": 0.65476,
+        "y": -0.24854
+      },
+      {
+        "id": 402431,
+        "title": "Wicked",
+        "genre": "Drama",
+        "x": 0.766,
+        "y": 0.02926
+      },
+      {
+        "id": 406563,
+        "title": "Sobrenatural: A Última Chave",
+        "genre": "Terror",
+        "x": 0.74428,
+        "y": 0.14387
+      },
+      {
+        "id": 414419,
+        "title": "Kill Bill: The Whole Bloody Affair",
+        "genre": "Drama",
+        "x": 0.69124,
+        "y": 0.09525
+      },
+      {
+        "id": 417859,
+        "title": "Gato de Botas",
+        "genre": "Comédia",
+        "x": 0.7753,
+        "y": -0.0013
+      },
+      {
+        "id": 419430,
+        "title": "Corra!",
+        "genre": "Terror",
+        "x": 0.73829,
+        "y": 0.18892
+      },
+      {
+        "id": 423108,
+        "title": "Invocação do Mal 3: A Ordem do Demônio",
+        "genre": "Terror",
+        "x": 0.69425,
+        "y": -0.04748
+      },
+      {
+        "id": 429617,
+        "title": "Homem-Aranha: Longe de Casa",
+        "genre": "Ficção científica",
+        "x": 0.73346,
+        "y": 0.01797
+      },
+      {
+        "id": 436270,
+        "title": "Adão Negro",
+        "genre": "Ficção científica",
+        "x": 0.57174,
+        "y": -0.15332
+      },
+      {
+        "id": 436969,
+        "title": "O Esquadrão Suicida",
+        "genre": "Comédia",
+        "x": 0.63287,
+        "y": -0.16784
+      },
+      {
+        "id": 438631,
+        "title": "Duna",
+        "genre": "Ficção científica",
+        "x": 0.67487,
+        "y": -0.17863
+      },
+      {
+        "id": 439079,
+        "title": "A Freira",
+        "genre": "Terror",
+        "x": 0.75845,
+        "y": -0.02455
+      },
+      {
+        "id": 441168,
+        "title": "Aluna Exemplar e Estrela Pornô",
+        "genre": "Drama",
+        "x": 0.48217,
+        "y": 0.25996
+      },
+      {
+        "id": 447332,
+        "title": "Um Lugar Silencioso",
+        "genre": null,
+        "x": 0.64107,
+        "y": -0.14456
+      },
+      {
+        "id": 447365,
+        "title": "Guardiões da Galáxia: Vol. 3",
+        "genre": "Ficção científica",
+        "x": 0.66773,
+        "y": -0.06916
+      },
+      {
+        "id": 460458,
+        "title": "Resident Evil: Bem-Vindo a Raccoon City",
+        "genre": "Terror",
+        "x": 0.74962,
+        "y": -0.13046
+      },
+      {
+        "id": 466272,
+        "title": "Era Uma Vez em… Hollywood",
+        "genre": null,
+        "x": 0.66049,
+        "y": 0.30426
+      },
+      {
+        "id": 466420,
+        "title": "Assassinos da Lua das Flores",
+        "genre": "Drama",
+        "x": 0.60341,
+        "y": -0.12614
+      },
+      {
+        "id": 475557,
+        "title": "Coringa",
+        "genre": "Drama",
+        "x": 0.70261,
+        "y": 0.053
+      },
+      {
+        "id": 490132,
+        "title": "Green Book: O Guia",
+        "genre": null,
+        "x": 0.72627,
+        "y": -0.00687
+      },
+      {
+        "id": 493922,
+        "title": "Hereditário",
+        "genre": "Terror",
+        "x": 0.73213,
+        "y": 0.13071
+      },
+      {
+        "id": 496243,
+        "title": "Parasita",
+        "genre": null,
+        "x": 0.70412,
+        "y": 0.15211
+      },
+      {
+        "id": 497698,
+        "title": "Viúva Negra",
+        "genre": "Ficção científica",
+        "x": 0.72654,
+        "y": 0.14209
+      },
+      {
+        "id": 502356,
+        "title": "Super Mario Bros. O Filme",
+        "genre": "Comédia",
+        "x": 0.60419,
+        "y": -0.17704
+      },
+      {
+        "id": 505642,
+        "title": "Pantera Negra: Wakanda para Sempre",
+        "genre": "Ficção científica",
+        "x": 0.77219,
+        "y": -0.02218
+      },
+      {
+        "id": 508947,
+        "title": "Red: Crescer é Uma Fera",
+        "genre": "Comédia",
+        "x": 0.54686,
+        "y": 0.04969
+      },
+      {
+        "id": 519182,
+        "title": "Meu Malvado Favorito 4",
+        "genre": "Comédia",
+        "x": 0.72059,
+        "y": 0.2104
+      },
+      {
+        "id": 522627,
+        "title": "Magnatas do Crime",
+        "genre": "Comédia",
+        "x": 0.74377,
+        "y": -0.10159
+      },
+      {
+        "id": 530385,
+        "title": "Midsommar: O Mal Não Espera a Noite",
+        "genre": "Terror",
+        "x": 0.77922,
+        "y": 0.02641
+      },
+      {
+        "id": 533535,
+        "title": "Deadpool & Wolverine",
+        "genre": null,
+        "x": 0.62063,
+        "y": 0.1823
+      },
+      {
+        "id": 546554,
+        "title": "Entre Facas e Segredos",
+        "genre": "Comédia",
+        "x": 0.67875,
+        "y": 0.05785
+      },
+      {
+        "id": 549509,
+        "title": "O Brutalista",
+        "genre": "Drama",
+        "x": 0.66349,
+        "y": 0.09001
+      },
+      {
+        "id": 550988,
+        "title": "Free Guy: Assumindo o Controle",
+        "genre": "Comédia",
+        "x": 0.75367,
+        "y": 0.03212
+      },
+      {
+        "id": 552524,
+        "title": "Lilo & Stitch",
+        "genre": null,
+        "x": 0.74827,
+        "y": -0.08223
+      },
+      {
+        "id": 558449,
+        "title": "Gladiador 2",
+        "genre": "Drama",
+        "x": 0.78615,
+        "y": -0.1224
+      },
+      {
+        "id": 567609,
+        "title": "Casamento Sangrento",
+        "genre": "Terror",
+        "x": 0.7874,
+        "y": 0.03831
+      },
+      {
+        "id": 569094,
+        "title": "Homem-Aranha: Através do Aranhaverso",
+        "genre": "Ficção científica",
+        "x": 0.74345,
+        "y": -0.02082
+      },
+      {
+        "id": 570508,
+        "title": "Testemunha Inocente",
+        "genre": "Drama",
+        "x": 0.61459,
+        "y": 0.21119
+      },
+      {
+        "id": 574475,
+        "title": "Premonição 6: Laços de Sangue",
+        "genre": "Terror",
+        "x": 0.71945,
+        "y": 0.1097
+      },
+      {
+        "id": 587424,
+        "title": "Infecção",
+        "genre": "Terror",
+        "x": 0.67669,
+        "y": -0.16152
+      },
+      {
+        "id": 604079,
+        "title": "A Longa Marcha: Caminhe ou Morra",
+        "genre": "Terror",
+        "x": 0.45927,
+        "y": -0.18117
+      },
+      {
+        "id": 614479,
+        "title": "Sobrenatural: A Porta Vermelha",
+        "genre": "Terror",
+        "x": 0.66369,
+        "y": 0.08129
+      },
+      {
+        "id": 615656,
+        "title": "Megatubarão 2",
+        "genre": "Terror",
+        "x": 0.65531,
+        "y": -0.27424
+      },
+      {
+        "id": 616037,
+        "title": "Thor: Amor e Trovão",
+        "genre": "Comédia",
+        "x": 0.82886,
+        "y": -0.1054
+      },
+      {
+        "id": 617126,
+        "title": "Quarteto Fantástico: Primeiros Passos",
+        "genre": "Ficção científica",
+        "x": 0.69171,
+        "y": -0.17207
+      },
+      {
+        "id": 629542,
+        "title": "Os Caras Malvados",
+        "genre": "Comédia",
+        "x": 0.65188,
+        "y": 0.01251
+      },
+      {
+        "id": 634649,
+        "title": "Homem-Aranha: Sem Volta Para Casa",
+        "genre": "Ficção científica",
+        "x": 0.7031,
+        "y": 0.07241
+      },
+      {
+        "id": 637649,
+        "title": "Infiltrado",
+        "genre": "Drama",
+        "x": 0.71164,
+        "y": -0.06346
+      },
+      {
+        "id": 693134,
+        "title": "Duna: Parte Dois",
+        "genre": "Ficção científica",
+        "x": 0.77488,
+        "y": -0.01209
+      },
+      {
+        "id": 713704,
+        "title": "A Morte do Demônio: A Ascensão",
+        "genre": "Terror",
+        "x": 0.68062,
+        "y": -0.1447
+      },
+      {
+        "id": 718930,
+        "title": "Trem-Bala",
+        "genre": "Comédia",
+        "x": 0.68171,
+        "y": -0.2843
+      },
+      {
+        "id": 744275,
+        "title": "After: Depois do Desencontro",
+        "genre": "Drama",
+        "x": 0.73253,
+        "y": 0.13518
+      },
+      {
+        "id": 746036,
+        "title": "O Dublê",
+        "genre": "Comédia",
+        "x": 0.59924,
+        "y": 0.13812
+      },
+      {
+        "id": 755898,
+        "title": "A Guerra dos Mundos",
+        "genre": "Ficção científica",
+        "x": 0.68081,
+        "y": -0.07921
+      },
+      {
+        "id": 803796,
+        "title": "Guerreiras do K-Pop",
+        "genre": "Comédia",
+        "x": 0.48032,
+        "y": -0.24258
+      },
+      {
+        "id": 822119,
+        "title": "Capitão América: Admirável Mundo Novo",
+        "genre": "Ficção científica",
+        "x": 0.68183,
+        "y": -0.02933
+      },
+      {
+        "id": 829557,
+        "title": "365 Dias: Hoje",
+        "genre": "Drama",
+        "x": 0.79978,
+        "y": 0.16672
+      },
+      {
+        "id": 845781,
+        "title": "Operação Natal",
+        "genre": "Comédia",
+        "x": 0.73072,
+        "y": -0.07209
+      },
+      {
+        "id": 872585,
+        "title": "Oppenheimer",
+        "genre": "Drama",
+        "x": 0.58473,
+        "y": -0.02063
+      },
+      {
+        "id": 893723,
+        "title": "Patrulha Canina: Um Filme Superpoderoso",
+        "genre": "Comédia",
+        "x": 0.65531,
+        "y": -0.17462
+      },
+      {
+        "id": 911430,
+        "title": "F1: O Filme",
+        "genre": "Drama",
+        "x": 0.6493,
+        "y": 0.06833
+      },
+      {
+        "id": 912649,
+        "title": "Venom: A Última Rodada",
+        "genre": "Ficção científica",
+        "x": 0.58616,
+        "y": -0.0866
+      },
+      {
+        "id": 933260,
+        "title": "A Substância",
+        "genre": null,
+        "x": 0.66899,
+        "y": -0.03055
+      },
+      {
+        "id": 934433,
+        "title": "Pânico VI",
+        "genre": "Terror",
+        "x": 0.73208,
+        "y": 0.02159
+      },
+      {
+        "id": 939243,
+        "title": "Sonic 3: O Filme",
+        "genre": null,
+        "x": 0.65199,
+        "y": -0.20984
+      },
+      {
+        "id": 940551,
+        "title": "Patos!",
+        "genre": "Comédia",
+        "x": 0.75541,
+        "y": 0.12309
+      },
+      {
+        "id": 940721,
+        "title": "Godzilla Minus One",
+        "genre": "Terror",
+        "x": 0.59649,
+        "y": -0.14317
+      },
+      {
+        "id": 945961,
+        "title": "Alien: Romulus",
+        "genre": null,
+        "x": 0.63907,
+        "y": -0.27102
+      },
+      {
+        "id": 950387,
+        "title": "Um Filme Minecraft",
+        "genre": "Comédia",
+        "x": 0.70626,
+        "y": -0.06793
+      },
+      {
+        "id": 950396,
+        "title": "Entre Montanhas",
+        "genre": "Ficção científica",
+        "x": 0.61697,
+        "y": -0.29762
+      },
+      {
+        "id": 986056,
+        "title": "Thunderbolts*",
+        "genre": "Ficção científica",
+        "x": 0.67729,
+        "y": -0.25896
+      },
+      {
+        "id": 1010581,
+        "title": "Minha Culpa",
+        "genre": "Drama",
+        "x": 0.70442,
+        "y": 0.3019
+      },
+      {
+        "id": 1022789,
+        "title": "Divertida Mente 2",
+        "genre": "Comédia",
+        "x": 0.71167,
+        "y": 0.08563
+      },
+      {
+        "id": 1038392,
+        "title": "Invocação do Mal 4: O Último Ritual",
+        "genre": "Terror",
+        "x": 0.68999,
+        "y": -0.11546
+      },
+      {
+        "id": 1054867,
+        "title": "Uma Batalha Após a Outra",
+        "genre": "Comédia",
+        "x": 0.76535,
+        "y": 0.23522
+      },
+      {
+        "id": 1061474,
+        "title": "Superman",
+        "genre": "Ficção científica",
+        "x": 0.69052,
+        "y": 0.07807
+      },
+      {
+        "id": 1062722,
+        "title": "Frankenstein",
+        "genre": null,
+        "x": 0.719,
+        "y": 0.05651
+      },
+      {
+        "id": 1064028,
+        "title": "Alice: Subservience",
+        "genre": "Terror",
+        "x": 0.67854,
+        "y": -0.11018
+      },
+      {
+        "id": 1078605,
+        "title": "A Hora do Mal",
+        "genre": "Terror",
+        "x": 0.59079,
+        "y": -0.0741
+      },
+      {
+        "id": 1084199,
+        "title": "Acompanhante Perfeita",
+        "genre": "Terror",
+        "x": 0.67088,
+        "y": 0.1464
+      },
+      {
+        "id": 1084242,
+        "title": "Zootopia 2",
+        "genre": "Comédia",
+        "x": 0.65362,
+        "y": 0.02407
+      },
+      {
+        "id": 1100782,
+        "title": "Sorria 2",
+        "genre": "Terror",
+        "x": 0.70483,
+        "y": 0.0119
+      },
+      {
+        "id": 1100988,
+        "title": "Extermínio: A Evolução",
+        "genre": null,
+        "x": 0.71426,
+        "y": -0.3072
+      },
+      {
+        "id": 1124620,
+        "title": "O Macaco",
+        "genre": "Terror",
+        "x": 0.68875,
+        "y": -0.14286
+      },
+      {
+        "id": 1156593,
+        "title": "Sua Culpa",
+        "genre": "Drama",
+        "x": 0.75087,
+        "y": 0.13941
+      },
+      {
+        "id": 1156594,
+        "title": "Nossa Culpa",
+        "genre": "Drama",
+        "x": 0.72654,
+        "y": 0.16354
+      },
+      {
+        "id": 1184918,
+        "title": "Robô Selvagem",
+        "genre": "Ficção científica",
+        "x": 0.69366,
+        "y": -0.00647
+      },
+      {
+        "id": 1205229,
+        "title": "Zoopocalipse - Uma Aventura Animal",
+        "genre": "Terror",
+        "x": 0.82391,
+        "y": 0.03902
+      },
+      {
+        "id": 1228246,
+        "title": "Five Nights at Freddy's 2",
+        "genre": "Terror",
+        "x": 0.74654,
+        "y": 0.02542
+      },
+      {
+        "id": 1233413,
+        "title": "Pecadores",
+        "genre": "Terror",
+        "x": 0.6581,
+        "y": -0.11889
+      },
+      {
+        "id": 1234731,
+        "title": "Anaconda",
+        "genre": "Terror",
+        "x": 0.77089,
+        "y": 0.02214
+      },
+      {
+        "id": 1234821,
+        "title": "Jurassic World: Recomeço",
+        "genre": "Ficção científica",
+        "x": 0.69321,
+        "y": -0.35873
+      },
+      {
+        "id": 1241982,
+        "title": "Moana 2",
+        "genre": "Comédia",
+        "x": 0.54745,
+        "y": -0.267
+      },
+      {
+        "id": 1242898,
+        "title": "Predador: Terras Selvagens",
+        "genre": "Ficção científica",
+        "x": 0.64762,
+        "y": -0.0796
+      },
+      {
+        "id": 1246049,
+        "title": "Drácula - Uma História de Amor Eterno",
+        "genre": "Terror",
+        "x": 0.65593,
+        "y": 0.08328
+      },
+      {
+        "id": 1333141,
+        "title": "A Sapatona Galáctica",
+        "genre": "Comédia",
+        "x": 0.81188,
+        "y": 0.11713
+      },
+      {
+        "id": 1419406,
+        "title": "Operação Sombra",
+        "genre": "Drama",
+        "x": 0.64887,
+        "y": -0.24864
+      },
+      {
+        "id": 1569947,
+        "title": "O Padre: Massacre no Dia de Ação de Graças",
+        "genre": "Terror",
+        "x": 0.66953,
+        "y": -0.12929
+      }
+    ]
+  },
+  "word2vec_skipgram": {
     "method": "TruncatedSVD com 2 componentes sobre linhas com norma L2 (LSA nas matrizes lexicais)",
     "explained_variance_ratio": [
       0.009949,
@@ -15024,7 +18029,3012 @@
       }
     ]
   },
-  "contextual_minilm": {
+  "bert_base_pt": {
+    "method": "TruncatedSVD com 2 componentes sobre linhas com norma L2 (LSA nas matrizes lexicais)",
+    "explained_variance_ratio": [
+      0.005319,
+      0.069687
+    ],
+    "points": [
+      {
+        "id": 13,
+        "title": "Forrest Gump: O Contador de Histórias",
+        "genre": null,
+        "x": -0.91811,
+        "y": 0.08674
+      },
+      {
+        "id": 14,
+        "title": "Beleza Americana",
+        "genre": "Drama",
+        "x": -0.92348,
+        "y": 0.1818
+      },
+      {
+        "id": 18,
+        "title": "O Quinto Elemento",
+        "genre": "Ficção científica",
+        "x": -0.93375,
+        "y": -0.05216
+      },
+      {
+        "id": 27,
+        "title": "9 Canções",
+        "genre": "Drama",
+        "x": -0.87786,
+        "y": 0.22057
+      },
+      {
+        "id": 38,
+        "title": "Brilho Eterno de uma Mente sem Lembranças",
+        "genre": null,
+        "x": -0.93064,
+        "y": 0.12055
+      },
+      {
+        "id": 63,
+        "title": "Os 12 Macacos",
+        "genre": "Ficção científica",
+        "x": -0.94431,
+        "y": 0.01318
+      },
+      {
+        "id": 73,
+        "title": "A Outra História Americana",
+        "genre": "Drama",
+        "x": -0.94113,
+        "y": 0.1293
+      },
+      {
+        "id": 74,
+        "title": "Guerra dos Mundos",
+        "genre": "Ficção científica",
+        "x": -0.93229,
+        "y": 0.04546
+      },
+      {
+        "id": 78,
+        "title": "Blade Runner: O Caçador de Andróides",
+        "genre": null,
+        "x": -0.93543,
+        "y": -0.08434
+      },
+      {
+        "id": 95,
+        "title": "Armageddon",
+        "genre": "Ficção científica",
+        "x": -0.89993,
+        "y": -0.08784
+      },
+      {
+        "id": 98,
+        "title": "Gladiador",
+        "genre": "Drama",
+        "x": -0.90021,
+        "y": 0.02278
+      },
+      {
+        "id": 101,
+        "title": "O Profissional",
+        "genre": "Drama",
+        "x": -0.92706,
+        "y": 0.03852
+      },
+      {
+        "id": 105,
+        "title": "De Volta para o Futuro",
+        "genre": null,
+        "x": -0.93002,
+        "y": 0.0278
+      },
+      {
+        "id": 106,
+        "title": "O Predador",
+        "genre": "Ficção científica",
+        "x": -0.94476,
+        "y": -0.03542
+      },
+      {
+        "id": 107,
+        "title": "Snatch: Porcos e Diamantes",
+        "genre": "Comédia",
+        "x": -0.91651,
+        "y": 0.03052
+      },
+      {
+        "id": 111,
+        "title": "Scarface",
+        "genre": "Drama",
+        "x": -0.90641,
+        "y": 0.05385
+      },
+      {
+        "id": 114,
+        "title": "Uma Linda Mulher",
+        "genre": "Comédia",
+        "x": -0.91511,
+        "y": 0.21715
+      },
+      {
+        "id": 115,
+        "title": "O Grande Lebowski",
+        "genre": "Comédia",
+        "x": -0.94015,
+        "y": 0.13006
+      },
+      {
+        "id": 118,
+        "title": "A Fantástica Fábrica de Chocolate",
+        "genre": "Comédia",
+        "x": -0.92402,
+        "y": 0.03476
+      },
+      {
+        "id": 137,
+        "title": "Feitiço do Tempo",
+        "genre": "Comédia",
+        "x": -0.8908,
+        "y": 0.03615
+      },
+      {
+        "id": 149,
+        "title": "Akira",
+        "genre": "Ficção científica",
+        "x": -0.94555,
+        "y": 0.00764
+      },
+      {
+        "id": 162,
+        "title": "Edward Mãos de Tesoura",
+        "genre": "Drama",
+        "x": -0.94594,
+        "y": 0.03278
+      },
+      {
+        "id": 165,
+        "title": "De Volta para o Futuro II",
+        "genre": null,
+        "x": -0.91006,
+        "y": 0.02013
+      },
+      {
+        "id": 169,
+        "title": "O Predador 2: A Caçada Continua",
+        "genre": "Ficção científica",
+        "x": -0.90243,
+        "y": -0.13751
+      },
+      {
+        "id": 170,
+        "title": "Extermínio",
+        "genre": null,
+        "x": -0.91203,
+        "y": -0.0228
+      },
+      {
+        "id": 176,
+        "title": "Jogos Mortais",
+        "genre": "Terror",
+        "x": -0.9026,
+        "y": -0.09531
+      },
+      {
+        "id": 194,
+        "title": "O Fabuloso Destino de Amélie Poulain",
+        "genre": "Comédia",
+        "x": -0.91403,
+        "y": 0.25273
+      },
+      {
+        "id": 197,
+        "title": "Coração Valente",
+        "genre": "Drama",
+        "x": -0.9151,
+        "y": 0.0107
+      },
+      {
+        "id": 207,
+        "title": "Sociedade dos Poetas Mortos",
+        "genre": "Drama",
+        "x": -0.9053,
+        "y": 0.14229
+      },
+      {
+        "id": 218,
+        "title": "O Exterminador do Futuro",
+        "genre": "Ficção científica",
+        "x": -0.92374,
+        "y": -0.10176
+      },
+      {
+        "id": 242,
+        "title": "O Poderoso Chefão: Parte III",
+        "genre": "Drama",
+        "x": -0.88757,
+        "y": 0.09934
+      },
+      {
+        "id": 272,
+        "title": "Batman Begins",
+        "genre": "Drama",
+        "x": -0.93464,
+        "y": -0.03963
+      },
+      {
+        "id": 275,
+        "title": "Fargo: Uma Comédia de Erros",
+        "genre": "Drama",
+        "x": -0.92996,
+        "y": 0.0801
+      },
+      {
+        "id": 278,
+        "title": "Um Sonho de Liberdade",
+        "genre": "Drama",
+        "x": -0.94028,
+        "y": 0.09171
+      },
+      {
+        "id": 280,
+        "title": "O Exterminador do Futuro 2: O Julgamento Final",
+        "genre": "Ficção científica",
+        "x": -0.94464,
+        "y": -0.07438
+      },
+      {
+        "id": 297,
+        "title": "Encontro Marcado",
+        "genre": "Drama",
+        "x": -0.93273,
+        "y": 0.00049
+      },
+      {
+        "id": 311,
+        "title": "Era Uma Vez na América",
+        "genre": "Drama",
+        "x": -0.88731,
+        "y": -0.028
+      },
+      {
+        "id": 329,
+        "title": "Jurassic Park: O Parque dos Dinossauros",
+        "genre": "Ficção científica",
+        "x": -0.91278,
+        "y": 0.00884
+      },
+      {
+        "id": 345,
+        "title": "De Olhos Bem Fechados",
+        "genre": "Drama",
+        "x": -0.92287,
+        "y": 0.18369
+      },
+      {
+        "id": 350,
+        "title": "O Diabo Veste Prada",
+        "genre": null,
+        "x": -0.88067,
+        "y": 0.17299
+      },
+      {
+        "id": 377,
+        "title": "A Hora do Pesadelo",
+        "genre": "Terror",
+        "x": -0.94377,
+        "y": -0.00645
+      },
+      {
+        "id": 415,
+        "title": "Batman & Robin",
+        "genre": "Ficção científica",
+        "x": -0.84195,
+        "y": -0.29008
+      },
+      {
+        "id": 423,
+        "title": "O Pianista",
+        "genre": "Drama",
+        "x": -0.90212,
+        "y": 0.07442
+      },
+      {
+        "id": 424,
+        "title": "A Lista de Schindler",
+        "genre": "Drama",
+        "x": -0.88268,
+        "y": 0.09948
+      },
+      {
+        "id": 425,
+        "title": "A Era do Gelo",
+        "genre": "Comédia",
+        "x": -0.89613,
+        "y": -0.08136
+      },
+      {
+        "id": 489,
+        "title": "Gênio Indomável",
+        "genre": "Drama",
+        "x": -0.87257,
+        "y": 0.08539
+      },
+      {
+        "id": 497,
+        "title": "À Espera de um Milagre",
+        "genre": "Drama",
+        "x": -0.89664,
+        "y": -0.12766
+      },
+      {
+        "id": 550,
+        "title": "Clube da Luta",
+        "genre": "Drama",
+        "x": -0.9243,
+        "y": 0.1323
+      },
+      {
+        "id": 557,
+        "title": "Homem-Aranha",
+        "genre": "Ficção científica",
+        "x": -0.9431,
+        "y": 0.12056
+      },
+      {
+        "id": 559,
+        "title": "Homem-Aranha 3",
+        "genre": "Ficção científica",
+        "x": -0.91855,
+        "y": -0.03733
+      },
+      {
+        "id": 561,
+        "title": "Constantine",
+        "genre": "Terror",
+        "x": -0.93339,
+        "y": -0.02956
+      },
+      {
+        "id": 563,
+        "title": "Tropas Estelares",
+        "genre": "Ficção científica",
+        "x": -0.91068,
+        "y": -0.05642
+      },
+      {
+        "id": 565,
+        "title": "O Chamado",
+        "genre": "Terror",
+        "x": -0.93459,
+        "y": 0.08193
+      },
+      {
+        "id": 581,
+        "title": "Dança com Lobos",
+        "genre": "Drama",
+        "x": -0.88441,
+        "y": 0.02966
+      },
+      {
+        "id": 585,
+        "title": "Monstros S.A.",
+        "genre": "Comédia",
+        "x": -0.93804,
+        "y": -0.01525
+      },
+      {
+        "id": 588,
+        "title": "Terror em Silent Hill",
+        "genre": "Terror",
+        "x": -0.94873,
+        "y": 0.03862
+      },
+      {
+        "id": 597,
+        "title": "Titanic",
+        "genre": "Drama",
+        "x": -0.90605,
+        "y": 0.06451
+      },
+      {
+        "id": 598,
+        "title": "Cidade de Deus",
+        "genre": "Drama",
+        "x": -0.88025,
+        "y": 0.17179
+      },
+      {
+        "id": 601,
+        "title": "E.T.: O Extraterrestre",
+        "genre": "Ficção científica",
+        "x": -0.94805,
+        "y": 0.04819
+      },
+      {
+        "id": 602,
+        "title": "Independence Day",
+        "genre": "Ficção científica",
+        "x": -0.92343,
+        "y": -0.07143
+      },
+      {
+        "id": 603,
+        "title": "Matrix",
+        "genre": "Ficção científica",
+        "x": -0.93352,
+        "y": -0.02932
+      },
+      {
+        "id": 604,
+        "title": "Matrix Reloaded",
+        "genre": "Ficção científica",
+        "x": -0.89506,
+        "y": -0.26318
+      },
+      {
+        "id": 607,
+        "title": "MIB - Homens de Preto",
+        "genre": null,
+        "x": -0.92013,
+        "y": -0.1527
+      },
+      {
+        "id": 620,
+        "title": "Os Caça-Fantasmas",
+        "genre": "Comédia",
+        "x": -0.93808,
+        "y": 0.04403
+      },
+      {
+        "id": 622,
+        "title": "O Último Portal",
+        "genre": "Terror",
+        "x": -0.93429,
+        "y": -0.05877
+      },
+      {
+        "id": 628,
+        "title": "Entrevista com o Vampiro",
+        "genre": "Terror",
+        "x": -0.92858,
+        "y": 0.07345
+      },
+      {
+        "id": 629,
+        "title": "Os Suspeitos",
+        "genre": "Drama",
+        "x": -0.89917,
+        "y": 0.00532
+      },
+      {
+        "id": 637,
+        "title": "A Vida é Bela",
+        "genre": null,
+        "x": -0.92534,
+        "y": 0.09807
+      },
+      {
+        "id": 640,
+        "title": "Prenda-Me se For Capaz",
+        "genre": "Drama",
+        "x": -0.93161,
+        "y": 0.05553
+      },
+      {
+        "id": 679,
+        "title": "Aliens: O Resgate",
+        "genre": "Ficção científica",
+        "x": -0.9221,
+        "y": -0.0659
+      },
+      {
+        "id": 680,
+        "title": "Pulp Fiction: Tempo de Violência",
+        "genre": "Comédia",
+        "x": -0.91487,
+        "y": 0.00377
+      },
+      {
+        "id": 686,
+        "title": "Contato",
+        "genre": "Ficção científica",
+        "x": -0.91681,
+        "y": 0.01104
+      },
+      {
+        "id": 694,
+        "title": "O Iluminado",
+        "genre": "Terror",
+        "x": -0.92283,
+        "y": 0.18083
+      },
+      {
+        "id": 744,
+        "title": "Top Gun - Ases Indomáveis",
+        "genre": "Drama",
+        "x": -0.91625,
+        "y": 0.05167
+      },
+      {
+        "id": 745,
+        "title": "O Sexto Sentido",
+        "genre": "Drama",
+        "x": -0.9289,
+        "y": 0.08262
+      },
+      {
+        "id": 747,
+        "title": "Todo Mundo Quase Morto",
+        "genre": "Terror",
+        "x": -0.92677,
+        "y": 0.18792
+      },
+      {
+        "id": 752,
+        "title": "V de Vingança",
+        "genre": "Ficção científica",
+        "x": -0.93366,
+        "y": 0.05128
+      },
+      {
+        "id": 754,
+        "title": "A Outra Face",
+        "genre": "Ficção científica",
+        "x": -0.92575,
+        "y": 0.04112
+      },
+      {
+        "id": 755,
+        "title": "Um Drink no Inferno",
+        "genre": "Terror",
+        "x": -0.91183,
+        "y": 0.13097
+      },
+      {
+        "id": 764,
+        "title": "Uma Noite Alucinante: A Morte do Demônio",
+        "genre": "Terror",
+        "x": -0.95077,
+        "y": 0.05262
+      },
+      {
+        "id": 765,
+        "title": "Uma Noite Alucinante 2",
+        "genre": "Terror",
+        "x": -0.94264,
+        "y": 0.03121
+      },
+      {
+        "id": 766,
+        "title": "Uma Noite Alucinante 3",
+        "genre": "Terror",
+        "x": -0.91845,
+        "y": -0.0677
+      },
+      {
+        "id": 769,
+        "title": "Os Bons Companheiros",
+        "genre": "Drama",
+        "x": -0.85823,
+        "y": -0.00625
+      },
+      {
+        "id": 772,
+        "title": "Esqueceram de Mim 2: Perdido em Nova York",
+        "genre": "Comédia",
+        "x": -0.91443,
+        "y": 0.13578
+      },
+      {
+        "id": 788,
+        "title": "Uma Babá Quase Perfeita",
+        "genre": null,
+        "x": -0.92311,
+        "y": 0.20781
+      },
+      {
+        "id": 808,
+        "title": "Shrek",
+        "genre": "Comédia",
+        "x": -0.94499,
+        "y": -0.0355
+      },
+      {
+        "id": 809,
+        "title": "Shrek 2",
+        "genre": "Comédia",
+        "x": -0.93223,
+        "y": 0.10847
+      },
+      {
+        "id": 810,
+        "title": "Shrek Terceiro",
+        "genre": "Comédia",
+        "x": -0.91892,
+        "y": -0.02025
+      },
+      {
+        "id": 813,
+        "title": "Apertem os Cintos, o Piloto Sumiu",
+        "genre": "Comédia",
+        "x": -0.93297,
+        "y": 0.04329
+      },
+      {
+        "id": 814,
+        "title": "Um Lobisomem Americano em Londres",
+        "genre": "Terror",
+        "x": -0.93909,
+        "y": 0.05933
+      },
+      {
+        "id": 841,
+        "title": "Duna",
+        "genre": "Ficção científica",
+        "x": -0.94008,
+        "y": -0.03336
+      },
+      {
+        "id": 854,
+        "title": "O Máskara",
+        "genre": "Comédia",
+        "x": -0.94468,
+        "y": 0.00625
+      },
+      {
+        "id": 857,
+        "title": "O Resgate do Soldado Ryan",
+        "genre": "Drama",
+        "x": -0.90746,
+        "y": 0.01156
+      },
+      {
+        "id": 861,
+        "title": "O Vingador do Futuro",
+        "genre": "Ficção científica",
+        "x": -0.92508,
+        "y": 0.05646
+      },
+      {
+        "id": 862,
+        "title": "Toy Story: Um Mundo de Aventuras",
+        "genre": "Comédia",
+        "x": -0.93879,
+        "y": 0.01394
+      },
+      {
+        "id": 863,
+        "title": "Toy Story 2",
+        "genre": "Comédia",
+        "x": -0.92054,
+        "y": -0.02662
+      },
+      {
+        "id": 920,
+        "title": "Carros",
+        "genre": "Comédia",
+        "x": -0.91893,
+        "y": 0.07231
+      },
+      {
+        "id": 924,
+        "title": "Madrugada dos Mortos",
+        "genre": "Terror",
+        "x": -0.93771,
+        "y": 0.08858
+      },
+      {
+        "id": 927,
+        "title": "Gremlins",
+        "genre": null,
+        "x": -0.90071,
+        "y": -0.04617
+      },
+      {
+        "id": 949,
+        "title": "Fogo Contra Fogo",
+        "genre": "Drama",
+        "x": -0.9148,
+        "y": 0.00578
+      },
+      {
+        "id": 953,
+        "title": "Madagascar",
+        "genre": "Comédia",
+        "x": -0.94421,
+        "y": 0.03491
+      },
+      {
+        "id": 957,
+        "title": "S.O.S.: Tem um Louco Solto no Espaço",
+        "genre": null,
+        "x": -0.90331,
+        "y": -0.14494
+      },
+      {
+        "id": 1091,
+        "title": "O Enigma de Outro Mundo",
+        "genre": null,
+        "x": -0.93112,
+        "y": -0.02072
+      },
+      {
+        "id": 1124,
+        "title": "O Grande Truque",
+        "genre": null,
+        "x": -0.89183,
+        "y": 0.09923
+      },
+      {
+        "id": 1368,
+        "title": "Rambo: Programado Para Matar",
+        "genre": "Drama",
+        "x": -0.89128,
+        "y": -0.0709
+      },
+      {
+        "id": 1417,
+        "title": "O Labirinto do Fauno",
+        "genre": "Drama",
+        "x": -0.93976,
+        "y": 0.03273
+      },
+      {
+        "id": 1422,
+        "title": "Os Infiltrados",
+        "genre": "Drama",
+        "x": -0.93707,
+        "y": 0.07614
+      },
+      {
+        "id": 1495,
+        "title": "Cruzada",
+        "genre": "Drama",
+        "x": -0.89633,
+        "y": 0.01254
+      },
+      {
+        "id": 1547,
+        "title": "Os Garotos Perdidos",
+        "genre": "Terror",
+        "x": -0.94849,
+        "y": 0.10834
+      },
+      {
+        "id": 1562,
+        "title": "Extermínio 2",
+        "genre": "Terror",
+        "x": -0.92703,
+        "y": 0.01745
+      },
+      {
+        "id": 1724,
+        "title": "O Incrível Hulk",
+        "genre": "Ficção científica",
+        "x": -0.9432,
+        "y": -0.01705
+      },
+      {
+        "id": 1726,
+        "title": "Homem de Ferro",
+        "genre": "Ficção científica",
+        "x": -0.93825,
+        "y": -0.03402
+      },
+      {
+        "id": 1813,
+        "title": "Advogado do Diabo",
+        "genre": null,
+        "x": -0.93504,
+        "y": 0.09814
+      },
+      {
+        "id": 1891,
+        "title": "Guerra nas Estrelas: O Império Contra-Ataca",
+        "genre": "Ficção científica",
+        "x": -0.90769,
+        "y": -0.17
+      },
+      {
+        "id": 1892,
+        "title": "Guerra nas Estrelas: O Retorno de Jedi",
+        "genre": "Ficção científica",
+        "x": -0.86733,
+        "y": -0.28499
+      },
+      {
+        "id": 1893,
+        "title": "Star Wars: Episódio I - A Ameaça Fantasma",
+        "genre": "Ficção científica",
+        "x": -0.83383,
+        "y": -0.24091
+      },
+      {
+        "id": 1923,
+        "title": "Twin Peaks: Os Últimos Dias de Laura Palmer",
+        "genre": "Terror",
+        "x": -0.87138,
+        "y": 0.0159
+      },
+      {
+        "id": 1930,
+        "title": "O Espetacular Homem-Aranha",
+        "genre": "Ficção científica",
+        "x": -0.90642,
+        "y": -0.06782
+      },
+      {
+        "id": 1933,
+        "title": "Os Outros",
+        "genre": "Terror",
+        "x": -0.90745,
+        "y": 0.19229
+      },
+      {
+        "id": 2048,
+        "title": "Eu, Robô",
+        "genre": "Ficção científica",
+        "x": -0.90189,
+        "y": -0.11982
+      },
+      {
+        "id": 2062,
+        "title": "Ratatouille",
+        "genre": "Comédia",
+        "x": -0.90129,
+        "y": 0.07375
+      },
+      {
+        "id": 2105,
+        "title": "American Pie: A Primeira Vez é Inesquecível",
+        "genre": "Comédia",
+        "x": -0.90488,
+        "y": 0.11055
+      },
+      {
+        "id": 2109,
+        "title": "A Hora do Rush",
+        "genre": "Comédia",
+        "x": -0.92525,
+        "y": 0.1444
+      },
+      {
+        "id": 2251,
+        "title": "Infidelidade",
+        "genre": "Drama",
+        "x": -0.92525,
+        "y": 0.19692
+      },
+      {
+        "id": 2300,
+        "title": "Space Jam: O Jogo do Século",
+        "genre": "Ficção científica",
+        "x": -0.92996,
+        "y": -0.10903
+      },
+      {
+        "id": 2666,
+        "title": "Cidade das Sombras",
+        "genre": "Ficção científica",
+        "x": -0.92837,
+        "y": 0.08834
+      },
+      {
+        "id": 2667,
+        "title": "A Bruxa de Blair",
+        "genre": "Terror",
+        "x": -0.91841,
+        "y": 0.05982
+      },
+      {
+        "id": 2668,
+        "title": "A Lenda do Cavaleiro Sem Cabeça",
+        "genre": "Terror",
+        "x": -0.92091,
+        "y": -0.08449
+      },
+      {
+        "id": 2671,
+        "title": "O Chamado",
+        "genre": "Terror",
+        "x": -0.89534,
+        "y": 0.08952
+      },
+      {
+        "id": 2756,
+        "title": "O Segredo do Abismo",
+        "genre": "Ficção científica",
+        "x": -0.9152,
+        "y": -0.01076
+      },
+      {
+        "id": 2907,
+        "title": "A Família Addams",
+        "genre": "Comédia",
+        "x": -0.9389,
+        "y": 0.06499
+      },
+      {
+        "id": 2978,
+        "title": "Os Caça-Fantasmas 2",
+        "genre": "Comédia",
+        "x": -0.93729,
+        "y": -0.14159
+      },
+      {
+        "id": 4011,
+        "title": "Os Fantasmas se Divertem",
+        "genre": "Comédia",
+        "x": -0.89169,
+        "y": -0.10901
+      },
+      {
+        "id": 4232,
+        "title": "Pânico",
+        "genre": "Terror",
+        "x": -0.90897,
+        "y": 0.04695
+      },
+      {
+        "id": 4233,
+        "title": "Pânico 2",
+        "genre": "Terror",
+        "x": -0.93559,
+        "y": -0.01624
+      },
+      {
+        "id": 4247,
+        "title": "Todo Mundo em Pânico",
+        "genre": "Comédia",
+        "x": -0.93538,
+        "y": 0.00581
+      },
+      {
+        "id": 4348,
+        "title": "Orgulho e Preconceito",
+        "genre": "Drama",
+        "x": -0.93138,
+        "y": 0.1896
+      },
+      {
+        "id": 4488,
+        "title": "Sexta-Feira 13",
+        "genre": "Terror",
+        "x": -0.86294,
+        "y": -0.00823
+      },
+      {
+        "id": 4951,
+        "title": "10 Coisas Que Eu Odeio em Você",
+        "genre": "Comédia",
+        "x": -0.92383,
+        "y": 0.18064
+      },
+      {
+        "id": 5548,
+        "title": "RoboCop - O Policial do Futuro",
+        "genre": "Ficção científica",
+        "x": -0.92534,
+        "y": -0.11626
+      },
+      {
+        "id": 5876,
+        "title": "O Nevoeiro",
+        "genre": "Terror",
+        "x": -0.93717,
+        "y": 0.1205
+      },
+      {
+        "id": 6114,
+        "title": "Drácula de Bram Stoker",
+        "genre": "Terror",
+        "x": -0.84091,
+        "y": -0.11175
+      },
+      {
+        "id": 6435,
+        "title": "Da Magia à Sedução",
+        "genre": "Comédia",
+        "x": -0.93805,
+        "y": 0.12489
+      },
+      {
+        "id": 6479,
+        "title": "Eu Sou a Lenda",
+        "genre": "Ficção científica",
+        "x": -0.9272,
+        "y": -0.06937
+      },
+      {
+        "id": 7131,
+        "title": "Van Helsing: O Caçador de Monstros",
+        "genre": "Terror",
+        "x": -0.87477,
+        "y": -0.27846
+      },
+      {
+        "id": 7518,
+        "title": "Os Sem-Floresta",
+        "genre": "Comédia",
+        "x": -0.92673,
+        "y": 0.07649
+      },
+      {
+        "id": 7974,
+        "title": "A Garota da Fábrica de Caixas de Fósforos",
+        "genre": "Drama",
+        "x": -0.92631,
+        "y": 0.18655
+      },
+      {
+        "id": 8077,
+        "title": "Alien³",
+        "genre": "Terror",
+        "x": -0.91786,
+        "y": -0.09712
+      },
+      {
+        "id": 8078,
+        "title": "Alien: A Ressurreição",
+        "genre": "Terror",
+        "x": -0.90931,
+        "y": -0.12998
+      },
+      {
+        "id": 8329,
+        "title": "[REC]",
+        "genre": "Terror",
+        "x": -0.90395,
+        "y": 0.07594
+      },
+      {
+        "id": 8355,
+        "title": "A Era do Gelo 3",
+        "genre": "Comédia",
+        "x": -0.91606,
+        "y": -0.14465
+      },
+      {
+        "id": 8413,
+        "title": "O Enigma do Horizonte",
+        "genre": null,
+        "x": -0.92325,
+        "y": -0.03149
+      },
+      {
+        "id": 8457,
+        "title": "Meu Nome é Taylor, Drillbit Taylor",
+        "genre": "Comédia",
+        "x": -0.917,
+        "y": 0.03829
+      },
+      {
+        "id": 8467,
+        "title": "Debi & Lóide: Dois Idiotas em Apuros",
+        "genre": "Comédia",
+        "x": -0.90819,
+        "y": 0.06463
+      },
+      {
+        "id": 8587,
+        "title": "O Rei Leão",
+        "genre": "Drama",
+        "x": -0.88659,
+        "y": -0.05131
+      },
+      {
+        "id": 8656,
+        "title": "Impacto Profundo",
+        "genre": "Ficção científica",
+        "x": -0.93082,
+        "y": 0.02518
+      },
+      {
+        "id": 8689,
+        "title": "Holocausto Canibal",
+        "genre": "Terror",
+        "x": -0.91923,
+        "y": 0.08323
+      },
+      {
+        "id": 8913,
+        "title": "Cemitério Maldito",
+        "genre": "Terror",
+        "x": -0.93185,
+        "y": 0.07781
+      },
+      {
+        "id": 8914,
+        "title": "Do Fundo do Mar",
+        "genre": null,
+        "x": -0.94235,
+        "y": 0.07967
+      },
+      {
+        "id": 8922,
+        "title": "Olhos Famintos",
+        "genre": "Terror",
+        "x": -0.89851,
+        "y": 0.03327
+      },
+      {
+        "id": 8966,
+        "title": "Crepúsculo",
+        "genre": "Drama",
+        "x": -0.93522,
+        "y": 0.16503
+      },
+      {
+        "id": 9056,
+        "title": "Police Story: A Guerra das Drogas",
+        "genre": "Comédia",
+        "x": -0.9099,
+        "y": -0.0398
+      },
+      {
+        "id": 9100,
+        "title": "Jovens Bruxas",
+        "genre": "Terror",
+        "x": -0.91268,
+        "y": 0.02301
+      },
+      {
+        "id": 9276,
+        "title": "Prova Final",
+        "genre": "Terror",
+        "x": -0.93885,
+        "y": -0.00416
+      },
+      {
+        "id": 9286,
+        "title": "Premonição 3",
+        "genre": "Terror",
+        "x": -0.92618,
+        "y": 0.04385
+      },
+      {
+        "id": 9297,
+        "title": "A Casa Monstro",
+        "genre": "Terror",
+        "x": -0.9482,
+        "y": 0.07356
+      },
+      {
+        "id": 9323,
+        "title": "Ghost in the Shell: O Fantasma do Futuro",
+        "genre": "Ficção científica",
+        "x": -0.89915,
+        "y": -0.11784
+      },
+      {
+        "id": 9336,
+        "title": "Loucademia de Polícia",
+        "genre": "Comédia",
+        "x": -0.90533,
+        "y": 0.09894
+      },
+      {
+        "id": 9340,
+        "title": "Os Goonies",
+        "genre": "Comédia",
+        "x": -0.91559,
+        "y": -0.10534
+      },
+      {
+        "id": 9358,
+        "title": "Premonição 2",
+        "genre": "Terror",
+        "x": -0.92426,
+        "y": 0.0713
+      },
+      {
+        "id": 9360,
+        "title": "Anaconda",
+        "genre": "Terror",
+        "x": -0.92704,
+        "y": -0.07573
+      },
+      {
+        "id": 9362,
+        "title": "O Ataque dos Vermes Malditos",
+        "genre": "Terror",
+        "x": -0.92846,
+        "y": 0.03986
+      },
+      {
+        "id": 9374,
+        "title": "A Morte lhe Cai Bem",
+        "genre": "Terror",
+        "x": -0.91622,
+        "y": 0.14175
+      },
+      {
+        "id": 9392,
+        "title": "Abismo do Medo",
+        "genre": "Terror",
+        "x": -0.90518,
+        "y": 0.00746
+      },
+      {
+        "id": 9426,
+        "title": "A Mosca",
+        "genre": null,
+        "x": -0.93778,
+        "y": 0.05779
+      },
+      {
+        "id": 9487,
+        "title": "Vida de Inseto",
+        "genre": "Comédia",
+        "x": -0.84373,
+        "y": -0.20528
+      },
+      {
+        "id": 9502,
+        "title": "Kung Fu Panda",
+        "genre": "Comédia",
+        "x": -0.92614,
+        "y": -0.03983
+      },
+      {
+        "id": 9532,
+        "title": "Premonição",
+        "genre": "Terror",
+        "x": -0.93458,
+        "y": 0.06433
+      },
+      {
+        "id": 9737,
+        "title": "Os Bad Boys",
+        "genre": "Comédia",
+        "x": -0.91051,
+        "y": 0.01757
+      },
+      {
+        "id": 9739,
+        "title": "O Demolidor",
+        "genre": "Ficção científica",
+        "x": -0.90612,
+        "y": -0.0662
+      },
+      {
+        "id": 9769,
+        "title": "Lolita",
+        "genre": "Drama",
+        "x": -0.89878,
+        "y": 0.09931
+      },
+      {
+        "id": 9820,
+        "title": "Operação Cupido",
+        "genre": "Comédia",
+        "x": -0.90739,
+        "y": 0.20178
+      },
+      {
+        "id": 9902,
+        "title": "Pânico na Floresta",
+        "genre": "Terror",
+        "x": -0.90874,
+        "y": 0.00587
+      },
+      {
+        "id": 9946,
+        "title": "Fim dos Dias",
+        "genre": "Terror",
+        "x": -0.95386,
+        "y": 0.01998
+      },
+      {
+        "id": 10138,
+        "title": "Homem de Ferro 2",
+        "genre": "Ficção científica",
+        "x": -0.9176,
+        "y": -0.06193
+      },
+      {
+        "id": 10192,
+        "title": "Shrek Para Sempre",
+        "genre": "Comédia",
+        "x": -0.90721,
+        "y": -0.08766
+      },
+      {
+        "id": 10193,
+        "title": "Toy Story 3",
+        "genre": "Comédia",
+        "x": -0.88983,
+        "y": 0.07081
+      },
+      {
+        "id": 10375,
+        "title": "D-Tox",
+        "genre": "Terror",
+        "x": -0.92944,
+        "y": 0.09078
+      },
+      {
+        "id": 10386,
+        "title": "O Gigante de Ferro",
+        "genre": "Ficção científica",
+        "x": -0.93777,
+        "y": 0.00993
+      },
+      {
+        "id": 10585,
+        "title": "Brinquedo Assassino",
+        "genre": "Terror",
+        "x": -0.9238,
+        "y": -0.0083
+      },
+      {
+        "id": 10588,
+        "title": "O Gato",
+        "genre": "Comédia",
+        "x": -0.91655,
+        "y": 0.13348
+      },
+      {
+        "id": 10625,
+        "title": "Meninas Malvadas",
+        "genre": null,
+        "x": -0.89402,
+        "y": 0.04764
+      },
+      {
+        "id": 10681,
+        "title": "WALL-E",
+        "genre": "Ficção científica",
+        "x": -0.90065,
+        "y": -0.06178
+      },
+      {
+        "id": 10775,
+        "title": "Conflitos Internos",
+        "genre": "Drama",
+        "x": -0.89539,
+        "y": -0.0655
+      },
+      {
+        "id": 10830,
+        "title": "Matilda",
+        "genre": "Comédia",
+        "x": -0.9124,
+        "y": 0.10289
+      },
+      {
+        "id": 10997,
+        "title": "Adeus, Minha Concubina",
+        "genre": "Drama",
+        "x": -0.87625,
+        "y": 0.18253
+      },
+      {
+        "id": 11036,
+        "title": "Diário de uma Paixão",
+        "genre": "Drama",
+        "x": -0.93329,
+        "y": 0.18809
+      },
+      {
+        "id": 11324,
+        "title": "Ilha do Medo",
+        "genre": "Drama",
+        "x": -0.90328,
+        "y": -0.03801
+      },
+      {
+        "id": 11544,
+        "title": "Lilo & Stitch",
+        "genre": null,
+        "x": -0.9436,
+        "y": 0.05183
+      },
+      {
+        "id": 11688,
+        "title": "A Nova Onda do Imperador",
+        "genre": "Comédia",
+        "x": -0.90934,
+        "y": -0.0299
+      },
+      {
+        "id": 11970,
+        "title": "Hércules",
+        "genre": "Comédia",
+        "x": -0.9115,
+        "y": -0.13533
+      },
+      {
+        "id": 12153,
+        "title": "As Branquelas",
+        "genre": "Comédia",
+        "x": -0.86946,
+        "y": -0.04576
+      },
+      {
+        "id": 13207,
+        "title": "Sexta-Feira 13",
+        "genre": "Terror",
+        "x": -0.89409,
+        "y": 0.01482
+      },
+      {
+        "id": 14097,
+        "title": "9º Pelotão",
+        "genre": "Drama",
+        "x": -0.87051,
+        "y": -0.0442
+      },
+      {
+        "id": 14139,
+        "title": "Crimes Temporais",
+        "genre": "Ficção científica",
+        "x": -0.87677,
+        "y": -0.00833
+      },
+      {
+        "id": 14160,
+        "title": "Up: Altas Aventuras",
+        "genre": "Comédia",
+        "x": -0.95294,
+        "y": 0.16944
+      },
+      {
+        "id": 14161,
+        "title": "2012",
+        "genre": "Ficção científica",
+        "x": -0.94336,
+        "y": 0.0086
+      },
+      {
+        "id": 14574,
+        "title": "O Menino do Pijama Listrado",
+        "genre": "Drama",
+        "x": -0.91816,
+        "y": 0.18271
+      },
+      {
+        "id": 16869,
+        "title": "Bastardos Inglórios",
+        "genre": "Drama",
+        "x": -0.90324,
+        "y": -0.00251
+      },
+      {
+        "id": 18240,
+        "title": "A Proposta",
+        "genre": null,
+        "x": -0.93278,
+        "y": 0.16786
+      },
+      {
+        "id": 18491,
+        "title": "Neon Genesis Evangelion: O Fim do Evangelho",
+        "genre": "Ficção científica",
+        "x": -0.81354,
+        "y": -0.32525
+      },
+      {
+        "id": 18785,
+        "title": "Se Beber, Não Case!",
+        "genre": "Comédia",
+        "x": -0.91741,
+        "y": 0.16196
+      },
+      {
+        "id": 19404,
+        "title": "Dilwale vai levar a noiva",
+        "genre": null,
+        "x": -0.90331,
+        "y": 0.17779
+      },
+      {
+        "id": 19908,
+        "title": "Zumbilândia",
+        "genre": "Terror",
+        "x": -0.90654,
+        "y": -0.06841
+      },
+      {
+        "id": 19994,
+        "title": "Garota Infernal",
+        "genre": "Terror",
+        "x": -0.93212,
+        "y": 0.04058
+      },
+      {
+        "id": 19995,
+        "title": "Avatar",
+        "genre": "Ficção científica",
+        "x": -0.91263,
+        "y": -0.11009
+      },
+      {
+        "id": 20352,
+        "title": "Meu Malvado Favorito",
+        "genre": null,
+        "x": -0.92921,
+        "y": -0.08016
+      },
+      {
+        "id": 21484,
+        "title": "Possessão",
+        "genre": "Terror",
+        "x": -0.91827,
+        "y": 0.17438
+      },
+      {
+        "id": 21835,
+        "title": "Uma Odisséia Chinesa: Parte Dois – Cinderela",
+        "genre": null,
+        "x": -0.66944,
+        "y": -0.11686
+      },
+      {
+        "id": 21966,
+        "title": "Consumido pelo Ódio",
+        "genre": "Drama",
+        "x": -0.86234,
+        "y": 0.18025
+      },
+      {
+        "id": 22970,
+        "title": "O Segredo da Cabana",
+        "genre": "Terror",
+        "x": -0.83842,
+        "y": -0.0279
+      },
+      {
+        "id": 24428,
+        "title": "Os Vingadores: The Avengers",
+        "genre": "Ficção científica",
+        "x": -0.92947,
+        "y": -0.18789
+      },
+      {
+        "id": 25237,
+        "title": "Vá e Veja",
+        "genre": "Terror",
+        "x": -0.9116,
+        "y": 0.08291
+      },
+      {
+        "id": 26827,
+        "title": "Quem é Essa Garota?",
+        "genre": "Comédia",
+        "x": -0.91369,
+        "y": 0.07481
+      },
+      {
+        "id": 27205,
+        "title": "A Origem",
+        "genre": "Ficção científica",
+        "x": -0.94701,
+        "y": -0.02322
+      },
+      {
+        "id": 36586,
+        "title": "Blade II: O Caçador de Vampiros",
+        "genre": "Terror",
+        "x": -0.92393,
+        "y": -0.07179
+      },
+      {
+        "id": 36647,
+        "title": "Blade: O Caçador de Vampiros",
+        "genre": "Terror",
+        "x": -0.93647,
+        "y": -0.1678
+      },
+      {
+        "id": 36648,
+        "title": "Blade Trinity",
+        "genre": "Terror",
+        "x": -0.85097,
+        "y": -0.31783
+      },
+      {
+        "id": 37165,
+        "title": "O Show de Truman: O Show da Vida",
+        "genre": null,
+        "x": -0.92595,
+        "y": 0.14213
+      },
+      {
+        "id": 38365,
+        "title": "Gente Grande",
+        "genre": "Comédia",
+        "x": -0.8641,
+        "y": 0.11728
+      },
+      {
+        "id": 39254,
+        "title": "Gigantes de Aço",
+        "genre": null,
+        "x": -0.91978,
+        "y": 0.03897
+      },
+      {
+        "id": 43947,
+        "title": "Doce Vingança",
+        "genre": "Terror",
+        "x": -0.9285,
+        "y": 0.09136
+      },
+      {
+        "id": 44214,
+        "title": "Cisne Negro",
+        "genre": null,
+        "x": -0.90282,
+        "y": 0.09153
+      },
+      {
+        "id": 44912,
+        "title": "Lanterna Verde",
+        "genre": "Ficção científica",
+        "x": -0.88965,
+        "y": -0.24335
+      },
+      {
+        "id": 45612,
+        "title": "Contra o Tempo",
+        "genre": "Ficção científica",
+        "x": -0.90722,
+        "y": -0.01701
+      },
+      {
+        "id": 49013,
+        "title": "Carros 2",
+        "genre": "Comédia",
+        "x": -0.91326,
+        "y": -0.08554
+      },
+      {
+        "id": 49018,
+        "title": "Sobrenatural",
+        "genre": "Terror",
+        "x": -0.92465,
+        "y": 0.09273
+      },
+      {
+        "id": 49026,
+        "title": "Batman: O Cavaleiro das Trevas Ressurge",
+        "genre": "Drama",
+        "x": -0.93418,
+        "y": -0.05192
+      },
+      {
+        "id": 49494,
+        "title": "A Águia da Legião Perdida",
+        "genre": "Drama",
+        "x": -0.87653,
+        "y": -0.15251
+      },
+      {
+        "id": 49519,
+        "title": "Os Croods",
+        "genre": "Comédia",
+        "x": -0.88294,
+        "y": -8e-05
+      },
+      {
+        "id": 49521,
+        "title": "O Homem de Aço",
+        "genre": "Ficção científica",
+        "x": -0.9165,
+        "y": -0.01165
+      },
+      {
+        "id": 53064,
+        "title": "Midori",
+        "genre": "Terror",
+        "x": -0.8949,
+        "y": 0.18839
+      },
+      {
+        "id": 53653,
+        "title": "Prisioneiro do Inferno",
+        "genre": "Drama",
+        "x": -0.91272,
+        "y": 0.02581
+      },
+      {
+        "id": 55779,
+        "title": "Premonição 5",
+        "genre": "Terror",
+        "x": -0.9398,
+        "y": -0.07919
+      },
+      {
+        "id": 57800,
+        "title": "A Era do Gelo 4",
+        "genre": "Comédia",
+        "x": -0.93256,
+        "y": 0.03836
+      },
+      {
+        "id": 61791,
+        "title": "Planeta dos Macacos: A Origem",
+        "genre": "Ficção científica",
+        "x": -0.9447,
+        "y": 0.0529
+      },
+      {
+        "id": 68718,
+        "title": "Django Livre",
+        "genre": "Drama",
+        "x": -0.92385,
+        "y": -0.04913
+      },
+      {
+        "id": 68721,
+        "title": "Homem de Ferro 3",
+        "genre": "Ficção científica",
+        "x": -0.92407,
+        "y": -0.11959
+      },
+      {
+        "id": 68726,
+        "title": "Círculo de Fogo",
+        "genre": "Ficção científica",
+        "x": -0.93378,
+        "y": -0.09751
+      },
+      {
+        "id": 70981,
+        "title": "Prometheus",
+        "genre": null,
+        "x": -0.87315,
+        "y": -0.1463
+      },
+      {
+        "id": 72190,
+        "title": "Guerra Mundial Z",
+        "genre": null,
+        "x": -0.91614,
+        "y": -0.09915
+      },
+      {
+        "id": 73861,
+        "title": "A Serbian Film - Terror sem Limites",
+        "genre": "Terror",
+        "x": -0.87896,
+        "y": 0.09109
+      },
+      {
+        "id": 74997,
+        "title": "A Centopéia Humana 2",
+        "genre": "Terror",
+        "x": -0.93592,
+        "y": 0.02198
+      },
+      {
+        "id": 76341,
+        "title": "Mad Max: Estrada da Fúria",
+        "genre": "Ficção científica",
+        "x": -0.95046,
+        "y": -0.06754
+      },
+      {
+        "id": 76492,
+        "title": "Hotel Transilvânia",
+        "genre": "Comédia",
+        "x": -0.94171,
+        "y": 0.01602
+      },
+      {
+        "id": 76600,
+        "title": "Avatar: O Caminho da Água",
+        "genre": "Ficção científica",
+        "x": -0.88809,
+        "y": -0.06148
+      },
+      {
+        "id": 77338,
+        "title": "Intocáveis",
+        "genre": null,
+        "x": -0.90479,
+        "y": 0.05278
+      },
+      {
+        "id": 80321,
+        "title": "Madagascar 3: Os Procurados",
+        "genre": "Comédia",
+        "x": -0.94168,
+        "y": 0.0432
+      },
+      {
+        "id": 81774,
+        "title": "A Iniciação",
+        "genre": null,
+        "x": -0.86104,
+        "y": 0.17893
+      },
+      {
+        "id": 82023,
+        "title": "Hotel Desire",
+        "genre": "Drama",
+        "x": -0.8554,
+        "y": 0.13915
+      },
+      {
+        "id": 82507,
+        "title": "A Entidade",
+        "genre": "Terror",
+        "x": -0.93447,
+        "y": 0.1185
+      },
+      {
+        "id": 82690,
+        "title": "Detona Ralph",
+        "genre": "Comédia",
+        "x": -0.92162,
+        "y": -0.00735
+      },
+      {
+        "id": 83533,
+        "title": "Avatar: Fogo e Cinzas",
+        "genre": "Ficção científica",
+        "x": -0.93228,
+        "y": -0.0904
+      },
+      {
+        "id": 91586,
+        "title": "Sobrenatural: Capítulo 2",
+        "genre": "Terror",
+        "x": -0.93239,
+        "y": -0.01828
+      },
+      {
+        "id": 93456,
+        "title": "Meu Malvado Favorito 2",
+        "genre": "Ficção científica",
+        "x": -0.91819,
+        "y": -0.11603
+      },
+      {
+        "id": 99861,
+        "title": "Vingadores: Era de Ultron",
+        "genre": "Ficção científica",
+        "x": -0.92149,
+        "y": -0.1368
+      },
+      {
+        "id": 100402,
+        "title": "Capitão América: O Soldado Invernal",
+        "genre": "Ficção científica",
+        "x": -0.93499,
+        "y": -0.13071
+      },
+      {
+        "id": 101299,
+        "title": "Jogos Vorazes: Em Chamas",
+        "genre": "Ficção científica",
+        "x": -0.89947,
+        "y": -0.07264
+      },
+      {
+        "id": 102382,
+        "title": "O Espetacular Homem-Aranha 2: A Ameaça de Electro",
+        "genre": "Ficção científica",
+        "x": -0.91023,
+        "y": -0.09924
+      },
+      {
+        "id": 106646,
+        "title": "O Lobo de Wall Street",
+        "genre": null,
+        "x": -0.92691,
+        "y": 0.17077
+      },
+      {
+        "id": 109428,
+        "title": "A Morte do Demônio",
+        "genre": "Terror",
+        "x": -0.95115,
+        "y": -0.00912
+      },
+      {
+        "id": 120467,
+        "title": "O Grande Hotel Budapeste",
+        "genre": "Comédia",
+        "x": -0.90777,
+        "y": 0.13114
+      },
+      {
+        "id": 127585,
+        "title": "X-Men: Dias de um Futuro Esquecido",
+        "genre": "Ficção científica",
+        "x": -0.89751,
+        "y": -0.23538
+      },
+      {
+        "id": 131631,
+        "title": "Jogos Vorazes: A Esperança - Parte 1",
+        "genre": "Ficção científica",
+        "x": -0.91672,
+        "y": -0.1257
+      },
+      {
+        "id": 137113,
+        "title": "No Limite do Amanhã",
+        "genre": "Ficção científica",
+        "x": -0.94306,
+        "y": -0.01536
+      },
+      {
+        "id": 138843,
+        "title": "Invocação do Mal",
+        "genre": "Terror",
+        "x": -0.91721,
+        "y": -0.02026
+      },
+      {
+        "id": 146233,
+        "title": "Os Suspeitos",
+        "genre": "Drama",
+        "x": -0.9191,
+        "y": 0.0611
+      },
+      {
+        "id": 150540,
+        "title": "Divertida Mente",
+        "genre": null,
+        "x": -0.91253,
+        "y": 0.03494
+      },
+      {
+        "id": 157336,
+        "title": "Interestelar",
+        "genre": null,
+        "x": -0.93406,
+        "y": -0.00765
+      },
+      {
+        "id": 177572,
+        "title": "Operação Big Hero",
+        "genre": "Comédia",
+        "x": -0.90956,
+        "y": -0.13274
+      },
+      {
+        "id": 198663,
+        "title": "Maze Runner: Correr ou Morrer",
+        "genre": "Ficção científica",
+        "x": -0.88737,
+        "y": -0.07666
+      },
+      {
+        "id": 205596,
+        "title": "O Jogo da Imitação",
+        "genre": "Drama",
+        "x": -0.89567,
+        "y": -0.05285
+      },
+      {
+        "id": 207703,
+        "title": "Kingsman: Serviço Secreto",
+        "genre": "Comédia",
+        "x": -0.93659,
+        "y": 0.06486
+      },
+      {
+        "id": 210577,
+        "title": "Garota Exemplar",
+        "genre": "Drama",
+        "x": -0.93521,
+        "y": 0.13642
+      },
+      {
+        "id": 214756,
+        "title": "Ted 2",
+        "genre": "Comédia",
+        "x": -0.91583,
+        "y": 0.10258
+      },
+      {
+        "id": 216015,
+        "title": "Cinquenta Tons de Cinza",
+        "genre": "Drama",
+        "x": -0.91641,
+        "y": 0.08009
+      },
+      {
+        "id": 228150,
+        "title": "Corações de Ferro",
+        "genre": "Drama",
+        "x": -0.91143,
+        "y": -0.02299
+      },
+      {
+        "id": 238636,
+        "title": "Uma Noite de Crime: Anarquia",
+        "genre": "Terror",
+        "x": -0.95187,
+        "y": 0.04332
+      },
+      {
+        "id": 242582,
+        "title": "O Abutre",
+        "genre": "Drama",
+        "x": -0.89137,
+        "y": 0.03347
+      },
+      {
+        "id": 244786,
+        "title": "Whiplash: Em Busca da Perfeição",
+        "genre": "Drama",
+        "x": -0.90787,
+        "y": 0.09171
+      },
+      {
+        "id": 246655,
+        "title": "X-Men: Apocalipse",
+        "genre": "Ficção científica",
+        "x": -0.9103,
+        "y": -0.19135
+      },
+      {
+        "id": 256274,
+        "title": "Assim na Terra Como no Inferno",
+        "genre": "Terror",
+        "x": -0.92586,
+        "y": -0.10194
+      },
+      {
+        "id": 259693,
+        "title": "Invocação do Mal 2",
+        "genre": "Terror",
+        "x": -0.90905,
+        "y": -0.06768
+      },
+      {
+        "id": 260514,
+        "title": "Carros 3",
+        "genre": "Drama",
+        "x": -0.86603,
+        "y": 0.0365
+      },
+      {
+        "id": 263115,
+        "title": "Logan",
+        "genre": "Drama",
+        "x": -0.93503,
+        "y": -0.08401
+      },
+      {
+        "id": 269149,
+        "title": "Zootopia: Essa Cidade é o Bicho",
+        "genre": "Comédia",
+        "x": -0.85391,
+        "y": -0.19142
+      },
+      {
+        "id": 270303,
+        "title": "Corrente do Mal",
+        "genre": "Terror",
+        "x": -0.93125,
+        "y": 0.11169
+      },
+      {
+        "id": 271110,
+        "title": "Capitão América: Guerra Civil",
+        "genre": "Ficção científica",
+        "x": -0.8878,
+        "y": -0.16081
+      },
+      {
+        "id": 273248,
+        "title": "Os Oito Odiados",
+        "genre": "Drama",
+        "x": -0.93529,
+        "y": -0.01697
+      },
+      {
+        "id": 280092,
+        "title": "Sobrenatural: A Origem",
+        "genre": "Terror",
+        "x": -0.89678,
+        "y": -0.0411
+      },
+      {
+        "id": 281957,
+        "title": "O Regresso",
+        "genre": "Drama",
+        "x": -0.93754,
+        "y": 0.00425
+      },
+      {
+        "id": 283995,
+        "title": "Guardiões da Galáxia - Vol. 2",
+        "genre": "Ficção científica",
+        "x": -0.8527,
+        "y": -0.17976
+      },
+      {
+        "id": 284053,
+        "title": "Thor: Ragnarok",
+        "genre": null,
+        "x": -0.87745,
+        "y": -0.2401
+      },
+      {
+        "id": 284054,
+        "title": "Pantera Negra",
+        "genre": "Ficção científica",
+        "x": -0.89394,
+        "y": -0.20129
+      },
+      {
+        "id": 286217,
+        "title": "Perdido em Marte",
+        "genre": null,
+        "x": -0.92005,
+        "y": -0.03302
+      },
+      {
+        "id": 287424,
+        "title": "Maggie - A Transformação",
+        "genre": null,
+        "x": -0.92119,
+        "y": 0.08851
+      },
+      {
+        "id": 290098,
+        "title": "A Criada",
+        "genre": "Drama",
+        "x": -0.92974,
+        "y": 0.11855
+      },
+      {
+        "id": 293660,
+        "title": "Deadpool",
+        "genre": "Comédia",
+        "x": -0.92027,
+        "y": -0.1145
+      },
+      {
+        "id": 299534,
+        "title": "Vingadores: Ultimato",
+        "genre": "Ficção científica",
+        "x": -0.90873,
+        "y": -0.16319
+      },
+      {
+        "id": 299536,
+        "title": "Vingadores: Guerra Infinita",
+        "genre": "Ficção científica",
+        "x": -0.9101,
+        "y": -0.24284
+      },
+      {
+        "id": 299710,
+        "title": "Aos 14",
+        "genre": "Drama",
+        "x": -0.83833,
+        "y": 0.04867
+      },
+      {
+        "id": 301528,
+        "title": "Toy Story 4",
+        "genre": "Comédia",
+        "x": -0.91398,
+        "y": 0.08943
+      },
+      {
+        "id": 310131,
+        "title": "A Bruxa",
+        "genre": "Terror",
+        "x": -0.92862,
+        "y": 0.16849
+      },
+      {
+        "id": 313369,
+        "title": "La La Land: Cantando Estações",
+        "genre": null,
+        "x": -0.89313,
+        "y": 0.17336
+      },
+      {
+        "id": 315162,
+        "title": "Gato de Botas 2: O Último Pedido",
+        "genre": "Comédia",
+        "x": -0.9065,
+        "y": -0.12659
+      },
+      {
+        "id": 315635,
+        "title": "Homem-Aranha: De Volta ao Lar",
+        "genre": "Ficção científica",
+        "x": -0.79656,
+        "y": -0.04819
+      },
+      {
+        "id": 324786,
+        "title": "Até o Último Homem",
+        "genre": "Drama",
+        "x": -0.82908,
+        "y": 0.00655
+      },
+      {
+        "id": 324857,
+        "title": "Homem-Aranha: No Aranhaverso",
+        "genre": "Ficção científica",
+        "x": -0.92637,
+        "y": -0.04468
+      },
+      {
+        "id": 329865,
+        "title": "A Chegada",
+        "genre": "Drama",
+        "x": -0.92645,
+        "y": 0.01712
+      },
+      {
+        "id": 330457,
+        "title": "Frozen II",
+        "genre": "Comédia",
+        "x": -0.8704,
+        "y": -0.14697
+      },
+      {
+        "id": 335984,
+        "title": "Blade Runner 2049",
+        "genre": null,
+        "x": -0.93395,
+        "y": -0.03476
+      },
+      {
+        "id": 337167,
+        "title": "Cinquenta Tons de Liberdade",
+        "genre": "Drama",
+        "x": -0.89619,
+        "y": 0.07814
+      },
+      {
+        "id": 345940,
+        "title": "Megatubarão",
+        "genre": "Terror",
+        "x": -0.91003,
+        "y": -0.07528
+      },
+      {
+        "id": 346698,
+        "title": "Barbie",
+        "genre": "Comédia",
+        "x": -0.90106,
+        "y": 0.07865
+      },
+      {
+        "id": 359410,
+        "title": "Matador de Aluguel",
+        "genre": "Drama",
+        "x": -0.8806,
+        "y": 0.06996
+      },
+      {
+        "id": 361743,
+        "title": "Top Gun: Maverick",
+        "genre": "Drama",
+        "x": -0.88438,
+        "y": -0.04249
+      },
+      {
+        "id": 372058,
+        "title": "Your Name.",
+        "genre": "Drama",
+        "x": -0.90619,
+        "y": 0.17337
+      },
+      {
+        "id": 374720,
+        "title": "Dunkirk",
+        "genre": "Drama",
+        "x": -0.83225,
+        "y": -0.0489
+      },
+      {
+        "id": 383498,
+        "title": "Deadpool 2",
+        "genre": "Comédia",
+        "x": -0.9073,
+        "y": -0.20325
+      },
+      {
+        "id": 384018,
+        "title": "Velozes & Furiosos: Hobbs & Shaw",
+        "genre": "Comédia",
+        "x": -0.8398,
+        "y": -0.27819
+      },
+      {
+        "id": 396535,
+        "title": "Invasão Zumbi",
+        "genre": "Terror",
+        "x": -0.87212,
+        "y": 0.03881
+      },
+      {
+        "id": 402431,
+        "title": "Wicked",
+        "genre": "Drama",
+        "x": -0.92995,
+        "y": 0.10141
+      },
+      {
+        "id": 406563,
+        "title": "Sobrenatural: A Última Chave",
+        "genre": "Terror",
+        "x": -0.93359,
+        "y": 0.02509
+      },
+      {
+        "id": 414419,
+        "title": "Kill Bill: The Whole Bloody Affair",
+        "genre": "Drama",
+        "x": -0.90632,
+        "y": -0.09084
+      },
+      {
+        "id": 417859,
+        "title": "Gato de Botas",
+        "genre": "Comédia",
+        "x": -0.91797,
+        "y": -0.09521
+      },
+      {
+        "id": 419430,
+        "title": "Corra!",
+        "genre": "Terror",
+        "x": -0.91948,
+        "y": 0.14917
+      },
+      {
+        "id": 423108,
+        "title": "Invocação do Mal 3: A Ordem do Demônio",
+        "genre": "Terror",
+        "x": -0.88206,
+        "y": -0.00456
+      },
+      {
+        "id": 429617,
+        "title": "Homem-Aranha: Longe de Casa",
+        "genre": "Ficção científica",
+        "x": -0.93354,
+        "y": -0.0621
+      },
+      {
+        "id": 436270,
+        "title": "Adão Negro",
+        "genre": "Ficção científica",
+        "x": -0.83874,
+        "y": -0.17047
+      },
+      {
+        "id": 436969,
+        "title": "O Esquadrão Suicida",
+        "genre": "Comédia",
+        "x": -0.89082,
+        "y": -0.18669
+      },
+      {
+        "id": 438631,
+        "title": "Duna",
+        "genre": "Ficção científica",
+        "x": -0.90461,
+        "y": -0.07937
+      },
+      {
+        "id": 439079,
+        "title": "A Freira",
+        "genre": "Terror",
+        "x": -0.93063,
+        "y": 0.06084
+      },
+      {
+        "id": 441168,
+        "title": "Aluna Exemplar e Estrela Pornô",
+        "genre": "Drama",
+        "x": -0.82602,
+        "y": 0.08805
+      },
+      {
+        "id": 447332,
+        "title": "Um Lugar Silencioso",
+        "genre": null,
+        "x": -0.91031,
+        "y": -0.01973
+      },
+      {
+        "id": 447365,
+        "title": "Guardiões da Galáxia: Vol. 3",
+        "genre": "Ficção científica",
+        "x": -0.91596,
+        "y": -0.1149
+      },
+      {
+        "id": 460458,
+        "title": "Resident Evil: Bem-Vindo a Raccoon City",
+        "genre": "Terror",
+        "x": -0.92303,
+        "y": -0.11368
+      },
+      {
+        "id": 466272,
+        "title": "Era Uma Vez em… Hollywood",
+        "genre": null,
+        "x": -0.88682,
+        "y": 0.1128
+      },
+      {
+        "id": 466420,
+        "title": "Assassinos da Lua das Flores",
+        "genre": "Drama",
+        "x": -0.90418,
+        "y": 0.04882
+      },
+      {
+        "id": 475557,
+        "title": "Coringa",
+        "genre": "Drama",
+        "x": -0.90332,
+        "y": -0.00203
+      },
+      {
+        "id": 490132,
+        "title": "Green Book: O Guia",
+        "genre": null,
+        "x": -0.93032,
+        "y": 0.03012
+      },
+      {
+        "id": 493922,
+        "title": "Hereditário",
+        "genre": "Terror",
+        "x": -0.92702,
+        "y": 0.12126
+      },
+      {
+        "id": 496243,
+        "title": "Parasita",
+        "genre": null,
+        "x": -0.9371,
+        "y": 0.12217
+      },
+      {
+        "id": 497698,
+        "title": "Viúva Negra",
+        "genre": "Ficção científica",
+        "x": -0.92811,
+        "y": -0.00789
+      },
+      {
+        "id": 502356,
+        "title": "Super Mario Bros. O Filme",
+        "genre": "Comédia",
+        "x": -0.87298,
+        "y": -0.2443
+      },
+      {
+        "id": 505642,
+        "title": "Pantera Negra: Wakanda para Sempre",
+        "genre": "Ficção científica",
+        "x": -0.84685,
+        "y": -0.19997
+      },
+      {
+        "id": 508947,
+        "title": "Red: Crescer é Uma Fera",
+        "genre": "Comédia",
+        "x": -0.86198,
+        "y": 0.0657
+      },
+      {
+        "id": 519182,
+        "title": "Meu Malvado Favorito 4",
+        "genre": "Comédia",
+        "x": -0.92238,
+        "y": -0.09306
+      },
+      {
+        "id": 522627,
+        "title": "Magnatas do Crime",
+        "genre": "Comédia",
+        "x": -0.89425,
+        "y": 0.02175
+      },
+      {
+        "id": 530385,
+        "title": "Midsommar: O Mal Não Espera a Noite",
+        "genre": "Terror",
+        "x": -0.9437,
+        "y": 0.13169
+      },
+      {
+        "id": 533535,
+        "title": "Deadpool & Wolverine",
+        "genre": null,
+        "x": -0.85995,
+        "y": -0.12346
+      },
+      {
+        "id": 546554,
+        "title": "Entre Facas e Segredos",
+        "genre": "Comédia",
+        "x": -0.9388,
+        "y": 0.00785
+      },
+      {
+        "id": 549509,
+        "title": "O Brutalista",
+        "genre": "Drama",
+        "x": -0.89648,
+        "y": 0.11898
+      },
+      {
+        "id": 550988,
+        "title": "Free Guy: Assumindo o Controle",
+        "genre": "Comédia",
+        "x": -0.9064,
+        "y": 0.04292
+      },
+      {
+        "id": 552524,
+        "title": "Lilo & Stitch",
+        "genre": null,
+        "x": -0.94388,
+        "y": 0.05535
+      },
+      {
+        "id": 558449,
+        "title": "Gladiador 2",
+        "genre": "Drama",
+        "x": -0.93077,
+        "y": -0.0293
+      },
+      {
+        "id": 567609,
+        "title": "Casamento Sangrento",
+        "genre": "Terror",
+        "x": -0.94068,
+        "y": 0.04821
+      },
+      {
+        "id": 569094,
+        "title": "Homem-Aranha: Através do Aranhaverso",
+        "genre": "Ficção científica",
+        "x": -0.87335,
+        "y": -0.27467
+      },
+      {
+        "id": 570508,
+        "title": "Testemunha Inocente",
+        "genre": "Drama",
+        "x": -0.86904,
+        "y": 0.05531
+      },
+      {
+        "id": 574475,
+        "title": "Premonição 6: Laços de Sangue",
+        "genre": "Terror",
+        "x": -0.91074,
+        "y": -0.00907
+      },
+      {
+        "id": 587424,
+        "title": "Infecção",
+        "genre": "Terror",
+        "x": -0.91183,
+        "y": -0.01219
+      },
+      {
+        "id": 604079,
+        "title": "A Longa Marcha: Caminhe ou Morra",
+        "genre": "Terror",
+        "x": -0.78657,
+        "y": 0.04969
+      },
+      {
+        "id": 614479,
+        "title": "Sobrenatural: A Porta Vermelha",
+        "genre": "Terror",
+        "x": -0.87848,
+        "y": -0.0006
+      },
+      {
+        "id": 615656,
+        "title": "Megatubarão 2",
+        "genre": "Terror",
+        "x": -0.88216,
+        "y": -0.08398
+      },
+      {
+        "id": 616037,
+        "title": "Thor: Amor e Trovão",
+        "genre": "Comédia",
+        "x": -0.9412,
+        "y": -0.16882
+      },
+      {
+        "id": 617126,
+        "title": "Quarteto Fantástico: Primeiros Passos",
+        "genre": "Ficção científica",
+        "x": -0.89784,
+        "y": -0.20895
+      },
+      {
+        "id": 629542,
+        "title": "Os Caras Malvados",
+        "genre": "Comédia",
+        "x": -0.81162,
+        "y": -0.14656
+      },
+      {
+        "id": 634649,
+        "title": "Homem-Aranha: Sem Volta Para Casa",
+        "genre": "Ficção científica",
+        "x": -0.91864,
+        "y": -0.01204
+      },
+      {
+        "id": 637649,
+        "title": "Infiltrado",
+        "genre": "Drama",
+        "x": -0.93607,
+        "y": 0.04804
+      },
+      {
+        "id": 693134,
+        "title": "Duna: Parte Dois",
+        "genre": "Ficção científica",
+        "x": -0.94664,
+        "y": -0.06906
+      },
+      {
+        "id": 713704,
+        "title": "A Morte do Demônio: A Ascensão",
+        "genre": "Terror",
+        "x": -0.88744,
+        "y": -0.09658
+      },
+      {
+        "id": 718930,
+        "title": "Trem-Bala",
+        "genre": "Comédia",
+        "x": -0.91869,
+        "y": -0.02076
+      },
+      {
+        "id": 744275,
+        "title": "After: Depois do Desencontro",
+        "genre": "Drama",
+        "x": -0.92566,
+        "y": 0.14084
+      },
+      {
+        "id": 746036,
+        "title": "O Dublê",
+        "genre": "Comédia",
+        "x": -0.87252,
+        "y": 0.14243
+      },
+      {
+        "id": 755898,
+        "title": "A Guerra dos Mundos",
+        "genre": "Ficção científica",
+        "x": -0.91323,
+        "y": 0.0323
+      },
+      {
+        "id": 803796,
+        "title": "Guerreiras do K-Pop",
+        "genre": "Comédia",
+        "x": -0.83636,
+        "y": -0.23711
+      },
+      {
+        "id": 822119,
+        "title": "Capitão América: Admirável Mundo Novo",
+        "genre": "Ficção científica",
+        "x": -0.9304,
+        "y": -0.01144
+      },
+      {
+        "id": 829557,
+        "title": "365 Dias: Hoje",
+        "genre": "Drama",
+        "x": -0.95014,
+        "y": 0.07008
+      },
+      {
+        "id": 845781,
+        "title": "Operação Natal",
+        "genre": "Comédia",
+        "x": -0.90746,
+        "y": -0.18889
+      },
+      {
+        "id": 872585,
+        "title": "Oppenheimer",
+        "genre": "Drama",
+        "x": -0.81639,
+        "y": 0.00999
+      },
+      {
+        "id": 893723,
+        "title": "Patrulha Canina: Um Filme Superpoderoso",
+        "genre": "Comédia",
+        "x": -0.89606,
+        "y": -0.25809
+      },
+      {
+        "id": 911430,
+        "title": "F1: O Filme",
+        "genre": "Drama",
+        "x": -0.89431,
+        "y": 0.08064
+      },
+      {
+        "id": 912649,
+        "title": "Venom: A Última Rodada",
+        "genre": "Ficção científica",
+        "x": -0.89238,
+        "y": -0.13714
+      },
+      {
+        "id": 933260,
+        "title": "A Substância",
+        "genre": null,
+        "x": -0.90153,
+        "y": 0.06003
+      },
+      {
+        "id": 934433,
+        "title": "Pânico VI",
+        "genre": "Terror",
+        "x": -0.93364,
+        "y": -0.07487
+      },
+      {
+        "id": 939243,
+        "title": "Sonic 3: O Filme",
+        "genre": null,
+        "x": -0.9043,
+        "y": -0.21445
+      },
+      {
+        "id": 940551,
+        "title": "Patos!",
+        "genre": "Comédia",
+        "x": -0.93394,
+        "y": 0.07832
+      },
+      {
+        "id": 940721,
+        "title": "Godzilla Minus One",
+        "genre": "Terror",
+        "x": -0.86031,
+        "y": -0.02715
+      },
+      {
+        "id": 945961,
+        "title": "Alien: Romulus",
+        "genre": null,
+        "x": -0.87314,
+        "y": -0.09761
+      },
+      {
+        "id": 950387,
+        "title": "Um Filme Minecraft",
+        "genre": "Comédia",
+        "x": -0.90757,
+        "y": -0.09243
+      },
+      {
+        "id": 950396,
+        "title": "Entre Montanhas",
+        "genre": "Ficção científica",
+        "x": -0.87879,
+        "y": -0.13803
+      },
+      {
+        "id": 986056,
+        "title": "Thunderbolts*",
+        "genre": "Ficção científica",
+        "x": -0.90296,
+        "y": -0.11713
+      },
+      {
+        "id": 1010581,
+        "title": "Minha Culpa",
+        "genre": "Drama",
+        "x": -0.91622,
+        "y": 0.20055
+      },
+      {
+        "id": 1022789,
+        "title": "Divertida Mente 2",
+        "genre": "Comédia",
+        "x": -0.90988,
+        "y": 0.01382
+      },
+      {
+        "id": 1038392,
+        "title": "Invocação do Mal 4: O Último Ritual",
+        "genre": "Terror",
+        "x": -0.91643,
+        "y": -0.08534
+      },
+      {
+        "id": 1054867,
+        "title": "Uma Batalha Após a Outra",
+        "genre": "Comédia",
+        "x": -0.93461,
+        "y": 0.04417
+      },
+      {
+        "id": 1061474,
+        "title": "Superman",
+        "genre": "Ficção científica",
+        "x": -0.84216,
+        "y": -0.19778
+      },
+      {
+        "id": 1062722,
+        "title": "Frankenstein",
+        "genre": null,
+        "x": -0.88738,
+        "y": -0.07992
+      },
+      {
+        "id": 1064028,
+        "title": "Alice: Subservience",
+        "genre": "Terror",
+        "x": -0.88843,
+        "y": 0.061
+      },
+      {
+        "id": 1078605,
+        "title": "A Hora do Mal",
+        "genre": "Terror",
+        "x": -0.88865,
+        "y": 0.05083
+      },
+      {
+        "id": 1084199,
+        "title": "Acompanhante Perfeita",
+        "genre": "Terror",
+        "x": -0.9141,
+        "y": 0.06163
+      },
+      {
+        "id": 1084242,
+        "title": "Zootopia 2",
+        "genre": "Comédia",
+        "x": -0.89117,
+        "y": -0.11452
+      },
+      {
+        "id": 1100782,
+        "title": "Sorria 2",
+        "genre": "Terror",
+        "x": -0.92234,
+        "y": 0.04
+      },
+      {
+        "id": 1100988,
+        "title": "Extermínio: A Evolução",
+        "genre": null,
+        "x": -0.92405,
+        "y": -0.04588
+      },
+      {
+        "id": 1124620,
+        "title": "O Macaco",
+        "genre": "Terror",
+        "x": -0.92897,
+        "y": 0.05706
+      },
+      {
+        "id": 1156593,
+        "title": "Sua Culpa",
+        "genre": "Drama",
+        "x": -0.92944,
+        "y": 0.1217
+      },
+      {
+        "id": 1156594,
+        "title": "Nossa Culpa",
+        "genre": "Drama",
+        "x": -0.92335,
+        "y": 0.09711
+      },
+      {
+        "id": 1184918,
+        "title": "Robô Selvagem",
+        "genre": "Ficção científica",
+        "x": -0.89184,
+        "y": -0.05731
+      },
+      {
+        "id": 1205229,
+        "title": "Zoopocalipse - Uma Aventura Animal",
+        "genre": "Terror",
+        "x": -0.91939,
+        "y": -0.08357
+      },
+      {
+        "id": 1228246,
+        "title": "Five Nights at Freddy's 2",
+        "genre": "Terror",
+        "x": -0.93154,
+        "y": 0.02694
+      },
+      {
+        "id": 1233413,
+        "title": "Pecadores",
+        "genre": "Terror",
+        "x": -0.88287,
+        "y": 0.03205
+      },
+      {
+        "id": 1234731,
+        "title": "Anaconda",
+        "genre": "Terror",
+        "x": -0.91663,
+        "y": 0.01854
+      },
+      {
+        "id": 1234821,
+        "title": "Jurassic World: Recomeço",
+        "genre": "Ficção científica",
+        "x": -0.93837,
+        "y": -0.07139
+      },
+      {
+        "id": 1241982,
+        "title": "Moana 2",
+        "genre": "Comédia",
+        "x": -0.86625,
+        "y": -0.09652
+      },
+      {
+        "id": 1242898,
+        "title": "Predador: Terras Selvagens",
+        "genre": "Ficção científica",
+        "x": -0.89927,
+        "y": -0.19304
+      },
+      {
+        "id": 1246049,
+        "title": "Drácula - Uma História de Amor Eterno",
+        "genre": "Terror",
+        "x": -0.89211,
+        "y": -0.04504
+      },
+      {
+        "id": 1333141,
+        "title": "A Sapatona Galáctica",
+        "genre": "Comédia",
+        "x": -0.90674,
+        "y": -0.08671
+      },
+      {
+        "id": 1419406,
+        "title": "Operação Sombra",
+        "genre": "Drama",
+        "x": -0.89302,
+        "y": -0.09391
+      },
+      {
+        "id": 1569947,
+        "title": "O Padre: Massacre no Dia de Ação de Graças",
+        "genre": "Terror",
+        "x": -0.89697,
+        "y": 0.1067
+      }
+    ]
+  },
+  "sentenca_minilm": {
     "method": "TruncatedSVD com 2 componentes sobre linhas com norma L2 (LSA nas matrizes lexicais)",
     "explained_variance_ratio": [
       0.013094,

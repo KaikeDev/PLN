@@ -1,0 +1,90 @@
+{
+  "bow_sem_pontuacao": {
+    "family": "lexical",
+    "sparse": true,
+    "dimensions": 5988,
+    "dimensions_are_vocabulary": true,
+    "learned": false,
+    "word_depends_on_context": false,
+    "interpretable_by_words": true,
+    "parameters": null,
+    "model": null
+  },
+  "bow_sem_stopwords": {
+    "family": "lexical",
+    "sparse": true,
+    "dimensions": 5921,
+    "dimensions_are_vocabulary": true,
+    "learned": false,
+    "word_depends_on_context": false,
+    "interpretable_by_words": true,
+    "parameters": null,
+    "model": null
+  },
+  "tfidf_sem_pontuacao": {
+    "family": "lexical",
+    "sparse": true,
+    "dimensions": 5988,
+    "dimensions_are_vocabulary": true,
+    "learned": false,
+    "word_depends_on_context": false,
+    "interpretable_by_words": true,
+    "parameters": null,
+    "model": null
+  },
+  "tfidf_sem_stopwords": {
+    "family": "lexical",
+    "sparse": true,
+    "dimensions": 5921,
+    "dimensions_are_vocabulary": true,
+    "learned": false,
+    "word_depends_on_context": false,
+    "interpretable_by_words": true,
+    "parameters": null,
+    "model": null
+  },
+  "word2vec_cbow": {
+    "family": "static",
+    "sparse": false,
+    "dimensions": 300,
+    "dimensions_are_vocabulary": false,
+    "learned": true,
+    "word_depends_on_context": false,
+    "interpretable_by_words": true,
+    "parameters": 278882100,
+    "model": "pt-mteb/average_pt_nilc_word2vec_cbow_s300"
+  },
+  "word2vec_skipgram": {
+    "family": "static",
+    "sparse": false,
+    "dimensions": 300,
+    "dimensions_are_vocabulary": false,
+    "learned": true,
+    "word_depends_on_context": false,
+    "interpretable_by_words": true,
+    "parameters": 278882100,
+    "model": "pt-mteb/average_pt_nilc_word2vec_skip_s300"
+  },
+  "bert_base_pt": {
+    "family": "contextual",
+    "sparse": false,
+    "dimensions": 768,
+    "dimensions_are_vocabulary": false,
+    "learned": true,
+    "word_depends_on_context": true,
+    "interpretable_by_words": false,
+    "parameters": 108923136,
+    "model": "neuralmind/bert-base-portuguese-cased"
+  },
+  "sentenca_minilm": {
+    "family": "contextual",
+    "sparse": false,
+    "dimensions": 384,
+    "dimensions_are_vocabulary": false,
+    "learned": true,
+    "word_depends_on_context": true,
+    "interpretable_by_words": false,
+    "parameters": 117653760,
+    "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+  }
+}

@@ -509,7 +509,134 @@
       }
     ]
   },
-  "word2vec_sem_stopwords": {
+  "word2vec_cbow": {
+    "k": 5,
+    "mean_reciprocal_rank": 0.526316,
+    "hit_rate_at_k": 0.5,
+    "queries": [
+      {
+        "id": "matrix_literal",
+        "text": "programador conectado a um sistema de computadores",
+        "note": "Controle literal: todos os termos de conteúdo aparecem na sinopse coletada de Matrix.",
+        "tokens": [
+          "programador",
+          "conectado",
+          "sistema",
+          "computadores"
+        ],
+        "out_of_vocabulary": [],
+        "null_vector": false,
+        "retrieved": 428,
+        "relevant": [
+          {
+            "id": 603,
+            "title": "Matrix",
+            "rank": 1,
+            "explanation": [
+              "programador",
+              "conectado",
+              "sistema",
+              "computadores"
+            ]
+          }
+        ],
+        "reciprocal_rank": 1.0,
+        "hit_at_k": true,
+        "top": [
+          {
+            "rank": 1,
+            "id": 603,
+            "title": "Matrix",
+            "score": 0.568937
+          },
+          {
+            "rank": 2,
+            "id": 550988,
+            "title": "Free Guy: Assumindo o Controle",
+            "score": 0.408801
+          },
+          {
+            "rank": 3,
+            "id": 755898,
+            "title": "A Guerra dos Mundos",
+            "score": 0.406566
+          },
+          {
+            "rank": 4,
+            "id": 9426,
+            "title": "A Mosca",
+            "score": 0.393213
+          },
+          {
+            "rank": 5,
+            "id": 39254,
+            "title": "Gigantes de Aço",
+            "score": 0.389311
+          }
+        ]
+      },
+      {
+        "id": "matrix_simulacao",
+        "text": "filme sobre simulação da realidade",
+        "note": "Caso da orientação do professor: “simulação” não aparece literalmente na sinopse coletada de Matrix.",
+        "tokens": [
+          "filme",
+          "simulação",
+          "realidade"
+        ],
+        "out_of_vocabulary": [],
+        "null_vector": false,
+        "retrieved": 428,
+        "relevant": [
+          {
+            "id": 603,
+            "title": "Matrix",
+            "rank": 19,
+            "explanation": [
+              "realidade",
+              "simulação ≈ ilusão",
+              "filme ≈ sonho"
+            ]
+          }
+        ],
+        "reciprocal_rank": 0.052632,
+        "hit_at_k": false,
+        "top": [
+          {
+            "rank": 1,
+            "id": 550988,
+            "title": "Free Guy: Assumindo o Controle",
+            "score": 0.583998
+          },
+          {
+            "rank": 2,
+            "id": 746036,
+            "title": "O Dublê",
+            "score": 0.554864
+          },
+          {
+            "rank": 3,
+            "id": 1234731,
+            "title": "Anaconda",
+            "score": 0.554379
+          },
+          {
+            "rank": 4,
+            "id": 615656,
+            "title": "Megatubarão 2",
+            "score": 0.492284
+          },
+          {
+            "rank": 5,
+            "id": 1228246,
+            "title": "Five Nights at Freddy's 2",
+            "score": 0.479868
+          }
+        ]
+      }
+    ]
+  },
+  "word2vec_skipgram": {
     "k": 5,
     "mean_reciprocal_rank": 0.6,
     "hit_rate_at_k": 1.0,
@@ -636,7 +763,116 @@
       }
     ]
   },
-  "contextual_minilm": {
+  "bert_base_pt": {
+    "k": 5,
+    "mean_reciprocal_rank": 0.3,
+    "hit_rate_at_k": 0.5,
+    "queries": [
+      {
+        "id": "matrix_literal",
+        "text": "programador conectado a um sistema de computadores",
+        "note": "Controle literal: todos os termos de conteúdo aparecem na sinopse coletada de Matrix.",
+        "tokens": [],
+        "out_of_vocabulary": [],
+        "null_vector": false,
+        "retrieved": 428,
+        "relevant": [
+          {
+            "id": 603,
+            "title": "Matrix",
+            "rank": 2,
+            "explanation": []
+          }
+        ],
+        "reciprocal_rank": 0.5,
+        "hit_at_k": true,
+        "top": [
+          {
+            "rank": 1,
+            "id": 755898,
+            "title": "A Guerra dos Mundos",
+            "score": 0.630991
+          },
+          {
+            "rank": 2,
+            "id": 603,
+            "title": "Matrix",
+            "score": 0.627505
+          },
+          {
+            "rank": 3,
+            "id": 1419406,
+            "title": "Operação Sombra",
+            "score": 0.622058
+          },
+          {
+            "rank": 4,
+            "id": 489,
+            "title": "Gênio Indomável",
+            "score": 0.615971
+          },
+          {
+            "rank": 5,
+            "id": 207703,
+            "title": "Kingsman: Serviço Secreto",
+            "score": 0.615377
+          }
+        ]
+      },
+      {
+        "id": "matrix_simulacao",
+        "text": "filme sobre simulação da realidade",
+        "note": "Caso da orientação do professor: “simulação” não aparece literalmente na sinopse coletada de Matrix.",
+        "tokens": [],
+        "out_of_vocabulary": [],
+        "null_vector": false,
+        "retrieved": 428,
+        "relevant": [
+          {
+            "id": 603,
+            "title": "Matrix",
+            "rank": 10,
+            "explanation": []
+          }
+        ],
+        "reciprocal_rank": 0.1,
+        "hit_at_k": false,
+        "top": [
+          {
+            "rank": 1,
+            "id": 21835,
+            "title": "Uma Odisséia Chinesa: Parte Dois – Cinderela",
+            "score": 0.6086
+          },
+          {
+            "rank": 2,
+            "id": 10625,
+            "title": "Meninas Malvadas",
+            "score": 0.563396
+          },
+          {
+            "rank": 3,
+            "id": 1062722,
+            "title": "Frankenstein",
+            "score": 0.546318
+          },
+          {
+            "rank": 4,
+            "id": 45612,
+            "title": "Contra o Tempo",
+            "score": 0.54479
+          },
+          {
+            "rank": 5,
+            "id": 73861,
+            "title": "A Serbian Film - Terror sem Limites",
+            "score": 0.544
+          }
+        ]
+      }
+    ]
+  },
+  "sentenca_minilm": {
     "k": 5,
     "mean_reciprocal_rank": 0.75,
     "hit_rate_at_k": 1.0,

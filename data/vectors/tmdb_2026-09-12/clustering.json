@@ -619,7 +619,162 @@
       }
     ]
   },
-  "word2vec_sem_stopwords": {
+  "word2vec_cbow": {
+    "algorithm": "KMeans (k-means++, n_init=10) sobre linhas com norma L2",
+    "k": 4,
+    "labeled_documents": 378,
+    "adjusted_rand_index": 0.056802,
+    "normalized_mutual_information": 0.068147,
+    "purity": 0.404762,
+    "silhouette_cosine": 0.042261,
+    "clusters": [
+      {
+        "cluster": 0,
+        "size": 113,
+        "descriptive_terms": [
+          "família",
+          "casa",
+          "anos",
+          "vida",
+          "não",
+          "está",
+          "começa",
+          "morte",
+          "dois",
+          "mãe"
+        ],
+        "genres": {
+          "Terror": 43,
+          "Drama": 38,
+          "Comédia": 35,
+          "Ficção científica": 14
+        },
+        "closest_to_centroid": [
+          {
+            "id": 588,
+            "title": "Terror em Silent Hill"
+          },
+          {
+            "id": 6435,
+            "title": "Da Magia à Sedução"
+          },
+          {
+            "id": 194,
+            "title": "O Fabuloso Destino de Amélie Poulain"
+          }
+        ]
+      },
+      {
+        "cluster": 1,
+        "size": 96,
+        "descriptive_terms": [
+          "dois",
+          "grupo",
+          "amigos",
+          "todos",
+          "antes",
+          "cidade",
+          "terra",
+          "planeta",
+          "robô",
+          "precisam"
+        ],
+        "genres": {
+          "Comédia": 36,
+          "Terror": 31,
+          "Ficção científica": 30,
+          "Drama": 10
+        },
+        "closest_to_centroid": [
+          {
+            "id": 109428,
+            "title": "A Morte do Demônio"
+          },
+          {
+            "id": 953,
+            "title": "Madagascar"
+          },
+          {
+            "id": 585,
+            "title": "Monstros S.A."
+          }
+        ]
+      },
+      {
+        "cluster": 2,
+        "size": 99,
+        "descriptive_terms": [
+          "ser",
+          "jovem",
+          "não",
+          "peter",
+          "vida",
+          "está",
+          "anos",
+          "andy",
+          "angeles",
+          "caso"
+        ],
+        "genres": {
+          "Drama": 40,
+          "Comédia": 32,
+          "Ficção científica": 20,
+          "Terror": 20
+        },
+        "closest_to_centroid": [
+          {
+            "id": 854,
+            "title": "O Máskara"
+          },
+          {
+            "id": 278,
+            "title": "Um Sonho de Liberdade"
+          },
+          {
+            "id": 747,
+            "title": "Todo Mundo Quase Morto"
+          }
+        ]
+      },
+      {
+        "cluster": 3,
+        "size": 120,
+        "descriptive_terms": [
+          "está",
+          "após",
+          "mundo",
+          "contra",
+          "grupo",
+          "ser",
+          "missão",
+          "guerra",
+          "planeta",
+          "ainda"
+        ],
+        "genres": {
+          "Ficção científica": 56,
+          "Drama": 32,
+          "Terror": 25,
+          "Comédia": 16
+        },
+        "closest_to_centroid": [
+          {
+            "id": 616037,
+            "title": "Thor: Amor e Trovão"
+          },
+          {
+            "id": 27205,
+            "title": "A Origem"
+          },
+          {
+            "id": 55779,
+            "title": "Premonição 5"
+          }
+        ]
+      }
+    ]
+  },
+  "word2vec_skipgram": {
     "algorithm": "KMeans (k-means++, n_init=10) sobre linhas com norma L2",
     "k": 4,
     "labeled_documents": 378,
@@ -774,7 +929,162 @@
       }
     ]
   },
-  "contextual_minilm": {
+  "bert_base_pt": {
+    "algorithm": "KMeans (k-means++, n_init=10) sobre linhas com norma L2",
+    "k": 4,
+    "labeled_documents": 378,
+    "adjusted_rand_index": 0.12244,
+    "normalized_mutual_information": 0.147604,
+    "purity": 0.470899,
+    "silhouette_cosine": 0.060053,
+    "clusters": [
+      {
+        "cluster": 0,
+        "size": 88,
+        "descriptive_terms": [
+          "grupo",
+          "vírus",
+          "cidade",
+          "está",
+          "missão",
+          "terra",
+          "planeta",
+          "equipe",
+          "após",
+          "única"
+        ],
+        "genres": {
+          "Terror": 50,
+          "Ficção científica": 33,
+          "Comédia": 11,
+          "Drama": 8
+        },
+        "closest_to_centroid": [
+          {
+            "id": 55779,
+            "title": "Premonição 5"
+          },
+          {
+            "id": 109428,
+            "title": "A Morte do Demônio"
+          },
+          {
+            "id": 588,
+            "title": "Terror em Silent Hill"
+          }
+        ]
+      },
+      {
+        "cluster": 1,
+        "size": 106,
+        "descriptive_terms": [
+          "peter",
+          "ser",
+          "precisa",
+          "mundo",
+          "está",
+          "vilão",
+          "planeta",
+          "após",
+          "agora",
+          "contra"
+        ],
+        "genres": {
+          "Ficção científica": 59,
+          "Comédia": 35,
+          "Terror": 10,
+          "Drama": 9
+        },
+        "closest_to_centroid": [
+          {
+            "id": 616037,
+            "title": "Thor: Amor e Trovão"
+          },
+          {
+            "id": 76341,
+            "title": "Mad Max: Estrada da Fúria"
+          },
+          {
+            "id": 24428,
+            "title": "Os Vingadores: The Avengers"
+          }
+        ]
+      },
+      {
+        "cluster": 2,
+        "size": 136,
+        "descriptive_terms": [
+          "casa",
+          "não",
+          "família",
+          "está",
+          "anos",
+          "amigos",
+          "vida",
+          "dois",
+          "ser",
+          "jovem"
+        ],
+        "genres": {
+          "Comédia": 52,
+          "Drama": 47,
+          "Terror": 43,
+          "Ficção científica": 16
+        },
+        "closest_to_centroid": [
+          {
+            "id": 14160,
+            "title": "Up: Altas Aventuras"
+          },
+          {
+            "id": 829557,
+            "title": "365 Dias: Hoje"
+          },
+          {
+            "id": 1547,
+            "title": "Os Garotos Perdidos"
+          }
+        ]
+      },
+      {
+        "cluster": 3,
+        "size": 98,
+        "descriptive_terms": [
+          "jovem",
+          "durante",
+          "ser",
+          "anos",
+          "polícia",
+          "guerra",
+          "dois",
+          "policial",
+          "história",
+          "após"
+        ],
+        "genres": {
+          "Drama": 56,
+          "Comédia": 21,
+          "Terror": 16,
+          "Ficção científica": 12
+        },
+        "closest_to_centroid": [
+          {
+            "id": 115,
+            "title": "O Grande Lebowski"
+          },
+          {
+            "id": 278,
+            "title": "Um Sonho de Liberdade"
+          },
+          {
+            "id": 9946,
+            "title": "Fim dos Dias"
+          }
+        ]
+      }
+    ]
+  },
+  "sentenca_minilm": {
     "algorithm": "KMeans (k-means++, n_init=10) sobre linhas com norma L2",
     "k": 4,
     "labeled_documents": 378,

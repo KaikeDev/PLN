@@ -1,0 +1,413 @@
+{
+  "bow_sem_pontuacao": {
+    "pairs": [
+      {
+        "id": "parafrase_cachorro",
+        "expected": "proximas",
+        "cosine": 0.223607,
+        "null_vector": false,
+        "out_of_vocabulary": [
+          "correu",
+          "perseguiu"
+        ],
+        "explanation": [
+          "o"
+        ]
+      },
+      {
+        "id": "polissemia_banco",
+        "expected": "distantes",
+        "cosine": 0.223607,
+        "null_vector": false,
+        "out_of_vocabulary": [
+          "aprovou",
+          "financiamento",
+          "praça",
+          "sentou"
+        ],
+        "explanation": [
+          "banco"
+        ]
+      },
+      {
+        "id": "mesmo_sentido_banco",
+        "expected": "proximas",
+        "cosine": 0.67082,
+        "null_vector": false,
+        "out_of_vocabulary": [
+          "aprovou",
+          "empréstimo",
+          "financiamento",
+          "juros"
+        ],
+        "explanation": [
+          "o",
+          "banco"
+        ]
+      },
+      {
+        "id": "parafrase_filme",
+        "expected": "proximas",
+        "cosine": 0.213201,
+        "null_vector": false,
+        "out_of_vocabulary": [
+          "simulada"
+        ],
+        "explanation": [
+          "que",
+          "uma"
+        ]
+      }
+    ]
+  },
+  "bow_sem_stopwords": {
+    "pairs": [
+      {
+        "id": "parafrase_cachorro",
+        "expected": "proximas",
+        "cosine": 0.0,
+        "null_vector": false,
+        "out_of_vocabulary": [
+          "correu",
+          "perseguiu"
+        ],
+        "explanation": []
+      },
+      {
+        "id": "polissemia_banco",
+        "expected": "distantes",
+        "cosine": 1.0,
+        "null_vector": false,
+        "out_of_vocabulary": [
+          "aprovou",
+          "financiamento",
+          "praça",
+          "sentou"
+        ],
+        "explanation": [
+          "banco"
+        ]
+      },
+      {
+        "id": "mesmo_sentido_banco",
+        "expected": "proximas",
+        "cosine": 0.707107,
+        "null_vector": false,
+        "out_of_vocabulary": [
+          "aprovou",
+          "empréstimo",
+          "financiamento",
+          "juros"
+        ],
+        "explanation": [
+          "banco"
+        ]
+      },
+      {
+        "id": "parafrase_filme",
+        "expected": "proximas",
+        "cosine": 0.0,
+        "null_vector": false,
+        "out_of_vocabulary": [
+          "simulada"
+        ],
+        "explanation": []
+      }
+    ]
+  },
+  "tfidf_sem_pontuacao": {
+    "pairs": [
+      {
+        "id": "parafrase_cachorro",
+        "expected": "proximas",
+        "cosine": 0.02084,
+        "null_vector": false,
+        "out_of_vocabulary": [
+          "correu",
+          "perseguiu"
+        ],
+        "explanation": [
+          "o"
+        ]
+      },
+      {
+        "id": "polissemia_banco",
+        "expected": "distantes",
+        "cosine": 0.76154,
+        "null_vector": false,
+        "out_of_vocabulary": [
+          "aprovou",
+          "financiamento",
+          "praça",
+          "sentou"
+        ],
+        "explanation": [
+          "banco"
+        ]
+      },
+      {
+        "id": "mesmo_sentido_banco",
+        "expected": "proximas",
+        "cosine": 0.647327,
+        "null_vector": false,
+        "out_of_vocabulary": [
+          "aprovou",
+          "empréstimo",
+          "financiamento",
+          "juros"
+        ],
+        "explanation": [
+          "banco",
+          "o"
+        ]
+      },
+      {
+        "id": "parafrase_filme",
+        "expected": "proximas",
+        "cosine": 0.028906,
+        "null_vector": false,
+        "out_of_vocabulary": [
+          "simulada"
+        ],
+        "explanation": [
+          "uma",
+          "que"
+        ]
+      }
+    ]
+  },
+  "tfidf_sem_stopwords": {
+    "pairs": [
+      {
+        "id": "parafrase_cachorro",
+        "expected": "proximas",
+        "cosine": 0.0,
+        "null_vector": false,
+        "out_of_vocabulary": [
+          "correu",
+          "perseguiu"
+        ],
+        "explanation": []
+      },
+      {
+        "id": "polissemia_banco",
+        "expected": "distantes",
+        "cosine": 1.0,
+        "null_vector": false,
+        "out_of_vocabulary": [
+          "aprovou",
+          "financiamento",
+          "praça",
+          "sentou"
+        ],
+        "explanation": [
+          "banco"
+        ]
+      },
+      {
+        "id": "mesmo_sentido_banco",
+        "expected": "proximas",
+        "cosine": 0.665309,
+        "null_vector": false,
+        "out_of_vocabulary": [
+          "aprovou",
+          "empréstimo",
+          "financiamento",
+          "juros"
+        ],
+        "explanation": [
+          "banco"
+        ]
+      },
+      {
+        "id": "parafrase_filme",
+        "expected": "proximas",
+        "cosine": 0.0,
+        "null_vector": false,
+        "out_of_vocabulary": [
+          "simulada"
+        ],
+        "explanation": []
+      }
+    ]
+  },
+  "word2vec_cbow": {
+    "pairs": [
+      {
+        "id": "parafrase_cachorro",
+        "expected": "proximas",
+        "cosine": 0.487423,
+        "null_vector": false,
+        "out_of_vocabulary": [],
+        "explanation": [
+          "cachorro ≈ cão",
+          "perseguiu ≈ correu",
+          "bola ≈ brinquedo"
+        ]
+      },
+      {
+        "id": "polissemia_banco",
+        "expected": "distantes",
+        "cosine": 0.464526,
+        "null_vector": false,
+        "out_of_vocabulary": [],
+        "explanation": [
+          "banco",
+          "aprovou ≈ sentou",
+          "financiamento ≈ praça"
+        ]
+      },
+      {
+        "id": "mesmo_sentido_banco",
+        "expected": "proximas",
+        "cosine": 0.557724,
+        "null_vector": false,
+        "out_of_vocabulary": [],
+        "explanation": [
+          "banco",
+          "financiamento ≈ empréstimo",
+          "aprovou ≈ cobrou"
+        ]
+      },
+      {
+        "id": "parafrase_filme",
+        "expected": "proximas",
+        "cosine": 0.457119,
+        "null_vector": false,
+        "out_of_vocabulary": [],
+        "explanation": [
+          "vive ≈ conhece",
+          "realidade ≈ ilusão",
+          "simulada ≈ criada",
+          "programador ≈ máquinas",
+          "descobre ≈ mundo"
+        ]
+      }
+    ]
+  },
+  "word2vec_skipgram": {
+    "pairs": [
+      {
+        "id": "parafrase_cachorro",
+        "expected": "proximas",
+        "cosine": 0.537193,
+        "null_vector": false,
+        "out_of_vocabulary": [],
+        "explanation": [
+          "cachorro ≈ cão",
+          "perseguiu ≈ correu",
+          "bola ≈ atrás"
+        ]
+      },
+      {
+        "id": "polissemia_banco",
+        "expected": "distantes",
+        "cosine": 0.462979,
+        "null_vector": false,
+        "out_of_vocabulary": [],
+        "explanation": [
+          "banco",
+          "aprovou ≈ sentou"
+        ]
+      },
+      {
+        "id": "mesmo_sentido_banco",
+        "expected": "proximas",
+        "cosine": 0.582485,
+        "null_vector": false,
+        "out_of_vocabulary": [],
+        "explanation": [
+          "banco",
+          "financiamento ≈ empréstimo",
+          "aprovou ≈ cobrou"
+        ]
+      },
+      {
+        "id": "parafrase_filme",
+        "expected": "proximas",
+        "cosine": 0.548493,
+        "null_vector": false,
+        "out_of_vocabulary": [],
+        "explanation": [
+          "descobre ≈ conhece",
+          "realidade ≈ ilusão",
+          "programador ≈ máquinas",
+          "simulada ≈ criada",
+          "vive ≈ mundo"
+        ]
+      }
+    ]
+  },
+  "bert_base_pt": {
+    "pairs": [
+      {
+        "id": "parafrase_cachorro",
+        "expected": "proximas",
+        "cosine": 0.788612,
+        "null_vector": false,
+        "out_of_vocabulary": [],
+        "explanation": []
+      },
+      {
+        "id": "polissemia_banco",
+        "expected": "distantes",
+        "cosine": 0.593676,
+        "null_vector": false,
+        "out_of_vocabulary": [],
+        "explanation": []
+      },
+      {
+        "id": "mesmo_sentido_banco",
+        "expected": "proximas",
+        "cosine": 0.841374,
+        "null_vector": false,
+        "out_of_vocabulary": [],
+        "explanation": []
+      },
+      {
+        "id": "parafrase_filme",
+        "expected": "proximas",
+        "cosine": 0.787079,
+        "null_vector": false,
+        "out_of_vocabulary": [],
+        "explanation": []
+      }
+    ]
+  },
+  "sentenca_minilm": {
+    "pairs": [
+      {
+        "id": "parafrase_cachorro",
+        "expected": "proximas",
+        "cosine": 0.677162,
+        "null_vector": false,
+        "out_of_vocabulary": [],
+        "explanation": []
+      },
+      {
+        "id": "polissemia_banco",
+        "expected": "distantes",
+        "cosine": -0.032968,
+        "null_vector": false,
+        "out_of_vocabulary": [],
+        "explanation": []
+      },
+      {
+        "id": "mesmo_sentido_banco",
+        "expected": "proximas",
+        "cosine": 0.622953,
+        "null_vector": false,
+        "out_of_vocabulary": [],
+        "explanation": []
+      },
+      {
+        "id": "parafrase_filme",
+        "expected": "proximas",
+        "cosine": 0.604636,
+        "null_vector": false,
+        "out_of_vocabulary": [],
+        "explanation": []
+      }
+    ]
+  }
+}
