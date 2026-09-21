@@ -18,5 +18,6 @@ Cada ADR registra uma decisão com contexto, alternativas e consequências, no f
 | [0012](0012-parametros-do-experimento-vetorial.md) | Parâmetros do experimento vetorial | Aceita |
 | [0013](0013-ferramentas-de-qualidade.md) | Ambiente, testes, lint, tipos e CI | Aceita |
 | [0014](0014-amostragem-intencional.md) | Amostragem intencional da coleta | Aceita |
+| [0015](0015-aula7-bert-cbow-e-polissemia.md) | BERT contextual, CBOW × skip-gram e sondas de polissemia (Aula 7) | Aceita |
 
 Modelo para uma nova ADR: copie a estrutura de qualquer arquivo, use o próximo número e acrescente uma linha nesta tabela.

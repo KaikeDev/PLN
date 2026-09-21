@@ -44,6 +44,18 @@ Execução local em Python 3.14.0, com scikit-learn 1.9.1, NumPy 2.5.3 e SciPy 1
 uv run --frozen python -m app.vectors verify --input ../data/vectors/tmdb_2026-09-12
 ```
 
+## Aula 7 — BERT, CBOW × skip-gram e polissemia (21/09/2026)
+
+Mesmo ambiente da Etapa 2. Modelos novos com revisão fixada: `neuralmind/bert-base-portuguese-cased` (`94d69c95…`) e `pt-mteb/average_pt_nilc_word2vec_cbow_s300` (`0d556458…`). Decisões no [ADR 0015](adr/0015-aula7-bert-cbow-e-polissemia.md).
+
+| Verificação | Resultado e alcance |
+|---|---|
+| Testes automatizados | 63 testes aprovados, 22 deles em `test_vectors.py`. Dublês implementam `word_vectors` e `parameters`. Testes novos cobrem: vetor estático igual em qualquer frase, contextual separando sentidos, pares de frases lexical × semântico, pares de palavras, síntese e rejeição de sondas inválidas. Sem rede nem download. |
+| Lint, formatação e tipos | `ruff check`, `ruff format --check` e `mypy` sem apontamentos. |
+| Build real | 428 sinopses em 8 representações, com consultas e sondas, executado com `HF_HUB_OFFLINE=1`; 34 arquivos verificados por hash e vetores alinhados a `documents.json`. Tempos de construção (`build_seconds`): lexicais < 0,03 s, word2vec 14–20 s, BERTimbau 39 s, modelo de sentença 15 s. |
+| Repetição | Segunda execução completa em outra pasta: todos os arquivos, exceto o manifesto, idênticos byte a byte, inclusive BERT e modelo de sentença. |
+| Regeneração | `data/vectors/tmdb_2026-09-12` foi regenerada com LF e substitui a execução de 14/09 (seis representações); os valores das representações que já existiam não mudaram. |
+
 ## Revisão de arquitetura e segurança (14/09/2026)
 
 Execução local em Python 3.14.0, após a refatoração descrita em [docs/arquitetura.md](arquitetura.md) e nas [ADRs](adr/README.md).
@@ -53,7 +65,7 @@ Execução local em Python 3.14.0, após a refatoração descrita em [docs/arqui
 | Testes automatizados | 57 testes aprovados: corpus (incluindo validação da configuração de coleta), vetores, extrator e serviço de pesquisa, cliente/catálogo/cache do TMDB e rotas HTTP com catálogo falso (contrato JSON, validação, 404/502, CORS e limite 429). Sem rede. |
 | Lint, formatação e tipos | `ruff check`, `ruff format --check` e `mypy` sem apontamentos. |
 | Regressão da Etapa 1 | `process` sobre `data/raw/tmdb_2026-09-12` reproduziu byte a byte os arquivos de conteúdo de `data/processed/tmdb_2026-09-12`, também no Windows, depois de fixar LF na gravação. |
-| Regressão da Etapa 2 | `build` com `config/vetorizacao.json` gerou os mesmos arquivos da execução anterior à refatoração (comparação ignorando CR). `verify` dos 26 arquivos de `data/vectors/tmdb_2026-09-12` aprovado. |
+| Regressão da Etapa 2 | `build` com `config/vetorizacao.json` gerou os mesmos arquivos da execução anterior à refatoração (comparação ignorando CR). `verify` dos 26 arquivos de `data/vectors/tmdb_2026-09-12` aprovado (antes da regeneração de 21/09). |
 | Inicialização da API | Com `backend/.env`, `/saude` responde e o OpenAPI lista `/saude`, `/filmes/{filme_id}` e `/pesquisa`; sem token, a inicialização falha com mensagem orientativa. O TMDB não foi consultado. |
 | Interface | Sintaxe verificada com `node --check`; não houve teste visual em navegador. |
 

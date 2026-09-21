@@ -24,4 +24,4 @@ A disciplina exige localizar e repetir cada transformação. Uma coleta online m
 
 - O hash não impede a alteração conjunta de um arquivo e do manifesto.
 - Reprocessar `data/raw/tmdb_2026-09-12` reproduz byte a byte `data/processed/tmdb_2026-09-12`, exceto o manifesto, em qualquer sistema operacional.
-- `data/vectors/tmdb_2026-09-12` foi gerado no Windows antes desta decisão (CRLF). Continua verificável, mas uma nova execução gera LF e, portanto, outros bytes.
+- `data/vectors/tmdb_2026-09-12` foi gerado no Windows antes desta decisão (CRLF) e regenerado com LF em 21/09/2026 (ADR 0015). Os valores das representações que já existiam não mudaram.

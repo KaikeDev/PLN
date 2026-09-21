@@ -104,27 +104,29 @@ A rota `/busca` foi removida: `GET /pesquisa?q=...&modo=titulo` faz a mesma busc
 
 ## Etapa 2 — Representações vetoriais
 
-O módulo `app.vectors` compara seis representações das mesmas sinopses:
+O módulo `app.vectors` compara oito representações das mesmas sinopses, na progressão das Aulas 6 e 7:
 - BoW e TF-IDF, a partir das etapas `05` e `06`;
-- word2vec pré-treinado do NILC;
-- um modelo contextual multilíngue (sentence-transformers).
+- word2vec pré-treinado do NILC, nas arquiteturas CBOW e skip-gram;
+- BERTimbau (BERT contextual em português);
+- um modelo de embeddings de sentença multilíngue (sentence-transformers).
 
-Sobre cada uma, calcula similaridade do cosseno, clustering K-Means, projeção 2D, palavras vizinhas e avaliação de consultas anotadas. Em `backend`:
+Sobre cada uma, calcula similaridade do cosseno, clustering K-Means, projeção 2D e avaliação de consultas anotadas. Também compara as representações nos exemplos da aula: palavras vizinhas, pares de frases, polissemia (“banco”, “manga”) e síntese comparativa. Em `backend`:
 
 ```bash
 # somente BoW e TF-IDF (leve)
 uv run --frozen python -m app.vectors build --input ../data/processed/tmdb_2026-09-12 --output ../data/vectors/lexical --config ../config/vetorizacao.json --queries ../config/consultas.json
-# completo: instala o extra opcional (torch CPU) e baixa ~1,6 GB de modelos na primeira vez
+# completo: instala o extra opcional (torch CPU) e baixa ~3,1 GB de modelos na primeira vez
 uv sync --frozen --extra semantico
-uv run --frozen --extra semantico python -m app.vectors build --input ../data/processed/tmdb_2026-09-12 --output ../data/vectors/completo --config ../config/vetorizacao_semantica.json --queries ../config/consultas.json
+uv run --frozen --extra semantico python -m app.vectors build --input ../data/processed/tmdb_2026-09-12 --output ../data/vectors/completo --config ../config/vetorizacao_semantica.json --queries ../config/consultas.json --probes ../config/sondas_semanticas.json
 uv run --frozen python -m app.vectors verify --input ../data/vectors/completo
 ```
 
-No caso da orientação do professor, a consulta “filme sobre simulação da realidade” coloca Matrix em 11º a 69º lugar nas representações lexicais, porque “simulação” não aparece na sinopse. Com word2vec, Matrix sobe para 5º; com o modelo contextual, para 2º.
+- **Caso do professor:** a consulta “filme sobre simulação da realidade” coloca Matrix em 11º a 69º lugar nas representações lexicais, porque “simulação” não aparece na sinopse. Com word2vec skip-gram, Matrix sobe para 5º; com o modelo de sentença, para 2º.
+- **Polissemia:** no word2vec, “banco” tem o mesmo vetor em “o banco aprovou o financiamento” e em “sentou no banco da praça”. No BERTimbau, os usos com o mesmo sentido ficam mais próximos (cosseno 0,82 × 0,55 entre sentidos diferentes).
 
 - [Decisões, arquitetura e segurança](docs/vetorizacao.md)
 - [Resultados calculados](data/vectors/tmdb_2026-09-12/report.md)
-- Configurações [lexical](config/vetorizacao.json) e [completa](config/vetorizacao_semantica.json); [consultas anotadas](config/consultas.json)
+- Configurações [lexical](config/vetorizacao.json) e [completa](config/vetorizacao_semantica.json); [consultas anotadas](config/consultas.json); [sondas da Aula 7](config/sondas_semanticas.json)
 
 ## Próxima etapa
 
