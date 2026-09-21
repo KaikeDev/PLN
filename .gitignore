@@ -1,6 +1,3 @@
-# ----------------------------------------------------------------------------
-# Segredos e credenciais: nunca versionar. Só os modelos .env.example entram.
-# ----------------------------------------------------------------------------
 .env
 .env.*
 *.env
@@ -10,9 +7,6 @@
 *.pem
 *.key
 
-# ----------------------------------------------------------------------------
-# Python: ambientes, bytecode e empacotamento
-# ----------------------------------------------------------------------------
 .venv/
 venv/
 __pycache__/
@@ -24,7 +18,6 @@ build/
 dist/
 wheels/
 
-# Ferramentas de teste, cobertura, lint e tipos
 .pytest_cache/
 .hypothesis/
 .coverage
@@ -37,18 +30,10 @@ coverage.xml
 .ruff_cache/
 .pyre/
 .pytype/
-
-# Jupyter
 .ipynb_checkpoints/
 
-# ----------------------------------------------------------------------------
-# Modelos pré-treinados e caches (word2vec/transformers chegam a GBs).
-# O cache do Hugging Face fica fora do repositório; estes padrões evitam
-# commits acidentais caso HF_HOME ou uma cópia local aponte para cá.
-# ----------------------------------------------------------------------------
 .cache/
 .hf_cache/
-# Ancorados na raiz: um pacote de código como app/models/ não pode ser ignorado.
 /huggingface/
 /models/
 *.safetensors
@@ -59,11 +44,6 @@ coverage.xml
 *.h5
 pytorch_model.bin
 
-# ----------------------------------------------------------------------------
-# Dados: só a amostra entregue é versionada. Reproduções locais sugeridas no
-# README (reproducao, minha_execucao, nova_coleta, lexical, completo...) ficam
-# fora. Ao entregar uma nova coleta, acrescente uma exceção como as abaixo.
-# ----------------------------------------------------------------------------
 data/raw/*
 !data/raw/tmdb_2026-09-12/
 data/processed/*
@@ -71,15 +51,9 @@ data/processed/*
 data/vectors/*
 !data/vectors/tmdb_2026-09-12/
 
-# ----------------------------------------------------------------------------
-# Front-end (caso ferramentas de build sejam adotadas)
-# ----------------------------------------------------------------------------
 node_modules/
 .parcel-cache/
 
-# ----------------------------------------------------------------------------
-# Sistema operacional, OneDrive/Office e editores
-# ----------------------------------------------------------------------------
 .DS_Store
 Thumbs.db
 ehthumbs.db
