@@ -9,7 +9,9 @@ Decisões relevantes estavam espalhadas em comentários no código, em `docs/dec
 
 ## Decisão
 
-Registrar cada decisão arquitetural ou de método em `docs/adr/NNNN-titulo.md`, no formato MADR. O código não usa comentários de linha: a explicação fica em docstrings de módulo, classe e função e, quando envolve escolha entre alternativas, numa ADR citada pela docstring (por exemplo, "ADR 0005").
+Registrar cada decisão arquitetural ou de método em `docs/adr/NNNN-titulo.md`, no formato MADR, com um resumo de todas as decisões e suas justificativas em [`adr.md`](../../adr.md), na raiz do repositório.
+
+O código não usa comentários fora de docstrings: a explicação fica em docstrings de módulo, classe e função e, quando envolve escolha entre alternativas, numa ADR citada pela docstring (por exemplo, "ADR 0005"). A regra vale também para arquivos de configuração que aceitam comentários, como o `.gitignore` (ADR 0016).
 
 ## Alternativas consideradas
 
@@ -20,3 +22,5 @@ Registrar cada decisão arquitetural ou de método em `docs/adr/NNNN-titulo.md`,
 
 - Mudar uma heurística ou um formato exige atualizar ou substituir a ADR correspondente.
 - `docs/decisoes.md` passa a ser um índice resumido que aponta para as ADRs.
+- Uma ADR nova exige também uma entrada em `adr.md` e uma linha em `docs/adr/README.md`.
+- Em 21/09/2026, a verificação por `tokenize` não encontrou nenhum comentário fora de docstring no Python de `backend/`, e o frontend também não tinha nenhum. Os comentários do `.gitignore` viraram a ADR 0016.

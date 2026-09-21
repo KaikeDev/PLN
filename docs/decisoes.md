@@ -1,6 +1,6 @@
 # Decisões e limitações
 
-As decisões estão registradas, com contexto, alternativas e consequências, nas [ADRs](adr/README.md). Esta página resume o que cada uma implica para a entrega.
+As decisões estão registradas, com contexto, alternativas e consequências, nas [ADRs](adr/README.md), e resumidas com as justificativas em [`adr.md`](../adr.md). Esta página resume o que cada uma implica para a entrega.
 
 ## Escopo orientado pelo professor
 
@@ -18,6 +18,7 @@ Na orientação em vídeo de 31/08/2026, o professor pede representações suces
 | Pesquisa auxiliar | Regras léxicas com limiares nomeados; título exato tem prioridade no modo automático | [0005](adr/0005-pesquisa-por-regras-lexicas.md), [0006](adr/0006-prioridade-de-titulo-exato.md) |
 | Vetorização | Tokens da Etapa 1, cosseno com norma L2, K-Means com k = 4, SVD 2D, modelos com revisão fixa | [0011](adr/0011-formatos-e-modelos-seguros.md), [0012](adr/0012-parametros-do-experimento-vetorial.md) |
 | Aula 7 | BERTimbau, word2vec CBOW × skip-gram, sondas de polissemia e síntese comparativa | [0015](adr/0015-aula7-bert-cbow-e-polissemia.md) |
+| Repositório | Sem comentários fora de docstrings; `.gitignore` para segredos, modelos, dados não entregues e arquivos locais | [0001](adr/0001-registrar-decisoes-em-adrs.md), [0016](adr/0016-politica-do-gitignore.md) |
 | Código | Camadas com portas e adaptadores; identificadores em inglês e contrato em português; ruff, mypy e CI | [0004](adr/0004-arquitetura-em-camadas.md), [0008](adr/0008-idioma-do-codigo-e-do-contrato.md), [0013](adr/0013-ferramentas-de-qualidade.md) |
 
 ## Limitações

@@ -21,7 +21,7 @@ Os pesos identificam dimensões da rubrica; não são notas atribuídas à entre
 
 - [Documento Word da entrega](docs/PLN_2026_2_Avaliacao_Pratica_1_Atualizado.docx)
 - [Validação técnica](docs/validacao.md)
-- [Decisões e limitações](docs/decisoes.md) e [registros de decisão (ADRs)](docs/adr/README.md)
+- [Decisões de arquitetura e desenvolvimento, com justificativas (`adr.md`)](adr.md), [ADRs detalhadas](docs/adr/README.md) e [limitações](docs/decisoes.md)
 - [Arquitetura do código](docs/arquitetura.md)
 
 ## Ambiente e reprodução
