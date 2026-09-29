@@ -1,0 +1,38 @@
+{
+  "stage": "02_clean.jsonl",
+  "sample_per_genre": 25,
+  "multi_genre_sample": 20,
+  "random_state": 42,
+  "threshold": 0.5,
+  "request_interval_seconds": 0.2,
+  "choice_question": "Com base apenas nesta sinopse, qual é o gênero principal do filme?",
+  "genres": [
+    {
+      "id": 18,
+      "key": "drama",
+      "description": "Drama: conflitos pessoais, familiares ou sociais tratados com seriedade, com foco em relações, perdas e dilemas morais.",
+      "question": "Com base apenas nesta sinopse, este filme é um drama?"
+    },
+    {
+      "id": 35,
+      "key": "comedia",
+      "description": "Comédia: situações cômicas, confusões e tom leve, com o objetivo principal de fazer rir.",
+      "question": "Com base apenas nesta sinopse, este filme é uma comédia?"
+    },
+    {
+      "id": 27,
+      "key": "terror",
+      "description": "Terror: medo e ameaça, como forças sobrenaturais, monstros, assassinos, possessões ou maldições.",
+      "question": "Com base apenas nesta sinopse, este filme é de terror?"
+    },
+    {
+      "id": 878,
+      "key": "ficcao_cientifica",
+      "description": "Ficção científica: ciência e tecnologia imaginadas, futuro, espaço, alienígenas, viagens no tempo ou realidades artificiais.",
+      "question": "Com base apenas nesta sinopse, este filme é de ficção científica?"
+    }
+  ],
+  "baseline_stage": "06_without_stopwords.jsonl",
+  "baseline_min_df": 1,
+  "baseline_c": 1.0
+}

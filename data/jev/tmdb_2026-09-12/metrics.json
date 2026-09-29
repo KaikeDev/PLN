@@ -1,0 +1,299 @@
+{
+  "films": 120,
+  "evaluated": 120,
+  "failed": 0,
+  "single_genre": 100,
+  "threshold": 0.5,
+  "methods": {
+    "jev": {
+      "choice": {
+        "hit_rate": 0.858333,
+        "accuracy": 0.83,
+        "macro_f1": 0.828141,
+        "per_genre": {
+          "drama": {
+            "precision": 0.774194,
+            "recall": 0.96,
+            "f1": 0.857143,
+            "support": 25
+          },
+          "comedia": {
+            "precision": 0.894737,
+            "recall": 0.68,
+            "f1": 0.772727,
+            "support": 25
+          },
+          "terror": {
+            "precision": 0.913043,
+            "recall": 0.84,
+            "f1": 0.875,
+            "support": 25
+          },
+          "ficcao_cientifica": {
+            "precision": 0.777778,
+            "recall": 0.84,
+            "f1": 0.807692,
+            "support": 25
+          }
+        },
+        "confusion": {
+          "labels": [
+            "drama",
+            "comedia",
+            "terror",
+            "ficcao_cientifica"
+          ],
+          "matrix": [
+            [
+              24,
+              0,
+              1,
+              0
+            ],
+            [
+              2,
+              17,
+              1,
+              5
+            ],
+            [
+              2,
+              1,
+              21,
+              1
+            ],
+            [
+              3,
+              1,
+              0,
+              21
+            ]
+          ]
+        }
+      },
+      "labels": {
+        "per_genre": {
+          "drama": {
+            "auc": 0.913709,
+            "precision": 0.771429,
+            "recall": 0.72973,
+            "f1": 0.75,
+            "positives": 37
+          },
+          "comedia": {
+            "auc": 0.936991,
+            "precision": 0.888889,
+            "recall": 0.648649,
+            "f1": 0.75,
+            "positives": 37
+          },
+          "terror": {
+            "auc": 0.979936,
+            "precision": 0.875,
+            "recall": 0.875,
+            "f1": 0.875,
+            "positives": 32
+          },
+          "ficcao_cientifica": {
+            "auc": 0.957763,
+            "precision": 0.83871,
+            "recall": 0.764706,
+            "f1": 0.8,
+            "positives": 34
+          }
+        },
+        "macro_auc": 0.9471,
+        "macro_f1": 0.79375,
+        "exact_match": 0.625
+      }
+    },
+    "tfidf_logreg": {
+      "choice": {
+        "hit_rate": 0.625,
+        "accuracy": 0.61,
+        "macro_f1": 0.605329,
+        "per_genre": {
+          "drama": {
+            "precision": 0.8,
+            "recall": 0.48,
+            "f1": 0.6,
+            "support": 25
+          },
+          "comedia": {
+            "precision": 0.722222,
+            "recall": 0.52,
+            "f1": 0.604651,
+            "support": 25
+          },
+          "terror": {
+            "precision": 0.489362,
+            "recall": 0.92,
+            "f1": 0.638889,
+            "support": 25
+          },
+          "ficcao_cientifica": {
+            "precision": 0.65,
+            "recall": 0.52,
+            "f1": 0.577778,
+            "support": 25
+          }
+        },
+        "confusion": {
+          "labels": [
+            "drama",
+            "comedia",
+            "terror",
+            "ficcao_cientifica"
+          ],
+          "matrix": [
+            [
+              12,
+              3,
+              7,
+              3
+            ],
+            [
+              1,
+              13,
+              8,
+              3
+            ],
+            [
+              1,
+              0,
+              23,
+              1
+            ],
+            [
+              1,
+              2,
+              9,
+              13
+            ]
+          ]
+        }
+      },
+      "labels": {
+        "per_genre": {
+          "drama": {
+            "auc": 0.786714,
+            "precision": 0.916667,
+            "recall": 0.297297,
+            "f1": 0.44898,
+            "positives": 37
+          },
+          "comedia": {
+            "auc": 0.815695,
+            "precision": 0.666667,
+            "recall": 0.27027,
+            "f1": 0.384615,
+            "positives": 37
+          },
+          "terror": {
+            "auc": 0.889915,
+            "precision": 0.789474,
+            "recall": 0.46875,
+            "f1": 0.588235,
+            "positives": 32
+          },
+          "ficcao_cientifica": {
+            "auc": 0.857729,
+            "precision": 0.789474,
+            "recall": 0.441176,
+            "f1": 0.566038,
+            "positives": 34
+          }
+        },
+        "macro_auc": 0.837513,
+        "macro_f1": 0.496967,
+        "exact_match": 0.341667
+      }
+    }
+  },
+  "choice_agreement": 0.55,
+  "jev_confidence": {
+    "mean_when_hit": 0.912233,
+    "mean_when_miss": 0.719412,
+    "lowest": [
+      {
+        "id": 21484,
+        "title": "Possessão",
+        "gold": [
+          "terror"
+        ],
+        "choice": "drama",
+        "confidence": 0.34,
+        "choice_probabilities": {
+          "drama": 0.51,
+          "comedia": 0.0,
+          "terror": 0.49,
+          "ficcao_cientifica": 0.0
+        }
+      },
+      {
+        "id": 502356,
+        "title": "Super Mario Bros. O Filme",
+        "gold": [
+          "comedia"
+        ],
+        "choice": "comedia",
+        "confidence": 0.36,
+        "choice_probabilities": {
+          "drama": 0.0,
+          "comedia": 0.53,
+          "terror": 0.0,
+          "ficcao_cientifica": 0.47
+        }
+      },
+      {
+        "id": 1022789,
+        "title": "Divertida Mente 2",
+        "gold": [
+          "comedia"
+        ],
+        "choice": "comedia",
+        "confidence": 0.38,
+        "choice_probabilities": {
+          "drama": 0.45,
+          "comedia": 0.54,
+          "terror": 0.0,
+          "ficcao_cientifica": 0.01
+        }
+      },
+      {
+        "id": 131631,
+        "title": "Jogos Vorazes: A Esperança - Parte 1",
+        "gold": [
+          "ficcao_cientifica"
+        ],
+        "choice": "ficcao_cientifica",
+        "confidence": 0.42,
+        "choice_probabilities": {
+          "drama": 0.44,
+          "comedia": 0.0,
+          "terror": 0.0,
+          "ficcao_cientifica": 0.56
+        }
+      },
+      {
+        "id": 9374,
+        "title": "A Morte lhe Cai Bem",
+        "gold": [
+          "terror"
+        ],
+        "choice": "comedia",
+        "confidence": 0.45,
+        "choice_probabilities": {
+          "drama": 0.34,
+          "comedia": 0.59,
+          "terror": 0.0,
+          "ficcao_cientifica": 0.07
+        }
+      }
+    ]
+  },
+  "jev_consistency": {
+    "choice_is_top_noul": 0.95,
+    "choice_noul_above_threshold": 0.866667
+  }
+}

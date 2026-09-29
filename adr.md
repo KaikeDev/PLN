@@ -22,6 +22,7 @@ O código não tem comentários fora de docstrings. Quando uma docstring cita �
 | [0014](#0014--amostragem-intencional-da-coleta) | Amostragem intencional da coleta | Dados |
 | [0015](#0015--bert-cbow--skip-gram-e-polissemia-aula-7) | BERT, CBOW × skip-gram e polissemia (Aula 7) | PLN |
 | [0016](#0016--política-do-gitignore) | Política do `.gitignore` | Repositório |
+| [0017](#0017--jev-e-tf-idf--regressão-logística-aula-8) | Jev e TF-IDF + regressão logística (Aula 8) | PLN |
 
 ---
 
@@ -202,3 +203,17 @@ O código não tem comentários fora de docstrings. Quando uma docstring cita �
 **Por quê.** Credenciais já foram versionadas uma vez. Os modelos chegam a GBs. A ancoragem na raiz evita esconder um pacote de código como `app/models/`. O repositório fica no OneDrive e contém um `.docx`, que gera arquivos de trava `~$*`. As pastas de reprodução sugeridas no README não devem entrar no Git.
 
 **Consequência.** Uma nova amostra oficial exige uma exceção em `data/*`. `git ls-files -ci --exclude-standard` deve continuar vazio. [Detalhes](docs/adr/0016-politica-do-gitignore.md)
+
+## 0017 — Jev e TF-IDF + regressão logística (Aula 8)
+
+**Decisão.**
+
+- Classificar o gênero das sinopses com o Jev: uma Choice (gênero principal) e um Noul por gênero, na mesma chamada.
+- Comparar com TF-IDF + regressão logística treinada com os filmes fora da amostra, nos mesmos filmes e com as mesmas métricas.
+- Amostra de 120 filmes: 25 de cada gênero único e 20 com dois gêneros, com semente fixa.
+- Perguntas em `config/jev.json`; SDK no extra opcional `jev`, atrás da porta `DecisionClient`; chave `TYPESAFE_API_KEY` como `SecretStr`.
+- Respostas validadas e guardadas em `responses.jsonl`, reaproveitáveis com `--reuse`; a primeira falha interrompe sem gravar nada.
+
+**Por quê.** A Aula 8 contrapõe decisões estruturadas sem treino ao pipeline clássico. Os gêneros de coleta são o único rótulo do corpus que a sinopse expressa, por isso não há Score. Cada chamada é paga e o alias do modelo muda, então as respostas brutas precisam ser guardadas e reavaliadas sem novas chamadas.
+
+**Consequência.** A amostra pequena ilustra a comparação, mas não é teste estatístico. A redação das perguntas faz parte da tarefa. O `uv.lock` precisa incluir o extra `jev`. [Detalhes](docs/adr/0017-aula8-jev-classificacao-de-genero.md)

@@ -1,0 +1,44 @@
+{
+  "genero": {
+    "kind": "choice",
+    "instructions": "Com base apenas nesta sinopse, qual é o gênero principal do filme?",
+    "options": [
+      [
+        "drama",
+        "Drama: conflitos pessoais, familiares ou sociais tratados com seriedade, com foco em relações, perdas e dilemas morais."
+      ],
+      [
+        "comedia",
+        "Comédia: situações cômicas, confusões e tom leve, com o objetivo principal de fazer rir."
+      ],
+      [
+        "terror",
+        "Terror: medo e ameaça, como forças sobrenaturais, monstros, assassinos, possessões ou maldições."
+      ],
+      [
+        "ficcao_cientifica",
+        "Ficção científica: ciência e tecnologia imaginadas, futuro, espaço, alienígenas, viagens no tempo ou realidades artificiais."
+      ]
+    ]
+  },
+  "e_drama": {
+    "kind": "noul",
+    "instructions": "Com base apenas nesta sinopse, este filme é um drama?",
+    "options": []
+  },
+  "e_comedia": {
+    "kind": "noul",
+    "instructions": "Com base apenas nesta sinopse, este filme é uma comédia?",
+    "options": []
+  },
+  "e_terror": {
+    "kind": "noul",
+    "instructions": "Com base apenas nesta sinopse, este filme é de terror?",
+    "options": []
+  },
+  "e_ficcao_cientifica": {
+    "kind": "noul",
+    "instructions": "Com base apenas nesta sinopse, este filme é de ficção científica?",
+    "options": []
+  }
+}

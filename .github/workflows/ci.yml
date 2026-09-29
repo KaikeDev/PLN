@@ -33,6 +33,8 @@ jobs:
         run: |
           uv run --frozen python -m app.corpus verify --input ../data/processed/tmdb_2026-09-12
           uv run --frozen python -m app.vectors verify --input ../data/vectors/tmdb_2026-09-12
+      - name: Integridade da saída do Jev
+        run: uv run --frozen python -m app.jev verify --input ../data/jev/tmdb_2026-09-12
 
   frontend:
     runs-on: ubuntu-latest

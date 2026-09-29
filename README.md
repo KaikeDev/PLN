@@ -1,6 +1,6 @@
 # PLN 2026/2 — Etapas Práticas 1 e 2
 
-**Coleta e preparação de sinopses de filmes para comparação posterior de técnicas de PLN.** O projeto preserva o corpus original e seis representações alinhadas pelo ID do TMDB. A consulta de filmes na interface é uma demonstração auxiliar; a entrega desta etapa está nos dados, scripts e evidências abaixo.
+**Coleta e preparação de sinopses de filmes para comparação posterior de técnicas de PLN.** O projeto preserva o corpus original e seis representações alinhadas pelo ID do TMDB, compara oito representações vetoriais das sinopses (Etapa 2 e Aula 7) e, na Aula 8, compara a classificação de gênero do Jev com TF-IDF + regressão logística. A consulta de filmes na interface é uma demonstração auxiliar; a entrega desta etapa está nos dados, scripts e evidências abaixo.
 
 Equipe: Kaike Ventura Tuerpe, Luana Nitsche, Pedro Henrique Ortunio e Thiago Bodnar — Ciência da Computação, FURB.
 
@@ -127,6 +127,40 @@ uv run --frozen python -m app.vectors verify --input ../data/vectors/completo
 - [Decisões, arquitetura e segurança](docs/vetorizacao.md)
 - [Resultados calculados](data/vectors/tmdb_2026-09-12/report.md)
 - Configurações [lexical](config/vetorizacao.json) e [completa](config/vetorizacao_semantica.json); [consultas anotadas](config/consultas.json); [sondas da Aula 7](config/sondas_semanticas.json)
+
+## Aula 8 — Classificação de gênero com o Jev
+
+O módulo `app.jev` usa o [Jev](https://docs.typesafe.ai/introduction), da TypeSafe AI, para classificar o gênero das sinopses **sem treino**. Cada filme recebe, numa única chamada:
+- uma **Choice** com o gênero principal (Drama, Comédia, Terror ou Ficção científica);
+- um **Noul** por gênero, que dá a probabilidade de o filme ser daquele gênero.
+
+As mesmas sinopses passam por um **TF-IDF + regressão logística**, o pipeline clássico, treinado com os filmes fora da amostra. Os dois são medidos nos mesmos filmes e com as mesmas métricas. A amostra tem 120 filmes (25 por gênero único e 20 com dois gêneros), ou seja, 120 chamadas à API, e deixa cerca de 300 filmes para o treino da referência. As perguntas e os critérios ficam em [`config/jev.json`](config/jev.json).
+
+| Métrica (120 filmes, modelo `jev-1.13.0`) | Jev | TF-IDF + RL |
+|---|---:|---:|
+| Gênero principal entre os gêneros do filme | **85,8%** | 62,5% |
+| Acurácia nos 100 filmes de um gênero | **83,0%** | 61,0% |
+| F1 macro da Choice | **0,83** | 0,61 |
+| ROC AUC macro por gênero (Noul × regressão binária) | **0,95** | 0,84 |
+| Conjunto de gêneros exato | **62,5%** | 34,2% |
+
+- **O Jev foi melhor em todas as métricas do resumo** sem ver nenhum exemplo rotulado do corpus. Com 100 filmes, o intervalo de 95% da diferença de acurácia vai de cerca de 10 a 34 pontos, portanto a vantagem não se explica só pelo tamanho da amostra.
+- **O TF-IDF puxa quase tudo para terror:** 7 dramas, 8 comédias e 9 ficções científicas saíram como terror. O Jev acertou 24 dos 25 dramas; o erro mais comum dele foi comédia classificada como ficção científica (5 de 25), em animações e aventuras como Operação Big Hero e Free Guy.
+- **Confiança não é acerto:** a confiança média da Choice é 0,91 quando o Jev acerta e 0,72 quando erra, mas há erros com confiança alta (Police Story: A Guerra das Drogas, comédia, saiu como drama com confiança 1,0). A Choice coincide com o Noul mais alto em 95% dos filmes.
+
+Resultados completos: [relatório](data/jev/tmdb_2026-09-12/report.md), [métricas](data/jev/tmdb_2026-09-12/metrics.json) e [respostas brutas](data/jev/tmdb_2026-09-12/responses.jsonl). Decisões: [ADR 0017](docs/adr/0017-aula8-jev-classificacao-de-genero.md).
+
+### Reproduzir
+
+Reavaliar a entrega **não gasta chamadas**: `--reuse` reaproveita as respostas salvas, e o resultado é idêntico byte a byte (exceto o manifesto). Em `backend`:
+
+```bash
+uv sync --frozen --extra jev
+uv run --frozen --extra jev python -m app.jev run --input ../data/processed/tmdb_2026-09-12 --output ../data/jev/reproducao --config ../config/jev.json --reuse ../data/jev/tmdb_2026-09-12
+uv run --frozen python -m app.jev verify --input ../data/jev/tmdb_2026-09-12
+```
+
+Uma execução nova, sem `--reuse`, chama a API: coloque a chave em `backend/.env` como `TYPESAFE_API_KEY=...`, nunca em notebooks ou comandos versionados. Se a primeira chamada falhar, nada é gravado. O alias `jev-latest` pode apontar para outro modelo com o tempo, por isso a versão usada fica registrada no manifesto.
 
 ## Próxima etapa
 

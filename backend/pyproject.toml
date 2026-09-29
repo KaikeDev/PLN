@@ -19,6 +19,9 @@ dependencies = [
 semantico = [
     "sentence-transformers>=5",
 ]
+jev = [
+    "typesafe-sdk>=0.7",
+]
 
 [build-system]
 requires = ["uv_build>=0.12.5,<0.13.0"]

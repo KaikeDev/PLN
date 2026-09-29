@@ -1,0 +1,862 @@
+[
+  {
+    "id": 74,
+    "title": "Guerra dos Mundos",
+    "gold": [
+      "ficcao_cientifica"
+    ]
+  },
+  {
+    "id": 105,
+    "title": "De Volta para o Futuro",
+    "gold": [
+      "comedia",
+      "ficcao_cientifica"
+    ]
+  },
+  {
+    "id": 106,
+    "title": "O Predador",
+    "gold": [
+      "ficcao_cientifica"
+    ]
+  },
+  {
+    "id": 111,
+    "title": "Scarface",
+    "gold": [
+      "drama"
+    ]
+  },
+  {
+    "id": 118,
+    "title": "A Fantástica Fábrica de Chocolate",
+    "gold": [
+      "comedia"
+    ]
+  },
+  {
+    "id": 162,
+    "title": "Edward Mãos de Tesoura",
+    "gold": [
+      "drama"
+    ]
+  },
+  {
+    "id": 176,
+    "title": "Jogos Mortais",
+    "gold": [
+      "terror"
+    ]
+  },
+  {
+    "id": 197,
+    "title": "Coração Valente",
+    "gold": [
+      "drama"
+    ]
+  },
+  {
+    "id": 272,
+    "title": "Batman Begins",
+    "gold": [
+      "drama"
+    ]
+  },
+  {
+    "id": 280,
+    "title": "O Exterminador do Futuro 2: O Julgamento Final",
+    "gold": [
+      "ficcao_cientifica"
+    ]
+  },
+  {
+    "id": 329,
+    "title": "Jurassic Park: O Parque dos Dinossauros",
+    "gold": [
+      "ficcao_cientifica"
+    ]
+  },
+  {
+    "id": 345,
+    "title": "De Olhos Bem Fechados",
+    "gold": [
+      "drama"
+    ]
+  },
+  {
+    "id": 423,
+    "title": "O Pianista",
+    "gold": [
+      "drama"
+    ]
+  },
+  {
+    "id": 425,
+    "title": "A Era do Gelo",
+    "gold": [
+      "comedia"
+    ]
+  },
+  {
+    "id": 565,
+    "title": "O Chamado",
+    "gold": [
+      "terror"
+    ]
+  },
+  {
+    "id": 601,
+    "title": "E.T.: O Extraterrestre",
+    "gold": [
+      "ficcao_cientifica"
+    ]
+  },
+  {
+    "id": 603,
+    "title": "Matrix",
+    "gold": [
+      "ficcao_cientifica"
+    ]
+  },
+  {
+    "id": 752,
+    "title": "V de Vingança",
+    "gold": [
+      "ficcao_cientifica"
+    ]
+  },
+  {
+    "id": 765,
+    "title": "Uma Noite Alucinante 2",
+    "gold": [
+      "terror"
+    ]
+  },
+  {
+    "id": 808,
+    "title": "Shrek",
+    "gold": [
+      "comedia"
+    ]
+  },
+  {
+    "id": 810,
+    "title": "Shrek Terceiro",
+    "gold": [
+      "comedia"
+    ]
+  },
+  {
+    "id": 814,
+    "title": "Um Lobisomem Americano em Londres",
+    "gold": [
+      "terror"
+    ]
+  },
+  {
+    "id": 841,
+    "title": "Duna",
+    "gold": [
+      "ficcao_cientifica"
+    ]
+  },
+  {
+    "id": 862,
+    "title": "Toy Story: Um Mundo de Aventuras",
+    "gold": [
+      "comedia"
+    ]
+  },
+  {
+    "id": 927,
+    "title": "Gremlins",
+    "gold": [
+      "comedia",
+      "terror"
+    ]
+  },
+  {
+    "id": 949,
+    "title": "Fogo Contra Fogo",
+    "gold": [
+      "drama"
+    ]
+  },
+  {
+    "id": 957,
+    "title": "S.O.S.: Tem um Louco Solto no Espaço",
+    "gold": [
+      "comedia",
+      "ficcao_cientifica"
+    ]
+  },
+  {
+    "id": 1091,
+    "title": "O Enigma de Outro Mundo",
+    "gold": [
+      "terror",
+      "ficcao_cientifica"
+    ]
+  },
+  {
+    "id": 1124,
+    "title": "O Grande Truque",
+    "gold": [
+      "drama",
+      "ficcao_cientifica"
+    ]
+  },
+  {
+    "id": 1417,
+    "title": "O Labirinto do Fauno",
+    "gold": [
+      "drama"
+    ]
+  },
+  {
+    "id": 1562,
+    "title": "Extermínio 2",
+    "gold": [
+      "terror"
+    ]
+  },
+  {
+    "id": 1893,
+    "title": "Star Wars: Episódio I - A Ameaça Fantasma",
+    "gold": [
+      "ficcao_cientifica"
+    ]
+  },
+  {
+    "id": 2048,
+    "title": "Eu, Robô",
+    "gold": [
+      "ficcao_cientifica"
+    ]
+  },
+  {
+    "id": 2756,
+    "title": "O Segredo do Abismo",
+    "gold": [
+      "ficcao_cientifica"
+    ]
+  },
+  {
+    "id": 4011,
+    "title": "Os Fantasmas se Divertem",
+    "gold": [
+      "comedia"
+    ]
+  },
+  {
+    "id": 4488,
+    "title": "Sexta-Feira 13",
+    "gold": [
+      "terror"
+    ]
+  },
+  {
+    "id": 4951,
+    "title": "10 Coisas Que Eu Odeio em Você",
+    "gold": [
+      "comedia"
+    ]
+  },
+  {
+    "id": 5548,
+    "title": "RoboCop - O Policial do Futuro",
+    "gold": [
+      "ficcao_cientifica"
+    ]
+  },
+  {
+    "id": 5876,
+    "title": "O Nevoeiro",
+    "gold": [
+      "terror"
+    ]
+  },
+  {
+    "id": 6479,
+    "title": "Eu Sou a Lenda",
+    "gold": [
+      "ficcao_cientifica"
+    ]
+  },
+  {
+    "id": 7518,
+    "title": "Os Sem-Floresta",
+    "gold": [
+      "comedia"
+    ]
+  },
+  {
+    "id": 8457,
+    "title": "Meu Nome é Taylor, Drillbit Taylor",
+    "gold": [
+      "comedia"
+    ]
+  },
+  {
+    "id": 8587,
+    "title": "O Rei Leão",
+    "gold": [
+      "drama"
+    ]
+  },
+  {
+    "id": 9056,
+    "title": "Police Story: A Guerra das Drogas",
+    "gold": [
+      "comedia"
+    ]
+  },
+  {
+    "id": 9340,
+    "title": "Os Goonies",
+    "gold": [
+      "comedia"
+    ]
+  },
+  {
+    "id": 9374,
+    "title": "A Morte lhe Cai Bem",
+    "gold": [
+      "terror"
+    ]
+  },
+  {
+    "id": 9426,
+    "title": "A Mosca",
+    "gold": [
+      "terror",
+      "ficcao_cientifica"
+    ]
+  },
+  {
+    "id": 9532,
+    "title": "Premonição",
+    "gold": [
+      "terror"
+    ]
+  },
+  {
+    "id": 9769,
+    "title": "Lolita",
+    "gold": [
+      "drama"
+    ]
+  },
+  {
+    "id": 9902,
+    "title": "Pânico na Floresta",
+    "gold": [
+      "terror"
+    ]
+  },
+  {
+    "id": 10192,
+    "title": "Shrek Para Sempre",
+    "gold": [
+      "comedia"
+    ]
+  },
+  {
+    "id": 10193,
+    "title": "Toy Story 3",
+    "gold": [
+      "comedia"
+    ]
+  },
+  {
+    "id": 10386,
+    "title": "O Gigante de Ferro",
+    "gold": [
+      "ficcao_cientifica"
+    ]
+  },
+  {
+    "id": 10625,
+    "title": "Meninas Malvadas",
+    "gold": [
+      "drama",
+      "comedia"
+    ]
+  },
+  {
+    "id": 10997,
+    "title": "Adeus, Minha Concubina",
+    "gold": [
+      "drama"
+    ]
+  },
+  {
+    "id": 11036,
+    "title": "Diário de uma Paixão",
+    "gold": [
+      "drama"
+    ]
+  },
+  {
+    "id": 13207,
+    "title": "Sexta-Feira 13",
+    "gold": [
+      "terror"
+    ]
+  },
+  {
+    "id": 14097,
+    "title": "9º Pelotão",
+    "gold": [
+      "drama"
+    ]
+  },
+  {
+    "id": 18491,
+    "title": "Neon Genesis Evangelion: O Fim do Evangelho",
+    "gold": [
+      "ficcao_cientifica"
+    ]
+  },
+  {
+    "id": 19404,
+    "title": "Dilwale vai levar a noiva",
+    "gold": [
+      "drama",
+      "comedia"
+    ]
+  },
+  {
+    "id": 19994,
+    "title": "Garota Infernal",
+    "gold": [
+      "terror"
+    ]
+  },
+  {
+    "id": 21484,
+    "title": "Possessão",
+    "gold": [
+      "terror"
+    ]
+  },
+  {
+    "id": 36586,
+    "title": "Blade II: O Caçador de Vampiros",
+    "gold": [
+      "terror"
+    ]
+  },
+  {
+    "id": 44214,
+    "title": "Cisne Negro",
+    "gold": [
+      "drama",
+      "terror"
+    ]
+  },
+  {
+    "id": 49013,
+    "title": "Carros 2",
+    "gold": [
+      "comedia"
+    ]
+  },
+  {
+    "id": 49018,
+    "title": "Sobrenatural",
+    "gold": [
+      "terror"
+    ]
+  },
+  {
+    "id": 49519,
+    "title": "Os Croods",
+    "gold": [
+      "comedia"
+    ]
+  },
+  {
+    "id": 49521,
+    "title": "O Homem de Aço",
+    "gold": [
+      "ficcao_cientifica"
+    ]
+  },
+  {
+    "id": 53653,
+    "title": "Prisioneiro do Inferno",
+    "gold": [
+      "drama"
+    ]
+  },
+  {
+    "id": 68718,
+    "title": "Django Livre",
+    "gold": [
+      "drama"
+    ]
+  },
+  {
+    "id": 76600,
+    "title": "Avatar: O Caminho da Água",
+    "gold": [
+      "ficcao_cientifica"
+    ]
+  },
+  {
+    "id": 82507,
+    "title": "A Entidade",
+    "gold": [
+      "terror"
+    ]
+  },
+  {
+    "id": 82690,
+    "title": "Detona Ralph",
+    "gold": [
+      "comedia"
+    ]
+  },
+  {
+    "id": 93456,
+    "title": "Meu Malvado Favorito 2",
+    "gold": [
+      "ficcao_cientifica"
+    ]
+  },
+  {
+    "id": 102382,
+    "title": "O Espetacular Homem-Aranha 2: A Ameaça de Electro",
+    "gold": [
+      "ficcao_cientifica"
+    ]
+  },
+  {
+    "id": 106646,
+    "title": "O Lobo de Wall Street",
+    "gold": [
+      "drama",
+      "comedia"
+    ]
+  },
+  {
+    "id": 131631,
+    "title": "Jogos Vorazes: A Esperança - Parte 1",
+    "gold": [
+      "ficcao_cientifica"
+    ]
+  },
+  {
+    "id": 138843,
+    "title": "Invocação do Mal",
+    "gold": [
+      "terror"
+    ]
+  },
+  {
+    "id": 150540,
+    "title": "Divertida Mente",
+    "gold": [
+      "drama",
+      "comedia"
+    ]
+  },
+  {
+    "id": 177572,
+    "title": "Operação Big Hero",
+    "gold": [
+      "comedia"
+    ]
+  },
+  {
+    "id": 228150,
+    "title": "Corações de Ferro",
+    "gold": [
+      "drama"
+    ]
+  },
+  {
+    "id": 238636,
+    "title": "Uma Noite de Crime: Anarquia",
+    "gold": [
+      "terror"
+    ]
+  },
+  {
+    "id": 244786,
+    "title": "Whiplash: Em Busca da Perfeição",
+    "gold": [
+      "drama"
+    ]
+  },
+  {
+    "id": 256274,
+    "title": "Assim na Terra Como no Inferno",
+    "gold": [
+      "terror"
+    ]
+  },
+  {
+    "id": 260514,
+    "title": "Carros 3",
+    "gold": [
+      "drama"
+    ]
+  },
+  {
+    "id": 271110,
+    "title": "Capitão América: Guerra Civil",
+    "gold": [
+      "ficcao_cientifica"
+    ]
+  },
+  {
+    "id": 280092,
+    "title": "Sobrenatural: A Origem",
+    "gold": [
+      "terror"
+    ]
+  },
+  {
+    "id": 281957,
+    "title": "O Regresso",
+    "gold": [
+      "drama"
+    ]
+  },
+  {
+    "id": 284053,
+    "title": "Thor: Ragnarok",
+    "gold": [
+      "comedia",
+      "ficcao_cientifica"
+    ]
+  },
+  {
+    "id": 286217,
+    "title": "Perdido em Marte",
+    "gold": [
+      "drama",
+      "ficcao_cientifica"
+    ]
+  },
+  {
+    "id": 287424,
+    "title": "Maggie - A Transformação",
+    "gold": [
+      "drama",
+      "terror"
+    ]
+  },
+  {
+    "id": 299534,
+    "title": "Vingadores: Ultimato",
+    "gold": [
+      "ficcao_cientifica"
+    ]
+  },
+  {
+    "id": 313369,
+    "title": "La La Land: Cantando Estações",
+    "gold": [
+      "drama",
+      "comedia"
+    ]
+  },
+  {
+    "id": 359410,
+    "title": "Matador de Aluguel",
+    "gold": [
+      "drama"
+    ]
+  },
+  {
+    "id": 361743,
+    "title": "Top Gun: Maverick",
+    "gold": [
+      "drama"
+    ]
+  },
+  {
+    "id": 436969,
+    "title": "O Esquadrão Suicida",
+    "gold": [
+      "comedia"
+    ]
+  },
+  {
+    "id": 441168,
+    "title": "Aluna Exemplar e Estrela Pornô",
+    "gold": [
+      "drama"
+    ]
+  },
+  {
+    "id": 447332,
+    "title": "Um Lugar Silencioso",
+    "gold": [
+      "drama",
+      "terror"
+    ]
+  },
+  {
+    "id": 466272,
+    "title": "Era Uma Vez em… Hollywood",
+    "gold": [
+      "drama",
+      "comedia"
+    ]
+  },
+  {
+    "id": 496243,
+    "title": "Parasita",
+    "gold": [
+      "drama",
+      "comedia"
+    ]
+  },
+  {
+    "id": 502356,
+    "title": "Super Mario Bros. O Filme",
+    "gold": [
+      "comedia"
+    ]
+  },
+  {
+    "id": 550988,
+    "title": "Free Guy: Assumindo o Controle",
+    "gold": [
+      "comedia"
+    ]
+  },
+  {
+    "id": 552524,
+    "title": "Lilo & Stitch",
+    "gold": [
+      "comedia",
+      "ficcao_cientifica"
+    ]
+  },
+  {
+    "id": 558449,
+    "title": "Gladiador 2",
+    "gold": [
+      "drama"
+    ]
+  },
+  {
+    "id": 587424,
+    "title": "Infecção",
+    "gold": [
+      "terror"
+    ]
+  },
+  {
+    "id": 604079,
+    "title": "A Longa Marcha: Caminhe ou Morra",
+    "gold": [
+      "terror"
+    ]
+  },
+  {
+    "id": 614479,
+    "title": "Sobrenatural: A Porta Vermelha",
+    "gold": [
+      "terror"
+    ]
+  },
+  {
+    "id": 617126,
+    "title": "Quarteto Fantástico: Primeiros Passos",
+    "gold": [
+      "ficcao_cientifica"
+    ]
+  },
+  {
+    "id": 629542,
+    "title": "Os Caras Malvados",
+    "gold": [
+      "comedia"
+    ]
+  },
+  {
+    "id": 744275,
+    "title": "After: Depois do Desencontro",
+    "gold": [
+      "drama"
+    ]
+  },
+  {
+    "id": 755898,
+    "title": "A Guerra dos Mundos",
+    "gold": [
+      "ficcao_cientifica"
+    ]
+  },
+  {
+    "id": 803796,
+    "title": "Guerreiras do K-Pop",
+    "gold": [
+      "comedia"
+    ]
+  },
+  {
+    "id": 893723,
+    "title": "Patrulha Canina: Um Filme Superpoderoso",
+    "gold": [
+      "comedia"
+    ]
+  },
+  {
+    "id": 933260,
+    "title": "A Substância",
+    "gold": [
+      "terror",
+      "ficcao_cientifica"
+    ]
+  },
+  {
+    "id": 1022789,
+    "title": "Divertida Mente 2",
+    "gold": [
+      "comedia"
+    ]
+  },
+  {
+    "id": 1233413,
+    "title": "Pecadores",
+    "gold": [
+      "terror"
+    ]
+  },
+  {
+    "id": 1234821,
+    "title": "Jurassic World: Recomeço",
+    "gold": [
+      "ficcao_cientifica"
+    ]
+  },
+  {
+    "id": 1333141,
+    "title": "A Sapatona Galáctica",
+    "gold": [
+      "comedia"
+    ]
+  },
+  {
+    "id": 1419406,
+    "title": "Operação Sombra",
+    "gold": [
+      "drama"
+    ]
+  },
+  {
+    "id": 1569947,
+    "title": "O Padre: Massacre no Dia de Ação de Graças",
+    "gold": [
+      "terror"
+    ]
+  }
+]

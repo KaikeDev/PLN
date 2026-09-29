@@ -15,7 +15,7 @@ BACKEND_DIR = Path(__file__).resolve().parents[2]
 
 
 class Settings(BaseSettings):
-    """Parâmetros de integração com o TMDB e de exposição da API local."""
+    """Parâmetros de integração com o TMDB e o Jev e de exposição da API local."""
 
     model_config = SettingsConfigDict(env_file=BACKEND_DIR / ".env", env_file_encoding="utf-8", extra="ignore")
 
@@ -25,12 +25,19 @@ class Settings(BaseSettings):
     tmdb_timeout: float = Field(10.0, gt=0, le=60)
     cors_origins: list[str] = ["http://127.0.0.1:5500", "http://localhost:5500"]
     rate_limit_per_minute: int = Field(60, ge=1, le=10_000)
+    typesafe_api_key: SecretStr | None = None
 
     def require_tmdb_token(self) -> str:
         """Token de leitura do TMDB; falha com mensagem orientativa quando não configurado."""
         if self.tmdb_bearer_token is None or not self.tmdb_bearer_token.get_secret_value().strip():
             raise ValueError("Defina TMDB_BEARER_TOKEN no ambiente ou em backend/.env")
         return self.tmdb_bearer_token.get_secret_value().strip()
+
+    def require_typesafe_key(self) -> str:
+        """Chave da API da TypeSafe AI (Jev); falha com mensagem orientativa quando não configurada."""
+        if self.typesafe_api_key is None or not self.typesafe_api_key.get_secret_value().strip():
+            raise ValueError("Defina TYPESAFE_API_KEY no ambiente ou em backend/.env")
+        return self.typesafe_api_key.get_secret_value().strip()
 
 
 @lru_cache

@@ -18,6 +18,7 @@ Na orientação em vídeo de 31/08/2026, o professor pede representações suces
 | Pesquisa auxiliar | Regras léxicas com limiares nomeados; título exato tem prioridade no modo automático | [0005](adr/0005-pesquisa-por-regras-lexicas.md), [0006](adr/0006-prioridade-de-titulo-exato.md) |
 | Vetorização | Tokens da Etapa 1, cosseno com norma L2, K-Means com k = 4, SVD 2D, modelos com revisão fixa | [0011](adr/0011-formatos-e-modelos-seguros.md), [0012](adr/0012-parametros-do-experimento-vetorial.md) |
 | Aula 7 | BERTimbau, word2vec CBOW × skip-gram, sondas de polissemia e síntese comparativa | [0015](adr/0015-aula7-bert-cbow-e-polissemia.md) |
+| Aula 8 | Gênero pelo Jev (Choice + um Noul por gênero, sem treino) × TF-IDF + regressão logística treinada fora da amostra; 120 filmes; respostas guardadas e reaproveitáveis | [0017](adr/0017-aula8-jev-classificacao-de-genero.md) |
 | Repositório | Sem comentários fora de docstrings; `.gitignore` para segredos, modelos, dados não entregues e arquivos locais | [0001](adr/0001-registrar-decisoes-em-adrs.md), [0016](adr/0016-politica-do-gitignore.md) |
 | Código | Camadas com portas e adaptadores; identificadores em inglês e contrato em português; ruff, mypy e CI | [0004](adr/0004-arquitetura-em-camadas.md), [0008](adr/0008-idioma-do-codigo-e-do-contrato.md), [0013](adr/0013-ferramentas-de-qualidade.md) |
 
@@ -28,7 +29,8 @@ Na orientação em vídeo de 31/08/2026, o professor pede representações suces
 - Não há retomada automática da coleta: falhas parciais ficam no manifesto e a próxima execução usa outra pasta. Uma interrupção durante o processamento deixa a pasta sem manifesto completo, portanto inválida como entrega.
 - A pesquisa auxiliar não interpreta toda a semântica da negação, títulos alternativos nem perguntas com contexto adicional. "Depois de X" é inclusivo por convenção do protótipo, a refinar em avaliação futura.
 - As consultas anotadas da Etapa 2 são poucas e a lista de relevantes é parcial.
+- Na Aula 8, o rótulo de gênero é o recorte de coleta, e muitos filmes têm gêneros fora das quatro opções (ação, romance, suspense). O Jev é um serviço externo e pago: uma nova execução depende da chave e pode usar outro modelo por trás do alias `jev-latest`. A redação das perguntas faz parte da tarefa.
 
 ## Próximas experiências
 
-Comparar representações com mais consultas e filmes relevantes anotados e selecionar a técnica pela qualidade da recuperação, não só pela redução de tokens ou pelo aumento de TTR. Não foram incorporadas bases externas, avaliações textuais de usuários nem modelos treinados pela equipe.
+Comparar representações com mais consultas e filmes relevantes anotados e selecionar a técnica pela qualidade da recuperação, não só pela redução de tokens ou pelo aumento de TTR. Na Aula 8, testar outras redações das perguntas, usar o Score quando houver um rótulo ordinal expresso no texto e revisar manualmente os casos de baixa confiança. Não foram incorporadas bases externas, avaliações textuais de usuários nem modelos treinados pela equipe.

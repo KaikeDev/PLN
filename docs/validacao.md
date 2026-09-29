@@ -56,6 +56,23 @@ Mesmo ambiente da Etapa 2. Modelos novos com revisão fixada: `neuralmind/bert-b
 | Repetição | Segunda execução completa em outra pasta: todos os arquivos, exceto o manifesto, idênticos byte a byte, inclusive BERT e modelo de sentença. |
 | Regeneração | `data/vectors/tmdb_2026-09-12` foi regenerada com LF e substitui a execução de 14/09 (seis representações); os valores das representações que já existiam não mudaram. |
 
+## Aula 8 — Jev × TF-IDF + regressão logística (28/09/2026)
+
+Execução local em Python 3.14.7, com typesafe-sdk 0.7.2 (extra `jev`), scikit-learn 1.9.1, NumPy 2.5.3 e SciPy 1.18.1, fixados em `uv.lock`. Modelo informado pela API: `jev-1.13.0`. Decisões no [ADR 0017](adr/0017-aula8-jev-classificacao-de-genero.md).
+
+| Verificação | Resultado e alcance |
+|---|---|
+| Testes automatizados | 78 testes aprovados, 15 deles em `test_jev.py`. Um Jev falso substitui a API. Os testes cobrem: amostra estratificada e reprodutível, perguntas enviadas, validação das respostas (opção desconhecida, valores fora de 0 a 1, tipo errado), primeira falha sem gravar nada, falhas seguintes registradas e fora das métricas, reaproveitamento com `--reuse` idêntico byte a byte, recusa de respostas geradas com outras perguntas, configuração inválida, adulteração, conversão da resposta do SDK e chave obrigatória fora do `repr`. Sem rede nem chave. |
+| Lint, formatação e tipos | `ruff check`, `ruff format --check` e `mypy` sem apontamentos. |
+| Execução real | 120 sinopses (25 por gênero único e 20 com dois gêneros), nenhuma falha. Foram 110 chamadas novas e 10 respostas reaproveitadas de uma primeira execução com 48 filmes, em 53 s, com cerca de 76 mil tokens de entrada e 16 mil de saída no total. `verify` aprovou os 7 arquivos e o alinhamento das respostas e previsões com a amostra. |
+| Repetição sem chamadas | `run --reuse` a partir da entrega, em outra pasta: 0 chamadas, e os 7 arquivos de conteúdo ficaram idênticos byte a byte. |
+| Separação treino/teste | O TF-IDF + regressão logística foi treinado só com os filmes fora da amostra; vocabulário e IDF também não veem a amostra. |
+| Segurança | A chave fica em `backend/.env` (ignorado pelo Git), é lida como `SecretStr` e passada ao construtor do SDK; não é gravada em nenhum arquivo de saída nem no manifesto (conferido por busca nos arquivos). |
+
+```bash
+uv run --frozen python -m app.jev verify --input ../data/jev/tmdb_2026-09-12
+```
+
 ## Revisão de arquitetura e segurança (14/09/2026)
 
 Execução local em Python 3.14.0, após a refatoração descrita em [docs/arquitetura.md](arquitetura.md) e nas [ADRs](adr/README.md).
@@ -71,4 +88,4 @@ Execução local em Python 3.14.0, após a refatoração descrita em [docs/arqui
 
 ## Limites da validação
 
-O teste original imprime “100% (12/12)” para campos selecionados de cinco frases. Isso não é acurácia geral do assistente, nem medida de recuperação por sinopse. O projeto não executa reconhecimento de nomes próprios, stemming ou lematização; na Etapa 2, os modelos pré-treinados foram usados sem ajuste fino, e a avaliação de consultas tem só dois casos anotados. A interface não passou por avaliação visual em navegador nesta revisão; suas chamadas foram verificadas na API. O bônus e a nota final dependem da avaliação do professor.
+O teste original imprime “100% (12/12)” para campos selecionados de cinco frases. Isso não é acurácia geral do assistente, nem medida de recuperação por sinopse. O projeto não executa reconhecimento de nomes próprios, stemming ou lematização; na Etapa 2, os modelos pré-treinados foram usados sem ajuste fino, e a avaliação de consultas tem só dois casos anotados. Na Aula 8, a amostra de 120 filmes permite comparar os métodos, mas não é um teste estatístico formal. O rótulo é o recorte de coleta, e uma nova chamada ao Jev pode dar outro resultado se o modelo por trás do alias mudar. A interface não passou por avaliação visual em navegador nesta revisão; suas chamadas foram verificadas na API. O bônus e a nota final dependem da avaliação do professor.
