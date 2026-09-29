@@ -17,11 +17,16 @@ MIN_DOCUMENTS = 3
 
 @dataclass(frozen=True)
 class Document:
-    """Sinopse preenchida do corpus; `genres` são os gêneros dos recortes de coleta que retornaram o filme."""
+    """Sinopse preenchida do corpus.
+
+    `genres` são os gêneros dos recortes de coleta que retornaram o filme; `tmdb_genres` são todos os
+    gêneros que o TMDB atribui ao filme (`genre_ids` dos metadados), usados como rótulos na classificação.
+    """
 
     id: int
     title: str
     genres: frozenset[int]
+    tmdb_genres: frozenset[int] = frozenset()
 
 
 class ProcessedCorpus:
@@ -48,6 +53,7 @@ class ProcessedCorpus:
                 row["id"],
                 row.get("title") or row.get("original_title") or f"Filme {row['id']}",
                 _slice_genres(memberships.get(str(row["id"]), [])),
+                frozenset(row.get("genre_ids") or ()),
             )
             for row in read_jsonl(root / "metadata.jsonl")
             if not row["overview_missing"]

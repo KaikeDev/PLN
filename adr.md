@@ -22,6 +22,7 @@ O código não tem comentários fora de docstrings. Quando uma docstring cita �
 | [0014](#0014--amostragem-intencional-da-coleta) | Amostragem intencional da coleta | Dados |
 | [0015](#0015--bert-cbow--skip-gram-e-polissemia-aula-7) | BERT, CBOW × skip-gram e polissemia (Aula 7) | PLN |
 | [0016](#0016--política-do-gitignore) | Política do `.gitignore` | Repositório |
+| [0017](#0017--classificação-de-gêneros-aula-8) | Classificação de gêneros (Aula 8) | PLN |
 
 ---
 
@@ -202,3 +203,17 @@ O código não tem comentários fora de docstrings. Quando uma docstring cita �
 **Por quê.** Credenciais já foram versionadas uma vez. Os modelos chegam a GBs. A ancoragem na raiz evita esconder um pacote de código como `app/models/`. O repositório fica no OneDrive e contém um `.docx`, que gera arquivos de trava `~$*`. As pastas de reprodução sugeridas no README não devem entrar no Git.
 
 **Consequência.** Uma nova amostra oficial exige uma exceção em `data/*`. `git ls-files -ci --exclude-standard` deve continuar vazio. [Detalhes](docs/adr/0016-politica-do-gitignore.md)
+
+## 0017 — Classificação de gêneros (Aula 8)
+
+**Decisão.**
+
+- Prever o gênero do filme a partir da sinopse em duas formulações: multiclasse (325 filmes com exatamente um dos quatro gêneros) e multirrótulo (428 filmes, um classificador binário por gênero).
+- Usar como rótulos os `genre_ids` do TMDB, não o recorte de coleta.
+- Aplicar a mesma regressão logística, com pesos balanceados, às oito representações da Etapa 2.
+- Escolher `C` pela log loss em dobras internas e avaliar em 5 dobras externas iguais para todas as representações, sem vazamento: vocabulário, idf, padronização e `C` vêm só do treino.
+- Reportar uma referência que ignora o texto, F1 macro/micro, métricas por gênero, desvio entre dobras, matriz de confusão, Hamming, acerto exato, log loss e confiança em acertos × erros.
+
+**Por quê.** A Aula 8 pede classificação × clusterização, os tipos de classificação, pipelines TF-IDF × BERT e métricas além da acurácia. O corpus já traz rótulos de gênero, e cerca de um quarto dos filmes tem mais de um, o que torna o multirrótulo natural. Com `C` fixo, o TF-IDF ficava regularizado demais (probabilidades quase uniformes), e um único `C` não serve igualmente a representações de escalas e dimensões diferentes. Escolher `C` pelo F1 achatava as probabilidades; pela log loss, elas acompanham a acurácia sem perda de F1. O ajuste fino do BERT e o LLM zero-shot ficaram de fora por custo, pela amostra pequena e pela reprodutibilidade.
+
+**Consequência.** Na multiclasse, as representações densas superam o melhor TF-IDF em 7 a 12 pontos de F1 macro; skip-gram e BERTimbau empatam dentro do desvio entre dobras. Medidos nas mesmas dobras, o Naive Bayes vence só nas contagens brutas, o SVM empata sem dar probabilidades, e o K-Means coincide muito menos com os gêneros que o classificador ([justificativa](docs/escolha-dos-modelos.md)). Parte dos erros confiantes vem de rótulos ruidosos (filmes de ação reduzidos a “comédia”). [Detalhes](docs/adr/0017-aula8-classificacao-de-generos.md)

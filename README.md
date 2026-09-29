@@ -1,4 +1,4 @@
-# PLN 2026/2 — Etapas Práticas 1 e 2
+# PLN 2026/2 — Etapas Práticas 1, 2 e 3
 
 **Coleta e preparação de sinopses de filmes para comparação posterior de técnicas de PLN.** O projeto preserva o corpus original e seis representações alinhadas pelo ID do TMDB. A consulta de filmes na interface é uma demonstração auxiliar; a entrega desta etapa está nos dados, scripts e evidências abaixo.
 
@@ -127,6 +127,41 @@ uv run --frozen python -m app.vectors verify --input ../data/vectors/completo
 - [Decisões, arquitetura e segurança](docs/vetorizacao.md)
 - [Resultados calculados](data/vectors/tmdb_2026-09-12/report.md)
 - Configurações [lexical](config/vetorizacao.json) e [completa](config/vetorizacao_semantica.json); [consultas anotadas](config/consultas.json); [sondas da Aula 7](config/sondas_semanticas.json)
+
+## Etapa 3 — Classificação de gêneros
+
+O módulo `app.classification` aplica a Aula 8: prevê o gênero do filme a partir da sinopse, usando os `genre_ids` do TMDB como rótulos, em duas formulações:
+- **multiclasse:** 325 filmes com exatamente um de drama, comédia, terror e ficção científica;
+- **multirrótulo:** 428 filmes, um classificador binário por gênero.
+
+A mesma regressão logística é aplicada às oito representações da Etapa 2, com validação cruzada em 5 dobras e `C` escolhido pela log loss só com o treino de cada dobra. Nas mesmas dobras, o K-Means (sem rótulos) e quatro classificadores alternativos (Naive Bayes, SVM linear, floresta aleatória e k vizinhos) servem de comparação. Em `backend`:
+
+```bash
+# somente BoW e TF-IDF (cerca de 2 minutos)
+uv run --frozen python -m app.classification build --input ../data/processed/tmdb_2026-09-12 --output ../data/classification/lexical --config ../config/classificacao.json
+# completo (extra semantico; cerca de 6 minutos em CPU)
+uv run --frozen --extra semantico python -m app.classification build --input ../data/processed/tmdb_2026-09-12 --output ../data/classification/completo --config ../config/classificacao_semantica.json
+uv run --frozen python -m app.classification verify --input ../data/classification/completo
+```
+
+| F1 macro (multiclasse) | Valor |
+|---|---:|
+| Referência que ignora o texto | 10,7% |
+| Melhor lexical (`tfidf_sem_pontuacao`) | 59,3% |
+| word2vec CBOW / skip-gram | 67,6% / 71,0% |
+| BERTimbau congelado | 70,2% |
+| Modelo de sentença | 66,1% |
+
+- **Resultado:** as representações densas superam as lexicais. Skip-gram e BERTimbau empatam dentro do desvio entre dobras, que chega a 5,7 pontos.
+- **Classificador:** a regressão logística tem o maior F1 nas três melhores representações e fica a até 1,7 ponto do melhor em outras três. Nas contagens brutas (BoW), o Naive Bayes vence com folga. O SVM empata em F1, mas não dá probabilidades.
+- **Agrupar × classificar:** com a mesma representação, o K-Means (sem rótulos) coincide muito menos com os gêneros que o classificador (ARI de até 0,13 contra até 0,38).
+- **Erros:** comédia é o gênero mais difícil, e parte dos erros vem de filmes de ação com comédia que a restrição aos quatro gêneros reduz a “comédia”.
+- **Fora do escopo:** LLM com instrução e Jev foram discutidos e não executados.
+
+- [Por que estes modelos e não os outros](docs/escolha-dos-modelos.md), com medidas e exemplos
+- [Decisões e leitura dos resultados](docs/classificacao.md) e [ADR 0017](docs/adr/0017-aula8-classificacao-de-generos.md)
+- [Resultados calculados](data/classification/tmdb_2026-09-12/report.md)
+- Configurações [lexical](config/classificacao.json) e [completa](config/classificacao_semantica.json)
 
 ## Próxima etapa
 

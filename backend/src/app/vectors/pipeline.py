@@ -117,7 +117,7 @@ def build(
         "probes_sha256": sha256(probes_path) if probes_path else None,
         "source_identity": source_identity(),
         "python": platform.python_version(),
-        "libraries": _library_versions(),
+        "libraries": library_versions(),
         "representations": [asdict(spec) for spec in config.representations],
         "analyses": [analysis.name for analysis in analyses],
         "row_files": row_files,
@@ -159,7 +159,7 @@ def build_one(
     return corpus, methods[specs[name].method].build(specs[name], corpus, config)
 
 
-def _library_versions() -> dict[str, str | None]:
+def library_versions() -> dict[str, str | None]:
     versions: dict[str, str | None] = {}
     for name in LIBRARIES:
         try:

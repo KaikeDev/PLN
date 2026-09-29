@@ -97,7 +97,7 @@ def load_config(path: Path, methods: Mapping[str, MethodInfo]) -> ExperimentConf
     items = data["representations"]
     if not isinstance(items, list) or not 1 <= len(items) <= MAX_REPRESENTATIONS:
         raise ValueError(f"representations deve listar de 1 a {MAX_REPRESENTATIONS} representações")
-    specs = tuple(_representation(item, methods) for item in items)
+    specs = tuple(parse_representation(item, methods) for item in items)
     require_unique([spec.name for spec in specs], "Nomes de representação repetidos")
     values = {**DEFAULTS, **data}
     probe_words = values["probe_words"]
@@ -130,7 +130,8 @@ def load_queries(path: Path) -> tuple[QuerySpec, ...]:
     return queries
 
 
-def _representation(item: object, methods: Mapping[str, MethodInfo]) -> RepresentationSpec:
+def parse_representation(item: object, methods: Mapping[str, MethodInfo]) -> RepresentationSpec:
+    """Valida uma representação da configuração: nome, método conhecido, etapa compatível e modelo fixado."""
     data = require_object(item, "representação", required={"name", "method", "stage"}, optional={"model", "revision"})
     name, method, stage = require_name(data["name"], "name"), data["method"], data["stage"]
     if not isinstance(method, str) or method not in methods:

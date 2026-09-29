@@ -2,7 +2,7 @@
 
 O backend (`backend/src/app`) reúne dois subsistemas independentes que compartilham utilitários:
 
-- **Pipelines offline** (`corpus`, `vectors`): produzem as evidências avaliadas nas Etapas 1 e 2.
+- **Pipelines offline** (`corpus`, `vectors`, `classification`): produzem as evidências avaliadas nas Etapas 1, 2 e 3.
 - **API de demonstração** (`api`, `domain`, `infra`): pesquisa auxiliar de filmes usada pela interface em `frontend/`.
 
 As razões de cada escolha estão nas [ADRs](adr/README.md); a organização em camadas, na [ADR 0004](adr/0004-arquitetura-em-camadas.md).
@@ -19,6 +19,7 @@ As razões de cada escolha estão nas [ADRs](adr/README.md); a organização em 
 | `app.shared` | Artefatos determinísticos, manifesto, validação de configuração e regras de língua | biblioteca padrão |
 | `app.corpus` | Etapa 1: coleta, transformações, estatísticas, relatório, contrato e verificação | `shared`; `infra.tmdb` só na coleta real |
 | `app.vectors` | Etapa 2: representações, análises, relatório e verificação | `corpus.contracts`, `corpus.verification`, `corpus.transform`, `shared` |
+| `app.classification` | Etapa 3: tarefas de gênero, validação cruzada, métricas, K-Means × classificador, classificadores alternativos, relatório e verificação | `vectors` (configuração, corpus, métodos), `shared` |
 
 O domínio não importa `infra` nem `api`; a infraestrutura implementa as portas do domínio; `main` liga as partes.
 
@@ -36,6 +37,8 @@ flowchart LR
     COL --> RAW[(data/raw)]
     RAW --> PROC[corpus.process] --> PRD[(data/processed)]
     PRD --> VEC[vectors.pipeline] --> VD[(data/vectors)]
+    PRD --> CLS[classification.pipeline] --> CD[(data/classification)]
+    VEC -. métodos .-> CLS
 ```
 
 ## Fluxo da pesquisa
@@ -54,6 +57,7 @@ flowchart LR
 1. `python -m app.corpus collect` valida `config/coleta.json`, coleta recortes gênero × período e filmes semente e grava respostas, filmes deduplicados, participação nos recortes e manifesto.
 2. `python -m app.corpus process` verifica a coleta, gera as seis representações, metadados, estatísticas, exemplos e o relatório (template em `corpus/templates/report.md`) e termina com `verify`.
 3. `python -m app.vectors build` verifica a pasta processada e valida a configuração. Em seguida constrói as representações registradas em `METHODS`, executa `DEFAULT_ANALYSES`, serializa tudo em memória e só então cria a pasta ([ADR 0009](adr/0009-saidas-imutaveis-e-verificaveis.md)).
+4. `python -m app.classification build` monta as tarefas multiclasse e multirrótulo a partir dos `genre_ids`, constrói as representações pelos mesmos `METHODS` e avalia a regressão logística por validação cruzada, com tudo o que aprende dentro da dobra ([ADR 0017](adr/0017-aula8-classificacao-de-generos.md)).
 
 ## Como estender
 
@@ -64,6 +68,7 @@ flowchart LR
 | Novo gatilho de gênero ou marcador de negação | Edite `domain/search/lexicon.py` ou `shared/language.py` e atualize a ADR 0005 ou 0003 |
 | Nova representação vetorial | Implemente `Representation` e um método com `build`, e registre-o em `vectors/methods.py` |
 | Nova análise vetorial | Subclasse de `Analysis` com `run` e `report_section`, acrescentada a `DEFAULT_ANALYSES` |
+| Novo classificador de comparação | Registre um `Alternative` em `classification/alternatives.py` (`ALTERNATIVES`) e inclua o nome em `alternatives` na configuração |
 
 ## Testes
 
@@ -71,6 +76,7 @@ flowchart LR
 |---|---|
 | `test_corpus.py` | Transformações, coleta simulada, validação da configuração, integridade, determinismo |
 | `test_vectors.py` | Representações (com modelos falsos), análises, relatório, segurança da configuração, verificação |
+| `test_classification.py` | Tarefas a partir dos gêneros do TMDB, validação cruzada, decisão multirrótulo, K-Means e mapeamento de grupos, classificadores alternativos, configuração, determinismo, verificação |
 | `test_search_extractor.py` | Gatilhos, negação, qualidade, períodos e acurácia por campo |
 | `test_search_service.py` | Estratégias de pesquisa e número de chamadas ao catálogo |
 | `test_tmdb.py` | Cliente (erros, sessões por thread, retry, token fora da URL), catálogo e cache |

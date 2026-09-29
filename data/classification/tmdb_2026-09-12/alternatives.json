@@ -1,0 +1,810 @@
+{
+  "bow_sem_pontuacao": {
+    "naive_bayes": {
+      "acuracia": 0.590769,
+      "f1_macro": 0.591238,
+      "f1_macro_dobras": {
+        "media": 0.587831,
+        "desvio": 0.041089
+      },
+      "f1_por_genero": {
+        "Drama": 0.573034,
+        "Comédia": 0.5,
+        "Terror": 0.617886,
+        "Ficção científica": 0.674033
+      },
+      "parametro_escolhido": [
+        {
+          "alpha": 0.5
+        },
+        {
+          "alpha": 0.5
+        },
+        {
+          "alpha": 0.01
+        },
+        {
+          "alpha": 1.0
+        },
+        {
+          "alpha": 0.001
+        }
+      ]
+    },
+    "svm_linear": {
+      "acuracia": 0.476923,
+      "f1_macro": 0.475304,
+      "f1_macro_dobras": {
+        "media": 0.472052,
+        "desvio": 0.028771
+      },
+      "f1_por_genero": {
+        "Drama": 0.518135,
+        "Comédia": 0.4,
+        "Terror": 0.467742,
+        "Ficção científica": 0.515337
+      },
+      "parametro_escolhido": [
+        {
+          "C": 0.01
+        },
+        {
+          "C": 100.0
+        },
+        {
+          "C": 1.0
+        },
+        {
+          "C": 0.1
+        },
+        {
+          "C": 1.0
+        }
+      ]
+    },
+    "floresta_aleatoria": {
+      "acuracia": 0.446154,
+      "f1_macro": 0.441869,
+      "f1_macro_dobras": {
+        "media": 0.439031,
+        "desvio": 0.064228
+      },
+      "f1_por_genero": {
+        "Drama": 0.45,
+        "Comédia": 0.420561,
+        "Terror": 0.361702,
+        "Ficção científica": 0.535211
+      },
+      "parametro_escolhido": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "knn": {
+      "acuracia": 0.292308,
+      "f1_macro": 0.282141,
+      "f1_macro_dobras": {
+        "media": 0.283998,
+        "desvio": 0.035481
+      },
+      "f1_por_genero": {
+        "Drama": 0.22695,
+        "Comédia": 0.380488,
+        "Terror": 0.290909,
+        "Ficção científica": 0.230216
+      },
+      "parametro_escolhido": [
+        {
+          "n_neighbors": 25
+        },
+        {
+          "n_neighbors": 25
+        },
+        {
+          "n_neighbors": 25
+        },
+        {
+          "n_neighbors": 35
+        },
+        {
+          "n_neighbors": 1
+        }
+      ]
+    }
+  },
+  "bow_sem_stopwords": {
+    "naive_bayes": {
+      "acuracia": 0.615385,
+      "f1_macro": 0.612825,
+      "f1_macro_dobras": {
+        "media": 0.607789,
+        "desvio": 0.044404
+      },
+      "f1_por_genero": {
+        "Drama": 0.617021,
+        "Comédia": 0.503226,
+        "Terror": 0.634921,
+        "Ficção científica": 0.696133
+      },
+      "parametro_escolhido": [
+        {
+          "alpha": 1.0
+        },
+        {
+          "alpha": 1.0
+        },
+        {
+          "alpha": 0.01
+        },
+        {
+          "alpha": 1.0
+        },
+        {
+          "alpha": 0.01
+        }
+      ]
+    },
+    "svm_linear": {
+      "acuracia": 0.563077,
+      "f1_macro": 0.56079,
+      "f1_macro_dobras": {
+        "media": 0.556966,
+        "desvio": 0.044028
+      },
+      "f1_por_genero": {
+        "Drama": 0.574257,
+        "Comédia": 0.484472,
+        "Terror": 0.556522,
+        "Ficção científica": 0.627907
+      },
+      "parametro_escolhido": [
+        {
+          "C": 0.001
+        },
+        {
+          "C": 0.001
+        },
+        {
+          "C": 0.001
+        },
+        {
+          "C": 10.0
+        },
+        {
+          "C": 0.001
+        }
+      ]
+    },
+    "floresta_aleatoria": {
+      "acuracia": 0.492308,
+      "f1_macro": 0.474379,
+      "f1_macro_dobras": {
+        "media": 0.46903,
+        "desvio": 0.051817
+      },
+      "f1_por_genero": {
+        "Drama": 0.5,
+        "Comédia": 0.495495,
+        "Terror": 0.314607,
+        "Ficção científica": 0.587413
+      },
+      "parametro_escolhido": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "knn": {
+      "acuracia": 0.535385,
+      "f1_macro": 0.53271,
+      "f1_macro_dobras": {
+        "media": 0.530528,
+        "desvio": 0.02936
+      },
+      "f1_por_genero": {
+        "Drama": 0.556098,
+        "Comédia": 0.364865,
+        "Terror": 0.592593,
+        "Ficção científica": 0.617284
+      },
+      "parametro_escolhido": [
+        {
+          "n_neighbors": 9
+        },
+        {
+          "n_neighbors": 25
+        },
+        {
+          "n_neighbors": 25
+        },
+        {
+          "n_neighbors": 1
+        },
+        {
+          "n_neighbors": 9
+        }
+      ]
+    }
+  },
+  "tfidf_sem_pontuacao": {
+    "naive_bayes": {
+      "acuracia": 0.603077,
+      "f1_macro": 0.601128,
+      "f1_macro_dobras": {
+        "media": 0.597904,
+        "desvio": 0.057706
+      },
+      "f1_por_genero": {
+        "Drama": 0.585635,
+        "Comédia": 0.474359,
+        "Terror": 0.641221,
+        "Ficção científica": 0.703297
+      },
+      "parametro_escolhido": [
+        {
+          "alpha": 0.01
+        },
+        {
+          "alpha": 0.1
+        },
+        {
+          "alpha": 0.01
+        },
+        {
+          "alpha": 0.1
+        },
+        {
+          "alpha": 0.01
+        }
+      ]
+    },
+    "svm_linear": {
+      "acuracia": 0.606154,
+      "f1_macro": 0.604303,
+      "f1_macro_dobras": {
+        "media": 0.601724,
+        "desvio": 0.037036
+      },
+      "f1_por_genero": {
+        "Drama": 0.603175,
+        "Comédia": 0.527607,
+        "Terror": 0.596774,
+        "Ficção científica": 0.689655
+      },
+      "parametro_escolhido": [
+        {
+          "C": 0.1
+        },
+        {
+          "C": 1.0
+        },
+        {
+          "C": 10.0
+        },
+        {
+          "C": 0.1
+        },
+        {
+          "C": 1.0
+        }
+      ]
+    },
+    "floresta_aleatoria": {
+      "acuracia": 0.436923,
+      "f1_macro": 0.434765,
+      "f1_macro_dobras": {
+        "media": 0.432113,
+        "desvio": 0.061786
+      },
+      "f1_por_genero": {
+        "Drama": 0.427083,
+        "Comédia": 0.428571,
+        "Terror": 0.396226,
+        "Ficção científica": 0.487179
+      },
+      "parametro_escolhido": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "knn": {
+      "acuracia": 0.529231,
+      "f1_macro": 0.533197,
+      "f1_macro_dobras": {
+        "media": 0.532087,
+        "desvio": 0.037478
+      },
+      "f1_por_genero": {
+        "Drama": 0.545455,
+        "Comédia": 0.44186,
+        "Terror": 0.59375,
+        "Ficção científica": 0.551724
+      },
+      "parametro_escolhido": [
+        {
+          "n_neighbors": 35
+        },
+        {
+          "n_neighbors": 25
+        },
+        {
+          "n_neighbors": 1
+        },
+        {
+          "n_neighbors": 1
+        },
+        {
+          "n_neighbors": 25
+        }
+      ]
+    }
+  },
+  "tfidf_sem_stopwords": {
+    "naive_bayes": {
+      "acuracia": 0.590769,
+      "f1_macro": 0.589068,
+      "f1_macro_dobras": {
+        "media": 0.585462,
+        "desvio": 0.053758
+      },
+      "f1_por_genero": {
+        "Drama": 0.571429,
+        "Comédia": 0.481013,
+        "Terror": 0.619048,
+        "Ficção científica": 0.684783
+      },
+      "parametro_escolhido": [
+        {
+          "alpha": 0.01
+        },
+        {
+          "alpha": 0.1
+        },
+        {
+          "alpha": 0.001
+        },
+        {
+          "alpha": 0.1
+        },
+        {
+          "alpha": 0.01
+        }
+      ]
+    },
+    "svm_linear": {
+      "acuracia": 0.6,
+      "f1_macro": 0.594088,
+      "f1_macro_dobras": {
+        "media": 0.589693,
+        "desvio": 0.043164
+      },
+      "f1_por_genero": {
+        "Drama": 0.629442,
+        "Comédia": 0.466667,
+        "Terror": 0.598425,
+        "Ficção científica": 0.681818
+      },
+      "parametro_escolhido": [
+        {
+          "C": 0.1
+        },
+        {
+          "C": 1.0
+        },
+        {
+          "C": 0.1
+        },
+        {
+          "C": 1.0
+        },
+        {
+          "C": 10.0
+        }
+      ]
+    },
+    "floresta_aleatoria": {
+      "acuracia": 0.498462,
+      "f1_macro": 0.493656,
+      "f1_macro_dobras": {
+        "media": 0.49059,
+        "desvio": 0.047426
+      },
+      "f1_por_genero": {
+        "Drama": 0.491979,
+        "Comédia": 0.5,
+        "Terror": 0.411215,
+        "Ficção científica": 0.571429
+      },
+      "parametro_escolhido": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "knn": {
+      "acuracia": 0.532308,
+      "f1_macro": 0.532959,
+      "f1_macro_dobras": {
+        "media": 0.532075,
+        "desvio": 0.04615
+      },
+      "f1_por_genero": {
+        "Drama": 0.564103,
+        "Comédia": 0.3875,
+        "Terror": 0.592,
+        "Ficção científica": 0.588235
+      },
+      "parametro_escolhido": [
+        {
+          "n_neighbors": 9
+        },
+        {
+          "n_neighbors": 9
+        },
+        {
+          "n_neighbors": 1
+        },
+        {
+          "n_neighbors": 1
+        },
+        {
+          "n_neighbors": 35
+        }
+      ]
+    }
+  },
+  "word2vec_cbow": {
+    "naive_bayes": null,
+    "svm_linear": {
+      "acuracia": 0.667692,
+      "f1_macro": 0.664868,
+      "f1_macro_dobras": {
+        "media": 0.661277,
+        "desvio": 0.043814
+      },
+      "f1_por_genero": {
+        "Drama": 0.666667,
+        "Comédia": 0.613497,
+        "Terror": 0.630769,
+        "Ficção científica": 0.748538
+      },
+      "parametro_escolhido": [
+        {
+          "C": 0.001
+        },
+        {
+          "C": 0.001
+        },
+        {
+          "C": 0.0001
+        },
+        {
+          "C": 0.0001
+        },
+        {
+          "C": 0.001
+        }
+      ]
+    },
+    "floresta_aleatoria": {
+      "acuracia": 0.612308,
+      "f1_macro": 0.607683,
+      "f1_macro_dobras": {
+        "media": 0.605104,
+        "desvio": 0.041003
+      },
+      "f1_por_genero": {
+        "Drama": 0.65625,
+        "Comédia": 0.502994,
+        "Terror": 0.569106,
+        "Ficção científica": 0.702381
+      },
+      "parametro_escolhido": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "knn": {
+      "acuracia": 0.624615,
+      "f1_macro": 0.618397,
+      "f1_macro_dobras": {
+        "media": 0.61695,
+        "desvio": 0.021355
+      },
+      "f1_por_genero": {
+        "Drama": 0.640394,
+        "Comédia": 0.568047,
+        "Terror": 0.558559,
+        "Ficção científica": 0.706587
+      },
+      "parametro_escolhido": [
+        {
+          "n_neighbors": 15
+        },
+        {
+          "n_neighbors": 25
+        },
+        {
+          "n_neighbors": 25
+        },
+        {
+          "n_neighbors": 15
+        },
+        {
+          "n_neighbors": 15
+        }
+      ]
+    }
+  },
+  "word2vec_skipgram": {
+    "naive_bayes": null,
+    "svm_linear": {
+      "acuracia": 0.701538,
+      "f1_macro": 0.70268,
+      "f1_macro_dobras": {
+        "media": 0.70042,
+        "desvio": 0.04584
+      },
+      "f1_por_genero": {
+        "Drama": 0.666667,
+        "Comédia": 0.650888,
+        "Terror": 0.685714,
+        "Ficção científica": 0.807453
+      },
+      "parametro_escolhido": [
+        {
+          "C": 0.001
+        },
+        {
+          "C": 0.001
+        },
+        {
+          "C": 0.001
+        },
+        {
+          "C": 0.001
+        },
+        {
+          "C": 0.01
+        }
+      ]
+    },
+    "floresta_aleatoria": {
+      "acuracia": 0.658462,
+      "f1_macro": 0.654045,
+      "f1_macro_dobras": {
+        "media": 0.653269,
+        "desvio": 0.038833
+      },
+      "f1_por_genero": {
+        "Drama": 0.666667,
+        "Comédia": 0.623377,
+        "Terror": 0.609375,
+        "Ficção científica": 0.716763
+      },
+      "parametro_escolhido": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "knn": {
+      "acuracia": 0.615385,
+      "f1_macro": 0.611128,
+      "f1_macro_dobras": {
+        "media": 0.611803,
+        "desvio": 0.03382
+      },
+      "f1_por_genero": {
+        "Drama": 0.606635,
+        "Comédia": 0.551282,
+        "Terror": 0.559322,
+        "Ficção científica": 0.727273
+      },
+      "parametro_escolhido": [
+        {
+          "n_neighbors": 5
+        },
+        {
+          "n_neighbors": 15
+        },
+        {
+          "n_neighbors": 25
+        },
+        {
+          "n_neighbors": 15
+        },
+        {
+          "n_neighbors": 9
+        }
+      ]
+    }
+  },
+  "bert_base_pt": {
+    "naive_bayes": null,
+    "svm_linear": {
+      "acuracia": 0.704615,
+      "f1_macro": 0.699962,
+      "f1_macro_dobras": {
+        "media": 0.697317,
+        "desvio": 0.049681
+      },
+      "f1_por_genero": {
+        "Drama": 0.751381,
+        "Comédia": 0.598639,
+        "Terror": 0.702703,
+        "Ficção científica": 0.747126
+      },
+      "parametro_escolhido": [
+        {
+          "C": 0.0001
+        },
+        {
+          "C": 0.0001
+        },
+        {
+          "C": 0.0001
+        },
+        {
+          "C": 0.0001
+        },
+        {
+          "C": 0.001
+        }
+      ]
+    },
+    "floresta_aleatoria": {
+      "acuracia": 0.68,
+      "f1_macro": 0.679051,
+      "f1_macro_dobras": {
+        "media": 0.674375,
+        "desvio": 0.067642
+      },
+      "f1_por_genero": {
+        "Drama": 0.677249,
+        "Comédia": 0.590604,
+        "Terror": 0.723077,
+        "Ficção científica": 0.725275
+      },
+      "parametro_escolhido": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "knn": {
+      "acuracia": 0.661538,
+      "f1_macro": 0.652168,
+      "f1_macro_dobras": {
+        "media": 0.648664,
+        "desvio": 0.042976
+      },
+      "f1_por_genero": {
+        "Drama": 0.700508,
+        "Comédia": 0.556291,
+        "Terror": 0.62069,
+        "Ficção científica": 0.731183
+      },
+      "parametro_escolhido": [
+        {
+          "n_neighbors": 9
+        },
+        {
+          "n_neighbors": 35
+        },
+        {
+          "n_neighbors": 25
+        },
+        {
+          "n_neighbors": 51
+        },
+        {
+          "n_neighbors": 51
+        }
+      ]
+    }
+  },
+  "sentenca_minilm": {
+    "naive_bayes": null,
+    "svm_linear": {
+      "acuracia": 0.683077,
+      "f1_macro": 0.67781,
+      "f1_macro_dobras": {
+        "media": 0.677338,
+        "desvio": 0.061828
+      },
+      "f1_por_genero": {
+        "Drama": 0.690058,
+        "Comédia": 0.536913,
+        "Terror": 0.71831,
+        "Ficção científica": 0.765957
+      },
+      "parametro_escolhido": [
+        {
+          "C": 0.0001
+        },
+        {
+          "C": 0.001
+        },
+        {
+          "C": 1e-05
+        },
+        {
+          "C": 0.0001
+        },
+        {
+          "C": 0.0001
+        }
+      ]
+    },
+    "floresta_aleatoria": {
+      "acuracia": 0.667692,
+      "f1_macro": 0.66922,
+      "f1_macro_dobras": {
+        "media": 0.669571,
+        "desvio": 0.055885
+      },
+      "f1_por_genero": {
+        "Drama": 0.624339,
+        "Comédia": 0.567901,
+        "Terror": 0.687023,
+        "Ficção científica": 0.797619
+      },
+      "parametro_escolhido": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "knn": {
+      "acuracia": 0.68,
+      "f1_macro": 0.676803,
+      "f1_macro_dobras": {
+        "media": 0.677435,
+        "desvio": 0.059227
+      },
+      "f1_por_genero": {
+        "Drama": 0.656566,
+        "Comédia": 0.582781,
+        "Terror": 0.683333,
+        "Ficção científica": 0.78453
+      },
+      "parametro_escolhido": [
+        {
+          "n_neighbors": 51
+        },
+        {
+          "n_neighbors": 35
+        },
+        {
+          "n_neighbors": 51
+        },
+        {
+          "n_neighbors": 35
+        },
+        {
+          "n_neighbors": 35
+        }
+      ]
+    }
+  }
+}

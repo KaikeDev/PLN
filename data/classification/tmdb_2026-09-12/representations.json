@@ -1,0 +1,90 @@
+{
+  "bow_sem_pontuacao": {
+    "name": "bow_sem_pontuacao",
+    "method": "bow",
+    "stage": "05_without_punctuation.jsonl",
+    "model": null,
+    "revision": null,
+    "family": "lexical",
+    "dimensions": 5988,
+    "parameters": null,
+    "interpretable_terms": true
+  },
+  "bow_sem_stopwords": {
+    "name": "bow_sem_stopwords",
+    "method": "bow",
+    "stage": "06_without_stopwords.jsonl",
+    "model": null,
+    "revision": null,
+    "family": "lexical",
+    "dimensions": 5921,
+    "parameters": null,
+    "interpretable_terms": true
+  },
+  "tfidf_sem_pontuacao": {
+    "name": "tfidf_sem_pontuacao",
+    "method": "tfidf",
+    "stage": "05_without_punctuation.jsonl",
+    "model": null,
+    "revision": null,
+    "family": "lexical",
+    "dimensions": 5988,
+    "parameters": null,
+    "interpretable_terms": true
+  },
+  "tfidf_sem_stopwords": {
+    "name": "tfidf_sem_stopwords",
+    "method": "tfidf",
+    "stage": "06_without_stopwords.jsonl",
+    "model": null,
+    "revision": null,
+    "family": "lexical",
+    "dimensions": 5921,
+    "parameters": null,
+    "interpretable_terms": true
+  },
+  "word2vec_cbow": {
+    "name": "word2vec_cbow",
+    "method": "word2vec",
+    "stage": "06_without_stopwords.jsonl",
+    "model": "pt-mteb/average_pt_nilc_word2vec_cbow_s300",
+    "revision": "0d556458839fa3a7f39a61dcce56dc50ce7b7314",
+    "family": "static",
+    "dimensions": 300,
+    "parameters": 278882100,
+    "interpretable_terms": false
+  },
+  "word2vec_skipgram": {
+    "name": "word2vec_skipgram",
+    "method": "word2vec",
+    "stage": "06_without_stopwords.jsonl",
+    "model": "pt-mteb/average_pt_nilc_word2vec_skip_s300",
+    "revision": "27facc2558330d2e9af54611734b94e957aa8301",
+    "family": "static",
+    "dimensions": 300,
+    "parameters": 278882100,
+    "interpretable_terms": false
+  },
+  "bert_base_pt": {
+    "name": "bert_base_pt",
+    "method": "contextual",
+    "stage": "02_clean.jsonl",
+    "model": "neuralmind/bert-base-portuguese-cased",
+    "revision": "94d69c95f98f7d5b2a8700c420230ae10def0baa",
+    "family": "contextual",
+    "dimensions": 768,
+    "parameters": 108923136,
+    "interpretable_terms": false
+  },
+  "sentenca_minilm": {
+    "name": "sentenca_minilm",
+    "method": "contextual",
+    "stage": "02_clean.jsonl",
+    "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+    "family": "contextual",
+    "dimensions": 384,
+    "parameters": 117653760,
+    "interpretable_terms": false
+  }
+}

@@ -1,0 +1,970 @@
+{
+  "bow_sem_pontuacao": {
+    "ari": -0.00072,
+    "nmi": 0.009366,
+    "pureza": 0.313846,
+    "acuracia_melhor_mapeamento": 0.301538,
+    "f1_macro_melhor_mapeamento": 0.298101,
+    "grupos": [
+      {
+        "grupo": 0,
+        "tamanho": 75,
+        "genero_associado": "Terror",
+        "generos": {
+          "Drama": 23,
+          "Comédia": 14,
+          "Terror": 19,
+          "Ficção científica": 19
+        },
+        "termos": [
+          "família",
+          "morte",
+          "começa",
+          "está",
+          "após",
+          "vida",
+          "não",
+          "casa",
+          "depois",
+          "mundo"
+        ],
+        "mais_proximos_do_centroide": [
+          "O Fabuloso Destino de Amélie Poulain",
+          "Premonição",
+          "Premonição 2"
+        ]
+      },
+      {
+        "grupo": 1,
+        "tamanho": 105,
+        "genero_associado": "Ficção científica",
+        "generos": {
+          "Drama": 22,
+          "Comédia": 29,
+          "Terror": 22,
+          "Ficção científica": 32
+        },
+        "termos": [
+          "está",
+          "dois",
+          "ser",
+          "mundo",
+          "não",
+          "peter",
+          "ainda",
+          "após",
+          "agora",
+          "casa"
+        ],
+        "mais_proximos_do_centroide": [
+          "O Exterminador do Futuro 2: O Julgamento Final",
+          "O Máskara",
+          "Um Sonho de Liberdade"
+        ]
+      },
+      {
+        "grupo": 2,
+        "tamanho": 59,
+        "genero_associado": "Drama",
+        "generos": {
+          "Drama": 20,
+          "Comédia": 15,
+          "Terror": 10,
+          "Ficção científica": 14
+        },
+        "termos": [
+          "jovem",
+          "busca",
+          "ser",
+          "novo",
+          "após",
+          "dois",
+          "onde",
+          "casa",
+          "jornada",
+          "vive"
+        ],
+        "mais_proximos_do_centroide": [
+          "A Freira",
+          "Kung Fu Panda",
+          "O Regresso"
+        ]
+      },
+      {
+        "grupo": 3,
+        "tamanho": 86,
+        "genero_associado": "Comédia",
+        "generos": {
+          "Drama": 24,
+          "Comédia": 27,
+          "Terror": 15,
+          "Ficção científica": 20
+        },
+        "termos": [
+          "não",
+          "depois",
+          "ser",
+          "anos",
+          "jovem",
+          "homem",
+          "todos",
+          "ter",
+          "vida",
+          "grupo"
+        ],
+        "mais_proximos_do_centroide": [
+          "Premonição 5",
+          "Assim na Terra Como no Inferno",
+          "Snatch: Porcos e Diamantes"
+        ]
+      }
+    ]
+  },
+  "bow_sem_stopwords": {
+    "ari": 0.003061,
+    "nmi": 0.01347,
+    "pureza": 0.326154,
+    "acuracia_melhor_mapeamento": 0.301538,
+    "f1_macro_melhor_mapeamento": 0.28513,
+    "grupos": [
+      {
+        "grupo": 0,
+        "tamanho": 50,
+        "genero_associado": "Terror",
+        "generos": {
+          "Drama": 16,
+          "Comédia": 12,
+          "Terror": 8,
+          "Ficção científica": 14
+        },
+        "termos": [
+          "jovem",
+          "descobre",
+          "ajuda",
+          "amigos",
+          "peter",
+          "está",
+          "busca",
+          "precisa",
+          "ser",
+          "pouco"
+        ],
+        "mais_proximos_do_centroide": [
+          "Titanic",
+          "Corrente do Mal",
+          "Gênio Indomável"
+        ]
+      },
+      {
+        "grupo": 1,
+        "tamanho": 118,
+        "genero_associado": "Comédia",
+        "generos": {
+          "Drama": 24,
+          "Comédia": 38,
+          "Terror": 27,
+          "Ficção científica": 29
+        },
+        "termos": [
+          "ser",
+          "não",
+          "está",
+          "mundo",
+          "grupo",
+          "descobrir",
+          "após",
+          "dois",
+          "contra",
+          "ainda"
+        ],
+        "mais_proximos_do_centroide": [
+          "Barbie",
+          "Mad Max: Estrada da Fúria",
+          "Diário de uma Paixão"
+        ]
+      },
+      {
+        "grupo": 2,
+        "tamanho": 72,
+        "genero_associado": "Drama",
+        "generos": {
+          "Drama": 25,
+          "Comédia": 20,
+          "Terror": 12,
+          "Ficção científica": 15
+        },
+        "termos": [
+          "vida",
+          "homem",
+          "casa",
+          "vai",
+          "cidade",
+          "após",
+          "busca",
+          "viajar",
+          "muito",
+          "sem"
+        ],
+        "mais_proximos_do_centroide": [
+          "Consumido pelo Ódio",
+          "WALL-E",
+          "Homem-Aranha: De Volta ao Lar"
+        ]
+      },
+      {
+        "grupo": 3,
+        "tamanho": 85,
+        "genero_associado": "Ficção científica",
+        "generos": {
+          "Drama": 24,
+          "Comédia": 15,
+          "Terror": 19,
+          "Ficção científica": 27
+        },
+        "termos": [
+          "família",
+          "anos",
+          "morte",
+          "depois",
+          "após",
+          "enquanto",
+          "casa",
+          "nova",
+          "está",
+          "pai"
+        ],
+        "mais_proximos_do_centroide": [
+          "Hereditário",
+          "Patos!",
+          "O Profissional"
+        ]
+      }
+    ]
+  },
+  "tfidf_sem_pontuacao": {
+    "ari": 0.003424,
+    "nmi": 0.027848,
+    "pureza": 0.316923,
+    "acuracia_melhor_mapeamento": 0.310769,
+    "f1_macro_melhor_mapeamento": 0.296568,
+    "grupos": [
+      {
+        "grupo": 0,
+        "tamanho": 20,
+        "genero_associado": "Drama",
+        "generos": {
+          "Drama": 11,
+          "Comédia": 1,
+          "Terror": 3,
+          "Ficção científica": 5
+        },
+        "termos": [
+          "guerra",
+          "durante",
+          "mundial",
+          "segunda",
+          "história",
+          "soldados",
+          "cerca",
+          "luta",
+          "varsóvia",
+          "batalha"
+        ],
+        "mais_proximos_do_centroide": [
+          "Dunkirk",
+          "O Menino do Pijama Listrado",
+          "Até o Último Homem"
+        ]
+      },
+      {
+        "grupo": 1,
+        "tamanho": 154,
+        "genero_associado": "Terror",
+        "generos": {
+          "Drama": 34,
+          "Comédia": 40,
+          "Terror": 41,
+          "Ficção científica": 39
+        },
+        "termos": [
+          "ser",
+          "não",
+          "após",
+          "casa",
+          "está",
+          "jovem",
+          "dois",
+          "anos",
+          "depois",
+          "nova"
+        ],
+        "mais_proximos_do_centroide": [
+          "O Fabuloso Destino de Amélie Poulain",
+          "Wicked",
+          "Uma Noite Alucinante: A Morte do Demônio"
+        ]
+      },
+      {
+        "grupo": 2,
+        "tamanho": 73,
+        "genero_associado": "Comédia",
+        "generos": {
+          "Drama": 20,
+          "Comédia": 27,
+          "Terror": 7,
+          "Ficção científica": 19
+        },
+        "termos": [
+          "ser",
+          "vilão",
+          "mundo",
+          "herói",
+          "grupo",
+          "dois",
+          "jovem",
+          "andy",
+          "agora",
+          "não"
+        ],
+        "mais_proximos_do_centroide": [
+          "Deadpool 2",
+          "O Homem de Aço",
+          "Toy Story 2"
+        ]
+      },
+      {
+        "grupo": 3,
+        "tamanho": 78,
+        "genero_associado": "Ficção científica",
+        "generos": {
+          "Drama": 24,
+          "Comédia": 17,
+          "Terror": 15,
+          "Ficção científica": 22
+        },
+        "termos": [
+          "família",
+          "está",
+          "morte",
+          "busca",
+          "não",
+          "vida",
+          "peter",
+          "ajuda",
+          "jovem",
+          "nova"
+        ],
+        "mais_proximos_do_centroide": [
+          "O Poderoso Chefão: Parte III",
+          "Premonição 5",
+          "Possessão"
+        ]
+      }
+    ]
+  },
+  "tfidf_sem_stopwords": {
+    "ari": 0.009718,
+    "nmi": 0.016427,
+    "pureza": 0.329231,
+    "acuracia_melhor_mapeamento": 0.313846,
+    "f1_macro_melhor_mapeamento": 0.301002,
+    "grupos": [
+      {
+        "grupo": 0,
+        "tamanho": 65,
+        "genero_associado": "Terror",
+        "generos": {
+          "Drama": 20,
+          "Comédia": 15,
+          "Terror": 15,
+          "Ficção científica": 15
+        },
+        "termos": [
+          "família",
+          "casa",
+          "morte",
+          "não",
+          "nova",
+          "está",
+          "estranho",
+          "jovem",
+          "logo",
+          "filme"
+        ],
+        "mais_proximos_do_centroide": [
+          "A Entidade",
+          "Hereditário",
+          "Patos!"
+        ]
+      },
+      {
+        "grupo": 1,
+        "tamanho": 51,
+        "genero_associado": "Ficção científica",
+        "generos": {
+          "Drama": 14,
+          "Comédia": 9,
+          "Terror": 12,
+          "Ficção científica": 16
+        },
+        "termos": [
+          "caso",
+          "vidas",
+          "força",
+          "contra",
+          "forças",
+          "batalha",
+          "homem",
+          "mundo",
+          "novo",
+          "história"
+        ],
+        "mais_proximos_do_centroide": [
+          "Invocação do Mal 4: O Último Ritual",
+          "Invocação do Mal",
+          "Guerra nas Estrelas: O Império Contra-Ataca"
+        ]
+      },
+      {
+        "grupo": 2,
+        "tamanho": 93,
+        "genero_associado": "Drama",
+        "generos": {
+          "Drama": 32,
+          "Comédia": 22,
+          "Terror": 21,
+          "Ficção científica": 18
+        },
+        "termos": [
+          "está",
+          "vida",
+          "dois",
+          "ser",
+          "não",
+          "anos",
+          "começa",
+          "num",
+          "jovem",
+          "leva"
+        ],
+        "mais_proximos_do_centroide": [
+          "Infidelidade",
+          "Possessão",
+          "Barbie"
+        ]
+      },
+      {
+        "grupo": 3,
+        "tamanho": 116,
+        "genero_associado": "Comédia",
+        "generos": {
+          "Drama": 23,
+          "Comédia": 39,
+          "Terror": 18,
+          "Ficção científica": 36
+        },
+        "termos": [
+          "após",
+          "amigos",
+          "ser",
+          "não",
+          "jovem",
+          "agora",
+          "guerra",
+          "apenas",
+          "ter",
+          "está"
+        ],
+        "mais_proximos_do_centroide": [
+          "Pânico na Floresta",
+          "Tropas Estelares",
+          "Aliens: O Resgate"
+        ]
+      }
+    ]
+  },
+  "word2vec_cbow": {
+    "ari": 0.053254,
+    "nmi": 0.071166,
+    "pureza": 0.4,
+    "acuracia_melhor_mapeamento": 0.369231,
+    "f1_macro_melhor_mapeamento": 0.367837,
+    "grupos": [
+      {
+        "grupo": 0,
+        "tamanho": 68,
+        "genero_associado": "Terror",
+        "generos": {
+          "Drama": 9,
+          "Comédia": 22,
+          "Terror": 22,
+          "Ficção científica": 15
+        },
+        "termos": [
+          "amigos",
+          "dois",
+          "casa",
+          "cidade",
+          "todos",
+          "ter",
+          "estão",
+          "antes",
+          "mesmo",
+          "não"
+        ],
+        "mais_proximos_do_centroide": [
+          "Madagascar",
+          "A Morte do Demônio",
+          "Monstros S.A."
+        ]
+      },
+      {
+        "grupo": 1,
+        "tamanho": 50,
+        "genero_associado": "Drama",
+        "generos": {
+          "Drama": 25,
+          "Comédia": 4,
+          "Terror": 7,
+          "Ficção científica": 14
+        },
+        "termos": [
+          "guerra",
+          "durante",
+          "contra",
+          "mundial",
+          "luta",
+          "soldados",
+          "segunda",
+          "polícia",
+          "governo",
+          "história"
+        ],
+        "mais_proximos_do_centroide": [
+          "Magnatas do Crime",
+          "A Outra História Americana",
+          "Avatar: Fogo e Cinzas"
+        ]
+      },
+      {
+        "grupo": 2,
+        "tamanho": 115,
+        "genero_associado": "Comédia",
+        "generos": {
+          "Drama": 42,
+          "Comédia": 32,
+          "Terror": 26,
+          "Ficção científica": 15
+        },
+        "termos": [
+          "família",
+          "não",
+          "jovem",
+          "vida",
+          "casa",
+          "está",
+          "anos",
+          "após",
+          "caso",
+          "peter"
+        ],
+        "mais_proximos_do_centroide": [
+          "Da Magia à Sedução",
+          "Uma Noite de Crime: Anarquia",
+          "Terror em Silent Hill"
+        ]
+      },
+      {
+        "grupo": 3,
+        "tamanho": 92,
+        "genero_associado": "Ficção científica",
+        "generos": {
+          "Drama": 13,
+          "Comédia": 27,
+          "Terror": 11,
+          "Ficção científica": 41
+        },
+        "termos": [
+          "ser",
+          "mundo",
+          "planeta",
+          "está",
+          "jovem",
+          "precisa",
+          "força",
+          "combater",
+          "vilão",
+          "após"
+        ],
+        "mais_proximos_do_centroide": [
+          "Thor: Amor e Trovão",
+          "Shrek",
+          "Deadpool 2"
+        ]
+      }
+    ]
+  },
+  "word2vec_skipgram": {
+    "ari": 0.055392,
+    "nmi": 0.065038,
+    "pureza": 0.4,
+    "acuracia_melhor_mapeamento": 0.393846,
+    "f1_macro_melhor_mapeamento": 0.391436,
+    "grupos": [
+      {
+        "grupo": 0,
+        "tamanho": 76,
+        "genero_associado": "Terror",
+        "generos": {
+          "Drama": 10,
+          "Comédia": 25,
+          "Terror": 24,
+          "Ficção científica": 17
+        },
+        "termos": [
+          "amigos",
+          "dois",
+          "mesmo",
+          "ter",
+          "grupo",
+          "estão",
+          "não",
+          "antes",
+          "todos",
+          "cidade"
+        ],
+        "mais_proximos_do_centroide": [
+          "A Morte do Demônio",
+          "Pânico na Floresta",
+          "Os Oito Odiados"
+        ]
+      },
+      {
+        "grupo": 1,
+        "tamanho": 93,
+        "genero_associado": "Comédia",
+        "generos": {
+          "Drama": 32,
+          "Comédia": 31,
+          "Terror": 20,
+          "Ficção científica": 10
+        },
+        "termos": [
+          "não",
+          "casa",
+          "família",
+          "jovem",
+          "começa",
+          "vida",
+          "está",
+          "ser",
+          "dois",
+          "anos"
+        ],
+        "mais_proximos_do_centroide": [
+          "Uma Noite de Crime: Anarquia",
+          "Da Magia à Sedução",
+          "Cidade das Sombras"
+        ]
+      },
+      {
+        "grupo": 2,
+        "tamanho": 70,
+        "genero_associado": "Drama",
+        "generos": {
+          "Drama": 29,
+          "Comédia": 16,
+          "Terror": 11,
+          "Ficção científica": 14
+        },
+        "termos": [
+          "jovem",
+          "policial",
+          "polícia",
+          "caso",
+          "busca",
+          "após",
+          "filme",
+          "nova",
+          "história",
+          "angeles"
+        ],
+        "mais_proximos_do_centroide": [
+          "Os Infiltrados",
+          "Batman Begins",
+          "O Incrível Hulk"
+        ]
+      },
+      {
+        "grupo": 3,
+        "tamanho": 86,
+        "genero_associado": "Ficção científica",
+        "generos": {
+          "Drama": 18,
+          "Comédia": 13,
+          "Terror": 11,
+          "Ficção científica": 44
+        },
+        "termos": [
+          "ser",
+          "guerra",
+          "está",
+          "contra",
+          "planeta",
+          "após",
+          "homem",
+          "grupo",
+          "mundo",
+          "depois"
+        ],
+        "mais_proximos_do_centroide": [
+          "Duna: Parte Dois",
+          "Thor: Amor e Trovão",
+          "A Origem"
+        ]
+      }
+    ]
+  },
+  "bert_base_pt": {
+    "ari": 0.131648,
+    "nmi": 0.141932,
+    "pureza": 0.476923,
+    "acuracia_melhor_mapeamento": 0.476923,
+    "f1_macro_melhor_mapeamento": 0.467679,
+    "grupos": [
+      {
+        "grupo": 0,
+        "tamanho": 45,
+        "genero_associado": "Terror",
+        "generos": {
+          "Drama": 3,
+          "Comédia": 12,
+          "Terror": 20,
+          "Ficção científica": 10
+        },
+        "termos": [
+          "dois",
+          "vidas",
+          "estão",
+          "demônios",
+          "juntos",
+          "presos",
+          "descobrem",
+          "cidade",
+          "misterioso",
+          "família"
+        ],
+        "mais_proximos_do_centroide": [
+          "A Morte do Demônio",
+          "Pânico 2",
+          "Os Oito Odiados"
+        ]
+      },
+      {
+        "grupo": 1,
+        "tamanho": 74,
+        "genero_associado": "Drama",
+        "generos": {
+          "Drama": 42,
+          "Comédia": 17,
+          "Terror": 7,
+          "Ficção científica": 8
+        },
+        "termos": [
+          "história",
+          "jovem",
+          "polícia",
+          "guerra",
+          "ser",
+          "policial",
+          "vida",
+          "anos",
+          "caso",
+          "mesmo"
+        ],
+        "mais_proximos_do_centroide": [
+          "Um Sonho de Liberdade",
+          "O Grande Lebowski",
+          "Entre Facas e Segredos"
+        ]
+      },
+      {
+        "grupo": 2,
+        "tamanho": 99,
+        "genero_associado": "Ficção científica",
+        "generos": {
+          "Drama": 12,
+          "Comédia": 21,
+          "Terror": 8,
+          "Ficção científica": 58
+        },
+        "termos": [
+          "ser",
+          "está",
+          "mundo",
+          "planeta",
+          "após",
+          "peter",
+          "precisa",
+          "terra",
+          "missão",
+          "combater"
+        ],
+        "mais_proximos_do_centroide": [
+          "Thor: Amor e Trovão",
+          "Mad Max: Estrada da Fúria",
+          "O Exterminador do Futuro 2: O Julgamento Final"
+        ]
+      },
+      {
+        "grupo": 3,
+        "tamanho": 107,
+        "genero_associado": "Comédia",
+        "generos": {
+          "Drama": 32,
+          "Comédia": 35,
+          "Terror": 31,
+          "Ficção científica": 9
+        },
+        "termos": [
+          "casa",
+          "não",
+          "família",
+          "está",
+          "ter",
+          "começa",
+          "ser",
+          "dois",
+          "agora",
+          "vida"
+        ],
+        "mais_proximos_do_centroide": [
+          "Up: Altas Aventuras",
+          "365 Dias: Hoje",
+          "Uma Noite de Crime: Anarquia"
+        ]
+      }
+    ]
+  },
+  "sentenca_minilm": {
+    "ari": 0.12877,
+    "nmi": 0.145671,
+    "pureza": 0.498462,
+    "acuracia_melhor_mapeamento": 0.498462,
+    "f1_macro_melhor_mapeamento": 0.498253,
+    "grupos": [
+      {
+        "grupo": 0,
+        "tamanho": 75,
+        "genero_associado": "Drama",
+        "generos": {
+          "Drama": 36,
+          "Comédia": 22,
+          "Terror": 6,
+          "Ficção científica": 11
+        },
+        "termos": [
+          "jovem",
+          "vida",
+          "não",
+          "ser",
+          "anos",
+          "está",
+          "peter",
+          "mesmo",
+          "policial",
+          "polícia"
+        ],
+        "mais_proximos_do_centroide": [
+          "A Origem",
+          "O Espetacular Homem-Aranha 2: A Ameaça de Electro",
+          "O Grande Lebowski"
+        ]
+      },
+      {
+        "grupo": 1,
+        "tamanho": 73,
+        "genero_associado": "Comédia",
+        "generos": {
+          "Drama": 13,
+          "Comédia": 32,
+          "Terror": 6,
+          "Ficção científica": 22
+        },
+        "termos": [
+          "anos",
+          "família",
+          "ser",
+          "mundo",
+          "não",
+          "rei",
+          "casa",
+          "após",
+          "novo",
+          "amigos"
+        ],
+        "mais_proximos_do_centroide": [
+          "Gato de Botas",
+          "Duna",
+          "Os Goonies"
+        ]
+      },
+      {
+        "grupo": 2,
+        "tamanho": 91,
+        "genero_associado": "Ficção científica",
+        "generos": {
+          "Drama": 17,
+          "Comédia": 16,
+          "Terror": 9,
+          "Ficção científica": 49
+        },
+        "termos": [
+          "missão",
+          "guerra",
+          "está",
+          "contra",
+          "combater",
+          "mundo",
+          "ser",
+          "homem",
+          "grupo",
+          "após"
+        ],
+        "mais_proximos_do_centroide": [
+          "Thunderbolts*",
+          "X-Men: Dias de um Futuro Esquecido",
+          "Vingadores: Era de Ultron"
+        ]
+      },
+      {
+        "grupo": 3,
+        "tamanho": 86,
+        "genero_associado": "Terror",
+        "generos": {
+          "Drama": 23,
+          "Comédia": 15,
+          "Terror": 45,
+          "Ficção científica": 3
+        },
+        "termos": [
+          "começa",
+          "família",
+          "casa",
+          "dois",
+          "está",
+          "não",
+          "após",
+          "vidas",
+          "morte",
+          "depois"
+        ],
+        "mais_proximos_do_centroide": [
+          "Todo Mundo em Pânico",
+          "A Morte do Demônio",
+          "Uma Noite de Crime: Anarquia"
+        ]
+      }
+    ]
+  }
+}
