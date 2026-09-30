@@ -8,7 +8,8 @@
     "family": "lexical",
     "dimensions": 5988,
     "parameters": null,
-    "interpretable_terms": true
+    "interpretable_terms": true,
+    "vectors": "calculados nesta execução"
   },
   "bow_sem_stopwords": {
     "name": "bow_sem_stopwords",
@@ -19,7 +20,8 @@
     "family": "lexical",
     "dimensions": 5921,
     "parameters": null,
-    "interpretable_terms": true
+    "interpretable_terms": true,
+    "vectors": "calculados nesta execução"
   },
   "tfidf_sem_pontuacao": {
     "name": "tfidf_sem_pontuacao",
@@ -30,7 +32,8 @@
     "family": "lexical",
     "dimensions": 5988,
     "parameters": null,
-    "interpretable_terms": true
+    "interpretable_terms": true,
+    "vectors": "calculados nesta execução"
   },
   "tfidf_sem_stopwords": {
     "name": "tfidf_sem_stopwords",
@@ -41,7 +44,8 @@
     "family": "lexical",
     "dimensions": 5921,
     "parameters": null,
-    "interpretable_terms": true
+    "interpretable_terms": true,
+    "vectors": "calculados nesta execução"
   },
   "word2vec_cbow": {
     "name": "word2vec_cbow",
@@ -52,7 +56,8 @@
     "family": "static",
     "dimensions": 300,
     "parameters": 278882100,
-    "interpretable_terms": false
+    "interpretable_terms": false,
+    "vectors": "lidos da Etapa 2"
   },
   "word2vec_skipgram": {
     "name": "word2vec_skipgram",
@@ -63,7 +68,8 @@
     "family": "static",
     "dimensions": 300,
     "parameters": 278882100,
-    "interpretable_terms": false
+    "interpretable_terms": false,
+    "vectors": "lidos da Etapa 2"
   },
   "bert_base_pt": {
     "name": "bert_base_pt",
@@ -74,7 +80,8 @@
     "family": "contextual",
     "dimensions": 768,
     "parameters": 108923136,
-    "interpretable_terms": false
+    "interpretable_terms": false,
+    "vectors": "lidos da Etapa 2"
   },
   "sentenca_minilm": {
     "name": "sentenca_minilm",
@@ -85,6 +92,7 @@
     "family": "contextual",
     "dimensions": 384,
     "parameters": 117653760,
-    "interpretable_terms": false
+    "interpretable_terms": false,
+    "vectors": "lidos da Etapa 2"
   }
 }

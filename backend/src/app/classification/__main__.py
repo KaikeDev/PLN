@@ -12,6 +12,9 @@ def main() -> int:
     build.add_argument("--input", type=Path, required=True, help="Pasta processada pela Etapa 1")
     build.add_argument("--output", type=Path, required=True, help="Pasta nova; nunca é sobrescrita")
     build.add_argument("--config", type=Path, required=True)
+    build.add_argument(
+        "--vectors", type=Path, help="Pasta verificada da Etapa 2; os vetores densos são lidos dela em vez de recalculados (opcional)"
+    )
     verify = commands.add_parser("verify", help="Validar hashes e a cobertura dos arquivos de previsões")
     verify.add_argument("--input", type=Path, required=True)
     args = parser.parse_args()
@@ -19,7 +22,7 @@ def main() -> int:
         if args.command == "build":
             from app.classification.pipeline import build as build_classification
 
-            print(json.dumps(build_classification(args.input, args.output, args.config), ensure_ascii=False))
+            print(json.dumps(build_classification(args.input, args.output, args.config, vectors=args.vectors), ensure_ascii=False))
         else:
             from app.classification.pipeline import verify as verify_classification
 

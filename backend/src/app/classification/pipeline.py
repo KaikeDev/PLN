@@ -2,7 +2,8 @@
 
 Segue as regras da Etapa 2 (ADR 0009): tudo é calculado e serializado em memória antes de criar a
 pasta de saída, que nunca é sobrescrita; o manifesto registra hashes, versões e tempos, e os arquivos
-de conteúdo não têm nada que varie entre execuções.
+de conteúdo não têm nada que varie entre execuções. Com `vectors`, as representações densas são lidas
+de uma pasta verificada da Etapa 2 em vez de recalculadas (ADR 0018).
 """
 
 import platform
@@ -46,6 +47,7 @@ from app.vectors.corpus import ProcessedCorpus
 from app.vectors.methods import METHODS, Method
 from app.vectors.pipeline import DESCRIPTOR, library_versions
 from app.vectors.space import TFIDF
+from app.vectors.stored import StoredVectors
 
 
 def prepare(
@@ -59,7 +61,7 @@ def prepare(
     return corpus, config, make_tasks(corpus, config.labels, config.folds)
 
 
-def build(processed: Path, output: Path, config_path: Path, methods: Mapping[str, Method] = METHODS) -> dict:
+def build(processed: Path, output: Path, config_path: Path, methods: Mapping[str, Method] = METHODS, vectors: Path | None = None) -> dict:
     """Avalia a referência e cada representação nas duas tarefas, numa pasta nova, e verifica o resultado.
 
     Na tarefa multiclasse, cada representação também é agrupada pelo K-Means (sem rótulos) e avaliada com os
@@ -68,6 +70,7 @@ def build(processed: Path, output: Path, config_path: Path, methods: Mapping[str
     if output.exists():
         raise FileExistsError(f"A pasta de saída já existe: {output}")
     corpus, config, tasks = prepare(processed, config_path, methods)
+    stored = StoredVectors(vectors, corpus) if vectors else None
     multiclass = tasks[0]
     folds = {task.name: splits(task, config.folds, config.random_state) for task in tasks}
     assignment = {task.name: fold_of(task, folds[task.name]) for task in tasks}
@@ -85,10 +88,16 @@ def build(processed: Path, output: Path, config_path: Path, methods: Mapping[str
     clusters: dict[str, dict] = {}
     alternatives: dict[str, dict] = {}
     seconds: dict[str, float] = {}
+    reused: list[str] = []
     descriptor = TFIDF.build(DESCRIPTOR, corpus, config.vector_config())
     for spec in config.representations:
         started = time.perf_counter()
-        representation = methods[spec.method].build(spec, corpus, config.vector_config())
+        loaded = stored.load(spec) if stored else None
+        if loaded is None:
+            representation = methods[spec.method].build(spec, corpus, config.vector_config())
+        else:
+            representation = loaded
+            reused.append(spec.name)
         source = features(representation)
         seconds[f"{spec.name}/representacao"] = round(time.perf_counter() - started, 3)
         representations[spec.name] = {
@@ -97,6 +106,7 @@ def build(processed: Path, output: Path, config_path: Path, methods: Mapping[str
             "dimensions": representation.dimensions,
             "parameters": representation.parameters(),
             "interpretable_terms": source.lexical,
+            "vectors": "lidos da Etapa 2" if loaded is not None else "calculados nesta execução",
         }
         for task in tasks:
             started = time.perf_counter()
@@ -149,6 +159,8 @@ def build(processed: Path, output: Path, config_path: Path, methods: Mapping[str
             "schema_version": 1,
             "created_at": datetime.now(UTC).isoformat(),
             "source_processed_manifest_sha256": corpus.manifest_sha256,
+            "source_vectors_manifest_sha256": stored.manifest_sha256 if stored else None,
+            "reused_representations": reused,
             "config_sha256": sha256(config_path),
             "source_identity": source_identity(),
             "python": platform.python_version(),

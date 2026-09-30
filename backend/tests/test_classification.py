@@ -16,6 +16,7 @@ from app.corpus.collect import collect
 from app.corpus.process import process
 from app.shared.artifacts import read_json_array, read_json_object, read_jsonl, write_json
 from app.vectors.corpus import ProcessedCorpus
+from app.vectors.pipeline import build as build_vectors
 from tests.test_vectors import FAKE_METHODS, REVISION
 
 DRAMA, SCIFI = 18, 878
@@ -150,6 +151,31 @@ class ClassificationTests(unittest.TestCase):
         path.write_text(path.read_text(encoding="utf-8").replace('"acertou": true', '"acertou": false', 1), encoding="utf-8")
         with self.assertRaisesRegex(ValueError, "Hash divergente"):
             verify(copy)
+
+    def test_reuses_dense_vectors_from_stage_two(self):
+        vectors = self.root / "vetores"
+        build_vectors(
+            self.processed,
+            vectors,
+            self.write_config("vetorizacao.json", {"representations": REPRESENTATIONS, "clusters": 2}),
+            methods=FAKE_METHODS,
+        )
+        output = self.root / "classificacao_reuso"
+        build(self.processed, output, self.config, methods=FAKE_METHODS, vectors=vectors)
+        manifest = read_json_object(output / "manifest.json")
+        self.assertEqual(manifest["reused_representations"], ["contextual_teste"])
+        self.assertIsNotNone(manifest["source_vectors_manifest_sha256"])
+        reused = read_json_object(output / "results.json")[MULTICLASS]["contextual_teste"]["f1_macro"]
+        original = read_json_object(self.output / "results.json")[MULTICLASS]["contextual_teste"]["f1_macro"]
+        self.assertAlmostEqual(reused, original, places=3)
+        representations = read_json_object(output / "representations.json")
+        self.assertEqual(representations["contextual_teste"]["vectors"], "lidos da Etapa 2")
+        self.assertEqual(representations["tfidf_sem_stopwords"]["vectors"], "calculados nesta execução")
+        other_revision = [REPRESENTATIONS[0], {**REPRESENTATIONS[1], "revision": "1" * 40}]
+        config = self.write_config("outra_revisao.json", {**CONFIG, "representations": other_revision})
+        output = self.root / "classificacao_outra_revisao"
+        build(self.processed, output, config, methods=FAKE_METHODS, vectors=vectors)
+        self.assertEqual(read_json_object(output / "manifest.json")["reused_representations"], [])
 
     def test_refuses_existing_output(self):
         with self.assertRaises(FileExistsError):

@@ -286,18 +286,19 @@ def _cost_section(representations: dict[str, dict]) -> list[str]:
     lines = [
         "## Custo e interpretabilidade",
         "",
-        "| Representação | Família | Dimensões | Parâmetros pré-treinados | Coeficientes legíveis como termos |",
-        "|---|---|---:|---:|---|",
+        "| Representação | Família | Dimensões | Parâmetros pré-treinados | Coeficientes legíveis como termos | Vetores |",
+        "|---|---|---:|---:|---|---|",
     ]
     for name, info in representations.items():
         parameters = f"{info['parameters']:,}".replace(",", ".") if info["parameters"] else "—"
         lines.append(
-            f"| `{name}` | {info['family']} | {info['dimensions']} | {parameters} | {'sim' if info['interpretable_terms'] else 'não'} |"
+            f"| `{name}` | {info['family']} | {info['dimensions']} | {parameters} | {'sim' if info['interpretable_terms'] else 'não'} | {info['vectors']} |"
         )
     lines += [
         "",
         "Nas lexicais, as dimensões são o vocabulário do corpus inteiro; dentro de cada dobra o vocabulário vem só das sinopses de treino. "
-        "Os tempos de construção e de validação de cada representação estão em `manifest.json` (`seconds`), porque variam entre execuções.",
+        "Vetores densos lidos da Etapa 2 não são recalculados: a pasta de vetores é verificada e precisa vir do mesmo corpus e da mesma especificação "
+        "de modelo. Os tempos de construção e de validação de cada representação estão em `manifest.json` (`seconds`), porque variam entre execuções.",
         "",
     ]
     return lines

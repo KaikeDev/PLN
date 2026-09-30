@@ -1,4 +1,4 @@
-"""Clusterização × classificação: o K-Means da Etapa 2 sobre as mesmas sinopses da tarefa multiclasse.
+"""Clusterização × classificação: o mesmo K-Means da Etapa 2 (`app.vectors.clusters`) sobre as sinopses da tarefa multiclasse.
 
 O K-Means não vê rótulos: agrupa pela proximidade no espaço da representação, e os gêneros só entram
 depois, para medir quanto os grupos coincidem com as classes. ARI, NMI e pureza não dependem do nome
@@ -9,15 +9,13 @@ otimista para quem quisesse usar os grupos como classes.
 
 import numpy as np
 from scipy.optimize import linear_sum_assignment
-from sklearn.cluster import KMeans
 from sklearn.metrics import accuracy_score, adjusted_rand_score, f1_score, normalized_mutual_info_score
 
 from app.classification.dataset import Task
+from app.vectors.clusters import descriptive_terms, fit_kmeans
 from app.vectors.corpus import ProcessedCorpus
 from app.vectors.metrics import purity, rounded
 from app.vectors.space import LexicalSpace, Representation
-
-CLOSEST = 3
 
 
 def agreement(truth: np.ndarray, groups: np.ndarray) -> dict:
@@ -52,28 +50,22 @@ def cluster(
     próximas do centroide, como na Etapa 2, para que a interpretação não dependa da representação.
     """
     size = len(task.labels)
-    unit = representation.unit[task.rows]
-    model = KMeans(n_clusters=size, n_init=10, random_state=random_state)
-    groups = model.fit_predict(unit)
-    distances = model.transform(unit)
+    grouping = fit_kmeans(representation.unit[task.rows], size, random_state)
+    groups = grouping.labels
     table = contingency(task.targets, groups, size)
     mapping = best_mapping(table)
     mapped = np.array([mapping[group] for group in groups], dtype=np.int64)
     details = []
     for group in range(size):
-        members = np.flatnonzero(groups == group)
-        rows = task.rows[members]
-        profile = np.asarray(descriptor.unit[rows].mean(axis=0)).ravel() if len(rows) else np.zeros(descriptor.dimensions)
-        top = np.lexsort((np.arange(len(profile)), -profile))[:top_terms]
-        closest = members[np.argsort(distances[members, group], kind="stable")][:CLOSEST]
+        members = grouping.members(group)
         details.append(
             {
                 "grupo": group,
                 "tamanho": len(members),
                 "genero_associado": task.label_names[mapping[group]],
                 "generos": {name: int(count) for name, count in zip(task.label_names, table[group], strict=True)},
-                "termos": [descriptor.terms[column] for column in top],
-                "mais_proximos_do_centroide": [corpus.documents[task.rows[member]].title for member in closest],
+                "termos": descriptive_terms(descriptor, task.rows[members], top_terms),
+                "mais_proximos_do_centroide": [corpus.documents[task.rows[member]].title for member in grouping.closest(group)],
             }
         )
     return {

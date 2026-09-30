@@ -102,9 +102,9 @@ F1 macro de cada classificador nas mesmas dobras externas e com a mesma prepara�
 | `bow_sem_stopwords` | 56,4% | 61,3% | 56,1% | 47,4% | 53,3% |
 | `tfidf_sem_pontuacao` | 59,3% | 60,1% | 60,4% | 43,5% | 53,3% |
 | `tfidf_sem_stopwords` | 59,2% | 58,9% | 59,4% | 49,4% | 53,3% |
-| `word2vec_cbow` | 67,6% | — | 66,5% | 60,8% | 61,8% |
+| `word2vec_cbow` | 67,6% | — | 66,5% | 60,5% | 61,8% |
 | `word2vec_skipgram` | 71,0% | — | 70,3% | 65,4% | 61,1% |
-| `bert_base_pt` | 70,2% | — | 70,0% | 67,9% | 65,2% |
+| `bert_base_pt` | 70,2% | — | 70,0% | 68,2% | 65,2% |
 | `sentenca_minilm` | 66,1% | — | 67,8% | 66,9% | 67,7% |
 
 A regressão logística tem o maior F1 macro em 3 de 8 representações. Com ela, trocar a representação muda o F1 macro em até 24,9 pontos; na mesma representação, trocar o classificador muda em média 11,9 pontos (até 30,9). A melhor combinação medida é `word2vec_skipgram` + Regressão logística (71,0%).
@@ -182,18 +182,18 @@ Filmes da tarefa multiclasse em que o modelo deu a maior probabilidade a um gên
 
 ## Custo e interpretabilidade
 
-| Representação | Família | Dimensões | Parâmetros pré-treinados | Coeficientes legíveis como termos |
-|---|---|---:|---:|---|
-| `bow_sem_pontuacao` | lexical | 5988 | — | sim |
-| `bow_sem_stopwords` | lexical | 5921 | — | sim |
-| `tfidf_sem_pontuacao` | lexical | 5988 | — | sim |
-| `tfidf_sem_stopwords` | lexical | 5921 | — | sim |
-| `word2vec_cbow` | static | 300 | 278.882.100 | não |
-| `word2vec_skipgram` | static | 300 | 278.882.100 | não |
-| `bert_base_pt` | contextual | 768 | 108.923.136 | não |
-| `sentenca_minilm` | contextual | 384 | 117.653.760 | não |
+| Representação | Família | Dimensões | Parâmetros pré-treinados | Coeficientes legíveis como termos | Vetores |
+|---|---|---:|---:|---|---|
+| `bow_sem_pontuacao` | lexical | 5988 | — | sim | calculados nesta execução |
+| `bow_sem_stopwords` | lexical | 5921 | — | sim | calculados nesta execução |
+| `tfidf_sem_pontuacao` | lexical | 5988 | — | sim | calculados nesta execução |
+| `tfidf_sem_stopwords` | lexical | 5921 | — | sim | calculados nesta execução |
+| `word2vec_cbow` | static | 300 | 278.882.100 | não | lidos da Etapa 2 |
+| `word2vec_skipgram` | static | 300 | 278.882.100 | não | lidos da Etapa 2 |
+| `bert_base_pt` | contextual | 768 | 108.923.136 | não | lidos da Etapa 2 |
+| `sentenca_minilm` | contextual | 384 | 117.653.760 | não | lidos da Etapa 2 |
 
-Nas lexicais, as dimensões são o vocabulário do corpus inteiro; dentro de cada dobra o vocabulário vem só das sinopses de treino. Os tempos de construção e de validação de cada representação estão em `manifest.json` (`seconds`), porque variam entre execuções.
+Nas lexicais, as dimensões são o vocabulário do corpus inteiro; dentro de cada dobra o vocabulário vem só das sinopses de treino. Vetores densos lidos da Etapa 2 não são recalculados: a pasta de vetores é verificada e precisa vir do mesmo corpus e da mesma especificação de modelo. Os tempos de construção e de validação de cada representação estão em `manifest.json` (`seconds`), porque variam entre execuções.
 
 ## Limitações
 

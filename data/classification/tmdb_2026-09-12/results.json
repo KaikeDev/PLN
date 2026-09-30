@@ -460,10 +460,10 @@
       "ari": 0.326954,
       "nmi": 0.308341,
       "pureza": 0.676923,
-      "log_loss": 0.854474,
+      "log_loss": 0.854473,
       "confianca_media": {
         "acertos": 0.620318,
-        "erros": 0.508006
+        "erros": 0.508005
       },
       "matriz_confusao": [
         [
@@ -543,7 +543,7 @@
       "ari": 0.381087,
       "nmi": 0.35814,
       "pureza": 0.710769,
-      "log_loss": 0.778788,
+      "log_loss": 0.778789,
       "confianca_media": {
         "acertos": 0.656479,
         "erros": 0.513764
@@ -626,10 +626,10 @@
       "ari": 0.369369,
       "nmi": 0.348841,
       "pureza": 0.701538,
-      "log_loss": 0.724745,
+      "log_loss": 0.724746,
       "confianca_media": {
         "acertos": 0.749384,
-        "erros": 0.561947
+        "erros": 0.561946
       },
       "matriz_confusao": [
         [

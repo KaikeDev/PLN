@@ -497,15 +497,15 @@
       ]
     },
     "floresta_aleatoria": {
-      "acuracia": 0.612308,
-      "f1_macro": 0.607683,
+      "acuracia": 0.609231,
+      "f1_macro": 0.605175,
       "f1_macro_dobras": {
-        "media": 0.605104,
-        "desvio": 0.041003
+        "media": 0.602539,
+        "desvio": 0.042376
       },
       "f1_por_genero": {
-        "Drama": 0.65625,
-        "Comédia": 0.502994,
+        "Drama": 0.649215,
+        "Comédia": 0.5,
         "Terror": 0.569106,
         "Ficção científica": 0.702381
       },
@@ -584,15 +584,15 @@
     },
     "floresta_aleatoria": {
       "acuracia": 0.658462,
-      "f1_macro": 0.654045,
+      "f1_macro": 0.654239,
       "f1_macro_dobras": {
-        "media": 0.653269,
-        "desvio": 0.038833
+        "media": 0.653892,
+        "desvio": 0.039716
       },
       "f1_por_genero": {
         "Drama": 0.666667,
-        "Comédia": 0.623377,
-        "Terror": 0.609375,
+        "Comédia": 0.619355,
+        "Terror": 0.614173,
         "Ficção científica": 0.716763
       },
       "parametro_escolhido": [
@@ -669,17 +669,17 @@
       ]
     },
     "floresta_aleatoria": {
-      "acuracia": 0.68,
-      "f1_macro": 0.679051,
+      "acuracia": 0.683077,
+      "f1_macro": 0.681703,
       "f1_macro_dobras": {
-        "media": 0.674375,
-        "desvio": 0.067642
+        "media": 0.677035,
+        "desvio": 0.064916
       },
       "f1_por_genero": {
-        "Drama": 0.677249,
-        "Comédia": 0.590604,
+        "Drama": 0.687831,
+        "Comédia": 0.594595,
         "Terror": 0.723077,
-        "Ficção científica": 0.725275
+        "Ficção científica": 0.721311
       },
       "parametro_escolhido": [
         null,
@@ -756,16 +756,16 @@
     },
     "floresta_aleatoria": {
       "acuracia": 0.667692,
-      "f1_macro": 0.66922,
+      "f1_macro": 0.669422,
       "f1_macro_dobras": {
-        "media": 0.669571,
-        "desvio": 0.055885
+        "media": 0.669981,
+        "desvio": 0.05593
       },
       "f1_por_genero": {
-        "Drama": 0.624339,
-        "Comédia": 0.567901,
-        "Terror": 0.687023,
-        "Ficção científica": 0.797619
+        "Drama": 0.621053,
+        "Comédia": 0.571429,
+        "Terror": 0.692308,
+        "Ficção científica": 0.792899
       },
       "parametro_escolhido": [
         null,
