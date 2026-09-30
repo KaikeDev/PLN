@@ -65,7 +65,8 @@ async function buscarFilmes(texto, ano, modo) {
   const params = new URLSearchParams({ q: texto, modo });
   if (ano) params.set("ano", ano);
   const dados = await obterJson(`/pesquisa?${params}`, "Falha ao buscar filmes.");
-  return Array.isArray(dados.resultados) ? dados.resultados : [];
+  const aviso = typeof dados.interpretacao?.aviso === "string" ? dados.interpretacao.aviso : "";
+  return { filmes: Array.isArray(dados.resultados) ? dados.resultados : [], aviso };
 }
 
 function buscarDetalhes(filmeId) {
@@ -92,9 +93,9 @@ function criarCard(filme) {
   return card;
 }
 
-function renderizarResultados(filmes) {
+function renderizarResultados({ filmes, aviso }) {
   elResultados.replaceChildren(...filmes.filter((filme) => Number.isInteger(filme.id)).map(criarCard));
-  if (filmes.length === 0) elMensagem.textContent = "Nenhum filme encontrado.";
+  if (filmes.length === 0) elMensagem.textContent = aviso ? `${aviso}.` : "Nenhum filme encontrado.";
 }
 
 function criarDetalhe(filme) {

@@ -379,7 +379,7 @@
       {
         "id": "parafrase_cachorro",
         "expected": "proximas",
-        "cosine": 0.677162,
+        "cosine": 0.677163,
         "null_vector": false,
         "out_of_vocabulary": [],
         "explanation": []

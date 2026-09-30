@@ -23,6 +23,7 @@ O código não tem comentários fora de docstrings. Quando uma docstring cita �
 | [0015](#0015--bert-cbow--skip-gram-e-polissemia-aula-7) | BERT, CBOW × skip-gram e polissemia (Aula 7) | PLN |
 | [0016](#0016--política-do-gitignore) | Política do `.gitignore` | Repositório |
 | [0017](#0017--jev-e-tf-idf--regressão-logística-aula-8) | Jev e TF-IDF + regressão logística (Aula 8) | PLN |
+| [0018](#0018--busca-por-tema-tf-idf--embedding-de-sentença) | Busca por tema: TF-IDF + embedding de sentença | PLN |
 
 ---
 
@@ -217,3 +218,16 @@ O código não tem comentários fora de docstrings. Quando uma docstring cita �
 **Por quê.** A Aula 8 contrapõe decisões estruturadas sem treino ao pipeline clássico. Os gêneros de coleta são o único rótulo do corpus que a sinopse expressa, por isso não há Score. Cada chamada é paga e o alias do modelo muda, então as respostas brutas precisam ser guardadas e reavaliadas sem novas chamadas.
 
 **Consequência.** A amostra pequena ilustra a comparação, mas não é teste estatístico. A redação das perguntas faz parte da tarefa. O `uv.lock` precisa incluir o extra `jev`. [Detalhes](docs/adr/0017-aula8-jev-classificacao-de-genero.md)
+
+## 0018 — Busca por tema: TF-IDF + embedding de sentença
+
+**Decisão.**
+
+- Ampliar as consultas anotadas de 2 para 20 e acrescentar MAP e precisão @5 à análise de busca.
+- Comparar as oito representações e as combinações entre elas.
+- Usar no site 0,3 × `tfidf_sem_stopwords` + 0,7 × `sentenca_minilm`, com cada cosseno dividido pelo maior da consulta.
+- Criar o modo `sinopse`, que aplica os filtros das regras (gênero, período, nota, negação) aos filmes da amostra; o modo `auto` o usa quando o texto não é um título exato.
+
+**Por quê.** O embedding de sentença foi o melhor sozinho (MAP de 0,56) e acerta o tema sem palavras em comum. O TF-IDF acerta palavras-chave fortes, como "zumbis" e "casa assombrada". Juntos, chegam a MAP de 0,61. O ganho se manteve quando o peso foi escolhido numa metade das consultas e medido na outra (95% de 500 divisões). O skip-gram quase não somava e custaria mais um modelo.
+
+**Consequência.** A busca por tema cobre só os 428 filmes da amostra, e a API passa a depender do extra `semantico`; sem ele, o modo `sinopse` avisa que está indisponível. [Detalhes](docs/adr/0018-busca-hibrida-tfidf-e-sentenca.md)

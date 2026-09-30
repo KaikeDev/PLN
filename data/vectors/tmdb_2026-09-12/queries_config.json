@@ -14,5 +14,246 @@
       603
     ],
     "note": "Caso da orientação do professor: “simulação” não aparece literalmente na sinopse coletada de Matrix."
+  },
+  {
+    "id": "acao_maquinas",
+    "text": "quero um filme de ação sobre máquinas",
+    "relevant_ids": [
+      218,
+      280,
+      603,
+      604,
+      2048,
+      5548,
+      39254,
+      68726,
+      99861,
+      127585,
+      177572
+    ],
+    "note": "Exemplo do site. Relevantes: filmes com gênero Ação no TMDB cuja sinopse trata de máquinas, robôs, ciborgues ou inteligência artificial."
+  },
+  {
+    "id": "robo_amizade",
+    "text": "robô que cria laços de amizade com uma criança ou com animais",
+    "relevant_ids": [
+      280,
+      10386,
+      10681,
+      177572,
+      1184918
+    ],
+    "note": "Tema afetivo com robôs; poucas sinopses usam “amizade” e “robô” juntas."
+  },
+  {
+    "id": "ia_rebelde",
+    "text": "inteligência artificial que se volta contra a humanidade",
+    "relevant_ids": [
+      78,
+      218,
+      603,
+      2048,
+      99861,
+      1064028,
+      1084199
+    ],
+    "note": "Máquinas ou androides que se rebelam ou manipulam humanos."
+  },
+  {
+    "id": "viagem_no_tempo",
+    "text": "viagem no tempo para mudar o passado",
+    "relevant_ids": [
+      63,
+      105,
+      165,
+      218,
+      280,
+      14139,
+      45612,
+      127585,
+      137113
+    ],
+    "note": "Inclui ciclos temporais em que o personagem volta ao mesmo momento para mudar o desfecho."
+  },
+  {
+    "id": "invasao_alienigena",
+    "text": "alienígenas invadem e atacam a Terra",
+    "relevant_ids": [
+      74,
+      563,
+      602,
+      9276,
+      137113
+    ],
+    "note": "Invasão ou guerra contra alienígenas; visitas pacíficas não contam."
+  },
+  {
+    "id": "casa_assombrada",
+    "text": "família aterrorizada por espíritos em uma casa assombrada",
+    "relevant_ids": [
+      1933,
+      4011,
+      49018,
+      91586,
+      138843,
+      259693,
+      406563
+    ],
+    "note": "Assombração de casa ou de família por espíritos; inclui a comédia em que fantasmas tentam assustar os novos moradores."
+  },
+  {
+    "id": "possessao",
+    "text": "possessão demoníaca e exorcismo",
+    "relevant_ids": [
+      561,
+      764,
+      765,
+      19994,
+      91586,
+      109428,
+      423108
+    ],
+    "note": "Personagens possuídos por demônios ou exorcistas."
+  },
+  {
+    "id": "zumbis",
+    "text": "sobreviventes em um mundo tomado por zumbis",
+    "relevant_ids": [
+      170,
+      747,
+      924,
+      1562,
+      6479,
+      19908,
+      72190,
+      396535,
+      1100988
+    ],
+    "note": "Inclui infectados e mutantes que agem como zumbis, mesmo quando a sinopse não usa a palavra “zumbi” (Extermínio, Eu Sou a Lenda)."
+  },
+  {
+    "id": "assassino_mascarado",
+    "text": "assassino mascarado persegue um grupo de adolescentes",
+    "relevant_ids": [
+      4232,
+      4233,
+      4247,
+      4488,
+      13207,
+      934433
+    ],
+    "note": "Slashers com jovens como vítimas; inclui a paródia Todo Mundo em Pânico."
+  },
+  {
+    "id": "vampiros",
+    "text": "vampiros",
+    "relevant_ids": [
+      628,
+      1246049,
+      1547,
+      6114,
+      7131,
+      36586,
+      36647,
+      36648,
+      76492
+    ],
+    "note": "Consulta de uma palavra. Crepúsculo e Um Drink no Inferno ficam fora porque as sinopses coletadas não revelam os vampiros."
+  },
+  {
+    "id": "astronautas_perdidos",
+    "text": "astronautas perdidos no espaço lutando para sobreviver",
+    "relevant_ids": [
+      679,
+      8413,
+      70981,
+      157336,
+      286217,
+      945961
+    ],
+    "note": "Tripulações ou astronautas isolados no espaço ou em outro planeta."
+  },
+  {
+    "id": "segunda_guerra",
+    "text": "soldados lutando na Segunda Guerra Mundial",
+    "relevant_ids": [
+      857,
+      16869,
+      25237,
+      228150,
+      324786,
+      374720
+    ],
+    "note": "Combatentes na guerra; dramas da guerra sem soldados em combate (O Pianista, O Menino do Pijama Listrado) não contam."
+  },
+  {
+    "id": "comedia_romantica",
+    "text": "comédia romântica leve sobre um casal que se apaixona",
+    "relevant_ids": [
+      114,
+      4951,
+      18240,
+      19404,
+      313369,
+      746036
+    ],
+    "note": "Romance como trama principal em tom de comédia."
+  },
+  {
+    "id": "prisao_injusta",
+    "text": "homem preso injustamente sobrevivendo na prisão",
+    "relevant_ids": [
+      278,
+      497,
+      53653
+    ],
+    "note": "Vida dentro da prisão; filmes em que o personagem só sai da prisão não contam."
+  },
+  {
+    "id": "mafia",
+    "text": "gângsteres e a máfia",
+    "relevant_ids": [
+      111,
+      242,
+      311,
+      680,
+      769,
+      1422,
+      10775,
+      522627,
+      718930
+    ],
+    "note": "Crime organizado como tema central."
+  },
+  {
+    "id": "mundo_falso",
+    "text": "personagem descobre que vive em um mundo falso",
+    "relevant_ids": [
+      603,
+      37165,
+      550988
+    ],
+    "note": "Variação do caso Matrix: nenhuma das três sinopses usa as palavras “mundo falso”."
+  },
+  {
+    "id": "enganar_a_morte",
+    "text": "jovens escapam de um acidente, mas a morte volta para buscá-los",
+    "relevant_ids": [
+      9286,
+      9358,
+      9532,
+      55779,
+      574475
+    ],
+    "note": "Série Premonição; parte das sinopses cita “Morte”, e outras só o pesadelo e o destino."
+  },
+  {
+    "id": "dinossauros",
+    "text": "dinossauros recriados a partir de DNA",
+    "relevant_ids": [
+      329,
+      1234821
+    ],
+    "note": "Controle literal: as duas sinopses usam “dinossauros” e “DNA”/“genético”."
   }
 ]

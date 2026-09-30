@@ -18,6 +18,7 @@ Na orientação em vídeo de 31/08/2026, o professor pede representações suces
 | Pesquisa auxiliar | Regras léxicas com limiares nomeados; título exato tem prioridade no modo automático | [0005](adr/0005-pesquisa-por-regras-lexicas.md), [0006](adr/0006-prioridade-de-titulo-exato.md) |
 | Vetorização | Tokens da Etapa 1, cosseno com norma L2, K-Means com k = 4, SVD 2D, modelos com revisão fixa | [0011](adr/0011-formatos-e-modelos-seguros.md), [0012](adr/0012-parametros-do-experimento-vetorial.md) |
 | Aula 7 | BERTimbau, word2vec CBOW × skip-gram, sondas de polissemia e síntese comparativa | [0015](adr/0015-aula7-bert-cbow-e-polissemia.md) |
+| Busca por tema | 0,3 × TF-IDF sem stopwords + 0,7 × embedding de sentença, escolhida em 20 consultas anotadas; filtros das regras aplicados aos filmes da amostra | [0018](adr/0018-busca-hibrida-tfidf-e-sentenca.md) |
 | Aula 8 | Gênero pelo Jev (Choice + um Noul por gênero, sem treino) × TF-IDF + regressão logística treinada fora da amostra; 120 filmes; respostas guardadas e reaproveitáveis | [0017](adr/0017-aula8-jev-classificacao-de-genero.md) |
 | Repositório | Sem comentários fora de docstrings; `.gitignore` para segredos, modelos, dados não entregues e arquivos locais | [0001](adr/0001-registrar-decisoes-em-adrs.md), [0016](adr/0016-politica-do-gitignore.md) |
 | Código | Camadas com portas e adaptadores; identificadores em inglês e contrato em português; ruff, mypy e CI | [0004](adr/0004-arquitetura-em-camadas.md), [0008](adr/0008-idioma-do-codigo-e-do-contrato.md), [0013](adr/0013-ferramentas-de-qualidade.md) |
@@ -28,7 +29,7 @@ Na orientação em vídeo de 31/08/2026, o professor pede representações suces
 - Não há reconhecimento automático de nomes próprios. A versão em minúsculas remove uma pista de identificação de nomes, por isso a versão original é preservada.
 - Não há retomada automática da coleta: falhas parciais ficam no manifesto e a próxima execução usa outra pasta. Uma interrupção durante o processamento deixa a pasta sem manifesto completo, portanto inválida como entrega.
 - A pesquisa auxiliar não interpreta toda a semântica da negação, títulos alternativos nem perguntas com contexto adicional. "Depois de X" é inclusivo por convenção do protótipo, a refinar em avaliação futura.
-- As consultas anotadas da Etapa 2 são poucas e a lista de relevantes é parcial.
+- As 20 consultas anotadas foram escritas e julgadas pela equipe; servem para comparar representações, não como avaliação com usuários. A busca por tema cobre só os filmes da amostra.
 - Na Aula 8, o rótulo de gênero é o recorte de coleta, e muitos filmes têm gêneros fora das quatro opções (ação, romance, suspense). O Jev é um serviço externo e pago: uma nova execução depende da chave e pode usar outro modelo por trás do alias `jev-latest`. A redação das perguntas faz parte da tarefa.
 
 ## Próximas experiências

@@ -11,12 +11,14 @@ from sklearn.preprocessing import normalize
 
 from app.corpus.collect import collect
 from app.corpus.process import process
+from app.infra.synopsis.index import CorpusSynopsisIndex
 from app.shared.artifacts import read_json_object, read_jsonl, write_json
 from app.vectors.config import load_config, load_queries
 from app.vectors.corpus import ProcessedCorpus
 from app.vectors.embeddings import ContextualMethod, Word2VecMethod
+from app.vectors.hybrid import HybridIndex, SearchConfig, WeightedRepresentation, evaluate, load_search_config
 from app.vectors.methods import METHODS
-from app.vectors.metrics import genre_agreement, purity, reciprocal_rank
+from app.vectors.metrics import average_precision, genre_agreement, precision_at_k, purity, reciprocal_rank
 from app.vectors.pipeline import build, verify
 from app.vectors.probes import contains_word, load_probes
 from app.vectors.retrieval import search
@@ -413,11 +415,74 @@ class VectorTests(unittest.TestCase):
         self.assertIn("&lt;script&gt;", svg)
         self.assertIn("B &amp; C", svg)
 
+    def hybrid(self, lexical=0.3, semantic=0.7):
+        config = SearchConfig(
+            (WeightedRepresentation("tfidf_sem_stopwords", lexical), WeightedRepresentation("contextual_teste", semantic))
+        )
+        return HybridIndex.build(self.processed, self.config, config, FAKE_METHODS)
+
+    def test_hybrid_combines_literal_and_thematic_matches(self):
+        index = self.hybrid()
+        self.assertEqual(index.rank("programador conectado a um sistema de computadores")[0][0], 5)
+        thematic = index.rank("simulação da realidade")
+        self.assertIn(thematic[0][0], {5, 6, 7, 8})
+        self.assertNotIn(1, [movie_id for movie_id, _ in thematic[:4]])
+        scores = [score for _, score in thematic]
+        self.assertEqual(scores, sorted(scores, reverse=True))
+        self.assertLessEqual(scores[0], 1.0)
+
+    def test_hybrid_normalizes_each_representation_by_its_best_cosine(self):
+        index = self.hybrid()
+        for name in ("tfidf_sem_stopwords", "contextual_teste"):
+            self.assertAlmostEqual(index.only(name).rank("sistema artificial de computadores")[0][1], 1.0)
+        self.assertEqual(
+            self.hybrid(1.0, 0.0001).rank("sistema artificial")[0][0], index.only("tfidf_sem_stopwords").rank("sistema artificial")[0][0]
+        )
+
+    def test_hybrid_evaluation_compares_members_and_combination(self):
+        report = evaluate(self.hybrid(), load_queries(self.queries), k=3)
+        self.assertEqual(set(report["results"]), {"tfidf_sem_stopwords", "contextual_teste", "combinacao"})
+        self.assertEqual(report["weights"], {"tfidf_sem_stopwords": 0.3, "contextual_teste": 0.7})
+        literal = report["results"]["combinacao"]["queries"]["literal"]
+        self.assertEqual(literal["reciprocal_rank"], 1.0)
+        self.assertIn("mean_average_precision", report["results"]["contextual_teste"])
+
+    def test_search_config_is_validated(self):
+        valid = {"representations": [{"name": "tfidf_sem_stopwords", "weight": 0.3}, {"name": "contextual_teste", "weight": 0.7}]}
+        self.assertEqual(len(load_search_config(self.write_config("busca.json", valid)).representations), 2)
+        invalid = {
+            "soma": {"representations": [{"name": "tfidf_sem_stopwords", "weight": 0.5}]},
+            "repetida": {"representations": [{"name": "a", "weight": 0.5}, {"name": "a", "weight": 0.5}]},
+            "campo": {**valid, "extra": 1},
+            "nome": {"representations": [{"name": "../x", "weight": 1}]},
+        }
+        for name, value in invalid.items():
+            with self.subTest(name), self.assertRaises(ValueError):
+                load_search_config(self.write_config(f"busca_{name}.json", value))
+        missing = SearchConfig((WeightedRepresentation("inexistente", 1.0),))
+        with self.assertRaisesRegex(ValueError, "ausentes"):
+            HybridIndex.build(self.processed, self.config, missing, FAKE_METHODS)
+
+    def test_synopsis_index_serves_display_fields_of_verified_sample(self):
+        search_config = self.write_config("busca_site.json", {"representations": [{"name": "contextual_teste", "weight": 1}]})
+        index = CorpusSynopsisIndex.load(self.processed, self.root / "raw", self.config, search_config, FAKE_METHODS)
+        movie_id = index.rank("robôs dominam o planeta")[0][0]
+        self.assertEqual(index.movie(movie_id)["id"], movie_id)
+        self.assertEqual(
+            set(index.movie(movie_id)),
+            {"id", "title", "original_title", "overview", "poster_path", "release_date", "vote_average", "vote_count", "genre_ids"},
+        )
+        with self.assertRaisesRegex(ValueError, "sem dados de exibição"):
+            CorpusSynopsisIndex(self.hybrid(), {})
+
     def test_pure_metrics(self):
         self.assertEqual(purity([1, 1, 2, 2], [0, 0, 0, 1]), 0.75)
         self.assertEqual(genre_agreement(frozenset({18}), [frozenset({18, 35}), frozenset({878})]), 0.5)
         self.assertEqual(reciprocal_rank(4), 0.25)
         self.assertEqual(reciprocal_rank(None), 0.0)
+        self.assertAlmostEqual(average_precision([1, 3, None]), (1 / 1 + 2 / 3) / 3)
+        self.assertEqual(average_precision([None, None]), 0.0)
+        self.assertEqual(precision_at_k([1, 4, 6, None], 5), 0.4)
 
 
 if __name__ == "__main__":

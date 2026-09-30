@@ -1,4 +1,4 @@
-"""CLI: python -m app.vectors build/verify/query."""
+"""CLI: python -m app.vectors build/verify/query/hybrid."""
 
 import argparse
 import json
@@ -31,6 +31,14 @@ def main() -> int:
     query.add_argument("--representation", required=True)
     query.add_argument("--text", required=True)
     query.add_argument("--k", type=bounded_k, default=5)
+    hybrid = commands.add_parser("hybrid", help="Busca híbrida: avaliar a combinação nas consultas anotadas ou buscar uma frase")
+    hybrid.add_argument("--input", type=Path, required=True, help="Pasta processada pela Etapa 1")
+    hybrid.add_argument("--config", type=Path, required=True, help="Configuração vetorial com as representações combinadas")
+    hybrid.add_argument("--search", type=Path, required=True, help="Pesos da busca (config/busca.json)")
+    target = hybrid.add_mutually_exclusive_group(required=True)
+    target.add_argument("--queries", type=Path, help="Consultas anotadas: compara cada representação com a combinação")
+    target.add_argument("--text", help="Frase a buscar")
+    hybrid.add_argument("--k", type=bounded_k, default=5)
     args = parser.parse_args()
     try:
         if args.command == "build":
@@ -41,6 +49,19 @@ def main() -> int:
             from app.vectors.pipeline import verify as verify_vectors
 
             print(json.dumps(verify_vectors(args.input), ensure_ascii=False))
+        elif args.command == "hybrid":
+            from app.vectors.config import load_queries
+            from app.vectors.hybrid import HybridIndex, evaluate, load_search_config
+
+            index = HybridIndex.build(args.input, args.config, load_search_config(args.search))
+            if args.queries:
+                print(json.dumps(evaluate(index, load_queries(args.queries), args.k), ensure_ascii=False, indent=2))
+            else:
+                ranked = index.rank(args.text)[: args.k]
+                top = [
+                    {"id": movie_id, "title": index.corpus.by_id[movie_id].title, "score": round(score, 4)} for movie_id, score in ranked
+                ]
+                print(json.dumps(top, ensure_ascii=False, indent=2))
         else:
             from app.vectors.pipeline import build_one
             from app.vectors.retrieval import search

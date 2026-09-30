@@ -28,3 +28,14 @@ def genre_agreement(genres: frozenset[int], others: Sequence[frozenset[int]]) ->
 
 def reciprocal_rank(rank: int | None) -> float:
     return 1 / rank if rank else 0.0
+
+
+def average_precision(ranks: Sequence[int | None]) -> float:
+    """Média da precisão na posição de cada relevante; relevantes não recuperados contam como zero."""
+    found = sorted(rank for rank in ranks if rank)
+    return sum(position / rank for position, rank in enumerate(found, 1)) / len(ranks) if ranks else 0.0
+
+
+def precision_at_k(ranks: Sequence[int | None], k: int) -> float:
+    """Fração dos k primeiros resultados que são relevantes."""
+    return sum(1 for rank in ranks if rank and rank <= k) / k

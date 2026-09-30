@@ -47,6 +47,23 @@ class ExtractedFilters:
         """Verdadeiro quando o limite inicial é posterior ao final."""
         return bool(self.released_after and self.released_before and self.released_after > self.released_before)
 
+    def accepts(self, movie: dict) -> bool:
+        """Verdadeiro quando o filme (campos do TMDB) satisfaz as mesmas preferências da descoberta.
+
+        Gêneros incluídos valem com qualquer um (OU); datas e nota sem valor no filme não passam num filtro.
+        """
+        genres = set(movie.get("genre_ids") or ())
+        date = movie.get("release_date") or ""
+        rating, votes = movie.get("vote_average"), movie.get("vote_count")
+        return (
+            (not self.genres or bool(genres & set(self.genres)))
+            and not genres & set(self.excluded_genres)
+            and (self.released_after is None or (bool(date) and date >= self.released_after))
+            and (self.released_before is None or (bool(date) and date <= self.released_before))
+            and (self.min_rating is None or (rating is not None and rating >= self.min_rating))
+            and (self.min_votes is None or (votes is not None and votes >= self.min_votes))
+        )
+
     def to_discover_query(self) -> DiscoverQuery:
         """Consulta de descoberta equivalente."""
         return DiscoverQuery(

@@ -58,3 +58,15 @@ class MovieDetailsProvider(Protocol):
 
 class MovieSource(MovieCatalog, MovieDetailsProvider, Protocol):
     """Catálogo completo: pesquisa e fichas de filmes."""
+
+
+class SynopsisIndex(Protocol):
+    """Sinopses de um corpus ordenadas por similaridade de tema com um texto livre."""
+
+    def rank(self, text: str) -> list[tuple[int, float]]:
+        """Pares (id, pontuação) com pontuação positiva, do mais ao menos parecido."""
+        ...
+
+    def movie(self, movie_id: int) -> dict:
+        """Filme do corpus com os campos de resumo do TMDB (título, sinopse, pôster, data, nota, gêneros)."""
+        ...

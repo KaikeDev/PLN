@@ -14,7 +14,7 @@ from sklearn.metrics import adjusted_rand_score, normalized_mutual_info_score, s
 
 from app.vectors import report
 from app.vectors.context import AnalysisContext
-from app.vectors.metrics import genre_agreement, purity, reciprocal_rank, rounded
+from app.vectors.metrics import average_precision, genre_agreement, precision_at_k, purity, reciprocal_rank, rounded
 from app.vectors.retrieval import search
 from app.vectors.space import Representation, count_nonzero, encoded_cosine
 from app.vectors.svg import render_projection
@@ -332,7 +332,8 @@ class Retrieval(Analysis):
                 }
                 for movie_id in query.relevant_ids
             ]
-            first = min((item["rank"] for item in relevant if item["rank"] is not None), default=None)
+            ranks = [item["rank"] for item in relevant]
+            first = min((rank for rank in ranks if rank is not None), default=None)
             items.append(
                 {
                     "id": query.id,
@@ -345,6 +346,8 @@ class Retrieval(Analysis):
                     "relevant": relevant,
                     "reciprocal_rank": rounded(reciprocal_rank(first)),
                     "hit_at_k": first is not None and first <= k,
+                    "average_precision": rounded(average_precision(ranks)),
+                    "precision_at_k": rounded(precision_at_k(ranks, k)),
                     "top": result.top(corpus, k),
                 }
             )
@@ -352,6 +355,8 @@ class Retrieval(Analysis):
             "k": k,
             "mean_reciprocal_rank": rounded(mean(item["reciprocal_rank"] for item in items)) if items else None,
             "hit_rate_at_k": rounded(mean(item["hit_at_k"] for item in items)) if items else None,
+            "mean_average_precision": rounded(mean(item["average_precision"] for item in items)) if items else None,
+            "mean_precision_at_k": rounded(mean(item["precision_at_k"] for item in items)) if items else None,
             "queries": items,
         }
 

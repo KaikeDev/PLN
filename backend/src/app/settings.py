@@ -12,10 +12,16 @@ from pydantic import Field, SecretStr
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 BACKEND_DIR = Path(__file__).resolve().parents[2]
+REPOSITORY_DIR = BACKEND_DIR.parent
+SAMPLE = "tmdb_2026-09-12"
 
 
 class Settings(BaseSettings):
-    """Parâmetros de integração com o TMDB e o Jev e de exposição da API local."""
+    """Parâmetros de integração com o TMDB e o Jev, da busca por sinopse e de exposição da API local.
+
+    A busca por sinopse usa a amostra entregue e as configurações do repositório; `synopsis_search`
+    falso desliga o carregamento dos modelos na inicialização.
+    """
 
     model_config = SettingsConfigDict(env_file=BACKEND_DIR / ".env", env_file_encoding="utf-8", extra="ignore")
 
@@ -26,6 +32,11 @@ class Settings(BaseSettings):
     cors_origins: list[str] = ["http://127.0.0.1:5500", "http://localhost:5500"]
     rate_limit_per_minute: int = Field(60, ge=1, le=10_000)
     typesafe_api_key: SecretStr | None = None
+    synopsis_search: bool = True
+    synopsis_processed_dir: Path = REPOSITORY_DIR / "data" / "processed" / SAMPLE
+    synopsis_raw_dir: Path = REPOSITORY_DIR / "data" / "raw" / SAMPLE
+    synopsis_vectors_config: Path = REPOSITORY_DIR / "config" / "vetorizacao_semantica.json"
+    synopsis_search_config: Path = REPOSITORY_DIR / "config" / "busca.json"
 
     def require_tmdb_token(self) -> str:
         """Token de leitura do TMDB; falha com mensagem orientativa quando não configurado."""

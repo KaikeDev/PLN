@@ -3,7 +3,7 @@
 O backend (`backend/src/app`) reúne dois subsistemas independentes que compartilham utilitários:
 
 - **Pipelines offline** (`corpus`, `vectors`, `jev`): produzem as evidências avaliadas nas Etapas 1 e 2 e na Aula 8.
-- **API de demonstração** (`api`, `domain`, `infra`): pesquisa auxiliar de filmes usada pela interface em `frontend/`.
+- **API de demonstração** (`api`, `domain`, `infra`): pesquisa auxiliar de filmes usada pela interface em `frontend/`, inclusive a busca por tema sobre as sinopses da amostra.
 
 As razões de cada escolha estão nas [ADRs](adr/README.md); a organização em camadas, na [ADR 0004](adr/0004-arquitetura-em-camadas.md).
 
@@ -21,6 +21,7 @@ As razões de cada escolha estão nas [ADRs](adr/README.md); a organização em 
 | `app.vectors` | Etapa 2: representações, análises, relatório e verificação | `corpus.contracts`, `corpus.verification`, `corpus.transform`, `shared` |
 | `app.jev` | Aula 8: amostra, perguntas ao Jev, TF-IDF + regressão logística, métricas, relatório e verificação | `vectors.corpus`, `shared`, porta própria (`DecisionClient`) |
 | `app.infra.typesafe` | Adaptador do SDK do Jev (extra opcional `jev`) | `jev.ports` |
+| `app.infra.synopsis` | Índice de sinopses da busca por tema: combinação de `app.vectors.hybrid` e dados de exibição da coleta bruta | `vectors`, `corpus.verification`, `shared` |
 
 O domínio não importa `infra` nem `api`; a infraestrutura implementa as portas do domínio; `main` liga as partes.
 
@@ -33,6 +34,9 @@ flowchart LR
     CACHE --> CAT[infra.tmdb.TMDBMovieCatalog]
     CAT --> CLI[infra.tmdb.TMDBClient]
     CLI -->|Bearer, retry| TMDB[(API TMDB)]
+    SVC --> SPORT[(SynopsisIndex)]
+    SIDX[infra.synopsis.CorpusSynopsisIndex] -. implementa .-> SPORT
+    SIDX --> HYB[vectors.hybrid.HybridIndex]
     MAIN[app.main.create_app] -. monta .-> API
     COL[corpus.collect] --> CLI
     COL --> RAW[(data/raw)]
@@ -50,7 +54,8 @@ flowchart LR
 2. `SearchService` escolhe a estratégia do modo ([ADR 0006](adr/0006-prioridade-de-titulo-exato.md)):
    - `TitleSearch` busca por título;
    - `DiscoverySearch` extrai preferências com `FilterExtractor` ([ADR 0005](adr/0005-pesquisa-por-regras-lexicas.md)) e consulta a descoberta;
-   - `AutomaticSearch` combina as duas.
+   - `SynopsisSearch` ordena os filmes da amostra pela combinação TF-IDF + embedding de sentença e aplica os filtros de `FilterExtractor` ([ADR 0018](adr/0018-busca-hibrida-tfidf-e-sentenca.md));
+   - `AutomaticSearch` tenta título exato, sinopse, descoberta e título, nessa ordem.
 3. O catálogo com cache reaproveita o mapa de gêneros e as buscas recentes por título ([ADR 0007](adr/0007-cliente-http-e-cache.md)).
 4. `SearchResponse.from_result` traduz o resultado para o contrato JSON (`modo`, `resultados`, `interpretacao`).
 5. Falhas do catálogo viram HTTP 502; filme inexistente vira 404.
@@ -71,6 +76,7 @@ flowchart LR
 | Novo gatilho de gênero ou marcador de negação | Edite `domain/search/lexicon.py` ou `shared/language.py` e atualize a ADR 0005 ou 0003 |
 | Nova representação vetorial | Implemente `Representation` e um método com `build`, e registre-o em `vectors/methods.py` |
 | Nova análise vetorial | Subclasse de `Analysis` com `run` e `report_section`, acrescentada a `DEFAULT_ANALYSES` |
+| Outra combinação na busca por tema | Edite os nomes e pesos em `config/busca.json` (representações de `vetorizacao_semantica.json`) e compare com `python -m app.vectors hybrid --queries ../config/consultas.json` |
 | Nova pergunta ou gênero para o Jev | Edite `config/jev.json`; outra redação muda o hash das perguntas e exige novas chamadas (`--reuse` recusa respostas antigas) |
 | Outro modelo de decisões | Implemente `DecisionClient` (`decide(state, questions) -> dict`) em `app.infra` e injete-o em `app.jev.pipeline.run` |
 
@@ -79,10 +85,10 @@ flowchart LR
 | Arquivo | Cobertura |
 |---|---|
 | `test_corpus.py` | Transformações, coleta simulada, validação da configuração, integridade, determinismo |
-| `test_vectors.py` | Representações (com modelos falsos), análises, relatório, segurança da configuração, verificação |
+| `test_vectors.py` | Representações (com modelos falsos), análises, relatório, segurança da configuração, verificação, busca híbrida e índice de sinopses |
 | `test_jev.py` | Amostra, perguntas, validação das respostas, falhas, reaproveitamento, métricas dos dois métodos, adaptador do SDK e chave (com um Jev falso) |
 | `test_search_extractor.py` | Gatilhos, negação, qualidade, períodos e acurácia por campo |
-| `test_search_service.py` | Estratégias de pesquisa e número de chamadas ao catálogo |
+| `test_search_service.py` | Estratégias de pesquisa, número de chamadas ao catálogo e busca por sinopse com índice falso (filtros, paginação, ordem do modo automático) |
 | `test_tmdb.py` | Cliente (erros, sessões por thread, retry, token fora da URL), catálogo e cache |
 | `test_api.py` | Contrato das rotas, validação, 404/502, CORS e limite 429 |
 

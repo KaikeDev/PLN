@@ -21,6 +21,7 @@ Cada ADR registra uma decisão com contexto, alternativas e consequências, no f
 | [0015](0015-aula7-bert-cbow-e-polissemia.md) | BERT contextual, CBOW × skip-gram e sondas de polissemia (Aula 7) | Aceita |
 | [0016](0016-politica-do-gitignore.md) | Política do `.gitignore` | Aceita |
 | [0017](0017-aula8-jev-classificacao-de-genero.md) | Classificação de gênero com o Jev × TF-IDF + regressão logística (Aula 8) | Aceita |
+| [0018](0018-busca-hibrida-tfidf-e-sentenca.md) | Busca do site por tema: TF-IDF + embedding de sentença, com os filtros das regras | Aceita |
 
 O resumo de todas as decisões e das justificativas está em [`adr.md`](../../adr.md), na raiz do repositório.
 

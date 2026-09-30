@@ -78,7 +78,7 @@ class NoInterpretation(BaseModel):
 class SearchResponse(BaseModel):
     """Resultado de `/pesquisa`."""
 
-    modo: Literal["titulo", "descoberta"]
+    modo: Literal["titulo", "descoberta", "sinopse"]
     resultados: list[MovieSummary]
     interpretacao: InterpretedFilters | SearchNotice | NoInterpretation
 

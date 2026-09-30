@@ -2,8 +2,11 @@
 
 - `titulo`: busca direta por título.
 - `descoberta`: preferências extraídas por regras viram consulta de descoberta.
+- `sinopse`: busca por tema nas sinopses do corpus, com a combinação TF-IDF + embedding de sentença
+  (ADR 0018); as preferências reconhecidas pelas regras filtram os filmes.
 - `auto`: prioriza correspondência exata com título localizado ou original na primeira página; sem
-  correspondência, usa preferências quando existem e volta à busca por título quando não existem.
+  correspondência, usa a busca por sinopse quando ela está disponível e encontra filmes, depois as
+  preferências quando existem e, por fim, a busca por título.
 
 A verificação de título exato sempre usa a primeira página, para que o modo escolhido não mude ao
 paginar (ADR 0006).
@@ -16,10 +19,12 @@ from typing import Protocol
 
 from app.domain.search.extractor import ExtractedFilters, FilterExtractor
 from app.domain.search.normalization import normalize
-from app.domain.search.ports import MovieCatalog
+from app.domain.search.ports import MovieCatalog, SynopsisIndex
 
 NO_PREFERENCES_NOTICE = "Nenhuma preferência reconhecida"
 EMPTY_PERIOD_NOTICE = "Período sem interseção"
+SYNOPSIS_UNAVAILABLE_NOTICE = "Busca por sinopse indisponível"
+PAGE_SIZE = 20
 
 
 class SearchMode(StrEnum):
@@ -28,6 +33,7 @@ class SearchMode(StrEnum):
     AUTO = "auto"
     TITLE = "titulo"
     DISCOVERY = "descoberta"
+    SYNOPSIS = "sinopse"
 
 
 @dataclass(frozen=True)
@@ -63,7 +69,7 @@ Interpretation = FilterInterpretation | Notice | None
 
 @dataclass(frozen=True)
 class SearchResult:
-    """Modo efetivamente usado (`titulo` ou `descoberta`), filmes e interpretação."""
+    """Modo efetivamente usado (`titulo`, `descoberta` ou `sinopse`), filmes e interpretação."""
 
     mode: SearchMode
     results: list[dict] = field(default_factory=list)
@@ -118,18 +124,50 @@ class DiscoverySearch:
         return SearchResult(SearchMode.DISCOVERY, results, interpret(filters, self._catalog.genres))
 
 
-class AutomaticSearch:
-    """Título exato primeiro; depois preferências; por fim, título."""
+class SynopsisSearch:
+    """Filmes do corpus ordenados pela similaridade da sinopse com o texto, filtrados pelas preferências."""
 
-    def __init__(self, title: TitleSearch, discovery: DiscoverySearch, extractor: FilterExtractor) -> None:
+    def __init__(self, index: SynopsisIndex | None, catalog: MovieCatalog, extractor: FilterExtractor) -> None:
+        self._index = index
+        self._catalog = catalog
+        self._extractor = extractor
+
+    @property
+    def available(self) -> bool:
+        return self._index is not None
+
+    def search(self, request: SearchRequest) -> SearchResult:
+        if self._index is None:
+            return SearchResult(SearchMode.SYNOPSIS, interpretation=Notice(SYNOPSIS_UNAVAILABLE_NOTICE))
+        filters = self._extractor.extract(request.text)
+        if request.year is not None:
+            filters = filters.restricted_to_year(request.year)
+        if filters.has_empty_period():
+            return SearchResult(SearchMode.SYNOPSIS, interpretation=Notice(EMPTY_PERIOD_NOTICE))
+        index = self._index
+        matches = [(movie_id, score) for movie_id, score in index.rank(request.text) if filters.accepts(index.movie(movie_id))]
+        start = (request.page - 1) * PAGE_SIZE
+        results = [{**index.movie(movie_id), "pontuacao": round(score, 4)} for movie_id, score in matches[start : start + PAGE_SIZE]]
+        return SearchResult(SearchMode.SYNOPSIS, results, interpret(filters, self._catalog.genres))
+
+
+class AutomaticSearch:
+    """Título exato primeiro; depois sinopses; depois preferências; por fim, título."""
+
+    def __init__(self, title: TitleSearch, discovery: DiscoverySearch, synopsis: SynopsisSearch, extractor: FilterExtractor) -> None:
         self._title = title
         self._discovery = discovery
+        self._synopsis = synopsis
         self._extractor = extractor
 
     def search(self, request: SearchRequest) -> SearchResult:
         by_title = self._title.search(request)
         if self._title.has_exact_title(request, by_title):
             return by_title
+        if self._synopsis.available:
+            by_synopsis = self._synopsis.search(request)
+            if by_synopsis.results:
+                return by_synopsis
         filters = self._extractor.extract(request.text)
         if not filters.has_filters():
             return SearchResult(SearchMode.TITLE, by_title.results, interpret(filters, lambda: {}))
@@ -139,14 +177,16 @@ class AutomaticSearch:
 class SearchService:
     """Ponto de entrada da pesquisa: escolhe a estratégia pelo modo pedido."""
 
-    def __init__(self, catalog: MovieCatalog) -> None:
+    def __init__(self, catalog: MovieCatalog, synopsis_index: SynopsisIndex | None = None) -> None:
         extractor = FilterExtractor(catalog)
         title = TitleSearch(catalog)
         discovery = DiscoverySearch(catalog, extractor)
+        synopsis = SynopsisSearch(synopsis_index, catalog, extractor)
         self._strategies: dict[SearchMode, SearchStrategy] = {
             SearchMode.TITLE: title,
             SearchMode.DISCOVERY: discovery,
-            SearchMode.AUTO: AutomaticSearch(title, discovery, extractor),
+            SearchMode.SYNOPSIS: synopsis,
+            SearchMode.AUTO: AutomaticSearch(title, discovery, synopsis, extractor),
         }
 
     def search(self, text: str, page: int = 1, year: int | None = None, mode: SearchMode = SearchMode.AUTO) -> SearchResult:

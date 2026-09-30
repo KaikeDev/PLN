@@ -17,12 +17,13 @@
 
   <main>
     <form id="form-busca">
-      <input type="text" id="campo-titulo" placeholder="Matrix ou uma comédia recente" aria-label="Título ou preferências" required maxlength="200" />
+      <input type="text" id="campo-titulo" placeholder="Matrix, uma comédia recente ou um filme de ação sobre máquinas" aria-label="Título ou preferências" required maxlength="200" />
       <input type="number" id="campo-ano" placeholder="Ano (opcional)" min="1874" max="9998" aria-label="Ano de lançamento" />
       <select id="modo-busca" aria-label="Tipo de busca">
         <option value="auto">Automático</option>
         <option value="titulo">Título</option>
         <option value="descoberta">Preferências</option>
+        <option value="sinopse">Tema (sinopses)</option>
       </select>
       <button type="submit">Buscar</button>
     </form>

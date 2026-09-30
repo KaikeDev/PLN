@@ -1,4 +1,4 @@
-"""Catálogo falso em memória: filmes e gêneros escritos para os testes, sem rede."""
+"""Catálogo e índice de sinopses falsos em memória: filmes e gêneros escritos para os testes, sem rede."""
 
 from collections.abc import Mapping
 
@@ -58,3 +58,19 @@ class FakeCatalog:
     def _raise(self) -> None:
         if self.error is not None:
             raise self.error
+
+
+class FakeSynopsisIndex:
+    """Devolve uma ordenação fixa e registra os textos recebidos."""
+
+    def __init__(self, ranked: list[tuple[int, float]], movies: dict[int, dict]) -> None:
+        self.ranked = ranked
+        self.movies = movies
+        self.texts: list[str] = []
+
+    def rank(self, text: str) -> list[tuple[int, float]]:
+        self.texts.append(text)
+        return list(self.ranked)
+
+    def movie(self, movie_id: int) -> dict:
+        return dict(self.movies[movie_id])

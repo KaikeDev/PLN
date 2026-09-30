@@ -82,23 +82,32 @@ Cada linha possui o mesmo `id` da correspondente nas demais etapas. `metadata.js
 Com a credencial configurada, em `backend`:
 
 ```bash
-uv run --frozen uvicorn app.main:app --host 127.0.0.1 --reload
+uv sync --frozen --extra semantico
+uv run --frozen --extra semantico uvicorn app.main:app --host 127.0.0.1 --reload
 ```
 
-A API não inicia sem `TMDB_BEARER_TOKEN`. API: <http://127.0.0.1:8000/docs>. Em outro terminal, a partir da raiz:
+A API não inicia sem `TMDB_BEARER_TOKEN`. Com o extra `semantico`, ela carrega a busca por tema na inicialização, o que leva alguns segundos; sem ele, sobe normalmente e o modo `sinopse` avisa que está indisponível. API: <http://127.0.0.1:8000/docs>. Em outro terminal, a partir da raiz:
 
 ```bash
 cd frontend
 python -m http.server 5500
 ```
 
-Interface: <http://127.0.0.1:5500>. A pesquisa permite escolher título, preferências por regras ou modo automático. O modo automático prioriza correspondência exata com título localizado/original; o modo de título permite resolver ambiguidades. A pesquisa auxiliar ainda não usa os vetores das sinopses.
+Interface: <http://127.0.0.1:5500>. A pesquisa permite escolher título, preferências por regras, tema nas sinopses ou modo automático. O modo automático segue esta ordem:
+1. correspondência exata com título localizado ou original;
+2. busca por tema nas sinopses, quando encontra filmes;
+3. descoberta pelas preferências;
+4. busca por título.
+
+O modo de título permite resolver ambiguidades.
+
+**Busca por tema** (`modo=sinopse`): ordena os 428 filmes da amostra por 0,3 × TF-IDF sem stopwords + 0,7 × embedding de sentença (`sentenca_minilm`). Gênero, período, nota e negação reconhecidos pelas regras filtram os filmes. Em "quero um filme de ação sobre máquinas", só entram filmes de ação, ordenados pela proximidade com "máquinas". A combinação foi escolhida comparando as oito representações em 20 consultas anotadas ([ADR 0018](docs/adr/0018-busca-hibrida-tfidf-e-sentenca.md)). Filmes fora da amostra continuam acessíveis pelo título e pela descoberta. Explicação completa, com os algoritmos, o exemplo passo a passo e os limites: [docs/busca.md](docs/busca.md).
 
 | Rota implementada | Função |
 |---|---|
 | `GET /saude` | Saúde da aplicação |
 | `GET /filmes/603` | Detalhes do filme, com elenco e vídeos |
-| `GET /pesquisa?q=...&modo=auto` | Título ou preferências reconhecidas; `modo=titulo` e `modo=descoberta` também disponíveis; `q` com até 200 caracteres |
+| `GET /pesquisa?q=...&modo=auto` | Título, tema nas sinopses ou preferências reconhecidas; `modo=titulo`, `modo=descoberta` e `modo=sinopse` também disponíveis; `q` com até 200 caracteres |
 
 A rota `/busca` foi removida: `GET /pesquisa?q=...&modo=titulo` faz a mesma busca por título. O cliente chama `/discover/movie` para preferências. Configurações opcionais em `backend/.env`: `TMDB_LANGUAGE`, `TMDB_TIMEOUT`, `CORS_ORIGINS` e `RATE_LIMIT_PER_MINUTE` (padrão 60 requisições por minuto por IP; acima disso, HTTP 429). O CORS só libera as origens da interface e não é controle de acesso; por isso a API roda em `127.0.0.1` e tem limite de requisições. A interface lê o endereço da API na meta tag `api-base` de `frontend/index.html`, que também define a política de segurança de conteúdo (CSP).
 
@@ -164,7 +173,7 @@ Uma execução nova, sem `--reuse`, chama a API: coloque a chave em `backend/.en
 
 ## Próxima etapa
 
-Ampliar as consultas anotadas e a lista de filmes relevantes antes de escolher uma representação. As métricas atuais usam só dois casos de Matrix e servem de ilustração, não de avaliação estatística.
+Avaliar a busca por tema com consultas escritas por outras pessoas e ampliar o corpus além dos 428 filmes. As 20 consultas atuais foram escritas e julgadas pela equipe e servem para comparar as representações, não como avaliação com usuários.
 
 ## Fonte e atribuição
 

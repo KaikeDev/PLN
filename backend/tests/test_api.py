@@ -8,14 +8,14 @@ from app.api.rate_limit import RateLimiter
 from app.domain.search.ports import CatalogError
 from app.main import create_app
 from app.settings import Settings
-from tests.fakes import FakeCatalog
+from tests.fakes import FakeCatalog, FakeSynopsisIndex
 
 ORIGIN = "http://127.0.0.1:5500"
 
 
-def client_for(catalog: FakeCatalog, rate_limit: int = 100) -> TestClient:
+def client_for(catalog: FakeCatalog, rate_limit: int = 100, synopsis_index: FakeSynopsisIndex | None = None) -> TestClient:
     settings = Settings(_env_file=None, cors_origins=[ORIGIN], rate_limit_per_minute=rate_limit)
-    return TestClient(create_app(settings, catalog))
+    return TestClient(create_app(settings, catalog, synopsis_index))
 
 
 class ApiTests(unittest.TestCase):
@@ -42,6 +42,27 @@ class ApiTests(unittest.TestCase):
         with client_for(FakeCatalog()) as client:
             notice = client.get("/pesquisa", params={"q": "xyz", "modo": "descoberta"}).json()
         self.assertEqual(notice["interpretacao"], {"aviso": "Nenhuma preferência reconhecida"})
+
+    def test_synopsis_contract(self) -> None:
+        movie = {
+            "id": 218,
+            "title": "O Exterminador do Futuro",
+            "genre_ids": [28, 878],
+            "poster_path": "/x.jpg",
+            "release_date": "1984-10-26",
+        }
+        index = FakeSynopsisIndex([(218, 0.91234)], {218: movie})
+        with client_for(FakeCatalog(), synopsis_index=index) as client:
+            body = client.get("/pesquisa", params={"q": "ação sobre máquinas", "modo": "sinopse"}).json()
+            automatic = client.get("/pesquisa", params={"q": "ação sobre máquinas"}).json()
+        self.assertEqual(body["modo"], "sinopse")
+        self.assertEqual(body["resultados"][0]["id"], 218)
+        self.assertEqual(body["resultados"][0]["pontuacao"], 0.9123)
+        self.assertEqual(body["interpretacao"]["generos_incluidos"], ["Ação"])
+        self.assertEqual(automatic["modo"], "sinopse")
+        with client_for(FakeCatalog()) as client:
+            notice = client.get("/pesquisa", params={"q": "máquinas", "modo": "sinopse"}).json()
+        self.assertEqual(notice["interpretacao"], {"aviso": "Busca por sinopse indisponível"})
 
     def test_invalid_parameters_are_rejected(self) -> None:
         with client_for(FakeCatalog()) as client:

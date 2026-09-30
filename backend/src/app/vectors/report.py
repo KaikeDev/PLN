@@ -308,30 +308,42 @@ def retrieval_section(results: dict, context: AnalysisContext) -> list[str]:
         "## Consultas anotadas",
         "",
         "A consulta passa pelas mesmas regras de preparação da entrada de cada representação e vira um vetor no mesmo espaço. "
-        "A posição é a do primeiro filme anotado como relevante entre os filmes com cosseno positivo.",
+        "A posição é a do primeiro filme anotado como relevante entre os filmes com cosseno positivo. "
+        "MRR e acerto só olham o primeiro relevante; a precisão média (MAP) considera a posição de todos, "
+        f"e a precisão @{k} é a fração relevante dos {k} primeiros resultados.",
         "",
-        f"| Representação | MRR | Acerto @{k} |",
-        "|---|---:|---:|",
+        f"| Representação | MRR | Acerto @{k} | MAP | Precisão @{k} |",
+        "|---|---:|---:|---:|---:|",
     ]
     lines += [
-        f"| {name} | {_number(results[name]['mean_reciprocal_rank'])} | {_number(results[name]['hit_rate_at_k'])} |" for name in names
+        f"| {name} | {_number(results[name]['mean_reciprocal_rank'])} | {_number(results[name]['hit_rate_at_k'])} | "
+        f"{_number(results[name]['mean_average_precision'])} | {_number(results[name]['mean_precision_at_k'])} |"
+        for name in names
     ]
     for index, query in enumerate(context.queries):
         lines += ["", f"### {query.id}: “{query.text}”", ""]
         if query.note:
             lines += [query.note, ""]
+        total = len(query.relevant_ids)
         lines += [
-            "| Representação | Posição do relevante | Fora do vocabulário | Por que o relevante foi aproximado | Primeiros resultados |",
-            "|---|---:|---|---|---|",
+            f"{total} filme(s) relevante(s).",
+            "",
+            f"| Representação | Primeiro relevante | Relevantes no top {k} | AP | Fora do vocabulário | Por que o primeiro relevante foi aproximado | Primeiros resultados |",
+            "|---|---:|---:|---:|---|---|---|",
         ]
         for name in names:
             item = results[name]["queries"][index]
-            rank = min((r["rank"] for r in item["relevant"] if r["rank"] is not None), default=None)
+            found = sorted((r for r in item["relevant"] if r["rank"] is not None), key=lambda r: r["rank"])
+            rank = found[0]["rank"] if found else None
+            in_top = sum(1 for r in found if r["rank"] <= k)
             oov = ", ".join(item["out_of_vocabulary"]) or "—"
-            explanation = "; ".join(", ".join(r["explanation"]) for r in item["relevant"] if r["explanation"]) or "—"
+            explanation = ", ".join(found[0]["explanation"]) if found and found[0]["explanation"] else "—"
             top = "; ".join(f"{result['title']} ({result['score']:.3f})" for result in item["top"][:3])
             top = top or ("vetor nulo" if item["null_vector"] else "nenhum filme com cosseno positivo")
-            lines.append(f"| {name} | {rank if rank is not None else 'não recuperado'} | {oov} | {explanation} | {top} |")
+            lines.append(
+                f"| {name} | {rank if rank is not None else 'não recuperado'} | {in_top} de {total} | {_number(item['average_precision'], 3)} | "
+                f"{oov} | {explanation} | {top} |"
+            )
     return [*lines, ""]
 
 

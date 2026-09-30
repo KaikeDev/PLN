@@ -85,7 +85,7 @@ Resultados da execução entregue:
 - **Pares de frases:**
   - O BoW e o TF-IDF sem stopwords dão cosseno 1,000 a “O banco aprovou o financiamento” × “Ele sentou no banco da praça”, porque só “banco” está no vocabulário do corpus.
   - Na paráfrase cachorro/cão, as representações lexicais dão 0,000. O word2vec aproxima `cachorro ≈ cão, perseguiu ≈ correu` (0,49 a 0,54), e os transformers chegam a 0,68 e 0,79.
-- **BERT sem ajuste para sentenças:** dá cosseno alto a quase qualquer par (0,594 até no par polissêmico) e tem o menor MRR nas consultas (0,30). O modelo de sentença separa bem os pares (−0,033 × 0,677). Essa diferença corresponde à distinção da aula entre embeddings contextuais e embeddings semânticos de textos.
+- **BERT sem ajuste para sentenças:** dá cosseno alto a quase qualquer par (0,594 até no par polissêmico) e, nas 20 consultas anotadas, fica abaixo até do TF-IDF (MAP 0,295 × 0,446). O modelo de sentença separa bem os pares (−0,033 × 0,677). Essa diferença corresponde à distinção da aula entre embeddings contextuais e embeddings semânticos de textos.
 - **Clustering:** o BERTimbau tem o maior ARI com os gêneros de coleta (0,122) e a maior concordância de gênero @5 (0,552).
 
 ## Arquitetura (`backend/src/app/vectors`)
@@ -145,14 +145,14 @@ Decisões numéricas do experimento: [ADR 0012](adr/0012-parametros-do-experimen
 | `sentence_pairs.json` | Cosseno e explicação de cada par de frases das sondas |
 | `word_senses.json` | Matriz de cossenos entre os usos de cada palavra polissêmica e diferença entre mesmo sentido e sentidos diferentes |
 | `synthesis.json` | Propriedades de cada representação para a síntese comparativa |
-| `retrieval.json` | Consultas anotadas: tokens, termos fora do vocabulário, posição, explicação, MRR e acerto @k |
+| `retrieval.json` | Consultas anotadas: tokens, termos fora do vocabulário, posição, explicação, MRR, acerto @k, precisão média (AP/MAP) e precisão @k |
 | `config.json` / `queries_config.json` / `probes_config.json` | Configuração, consultas e sondas efetivamente usadas, incluindo modelos e revisões |
 | `report.md` | Relatório gerado a partir dos arquivos acima |
 | `manifest.json` | Hashes, versões das bibliotecas, identidade do código e da entrada, tempo de construção de cada representação (`build_seconds`) |
 
 ## Limitações e próximos passos
 
-- **Consultas:** as consultas anotadas são poucas e a lista de relevantes é parcial. Em “simulação da realidade”, as duas representações semânticas põem *Free Guy* em 1º lugar, um filme que se passa dentro de um jogo simulado e provavelmente relevante, mas não anotado. A equipe deve ampliar `config/consultas.json` antes de concluir qual representação é melhor.
+- **Consultas:** as consultas anotadas são poucas e a lista de relevantes é parcial. Em “simulação da realidade”, as duas representações semânticas põem *Free Guy* em 1º lugar, um filme que se passa dentro de um jogo simulado e provavelmente relevante, mas não anotado. Por isso `config/consultas.json` foi ampliado para 20 consultas, e a comparação que escolheu a busca do site está no [ADR 0018](adr/0018-busca-hibrida-tfidf-e-sentenca.md).
 - **Word2vec:** a média ignora ordem e negação e mistura nomes próprios. As explicações mostram pares como `thomas ≈ carlyle`.
 - **Transformers:** o modelo de sentença foi treinado principalmente para paráfrases curtas e trunca 40 sinopses. O BERTimbau não foi ajustado para comparar sentenças; um modelo de sentenças em português (BERTimbau ajustado em paráfrases, por exemplo) pode entrar como nova configuração, sem mudar código.
 - **Sondas:** são poucas frases escritas pela equipe e ilustram os conceitos da aula; não medem desempenho.

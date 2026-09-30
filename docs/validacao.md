@@ -73,6 +73,21 @@ Execução local em Python 3.14.7, com typesafe-sdk 0.7.2 (extra `jev`), scikit-
 uv run --frozen python -m app.jev verify --input ../data/jev/tmdb_2026-09-12
 ```
 
+## Busca por tema: TF-IDF + embedding de sentença (28–29/09/2026)
+
+Escolha da combinação e integração com a busca do site. Decisões no [ADR 0018](adr/0018-busca-hibrida-tfidf-e-sentenca.md).
+
+| Verificação | Resultado e alcance |
+|---|---|
+| Consultas anotadas | 20 consultas em `config/consultas.json`, com relevantes fechados lendo as 428 sinopses antes de rodar qualquer ranking. |
+| Build real | As 8 representações com as 20 consultas, numa pasta de trabalho, com os modelos de revisão fixada: `sentenca_minilm` MAP 0,560; `tfidf_sem_pontuacao` 0,460; `tfidf_sem_stopwords` 0,446; `bert_base_pt` 0,295. |
+| Combinações | Soma ponderada e RRF de todas as combinações de 2 a 4 representações, num script exploratório. 0,3 × `tfidf_sem_stopwords` + 0,7 × `sentenca_minilm`: MAP 0,613, MRR 0,912, acerto @5 de 100%. Pesos escolhidos numa metade das consultas e medidos na outra: ganho sobre o `sentenca_minilm` sozinho em 95% de 500 divisões. |
+| Testes automatizados | 90 testes aprovados. Com índice falso: `test_search_service.py` (12) e `test_api.py` (10), que cobrem filtros, paginação, ordem do modo automático, contrato `modo=sinopse` e aviso sem índice. Com modelos falsos, 5 novos em `test_vectors.py`: combinação, normalização pelo maior cosseno, avaliação, validação de `config/busca.json` e índice de sinopses sobre coleta e processamento reais. |
+| Lint, formatação e tipos | `ruff check`, `ruff format --check` e `mypy` sem apontamentos. |
+| Comando da combinação | `python -m app.vectors hybrid --queries ../config/consultas.json` com os modelos reais reproduziu os números do script: `tfidf_sem_stopwords` MAP 0,446; `sentenca_minilm` 0,560; combinação 0,613 (MRR 0,912, acerto @5 de 100%, precisão @5 de 0,56). |
+| Regeneração | `data/vectors/tmdb_2026-09-12` foi regenerada com as 20 consultas; `verify` aprovou os 34 arquivos. Além de consultas, busca, relatório e manifesto, mudaram só `bert_base_pt.embeddings.jsonl`, um ponto de `projection.json` e um cosseno de `sentence_pairs.json`, todos na sexta casa decimal: variação de ponto flutuante entre máquinas (Python 3.14.0 × 3.14.7, mesmas bibliotecas). |
+| Ambiente | O Controle Inteligente de Aplicativos do Windows chegou a bloquear o `python.exe` dos ambientes virtuais e DLLs do scikit-learn; as verificações acima rodaram depois de ele ser desativado. |
+
 ## Revisão de arquitetura e segurança (14/09/2026)
 
 Execução local em Python 3.14.0, após a refatoração descrita em [docs/arquitetura.md](arquitetura.md) e nas [ADRs](adr/README.md).

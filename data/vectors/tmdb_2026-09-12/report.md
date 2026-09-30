@@ -283,48 +283,358 @@ Vetor da mesma palavra em frases com sentidos iguais e diferentes. No word2vec o
 
 ## Consultas anotadas
 
-A consulta passa pelas mesmas regras de preparação da entrada de cada representação e vira um vetor no mesmo espaço. A posição é a do primeiro filme anotado como relevante entre os filmes com cosseno positivo.
+A consulta passa pelas mesmas regras de preparação da entrada de cada representação e vira um vetor no mesmo espaço. A posição é a do primeiro filme anotado como relevante entre os filmes com cosseno positivo. MRR e acerto só olham o primeiro relevante; a precisão média (MAP) considera a posição de todos, e a precisão @5 é a fração relevante dos 5 primeiros resultados.
 
-| Representação | MRR | Acerto @5 |
-|---|---:|---:|
-| bow_sem_pontuacao | 0.5072 | 0.5000 |
-| bow_sem_stopwords | 0.5385 | 0.5000 |
-| tfidf_sem_pontuacao | 0.5278 | 0.5000 |
-| tfidf_sem_stopwords | 0.5455 | 0.5000 |
-| word2vec_cbow | 0.5263 | 0.5000 |
-| word2vec_skipgram | 0.6000 | 1.0000 |
-| bert_base_pt | 0.3000 | 0.5000 |
-| sentenca_minilm | 0.7500 | 1.0000 |
+| Representação | MRR | Acerto @5 | MAP | Precisão @5 |
+|---|---:|---:|---:|---:|
+| bow_sem_pontuacao | 0.3572 | 0.4500 | 0.1875 | 0.1400 |
+| bow_sem_stopwords | 0.7652 | 0.9000 | 0.3751 | 0.3500 |
+| tfidf_sem_pontuacao | 0.8444 | 0.9500 | 0.4603 | 0.4600 |
+| tfidf_sem_stopwords | 0.8795 | 0.9500 | 0.4459 | 0.4400 |
+| word2vec_cbow | 0.5575 | 0.7500 | 0.3328 | 0.3000 |
+| word2vec_skipgram | 0.5923 | 0.8000 | 0.3559 | 0.3000 |
+| bert_base_pt | 0.4894 | 0.7500 | 0.2953 | 0.2500 |
+| sentenca_minilm | 0.8792 | 1.0000 | 0.5598 | 0.4900 |
 
 ### matrix_literal: “programador conectado a um sistema de computadores”
 
 Controle literal: todos os termos de conteúdo aparecem na sinopse coletada de Matrix.
 
-| Representação | Posição do relevante | Fora do vocabulário | Por que o relevante foi aproximado | Primeiros resultados |
-|---|---:|---|---|---|
-| bow_sem_pontuacao | 1 | — | a, de, um, sistema, computadores | Matrix (0.461); Assim na Terra Como no Inferno (0.449); Contra o Tempo (0.429) |
-| bow_sem_stopwords | 1 | — | sistema, computadores, conectado, programador | Matrix (0.350); Vingadores: Era de Ultron (0.090); O Enigma do Horizonte (0.087) |
-| tfidf_sem_pontuacao | 1 | — | sistema, computadores, conectado, programador, a | Matrix (0.376); Vingadores: Era de Ultron (0.093); O Enigma do Horizonte (0.087) |
-| tfidf_sem_stopwords | 1 | — | sistema, computadores, conectado, programador | Matrix (0.377); Vingadores: Era de Ultron (0.085); O Enigma do Horizonte (0.079) |
-| word2vec_cbow | 1 | — | programador, conectado, sistema, computadores | Matrix (0.569); Free Guy: Assumindo o Controle (0.409); A Guerra dos Mundos (0.407) |
-| word2vec_skipgram | 1 | — | conectado, sistema, programador, computadores | Matrix (0.573); Eu, Robô (0.455); O Jogo da Imitação (0.428) |
-| bert_base_pt | 2 | — | — | A Guerra dos Mundos (0.631); Matrix (0.628); Operação Sombra (0.622) |
-| sentenca_minilm | 1 | — | — | Matrix (0.371); Ghost in the Shell: O Fantasma do Futuro (0.352); O Jogo da Imitação (0.326) |
+1 filme(s) relevante(s).
+
+| Representação | Primeiro relevante | Relevantes no top 5 | AP | Fora do vocabulário | Por que o primeiro relevante foi aproximado | Primeiros resultados |
+|---|---:|---:|---:|---|---|---|
+| bow_sem_pontuacao | 1 | 1 de 1 | 1.000 | — | a, de, um, sistema, computadores | Matrix (0.461); Assim na Terra Como no Inferno (0.449); Contra o Tempo (0.429) |
+| bow_sem_stopwords | 1 | 1 de 1 | 1.000 | — | sistema, computadores, conectado, programador | Matrix (0.350); Vingadores: Era de Ultron (0.090); O Enigma do Horizonte (0.087) |
+| tfidf_sem_pontuacao | 1 | 1 de 1 | 1.000 | — | sistema, computadores, conectado, programador, a | Matrix (0.376); Vingadores: Era de Ultron (0.093); O Enigma do Horizonte (0.087) |
+| tfidf_sem_stopwords | 1 | 1 de 1 | 1.000 | — | sistema, computadores, conectado, programador | Matrix (0.377); Vingadores: Era de Ultron (0.085); O Enigma do Horizonte (0.079) |
+| word2vec_cbow | 1 | 1 de 1 | 1.000 | — | programador, conectado, sistema, computadores | Matrix (0.569); Free Guy: Assumindo o Controle (0.409); A Guerra dos Mundos (0.407) |
+| word2vec_skipgram | 1 | 1 de 1 | 1.000 | — | conectado, sistema, programador, computadores | Matrix (0.573); Eu, Robô (0.455); O Jogo da Imitação (0.428) |
+| bert_base_pt | 2 | 1 de 1 | 0.500 | — | — | A Guerra dos Mundos (0.631); Matrix (0.628); Operação Sombra (0.622) |
+| sentenca_minilm | 1 | 1 de 1 | 1.000 | — | — | Matrix (0.371); Ghost in the Shell: O Fantasma do Futuro (0.352); O Jogo da Imitação (0.326) |
 
 ### matrix_simulacao: “filme sobre simulação da realidade”
 
 Caso da orientação do professor: “simulação” não aparece literalmente na sinopse coletada de Matrix.
 
-| Representação | Posição do relevante | Fora do vocabulário | Por que o relevante foi aproximado | Primeiros resultados |
-|---|---:|---|---|---|
-| bow_sem_pontuacao | 69 | simulação | da, realidade | Five Nights at Freddy's 2 (0.234); Hereditário (0.220); Resident Evil: Bem-Vindo a Raccoon City (0.186) |
-| bow_sem_stopwords | 13 | simulação | realidade | O Dublê (0.333); Anaconda (0.243); Holocausto Canibal (0.229) |
-| tfidf_sem_pontuacao | 18 | simulação | realidade, da | O Dublê (0.227); Anaconda (0.174); Vingadores: Guerra Infinita (0.173) |
-| tfidf_sem_stopwords | 11 | simulação | realidade | O Dublê (0.284); Anaconda (0.198); Holocausto Canibal (0.193) |
-| word2vec_cbow | 19 | — | realidade, simulação ≈ ilusão, filme ≈ sonho | Free Guy: Assumindo o Controle (0.584); O Dublê (0.555); Anaconda (0.554) |
-| word2vec_skipgram | 5 | — | realidade, filme ≈ matrix, simulação ≈ artificial | Free Guy: Assumindo o Controle (0.565); Anaconda (0.540); O Dublê (0.540) |
-| bert_base_pt | 10 | — | — | Uma Odisséia Chinesa: Parte Dois – Cinderela (0.609); Meninas Malvadas (0.563); Frankenstein (0.546) |
-| sentenca_minilm | 2 | — | — | Free Guy: Assumindo o Controle (0.533); Matrix (0.484); A Entidade (0.423) |
+1 filme(s) relevante(s).
+
+| Representação | Primeiro relevante | Relevantes no top 5 | AP | Fora do vocabulário | Por que o primeiro relevante foi aproximado | Primeiros resultados |
+|---|---:|---:|---:|---|---|---|
+| bow_sem_pontuacao | 69 | 0 de 1 | 0.014 | simulação | da, realidade | Five Nights at Freddy's 2 (0.234); Hereditário (0.220); Resident Evil: Bem-Vindo a Raccoon City (0.186) |
+| bow_sem_stopwords | 13 | 0 de 1 | 0.077 | simulação | realidade | O Dublê (0.333); Anaconda (0.243); Holocausto Canibal (0.229) |
+| tfidf_sem_pontuacao | 18 | 0 de 1 | 0.056 | simulação | realidade, da | O Dublê (0.227); Anaconda (0.174); Vingadores: Guerra Infinita (0.173) |
+| tfidf_sem_stopwords | 11 | 0 de 1 | 0.091 | simulação | realidade | O Dublê (0.284); Anaconda (0.198); Holocausto Canibal (0.193) |
+| word2vec_cbow | 19 | 0 de 1 | 0.053 | — | realidade, simulação ≈ ilusão, filme ≈ sonho | Free Guy: Assumindo o Controle (0.584); O Dublê (0.555); Anaconda (0.554) |
+| word2vec_skipgram | 5 | 1 de 1 | 0.200 | — | realidade, filme ≈ matrix, simulação ≈ artificial | Free Guy: Assumindo o Controle (0.565); Anaconda (0.540); O Dublê (0.540) |
+| bert_base_pt | 10 | 0 de 1 | 0.100 | — | — | Uma Odisséia Chinesa: Parte Dois – Cinderela (0.609); Meninas Malvadas (0.563); Frankenstein (0.546) |
+| sentenca_minilm | 2 | 1 de 1 | 0.500 | — | — | Free Guy: Assumindo o Controle (0.533); Matrix (0.484); A Entidade (0.423) |
+
+### acao_maquinas: “quero um filme de ação sobre máquinas”
+
+Exemplo do site. Relevantes: filmes com gênero Ação no TMDB cuja sinopse trata de máquinas, robôs, ciborgues ou inteligência artificial.
+
+11 filme(s) relevante(s).
+
+| Representação | Primeiro relevante | Relevantes no top 5 | AP | Fora do vocabulário | Por que o primeiro relevante foi aproximado | Primeiros resultados |
+|---|---:|---:|---:|---|---|---|
+| bow_sem_pontuacao | 37 | 0 de 11 | 0.023 | quero | um, de, máquinas | A Bruxa de Blair (0.428); Assim na Terra Como no Inferno (0.404); A Iniciação (0.386) |
+| bow_sem_stopwords | 4 | 1 de 11 | 0.080 | quero | máquinas | O Dublê (0.272); Anaconda (0.198); Holocausto Canibal (0.187) |
+| tfidf_sem_pontuacao | 2 | 2 de 11 | 0.135 | quero | máquinas, um, de | O Dublê (0.193); O Exterminador do Futuro (0.173); Anaconda (0.146) |
+| tfidf_sem_stopwords | 2 | 2 de 11 | 0.136 | quero | máquinas | O Dublê (0.218); O Exterminador do Futuro (0.191); Matrix Reloaded (0.152) |
+| word2vec_cbow | 9 | 0 de 11 | 0.066 | — | ação ≈ violência, filme ≈ robô, máquinas ≈ robôs, quero ≈ impede | O Dublê (0.395); Space Jam: O Jogo do Século (0.368); Meu Malvado Favorito (0.364) |
+| word2vec_skipgram | 5 | 1 de 11 | 0.142 | — | filme ≈ robocop, ação ≈ policial, máquinas ≈ usar, quero ≈ senhor | O Dublê (0.493); A Serbian Film - Terror sem Limites (0.477); O Vingador do Futuro (0.449) |
+| bert_base_pt | 14 | 0 de 11 | 0.048 | — | — | Anaconda (0.567); A Serbian Film - Terror sem Limites (0.555); Uma Odisséia Chinesa: Parte Dois – Cinderela (0.553) |
+| sentenca_minilm | 1 | 4 de 11 | 0.585 | — | — | O Exterminador do Futuro (0.528); Eu, Robô (0.500); Blade Runner: O Caçador de Andróides (0.450) |
+
+### robo_amizade: “robô que cria laços de amizade com uma criança ou com animais”
+
+Tema afetivo com robôs; poucas sinopses usam “amizade” e “robô” juntas.
+
+5 filme(s) relevante(s).
+
+| Representação | Primeiro relevante | Relevantes no top 5 | AP | Fora do vocabulário | Por que o primeiro relevante foi aproximado | Primeiros resultados |
+|---|---:|---:|---:|---|---|---|
+| bow_sem_pontuacao | 35 | 0 de 5 | 0.030 | — | com, de, que, cria, robô | Akira (0.445); O Lobo de Wall Street (0.423); A Garota da Fábrica de Caixas de Fósforos (0.418) |
+| bow_sem_stopwords | 1 | 4 de 5 | 0.786 | — | robô | Operação Big Hero (0.167); Lilo & Stitch (0.163); Robô Selvagem (0.157) |
+| tfidf_sem_pontuacao | 2 | 3 de 5 | 0.630 | — | robô, de | Lilo & Stitch (0.130); Operação Big Hero (0.127); Robô Selvagem (0.124) |
+| tfidf_sem_stopwords | 1 | 4 de 5 | 0.786 | — | robô | Operação Big Hero (0.142); Lilo & Stitch (0.138); Robô Selvagem (0.117) |
+| word2vec_cbow | 4 | 1 de 5 | 0.152 | — | animais, robô, laços ≈ relacionamentos, criança ≈ órfão, cria ≈ construindo | Lilo & Stitch (0.563); Alice: Subservience (0.536); Matrix (0.535) |
+| word2vec_skipgram | 6 | 0 de 5 | 0.123 | — | robô, criança ≈ menino, amizade ≈ amigos, cria ≈ formam, animais ≈ postos | Lilo & Stitch (0.599); Matrix (0.592); Blade II: O Caçador de Vampiros (0.581) |
+| bert_base_pt | 2 | 1 de 5 | 0.154 | — | — | Eu, Robô (0.714); Robô Selvagem (0.704); Círculo de Fogo (0.700) |
+| sentenca_minilm | 1 | 2 de 5 | 0.465 | — | — | Robô Selvagem (0.635); Alice: Subservience (0.588); Operação Big Hero (0.575) |
+
+### ia_rebelde: “inteligência artificial que se volta contra a humanidade”
+
+Máquinas ou androides que se rebelam ou manipulam humanos.
+
+7 filme(s) relevante(s).
+
+| Representação | Primeiro relevante | Relevantes no top 5 | AP | Fora do vocabulário | Por que o primeiro relevante foi aproximado | Primeiros resultados |
+|---|---:|---:|---:|---|---|---|
+| bow_sem_pontuacao | 14 | 0 de 7 | 0.054 | — | a, humanidade, que, se | O Chamado (0.350); Guerra Mundial Z (0.331); Os Infiltrados (0.322) |
+| bow_sem_stopwords | 1 | 2 de 7 | 0.247 | — | artificial, inteligência | Alice: Subservience (0.205); Guerra Mundial Z (0.187); Planeta dos Macacos: A Origem (0.183) |
+| tfidf_sem_pontuacao | 1 | 2 de 7 | 0.402 | — | artificial, inteligência, a | Alice: Subservience (0.219); Vingadores: Era de Ultron (0.199); Planeta dos Macacos: A Origem (0.151) |
+| tfidf_sem_stopwords | 1 | 2 de 7 | 0.380 | — | artificial, inteligência | Alice: Subservience (0.231); Vingadores: Era de Ultron (0.190); Planeta dos Macacos: A Origem (0.138) |
+| word2vec_cbow | 1 | 1 de 7 | 0.263 | — | artificial, inteligência, humanidade ≈ terra, volta ≈ acaba, contra ≈ salvar | Vingadores: Era de Ultron (0.544); Independence Day (0.496); Guerra Mundial Z (0.495) |
+| word2vec_skipgram | 1 | 1 de 7 | 0.255 | — | artificial, inteligência, humanidade ≈ humana, contra ≈ proteger, volta ≈ acaba | Vingadores: Era de Ultron (0.626); Independence Day (0.580); Tropas Estelares (0.565) |
+| bert_base_pt | 5 | 1 de 7 | 0.207 | — | — | Guerra Mundial Z (0.664); Velozes & Furiosos: Hobbs & Shaw (0.641); Alien³ (0.626) |
+| sentenca_minilm | 1 | 5 de 7 | 0.862 | — | — | Eu, Robô (0.601); O Exterminador do Futuro (0.592); Blade Runner: O Caçador de Andróides (0.579) |
+
+### viagem_no_tempo: “viagem no tempo para mudar o passado”
+
+Inclui ciclos temporais em que o personagem volta ao mesmo momento para mudar o desfecho.
+
+9 filme(s) relevante(s).
+
+| Representação | Primeiro relevante | Relevantes no top 5 | AP | Fora do vocabulário | Por que o primeiro relevante foi aproximado | Primeiros resultados |
+|---|---:|---:|---:|---|---|---|
+| bow_sem_pontuacao | 2 | 2 de 9 | 0.225 | — | no, para, passado, mudar, o | Deadpool 2 (0.365); Os 12 Macacos (0.351); Sobrenatural: A Porta Vermelha (0.345) |
+| bow_sem_stopwords | 1 | 2 de 9 | 0.306 | — | passado, mudar | Os 12 Macacos (0.257); De Volta para o Futuro (0.231); Viúva Negra (0.164) |
+| tfidf_sem_pontuacao | 1 | 2 de 9 | 0.342 | — | passado, mudar, no, para, o | Os 12 Macacos (0.251); De Volta para o Futuro (0.195); O Iluminado (0.138) |
+| tfidf_sem_stopwords | 1 | 2 de 9 | 0.290 | — | passado, mudar | Os 12 Macacos (0.219); De Volta para o Futuro (0.174); Viúva Negra (0.117) |
+| word2vec_cbow | 1 | 3 de 9 | 0.411 | — | viagem, tempo, mudar ≈ fazer, passado ≈ pais | De Volta para o Futuro (0.542); Os 12 Macacos (0.532); Era Uma Vez na América (0.514) |
+| word2vec_skipgram | 1 | 3 de 9 | 0.472 | — | tempo, viagem, mudar ≈ fazer, passado ≈ ano | De Volta para o Futuro (0.566); Os 12 Macacos (0.533); Se Beber, Não Case! (0.501) |
+| bert_base_pt | 1 | 1 de 9 | 0.368 | — | — | De Volta para o Futuro (0.627); Os Croods (0.618); Feitiço do Tempo (0.608) |
+| sentenca_minilm | 1 | 2 de 9 | 0.413 | — | — | Crimes Temporais (0.476); De Volta para o Futuro II (0.466); 2012 (0.461) |
+
+### invasao_alienigena: “alienígenas invadem e atacam a Terra”
+
+Invasão ou guerra contra alienígenas; visitas pacíficas não contam.
+
+5 filme(s) relevante(s).
+
+| Representação | Primeiro relevante | Relevantes no top 5 | AP | Fora do vocabulário | Por que o primeiro relevante foi aproximado | Primeiros resultados |
+|---|---:|---:|---:|---|---|---|
+| bow_sem_pontuacao | 15 | 0 de 5 | 0.061 | invadem | a, e, alienígenas, terra | A Chegada (0.464); Impacto Profundo (0.380); Cinquenta Tons de Liberdade (0.380) |
+| bow_sem_stopwords | 1 | 1 de 5 | 0.390 | invadem | alienígenas, atacam, terra | Independence Day (0.261); Blade Runner: O Caçador de Andróides (0.229); Encontro Marcado (0.218) |
+| tfidf_sem_pontuacao | 1 | 3 de 5 | 0.570 | invadem | atacam, alienígenas, terra, a | Independence Day (0.247); A Chegada (0.166); Tropas Estelares (0.147) |
+| tfidf_sem_stopwords | 1 | 3 de 5 | 0.509 | invadem | atacam, alienígenas, terra | Independence Day (0.254); MIB - Homens de Preto (0.143); A Chegada (0.140) |
+| word2vec_cbow | 3 | 1 de 5 | 0.151 | — | terra, alienígenas, atacam, invadem ≈ unem | X-Men: Dias de um Futuro Esquecido (0.557); Blade Runner: O Caçador de Andróides (0.527); Independence Day (0.501) |
+| word2vec_skipgram | 2 | 1 de 5 | 0.172 | — | alienígenas, atacam, terra, invadem ≈ unem | X-Men: Dias de um Futuro Esquecido (0.679); Independence Day (0.615); Vida de Inseto (0.612) |
+| bert_base_pt | 1 | 1 de 5 | 0.336 | — | — | Independence Day (0.678); X-Men: Dias de um Futuro Esquecido (0.659); Capitão América: Guerra Civil (0.657) |
+| sentenca_minilm | 1 | 2 de 5 | 0.588 | — | — | Tropas Estelares (0.658); Independence Day (0.547); O Predador 2: A Caçada Continua (0.525) |
+
+### casa_assombrada: “família aterrorizada por espíritos em uma casa assombrada”
+
+Assombração de casa ou de família por espíritos; inclui a comédia em que fantasmas tentam assustar os novos moradores.
+
+7 filme(s) relevante(s).
+
+| Representação | Primeiro relevante | Relevantes no top 5 | AP | Fora do vocabulário | Por que o primeiro relevante foi aproximado | Primeiros resultados |
+|---|---:|---:|---:|---|---|---|
+| bow_sem_pontuacao | 4 | 1 de 7 | 0.174 | — | uma, aterrorizada, em, família, por | Predador: Terras Selvagens (0.365); Um Lugar Silencioso (0.350); Os Croods (0.340) |
+| bow_sem_stopwords | 1 | 3 de 7 | 0.487 | — | casa, assombrada | Os Outros (0.286); Sobrenatural (0.274); Hereditário (0.256) |
+| tfidf_sem_pontuacao | 1 | 4 de 7 | 0.586 | — | assombrada, espíritos, casa, por, uma | Invocação do Mal 2 (0.256); Os Outros (0.190); Invocação do Mal (0.165) |
+| tfidf_sem_stopwords | 1 | 4 de 7 | 0.626 | — | assombrada, espíritos, casa | Invocação do Mal 2 (0.247); Os Outros (0.193); Invocação do Mal (0.141) |
+| word2vec_cbow | 6 | 0 de 7 | 0.134 | — | casa, família, aterrorizada ≈ lá, espíritos ≈ atormentam, assombrada ≈ renai | Parasita (0.707); Hereditário (0.647); A Bruxa (0.618) |
+| word2vec_skipgram | 3 | 2 de 7 | 0.260 | — | casa, família, espíritos ≈ atormentam, aterrorizada ≈ renai, assombrada ≈ lá | Hereditário (0.675); Parasita (0.673); Sobrenatural (0.610) |
+| bert_base_pt | 1 | 3 de 7 | 0.524 | — | — | Invocação do Mal (0.745); Invocação do Mal 2 (0.744); Um Lugar Silencioso (0.740) |
+| sentenca_minilm | 4 | 2 de 7 | 0.370 | — | — | Um Lugar Silencioso (0.617); A Morte do Demônio (0.572); Hereditário (0.570) |
+
+### possessao: “possessão demoníaca e exorcismo”
+
+Personagens possuídos por demônios ou exorcistas.
+
+7 filme(s) relevante(s).
+
+| Representação | Primeiro relevante | Relevantes no top 5 | AP | Fora do vocabulário | Por que o primeiro relevante foi aproximado | Primeiros resultados |
+|---|---:|---:|---:|---|---|---|
+| bow_sem_pontuacao | 28 | 0 de 7 | 0.021 | exorcismo | demoníaca, e, possessão | Uma Batalha Após a Outra (0.289); Cinquenta Tons de Liberdade (0.280); Operação Cupido (0.274) |
+| bow_sem_stopwords | 1 | 1 de 7 | 0.143 | exorcismo | demoníaca, possessão | Invocação do Mal 3: A Ordem do Demônio (0.267); A Freira (0.108) |
+| tfidf_sem_pontuacao | 1 | 1 de 7 | 0.157 | exorcismo | possessão, demoníaca, e | Invocação do Mal 3: A Ordem do Demônio (0.290); A Freira (0.117); Operação Cupido (0.023) |
+| tfidf_sem_stopwords | 1 | 1 de 7 | 0.143 | exorcismo | possessão, demoníaca | Invocação do Mal 3: A Ordem do Demônio (0.316); A Freira (0.110) |
+| word2vec_cbow | 5 | 1 de 7 | 0.132 | — | demoníaca, possessão, exorcismo ≈ assassinato | A Freira (0.558); Thor: Amor e Trovão (0.519); Sobrenatural: A Origem (0.507) |
+| word2vec_skipgram | 7 | 0 de 7 | 0.093 | — | demoníaca ≈ maldição, exorcismo ≈ demônios, possessão ≈ possuídos | A Freira (0.622); Sobrenatural: A Origem (0.590); Thor: Amor e Trovão (0.587) |
+| bert_base_pt | 12 | 0 de 7 | 0.061 | — | — | Neon Genesis Evangelion: O Fim do Evangelho (0.606); Van Helsing: O Caçador de Monstros (0.597); Shrek Para Sempre (0.577) |
+| sentenca_minilm | 2 | 2 de 7 | 0.263 | — | — | Os Caça-Fantasmas 2 (0.541); Constantine (0.539); Invocação do Mal 3: A Ordem do Demônio (0.526) |
+
+### zumbis: “sobreviventes em um mundo tomado por zumbis”
+
+Inclui infectados e mutantes que agem como zumbis, mesmo quando a sinopse não usa a palavra “zumbi” (Extermínio, Eu Sou a Lenda).
+
+9 filme(s) relevante(s).
+
+| Representação | Primeiro relevante | Relevantes no top 5 | AP | Fora do vocabulário | Por que o primeiro relevante foi aproximado | Primeiros resultados |
+|---|---:|---:|---:|---|---|---|
+| bow_sem_pontuacao | 1 | 1 de 9 | 0.215 | — | um, mundo, por, em, sobreviventes | Madrugada dos Mortos (0.414); Predador: Terras Selvagens (0.390); Os Croods (0.364) |
+| bow_sem_stopwords | 1 | 1 de 9 | 0.260 | — | mundo, sobreviventes, tomado, zumbis | Madrugada dos Mortos (0.361); Barbie (0.200); Free Guy: Assumindo o Controle (0.186) |
+| tfidf_sem_pontuacao | 1 | 5 de 9 | 0.762 | — | tomado, zumbis, sobreviventes, mundo, por | Madrugada dos Mortos (0.307); Extermínio (0.169); Guerra Mundial Z (0.119) |
+| tfidf_sem_stopwords | 1 | 3 de 9 | 0.620 | — | tomado, zumbis, sobreviventes, mundo | Madrugada dos Mortos (0.291); Extermínio (0.152); Guerra Mundial Z (0.112) |
+| word2vec_cbow | 1 | 2 de 9 | 0.287 | — | tomado, sobreviventes, zumbis, mundo | Madrugada dos Mortos (0.574); X-Men: Dias de um Futuro Esquecido (0.513); Extermínio (0.506) |
+| word2vec_skipgram | 1 | 2 de 9 | 0.239 | — | mundo, tomado, sobreviventes, zumbis | Madrugada dos Mortos (0.649); X-Men: Dias de um Futuro Esquecido (0.635); Independence Day (0.597) |
+| bert_base_pt | 3 | 1 de 9 | 0.242 | — | — | X-Men: Dias de um Futuro Esquecido (0.711); A Morte do Demônio: A Ascensão (0.707); Zumbilândia (0.706) |
+| sentenca_minilm | 1 | 2 de 9 | 0.342 | — | — | Extermínio: A Evolução (0.619); Extermínio (0.592); Os Oito Odiados (0.569) |
+
+### assassino_mascarado: “assassino mascarado persegue um grupo de adolescentes”
+
+Slashers com jovens como vítimas; inclui a paródia Todo Mundo em Pânico.
+
+6 filme(s) relevante(s).
+
+| Representação | Primeiro relevante | Relevantes no top 5 | AP | Fora do vocabulário | Por que o primeiro relevante foi aproximado | Primeiros resultados |
+|---|---:|---:|---:|---|---|---|
+| bow_sem_pontuacao | 5 | 1 de 6 | 0.146 | — | um, de, adolescentes, grupo | Assim na Terra Como no Inferno (0.412); Premonição 5 (0.406); A Longa Marcha: Caminhe ou Morra (0.395) |
+| bow_sem_stopwords | 2 | 3 de 6 | 0.300 | — | adolescentes, assassino, grupo | A Longa Marcha: Caminhe ou Morra (0.224); Todo Mundo em Pânico (0.205); Premonição 5 (0.202) |
+| tfidf_sem_pontuacao | 1 | 3 de 6 | 0.492 | — | adolescentes, assassino, grupo, de, um | Todo Mundo em Pânico (0.164); A Longa Marcha: Caminhe ou Morra (0.161); Sexta-Feira 13 (0.152) |
+| tfidf_sem_stopwords | 1 | 3 de 6 | 0.514 | — | adolescentes, assassino, grupo | Todo Mundo em Pânico (0.153); A Longa Marcha: Caminhe ou Morra (0.151); Sexta-Feira 13 (0.132) |
+| word2vec_cbow | 13 | 0 de 6 | 0.027 | — | assassino, adolescentes, grupo, persegue ≈ descobre, mascarado ≈ horror | A Hora do Pesadelo (0.612); Operação Big Hero (0.597); Batman Begins (0.596) |
+| word2vec_skipgram | 13 | 0 de 6 | 0.045 | — | assassino, grupo, adolescentes, persegue ≈ descobre, mascarado ≈ horror | A Hora do Pesadelo (0.690); Deadpool 2 (0.663); Batman: O Cavaleiro das Trevas Ressurge (0.649) |
+| bert_base_pt | 20 | 0 de 6 | 0.024 | — | — | Zumbilândia (0.727); Zootopia: Essa Cidade é o Bicho (0.721); O Predador 2: A Caçada Continua (0.714) |
+| sentenca_minilm | 1 | 3 de 6 | 0.455 | — | — | Todo Mundo em Pânico (0.642); A Hora do Pesadelo (0.615); Pânico (0.583) |
+
+### vampiros: “vampiros”
+
+Consulta de uma palavra. Crepúsculo e Um Drink no Inferno ficam fora porque as sinopses coletadas não revelam os vampiros.
+
+9 filme(s) relevante(s).
+
+| Representação | Primeiro relevante | Relevantes no top 5 | AP | Fora do vocabulário | Por que o primeiro relevante foi aproximado | Primeiros resultados |
+|---|---:|---:|---:|---|---|---|
+| bow_sem_pontuacao | 1 | 2 de 9 | 0.222 | — | vampiros | Blade II: O Caçador de Vampiros (0.155); Os Garotos Perdidos (0.088) |
+| bow_sem_stopwords | 1 | 2 de 9 | 0.222 | — | vampiros | Blade II: O Caçador de Vampiros (0.229); Os Garotos Perdidos (0.126) |
+| tfidf_sem_pontuacao | 1 | 2 de 9 | 0.222 | — | vampiros | Blade II: O Caçador de Vampiros (0.243); Os Garotos Perdidos (0.139) |
+| tfidf_sem_stopwords | 1 | 2 de 9 | 0.222 | — | vampiros | Blade II: O Caçador de Vampiros (0.261); Os Garotos Perdidos (0.146) |
+| word2vec_cbow | 2 | 1 de 9 | 0.126 | — | vampiros | X-Men: Dias de um Futuro Esquecido (0.555); Blade II: O Caçador de Vampiros (0.552); Vida de Inseto (0.517) |
+| word2vec_skipgram | 2 | 1 de 9 | 0.159 | — | vampiros | X-Men: Dias de um Futuro Esquecido (0.622); Blade II: O Caçador de Vampiros (0.595); A Era do Gelo 3 (0.573) |
+| bert_base_pt | 3 | 1 de 9 | 0.090 | — | — | Neon Genesis Evangelion: O Fim do Evangelho (0.308); Uma Odisséia Chinesa: Parte Dois – Cinderela (0.282); Blade Trinity (0.263) |
+| sentenca_minilm | 1 | 3 de 9 | 0.561 | — | — | Entrevista com o Vampiro (0.601); Blade II: O Caçador de Vampiros (0.578); A Morte do Demônio: A Ascensão (0.543) |
+
+### astronautas_perdidos: “astronautas perdidos no espaço lutando para sobreviver”
+
+Tripulações ou astronautas isolados no espaço ou em outro planeta.
+
+6 filme(s) relevante(s).
+
+| Representação | Primeiro relevante | Relevantes no top 5 | AP | Fora do vocabulário | Por que o primeiro relevante foi aproximado | Primeiros resultados |
+|---|---:|---:|---:|---|---|---|
+| bow_sem_pontuacao | 26 | 0 de 6 | 0.040 | perdidos | no, espaço, para | Sobrenatural: A Porta Vermelha (0.224); Debi & Lóide: Dois Idiotas em Apuros (0.216); Barbie (0.211) |
+| bow_sem_stopwords | 3 | 1 de 6 | 0.150 | perdidos | astronautas | Jogos Mortais (0.107); Entre Montanhas (0.104); O Enigma do Horizonte (0.087) |
+| tfidf_sem_pontuacao | 1 | 3 de 6 | 0.488 | perdidos | astronautas, para | O Enigma do Horizonte (0.100); Interestelar (0.098); Top Gun - Ases Indomáveis (0.096) |
+| tfidf_sem_stopwords | 1 | 3 de 6 | 0.433 | perdidos | astronautas | O Enigma do Horizonte (0.103); Interestelar (0.095); Top Gun - Ases Indomáveis (0.091) |
+| word2vec_cbow | 2 | 2 de 6 | 0.234 | — | sobreviver ≈ retornar, astronautas ≈ companheiros, perdidos ≈ escassos, espaço ≈ planeta, lutando ≈ morto | X-Men: Dias de um Futuro Esquecido (0.550); Perdido em Marte (0.502); Entre Montanhas (0.489) |
+| word2vec_skipgram | 3 | 2 de 6 | 0.262 | — | astronautas ≈ astronauta, sobreviver ≈ retornar, perdidos ≈ escassos, lutando ≈ sozinho, espaço ≈ planeta | X-Men: Dias de um Futuro Esquecido (0.623); Entre Montanhas (0.594); Perdido em Marte (0.587) |
+| bert_base_pt | 2 | 2 de 6 | 0.324 | — | — | X-Men: Dias de um Futuro Esquecido (0.658); Perdido em Marte (0.656); O Segredo do Abismo (0.653) |
+| sentenca_minilm | 1 | 4 de 6 | 0.897 | — | — | Alien: Romulus (0.701); Interestelar (0.670); Perdido em Marte (0.656) |
+
+### segunda_guerra: “soldados lutando na Segunda Guerra Mundial”
+
+Combatentes na guerra; dramas da guerra sem soldados em combate (O Pianista, O Menino do Pijama Listrado) não contam.
+
+6 filme(s) relevante(s).
+
+| Representação | Primeiro relevante | Relevantes no top 5 | AP | Fora do vocabulário | Por que o primeiro relevante foi aproximado | Primeiros resultados |
+|---|---:|---:|---:|---|---|---|
+| bow_sem_pontuacao | 1 | 3 de 6 | 0.552 | — | soldados, guerra, mundial, na, segunda | Dunkirk (0.234); Bastardos Inglórios (0.233); Uma Odisséia Chinesa: Parte Dois – Cinderela (0.218) |
+| bow_sem_stopwords | 1 | 3 de 6 | 0.544 | — | soldados, guerra, mundial, segunda | Dunkirk (0.326); Corações de Ferro (0.307); Godzilla Minus One (0.293) |
+| tfidf_sem_pontuacao | 1 | 3 de 6 | 0.538 | — | soldados, segunda, mundial, guerra, na | Dunkirk (0.252); Corações de Ferro (0.219); Godzilla Minus One (0.182) |
+| tfidf_sem_stopwords | 1 | 3 de 6 | 0.544 | — | soldados, segunda, mundial, guerra | Dunkirk (0.255); Corações de Ferro (0.234); Godzilla Minus One (0.194) |
+| word2vec_cbow | 2 | 4 de 6 | 0.488 | — | soldados, guerra, mundial, segunda, lutando ≈ lutar | 9º Pelotão (0.576); Corações de Ferro (0.567); Dunkirk (0.552) |
+| word2vec_skipgram | 1 | 4 de 6 | 0.705 | — | mundial, soldados, guerra, segunda, lutando ≈ lutar | Corações de Ferro (0.682); Até o Último Homem (0.652); Bastardos Inglórios (0.642) |
+| bert_base_pt | 1 | 4 de 6 | 0.769 | — | — | Dunkirk (0.693); Até o Último Homem (0.624); Corações de Ferro (0.602) |
+| sentenca_minilm | 1 | 3 de 6 | 0.648 | — | — | Corações de Ferro (0.602); Dunkirk (0.550); 9º Pelotão (0.544) |
+
+### comedia_romantica: “comédia romântica leve sobre um casal que se apaixona”
+
+Romance como trama principal em tom de comédia.
+
+6 filme(s) relevante(s).
+
+| Representação | Primeiro relevante | Relevantes no top 5 | AP | Fora do vocabulário | Por que o primeiro relevante foi aproximado | Primeiros resultados |
+|---|---:|---:|---:|---|---|---|
+| bow_sem_pontuacao | 21 | 0 de 6 | 0.033 | comédia, leve, romântica | que, um, apaixona, se | Madrugada dos Mortos (0.373); A Hora do Pesadelo (0.362); D-Tox (0.355) |
+| bow_sem_stopwords | 7 | 0 de 6 | 0.024 | comédia, leve, romântica | apaixona | Invocação do Mal 4: O Último Ritual (0.136); Ted 2 (0.131); Acompanhante Perfeita (0.131) |
+| tfidf_sem_pontuacao | 3 | 1 de 6 | 0.078 | comédia, leve, romântica | apaixona, que, um, se | Os Suspeitos (0.155); Five Nights at Freddy's 2 (0.146); 10 Coisas Que Eu Odeio em Você (0.144) |
+| tfidf_sem_stopwords | 1 | 1 de 6 | 0.167 | comédia, leve, romântica | apaixona | 10 Coisas Que Eu Odeio em Você (0.138); Acompanhante Perfeita (0.098); Invocação do Mal 4: O Último Ritual (0.098) |
+| word2vec_cbow | 8 | 0 de 6 | 0.109 | — | casal ≈ homem, apaixona ≈ transforma, leve ≈ elegante, comédia ≈ hollywood, romântica ≈ prostituta | Titanic (0.535); 9 Canções (0.535); A Centopéia Humana 2 (0.517) |
+| word2vec_skipgram | 7 | 0 de 6 | 0.097 | — | apaixona, casal ≈ garoto, romântica ≈ bad-boy, comédia ≈ kat, leve ≈ insuportável | A Morte lhe Cai Bem (0.609); A Centopéia Humana 2 (0.597); Cisne Negro (0.574) |
+| bert_base_pt | 4 | 2 de 6 | 0.255 | — | — | 9 Canções (0.719); A Iniciação (0.706); Possessão (0.700) |
+| sentenca_minilm | 3 | 1 de 6 | 0.117 | — | — | Infidelidade (0.562); Cinquenta Tons de Liberdade (0.519); La La Land: Cantando Estações (0.509) |
+
+### prisao_injusta: “homem preso injustamente sobrevivendo na prisão”
+
+Vida dentro da prisão; filmes em que o personagem só sai da prisão não contam.
+
+3 filme(s) relevante(s).
+
+| Representação | Primeiro relevante | Relevantes no top 5 | AP | Fora do vocabulário | Por que o primeiro relevante foi aproximado | Primeiros resultados |
+|---|---:|---:|---:|---|---|---|
+| bow_sem_pontuacao | 8 | 0 de 3 | 0.063 | injustamente | prisão | A Hora do Pesadelo (0.159); Rambo: Programado Para Matar (0.143); Meninas Malvadas (0.138) |
+| bow_sem_stopwords | 2 | 1 de 3 | 0.181 | injustamente | prisão | Rambo: Programado Para Matar (0.229); Prisioneiro do Inferno (0.160); A Hora do Pesadelo (0.141) |
+| tfidf_sem_pontuacao | 1 | 1 de 3 | 0.383 | injustamente | prisão | Prisioneiro do Inferno (0.133); Rambo: Programado Para Matar (0.133); Uma Batalha Após a Outra (0.124) |
+| tfidf_sem_stopwords | 2 | 1 de 3 | 0.204 | injustamente | prisão | Rambo: Programado Para Matar (0.147); Prisioneiro do Inferno (0.145); Uma Batalha Após a Outra (0.132) |
+| word2vec_cbow | 1 | 2 de 3 | 0.565 | — | prisão, homem ≈ detento, preso ≈ condenado, injustamente ≈ corruptos, sobrevivendo ≈ chegar | Prisioneiro do Inferno (0.611); A Outra História Americana (0.534); Um Sonho de Liberdade (0.529) |
+| word2vec_skipgram | 1 | 2 de 3 | 0.681 | — | prisão, preso ≈ condenado, homem ≈ jovem, injustamente ≈ culposo, sobrevivendo ≈ chegar | Prisioneiro do Inferno (0.693); Um Sonho de Liberdade (0.630); A Outra História Americana (0.617) |
+| bert_base_pt | 5 | 1 de 3 | 0.303 | — | — | Police Story: A Guerra das Drogas (0.608); O Demolidor (0.596); Os Bons Companheiros (0.594) |
+| sentenca_minilm | 1 | 2 de 3 | 0.639 | — | — | Um Sonho de Liberdade (0.609); Jogos Mortais (0.494); À Espera de um Milagre (0.487) |
+
+### mafia: “gângsteres e a máfia”
+
+Crime organizado como tema central.
+
+9 filme(s) relevante(s).
+
+| Representação | Primeiro relevante | Relevantes no top 5 | AP | Fora do vocabulário | Por que o primeiro relevante foi aproximado | Primeiros resultados |
+|---|---:|---:|---:|---|---|---|
+| bow_sem_pontuacao | 14 | 0 de 9 | 0.057 | — | a, e, máfia | Cinquenta Tons de Liberdade (0.424); Avatar: Fogo e Cinzas (0.420); O Exterminador do Futuro (0.417) |
+| bow_sem_stopwords | 2 | 4 de 9 | 0.302 | — | máfia | 365 Dias: Hoje (0.243); Os Infiltrados (0.178); Os Bons Companheiros (0.141) |
+| tfidf_sem_pontuacao | 2 | 4 de 9 | 0.322 | — | máfia, a, e | 365 Dias: Hoje (0.229); Os Infiltrados (0.175); Os Bons Companheiros (0.150) |
+| tfidf_sem_stopwords | 2 | 4 de 9 | 0.302 | — | máfia | 365 Dias: Hoje (0.219); Os Infiltrados (0.166); Os Bons Companheiros (0.133) |
+| word2vec_cbow | 1 | 3 de 9 | 0.393 | — | máfia, gângsteres ≈ aflitos | Os Infiltrados (0.537); 365 Dias: Hoje (0.502); Scarface (0.484) |
+| word2vec_skipgram | 1 | 3 de 9 | 0.352 | — | gângsteres, máfia ≈ violência | Magnatas do Crime (0.538); 365 Dias: Hoje (0.495); Os Infiltrados (0.492) |
+| bert_base_pt | 1 | 2 de 9 | 0.434 | — | — | Os Bons Companheiros (0.599); Magnatas do Crime (0.590); Zootopia: Essa Cidade é o Bicho (0.572) |
+| sentenca_minilm | 1 | 3 de 9 | 0.353 | — | — | Magnatas do Crime (0.525); Os Bad Boys (0.516); Os Bons Companheiros (0.510) |
+
+### mundo_falso: “personagem descobre que vive em um mundo falso”
+
+Variação do caso Matrix: nenhuma das três sinopses usa as palavras “mundo falso”.
+
+3 filme(s) relevante(s).
+
+| Representação | Primeiro relevante | Relevantes no top 5 | AP | Fora do vocabulário | Por que o primeiro relevante foi aproximado | Primeiros resultados |
+|---|---:|---:|---:|---|---|---|
+| bow_sem_pontuacao | 2 | 1 de 3 | 0.206 | falso | que, mundo, um, descobre, em | Os Croods (0.436); Free Guy: Assumindo o Controle (0.405); Matador de Aluguel (0.389) |
+| bow_sem_stopwords | 1 | 1 de 3 | 0.417 | falso | mundo, descobre, personagem | Free Guy: Assumindo o Controle (0.371); Barbie (0.300); Madrugada dos Mortos (0.217) |
+| tfidf_sem_pontuacao | 1 | 1 de 3 | 0.401 | falso | personagem, mundo, descobre, que, um | Free Guy: Assumindo o Controle (0.308); Barbie (0.154); Os Croods (0.140) |
+| tfidf_sem_stopwords | 1 | 1 de 3 | 0.389 | falso | personagem, mundo, descobre | Free Guy: Assumindo o Controle (0.304); Barbie (0.156); Madrugada dos Mortos (0.104) |
+| word2vec_cbow | 3 | 2 de 3 | 0.249 | — | personagem, descobre, mundo, falso ≈ entediante, vive ≈ precisa | Barbie (0.619); Cidade das Sombras (0.619); Free Guy: Assumindo o Controle (0.590) |
+| word2vec_skipgram | 4 | 1 de 3 | 0.165 | — | mundo, descobre, personagem, falso ≈ único, vive ≈ vida | Cidade das Sombras (0.691); Barbie (0.679); Shrek Para Sempre (0.648) |
+| bert_base_pt | 6 | 0 de 3 | 0.166 | — | — | Matador de Aluguel (0.765); Conflitos Internos (0.740); Barbie (0.738) |
+| sentenca_minilm | 1 | 2 de 3 | 0.473 | — | — | Free Guy: Assumindo o Controle (0.649); Os Caça-Fantasmas 2 (0.564); Avatar (0.561) |
+
+### enganar_a_morte: “jovens escapam de um acidente, mas a morte volta para buscá-los”
+
+Série Premonição; parte das sinopses cita “Morte”, e outras só o pesadelo e o destino.
+
+5 filme(s) relevante(s).
+
+| Representação | Primeiro relevante | Relevantes no top 5 | AP | Fora do vocabulário | Por que o primeiro relevante foi aproximado | Primeiros resultados |
+|---|---:|---:|---:|---|---|---|
+| bow_sem_pontuacao | 1 | 2 de 5 | 0.431 | buscá-los, escapam | a, de, um, acidente, para | Premonição 2 (0.497); O Profissional (0.486); Assim na Terra Como no Inferno (0.462) |
+| bow_sem_stopwords | 1 | 2 de 5 | 0.584 | buscá-los, escapam | morte, acidente | Premonição 3 (0.279); Premonição 2 (0.231); Encontro Marcado (0.189) |
+| tfidf_sem_pontuacao | 1 | 3 de 5 | 0.645 | buscá-los, escapam | acidente, morte, a, mas, um | Premonição 2 (0.253); Premonição 3 (0.250); Operação Sombra (0.173) |
+| tfidf_sem_stopwords | 1 | 2 de 5 | 0.563 | buscá-los, escapam | morte, acidente | Premonição 3 (0.238); Premonição 2 (0.212); Operação Sombra (0.147) |
+| word2vec_cbow | 1 | 4 de 5 | 0.818 | — | morte, acidente, jovens ≈ amigos, escapam ≈ tiveram, volta ≈ voltará | Premonição 2 (0.636); Premonição 3 (0.634); Premonição 5 (0.591) |
+| word2vec_skipgram | 1 | 3 de 5 | 0.696 | — | morte, acidente, jovens ≈ estudantes, escapam ≈ enganam, buscá-los ≈ enganar | Premonição 3 (0.640); Premonição 2 (0.620); Terror em Silent Hill (0.589) |
+| bert_base_pt | 2 | 3 de 5 | 0.462 | — | — | Sobrenatural (0.820); Premonição 2 (0.810); Premonição 6: Laços de Sangue (0.808) |
+| sentenca_minilm | 1 | 3 de 5 | 0.665 | — | — | Premonição 3 (0.652); Premonição 2 (0.615); Premonição 5 (0.612) |
+
+### dinossauros: “dinossauros recriados a partir de DNA”
+
+Controle literal: as duas sinopses usam “dinossauros” e “DNA”/“genético”.
+
+2 filme(s) relevante(s).
+
+| Representação | Primeiro relevante | Relevantes no top 5 | AP | Fora do vocabulário | Por que o primeiro relevante foi aproximado | Primeiros resultados |
+|---|---:|---:|---:|---|---|---|
+| bow_sem_pontuacao | 6 | 0 de 2 | 0.183 | recriados | a, de, dinossauros, dna, partir | Casamento Sangrento (0.438); O Fabuloso Destino de Amélie Poulain (0.436); Sobrenatural: A Origem (0.430) |
+| bow_sem_stopwords | 1 | 2 de 2 | 1.000 | recriados | dinossauros, dna, partir | Jurassic Park: O Parque dos Dinossauros (0.344); Jurassic World: Recomeço (0.209); Homem de Ferro (0.101) |
+| tfidf_sem_pontuacao | 1 | 2 de 2 | 1.000 | recriados | dinossauros, dna, partir, a, de | Jurassic Park: O Parque dos Dinossauros (0.351); Jurassic World: Recomeço (0.245); Homem de Ferro (0.092) |
+| tfidf_sem_stopwords | 1 | 2 de 2 | 1.000 | recriados | dinossauros, dna, partir | Jurassic Park: O Parque dos Dinossauros (0.357); Jurassic World: Recomeço (0.238); Alien: A Ressurreição (0.082) |
+| word2vec_cbow | 1 | 2 de 2 | 1.000 | — | partir, dinossauros, dna, recriados ≈ extintos | Jurassic Park: O Parque dos Dinossauros (0.600); Jurassic World: Recomeço (0.555); Círculo de Fogo (0.505) |
+| word2vec_skipgram | 1 | 2 de 2 | 1.000 | — | partir, dinossauros, dna, recriados ≈ extintos | Jurassic Park: O Parque dos Dinossauros (0.619); Jurassic World: Recomeço (0.574); Blade Runner: O Caçador de Andróides (0.551) |
+| bert_base_pt | 1 | 1 de 2 | 0.538 | — | — | Jurassic Park: O Parque dos Dinossauros (0.627); Alien: A Ressurreição (0.621); Avatar (0.589) |
+| sentenca_minilm | 1 | 2 de 2 | 1.000 | — | — | Jurassic World: Recomeço (0.724); Jurassic Park: O Parque dos Dinossauros (0.720); Alien: A Ressurreição (0.489) |
 
 ## Síntese comparativa
 
