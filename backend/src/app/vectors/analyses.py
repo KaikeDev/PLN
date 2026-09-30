@@ -1,4 +1,4 @@
-"""Análises sobre cada representação: dimensões, similaridade, clustering, projeção, palavras e consultas."""
+"""Análises sobre cada representação: as tarefas busca, recomendação, agrupamento e visualização, e as sondas da Aula 7."""
 
 from abc import ABC, abstractmethod
 from collections import Counter
@@ -8,15 +8,17 @@ from typing import Any
 
 import numpy as np
 from scipy.sparse import issparse
-from sklearn.cluster import KMeans
-from sklearn.decomposition import TruncatedSVD
 from sklearn.metrics import adjusted_rand_score, normalized_mutual_info_score, silhouette_score
+from sklearn.preprocessing import normalize
 
+from app.shared.artifacts import jsonl_text
 from app.vectors import report
+from app.vectors.clusters import descriptive_terms, fit_kmeans, project_2d
+from app.vectors.config import ProfileSpec
 from app.vectors.context import AnalysisContext
 from app.vectors.metrics import genre_agreement, purity, reciprocal_rank, rounded
 from app.vectors.retrieval import search
-from app.vectors.space import Representation, count_nonzero, encoded_cosine
+from app.vectors.space import Encoded, Representation, count_nonzero, encoded_cosine
 from app.vectors.svg import render_projection
 
 
@@ -63,60 +65,112 @@ class Dimensions(Analysis):
         }
 
 
-class Neighbors(Analysis):
-    """Vizinhos de maior cosseno de cada sinopse (excluída ela mesma) e concordância de gênero @k.
+class Recommendation(Analysis):
+    """Recomendação por conteúdo: os k filmes de maior cosseno com um filme (item → item) ou com um perfil.
 
-    A referência de concordância é calculada sobre todos os demais filmes, ou seja, sem usar o texto.
+    O perfil é a média, com norma L2, dos vetores dos filmes de que a pessoa gostou. Sem avaliações de
+    usuários, a avaliação offline usa os gêneros como aproximação de relevância: a precisão @k é a fração
+    dos recomendados que compartilham ao menos um gênero com o filme (ou com os filmes do perfil), e a
+    referência é essa fração sobre todos os demais filmes, o esperado de uma recomendação que ignora o texto.
     """
 
-    name = "neighbors"
+    name = "recommendation"
 
     def report_section(self, results: dict, context: AnalysisContext) -> list[str]:
-        return report.neighbors_section(results, context)
+        return report.recommendation_section(results, context)
 
     def run(self, representation: Representation, context: AnalysisContext) -> dict:
-        k, documents = context.config.neighbors_k, context.corpus.documents
-        scores = representation.cosine(representation.unit)
-        np.fill_diagonal(scores, -np.inf)
-        rankings = [representation.ranking(scores[row])[:k] for row in range(len(documents))]
-        agreement, baseline = [], []
+        k, corpus = context.config.neighbors_k, context.corpus
+        documents = corpus.documents
+        scores, rankings = _item_rankings(representation, k)
+        precision, baseline = [], []
         for row, document in enumerate(documents):
             if document.genres:
-                agreement.append(genre_agreement(document.genres, [documents[other].genres for other in rankings[row]]))
+                precision.append(genre_agreement(document.genres, [documents[other].genres for other in rankings[row]]))
                 baseline.append(genre_agreement(document.genres, [other.genres for other in documents if other.id != document.id]))
         examples = []
         for movie_id in context.config.example_ids:
-            row = context.corpus.ids.index(movie_id)
+            row = corpus.ids.index(movie_id)
+            document = documents[row]
             examples.append(
                 {
                     "id": movie_id,
-                    "title": documents[row].title,
-                    "neighbors": [
-                        {
-                            "id": documents[other].id,
-                            "title": documents[other].title,
-                            "score": rounded(scores[row, other]),
-                            "explanation": representation.explain(representation.document(row), representation.document(other), 5),
-                        }
-                        for other in rankings[row]
-                        if scores[row, other] > 0
-                    ],
+                    "title": document.title,
+                    "genres": corpus.genre_labels(document.genres),
+                    "recommendations": _described(
+                        representation, context, representation.document(row), document.genres, rankings[row], scores[row]
+                    ),
                 }
             )
         return {
             "k": k,
-            "documents_evaluated": len(agreement),
-            "genre_agreement_at_k": rounded(mean(agreement)) if agreement else None,
-            "genre_agreement_baseline": rounded(mean(baseline)) if baseline else None,
+            "documents_evaluated": len(precision),
+            "precision_at_k": rounded(mean(precision)) if precision else None,
+            "baseline": rounded(mean(baseline)) if baseline else None,
             "examples": examples,
+            "profiles": [_profile_recommendations(representation, context, profile, k) for profile in context.config.profiles],
         }
+
+    def artifacts(self, representation: Representation, result: dict, context: AnalysisContext) -> dict[str, str]:
+        """Recomendações de todos os filmes, uma linha por filme na ordem de `documents.json`."""
+        scores, rankings = _item_rankings(representation, result["k"])
+        ids = representation.ids
+        rows = [
+            {"id": movie_id, "recommendations": [{"id": ids[other], "score": rounded(scores[row, other])} for other in rankings[row]]}
+            for row, movie_id in enumerate(ids)
+        ]
+        return {f"{representation.spec.name}.recommendations.jsonl": jsonl_text(rows)}
+
+
+def _item_rankings(representation: Representation, k: int) -> tuple[np.ndarray, list[np.ndarray]]:
+    """Cosseno entre todas as sinopses, sem a própria, e as k linhas de maior cosseno de cada uma."""
+    scores = representation.cosine(representation.unit)
+    np.fill_diagonal(scores, -np.inf)
+    return scores, [representation.ranking(scores[row])[:k] for row in range(len(representation.ids))]
+
+
+def _described(
+    representation: Representation, context: AnalysisContext, source: Encoded, genres: frozenset[int], rows: np.ndarray, scores: np.ndarray
+) -> list[dict]:
+    """Recomendações com título, cosseno, gêneros em comum e a explicação da proximidade."""
+    corpus = context.corpus
+    return [
+        {
+            "id": corpus.documents[other].id,
+            "title": corpus.documents[other].title,
+            "score": rounded(scores[other]),
+            "shared_genres": corpus.genre_labels(genres & corpus.documents[other].genres),
+            "explanation": representation.explain(source, representation.document(other), 5),
+        }
+        for other in rows
+    ]
+
+
+def _profile_recommendations(representation: Representation, context: AnalysisContext, profile: ProfileSpec, k: int) -> dict:
+    """Média, com norma L2, dos vetores do perfil; recomenda os k filmes de maior cosseno fora do perfil."""
+    corpus = context.corpus
+    rows = [corpus.ids.index(movie_id) for movie_id in profile.movie_ids]
+    vector = normalize(np.asarray(representation.unit[rows].mean(axis=0), dtype=np.float64).reshape(1, -1))
+    tokens = tuple(token for row in rows for token in representation.document(row).tokens)
+    scores = representation.cosine(vector)[0]
+    scores[rows] = -np.inf
+    ranked = representation.ranking(scores)[:k]
+    genres = frozenset().union(*(corpus.documents[row].genres for row in rows))
+    return {
+        "id": profile.id,
+        "movies": [{"id": corpus.documents[row].id, "title": corpus.documents[row].title} for row in rows],
+        "genres": corpus.genre_labels(genres),
+        "precision_at_k": rounded(genre_agreement(genres, [corpus.documents[row].genres for row in ranked])) if genres else None,
+        "recommendations": _described(representation, context, Encoded(vector, tokens), genres, ranked, scores),
+    }
 
 
 class Clustering(Analysis):
-    """K-Means sobre linhas com norma L2.
+    """K-Means sobre linhas com norma L2 (`app.vectors.clusters`, o mesmo usado pela Etapa 3).
 
-    ARI, NMI e pureza usam só filmes de um único gênero de coleta, os únicos com rótulo inequívoco. Os
-    termos descritivos vêm do TF-IDF de referência do contexto.
+    ARI, NMI e pureza usam só filmes com exatamente um gênero da coleta, os únicos com rótulo inequívoco.
+    Os termos descritivos vêm do TF-IDF de referência do contexto. `assignments` traz o cluster de cada
+    sinopse na ordem de `documents.json`; o gráfico colore por ele a mesma projeção 2D da análise `projection`.
     """
 
     name = "clustering"
@@ -126,26 +180,24 @@ class Clustering(Analysis):
 
     def run(self, representation: Representation, context: AnalysisContext) -> dict:
         config, corpus, descriptor = context.config, context.corpus, context.descriptor
-        model = KMeans(n_clusters=config.clusters, n_init=10, random_state=config.random_state)
-        labels = model.fit_predict(representation.unit)
-        distances = model.transform(representation.unit)
+        grouping = fit_kmeans(representation.unit, config.clusters, config.random_state)
+        labels = grouping.labels
         labeled = [(row, next(iter(document.genres))) for row, document in enumerate(corpus.documents) if len(document.genres) == 1]
         genres = [genre for _, genre in labeled]
         predicted = labels[[row for row, _ in labeled]].tolist()
         clusters = []
         for cluster in range(config.clusters):
-            members = np.flatnonzero(labels == cluster)
-            profile = np.asarray(descriptor.unit[members].mean(axis=0)).ravel() if len(members) else np.zeros(descriptor.dimensions)
-            top = np.lexsort((np.arange(len(profile)), -profile))[: config.top_terms]
-            closest = members[np.argsort(distances[members, cluster], kind="stable")][:3]
-            counts = Counter(corpus.genre_names.get(genre, str(genre)) for row in members for genre in corpus.documents[row].genres)
+            members = grouping.members(cluster)
+            counts = Counter(corpus.genre_label(genre) for row in members for genre in corpus.documents[row].genres)
             clusters.append(
                 {
                     "cluster": cluster,
                     "size": len(members),
-                    "descriptive_terms": [descriptor.terms[column] for column in top],
+                    "descriptive_terms": descriptive_terms(descriptor, members, config.top_terms),
                     "genres": dict(sorted(counts.items(), key=lambda item: (-item[1], item[0]))),
-                    "closest_to_centroid": [{"id": corpus.documents[row].id, "title": corpus.documents[row].title} for row in closest],
+                    "closest_to_centroid": [
+                        {"id": corpus.documents[row].id, "title": corpus.documents[row].title} for row in grouping.closest(cluster)
+                    ],
                 }
             )
         distinct = len(set(labels.tolist()))
@@ -159,12 +211,24 @@ class Clustering(Analysis):
             "silhouette_cosine": rounded(silhouette_score(representation.unit, labels, metric="cosine"))
             if 1 < distinct < len(labels)
             else None,
+            "assignments": labels.tolist(),
             "clusters": clusters,
         }
 
+    def artifacts(self, representation: Representation, result: dict, context: AnalysisContext) -> dict[str, str]:
+        """Mesma projeção 2D da análise `projection`, colorida pelo cluster encontrado."""
+        coordinates, variance = project_2d(representation.unit, context.config.random_state)
+        points = [
+            {"id": document.id, "title": document.title, "label": f"Cluster {cluster}", "x": rounded(x, 5), "y": rounded(y, 5)}
+            for document, cluster, (x, y) in zip(context.corpus.documents, result["assignments"], coordinates, strict=True)
+        ]
+        heading = f"{representation.spec.name}: sinopses coloridas pelo cluster do K-Means"
+        svg = render_projection(heading, points, variance, set(context.config.example_ids))
+        return {f"{representation.spec.name}.clusters.svg": svg}
+
 
 class Projection(Analysis):
-    """Projeção 2D por TruncatedSVD (LSA nas matrizes lexicais) e gráfico SVG por representação."""
+    """Projeção 2D por TruncatedSVD (LSA nas matrizes lexicais) e gráfico SVG colorido pelo gênero."""
 
     name = "projection"
 
@@ -174,12 +238,11 @@ class Projection(Analysis):
     def run(self, representation: Representation, context: AnalysisContext) -> dict:
         if representation.dimensions <= 2:
             raise ValueError(f"{representation.spec.name}: a projeção 2D exige mais de duas dimensões")
-        svd = TruncatedSVD(n_components=2, random_state=context.config.random_state)
-        coordinates = svd.fit_transform(representation.unit)
+        coordinates, variance = project_2d(representation.unit, context.config.random_state)
         corpus = context.corpus
         return {
             "method": "TruncatedSVD com 2 componentes sobre linhas com norma L2 (LSA nas matrizes lexicais)",
-            "explained_variance_ratio": [rounded(value) for value in svd.explained_variance_ratio_],
+            "explained_variance_ratio": [rounded(value) for value in variance],
             "points": [
                 {"id": document.id, "title": document.title, "genre": corpus.genre_name(document), "x": rounded(x, 5), "y": rounded(y, 5)}
                 for document, (x, y) in zip(corpus.documents, coordinates, strict=True)
@@ -187,8 +250,9 @@ class Projection(Analysis):
         }
 
     def artifacts(self, representation: Representation, result: dict, context: AnalysisContext) -> dict[str, str]:
-        heading = f"{representation.spec.name}: projeção 2D das sinopses"
-        svg = render_projection(heading, result["points"], result["explained_variance_ratio"], set(context.config.example_ids))
+        heading = f"{representation.spec.name}: sinopses coloridas pelo gênero"
+        points = [{**point, "label": point["genre"]} for point in result["points"]]
+        svg = render_projection(heading, points, result["explained_variance_ratio"], set(context.config.example_ids))
         return {f"{representation.spec.name}.projection.svg": svg}
 
 
@@ -311,7 +375,7 @@ def _optional_round(value: float | None) -> float | None:
 
 
 class Retrieval(Analysis):
-    """Posição dos filmes relevantes, MRR e acerto @k das consultas anotadas."""
+    """Busca (recuperação de informação): posição dos filmes relevantes, MRR e acerto @k das consultas anotadas."""
 
     name = "retrieval"
 
@@ -358,12 +422,12 @@ class Retrieval(Analysis):
 
 DEFAULT_ANALYSES: tuple[Analysis, ...] = (
     Dimensions(),
-    Neighbors(),
+    Retrieval(),
+    Recommendation(),
     Clustering(),
     Projection(),
     WordNeighbors(),
     SentencePairs(),
     WordSenses(),
-    Retrieval(),
     Synthesis(),
 )

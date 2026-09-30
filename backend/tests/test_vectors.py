@@ -37,6 +37,7 @@ SYNOPSES = {
         (8, "Nave perdida", "A tripulação de uma nave espacial perdida enfrenta um sistema artificial."),
     ],
 }
+GENRE_IDS = {4: [18, 878]}
 REVISION = "0" * 40
 REPRESENTATIONS = [
     {"name": "bow_sem_pontuacao", "method": "bow", "stage": "05_without_punctuation.jsonl"},
@@ -136,7 +137,7 @@ def fetch(endpoint, **params):
     if endpoint == "/genre/movie/list":
         return {"genres": [{"id": 18, "name": "Drama"}, {"id": 878, "name": "Ficção científica"}]}
     genre = int(params["with_genres"])
-    results = [{"id": i, "title": title, "overview": text, "genre_ids": [genre]} for i, title, text in SYNOPSES[genre]]
+    results = [{"id": i, "title": title, "overview": text, "genre_ids": GENRE_IDS.get(i, [genre])} for i, title, text in SYNOPSES[genre]]
     return {"page": 1, "total_pages": 1, "results": results}
 
 
@@ -173,6 +174,7 @@ class VectorTests(unittest.TestCase):
                 "clusters": 2,
                 "top_terms": 5,
                 "probe_words": ["simulação", "inexistente"],
+                "profiles": [{"id": "ficcao", "movie_ids": [5, 6], "note": "Gostou de filmes sobre sistemas artificiais."}],
             },
         )
         cls.queries = cls.root / "consultas.json"
@@ -206,15 +208,17 @@ class VectorTests(unittest.TestCase):
         return self.read("retrieval.json")[representation]["queries"][index]
 
     def test_build_writes_aligned_verified_outputs_without_overwrite(self):
-        self.assertEqual(verify(self.output), {"status": "ok", "documents": 8, "representations": 4, "files_verified": 24})
+        self.assertEqual(verify(self.output), {"status": "ok", "documents": 8, "representations": 4, "files_verified": 32})
         for filename in [
             "bow_sem_pontuacao.matrix.jsonl",
             "tfidf_sem_stopwords.matrix.jsonl",
             "word2vec_teste.embeddings.jsonl",
             "contextual_teste.embeddings.jsonl",
+            "contextual_teste.recommendations.jsonl",
         ]:
             self.assertEqual([row["id"] for row in read_jsonl(self.output / filename)], list(range(1, 9)))
         self.assertTrue((self.output / "contextual_teste.projection.svg").read_text(encoding="utf-8").startswith("<svg"))
+        self.assertIn("contextual_teste.recommendations.jsonl", read_json_object(self.output / "manifest.json")["row_files"])
         with self.assertRaises(FileExistsError):
             build(self.processed, self.output, self.config, self.queries, self.probes, methods=FAKE_METHODS)
 
@@ -236,21 +240,54 @@ class VectorTests(unittest.TestCase):
         self.assertEqual(dimensions["contextual_teste"]["max_tokens"], 12)
         self.assertGreater(dimensions["contextual_teste"]["truncated_documents"], 0)
 
-    def test_neighbors_use_cosine_and_explain_similarity(self):
-        lexical = self.read("neighbors.json")["tfidf_sem_stopwords"]["examples"][0]["neighbors"]
+    def test_labels_are_tmdb_genres_restricted_to_collection(self):
+        corpus = ProcessedCorpus.load(self.processed)
+        self.assertEqual(corpus.collection_genres, {18, 878})
+        self.assertEqual(corpus.by_id[4].genres, {18, 878})
+        self.assertEqual(corpus.by_id[1].genres, {18})
+        self.assertIsNone(corpus.genre_name(corpus.by_id[4]))
+        self.assertEqual(self.read("documents.json")[3]["genres"], ["Drama", "Ficção científica"])
+
+    def test_item_recommendations_use_cosine_and_explain_similarity(self):
+        recommendation = self.read("recommendation.json")
+        lexical = recommendation["tfidf_sem_stopwords"]["examples"][0]["recommendations"]
         self.assertEqual(lexical[0]["id"], 6)
         self.assertIn("computadores", lexical[0]["explanation"])
+        self.assertEqual(lexical[0]["shared_genres"], ["Ficção científica"])
         self.assertNotIn(5, [item["id"] for item in lexical])
-        contextual = self.read("neighbors.json")["contextual_teste"]["examples"][0]["neighbors"]
+        contextual = recommendation["contextual_teste"]["examples"][0]["recommendations"]
         self.assertEqual(contextual[0]["explanation"], [])
+        self.assertGreater(recommendation["tfidf_sem_stopwords"]["precision_at_k"], recommendation["tfidf_sem_stopwords"]["baseline"])
+        self.assertEqual(recommendation["tfidf_sem_stopwords"]["documents_evaluated"], 8)
+
+    def test_every_movie_gets_k_recommendations_without_itself(self):
+        for row in read_jsonl(self.output / "tfidf_sem_stopwords.recommendations.jsonl"):
+            ids = [item["id"] for item in row["recommendations"]]
+            self.assertEqual(len(ids), 3)
+            self.assertNotIn(row["id"], ids)
+
+    def test_profile_recommendations_exclude_liked_movies(self):
+        profile = self.read("recommendation.json")["tfidf_sem_stopwords"]["profiles"][0]
+        ids = [item["id"] for item in profile["recommendations"]]
+        self.assertEqual(profile["id"], "ficcao")
+        self.assertEqual(ids[0], 8)
+        self.assertFalse({5, 6} & set(ids))
+        self.assertEqual(profile["genres"], ["Ficção científica"])
+        word2vec = self.read("recommendation.json")["word2vec_teste"]["profiles"][0]["recommendations"][0]
+        self.assertTrue(word2vec["explanation"])
 
     def test_clustering_and_projection_cover_every_document(self):
         for name in ["tfidf_sem_stopwords", "word2vec_teste", "contextual_teste"]:
             clustering = self.read("clustering.json")[name]
             self.assertEqual(sum(cluster["size"] for cluster in clustering["clusters"]), 8)
+            self.assertEqual(len(clustering["assignments"]), 8)
             self.assertTrue(-1 <= clustering["adjusted_rand_index"] <= 1)
+            self.assertEqual(clustering["labeled_documents"], 7)
             self.assertEqual(len(clustering["clusters"][0]["descriptive_terms"]), 5)
             self.assertEqual(len(self.read("projection.json")[name]["points"]), 8)
+            svg = (self.output / f"{name}.clusters.svg").read_text(encoding="utf-8")
+            self.assertIn("Cluster 0", svg)
+            self.assertNotIn("Nenhum ou mais de um gênero", svg)
 
     def test_lexical_query_needs_identical_words(self):
         literal, thematic = self.query("tfidf_sem_stopwords", 0), self.query("tfidf_sem_stopwords", 1)
@@ -372,6 +409,10 @@ class VectorTests(unittest.TestCase):
             {**base, "neighbors_k": 0},
             {**base, "probe_words": "simulação"},
             {**base, "campo_desconhecido": 1},
+            {**base, "profiles": [{"id": "um_filme", "movie_ids": [1]}]},
+            {**base, "profiles": [{"id": "../fora", "movie_ids": [1, 2]}]},
+            {**base, "profiles": [{"id": "p", "movie_ids": [1, 2]}, {"id": "p", "movie_ids": [3, 4]}]},
+            {**base, "profiles": {"id": "p", "movie_ids": [1, 2]}},
         ]
         for index, value in enumerate(invalid):
             with self.subTest(value=value), self.assertRaises(ValueError):
@@ -380,10 +421,11 @@ class VectorTests(unittest.TestCase):
             load_queries(self.write_config("long_query.json", {"queries": [{"id": "q", "text": "x" * 501, "relevant_ids": [1]}]}))
 
     def test_invalid_reference_leaves_no_partial_output(self):
-        config = self.write_config("missing_id.json", {"representations": REPRESENTATIONS[:2], "example_ids": [999], "clusters": 2})
         output = self.root / "never_created"
-        with self.assertRaisesRegex(ValueError, "999"):
-            build(self.processed, output, config)
+        for index, extra in enumerate([{"example_ids": [999]}, {"profiles": [{"id": "p", "movie_ids": [1, 999]}]}]):
+            config = self.write_config(f"missing_id_{index}.json", {"representations": REPRESENTATIONS[:2], "clusters": 2, **extra})
+            with self.subTest(extra=extra), self.assertRaisesRegex(ValueError, "999"):
+                build(self.processed, output, config)
         self.assertFalse(output.exists())
 
     def test_processed_input_is_verified_before_use(self):
@@ -405,8 +447,8 @@ class VectorTests(unittest.TestCase):
 
     def test_svg_escapes_text_from_data(self):
         points = [
-            {"id": 1, "title": "<script>alert(1)</script>", "genre": "Drama", "x": 0.0, "y": 1.0},
-            {"id": 2, "title": "B & C", "genre": None, "x": 1.0, "y": 0.0},
+            {"id": 1, "title": "<script>alert(1)</script>", "label": "Drama", "x": 0.0, "y": 1.0},
+            {"id": 2, "title": "B & C", "label": None, "x": 1.0, "y": 0.0},
         ]
         svg = render_projection("Título <teste>", points, [0.5, 0.25], {1, 2})
         self.assertNotIn("<script>", svg)

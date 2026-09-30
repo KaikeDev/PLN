@@ -45,7 +45,7 @@ def prepare(
     config = load_config(config_path, methods)
     queries = load_queries(queries_path) if queries_path else ()
     corpus = ProcessedCorpus.load(processed)
-    referenced = {*config.example_ids, *(movie_id for query in queries for movie_id in query.relevant_ids)}
+    referenced = {*config.referenced_ids, *(movie_id for query in queries for movie_id in query.relevant_ids)}
     if missing := sorted(referenced - corpus.by_id.keys()):
         raise ValueError(f"IDs sem sinopse no corpus processado: {missing}")
     if config.clusters >= len(corpus.documents):
@@ -82,7 +82,7 @@ def build(
 
     files = {
         "config.json": json_text(asdict(config)),
-        "documents.json": json_text([{"id": d.id, "title": d.title, "genres": sorted(d.genres)} for d in corpus.documents]),
+        "documents.json": json_text([{"id": d.id, "title": d.title, "genres": corpus.genre_labels(d.genres)} for d in corpus.documents]),
     }
     if queries:
         files["queries_config.json"] = json_text([asdict(query) for query in queries])
@@ -100,7 +100,10 @@ def build(
     for analysis in analyses:
         files[f"{analysis.name}.json"] = json_text(results[analysis.name])
         for representation in representations:
-            files.update(analysis.artifacts(representation, results[analysis.name][representation.spec.name], context))
+            for filename, content in analysis.artifacts(representation, results[analysis.name][representation.spec.name], context).items():
+                files[filename] = content
+                if filename.endswith(".jsonl"):
+                    row_files.append(filename)
     files["report.md"] = make_report(results, context, analyses)
     if unsafe := sorted(name for name in files if Path(name).name != name or name == MANIFEST_NAME):
         raise ValueError(f"Nomes de arquivo inválidos gerados pelas análises: {unsafe}")

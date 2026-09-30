@@ -1,0 +1,3857 @@
+{
+  "bow_sem_pontuacao": {
+    "k": 5,
+    "documents_evaluated": 428,
+    "precision_at_k": 0.450467,
+    "baseline": 0.379118,
+    "examples": [
+      {
+        "id": 603,
+        "title": "Matrix",
+        "genres": [
+          "Ficção científica"
+        ],
+        "recommendations": [
+          {
+            "id": 1091,
+            "title": "O Enigma de Outro Mundo",
+            "score": 0.601893,
+            "shared_genres": [
+              "Ficção científica"
+            ],
+            "explanation": [
+              "e",
+              "a",
+              "que",
+              "um",
+              "de"
+            ]
+          },
+          {
+            "id": 278,
+            "title": "Um Sonho de Liberdade",
+            "score": 0.599448,
+            "shared_genres": [],
+            "explanation": [
+              "e",
+              "a",
+              "que",
+              "de",
+              "um"
+            ]
+          },
+          {
+            "id": 8656,
+            "title": "Impacto Profundo",
+            "score": 0.595829,
+            "shared_genres": [
+              "Ficção científica"
+            ],
+            "explanation": [
+              "e",
+              "a",
+              "um",
+              "de",
+              "que"
+            ]
+          },
+          {
+            "id": 9946,
+            "title": "Fim dos Dias",
+            "score": 0.56665,
+            "shared_genres": [],
+            "explanation": [
+              "de",
+              "e",
+              "um",
+              "a",
+              "que"
+            ]
+          },
+          {
+            "id": 21484,
+            "title": "Possessão",
+            "score": 0.561295,
+            "shared_genres": [],
+            "explanation": [
+              "a",
+              "e",
+              "que",
+              "um",
+              "de"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "title": "Forrest Gump: O Contador de Histórias",
+        "genres": [
+          "Comédia",
+          "Drama"
+        ],
+        "recommendations": [
+          {
+            "id": 9737,
+            "title": "Os Bad Boys",
+            "score": 0.437634,
+            "shared_genres": [
+              "Comédia"
+            ],
+            "explanation": [
+              "de",
+              "do",
+              "e",
+              "da",
+              "a"
+            ]
+          },
+          {
+            "id": 755898,
+            "title": "A Guerra dos Mundos",
+            "score": 0.43641,
+            "shared_genres": [],
+            "explanation": [
+              "de",
+              "do",
+              "um",
+              "e",
+              "o"
+            ]
+          },
+          {
+            "id": 299710,
+            "title": "Aos 14",
+            "score": 0.427679,
+            "shared_genres": [
+              "Drama"
+            ],
+            "explanation": [
+              "de",
+              "e",
+              "com",
+              "do",
+              "um"
+            ]
+          },
+          {
+            "id": 82690,
+            "title": "Detona Ralph",
+            "score": 0.427593,
+            "shared_genres": [
+              "Comédia"
+            ],
+            "explanation": [
+              "de",
+              "e",
+              "a",
+              "com",
+              "do"
+            ]
+          },
+          {
+            "id": 1156593,
+            "title": "Sua Culpa",
+            "score": 0.425572,
+            "shared_genres": [
+              "Drama"
+            ],
+            "explanation": [
+              "de",
+              "e",
+              "o",
+              "a",
+              "com"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "title": "Beleza Americana",
+        "genres": [
+          "Drama"
+        ],
+        "recommendations": [
+          {
+            "id": 686,
+            "title": "Contato",
+            "score": 0.53535,
+            "shared_genres": [
+              "Drama"
+            ],
+            "explanation": [
+              "a",
+              "e",
+              "de",
+              "com",
+              "sua"
+            ]
+          },
+          {
+            "id": 558449,
+            "title": "Gladiador 2",
+            "score": 0.526229,
+            "shared_genres": [
+              "Drama"
+            ],
+            "explanation": [
+              "a",
+              "de",
+              "e",
+              "seu",
+              "o"
+            ]
+          },
+          {
+            "id": 194,
+            "title": "O Fabuloso Destino de Amélie Poulain",
+            "score": 0.515414,
+            "shared_genres": [],
+            "explanation": [
+              "a",
+              "de",
+              "e",
+              "sua",
+              "que"
+            ]
+          },
+          {
+            "id": 9820,
+            "title": "Operação Cupido",
+            "score": 0.504938,
+            "shared_genres": [],
+            "explanation": [
+              "e",
+              "a",
+              "se",
+              "com",
+              "de"
+            ]
+          },
+          {
+            "id": 98,
+            "title": "Gladiador",
+            "score": 0.491233,
+            "shared_genres": [
+              "Drama"
+            ],
+            "explanation": [
+              "a",
+              "de",
+              "e",
+              "o",
+              "seu"
+            ]
+          }
+        ]
+      }
+    ],
+    "profiles": [
+      {
+        "id": "ficcao_mente_realidade",
+        "movies": [
+          {
+            "id": 603,
+            "title": "Matrix"
+          },
+          {
+            "id": 27205,
+            "title": "A Origem"
+          },
+          {
+            "id": 38,
+            "title": "Brilho Eterno de uma Mente sem Lembranças"
+          }
+        ],
+        "genres": [
+          "Drama",
+          "Ficção científica"
+        ],
+        "precision_at_k": 0.6,
+        "recommendations": [
+          {
+            "id": 9946,
+            "title": "Fim dos Dias",
+            "score": 0.627488,
+            "shared_genres": [],
+            "explanation": [
+              "de",
+              "que",
+              "a",
+              "um",
+              "o"
+            ]
+          },
+          {
+            "id": 550988,
+            "title": "Free Guy: Assumindo o Controle",
+            "score": 0.62561,
+            "shared_genres": [
+              "Ficção científica"
+            ],
+            "explanation": [
+              "de",
+              "o",
+              "que",
+              "um",
+              "ele"
+            ]
+          },
+          {
+            "id": 194,
+            "title": "O Fabuloso Destino de Amélie Poulain",
+            "score": 0.622079,
+            "shared_genres": [],
+            "explanation": [
+              "de",
+              "a",
+              "que",
+              "o",
+              "e"
+            ]
+          },
+          {
+            "id": 278,
+            "title": "Um Sonho de Liberdade",
+            "score": 0.618814,
+            "shared_genres": [
+              "Drama"
+            ],
+            "explanation": [
+              "de",
+              "que",
+              "o",
+              "a",
+              "e"
+            ]
+          },
+          {
+            "id": 530385,
+            "title": "Midsommar: O Mal Não Espera a Noite",
+            "score": 0.612484,
+            "shared_genres": [
+              "Drama"
+            ],
+            "explanation": [
+              "de",
+              "que",
+              "o",
+              "a",
+              "um"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "terror_sobrenatural",
+        "movies": [
+          {
+            "id": 138843,
+            "title": "Invocação do Mal"
+          },
+          {
+            "id": 493922,
+            "title": "Hereditário"
+          },
+          {
+            "id": 280092,
+            "title": "Sobrenatural: A Origem"
+          }
+        ],
+        "genres": [
+          "Terror"
+        ],
+        "precision_at_k": 0.2,
+        "recommendations": [
+          {
+            "id": 563,
+            "title": "Tropas Estelares",
+            "score": 0.581916,
+            "shared_genres": [],
+            "explanation": [
+              "a",
+              "de",
+              "uma",
+              "que",
+              "um"
+            ]
+          },
+          {
+            "id": 567609,
+            "title": "Casamento Sangrento",
+            "score": 0.580189,
+            "shared_genres": [
+              "Terror"
+            ],
+            "explanation": [
+              "a",
+              "de",
+              "uma",
+              "família",
+              "que"
+            ]
+          },
+          {
+            "id": 194,
+            "title": "O Fabuloso Destino de Amélie Poulain",
+            "score": 0.574523,
+            "shared_genres": [],
+            "explanation": [
+              "a",
+              "de",
+              "uma",
+              "que",
+              "um"
+            ]
+          },
+          {
+            "id": 496243,
+            "title": "Parasita",
+            "score": 0.563439,
+            "shared_genres": [],
+            "explanation": [
+              "a",
+              "de",
+              "família",
+              "uma",
+              "um"
+            ]
+          },
+          {
+            "id": 940551,
+            "title": "Patos!",
+            "score": 0.546911,
+            "shared_genres": [],
+            "explanation": [
+              "a",
+              "de",
+              "família",
+              "uma",
+              "da"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "animacao_familia",
+        "movies": [
+          {
+            "id": 862,
+            "title": "Toy Story: Um Mundo de Aventuras"
+          },
+          {
+            "id": 14160,
+            "title": "Up: Altas Aventuras"
+          },
+          {
+            "id": 585,
+            "title": "Monstros S.A."
+          }
+        ],
+        "genres": [
+          "Comédia"
+        ],
+        "precision_at_k": 0.6,
+        "recommendations": [
+          {
+            "id": 9297,
+            "title": "A Casa Monstro",
+            "score": 0.665886,
+            "shared_genres": [
+              "Comédia"
+            ],
+            "explanation": [
+              "de",
+              "que",
+              "a",
+              "do",
+              "e"
+            ]
+          },
+          {
+            "id": 194,
+            "title": "O Fabuloso Destino de Amélie Poulain",
+            "score": 0.647833,
+            "shared_genres": [
+              "Comédia"
+            ],
+            "explanation": [
+              "de",
+              "a",
+              "que",
+              "e",
+              "um"
+            ]
+          },
+          {
+            "id": 9946,
+            "title": "Fim dos Dias",
+            "score": 0.642565,
+            "shared_genres": [],
+            "explanation": [
+              "de",
+              "um",
+              "que",
+              "a",
+              "e"
+            ]
+          },
+          {
+            "id": 530385,
+            "title": "Midsommar: O Mal Não Espera a Noite",
+            "score": 0.634861,
+            "shared_genres": [],
+            "explanation": [
+              "de",
+              "que",
+              "um",
+              "a",
+              "e"
+            ]
+          },
+          {
+            "id": 863,
+            "title": "Toy Story 2",
+            "score": 0.633417,
+            "shared_genres": [
+              "Comédia"
+            ],
+            "explanation": [
+              "de",
+              "que",
+              "e",
+              "um",
+              "do"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "bow_sem_stopwords": {
+    "k": 5,
+    "documents_evaluated": 428,
+    "precision_at_k": 0.560748,
+    "baseline": 0.379118,
+    "examples": [
+      {
+        "id": 603,
+        "title": "Matrix",
+        "genres": [
+          "Ficção científica"
+        ],
+        "recommendations": [
+          {
+            "id": 346698,
+            "title": "Barbie",
+            "score": 0.168034,
+            "shared_genres": [],
+            "explanation": [
+              "mundo",
+              "começa",
+              "descobre",
+              "está",
+              "real"
+            ]
+          },
+          {
+            "id": 21484,
+            "title": "Possessão",
+            "score": 0.150899,
+            "shared_genres": [],
+            "explanation": [
+              "está",
+              "começa",
+              "descobre",
+              "estranhos",
+              "jovem"
+            ]
+          },
+          {
+            "id": 924,
+            "title": "Madrugada dos Mortos",
+            "score": 0.121268,
+            "shared_genres": [
+              "Ficção científica"
+            ],
+            "explanation": [
+              "mundo",
+              "descobre",
+              "enquanto",
+              "está",
+              "real"
+            ]
+          },
+          {
+            "id": 270303,
+            "title": "Corrente do Mal",
+            "score": 0.10677,
+            "shared_genres": [],
+            "explanation": [
+              "jovem",
+              "começa",
+              "enquanto",
+              "pessoas"
+            ]
+          },
+          {
+            "id": 550988,
+            "title": "Free Guy: Assumindo o Controle",
+            "score": 0.10401,
+            "shared_genres": [
+              "Ficção científica"
+            ],
+            "explanation": [
+              "mundo",
+              "descobre",
+              "realidade"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "title": "Forrest Gump: O Contador de Histórias",
+        "genres": [
+          "Comédia",
+          "Drama"
+        ],
+        "recommendations": [
+          {
+            "id": 423108,
+            "title": "Invocação do Mal 3: A Ordem do Demônio",
+            "score": 0.135769,
+            "shared_genres": [],
+            "explanation": [
+              "caso",
+              "estados",
+              "história",
+              "unidos"
+            ]
+          },
+          {
+            "id": 640,
+            "title": "Prenda-Me se For Capaz",
+            "score": 0.12829,
+            "shared_genres": [
+              "Drama"
+            ],
+            "explanation": [
+              "anos",
+              "estados",
+              "história",
+              "unidos"
+            ]
+          },
+          {
+            "id": 138843,
+            "title": "Invocação do Mal",
+            "score": 0.127,
+            "shared_genres": [],
+            "explanation": [
+              "caso",
+              "estados",
+              "história",
+              "unidos"
+            ]
+          },
+          {
+            "id": 406563,
+            "title": "Sobrenatural: A Última Chave",
+            "score": 0.125749,
+            "shared_genres": [],
+            "explanation": [
+              "caso",
+              "infância"
+            ]
+          },
+          {
+            "id": 10997,
+            "title": "Adeus, Minha Concubina",
+            "score": 0.120483,
+            "shared_genres": [
+              "Drama"
+            ],
+            "explanation": [
+              "anos",
+              "história",
+              "momentos"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "title": "Beleza Americana",
+        "genres": [
+          "Drama"
+        ],
+        "recommendations": [
+          {
+            "id": 634649,
+            "title": "Homem-Aranha: Sem Volta Para Casa",
+            "score": 0.136083,
+            "shared_genres": [],
+            "explanation": [
+              "vida",
+              "ajuda",
+              "não",
+              "pede"
+            ]
+          },
+          {
+            "id": 315635,
+            "title": "Homem-Aranha: De Volta ao Lar",
+            "score": 0.11547,
+            "shared_genres": [],
+            "explanation": [
+              "vida",
+              "não"
+            ]
+          },
+          {
+            "id": 10681,
+            "title": "WALL-E",
+            "score": 0.109897,
+            "shared_genres": [],
+            "explanation": [
+              "vida",
+              "conhece"
+            ]
+          },
+          {
+            "id": 101,
+            "title": "O Profissional",
+            "score": 0.107583,
+            "shared_genres": [
+              "Drama"
+            ],
+            "explanation": [
+              "vida",
+              "conhece",
+              "pai",
+              "vizinho"
+            ]
+          },
+          {
+            "id": 115,
+            "title": "O Grande Lebowski",
+            "score": 0.104371,
+            "shared_genres": [],
+            "explanation": [
+              "vida",
+              "não"
+            ]
+          }
+        ]
+      }
+    ],
+    "profiles": [
+      {
+        "id": "ficcao_mente_realidade",
+        "movies": [
+          {
+            "id": 603,
+            "title": "Matrix"
+          },
+          {
+            "id": 27205,
+            "title": "A Origem"
+          },
+          {
+            "id": 38,
+            "title": "Brilho Eterno de uma Mente sem Lembranças"
+          }
+        ],
+        "genres": [
+          "Drama",
+          "Ficção científica"
+        ],
+        "precision_at_k": 0.4,
+        "recommendations": [
+          {
+            "id": 1022789,
+            "title": "Divertida Mente 2",
+            "score": 0.123842,
+            "shared_genres": [],
+            "explanation": [
+              "mente",
+              "não",
+              "está"
+            ]
+          },
+          {
+            "id": 21484,
+            "title": "Possessão",
+            "score": 0.116678,
+            "shared_genres": [],
+            "explanation": [
+              "está",
+              "amor",
+              "família",
+              "começa",
+              "descobre"
+            ]
+          },
+          {
+            "id": 693134,
+            "title": "Duna: Parte Dois",
+            "score": 0.1118,
+            "shared_genres": [
+              "Ficção científica"
+            ],
+            "explanation": [
+              "enquanto",
+              "futuro",
+              "amor",
+              "precisa",
+              "ajuda"
+            ]
+          },
+          {
+            "id": 284053,
+            "title": "Thor: Ragnarok",
+            "score": 0.110588,
+            "shared_genres": [
+              "Ficção científica"
+            ],
+            "explanation": [
+              "está",
+              "parar",
+              "precisa",
+              "preso",
+              "mundo"
+            ]
+          },
+          {
+            "id": 346698,
+            "title": "Barbie",
+            "score": 0.109337,
+            "shared_genres": [],
+            "explanation": [
+              "mundo",
+              "não",
+              "começa",
+              "descobre",
+              "está"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "terror_sobrenatural",
+        "movies": [
+          {
+            "id": 138843,
+            "title": "Invocação do Mal"
+          },
+          {
+            "id": 493922,
+            "title": "Hereditário"
+          },
+          {
+            "id": 280092,
+            "title": "Sobrenatural: A Origem"
+          }
+        ],
+        "genres": [
+          "Terror"
+        ],
+        "precision_at_k": 0.2,
+        "recommendations": [
+          {
+            "id": 940551,
+            "title": "Patos!",
+            "score": 0.203391,
+            "shared_genres": [],
+            "explanation": [
+              "família",
+              "adolescente",
+              "coisas",
+              "lugares",
+              "sempre"
+            ]
+          },
+          {
+            "id": 496243,
+            "title": "Parasita",
+            "score": 0.19573,
+            "shared_genres": [],
+            "explanation": [
+              "família",
+              "adolescente"
+            ]
+          },
+          {
+            "id": 447332,
+            "title": "Um Lugar Silencioso",
+            "score": 0.182002,
+            "shared_genres": [
+              "Terror"
+            ],
+            "explanation": [
+              "família",
+              "entidade",
+              "estados",
+              "fazenda",
+              "unidos"
+            ]
+          },
+          {
+            "id": 242,
+            "title": "O Poderoso Chefão: Parte III",
+            "score": 0.175529,
+            "shared_genres": [],
+            "explanation": [
+              "família",
+              "ajuda",
+              "busca",
+              "morte",
+              "não"
+            ]
+          },
+          {
+            "id": 769,
+            "title": "Os Bons Companheiros",
+            "score": 0.152059,
+            "shared_genres": [],
+            "explanation": [
+              "família",
+              "meio",
+              "história",
+              "real"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "animacao_familia",
+        "movies": [
+          {
+            "id": 862,
+            "title": "Toy Story: Um Mundo de Aventuras"
+          },
+          {
+            "id": 14160,
+            "title": "Up: Altas Aventuras"
+          },
+          {
+            "id": 585,
+            "title": "Monstros S.A."
+          }
+        ],
+        "genres": [
+          "Comédia"
+        ],
+        "precision_at_k": 1.0,
+        "recommendations": [
+          {
+            "id": 10193,
+            "title": "Toy Story 3",
+            "score": 0.278994,
+            "shared_genres": [
+              "Comédia"
+            ],
+            "explanation": [
+              "brinquedos",
+              "casa",
+              "buzz",
+              "andy",
+              "anos"
+            ]
+          },
+          {
+            "id": 301528,
+            "title": "Toy Story 4",
+            "score": 0.198241,
+            "shared_genres": [
+              "Comédia"
+            ],
+            "explanation": [
+              "casa",
+              "brinquedo",
+              "woody",
+              "agora",
+              "novo"
+            ]
+          },
+          {
+            "id": 863,
+            "title": "Toy Story 2",
+            "score": 0.166303,
+            "shared_genres": [
+              "Comédia"
+            ],
+            "explanation": [
+              "woody",
+              "brinquedos",
+              "buzz",
+              "andy",
+              "brinquedo"
+            ]
+          },
+          {
+            "id": 9297,
+            "title": "A Casa Monstro",
+            "score": 0.16471,
+            "shared_genres": [
+              "Comédia"
+            ],
+            "explanation": [
+              "casa",
+              "brinquedos",
+              "anos",
+              "acredita",
+              "tudo"
+            ]
+          },
+          {
+            "id": 346698,
+            "title": "Barbie",
+            "score": 0.138925,
+            "shared_genres": [
+              "Comédia"
+            ],
+            "explanation": [
+              "mundo",
+              "descobre",
+              "está",
+              "onde",
+              "ser"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "tfidf_sem_pontuacao": {
+    "k": 5,
+    "documents_evaluated": 428,
+    "precision_at_k": 0.569626,
+    "baseline": 0.379118,
+    "examples": [
+      {
+        "id": 603,
+        "title": "Matrix",
+        "genres": [
+          "Ficção científica"
+        ],
+        "recommendations": [
+          {
+            "id": 21484,
+            "title": "Possessão",
+            "score": 0.145403,
+            "shared_genres": [],
+            "explanation": [
+              "a",
+              "estranhos",
+              "e",
+              "que",
+              "está"
+            ]
+          },
+          {
+            "id": 99861,
+            "title": "Vingadores: Era de Ultron",
+            "score": 0.134358,
+            "shared_genres": [
+              "Ficção científica"
+            ],
+            "explanation": [
+              "sistema",
+              "artificial",
+              "o",
+              "que",
+              "da"
+            ]
+          },
+          {
+            "id": 346698,
+            "title": "Barbie",
+            "score": 0.131998,
+            "shared_genres": [],
+            "explanation": [
+              "real",
+              "das",
+              "mundo",
+              "que",
+              "começa"
+            ]
+          },
+          {
+            "id": 924,
+            "title": "Madrugada dos Mortos",
+            "score": 0.126003,
+            "shared_genres": [
+              "Ficção científica"
+            ],
+            "explanation": [
+              "real",
+              "mundo",
+              "um",
+              "por",
+              "e"
+            ]
+          },
+          {
+            "id": 550988,
+            "title": "Free Guy: Assumindo o Controle",
+            "score": 0.125747,
+            "shared_genres": [
+              "Ficção científica"
+            ],
+            "explanation": [
+              "realidade",
+              "mundo",
+              "que",
+              "de",
+              "é"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "title": "Forrest Gump: O Contador de Histórias",
+        "genres": [
+          "Comédia",
+          "Drama"
+        ],
+        "recommendations": [
+          {
+            "id": 406563,
+            "title": "Sobrenatural: A Última Chave",
+            "score": 0.130747,
+            "shared_genres": [],
+            "explanation": [
+              "infância",
+              "caso",
+              "de",
+              "do",
+              "com"
+            ]
+          },
+          {
+            "id": 423108,
+            "title": "Invocação do Mal 3: A Ordem do Demônio",
+            "score": 0.126291,
+            "shared_genres": [],
+            "explanation": [
+              "estados",
+              "unidos",
+              "caso",
+              "história",
+              "de"
+            ]
+          },
+          {
+            "id": 640,
+            "title": "Prenda-Me se For Capaz",
+            "score": 0.12558,
+            "shared_genres": [
+              "Drama"
+            ],
+            "explanation": [
+              "estados",
+              "unidos",
+              "com",
+              "anos",
+              "história"
+            ]
+          },
+          {
+            "id": 115,
+            "title": "O Grande Lebowski",
+            "score": 0.124407,
+            "shared_genres": [
+              "Comédia"
+            ],
+            "explanation": [
+              "vietnã",
+              "com",
+              "da",
+              "guerra",
+              "como"
+            ]
+          },
+          {
+            "id": 1156593,
+            "title": "Sua Culpa",
+            "score": 0.109041,
+            "shared_genres": [
+              "Drama"
+            ],
+            "explanation": [
+              "intenções",
+              "consegue",
+              "de",
+              "amor",
+              "mas"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "title": "Beleza Americana",
+        "genres": [
+          "Drama"
+        ],
+        "recommendations": [
+          {
+            "id": 194,
+            "title": "O Fabuloso Destino de Amélie Poulain",
+            "score": 0.122071,
+            "shared_genres": [],
+            "explanation": [
+              "a",
+              "sente",
+              "sua",
+              "de",
+              "vida"
+            ]
+          },
+          {
+            "id": 101,
+            "title": "O Profissional",
+            "score": 0.121917,
+            "shared_genres": [
+              "Drama"
+            ],
+            "explanation": [
+              "vizinho",
+              "a",
+              "conhece",
+              "vida",
+              "de"
+            ]
+          },
+          {
+            "id": 634649,
+            "title": "Homem-Aranha: Sem Volta Para Casa",
+            "score": 0.120689,
+            "shared_genres": [],
+            "explanation": [
+              "pede",
+              "vida",
+              "ajuda",
+              "mais",
+              "sua"
+            ]
+          },
+          {
+            "id": 37165,
+            "title": "O Show de Truman: O Show da Vida",
+            "score": 0.114419,
+            "shared_genres": [
+              "Drama"
+            ],
+            "explanation": [
+              "sua",
+              "vida",
+              "com",
+              "e",
+              "a"
+            ]
+          },
+          {
+            "id": 115,
+            "title": "O Grande Lebowski",
+            "score": 0.11389,
+            "shared_genres": [],
+            "explanation": [
+              "com",
+              "vida",
+              "sua",
+              "seu",
+              "se"
+            ]
+          }
+        ]
+      }
+    ],
+    "profiles": [
+      {
+        "id": "ficcao_mente_realidade",
+        "movies": [
+          {
+            "id": 603,
+            "title": "Matrix"
+          },
+          {
+            "id": 27205,
+            "title": "A Origem"
+          },
+          {
+            "id": 38,
+            "title": "Brilho Eterno de uma Mente sem Lembranças"
+          }
+        ],
+        "genres": [
+          "Drama",
+          "Ficção científica"
+        ],
+        "precision_at_k": 0.4,
+        "recommendations": [
+          {
+            "id": 550988,
+            "title": "Free Guy: Assumindo o Controle",
+            "score": 0.170648,
+            "shared_genres": [
+              "Ficção científica"
+            ],
+            "explanation": [
+              "de",
+              "o",
+              "ele",
+              "que",
+              "preso"
+            ]
+          },
+          {
+            "id": 693134,
+            "title": "Duna: Parte Dois",
+            "score": 0.160296,
+            "shared_genres": [
+              "Ficção científica"
+            ],
+            "explanation": [
+              "ele",
+              "o",
+              "enquanto",
+              "que",
+              "de"
+            ]
+          },
+          {
+            "id": 1569947,
+            "title": "O Padre: Massacre no Dia de Ação de Graças",
+            "score": 0.155507,
+            "shared_genres": [],
+            "explanation": [
+              "de",
+              "o",
+              "medida",
+              "se",
+              "ele"
+            ]
+          },
+          {
+            "id": 107,
+            "title": "Snatch: Porcos e Diamantes",
+            "score": 0.152499,
+            "shared_genres": [],
+            "explanation": [
+              "de",
+              "ideia",
+              "o",
+              "ladrão",
+              "das"
+            ]
+          },
+          {
+            "id": 194,
+            "title": "O Fabuloso Destino de Amélie Poulain",
+            "score": 0.151484,
+            "shared_genres": [],
+            "explanation": [
+              "de",
+              "a",
+              "que",
+              "ao",
+              "o"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "terror_sobrenatural",
+        "movies": [
+          {
+            "id": 138843,
+            "title": "Invocação do Mal"
+          },
+          {
+            "id": 493922,
+            "title": "Hereditário"
+          },
+          {
+            "id": 280092,
+            "title": "Sobrenatural: A Origem"
+          }
+        ],
+        "genres": [
+          "Terror"
+        ],
+        "precision_at_k": 0.8,
+        "recommendations": [
+          {
+            "id": 406563,
+            "title": "Sobrenatural: A Última Chave",
+            "score": 0.174625,
+            "shared_genres": [
+              "Terror"
+            ],
+            "explanation": [
+              "elise",
+              "caso",
+              "a",
+              "rainier",
+              "ela"
+            ]
+          },
+          {
+            "id": 1038392,
+            "title": "Invocação do Mal 4: O Último Ritual",
+            "score": 0.174124,
+            "shared_genres": [
+              "Terror"
+            ],
+            "explanation": [
+              "sobrenatural",
+              "investigadores",
+              "warren",
+              "a",
+              "ed"
+            ]
+          },
+          {
+            "id": 940551,
+            "title": "Patos!",
+            "score": 0.165168,
+            "shared_genres": [],
+            "explanation": [
+              "família",
+              "a",
+              "adolescente",
+              "da",
+              "lugares"
+            ]
+          },
+          {
+            "id": 259693,
+            "title": "Invocação do Mal 2",
+            "score": 0.164243,
+            "shared_genres": [
+              "Terror"
+            ],
+            "explanation": [
+              "a",
+              "warren",
+              "ed",
+              "lorraine",
+              "por"
+            ]
+          },
+          {
+            "id": 447332,
+            "title": "Um Lugar Silencioso",
+            "score": 0.160896,
+            "shared_genres": [
+              "Terror"
+            ],
+            "explanation": [
+              "entidade",
+              "fazenda",
+              "família",
+              "uma",
+              "estados"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "animacao_familia",
+        "movies": [
+          {
+            "id": 862,
+            "title": "Toy Story: Um Mundo de Aventuras"
+          },
+          {
+            "id": 14160,
+            "title": "Up: Altas Aventuras"
+          },
+          {
+            "id": 585,
+            "title": "Monstros S.A."
+          }
+        ],
+        "genres": [
+          "Comédia"
+        ],
+        "precision_at_k": 0.8,
+        "recommendations": [
+          {
+            "id": 10193,
+            "title": "Toy Story 3",
+            "score": 0.272214,
+            "shared_genres": [
+              "Comédia"
+            ],
+            "explanation": [
+              "brinquedos",
+              "buzz",
+              "andy",
+              "woody",
+              "casa"
+            ]
+          },
+          {
+            "id": 863,
+            "title": "Toy Story 2",
+            "score": 0.242455,
+            "shared_genres": [
+              "Comédia"
+            ],
+            "explanation": [
+              "woody",
+              "de",
+              "buzz",
+              "brinquedos",
+              "brinquedo"
+            ]
+          },
+          {
+            "id": 9297,
+            "title": "A Casa Monstro",
+            "score": 0.21244,
+            "shared_genres": [
+              "Comédia"
+            ],
+            "explanation": [
+              "casa",
+              "do",
+              "que",
+              "de",
+              "brinquedos"
+            ]
+          },
+          {
+            "id": 301528,
+            "title": "Toy Story 4",
+            "score": 0.207297,
+            "shared_genres": [
+              "Comédia"
+            ],
+            "explanation": [
+              "brinquedo",
+              "woody",
+              "de",
+              "casa",
+              "que"
+            ]
+          },
+          {
+            "id": 640,
+            "title": "Prenda-Me se For Capaz",
+            "score": 0.176776,
+            "shared_genres": [],
+            "explanation": [
+              "carl",
+              "que",
+              "do",
+              "anos",
+              "e"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "tfidf_sem_stopwords": {
+    "k": 5,
+    "documents_evaluated": 428,
+    "precision_at_k": 0.578037,
+    "baseline": 0.379118,
+    "examples": [
+      {
+        "id": 603,
+        "title": "Matrix",
+        "genres": [
+          "Ficção científica"
+        ],
+        "recommendations": [
+          {
+            "id": 346698,
+            "title": "Barbie",
+            "score": 0.085835,
+            "shared_genres": [],
+            "explanation": [
+              "real",
+              "mundo",
+              "começa",
+              "descobre",
+              "está"
+            ]
+          },
+          {
+            "id": 99861,
+            "title": "Vingadores: Era de Ultron",
+            "score": 0.080426,
+            "shared_genres": [
+              "Ficção científica"
+            ],
+            "explanation": [
+              "sistema",
+              "artificial"
+            ]
+          },
+          {
+            "id": 475557,
+            "title": "Coringa",
+            "score": 0.078444,
+            "shared_genres": [],
+            "explanation": [
+              "thomas",
+              "mente"
+            ]
+          },
+          {
+            "id": 21484,
+            "title": "Possessão",
+            "score": 0.074471,
+            "shared_genres": [],
+            "explanation": [
+              "estranhos",
+              "está",
+              "começa",
+              "descobre",
+              "jovem"
+            ]
+          },
+          {
+            "id": 814,
+            "title": "Um Lobisomem Americano em Londres",
+            "score": 0.063326,
+            "shared_genres": [],
+            "explanation": [
+              "atormentado",
+              "pesadelos",
+              "enquanto",
+              "está"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "title": "Forrest Gump: O Contador de Histórias",
+        "genres": [
+          "Comédia",
+          "Drama"
+        ],
+        "recommendations": [
+          {
+            "id": 406563,
+            "title": "Sobrenatural: A Última Chave",
+            "score": 0.103047,
+            "shared_genres": [],
+            "explanation": [
+              "infância",
+              "caso"
+            ]
+          },
+          {
+            "id": 423108,
+            "title": "Invocação do Mal 3: A Ordem do Demônio",
+            "score": 0.086448,
+            "shared_genres": [],
+            "explanation": [
+              "estados",
+              "unidos",
+              "caso",
+              "história"
+            ]
+          },
+          {
+            "id": 10997,
+            "title": "Adeus, Minha Concubina",
+            "score": 0.078638,
+            "shared_genres": [
+              "Drama"
+            ],
+            "explanation": [
+              "momentos",
+              "história",
+              "anos"
+            ]
+          },
+          {
+            "id": 138843,
+            "title": "Invocação do Mal",
+            "score": 0.077135,
+            "shared_genres": [],
+            "explanation": [
+              "estados",
+              "unidos",
+              "caso",
+              "história"
+            ]
+          },
+          {
+            "id": 640,
+            "title": "Prenda-Me se For Capaz",
+            "score": 0.065706,
+            "shared_genres": [
+              "Drama"
+            ],
+            "explanation": [
+              "estados",
+              "unidos",
+              "anos",
+              "história"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "title": "Beleza Americana",
+        "genres": [
+          "Drama"
+        ],
+        "recommendations": [
+          {
+            "id": 634649,
+            "title": "Homem-Aranha: Sem Volta Para Casa",
+            "score": 0.067329,
+            "shared_genres": [],
+            "explanation": [
+              "pede",
+              "vida",
+              "ajuda",
+              "não"
+            ]
+          },
+          {
+            "id": 346698,
+            "title": "Barbie",
+            "score": 0.064161,
+            "shared_genres": [],
+            "explanation": [
+              "beleza",
+              "começa",
+              "não"
+            ]
+          },
+          {
+            "id": 616037,
+            "title": "Thor: Amor e Trovão",
+            "score": 0.061622,
+            "shared_genres": [],
+            "explanation": [
+              "jane",
+              "pede",
+              "ajuda"
+            ]
+          },
+          {
+            "id": 101,
+            "title": "O Profissional",
+            "score": 0.059478,
+            "shared_genres": [
+              "Drama"
+            ],
+            "explanation": [
+              "vizinho",
+              "conhece",
+              "vida",
+              "pai"
+            ]
+          },
+          {
+            "id": 559,
+            "title": "Homem-Aranha 3",
+            "score": 0.05674,
+            "shared_genres": [],
+            "explanation": [
+              "jane"
+            ]
+          }
+        ]
+      }
+    ],
+    "profiles": [
+      {
+        "id": "ficcao_mente_realidade",
+        "movies": [
+          {
+            "id": 603,
+            "title": "Matrix"
+          },
+          {
+            "id": 27205,
+            "title": "A Origem"
+          },
+          {
+            "id": 38,
+            "title": "Brilho Eterno de uma Mente sem Lembranças"
+          }
+        ],
+        "genres": [
+          "Drama",
+          "Ficção científica"
+        ],
+        "precision_at_k": 0.8,
+        "recommendations": [
+          {
+            "id": 475557,
+            "title": "Coringa",
+            "score": 0.08733,
+            "shared_genres": [
+              "Drama"
+            ],
+            "explanation": [
+              "mente",
+              "thomas",
+              "arthur"
+            ]
+          },
+          {
+            "id": 1022789,
+            "title": "Divertida Mente 2",
+            "score": 0.080565,
+            "shared_genres": [],
+            "explanation": [
+              "mente",
+              "está",
+              "não"
+            ]
+          },
+          {
+            "id": 284053,
+            "title": "Thor: Ragnarok",
+            "score": 0.066817,
+            "shared_genres": [
+              "Ficção científica"
+            ],
+            "explanation": [
+              "parar",
+              "preso",
+              "precisa",
+              "está",
+              "mundo"
+            ]
+          },
+          {
+            "id": 45612,
+            "title": "Contra o Tempo",
+            "score": 0.062069,
+            "shared_genres": [
+              "Ficção científica"
+            ],
+            "explanation": [
+              "mente",
+              "mesmo"
+            ]
+          },
+          {
+            "id": 597,
+            "title": "Titanic",
+            "score": 0.060256,
+            "shared_genres": [
+              "Drama"
+            ],
+            "explanation": [
+              "verdadeiro",
+              "herdeiro",
+              "amor",
+              "jovem",
+              "família"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "terror_sobrenatural",
+        "movies": [
+          {
+            "id": 138843,
+            "title": "Invocação do Mal"
+          },
+          {
+            "id": 493922,
+            "title": "Hereditário"
+          },
+          {
+            "id": 280092,
+            "title": "Sobrenatural: A Origem"
+          }
+        ],
+        "genres": [
+          "Terror"
+        ],
+        "precision_at_k": 0.8,
+        "recommendations": [
+          {
+            "id": 1038392,
+            "title": "Invocação do Mal 4: O Último Ritual",
+            "score": 0.130687,
+            "shared_genres": [
+              "Terror"
+            ],
+            "explanation": [
+              "sobrenatural",
+              "investigadores",
+              "warren",
+              "ed",
+              "lorraine"
+            ]
+          },
+          {
+            "id": 447332,
+            "title": "Um Lugar Silencioso",
+            "score": 0.126913,
+            "shared_genres": [
+              "Terror"
+            ],
+            "explanation": [
+              "entidade",
+              "família",
+              "fazenda",
+              "estados",
+              "unidos"
+            ]
+          },
+          {
+            "id": 406563,
+            "title": "Sobrenatural: A Última Chave",
+            "score": 0.114758,
+            "shared_genres": [
+              "Terror"
+            ],
+            "explanation": [
+              "elise",
+              "caso",
+              "rainier",
+              "confrontar",
+              "casa"
+            ]
+          },
+          {
+            "id": 940551,
+            "title": "Patos!",
+            "score": 0.104975,
+            "shared_genres": [],
+            "explanation": [
+              "família",
+              "adolescente",
+              "lugares",
+              "coisas",
+              "sempre"
+            ]
+          },
+          {
+            "id": 259693,
+            "title": "Invocação do Mal 2",
+            "score": 0.097807,
+            "shared_genres": [
+              "Terror"
+            ],
+            "explanation": [
+              "warren",
+              "ed",
+              "lorraine",
+              "numa",
+              "caso"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "animacao_familia",
+        "movies": [
+          {
+            "id": 862,
+            "title": "Toy Story: Um Mundo de Aventuras"
+          },
+          {
+            "id": 14160,
+            "title": "Up: Altas Aventuras"
+          },
+          {
+            "id": 585,
+            "title": "Monstros S.A."
+          }
+        ],
+        "genres": [
+          "Comédia"
+        ],
+        "precision_at_k": 0.8,
+        "recommendations": [
+          {
+            "id": 10193,
+            "title": "Toy Story 3",
+            "score": 0.247515,
+            "shared_genres": [
+              "Comédia"
+            ],
+            "explanation": [
+              "brinquedos",
+              "buzz",
+              "andy",
+              "woody",
+              "casa"
+            ]
+          },
+          {
+            "id": 863,
+            "title": "Toy Story 2",
+            "score": 0.160226,
+            "shared_genres": [
+              "Comédia"
+            ],
+            "explanation": [
+              "woody",
+              "buzz",
+              "brinquedos",
+              "brinquedo",
+              "andy"
+            ]
+          },
+          {
+            "id": 301528,
+            "title": "Toy Story 4",
+            "score": 0.139308,
+            "shared_genres": [
+              "Comédia"
+            ],
+            "explanation": [
+              "brinquedo",
+              "woody",
+              "casa",
+              "novo",
+              "agora"
+            ]
+          },
+          {
+            "id": 9297,
+            "title": "A Casa Monstro",
+            "score": 0.097515,
+            "shared_genres": [
+              "Comédia"
+            ],
+            "explanation": [
+              "casa",
+              "brinquedos",
+              "acredita",
+              "perigo",
+              "garoto"
+            ]
+          },
+          {
+            "id": 640,
+            "title": "Prenda-Me se For Capaz",
+            "score": 0.086055,
+            "shared_genres": [],
+            "explanation": [
+              "carl",
+              "anos",
+              "viver",
+              "quer",
+              "fazem"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "word2vec_cbow": {
+    "k": 5,
+    "documents_evaluated": 428,
+    "precision_at_k": 0.557477,
+    "baseline": 0.379118,
+    "examples": [
+      {
+        "id": 603,
+        "title": "Matrix",
+        "genres": [
+          "Ficção científica"
+        ],
+        "recommendations": [
+          {
+            "id": 585,
+            "title": "Monstros S.A.",
+            "score": 0.672378,
+            "shared_genres": [],
+            "explanation": [
+              "energia",
+              "mundo",
+              "pessoas ≈ crianças",
+              "thomas ≈ mike",
+              "sonho ≈ astro"
+            ]
+          },
+          {
+            "id": 1724,
+            "title": "O Incrível Hulk",
+            "score": 0.66932,
+            "shared_genres": [
+              "Ficção científica"
+            ],
+            "explanation": [
+              "está",
+              "conhece ≈ ama",
+              "vítima ≈ mulher",
+              "repete ≈ transforme",
+              "produzir ≈ explorar"
+            ]
+          },
+          {
+            "id": 99861,
+            "title": "Vingadores: Era de Ultron",
+            "score": 0.66678,
+            "shared_genres": [
+              "Ficção científica"
+            ],
+            "explanation": [
+              "artificial",
+              "sistema",
+              "cria ≈ gera",
+              "mundo ≈ planeta",
+              "conhece ≈ constrói"
+            ]
+          },
+          {
+            "id": 10386,
+            "title": "O Gigante de Ferro",
+            "score": 0.664737,
+            "shared_genres": [
+              "Ficção científica"
+            ],
+            "explanation": [
+              "está ≈ estava",
+              "repete ≈ encontra",
+              "atormentado ≈ obcecado",
+              "jovem ≈ garoto",
+              "começa ≈ surge"
+            ]
+          },
+          {
+            "id": 9426,
+            "title": "A Mosca",
+            "score": 0.663599,
+            "shared_genres": [
+              "Ficção científica"
+            ],
+            "explanation": [
+              "descobre ≈ percebe",
+              "realidade ≈ história",
+              "ilusão ≈ invenção",
+              "inteligente ≈ excêntrico",
+              "produzir ≈ experimentar"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "title": "Forrest Gump: O Contador de Histórias",
+        "genres": [
+          "Comédia",
+          "Drama"
+        ],
+        "recommendations": [
+          {
+            "id": 640,
+            "title": "Prenda-Me se For Capaz",
+            "score": 0.65631,
+            "shared_genres": [
+              "Drama"
+            ],
+            "explanation": [
+              "anos",
+              "história",
+              "estados",
+              "unidos",
+              "rapaz ≈ ladrão"
+            ]
+          },
+          {
+            "id": 628,
+            "title": "Entrevista com o Vampiro",
+            "score": 0.638813,
+            "shared_genres": [
+              "Drama"
+            ],
+            "explanation": [
+              "anos",
+              "rapaz ≈ homem",
+              "consegue ≈ precisa",
+              "história ≈ vida",
+              "intenções ≈ experiências"
+            ]
+          },
+          {
+            "id": 588,
+            "title": "Terror em Silent Hill",
+            "score": 0.638137,
+            "shared_genres": [],
+            "explanation": [
+              "anos",
+              "consegue ≈ vai",
+              "continua ≈ começa",
+              "rapaz ≈ carro",
+              "amor ≈ sofrimento"
+            ]
+          },
+          {
+            "id": 115,
+            "title": "O Grande Lebowski",
+            "score": 0.635575,
+            "shared_genres": [
+              "Comédia"
+            ],
+            "explanation": [
+              "vietnã",
+              "anos",
+              "guerra",
+              "consegue ≈ irá",
+              "história ≈ vida"
+            ]
+          },
+          {
+            "id": 80321,
+            "title": "Madagascar 3: Os Procurados",
+            "score": 0.629538,
+            "shared_genres": [
+              "Comédia"
+            ],
+            "explanation": [
+              "unidos",
+              "estados",
+              "consegue ≈ poderá",
+              "vistos ≈ perseguidos",
+              "guerra ≈ turnê"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "title": "Beleza Americana",
+        "genres": [
+          "Drama"
+        ],
+        "recommendations": [
+          {
+            "id": 210577,
+            "title": "Garota Exemplar",
+            "score": 0.753405,
+            "shared_genres": [
+              "Drama"
+            ],
+            "explanation": [
+              "dia",
+              "começa",
+              "pai ≈ marido",
+              "amiga ≈ irmã",
+              "reconstruir ≈ descobrir"
+            ]
+          },
+          {
+            "id": 6435,
+            "title": "Da Magia à Sedução",
+            "score": 0.7295,
+            "shared_genres": [],
+            "explanation": [
+              "momento",
+              "melhor",
+              "vida",
+              "volta",
+              "pai ≈ marido"
+            ]
+          },
+          {
+            "id": 8966,
+            "title": "Crepúsculo",
+            "score": 0.727514,
+            "shared_genres": [
+              "Drama"
+            ],
+            "explanation": [
+              "volta",
+              "pai",
+              "amiga ≈ mãe",
+              "conhece ≈ sabe",
+              "masturba ≈ apaixonam"
+            ]
+          },
+          {
+            "id": 747,
+            "title": "Todo Mundo Quase Morto",
+            "score": 0.70082,
+            "shared_genres": [],
+            "explanation": [
+              "melhor",
+              "volta",
+              "não",
+              "amiga ≈ namorada",
+              "masturba ≈ embebeda"
+            ]
+          },
+          {
+            "id": 1010581,
+            "title": "Minha Culpa",
+            "score": 0.693735,
+            "shared_genres": [
+              "Drama"
+            ],
+            "explanation": [
+              "conhece",
+              "pai ≈ marido",
+              "amiga ≈ mãe",
+              "masturba ≈ apaixonam",
+              "cima ≈ trás"
+            ]
+          }
+        ]
+      }
+    ],
+    "profiles": [
+      {
+        "id": "ficcao_mente_realidade",
+        "movies": [
+          {
+            "id": 603,
+            "title": "Matrix"
+          },
+          {
+            "id": 27205,
+            "title": "A Origem"
+          },
+          {
+            "id": 38,
+            "title": "Brilho Eterno de uma Mente sem Lembranças"
+          }
+        ],
+        "genres": [
+          "Drama",
+          "Ficção científica"
+        ],
+        "precision_at_k": 0.4,
+        "recommendations": [
+          {
+            "id": 1724,
+            "title": "O Incrível Hulk",
+            "score": 0.753633,
+            "shared_genres": [
+              "Ficção científica"
+            ],
+            "explanation": [
+              "está",
+              "inimigo",
+              "precisa",
+              "mesmo",
+              "decide ≈ tenta"
+            ]
+          },
+          {
+            "id": 747,
+            "title": "Todo Mundo Quase Morto",
+            "score": 0.741561,
+            "shared_genres": [],
+            "explanation": [
+              "fazer",
+              "pessoas",
+              "sempre",
+              "decide",
+              "está"
+            ]
+          },
+          {
+            "id": 854,
+            "title": "O Máskara",
+            "score": 0.740655,
+            "shared_genres": [],
+            "explanation": [
+              "fazer",
+              "enquanto",
+              "redimir ≈ apoderar",
+              "pessoas ≈ mulheres",
+              "repete ≈ transforma"
+            ]
+          },
+          {
+            "id": 9946,
+            "title": "Fim dos Dias",
+            "score": 0.740406,
+            "shared_genres": [],
+            "explanation": [
+              "fazer",
+              "descobre",
+              "precisa ≈ deve",
+              "produzir ≈ gerar",
+              "avisá-los ≈ protegê-la"
+            ]
+          },
+          {
+            "id": 1417,
+            "title": "O Labirinto do Fauno",
+            "score": 0.738448,
+            "shared_genres": [
+              "Drama"
+            ],
+            "explanation": [
+              "jovem",
+              "está",
+              "não",
+              "chamado",
+              "precisa"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "terror_sobrenatural",
+        "movies": [
+          {
+            "id": 138843,
+            "title": "Invocação do Mal"
+          },
+          {
+            "id": 493922,
+            "title": "Hereditário"
+          },
+          {
+            "id": 280092,
+            "title": "Sobrenatural: A Origem"
+          }
+        ],
+        "genres": [
+          "Terror"
+        ],
+        "precision_at_k": 0.2,
+        "recommendations": [
+          {
+            "id": 6435,
+            "title": "Da Magia à Sedução",
+            "score": 0.774166,
+            "shared_genres": [],
+            "explanation": [
+              "após",
+              "ajudar",
+              "casa",
+              "família",
+              "começa ≈ começou"
+            ]
+          },
+          {
+            "id": 588,
+            "title": "Terror em Silent Hill",
+            "score": 0.772477,
+            "shared_genres": [
+              "Terror"
+            ],
+            "explanation": [
+              "desvendar",
+              "busca",
+              "começa",
+              "após",
+              "avó ≈ mãe"
+            ]
+          },
+          {
+            "id": 940551,
+            "title": "Patos!",
+            "score": 0.771235,
+            "shared_genres": [],
+            "explanation": [
+              "lugares",
+              "coisas",
+              "sempre",
+              "família",
+              "adolescente"
+            ]
+          },
+          {
+            "id": 496243,
+            "title": "Parasita",
+            "score": 0.759381,
+            "shared_genres": [],
+            "explanation": [
+              "família",
+              "adolescente",
+              "avó ≈ mãe",
+              "neta ≈ filha",
+              "começa ≈ comece"
+            ]
+          },
+          {
+            "id": 101,
+            "title": "O Profissional",
+            "score": 0.749887,
+            "shared_genres": [],
+            "explanation": [
+              "morte",
+              "família",
+              "avó ≈ mãe",
+              "demônio ≈ assassino",
+              "história ≈ vida"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "animacao_familia",
+        "movies": [
+          {
+            "id": 862,
+            "title": "Toy Story: Um Mundo de Aventuras"
+          },
+          {
+            "id": 14160,
+            "title": "Up: Altas Aventuras"
+          },
+          {
+            "id": 585,
+            "title": "Monstros S.A."
+          }
+        ],
+        "genres": [
+          "Comédia"
+        ],
+        "precision_at_k": 1.0,
+        "recommendations": [
+          {
+            "id": 1205229,
+            "title": "Zoopocalipse - Uma Aventura Animal",
+            "score": 0.804362,
+            "shared_genres": [
+              "Comédia"
+            ],
+            "explanation": [
+              "ajuda",
+              "agora",
+              "amigos",
+              "monstros ≈ zumbis",
+              "precisam ≈ precisa"
+            ]
+          },
+          {
+            "id": 863,
+            "title": "Toy Story 2",
+            "score": 0.801043,
+            "shared_genres": [
+              "Comédia"
+            ],
+            "explanation": [
+              "agora",
+              "brinquedo",
+              "woody",
+              "andy",
+              "brinquedos"
+            ]
+          },
+          {
+            "id": 9297,
+            "title": "A Casa Monstro",
+            "score": 0.796454,
+            "shared_genres": [
+              "Comédia"
+            ],
+            "explanation": [
+              "brinquedos",
+              "garoto",
+              "anos",
+              "78 ≈ 12",
+              "acredita"
+            ]
+          },
+          {
+            "id": 80321,
+            "title": "Madagascar 3: Os Procurados",
+            "score": 0.792207,
+            "shared_genres": [
+              "Comédia"
+            ],
+            "explanation": [
+              "vão",
+              "parar",
+              "casa",
+              "volta",
+              "amigos"
+            ]
+          },
+          {
+            "id": 953,
+            "title": "Madagascar",
+            "score": 0.791532,
+            "shared_genres": [
+              "Comédia"
+            ],
+            "explanation": [
+              "mundo",
+              "morar",
+              "casa",
+              "sempre",
+              "amigos"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "word2vec_skipgram": {
+    "k": 5,
+    "documents_evaluated": 428,
+    "precision_at_k": 0.601869,
+    "baseline": 0.379118,
+    "examples": [
+      {
+        "id": 603,
+        "title": "Matrix",
+        "genres": [
+          "Ficção científica"
+        ],
+        "recommendations": [
+          {
+            "id": 9426,
+            "title": "A Mosca",
+            "score": 0.78678,
+            "shared_genres": [
+              "Ficção científica"
+            ],
+            "explanation": [
+              "descobre ≈ percebe",
+              "pesadelos ≈ terríveis",
+              "começa ≈ vai",
+              "jovem ≈ homem",
+              "sempre ≈ não"
+            ]
+          },
+          {
+            "id": 854,
+            "title": "O Máskara",
+            "score": 0.738026,
+            "shared_genres": [],
+            "explanation": [
+              "enquanto",
+              "pessoas ≈ mulheres",
+              "usa ≈ usar",
+              "thomas ≈ carlyle",
+              "repete ≈ transforma"
+            ]
+          },
+          {
+            "id": 68726,
+            "title": "Círculo de Fogo",
+            "score": 0.737626,
+            "shared_genres": [
+              "Ficção científica"
+            ],
+            "explanation": [
+              "pessoas",
+              "começa ≈ começam",
+              "enquanto ≈ entretanto",
+              "misteriosos ≈ gigantescos",
+              "morpheus ≈ kaiju"
+            ]
+          },
+          {
+            "id": 19995,
+            "title": "Avatar",
+            "score": 0.737457,
+            "shared_genres": [
+              "Ficção científica"
+            ],
+            "explanation": [
+              "começa",
+              "realidade",
+              "ilusão ≈ intuição",
+              "mundo ≈ planeta",
+              "anderson ≈ jake"
+            ]
+          },
+          {
+            "id": 10386,
+            "title": "O Gigante de Ferro",
+            "score": 0.735664,
+            "shared_genres": [
+              "Ficção científica"
+            ],
+            "explanation": [
+              "está ≈ estava",
+              "jovem ≈ garoto",
+              "atormentado ≈ obcecado",
+              "conhece ≈ encontra",
+              "morpheus ≈ robô"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "title": "Forrest Gump: O Contador de Histórias",
+        "genres": [
+          "Comédia",
+          "Drama"
+        ],
+        "recommendations": [
+          {
+            "id": 640,
+            "title": "Prenda-Me se For Capaz",
+            "score": 0.694875,
+            "shared_genres": [
+              "Drama"
+            ],
+            "explanation": [
+              "estados",
+              "anos",
+              "história",
+              "unidos",
+              "continua ≈ está"
+            ]
+          },
+          {
+            "id": 115,
+            "title": "O Grande Lebowski",
+            "score": 0.671669,
+            "shared_genres": [
+              "Comédia"
+            ],
+            "explanation": [
+              "anos",
+              "vietnã",
+              "guerra",
+              "continua ≈ vai",
+              "consegue ≈ irá"
+            ]
+          },
+          {
+            "id": 628,
+            "title": "Entrevista com o Vampiro",
+            "score": 0.67151,
+            "shared_genres": [
+              "Drama"
+            ],
+            "explanation": [
+              "anos",
+              "rapaz ≈ homem",
+              "consegue ≈ precisa",
+              "história ≈ vida",
+              "jenny ≈ brad"
+            ]
+          },
+          {
+            "id": 9769,
+            "title": "Lolita",
+            "score": 0.669898,
+            "shared_genres": [
+              "Drama"
+            ],
+            "explanation": [
+              "estados",
+              "unidos",
+              "rapaz ≈ homem",
+              "continua ≈ está",
+              "jenny ≈ clare"
+            ]
+          },
+          {
+            "id": 6435,
+            "title": "Da Magia à Sedução",
+            "score": 0.666605,
+            "shared_genres": [
+              "Comédia"
+            ],
+            "explanation": [
+              "anos",
+              "quarenta ≈ duzentos",
+              "jenny ≈ sally",
+              "rapaz ≈ homem",
+              "consegue ≈ convence"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "title": "Beleza Americana",
+        "genres": [
+          "Drama"
+        ],
+        "recommendations": [
+          {
+            "id": 210577,
+            "title": "Garota Exemplar",
+            "score": 0.808021,
+            "shared_genres": [
+              "Drama"
+            ],
+            "explanation": [
+              "começa",
+              "dia",
+              "pai ≈ marido",
+              "amiga ≈ irmã",
+              "jane ≈ margo"
+            ]
+          },
+          {
+            "id": 6435,
+            "title": "Da Magia à Sedução",
+            "score": 0.796161,
+            "shared_genres": [],
+            "explanation": [
+              "melhor",
+              "vida",
+              "volta",
+              "momento",
+              "pai ≈ marido"
+            ]
+          },
+          {
+            "id": 4951,
+            "title": "10 Coisas Que Eu Odeio em Você",
+            "score": 0.794727,
+            "shared_genres": [
+              "Drama"
+            ],
+            "explanation": [
+              "dia",
+              "amiga ≈ irmã",
+              "pai ≈ namorado",
+              "conhece ≈ apaixona",
+              "impotente ≈ insuportável"
+            ]
+          },
+          {
+            "id": 8966,
+            "title": "Crepúsculo",
+            "score": 0.794233,
+            "shared_genres": [
+              "Drama"
+            ],
+            "explanation": [
+              "pai",
+              "volta",
+              "amiga ≈ mãe",
+              "conhece ≈ sabe",
+              "jane ≈ isabella"
+            ]
+          },
+          {
+            "id": 2251,
+            "title": "Infidelidade",
+            "score": 0.775297,
+            "shared_genres": [
+              "Drama"
+            ],
+            "explanation": [
+              "começa",
+              "não",
+              "vida",
+              "casado ≈ casada",
+              "pai ≈ filho"
+            ]
+          }
+        ]
+      }
+    ],
+    "profiles": [
+      {
+        "id": "ficcao_mente_realidade",
+        "movies": [
+          {
+            "id": 603,
+            "title": "Matrix"
+          },
+          {
+            "id": 27205,
+            "title": "A Origem"
+          },
+          {
+            "id": 38,
+            "title": "Brilho Eterno de uma Mente sem Lembranças"
+          }
+        ],
+        "genres": [
+          "Drama",
+          "Ficção científica"
+        ],
+        "precision_at_k": 0.8,
+        "recommendations": [
+          {
+            "id": 1724,
+            "title": "O Incrível Hulk",
+            "score": 0.806968,
+            "shared_genres": [
+              "Ficção científica"
+            ],
+            "explanation": [
+              "mesmo",
+              "precisa",
+              "está",
+              "inimigo",
+              "decide ≈ tenta"
+            ]
+          },
+          {
+            "id": 76341,
+            "title": "Mad Max: Estrada da Fúria",
+            "score": 0.8044,
+            "shared_genres": [
+              "Ficção científica"
+            ],
+            "explanation": [
+              "mundo",
+              "está",
+              "não",
+              "decide ≈ tenta",
+              "aparentemente ≈ porém"
+            ]
+          },
+          {
+            "id": 1156593,
+            "title": "Sua Culpa",
+            "score": 0.801874,
+            "shared_genres": [
+              "Drama"
+            ],
+            "explanation": [
+              "família",
+              "amor",
+              "pessoas",
+              "não",
+              "decide ≈ consegue"
+            ]
+          },
+          {
+            "id": 9426,
+            "title": "A Mosca",
+            "score": 0.800353,
+            "shared_genres": [
+              "Ficção científica"
+            ],
+            "explanation": [
+              "não",
+              "descobre ≈ percebe",
+              "precisa ≈ vai",
+              "pesadelos ≈ terríveis",
+              "jovem ≈ homem"
+            ]
+          },
+          {
+            "id": 747,
+            "title": "Todo Mundo Quase Morto",
+            "score": 0.79891,
+            "shared_genres": [],
+            "explanation": [
+              "decide",
+              "sempre",
+              "está",
+              "não",
+              "pessoas"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "terror_sobrenatural",
+        "movies": [
+          {
+            "id": 138843,
+            "title": "Invocação do Mal"
+          },
+          {
+            "id": 493922,
+            "title": "Hereditário"
+          },
+          {
+            "id": 280092,
+            "title": "Sobrenatural: A Origem"
+          }
+        ],
+        "genres": [
+          "Terror"
+        ],
+        "precision_at_k": 0.4,
+        "recommendations": [
+          {
+            "id": 6435,
+            "title": "Da Magia à Sedução",
+            "score": 0.804263,
+            "shared_genres": [],
+            "explanation": [
+              "família",
+              "após",
+              "casa",
+              "ajudar",
+              "começa ≈ começou"
+            ]
+          },
+          {
+            "id": 588,
+            "title": "Terror em Silent Hill",
+            "score": 0.80107,
+            "shared_genres": [
+              "Terror"
+            ],
+            "explanation": [
+              "começa",
+              "desvendar",
+              "busca",
+              "após",
+              "neta ≈ filha"
+            ]
+          },
+          {
+            "id": 259693,
+            "title": "Invocação do Mal 2",
+            "score": 0.799523,
+            "shared_genres": [
+              "Terror"
+            ],
+            "explanation": [
+              "numa",
+              "casa",
+              "caso",
+              "warren",
+              "história"
+            ]
+          },
+          {
+            "id": 686,
+            "title": "Contato",
+            "score": 0.788524,
+            "shared_genres": [],
+            "explanation": [
+              "mesmo",
+              "vidas",
+              "após ≈ depois",
+              "adolescente ≈ menina",
+              "graham ≈ palmer"
+            ]
+          },
+          {
+            "id": 1333141,
+            "title": "A Sapatona Galáctica",
+            "score": 0.78446,
+            "shared_genres": [],
+            "explanation": [
+              "não",
+              "conta",
+              "poderosa",
+              "neta ≈ filha",
+              "avó ≈ namorada"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "animacao_familia",
+        "movies": [
+          {
+            "id": 862,
+            "title": "Toy Story: Um Mundo de Aventuras"
+          },
+          {
+            "id": 14160,
+            "title": "Up: Altas Aventuras"
+          },
+          {
+            "id": 585,
+            "title": "Monstros S.A."
+          }
+        ],
+        "genres": [
+          "Comédia"
+        ],
+        "precision_at_k": 0.6,
+        "recommendations": [
+          {
+            "id": 238636,
+            "title": "Uma Noite de Crime: Anarquia",
+            "score": 0.822381,
+            "shared_genres": [],
+            "explanation": [
+              "junto",
+              "agora",
+              "quer",
+              "esposa ≈ filha",
+              "dois ≈ três"
+            ]
+          },
+          {
+            "id": 1205229,
+            "title": "Zoopocalipse - Uma Aventura Animal",
+            "score": 0.821982,
+            "shared_genres": [
+              "Comédia"
+            ],
+            "explanation": [
+              "agora",
+              "ajuda",
+              "amigos",
+              "monstros ≈ zumbis",
+              "mike ≈ dan"
+            ]
+          },
+          {
+            "id": 9297,
+            "title": "A Casa Monstro",
+            "score": 0.821237,
+            "shared_genres": [
+              "Comédia"
+            ],
+            "explanation": [
+              "acredita",
+              "anos",
+              "tudo",
+              "brinquedos",
+              "garoto"
+            ]
+          },
+          {
+            "id": 10585,
+            "title": "Brinquedo Assassino",
+            "score": 0.818935,
+            "shared_genres": [],
+            "explanation": [
+              "acredita",
+              "anos",
+              "andy",
+              "após",
+              "brinquedo"
+            ]
+          },
+          {
+            "id": 1547,
+            "title": "Os Garotos Perdidos",
+            "score": 0.814107,
+            "shared_genres": [
+              "Comédia"
+            ],
+            "explanation": [
+              "cidade",
+              "amigos",
+              "está",
+              "sul ≈ norte",
+              "esposa ≈ mãe"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "bert_base_pt": {
+    "k": 5,
+    "documents_evaluated": 428,
+    "precision_at_k": 0.635514,
+    "baseline": 0.379118,
+    "examples": [
+      {
+        "id": 603,
+        "title": "Matrix",
+        "genres": [
+          "Ficção científica"
+        ],
+        "recommendations": [
+          {
+            "id": 377,
+            "title": "A Hora do Pesadelo",
+            "score": 0.913158,
+            "shared_genres": [],
+            "explanation": []
+          },
+          {
+            "id": 68726,
+            "title": "Círculo de Fogo",
+            "score": 0.908293,
+            "shared_genres": [
+              "Ficção científica"
+            ],
+            "explanation": []
+          },
+          {
+            "id": 9426,
+            "title": "A Mosca",
+            "score": 0.906808,
+            "shared_genres": [
+              "Ficção científica"
+            ],
+            "explanation": []
+          },
+          {
+            "id": 162,
+            "title": "Edward Mãos de Tesoura",
+            "score": 0.906116,
+            "shared_genres": [],
+            "explanation": []
+          },
+          {
+            "id": 14161,
+            "title": "2012",
+            "score": 0.90595,
+            "shared_genres": [
+              "Ficção científica"
+            ],
+            "explanation": []
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "title": "Forrest Gump: O Contador de Histórias",
+        "genres": [
+          "Comédia",
+          "Drama"
+        ],
+        "recommendations": [
+          {
+            "id": 115,
+            "title": "O Grande Lebowski",
+            "score": 0.910966,
+            "shared_genres": [
+              "Comédia"
+            ],
+            "explanation": []
+          },
+          {
+            "id": 2251,
+            "title": "Infidelidade",
+            "score": 0.890644,
+            "shared_genres": [
+              "Drama"
+            ],
+            "explanation": []
+          },
+          {
+            "id": 11036,
+            "title": "Diário de uma Paixão",
+            "score": 0.889161,
+            "shared_genres": [
+              "Drama"
+            ],
+            "explanation": []
+          },
+          {
+            "id": 628,
+            "title": "Entrevista com o Vampiro",
+            "score": 0.889091,
+            "shared_genres": [
+              "Drama"
+            ],
+            "explanation": []
+          },
+          {
+            "id": 490132,
+            "title": "Green Book: O Guia",
+            "score": 0.883784,
+            "shared_genres": [
+              "Comédia",
+              "Drama"
+            ],
+            "explanation": []
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "title": "Beleza Americana",
+        "genres": [
+          "Drama"
+        ],
+        "recommendations": [
+          {
+            "id": 747,
+            "title": "Todo Mundo Quase Morto",
+            "score": 0.924687,
+            "shared_genres": [],
+            "explanation": []
+          },
+          {
+            "id": 2251,
+            "title": "Infidelidade",
+            "score": 0.920907,
+            "shared_genres": [
+              "Drama"
+            ],
+            "explanation": []
+          },
+          {
+            "id": 11036,
+            "title": "Diário de uma Paixão",
+            "score": 0.914806,
+            "shared_genres": [
+              "Drama"
+            ],
+            "explanation": []
+          },
+          {
+            "id": 788,
+            "title": "Uma Babá Quase Perfeita",
+            "score": 0.913341,
+            "shared_genres": [
+              "Drama"
+            ],
+            "explanation": []
+          },
+          {
+            "id": 14160,
+            "title": "Up: Altas Aventuras",
+            "score": 0.91282,
+            "shared_genres": [],
+            "explanation": []
+          }
+        ]
+      }
+    ],
+    "profiles": [
+      {
+        "id": "ficcao_mente_realidade",
+        "movies": [
+          {
+            "id": 603,
+            "title": "Matrix"
+          },
+          {
+            "id": 27205,
+            "title": "A Origem"
+          },
+          {
+            "id": 38,
+            "title": "Brilho Eterno de uma Mente sem Lembranças"
+          }
+        ],
+        "genres": [
+          "Drama",
+          "Ficção científica"
+        ],
+        "precision_at_k": 0.4,
+        "recommendations": [
+          {
+            "id": 377,
+            "title": "A Hora do Pesadelo",
+            "score": 0.937002,
+            "shared_genres": [],
+            "explanation": []
+          },
+          {
+            "id": 764,
+            "title": "Uma Noite Alucinante: A Morte do Demônio",
+            "score": 0.936391,
+            "shared_genres": [],
+            "explanation": []
+          },
+          {
+            "id": 1724,
+            "title": "O Incrível Hulk",
+            "score": 0.935377,
+            "shared_genres": [
+              "Ficção científica"
+            ],
+            "explanation": []
+          },
+          {
+            "id": 109428,
+            "title": "A Morte do Demônio",
+            "score": 0.933,
+            "shared_genres": [],
+            "explanation": []
+          },
+          {
+            "id": 280,
+            "title": "O Exterminador do Futuro 2: O Julgamento Final",
+            "score": 0.932312,
+            "shared_genres": [
+              "Ficção científica"
+            ],
+            "explanation": []
+          }
+        ]
+      },
+      {
+        "id": "terror_sobrenatural",
+        "movies": [
+          {
+            "id": 138843,
+            "title": "Invocação do Mal"
+          },
+          {
+            "id": 493922,
+            "title": "Hereditário"
+          },
+          {
+            "id": 280092,
+            "title": "Sobrenatural: A Origem"
+          }
+        ],
+        "genres": [
+          "Terror"
+        ],
+        "precision_at_k": 1.0,
+        "recommendations": [
+          {
+            "id": 588,
+            "title": "Terror em Silent Hill",
+            "score": 0.936894,
+            "shared_genres": [
+              "Terror"
+            ],
+            "explanation": []
+          },
+          {
+            "id": 109428,
+            "title": "A Morte do Demônio",
+            "score": 0.933806,
+            "shared_genres": [
+              "Terror"
+            ],
+            "explanation": []
+          },
+          {
+            "id": 561,
+            "title": "Constantine",
+            "score": 0.930704,
+            "shared_genres": [
+              "Terror"
+            ],
+            "explanation": []
+          },
+          {
+            "id": 406563,
+            "title": "Sobrenatural: A Última Chave",
+            "score": 0.930589,
+            "shared_genres": [
+              "Terror"
+            ],
+            "explanation": []
+          },
+          {
+            "id": 9946,
+            "title": "Fim dos Dias",
+            "score": 0.924432,
+            "shared_genres": [
+              "Terror"
+            ],
+            "explanation": []
+          }
+        ]
+      },
+      {
+        "id": "animacao_familia",
+        "movies": [
+          {
+            "id": 862,
+            "title": "Toy Story: Um Mundo de Aventuras"
+          },
+          {
+            "id": 14160,
+            "title": "Up: Altas Aventuras"
+          },
+          {
+            "id": 585,
+            "title": "Monstros S.A."
+          }
+        ],
+        "genres": [
+          "Comédia"
+        ],
+        "precision_at_k": 0.6,
+        "recommendations": [
+          {
+            "id": 9297,
+            "title": "A Casa Monstro",
+            "score": 0.954891,
+            "shared_genres": [
+              "Comédia"
+            ],
+            "explanation": []
+          },
+          {
+            "id": 829557,
+            "title": "365 Dias: Hoje",
+            "score": 0.949176,
+            "shared_genres": [],
+            "explanation": []
+          },
+          {
+            "id": 238636,
+            "title": "Uma Noite de Crime: Anarquia",
+            "score": 0.945218,
+            "shared_genres": [],
+            "explanation": []
+          },
+          {
+            "id": 1547,
+            "title": "Os Garotos Perdidos",
+            "score": 0.940502,
+            "shared_genres": [
+              "Comédia"
+            ],
+            "explanation": []
+          },
+          {
+            "id": 11544,
+            "title": "Lilo & Stitch",
+            "score": 0.940033,
+            "shared_genres": [
+              "Comédia"
+            ],
+            "explanation": []
+          }
+        ]
+      }
+    ]
+  },
+  "sentenca_minilm": {
+    "k": 5,
+    "documents_evaluated": 428,
+    "precision_at_k": 0.625701,
+    "baseline": 0.379118,
+    "examples": [
+      {
+        "id": 603,
+        "title": "Matrix",
+        "genres": [
+          "Ficção científica"
+        ],
+        "recommendations": [
+          {
+            "id": 686,
+            "title": "Contato",
+            "score": 0.588017,
+            "shared_genres": [
+              "Ficção científica"
+            ],
+            "explanation": []
+          },
+          {
+            "id": 585,
+            "title": "Monstros S.A.",
+            "score": 0.584114,
+            "shared_genres": [],
+            "explanation": []
+          },
+          {
+            "id": 377,
+            "title": "A Hora do Pesadelo",
+            "score": 0.57685,
+            "shared_genres": [],
+            "explanation": []
+          },
+          {
+            "id": 9426,
+            "title": "A Mosca",
+            "score": 0.56689,
+            "shared_genres": [
+              "Ficção científica"
+            ],
+            "explanation": []
+          },
+          {
+            "id": 550988,
+            "title": "Free Guy: Assumindo o Controle",
+            "score": 0.540256,
+            "shared_genres": [
+              "Ficção científica"
+            ],
+            "explanation": []
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "title": "Forrest Gump: O Contador de Histórias",
+        "genres": [
+          "Comédia",
+          "Drama"
+        ],
+        "recommendations": [
+          {
+            "id": 640,
+            "title": "Prenda-Me se For Capaz",
+            "score": 0.543191,
+            "shared_genres": [
+              "Drama"
+            ],
+            "explanation": []
+          },
+          {
+            "id": 37165,
+            "title": "O Show de Truman: O Show da Vida",
+            "score": 0.452075,
+            "shared_genres": [
+              "Comédia",
+              "Drama"
+            ],
+            "explanation": []
+          },
+          {
+            "id": 115,
+            "title": "O Grande Lebowski",
+            "score": 0.451963,
+            "shared_genres": [
+              "Comédia"
+            ],
+            "explanation": []
+          },
+          {
+            "id": 335984,
+            "title": "Blade Runner 2049",
+            "score": 0.427695,
+            "shared_genres": [
+              "Drama"
+            ],
+            "explanation": []
+          },
+          {
+            "id": 822119,
+            "title": "Capitão América: Admirável Mundo Novo",
+            "score": 0.427673,
+            "shared_genres": [],
+            "explanation": []
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "title": "Beleza Americana",
+        "genres": [
+          "Drama"
+        ],
+        "recommendations": [
+          {
+            "id": 2251,
+            "title": "Infidelidade",
+            "score": 0.532029,
+            "shared_genres": [
+              "Drama"
+            ],
+            "explanation": []
+          },
+          {
+            "id": 765,
+            "title": "Uma Noite Alucinante 2",
+            "score": 0.483565,
+            "shared_genres": [],
+            "explanation": []
+          },
+          {
+            "id": 829557,
+            "title": "365 Dias: Hoje",
+            "score": 0.4791,
+            "shared_genres": [
+              "Drama"
+            ],
+            "explanation": []
+          },
+          {
+            "id": 1813,
+            "title": "Advogado do Diabo",
+            "score": 0.473525,
+            "shared_genres": [
+              "Drama"
+            ],
+            "explanation": []
+          },
+          {
+            "id": 345,
+            "title": "De Olhos Bem Fechados",
+            "score": 0.470614,
+            "shared_genres": [
+              "Drama"
+            ],
+            "explanation": []
+          }
+        ]
+      }
+    ],
+    "profiles": [
+      {
+        "id": "ficcao_mente_realidade",
+        "movies": [
+          {
+            "id": 603,
+            "title": "Matrix"
+          },
+          {
+            "id": 27205,
+            "title": "A Origem"
+          },
+          {
+            "id": 38,
+            "title": "Brilho Eterno de uma Mente sem Lembranças"
+          }
+        ],
+        "genres": [
+          "Drama",
+          "Ficção científica"
+        ],
+        "precision_at_k": 0.4,
+        "recommendations": [
+          {
+            "id": 686,
+            "title": "Contato",
+            "score": 0.579925,
+            "shared_genres": [
+              "Drama",
+              "Ficção científica"
+            ],
+            "explanation": []
+          },
+          {
+            "id": 417859,
+            "title": "Gato de Botas",
+            "score": 0.569586,
+            "shared_genres": [],
+            "explanation": []
+          },
+          {
+            "id": 102382,
+            "title": "O Espetacular Homem-Aranha 2: A Ameaça de Electro",
+            "score": 0.558637,
+            "shared_genres": [
+              "Ficção científica"
+            ],
+            "explanation": []
+          },
+          {
+            "id": 238636,
+            "title": "Uma Noite de Crime: Anarquia",
+            "score": 0.548794,
+            "shared_genres": [],
+            "explanation": []
+          },
+          {
+            "id": 207703,
+            "title": "Kingsman: Serviço Secreto",
+            "score": 0.543963,
+            "shared_genres": [],
+            "explanation": []
+          }
+        ]
+      },
+      {
+        "id": "terror_sobrenatural",
+        "movies": [
+          {
+            "id": 138843,
+            "title": "Invocação do Mal"
+          },
+          {
+            "id": 493922,
+            "title": "Hereditário"
+          },
+          {
+            "id": 280092,
+            "title": "Sobrenatural: A Origem"
+          }
+        ],
+        "genres": [
+          "Terror"
+        ],
+        "precision_at_k": 1.0,
+        "recommendations": [
+          {
+            "id": 259693,
+            "title": "Invocação do Mal 2",
+            "score": 0.716729,
+            "shared_genres": [
+              "Terror"
+            ],
+            "explanation": []
+          },
+          {
+            "id": 1038392,
+            "title": "Invocação do Mal 4: O Último Ritual",
+            "score": 0.683792,
+            "shared_genres": [
+              "Terror"
+            ],
+            "explanation": []
+          },
+          {
+            "id": 109428,
+            "title": "A Morte do Demônio",
+            "score": 0.643939,
+            "shared_genres": [
+              "Terror"
+            ],
+            "explanation": []
+          },
+          {
+            "id": 713704,
+            "title": "A Morte do Demônio: A Ascensão",
+            "score": 0.632827,
+            "shared_genres": [
+              "Terror"
+            ],
+            "explanation": []
+          },
+          {
+            "id": 406563,
+            "title": "Sobrenatural: A Última Chave",
+            "score": 0.625919,
+            "shared_genres": [
+              "Terror"
+            ],
+            "explanation": []
+          }
+        ]
+      },
+      {
+        "id": "animacao_familia",
+        "movies": [
+          {
+            "id": 862,
+            "title": "Toy Story: Um Mundo de Aventuras"
+          },
+          {
+            "id": 14160,
+            "title": "Up: Altas Aventuras"
+          },
+          {
+            "id": 585,
+            "title": "Monstros S.A."
+          }
+        ],
+        "genres": [
+          "Comédia"
+        ],
+        "precision_at_k": 0.2,
+        "recommendations": [
+          {
+            "id": 10386,
+            "title": "O Gigante de Ferro",
+            "score": 0.632657,
+            "shared_genres": [],
+            "explanation": []
+          },
+          {
+            "id": 2978,
+            "title": "Os Caça-Fantasmas 2",
+            "score": 0.595677,
+            "shared_genres": [
+              "Comédia"
+            ],
+            "explanation": []
+          },
+          {
+            "id": 9426,
+            "title": "A Mosca",
+            "score": 0.577376,
+            "shared_genres": [],
+            "explanation": []
+          },
+          {
+            "id": 280,
+            "title": "O Exterminador do Futuro 2: O Julgamento Final",
+            "score": 0.573667,
+            "shared_genres": [],
+            "explanation": []
+          },
+          {
+            "id": 603,
+            "title": "Matrix",
+            "score": 0.57241,
+            "shared_genres": [],
+            "explanation": []
+          }
+        ]
+      }
+    ]
+  }
+}

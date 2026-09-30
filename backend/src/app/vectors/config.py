@@ -26,10 +26,21 @@ MAX_QUERY_CHARS = 500
 MAX_REPRESENTATIONS = 20
 MAX_QUERIES = 100
 MAX_PROBE_WORDS = 30
+MAX_PROFILES = 20
+MAX_PROFILE_MOVIES = 20
 MODEL_RE = re.compile(r"[A-Za-z0-9][A-Za-z0-9_.-]{0,95}/[A-Za-z0-9][A-Za-z0-9_.-]{0,95}")
 REVISION_RE = re.compile(r"[0-9a-f]{40}")
 STAGE_KINDS: dict[str, frozenset[str]] = {"tokens": TOKEN_STAGES, "text": TEXT_STAGES}
-DEFAULTS = {"min_df": 1, "neighbors_k": 5, "example_ids": [], "clusters": 4, "top_terms": 10, "random_state": 42, "probe_words": []}
+DEFAULTS = {
+    "min_df": 1,
+    "neighbors_k": 5,
+    "example_ids": [],
+    "clusters": 4,
+    "top_terms": 10,
+    "random_state": 42,
+    "probe_words": [],
+    "profiles": [],
+}
 
 
 class MethodInfo(Protocol):
@@ -59,8 +70,22 @@ class RepresentationSpec:
 
 
 @dataclass(frozen=True)
+class ProfileSpec:
+    """Perfil de recomendação: filmes de que uma pessoa hipotética gostou, com a nota que explica a escolha."""
+
+    id: str
+    movie_ids: tuple[int, ...]
+    note: str = ""
+
+
+@dataclass(frozen=True)
 class ExperimentConfig:
-    """Parâmetros comuns a todas as representações e análises de um experimento."""
+    """Parâmetros comuns a todas as representações e análises de um experimento.
+
+    `neighbors_k` é o k das recomendações, dos vizinhos e do acerto @k das consultas; `example_ids` são os
+    filmes cujas recomendações o relatório detalha; `profiles` são conjuntos de filmes que simulam o gosto
+    de uma pessoa.
+    """
 
     representations: tuple[RepresentationSpec, ...]
     min_df: int
@@ -70,6 +95,12 @@ class ExperimentConfig:
     top_terms: int
     random_state: int
     probe_words: tuple[str, ...]
+    profiles: tuple[ProfileSpec, ...] = ()
+
+    @property
+    def referenced_ids(self) -> set[int]:
+        """IDs de filmes que a configuração cita e que precisam existir no corpus."""
+        return {*self.example_ids, *(movie_id for profile in self.profiles for movie_id in profile.movie_ids)}
 
 
 @dataclass(frozen=True)
@@ -107,6 +138,11 @@ def load_config(path: Path, methods: Mapping[str, MethodInfo]) -> ExperimentConf
         or any(not isinstance(w, str) or not 1 <= len(w) <= 40 for w in probe_words)
     ):
         raise ValueError(f"probe_words deve listar até {MAX_PROBE_WORDS} palavras com até 40 caracteres")
+    items = values["profiles"]
+    if not isinstance(items, list) or len(items) > MAX_PROFILES:
+        raise ValueError(f"profiles deve listar até {MAX_PROFILES} perfis")
+    profiles = tuple(_profile(item) for item in items)
+    require_unique([profile.id for profile in profiles], "IDs de perfil repetidos")
     return ExperimentConfig(
         representations=specs,
         min_df=require_int(values["min_df"], "min_df", 1, 1000),
@@ -116,6 +152,7 @@ def load_config(path: Path, methods: Mapping[str, MethodInfo]) -> ExperimentConf
         top_terms=require_int(values["top_terms"], "top_terms", 1, 50),
         random_state=require_int(values["random_state"], "random_state", 0, 2**32 - 1),
         probe_words=tuple(dict.fromkeys(word.casefold() for word in probe_words)),
+        profiles=profiles,
     )
 
 
@@ -149,6 +186,17 @@ def parse_representation(item: object, methods: Mapping[str, MethodInfo]) -> Rep
     elif model is not None or revision is not None:
         raise ValueError(f"{name}: o método {method} não usa model nem revision")
     return RepresentationSpec(name, method, stage, model, revision)
+
+
+def _profile(item: object) -> ProfileSpec:
+    data = require_object(item, "perfil", required={"id", "movie_ids"}, optional={"note"})
+    movie_ids = require_ids(data["movie_ids"], "movie_ids")
+    if not 2 <= len(movie_ids) <= MAX_PROFILE_MOVIES:
+        raise ValueError(f"movie_ids de um perfil deve ter de 2 a {MAX_PROFILE_MOVIES} filmes distintos")
+    note = data.get("note", "")
+    if not isinstance(note, str) or len(note) > MAX_QUERY_CHARS:
+        raise ValueError(f"note deve ser texto com até {MAX_QUERY_CHARS} caracteres")
+    return ProfileSpec(require_name(data["id"], "id"), movie_ids, note)
 
 
 def _query(item: object) -> QuerySpec:
