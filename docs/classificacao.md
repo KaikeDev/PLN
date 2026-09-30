@@ -22,13 +22,14 @@ uv sync --frozen
 uv run --frozen python -m app.classification build --input ../data/processed/tmdb_2026-09-12 --output ../data/classification/lexical --config ../config/classificacao.json
 ```
 
-**Completo**, com word2vec, BERTimbau e o modelo de sentença (cerca de 6 minutos em CPU; os modelos são os mesmos da Etapa 2 e ficam em cache):
+**Completo**, com word2vec, BERTimbau e o modelo de sentença, lendo os vetores densos verificados da Etapa 2 (cerca de 2,5 minutos; dispensa o extra `semantico`):
 
 ```bash
-uv sync --frozen --extra semantico
-uv run --frozen --extra semantico python -m app.classification build --input ../data/processed/tmdb_2026-09-12 --output ../data/classification/completo --config ../config/classificacao_semantica.json
+uv run --frozen python -m app.classification build --input ../data/processed/tmdb_2026-09-12 --output ../data/classification/completo --config ../config/classificacao_semantica.json --vectors ../data/vectors/tmdb_2026-09-12
 uv run --frozen python -m app.classification verify --input ../data/classification/completo
 ```
+
+Sem `--vectors`, as representações densas são recalculadas: instale o extra (`uv sync --frozen --extra semantico`) e rode com `uv run --frozen --extra semantico`; leva cerca de 6 minutos. A pasta de vetores só é aceita se os hashes conferem, se veio do mesmo corpus e se a especificação de cada modelo é idêntica ([ADR 0018](adr/0018-tarefas-do-ciclo-de-pln.md)).
 
 A pasta de saída não pode existir. Com as mesmas entradas, os arquivos de conteúdo se repetem; só `manifest.json` muda (hora e tempos de execução).
 

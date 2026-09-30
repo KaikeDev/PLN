@@ -82,7 +82,7 @@ A tabela mostra o que o modelo aprendeu com sentido (“demônios”, “vampiro
 
 **d) Um único modelo para todas as representações.** O mesmo classificador se aplica a vetores esparsos de quase 6 mil dimensões e a vetores densos de 300 a 768 dimensões, e fica entre os melhores em 6 das 8 representações (no máximo 1,7 ponto abaixo do melhor). Isso permite atribuir as diferenças à representação. Com a regressão logística, trocar a representação muda o F1 macro em até 24,9 pontos (de 46,1% no BoW com pontuação a 71,0% no skip-gram). Os outros classificadores não oferecem essa comparação: o Naive Bayes não se aplica aos vetores densos, e o kNN varia de 28,2% a 67,7% conforme a representação.
 
-**e) Custo baixo.** A validação cruzada completa (5 dobras, cada uma com a escolha interna de `C`) leva de 1,6 a 5,6 segundos por representação em CPU. A exceção é o BoW com pontuação, que leva 16,4 segundos. Nas representações densas, o custo está em gerar os vetores (o BERTimbau leva cerca de 53 segundos para as 428 sinopses), não no classificador.
+**e) Custo baixo.** A validação cruzada completa (5 dobras, cada uma com a escolha interna de `C`) leva de 1,6 a 5,6 segundos por representação em CPU. A exceção é o BoW com pontuação, que leva 16,4 segundos. Nas representações densas, o custo está em gerar os vetores (o BERTimbau leva de 36 a 53 segundos para as 428 sinopses, conforme a execução), não no classificador; com `--vectors`, a Etapa 3 lê os vetores já gerados pela Etapa 2.
 
 **f) Controle de sobreajuste.** Com cerca de 260 exemplos por dobra e até 6 mil atributos, um modelo sem regularização decoraria o treino. `C` é escolhido numa grade de 10⁻⁶ a 10⁴. Ela foi ampliada depois que escolhas no limite da grade antiga (0,01 a 100) indicaram que o ótimo estava fora dela. O valor escolhido se repete nas 5 dobras em quase todas as representações: 0,01 nas densas e 1000 no TF-IDF. Essa estabilidade indica que a escolha é robusta.
 
@@ -104,9 +104,9 @@ Todas as alternativas usaram as mesmas 5 dobras externas e a mesma preparação 
 | BoW sem stopwords | 56,4% | **61,3%** | 56,1% | 47,4% | 53,3% |
 | TF-IDF com pontuação | 59,3% | 60,1% | **60,4%** | 43,5% | 53,3% |
 | TF-IDF sem stopwords | 59,2% | 58,9% | **59,4%** | 49,4% | 53,3% |
-| word2vec CBOW | **67,6%** | — | 66,5% | 60,8% | 61,8% |
+| word2vec CBOW | **67,6%** | — | 66,5% | 60,5% | 61,8% |
 | word2vec skip-gram | **71,0%** | — | 70,3% | 65,4% | 61,1% |
-| BERTimbau congelado | **70,2%** | — | 70,0% | 67,9% | 65,2% |
+| BERTimbau congelado | **70,2%** | — | 70,0% | 68,2% | 65,2% |
 | Modelo de sentença | 66,1% | — | **67,8%** | 66,9% | 67,7% |
 
 Na mesma representação, trocar o classificador muda o F1 em média 11,9 pontos. Trocar a representação, com a regressão logística, muda até 24,9 pontos. **A representação pesa mais que o classificador**, e por isso a Etapa 3 compara oito representações com um classificador fixo, e não o contrário.
@@ -139,7 +139,7 @@ Na mesma representação, trocar o classificador muda o F1 em média 11,9 pontos
 
 **O que é.** É um conjunto de árvores de decisão, cada uma treinada numa amostra com reposição e com um subconjunto aleatório de atributos em cada divisão (Breiman, 2001). A decisão é a votação das árvores. É um modelo não linear.
 
-**O que medimos.** É fraca nas representações lexicais (43,5% a 49,4%), abaixo da regressão logística em todas elas (de 1,9 a 15,8 pontos). Nas densas, fica abaixo em três das quatro. A exceção é o modelo de sentença (66,9% contra 66,1%), dentro do desvio. Leva de 5,7 a 7,6 segundos em qualquer representação e tem a maior variação entre dobras medida (6,8 pontos, no BERTimbau).
+**O que medimos.** É fraca nas representações lexicais (43,5% a 49,4%), abaixo da regressão logística em todas elas (de 1,9 a 15,8 pontos). Nas densas, fica abaixo em três das quatro. A exceção é o modelo de sentença (66,9% contra 66,1%), dentro do desvio. Leva de 5,7 a 7,6 segundos em qualquer representação e tem a maior variação entre dobras medida (6,5 pontos, no BERTimbau).
 
 **Por que não é o modelo principal.**
 - Com cerca de 260 exemplos e milhares de atributos esparsos, cada divisão da árvore enxerga poucas palavras informativas e poucos exemplos. A não linearidade, que é a vantagem do modelo, não compensa a falta de dados.
@@ -189,7 +189,7 @@ A acurácia com o melhor mapeamento associa cada grupo ao gênero com que mais c
 
 **Por que não nesta entrega.**
 - **Dados:** cerca de 260 exemplos por dobra para ajustar 109 milhões de parâmetros. O risco de sobreajuste e de instabilidade é alto; o próprio artigo do BERT relata ajuste instável do BERT-Large em conjuntos pequenos, contornado com várias reinicializações.
-- **Custo:** não há GPU. Só gerar os vetores das 428 sinopses em CPU levou cerca de 53 segundos. O ajuste exige retropropagação (algumas vezes o custo da inferência) repetida por época, por dobra e por combinação de hiperparâmetros, como a taxa de aprendizado. Uma estimativa grosseira para 3 épocas × 5 dobras com uma única configuração fica na casa de 20 minutos, sem contar a busca interna de hiperparâmetros.
+- **Custo:** não há GPU. Só gerar os vetores das 428 sinopses em CPU levou de 36 a 53 segundos. O ajuste exige retropropagação (algumas vezes o custo da inferência) repetida por época, por dobra e por combinação de hiperparâmetros, como a taxa de aprendizado. Uma estimativa grosseira para 3 épocas × 5 dobras com uma única configuração fica na casa de 20 minutos, sem contar a busca interna de hiperparâmetros.
 - **Ganho incerto:** o BERTimbau congelado (70,2%) já empata com o word2vec skip-gram (71,0%). Nesta amostra, não há evidência de que a representação contextual seja o gargalo.
 
 **Como avaliaríamos.** Com GPU, nas mesmas 5 dobras e com validação interna para a taxa de aprendizado e o número de épocas, registrando as sementes.
@@ -242,7 +242,7 @@ A comparação de representações acompanha a progressão da disciplina (BoW/TF
 | **Regressão logística** | sim | 1,6 a 16 s | pesos por gênero legíveis nas lexicais | sim, e acompanham a acurácia | sim | **71,0%** (skip-gram) |
 | Naive Bayes multinomial | sim | ~0,7 s | probabilidade de cada palavra por gênero | extremas (hipótese de independência) | sim | 61,3% (BoW); não se aplica às densas |
 | SVM linear | sim | 1,5 a 10 s | pesos por gênero | não; exige calibração | sim | 70,3% (skip-gram) |
-| Floresta aleatória | sim | 5,7 a 7,6 s | só importâncias globais | votação das árvores | sim | 67,9% (BERTimbau) |
+| Floresta aleatória | sim | 5,7 a 7,6 s | só importâncias globais | votação das árvores | sim | 68,2% (BERTimbau) |
 | k vizinhos | sim | 1,0 a 2,7 s | filmes vizinhos como exemplo | proporção de vizinhos | sim | 67,7% (sentença) |
 | K-Means | não | < 0,3 s | termos por grupo | não | sim | ARI ≤ 0,13 (classificação: até 0,38) |
 | BERT ajustado | sim | alto; exige GPU | baixa | sim | parcial (sementes, hardware) | não medido |
@@ -271,12 +271,14 @@ A comparação de representações acompanha a progressão da disciplina (BoW/TF
 
 ## 11. Como reproduzir os números
 
-Em `backend`, com o extra `semantico` instalado (os modelos são os mesmos da Etapa 2):
+Em `backend`, lendo os vetores densos verificados da Etapa 2:
 
 ```bash
-uv run --frozen --extra semantico python -m app.classification build --input ../data/processed/tmdb_2026-09-12 --output ../data/classification/completo --config ../config/classificacao_semantica.json
+uv run --frozen python -m app.classification build --input ../data/processed/tmdb_2026-09-12 --output ../data/classification/completo --config ../config/classificacao_semantica.json --vectors ../data/vectors/tmdb_2026-09-12
 uv run --frozen python -m app.classification verify --input ../data/classification/completo
 ```
+
+Sem `--vectors`, as representações densas são recalculadas com o extra `semantico`. Os vetores guardados têm seis casas decimais, então a floresta aleatória pode variar até 0,3 ponto entre as duas formas ([ADR 0018](adr/0018-tarefas-do-ciclo-de-pln.md)).
 
 - Resultados da regressão logística: `results.json`.
 - Classificadores alternativos: `alternatives.json`.

@@ -23,6 +23,7 @@ O código não tem comentários fora de docstrings. Quando uma docstring cita �
 | [0015](#0015--bert-cbow--skip-gram-e-polissemia-aula-7) | BERT, CBOW × skip-gram e polissemia (Aula 7) | PLN |
 | [0016](#0016--política-do-gitignore) | Política do `.gitignore` | Repositório |
 | [0017](#0017--classificação-de-gêneros-aula-8) | Classificação de gêneros (Aula 8) | PLN |
+| [0018](#0018--tarefas-do-ciclo-de-pln-para-cada-representação) | Tarefas do ciclo de PLN para cada representação | PLN |
 
 ---
 
@@ -217,3 +218,18 @@ O código não tem comentários fora de docstrings. Quando uma docstring cita �
 **Por quê.** A Aula 8 pede classificação × clusterização, os tipos de classificação, pipelines TF-IDF × BERT e métricas além da acurácia. O corpus já traz rótulos de gênero, e cerca de um quarto dos filmes tem mais de um, o que torna o multirrótulo natural. Com `C` fixo, o TF-IDF ficava regularizado demais (probabilidades quase uniformes), e um único `C` não serve igualmente a representações de escalas e dimensões diferentes. Escolher `C` pelo F1 achatava as probabilidades; pela log loss, elas acompanham a acurácia sem perda de F1. O ajuste fino do BERT e o LLM zero-shot ficaram de fora por custo, pela amostra pequena e pela reprodutibilidade.
 
 **Consequência.** Na multiclasse, as representações densas superam o melhor TF-IDF em 7 a 12 pontos de F1 macro; skip-gram e BERTimbau empatam dentro do desvio entre dobras. Medidos nas mesmas dobras, o Naive Bayes vence só nas contagens brutas, o SVM empata sem dar probabilidades, e o K-Means coincide muito menos com os gêneros que o classificador ([justificativa](docs/escolha-dos-modelos.md)). Parte dos erros confiantes vem de rótulos ruidosos (filmes de ação reduzidos a “comédia”). [Detalhes](docs/adr/0017-aula8-classificacao-de-generos.md)
+
+## 0018 — Tarefas do ciclo de PLN para cada representação
+
+**Decisão.**
+
+- Aplicar cada representação às quatro tarefas do quadro da Aula 8: busca, recomendação, agrupamento com visualização e classificação.
+- Implementar a recomendação por conteúdo (`Recommendation`): item → item para todos os filmes e por perfil (média dos filmes de que a pessoa gostou), avaliada pela precisão @k de gênero compartilhado contra uma referência que ignora o texto.
+- Gerar, para cada representação, a projeção 2D colorida pelo cluster ao lado da colorida pelo gênero.
+- Unificar os rótulos das duas etapas nos `genre_ids` do TMDB restritos aos gêneros da coleta, e usar um único K-Means (`app.vectors.clusters`).
+- Permitir que a Etapa 3 leia os vetores densos verificados da Etapa 2 (`--vectors`) em vez de recalculá-los.
+
+**Por quê.** A auditoria de 29/09/2026 mostrou que a recomendação não existia, que os clusters não eram visualizados, que as etapas usavam rótulos diferentes e que a Etapa 3 recalculava cerca de 100 s de vetores já salvos. Sem avaliações de usuários, só a recomendação por conteúdo é possível; os gêneros são a aproximação automática de relevância. Reestruturar em quatro pipelines reescreveria código testado sem ganho: o padrão `Analysis` já acomoda cada tarefa.
+
+**Consequência.** Nenhuma representação vence todas as tarefas: o modelo de sentença lidera a busca, o BERTimbau a recomendação (63,6% contra 37,9% da referência) e o agrupamento, e o skip-gram a classificação. Os números de agrupamento da Etapa 2 mudaram com os novos rótulos. Com `--vectors`, a Etapa 3 cai para cerca de 2,5 minutos e dispensa o extra `semantico`. [Detalhes](docs/adr/0018-tarefas-do-ciclo-de-pln.md)
+

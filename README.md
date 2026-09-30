@@ -1,6 +1,6 @@
 # PLN 2026/2 — Etapas Práticas 1, 2 e 3
 
-**Coleta e preparação de sinopses de filmes para comparação posterior de técnicas de PLN.** O projeto preserva o corpus original e seis representações alinhadas pelo ID do TMDB. A consulta de filmes na interface é uma demonstração auxiliar; a entrega desta etapa está nos dados, scripts e evidências abaixo.
+**Sinopses de filmes coletadas, preparadas, representadas e usadas nas quatro tarefas de PLN da disciplina: busca, recomendação, agrupamento com visualização e classificação.** O projeto preserva o corpus original, seis preparações do texto e oito representações vetoriais, todas alinhadas pelo ID do TMDB. A consulta de filmes na interface é uma demonstração auxiliar; a entrega está nos dados, scripts e evidências abaixo.
 
 Equipe: Kaike Ventura Tuerpe, Luana Nitsche, Pedro Henrique Ortunio e Thiago Bodnar — Ciência da Computação, FURB.
 
@@ -17,12 +17,34 @@ A amostra real de 12/09/2026 contém **430 filmes únicos**, **428 sinopses pree
 | Stopwords e pontuação — 0,3 | [Lista versionada](config/stopwords_pt.txt), [lista efetivamente usada](data/processed/tmdb_2026-09-12/stopwords_used.json) | Acentos, números e negações preservados; títulos fora do filtro |
 | Comparação entre recortes e coleta automatizada — bônus a avaliar | [Resultados calculados](data/processed/tmdb_2026-09-12/report.md) | Comparação dos 12 recortes e coleta de múltiplas páginas em um comando |
 
-Os pesos identificam dimensões da rubrica; não são notas atribuídas à entrega. Stemming, lematização e vetorização **não foram executados** na Etapa 1; a vetorização está na [Etapa 2](#etapa-2--representações-vetoriais). A comparação entre recortes e a coleta automatizada estão implementadas, mas a concessão do bônus cabe ao professor.
+Os pesos identificam dimensões da rubrica da Etapa 1; não são notas atribuídas à entrega. Stemming, lematização e vetorização **não foram executados** na Etapa 1; a vetorização está na [Etapa 2](#etapa-2--representações-vetoriais) e a classificação, na [Etapa 3](#etapa-3--classificação-de-gêneros). A comparação entre recortes e a coleta automatizada estão implementadas, mas a concessão do bônus cabe ao professor.
 
 - [Documento Word da entrega](docs/PLN_2026_2_Avaliacao_Pratica_1_Atualizado.docx)
 - [Validação técnica](docs/validacao.md)
 - [Decisões de arquitetura e desenvolvimento, com justificativas (`adr.md`)](adr.md), [ADRs detalhadas](docs/adr/README.md) e [limitações](docs/decisoes.md)
 - [Arquitetura do código](docs/arquitetura.md)
+
+## Tarefas × representações
+
+Na Aula 8, o quadro organizou a disciplina em representações (BoW, TF-IDF, word2vec, BERT…) e tarefas (busca, recomendação, agrupamento com visualização e classificação). Cada representação é aplicada às quatro tarefas ([ADR 0018](docs/adr/0018-tarefas-do-ciclo-de-pln.md)). A tabela traz uma métrica por célula, calculada nos arquivos entregues:
+
+| Representação | [Busca](data/vectors/tmdb_2026-09-12/report.md#busca-consultas-anotadas): MRR | [Recomendação](data/vectors/tmdb_2026-09-12/report.md#recomendação-filmes-parecidos): precisão @5 | [Agrupamento](data/vectors/tmdb_2026-09-12/report.md#agrupamento-k-means): ARI | [Classificação](data/classification/tmdb_2026-09-12/report.md): F1 macro |
+|---|---:|---:|---:|---:|
+| Referência que ignora o texto | — | 37,9% | 0 | 10,7% |
+| `bow_sem_pontuacao` | 0,507 | 45,0% | 0,002 | 46,1% |
+| `bow_sem_stopwords` | 0,538 | 56,1% | 0,000 | 56,4% |
+| `tfidf_sem_pontuacao` | 0,528 | 57,0% | 0,001 | 59,3% |
+| `tfidf_sem_stopwords` | 0,545 | 57,8% | 0,024 | 59,2% |
+| `word2vec_cbow` | 0,526 | 55,7% | 0,060 | 67,6% |
+| `word2vec_skipgram` | 0,600 | 60,2% | 0,062 | **71,0%** |
+| `bert_base_pt` | 0,300 | **63,6%** | **0,144** | 70,2% |
+| `sentenca_minilm` | **0,750** | 62,6% | 0,087 | 66,1% |
+
+- **Busca:** a consulta vira um vetor e as sinopses são ordenadas pelo cosseno. O MRR usa só duas consultas anotadas, sobre Matrix; ilustra o comportamento, mas não mede desempenho.
+- **Recomendação:** os cinco filmes de maior cosseno com cada filme, ou com a média dos filmes de um perfil. A precisão é a fração dos recomendados com ao menos um gênero em comum; a referência é uma recomendação que ignora o texto.
+- **Agrupamento + visualização:** K-Means sem rótulos; o ARI compara os clusters com os gêneros (0 = acaso). Cada representação tem dois gráficos com as mesmas coordenadas, um colorido pelo gênero e outro pelo cluster.
+- **Classificação:** regressão logística em validação cruzada de 5 dobras, na tarefa de um gênero por filme.
+- **Leitura:** nenhuma representação vence todas as tarefas. O modelo de sentença é o melhor na busca, o BERTimbau na recomendação e no agrupamento, e o skip-gram na classificação, empatado com o BERTimbau dentro do desvio entre dobras.
 
 ## Ambiente e reprodução
 
@@ -110,7 +132,7 @@ O módulo `app.vectors` compara oito representações das mesmas sinopses, na pr
 - BERTimbau (BERT contextual em português);
 - um modelo de embeddings de sentença multilíngue (sentence-transformers).
 
-Sobre cada uma, calcula similaridade do cosseno, clustering K-Means, projeção 2D e avaliação de consultas anotadas. Também compara as representações nos exemplos da aula: palavras vizinhas, pares de frases, polissemia (“banco”, “manga”) e síntese comparativa. Em `backend`:
+Sobre cada uma, executa as tarefas busca (consultas anotadas), recomendação (item → item e por perfil), agrupamento (K-Means) e visualização (projeção 2D por gênero e por cluster). Também compara as representações nos exemplos da aula: palavras vizinhas, pares de frases, polissemia (“banco”, “manga”) e síntese comparativa. Em `backend`:
 
 ```bash
 # somente BoW e TF-IDF (leve)
@@ -123,10 +145,11 @@ uv run --frozen python -m app.vectors verify --input ../data/vectors/completo
 
 - **Caso do professor:** a consulta “filme sobre simulação da realidade” coloca Matrix em 11º a 69º lugar nas representações lexicais, porque “simulação” não aparece na sinopse. Com word2vec skip-gram, Matrix sobe para 5º; com o modelo de sentença, para 2º.
 - **Polissemia:** no word2vec, “banco” tem o mesmo vetor em “o banco aprovou o financiamento” e em “sentou no banco da praça”. No BERTimbau, os usos com o mesmo sentido ficam mais próximos (cosseno 0,82 × 0,55 entre sentidos diferentes).
+- **Recomendação por perfil:** para quem gostou de *Invocação do Mal*, *Hereditário* e *Sobrenatural: A Origem*, o modelo de sentença recomenda *Invocação do Mal 2*, *Invocação do Mal 4* e *A Morte do Demônio*. Para o perfil de animação (*Toy Story*, *Up*, *Monstros S.A.*), BoW e TF-IDF encontram as sequências de *Toy Story* pelos nomes dos personagens (woody, buzz, andy).
 
 - [Decisões, arquitetura e segurança](docs/vetorizacao.md)
 - [Resultados calculados](data/vectors/tmdb_2026-09-12/report.md)
-- Configurações [lexical](config/vetorizacao.json) e [completa](config/vetorizacao_semantica.json); [consultas anotadas](config/consultas.json); [sondas da Aula 7](config/sondas_semanticas.json)
+- Configurações [lexical](config/vetorizacao.json) e [completa](config/vetorizacao_semantica.json), com os perfis de recomendação; [consultas anotadas](config/consultas.json); [sondas da Aula 7](config/sondas_semanticas.json)
 
 ## Etapa 3 — Classificação de gêneros
 
@@ -139,10 +162,12 @@ A mesma regressão logística é aplicada às oito representações da Etapa 2, 
 ```bash
 # somente BoW e TF-IDF (cerca de 2 minutos)
 uv run --frozen python -m app.classification build --input ../data/processed/tmdb_2026-09-12 --output ../data/classification/lexical --config ../config/classificacao.json
-# completo (extra semantico; cerca de 6 minutos em CPU)
-uv run --frozen --extra semantico python -m app.classification build --input ../data/processed/tmdb_2026-09-12 --output ../data/classification/completo --config ../config/classificacao_semantica.json
+# completo, lendo os vetores densos verificados da Etapa 2 (cerca de 2,5 minutos; dispensa o extra semantico)
+uv run --frozen python -m app.classification build --input ../data/processed/tmdb_2026-09-12 --output ../data/classification/completo --config ../config/classificacao_semantica.json --vectors ../data/vectors/tmdb_2026-09-12
 uv run --frozen python -m app.classification verify --input ../data/classification/completo
 ```
+
+Sem `--vectors`, as representações densas são recalculadas: é preciso o extra `semantico`, e o build leva cerca de 6 minutos. A pasta entregue foi gerada com `--vectors`.
 
 | F1 macro (multiclasse) | Valor |
 |---|---:|
@@ -154,7 +179,7 @@ uv run --frozen python -m app.classification verify --input ../data/classificati
 
 - **Resultado:** as representações densas superam as lexicais. Skip-gram e BERTimbau empatam dentro do desvio entre dobras, que chega a 5,7 pontos.
 - **Classificador:** a regressão logística tem o maior F1 nas três melhores representações e fica a até 1,7 ponto do melhor em outras três. Nas contagens brutas (BoW), o Naive Bayes vence com folga. O SVM empata em F1, mas não dá probabilidades.
-- **Agrupar × classificar:** com a mesma representação, o K-Means (sem rótulos) coincide muito menos com os gêneros que o classificador (ARI de até 0,13 contra até 0,38).
+- **Agrupar × classificar:** nas mesmas 325 sinopses e com a mesma representação, o K-Means (sem rótulos) coincide muito menos com os gêneros que o classificador (ARI de até 0,13 contra até 0,38).
 - **Erros:** comédia é o gênero mais difícil, e parte dos erros vem de filmes de ação com comédia que a restrição aos quatro gêneros reduz a “comédia”.
 - **Fora do escopo:** LLM com instrução e Jev foram discutidos e não executados.
 
@@ -165,7 +190,8 @@ uv run --frozen python -m app.classification verify --input ../data/classificati
 
 ## Próxima etapa
 
-Ampliar as consultas anotadas e a lista de filmes relevantes antes de escolher uma representação. As métricas atuais usam só dois casos de Matrix e servem de ilustração, não de avaliação estatística.
+- **Busca:** ampliar `config/consultas.json` para 10 a 20 consultas, com vários filmes relevantes cada, antes de escolher uma representação. As métricas atuais usam só dois casos de Matrix e servem de ilustração, não de avaliação estatística. Essa anotação é da equipe.
+- **Recomendação:** a avaliação por gênero compartilhado é uma aproximação. Pares de filmes anotados como boas recomendações entre si, ou avaliações de usuários, permitiriam medi-la de fato.
 
 ## Fonte e atribuição
 

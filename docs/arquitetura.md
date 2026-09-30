@@ -7,6 +7,17 @@ O backend (`backend/src/app`) reúne dois subsistemas independentes que comparti
 
 As razões de cada escolha estão nas [ADRs](adr/README.md); a organização em camadas, na [ADR 0004](adr/0004-arquitetura-em-camadas.md).
 
+## Tarefas do ciclo de PLN
+
+Cada representação (BoW, TF-IDF, word2vec CBOW e skip-gram, BERTimbau e modelo de sentença) é aplicada às quatro tarefas da disciplina ([ADR 0018](adr/0018-tarefas-do-ciclo-de-pln.md)). Cada tarefa é uma classe do padrão `Analysis` (Etapa 2) ou o pacote `app.classification` (Etapa 3), sempre sobre as mesmas representações:
+
+| Tarefa | Onde está | Saída por representação |
+|---|---|---|
+| Busca (recuperação) | `vectors.analyses.Retrieval` e `vectors.retrieval.search` (comando `query`) | posição dos relevantes, MRR e acerto @k em `retrieval.json` |
+| Recomendação | `vectors.analyses.Recommendation` | `recommendation.json` e `<representação>.recommendations.jsonl` |
+| Agrupamento + visualização | `vectors.analyses.Clustering` e `Projection`, sobre `vectors.clusters` | `clustering.json`, `<representação>.projection.svg` e `<representação>.clusters.svg` |
+| Classificação | `app.classification`, com o mesmo K-Means para comparar agrupar × classificar | pasta `data/classification/` |
+
 ## Pacotes
 
 | Pacote | Responsabilidade | Depende de |
@@ -18,8 +29,8 @@ As razões de cada escolha estão nas [ADRs](adr/README.md); a organização em 
 | `app.infra.tmdb` | Cliente HTTP, catálogo (Adapter) e cache com expiração (Decorator) | `domain.search.ports`, `settings` |
 | `app.shared` | Artefatos determinísticos, manifesto, validação de configuração e regras de língua | biblioteca padrão |
 | `app.corpus` | Etapa 1: coleta, transformações, estatísticas, relatório, contrato e verificação | `shared`; `infra.tmdb` só na coleta real |
-| `app.vectors` | Etapa 2: representações, análises, relatório e verificação | `corpus.contracts`, `corpus.verification`, `corpus.transform`, `shared` |
-| `app.classification` | Etapa 3: tarefas de gênero, validação cruzada, métricas, K-Means × classificador, classificadores alternativos, relatório e verificação | `vectors` (configuração, corpus, métodos), `shared` |
+| `app.vectors` | Etapa 2: representações; busca, recomendação, agrupamento e visualização; sondas da Aula 7; relatório e verificação | `corpus.contracts`, `corpus.verification`, `corpus.transform`, `shared` |
+| `app.classification` | Etapa 3: tarefas de gênero, validação cruzada, métricas, K-Means × classificador, classificadores alternativos, relatório e verificação | `vectors` (configuração, corpus, métodos, K-Means, vetores guardados), `shared` |
 
 O domínio não importa `infra` nem `api`; a infraestrutura implementa as portas do domínio; `main` liga as partes.
 
@@ -38,7 +49,8 @@ flowchart LR
     RAW --> PROC[corpus.process] --> PRD[(data/processed)]
     PRD --> VEC[vectors.pipeline] --> VD[(data/vectors)]
     PRD --> CLS[classification.pipeline] --> CD[(data/classification)]
-    VEC -. métodos .-> CLS
+    VEC -. métodos e K-Means .-> CLS
+    VD -. vetores densos, com --vectors .-> CLS
 ```
 
 ## Fluxo da pesquisa
@@ -56,8 +68,10 @@ flowchart LR
 
 1. `python -m app.corpus collect` valida `config/coleta.json`, coleta recortes gênero × período e filmes semente e grava respostas, filmes deduplicados, participação nos recortes e manifesto.
 2. `python -m app.corpus process` verifica a coleta, gera as seis representações, metadados, estatísticas, exemplos e o relatório (template em `corpus/templates/report.md`) e termina com `verify`.
-3. `python -m app.vectors build` verifica a pasta processada e valida a configuração. Em seguida constrói as representações registradas em `METHODS`, executa `DEFAULT_ANALYSES`, serializa tudo em memória e só então cria a pasta ([ADR 0009](adr/0009-saidas-imutaveis-e-verificaveis.md)).
-4. `python -m app.classification build` monta as tarefas multiclasse e multirrótulo a partir dos `genre_ids`, constrói as representações pelos mesmos `METHODS` e avalia a regressão logística por validação cruzada, com tudo o que aprende dentro da dobra ([ADR 0017](adr/0017-aula8-classificacao-de-generos.md)).
+3. `python -m app.vectors build` verifica a pasta processada e valida a configuração. Em seguida constrói as representações registradas em `METHODS`, executa `DEFAULT_ANALYSES` (busca, recomendação, agrupamento, visualização e sondas), serializa tudo em memória e só então cria a pasta ([ADR 0009](adr/0009-saidas-imutaveis-e-verificaveis.md)). Arquivos `.jsonl` gerados por uma análise entram na verificação de alinhamento, como as matrizes.
+4. `python -m app.classification build` monta as tarefas multiclasse e multirrótulo a partir dos gêneros, obtém as representações e avalia a regressão logística por validação cruzada, com tudo o que aprende dentro da dobra ([ADR 0017](adr/0017-aula8-classificacao-de-generos.md)). Com `--vectors`, lê os vetores densos de uma pasta verificada da Etapa 2 (`vectors.stored`) em vez de recalculá-los; as lexicais são sempre reconstruídas ([ADR 0018](adr/0018-tarefas-do-ciclo-de-pln.md)).
+
+Os rótulos de gênero são os mesmos nas duas etapas: `Document.genres` é o conjunto de `genre_ids` do TMDB restrito aos gêneros da coleta.
 
 ## Como estender
 
@@ -67,7 +81,7 @@ flowchart LR
 | Nova fonte de filmes | Implemente `MovieCatalog` e `MovieDetailsProvider` em `app.infra` e injete-a em `create_app` |
 | Novo gatilho de gênero ou marcador de negação | Edite `domain/search/lexicon.py` ou `shared/language.py` e atualize a ADR 0005 ou 0003 |
 | Nova representação vetorial | Implemente `Representation` e um método com `build`, e registre-o em `vectors/methods.py` |
-| Nova análise vetorial | Subclasse de `Analysis` com `run` e `report_section`, acrescentada a `DEFAULT_ANALYSES` |
+| Nova tarefa ou análise vetorial | Subclasse de `Analysis` com `run` e `report_section` (e `artifacts`, se gerar arquivos), acrescentada a `DEFAULT_ANALYSES` |
 | Novo classificador de comparação | Registre um `Alternative` em `classification/alternatives.py` (`ALTERNATIVES`) e inclua o nome em `alternatives` na configuração |
 
 ## Testes
@@ -75,8 +89,8 @@ flowchart LR
 | Arquivo | Cobertura |
 |---|---|
 | `test_corpus.py` | Transformações, coleta simulada, validação da configuração, integridade, determinismo |
-| `test_vectors.py` | Representações (com modelos falsos), análises, relatório, segurança da configuração, verificação |
-| `test_classification.py` | Tarefas a partir dos gêneros do TMDB, validação cruzada, decisão multirrótulo, K-Means e mapeamento de grupos, classificadores alternativos, configuração, determinismo, verificação |
+| `test_vectors.py` | Representações (com modelos falsos), rótulos unificados, busca, recomendação por filme e por perfil, agrupamento e gráficos, sondas, relatório, segurança da configuração, verificação |
+| `test_classification.py` | Tarefas a partir dos gêneros do TMDB, validação cruzada, decisão multirrótulo, K-Means e mapeamento de grupos, classificadores alternativos, reaproveitamento dos vetores da Etapa 2, configuração, determinismo, verificação |
 | `test_search_extractor.py` | Gatilhos, negação, qualidade, períodos e acurácia por campo |
 | `test_search_service.py` | Estratégias de pesquisa e número de chamadas ao catálogo |
 | `test_tmdb.py` | Cliente (erros, sessões por thread, retry, token fora da URL), catálogo e cache |

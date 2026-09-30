@@ -20,7 +20,7 @@ O corpus já tem rótulos: o TMDB atribui gêneros a cada filme (`genre_ids`), e
 - **Tarefa:** prever o gênero a partir da sinopse, em duas formulações sobre os mesmos quatro gêneros.
   - **Multiclasse:** só os 325 filmes com exatamente um gênero; o modelo escolhe um.
   - **Multirrótulo:** todos os 428 filmes; um classificador binário por gênero (*one-vs-rest*). Um gênero é atribuído com probabilidade ≥ 0,5, e o mais provável sempre é atribuído, porque todo filme da tarefa tem ao menos um gênero.
-- **Rótulos:** `genre_ids` do TMDB restritos aos gêneros configurados. O recorte de coleta que retornou o filme (usado na Etapa 2 como aproximação) não serve de rótulo: depende do ranking e do limite de páginas. Por isso `Document` ganhou o campo `tmdb_genres`.
+- **Rótulos:** `genre_ids` do TMDB restritos aos gêneros configurados. O recorte de coleta que retornou o filme (usado na Etapa 2 como aproximação) não serve de rótulo: depende do ranking e do limite de páginas. Por isso `Document` ganhou o campo `tmdb_genres`. A [ADR 0018](0018-tarefas-do-ciclo-de-pln.md) estendeu esse rótulo à Etapa 2.
 - **Classificador:** a mesma regressão logística para todas as representações, com pesos de classe balanceados. Ela é o exemplo da aula, é rápida em CPU e seus coeficientes são legíveis nas representações lexicais.
 - **Representações:** as oito da Etapa 2, pelo mesmo esquema de configuração e pelos mesmos métodos (`parse_representation` e `METHODS`). O BERTimbau e o modelo de sentença são extratores de atributos congelados.
 - **Avaliação sem vazamento:**

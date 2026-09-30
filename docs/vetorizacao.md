@@ -1,6 +1,6 @@
 # Etapa 2 — Representações vetoriais
 
-Implementa o pipeline da Unidade 3 sobre o corpus da Etapa 1:
+Implementa o pipeline da Unidade 3 sobre o corpus da Etapa 1 e aplica cada representação às tarefas busca, recomendação, agrupamento e visualização; a classificação está na [Etapa 3](classificacao.md). O mapa tarefa × representação está no [README](../README.md#tarefas--representações).
 
 ```
 texto → preparação (Etapa 1) → representação ─┬─ BoW / TF-IDF         (esparsa, uma dimensão por termo)
@@ -8,9 +8,10 @@ texto → preparação (Etapa 1) → representação ─┬─ BoW / TF-IDF     
                                               ├─ BERT                  (densa, contextual: vetor da palavra depende da frase)
                                               └─ embedding de sentença (densa, transformer ajustado para similaridade)
                                                    │
-                                                   ├─ similaridade do cosseno (vizinhos e consultas)
-                                                   ├─ clustering (K-Means)
-                                                   ├─ projeção em 2 dimensões (SVD / LSA)
+                                                   ├─ busca: consulta → cosseno → sinopses ordenadas
+                                                   ├─ recomendação: filme ou perfil → filmes parecidos
+                                                   ├─ agrupamento (K-Means)
+                                                   ├─ visualização: projeção 2D (SVD / LSA) por gênero e por cluster
                                                    ├─ hipótese distribucional (palavras vizinhas e pares de palavras)
                                                    ├─ similaridade lexical × semântica (pares de frases)
                                                    ├─ polissemia (mesma palavra em sentidos diferentes)
@@ -61,11 +62,12 @@ Como na Etapa 1, a pasta de saída precisa ser nova. Repetir o build com as mesm
 - **TF-IDF:** usa idf = ln((1 + n) / (1 + df)) + 1, com norma L2 por sinopse. O vocabulário salvo registra `document_frequency` e `idf` de cada termo.
 - **Word2vec:** usa os vetores pré-treinados do NILC (Hartmann et al., 2017), treinados sobre um grande corpus em português, e não sobre as 428 sinopses, que seriam poucas. A sinopse é a média dos vetores das palavras conhecidas pelo modelo. Dígitos viram `0`, como no treino do NILC.
 - **Vetores e direções:** todas as análises usam linhas com norma L2. Assim o produto escalar é o cosseno, que compara direções e não depende do tamanho da sinopse.
-- **Similaridade:** para cada filme, são listados os *k* vizinhos e uma explicação. Nas representações lexicais, são os termos idênticos que mais pesam; no word2vec, pares de palavras próximas (por exemplo, `simulação ≈ artificial`). O modelo contextual não é interpretável por palavras.
-- **Clustering:** K-Means com *k* = 4, igual ao número de gêneros coletados. ARI, NMI e pureza usam os filmes de um único gênero de coleta, e a silhueta usa distância do cosseno. Os termos de cada cluster vêm de um TF-IDF de referência igual para todas as representações, o que permite comparar os clusters.
-- **Dimensões:** o relatório compara ~6 mil dimensões esparsas com 300 ou 384 densas. A TruncatedSVD projeta tudo em 2D (nas matrizes lexicais, é a LSA) e gera um SVG por representação.
+- **Rótulos de gênero:** os `genre_ids` do TMDB restritos aos quatro gêneros da coleta, os mesmos da Etapa 3. O recorte de coleta que retornou o filme fica só como proveniência em `memberships.json` ([ADR 0018](adr/0018-tarefas-do-ciclo-de-pln.md)).
+- **Recomendação:** para cada filme, os *k* de maior cosseno, sem o próprio (item → item); para um perfil de `profiles`, os de maior cosseno com a média, com norma L2, dos filmes de que a pessoa gostou. Sem avaliações de usuários, a precisão @k conta os recomendados que compartilham ao menos um gênero e é comparada com a referência de uma recomendação que ignora o texto. As explicações mostram, nas representações lexicais, os termos idênticos que mais pesam; no word2vec, pares de palavras próximas (por exemplo, `simulação ≈ artificial`). O modelo contextual não é interpretável por palavras.
+- **Agrupamento:** K-Means com *k* = 4, igual ao número de gêneros coletados, pelo mesmo código da Etapa 3 (`app.vectors.clusters`). ARI, NMI e pureza usam os filmes com exatamente um gênero da coleta, e a silhueta usa distância do cosseno. Os termos de cada cluster vêm de um TF-IDF de referência igual para todas as representações, o que permite comparar os clusters.
+- **Visualização:** o relatório compara ~6 mil dimensões esparsas com 300 a 768 densas. A TruncatedSVD projeta tudo em 2D (nas matrizes lexicais, é a LSA) e gera dois SVGs por representação com as mesmas coordenadas: um colorido pelo gênero e outro pelo cluster do K-Means.
 - **Palavras vizinhas:** para as palavras de `probe_words`, lista as palavras do corpus com vetor mais próximo no word2vec, separadamente para CBOW e skip-gram.
-- **Consultas:** a consulta passa pelas mesmas regras de preparação da entrada de cada representação. O resultado registra os termos fora do vocabulário, se o vetor ficou nulo, a posição do filme anotado e a explicação.
+- **Busca:** a consulta passa pelas mesmas regras de preparação da entrada de cada representação. O resultado registra os termos fora do vocabulário, se o vetor ficou nulo, a posição do filme anotado e a explicação.
 
 ## Aula 7: word2vec, BERT e embeddings modernos
 
@@ -86,7 +88,7 @@ Resultados da execução entregue:
   - O BoW e o TF-IDF sem stopwords dão cosseno 1,000 a “O banco aprovou o financiamento” × “Ele sentou no banco da praça”, porque só “banco” está no vocabulário do corpus.
   - Na paráfrase cachorro/cão, as representações lexicais dão 0,000. O word2vec aproxima `cachorro ≈ cão, perseguiu ≈ correu` (0,49 a 0,54), e os transformers chegam a 0,68 e 0,79.
 - **BERT sem ajuste para sentenças:** dá cosseno alto a quase qualquer par (0,594 até no par polissêmico) e tem o menor MRR nas consultas (0,30). O modelo de sentença separa bem os pares (−0,033 × 0,677). Essa diferença corresponde à distinção da aula entre embeddings contextuais e embeddings semânticos de textos.
-- **Clustering:** o BERTimbau tem o maior ARI com os gêneros de coleta (0,122) e a maior concordância de gênero @5 (0,552).
+- **Agrupamento e recomendação:** o BERTimbau tem o maior ARI com os gêneros (0,144) e a maior precisão de recomendação @5 (63,6%, contra 37,9% da referência que ignora o texto).
 
 ## Arquitetura (`backend/src/app/vectors`)
 
@@ -99,7 +101,9 @@ Resultados da execução entregue:
 | `space.py` | Contrato `Representation`, valor `Encoded` e representação lexical (`LexicalSpace`, `BOW`, `TFIDF`) |
 | `embeddings.py` | `Word2VecSpace` (estático), `ContextualSpace` (transformers) e adaptadores do sentence-transformers, carregados só quando usados; inclui o vetor da palavra no contexto |
 | `methods.py` | Registro `METHODS`: nome do método → fábrica da representação |
-| `analyses.py` | Uma classe por análise: `Dimensions`, `Neighbors`, `Clustering`, `Projection`, `WordNeighbors`, `SentencePairs`, `WordSenses`, `Retrieval`, `Synthesis`; cada uma calcula (`run`) e escreve a própria seção do relatório (`report_section`) |
+| `analyses.py` | Uma classe por tarefa ou análise: `Dimensions`, `Retrieval` (busca), `Recommendation`, `Clustering`, `Projection`, `WordNeighbors`, `SentencePairs`, `WordSenses`, `Synthesis`; cada uma calcula (`run`), escreve a própria seção do relatório (`report_section`) e, se precisar, arquivos extras (`artifacts`) |
+| `clusters.py` | K-Means, projeção 2D e termos descritivos compartilhados com a Etapa 3 |
+| `stored.py` | Leitura verificada dos vetores densos de uma pasta da Etapa 2, usada pela Etapa 3 com `--vectors` |
 | `retrieval.py` | Consulta → vetor → ranking |
 | `metrics.py` | Métricas puras (pureza, concordância, posição recíproca) |
 | `svg.py` / `report.py` | Apresentação: gráfico e funções de seção; `make_report` só junta introdução, seções das análises e limitações |
@@ -133,19 +137,21 @@ Decisões numéricas do experimento: [ADR 0012](adr/0012-parametros-do-experimen
 
 | Arquivo | Conteúdo |
 |---|---|
-| `documents.json` | Ordem das linhas: `id`, `title` e gêneros de coleta |
+| `documents.json` | Ordem das linhas: `id`, `title` e gêneros (TMDB, restritos aos gêneros da coleta) |
 | `<representação>.matrix.jsonl` | Lexical: pesos diferentes de zero por filme (contagens inteiras no BoW) |
 | `<representação>.vocabulary.json` | Lexical: colunas da matriz, com frequência em documentos e idf |
 | `<representação>.embeddings.jsonl` | Densa: vetor de cada filme |
 | `dimensions.json` | Dimensões, densidade, termos de maior peso, cobertura do vocabulário e truncamento |
-| `neighbors.json` | Concordância de gênero @k, referência e vizinhos explicados dos filmes de exemplo |
-| `clustering.json` | ARI, NMI, pureza, silhueta, termos e gêneros de cada cluster |
-| `projection.json` / `<representação>.projection.svg` | Coordenadas 2D e gráfico |
+| `recommendation.json` | Precisão @k, referência, recomendações explicadas dos filmes de exemplo e dos perfis |
+| `<representação>.recommendations.jsonl` | Os *k* filmes recomendados para cada filme, com o cosseno |
+| `clustering.json` | ARI, NMI, pureza, silhueta, cluster de cada sinopse (`assignments`), termos e gêneros de cada cluster |
+| `projection.json` / `<representação>.projection.svg` | Coordenadas 2D e gráfico colorido pelo gênero |
+| `<representação>.clusters.svg` | Mesmas coordenadas, coloridas pelo cluster do K-Means |
 | `word_neighbors.json` | Palavras vizinhas das palavras de sondagem e cosseno dos pares de palavras |
 | `sentence_pairs.json` | Cosseno e explicação de cada par de frases das sondas |
 | `word_senses.json` | Matriz de cossenos entre os usos de cada palavra polissêmica e diferença entre mesmo sentido e sentidos diferentes |
 | `synthesis.json` | Propriedades de cada representação para a síntese comparativa |
-| `retrieval.json` | Consultas anotadas: tokens, termos fora do vocabulário, posição, explicação, MRR e acerto @k |
+| `retrieval.json` | Busca com consultas anotadas: tokens, termos fora do vocabulário, posição, explicação, MRR e acerto @k |
 | `config.json` / `queries_config.json` / `probes_config.json` | Configuração, consultas e sondas efetivamente usadas, incluindo modelos e revisões |
 | `report.md` | Relatório gerado a partir dos arquivos acima |
 | `manifest.json` | Hashes, versões das bibliotecas, identidade do código e da entrada, tempo de construção de cada representação (`build_seconds`) |
