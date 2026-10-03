@@ -100,6 +100,17 @@ Merge da branch `luana-classificacao` (ADRs 0017 e 0018) no `trabalho-3`. As ADR
 | Classificação | `data/classification/tmdb_2026-09-12` foi regenerada a partir dos vetores novos (`--vectors`); `verify` aprovou os 25 arquivos. Métricas e relatório idênticos aos da branch; mudaram só as probabilidades do BERTimbau, na sexta casa decimal, e o manifesto. |
 | Jev com os rótulos do TMDB | Nova amostra de 120 sinopses: 47 respostas reaproveitadas e 73 chamadas novas (`jev-1.13.0`), nenhuma falha, em 41 s. `verify` aprovou os 7 arquivos. Repetição com `--reuse` a partir da entrega: 0 chamadas e arquivos de conteúdo idênticos byte a byte. Acurácia de 85,0% contra 56,0% da referência nos 100 filmes de um gênero. A primeira tentativa falhou com HTTP 403 e não gravou nada; a chave foi trocada em `backend/.env`. |
 
+## Classificação na tela (03/10/2026)
+
+Decisões no [ADR 0021](adr/0021-classificacao-na-tela.md).
+
+| Verificação | Resultado e alcance |
+|---|---|
+| Testes automatizados | 111 testes aprovados. Novos: contrato de `/classificacao`, 503 sem classificador e 422 para texto inválido ou longo demais na rota (com classificador falso); classificador ajustado sobre o corpus de teste, recusa de representação lexical e corte de texto longo (com modelo falso). |
+| Lint, formatação e tipos | `ruff check`, `ruff format --check` e `mypy` sem apontamentos. |
+| API real | O classificador foi ajustado com 325 sinopses na inicialização. Nas 40 primeiras sinopses de treino, a rota acertou 37. Em frases escritas pela equipe, acertou "família ouve vozes de espíritos numa casa antiga" (terror, 0,94) e errou "robô doméstico ganha consciência e ameaça a família" (comédia) e "dois amigos organizam uma festa de casamento" (drama): o modelo tem F1 macro de 66,1% na validação cruzada e erra mais em comédia. |
+| Interface | A seção nova usa `<progress>` em vez de estilo inline, por causa da política de segurança da página; não houve teste visual automatizado. |
+
 ## Revisão de arquitetura e segurança (14/09/2026)
 
 Execução local em Python 3.14.0, após a refatoração descrita em [docs/arquitetura.md](arquitetura.md) e nas [ADRs](adr/README.md).

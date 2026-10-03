@@ -11,6 +11,7 @@ from app.classification.config import load_config
 from app.classification.dataset import MULTICLASS, MULTILABEL, make_tasks
 from app.classification.evaluation import BASELINE, decide
 from app.classification.grouping import best_mapping, contingency
+from app.classification.live import GenreClassifier
 from app.classification.pipeline import build, verify
 from app.corpus.collect import collect
 from app.corpus.process import process
@@ -101,6 +102,30 @@ class ClassificationTests(unittest.TestCase):
         path = cls.root / name
         write_json(path, value)
         return path
+
+    def live_classifier(self, name="contextual_teste"):
+        config = load_config(self.config, FAKE_METHODS, ALTERNATIVES)
+        corpus = ProcessedCorpus.load(self.processed)
+        spec = next(spec for spec in config.representations if spec.name == name)
+        representation = FAKE_METHODS[spec.method].build(spec, corpus, config.vector_config())
+        return GenreClassifier(corpus, representation, config)
+
+    def test_live_classifier_uses_trained_model_on_free_text(self):
+        classifier = self.live_classifier()
+        self.assertEqual((classifier.representation_name, classifier.training_size), ("contextual_teste", 12))
+        scifi = classifier.classify("Um sistema artificial de computadores e robôs controla a nave.")
+        drama = classifier.classify("Uma família vive o luto depois da perda da mãe.")
+        self.assertEqual(scifi[0][0], "Ficção científica")
+        self.assertEqual(drama[0][0], "Drama")
+        self.assertAlmostEqual(sum(probability for _, probability in scifi), 1.0, places=3)
+        self.assertEqual([probability for _, probability in scifi], sorted((p for _, p in scifi), reverse=True))
+
+    def test_live_classifier_rejects_lexical_representation_and_truncates_long_text(self):
+        with self.assertRaisesRegex(ValueError, "densa"):
+            self.live_classifier("tfidf_sem_stopwords")
+        long_text = "Um sistema artificial de computadores controla a nave. " * 20
+        self.assertGreater(len(long_text), 500)
+        self.assertEqual(self.live_classifier().classify(long_text)[0][0], "Ficção científica")
 
     def test_tasks_use_tmdb_genres(self):
         corpus = ProcessedCorpus.load(self.processed)

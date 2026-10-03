@@ -26,6 +26,7 @@ O código não tem comentários fora de docstrings. Quando uma docstring cita �
 | [0018](#0018--tarefas-do-ciclo-de-pln-para-cada-representação) | Tarefas do ciclo de PLN para cada representação | PLN |
 | [0019](#0019--jev-e-tf-idf--regressão-logística-aula-8) | Jev e TF-IDF + regressão logística (Aula 8) | PLN |
 | [0020](#0020--busca-por-tema-tf-idf--embedding-de-sentença) | Busca por tema: TF-IDF + embedding de sentença | PLN |
+| [0021](#0021--classificação-de-gênero-na-tela) | Classificação de gênero na tela | API |
 
 ---
 
@@ -261,3 +262,11 @@ O código não tem comentários fora de docstrings. Quando uma docstring cita �
 **Por quê.** O embedding de sentença foi o melhor sozinho (MAP de 0,56) e acerta o tema sem palavras em comum. O TF-IDF acerta palavras-chave fortes, como "zumbis" e "casa assombrada". Juntos, chegam a MAP de 0,61. O ganho se manteve quando o peso foi escolhido numa metade das consultas e medido na outra (95% de 500 divisões). O skip-gram quase não somava e custaria mais um modelo.
 
 **Consequência.** A busca por tema cobre só os 428 filmes da amostra, e a API passa a depender do extra `semantico`; sem ele, o modo `sinopse` avisa que está indisponível. [Detalhes](docs/adr/0020-busca-hibrida-tfidf-e-sentenca.md)
+
+## 0021 — Classificação de gênero na tela
+
+**Decisão.** Uma seção do site recebe uma sinopse e mostra o gênero previsto, com a probabilidade de cada um. Por trás, `GET /classificacao` usa a regressão logística da Etapa 3, ajustada com as 325 sinopses de um gênero sobre o embedding de sentença `sentenca_minilm`, que a busca por tema já carrega.
+
+**Por quê.** A classificação só existia em relatórios. Reaproveitar a representação da busca evita carregar outro modelo e não tem custo por uso. O BERTimbau e o skip-gram dariam alguns pontos a mais de F1, mas exigiriam mais um modelo na API; o Jev seria uma chamada paga por classificação.
+
+**Consequência.** A qualidade esperada é o F1 macro de 66,1% medido na validação cruzada. Comédia é o gênero mais difícil, e frases curtas fora do estilo das sinopses erram com frequência. Sem o extra `semantico`, a rota responde 503. [Detalhes](docs/adr/0021-classificacao-na-tela.md)

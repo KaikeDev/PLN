@@ -8,14 +8,19 @@ from app.api.rate_limit import RateLimiter
 from app.domain.search.ports import CatalogError
 from app.main import create_app
 from app.settings import Settings
-from tests.fakes import FakeCatalog, FakeSynopsisIndex
+from tests.fakes import FakeCatalog, FakeGenreClassifier, FakeSynopsisIndex
 
 ORIGIN = "http://127.0.0.1:5500"
 
 
-def client_for(catalog: FakeCatalog, rate_limit: int = 100, synopsis_index: FakeSynopsisIndex | None = None) -> TestClient:
+def client_for(
+    catalog: FakeCatalog,
+    rate_limit: int = 100,
+    synopsis_index: FakeSynopsisIndex | None = None,
+    classifier: FakeGenreClassifier | None = None,
+) -> TestClient:
     settings = Settings(_env_file=None, cors_origins=[ORIGIN], rate_limit_per_minute=rate_limit)
-    return TestClient(create_app(settings, catalog, synopsis_index))
+    return TestClient(create_app(settings, catalog, synopsis_index, classifier))
 
 
 class ApiTests(unittest.TestCase):
@@ -63,6 +68,26 @@ class ApiTests(unittest.TestCase):
         with client_for(FakeCatalog()) as client:
             notice = client.get("/pesquisa", params={"q": "máquinas", "modo": "sinopse"}).json()
         self.assertEqual(notice["interpretacao"], {"aviso": "Busca por sinopse indisponível"})
+
+    def test_classification_contract(self) -> None:
+        classifier = FakeGenreClassifier([("Terror", 0.7), ("Drama", 0.2), ("Comédia", 0.06), ("Ficção científica", 0.04)])
+        with client_for(FakeCatalog(), classifier=classifier) as client:
+            body = client.get("/classificacao", params={"texto": "Uma boneca possuída ataca a família."}).json()
+            too_long = client.get("/classificacao", params={"texto": "x" * 1001})
+            empty = client.get("/classificacao", params={"texto": ""})
+        self.assertEqual(body["genero_previsto"], "Terror")
+        self.assertEqual(body["generos"][0], {"genero": "Terror", "probabilidade": 0.7})
+        self.assertEqual((body["representacao"], body["sinopses_de_treino"]), ("teste", 10))
+        self.assertEqual(classifier.texts, ["Uma boneca possuída ataca a família."])
+        self.assertEqual((too_long.status_code, empty.status_code), (422, 422))
+
+    def test_classification_unavailable_or_invalid_text(self) -> None:
+        with client_for(FakeCatalog()) as client:
+            unavailable = client.get("/classificacao", params={"texto": "um filme"})
+        self.assertEqual((unavailable.status_code, unavailable.json()["detail"]), (503, "Classificação indisponível"))
+        with client_for(FakeCatalog(), classifier=FakeGenreClassifier([], error="Texto sem palavras conhecidas")) as client:
+            invalid = client.get("/classificacao", params={"texto": "???"})
+        self.assertEqual((invalid.status_code, invalid.json()["detail"]), (422, "Texto sem palavras conhecidas"))
 
     def test_invalid_parameters_are_rejected(self) -> None:
         with client_for(FakeCatalog()) as client:

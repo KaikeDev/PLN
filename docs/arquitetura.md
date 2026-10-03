@@ -33,6 +33,8 @@ Cada representação (BoW, TF-IDF, word2vec CBOW e skip-gram, BERTimbau e modelo
 | `app.classification` | Etapa 3: tarefas de gênero, validação cruzada, métricas, K-Means × classificador, classificadores alternativos, relatório e verificação | `vectors` (configuração, corpus, métodos, K-Means, vetores guardados), `shared` |
 | `app.jev` | Aula 8: amostra, perguntas ao Jev, TF-IDF + regressão logística, métricas, relatório e verificação | `vectors.corpus`, `shared`, porta própria (`DecisionClient`) |
 | `app.infra.typesafe` | Adaptador do SDK do Jev (extra opcional `jev`) | `jev.ports` |
+| `app.domain.classification` | Porta `GenreClassifier` da tela de classificação | — |
+| `app.classification.live` | Regressão logística da Etapa 3 ajustada para classificar textos avulsos na API | `classification`, `vectors` |
 | `app.infra.synopsis` | Índice de sinopses da busca por tema: combinação de `app.vectors.hybrid` e dados de exibição da coleta bruta | `vectors`, `corpus.verification`, `shared` |
 
 O domínio não importa `infra` nem `api`; a infraestrutura implementa as portas do domínio; `main` liga as partes.
@@ -74,6 +76,7 @@ flowchart LR
 3. O catálogo com cache reaproveita o mapa de gêneros e as buscas recentes por título ([ADR 0007](adr/0007-cliente-http-e-cache.md)).
 4. `SearchResponse.from_result` traduz o resultado para o contrato JSON (`modo`, `resultados`, `interpretacao`).
 5. Falhas do catálogo viram HTTP 502; filme inexistente vira 404.
+6. `GET /classificacao` passa o texto ao `GenreClassifier`, montado em `create_app` a partir de uma representação do índice de sinopses ([ADR 0021](adr/0021-classificacao-na-tela.md)). Sem classificador, responde 503; texto que não pode ser codificado, 422.
 
 ## Fluxo dos pipelines
 

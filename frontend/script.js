@@ -16,6 +16,35 @@ const elResultados = document.getElementById("resultados");
 const elModal = document.getElementById("modal");
 const elModalCorpo = document.getElementById("modal-corpo");
 const elFecharModal = document.getElementById("fechar-modal");
+const elFormClassificacao = document.getElementById("form-classificacao");
+const elSinopse = document.getElementById("campo-sinopse");
+const elMensagemClassificacao = document.getElementById("mensagem-classificacao");
+const elResultadoClassificacao = document.getElementById("resultado-classificacao");
+const elContadorSinopse = document.getElementById("contador-sinopse");
+const elExemploSinopse = document.getElementById("exemplo-sinopse");
+const elBotaoClassificar = document.getElementById("botao-classificar");
+const elAbas = Array.from(document.querySelectorAll('[role="tab"]'));
+const LIMITE_SINOPSE = 1000;
+const EXEMPLOS = [
+  {
+    titulo: "Invocação do Mal",
+    texto: "Harrisville, Rhode Island, Estados Unidos, 1968. Os investigadores paranormais Ed e Lorraine Warren trabalham para ajudar uma família aterrorizada por uma presença sombria em sua fazenda. Forçados a confrontar uma entidade poderosa, os Warrens se vêem presos no caso mais aterrorizante de suas vidas. Baseado numa história real.",
+  },
+  {
+    titulo: "Se Beber, Não Case!",
+    texto: "Dois dias antes de seu casamento, Doug e três amigos vão de carro até Las Vegas para uma louca e memorável despedida de solteiro. Quando os três padrinhos acordam na manhã seguinte, eles não conseguem se lembrar de nada e notam que Doug desapareceu. Com pouco tempo de sobra, os amigos tentam refazer a noite anterior e encontrar Doug para que possam levá-lo de volta a Los Angeles a tempo de chegar ao altar.",
+  },
+  {
+    titulo: "Um Sonho de Liberdade",
+    texto: "Em 1946, Andy Dufresne, um banqueiro jovem e bem sucedido, tem a sua vida radicalmente modificada ao ser condenado por um crime que nunca cometeu, o homicídio de sua esposa e do amante dela. Ele é mandado para uma prisão que é o pesadelo de qualquer detento, a Penitenciária Estadual de Shawshank, no Maine. Lá ele irá cumprir a pena perpétua.",
+  },
+  {
+    titulo: "Perdido em Marte",
+    texto: "O astronauta Mark Watney é enviado a uma missão em Marte. Após uma severa tempestade ele é dado como morto, abandonado pelos colegas e acorda sozinho no misterioso planeta com escassos suprimentos, sem saber como reencontrar os companheiros ou retornar à Terra.",
+  },
+];
+let proximoExemplo = 0;
+let exemploAtual = null;
 
 function elemento(tag, { classe, texto, atributos = {} } = {}, filhos = []) {
   const el = document.createElement(tag);
@@ -67,6 +96,71 @@ async function buscarFilmes(texto, ano, modo) {
   const dados = await obterJson(`/pesquisa?${params}`, "Falha ao buscar filmes.");
   const aviso = typeof dados.interpretacao?.aviso === "string" ? dados.interpretacao.aviso : "";
   return { filmes: Array.isArray(dados.resultados) ? dados.resultados : [], aviso };
+}
+
+function classificarSinopse(texto) {
+  return obterJson(`/classificacao?${new URLSearchParams({ texto })}`, "Falha ao classificar a sinopse.");
+}
+
+function porcentagem(valor) {
+  const numero = Number(valor);
+  return Number.isFinite(numero) ? `${Math.round(numero * 100)}%` : "?";
+}
+
+function classeGenero(nome) {
+  const slug = String(nome ?? "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z]+/g, "-")
+    .replace(/^-|-$/g, "");
+  return `genero--${slug}`;
+}
+
+function renderizarClassificacao(dados) {
+  const generos = Array.isArray(dados.generos) ? dados.generos : [];
+  if (generos.length === 0) {
+    elMensagemClassificacao.textContent = "A classificação não devolveu gêneros.";
+    return;
+  }
+  const [primeiro] = generos;
+  const destaque = elemento("div", { classe: `destaque ${classeGenero(primeiro.genero)}` }, [
+    elemento("div", {}, [
+      elemento("span", { classe: "destaque__rotulo", texto: "Gênero previsto" }),
+      elemento("span", { classe: "destaque__genero", texto: String(primeiro.genero) }),
+    ]),
+    elemento("span", { classe: "destaque__valor", texto: porcentagem(primeiro.probabilidade) }),
+  ]);
+  const barras = elemento(
+    "ul",
+    { classe: "barras", atributos: { "aria-label": "Probabilidade de cada gênero" } },
+    generos.map((item) =>
+      elemento("li", { classe: `barra ${classeGenero(item.genero)}` }, [
+        elemento("span", { texto: String(item.genero) }),
+        elemento("progress", { atributos: { max: "1", value: String(Number(item.probabilidade) || 0), "aria-label": `Probabilidade de ${item.genero}` } }),
+        elemento("span", { classe: "barra__valor", texto: porcentagem(item.probabilidade) }),
+      ]),
+    ),
+  );
+  const filhos = [destaque, barras];
+  if (exemploAtual) {
+    filhos.unshift(elemento("p", { classe: "resultado__exemplo", texto: `Exemplo: sinopse de “${exemploAtual}”, que faz parte do corpus de treino.` }));
+  }
+  elResultadoClassificacao.replaceChildren(...filhos);
+}
+
+function atualizarContador() {
+  elContadorSinopse.textContent = `${elSinopse.value.length} / ${LIMITE_SINOPSE}`;
+}
+
+function selecionarAba(aba) {
+  for (const outra of elAbas) {
+    const ativa = outra === aba;
+    outra.classList.toggle("aba--ativa", ativa);
+    outra.setAttribute("aria-selected", String(ativa));
+    outra.tabIndex = ativa ? 0 : -1;
+    document.getElementById(outra.getAttribute("aria-controls")).hidden = !ativa;
+  }
 }
 
 function buscarDetalhes(filmeId) {
@@ -141,6 +235,49 @@ elForm.addEventListener("submit", async (evento) => {
     elMensagem.textContent = erro.message;
   }
 });
+
+elFormClassificacao.addEventListener("submit", async (evento) => {
+  evento.preventDefault();
+  elMensagemClassificacao.textContent = "";
+  elResultadoClassificacao.replaceChildren();
+  elBotaoClassificar.disabled = true;
+  elBotaoClassificar.textContent = "Classificando...";
+  try {
+    renderizarClassificacao(await classificarSinopse(elSinopse.value.trim()));
+  } catch (erro) {
+    elMensagemClassificacao.textContent = erro.message;
+  } finally {
+    elBotaoClassificar.disabled = false;
+    elBotaoClassificar.textContent = "Classificar";
+  }
+});
+
+elSinopse.addEventListener("input", () => {
+  exemploAtual = null;
+  atualizarContador();
+});
+
+elExemploSinopse.addEventListener("click", () => {
+  const exemplo = EXEMPLOS[proximoExemplo];
+  proximoExemplo = (proximoExemplo + 1) % EXEMPLOS.length;
+  elSinopse.value = exemplo.texto;
+  exemploAtual = exemplo.titulo;
+  atualizarContador();
+  elResultadoClassificacao.replaceChildren();
+  elMensagemClassificacao.textContent = "";
+  elSinopse.focus();
+});
+
+for (const aba of elAbas) {
+  aba.addEventListener("click", () => selecionarAba(aba));
+  aba.addEventListener("keydown", (evento) => {
+    if (evento.key !== "ArrowRight" && evento.key !== "ArrowLeft") return;
+    const passo = evento.key === "ArrowRight" ? 1 : -1;
+    const proxima = elAbas[(elAbas.indexOf(aba) + passo + elAbas.length) % elAbas.length];
+    selecionarAba(proxima);
+    proxima.focus();
+  });
+}
 
 elFecharModal.addEventListener("click", fecharModal);
 elModal.addEventListener("click", (evento) => {

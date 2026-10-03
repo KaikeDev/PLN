@@ -3,6 +3,7 @@
 from fastapi import Request
 
 from app.api.rate_limit import RateLimiter
+from app.domain.classification.ports import GenreClassifier
 from app.domain.search.ports import MovieDetailsProvider
 from app.domain.search.service import SearchService
 
@@ -15,6 +16,11 @@ def get_search_service(request: Request) -> SearchService:
 def get_details_provider(request: Request) -> MovieDetailsProvider:
     """Fonte de fichas completas de filmes."""
     return request.app.state.details_provider
+
+
+def get_genre_classifier(request: Request) -> GenreClassifier | None:
+    """Classificador de gênero da aplicação, ou None quando não pôde ser carregado."""
+    return request.app.state.genre_classifier
 
 
 def enforce_rate_limit(request: Request) -> None:

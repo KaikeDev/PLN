@@ -20,7 +20,8 @@ class Settings(BaseSettings):
     """Parâmetros de integração com o TMDB e o Jev, da busca por sinopse e de exposição da API local.
 
     A busca por sinopse usa a amostra entregue e as configurações do repositório; `synopsis_search`
-    falso desliga o carregamento dos modelos na inicialização.
+    falso desliga o carregamento dos modelos na inicialização. O classificador de gênero da tela usa a
+    regressão logística da Etapa 3 sobre `synopsis_classifier_representation`, uma das representações da busca.
     """
 
     model_config = SettingsConfigDict(env_file=BACKEND_DIR / ".env", env_file_encoding="utf-8", extra="ignore")
@@ -37,6 +38,8 @@ class Settings(BaseSettings):
     synopsis_raw_dir: Path = REPOSITORY_DIR / "data" / "raw" / SAMPLE
     synopsis_vectors_config: Path = REPOSITORY_DIR / "config" / "vetorizacao_semantica.json"
     synopsis_search_config: Path = REPOSITORY_DIR / "config" / "busca.json"
+    synopsis_classifier_config: Path = REPOSITORY_DIR / "config" / "classificacao_semantica.json"
+    synopsis_classifier_representation: str = "sentenca_minilm"
 
     def require_tmdb_token(self) -> str:
         """Token de leitura do TMDB; falha com mensagem orientativa quando não configurado."""

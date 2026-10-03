@@ -60,6 +60,24 @@ class FakeCatalog:
             raise self.error
 
 
+class FakeGenreClassifier:
+    """Devolve probabilidades fixas; `error` simula um texto que a representação não consegue codificar."""
+
+    representation_name = "teste"
+    training_size = 10
+
+    def __init__(self, scores: list[tuple[str, float]], error: str | None = None) -> None:
+        self.scores = scores
+        self.error = error
+        self.texts: list[str] = []
+
+    def classify(self, text: str) -> list[tuple[str, float]]:
+        self.texts.append(text)
+        if self.error:
+            raise ValueError(self.error)
+        return list(self.scores)
+
+
 class FakeSynopsisIndex:
     """Devolve uma ordenação fixa e registra os textos recebidos."""
 

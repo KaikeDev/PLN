@@ -7,7 +7,7 @@
   <meta name="referrer" content="no-referrer" />
   <meta name="api-base" content="http://127.0.0.1:8000" />
   <title>API de Filmes (TMDB)</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=3" />
 </head>
 <body>
   <header>
@@ -16,21 +16,53 @@
   </header>
 
   <main>
-    <form id="form-busca">
-      <input type="text" id="campo-titulo" placeholder="Matrix, uma comédia recente ou um filme de ação sobre máquinas" aria-label="Título ou preferências" required maxlength="200" />
-      <input type="number" id="campo-ano" placeholder="Ano (opcional)" min="1874" max="9998" aria-label="Ano de lançamento" />
-      <select id="modo-busca" aria-label="Tipo de busca">
-        <option value="auto">Automático</option>
-        <option value="titulo">Título</option>
-        <option value="descoberta">Preferências</option>
-        <option value="sinopse">Tema (sinopses)</option>
-      </select>
-      <button type="submit">Buscar</button>
-    </form>
+    <div class="abas" role="tablist" aria-label="Funções do site">
+      <button type="button" class="aba aba--ativa" id="aba-busca" role="tab" aria-selected="true" aria-controls="painel-busca">Buscar filmes</button>
+      <button type="button" class="aba" id="aba-classificacao" role="tab" aria-selected="false" aria-controls="painel-classificacao" tabindex="-1">Classificar sinopse</button>
+    </div>
 
-    <p id="mensagem" class="mensagem" role="status"></p>
+    <section id="painel-busca" role="tabpanel" aria-labelledby="aba-busca">
+      <form id="form-busca">
+        <input type="text" id="campo-titulo" placeholder="Matrix, uma comédia recente ou um filme de ação sobre máquinas" aria-label="Título ou preferências" required maxlength="200" />
+        <input type="number" id="campo-ano" placeholder="Ano (opcional)" min="1874" max="9998" aria-label="Ano de lançamento" />
+        <select id="modo-busca" aria-label="Tipo de busca">
+          <option value="auto">Automático</option>
+          <option value="titulo">Título</option>
+          <option value="descoberta">Preferências</option>
+          <option value="sinopse">Tema (sinopses)</option>
+        </select>
+        <button type="submit">Buscar</button>
+      </form>
 
-    <section id="resultados" class="grid" aria-live="polite"></section>
+      <p id="mensagem" class="mensagem" role="status"></p>
+
+      <section id="resultados" class="grid" aria-live="polite"></section>
+    </section>
+
+    <section id="painel-classificacao" role="tabpanel" aria-labelledby="aba-classificacao" hidden>
+      <div class="painel">
+        <div class="painel__cabecalho">
+          <h2>Classificar uma sinopse</h2>
+          <p class="painel__ajuda">Escreva ou cole a sinopse de um filme e veja qual gênero ela sugere entre Drama, Comédia, Terror e Ficção científica.</p>
+        </div>
+
+        <form id="form-classificacao" class="form-classificacao">
+          <textarea id="campo-sinopse" rows="6" maxlength="1000" required aria-label="Sinopse" placeholder="Ex.: Uma família se muda para uma casa antiga e, toda noite, ouve vozes vindas do porão."></textarea>
+          <div class="form-classificacao__rodape">
+            <span id="contador-sinopse" class="contador">0 / 1000</span>
+            <div class="form-classificacao__acoes">
+              <button type="button" id="exemplo-sinopse" class="botao-secundario">Usar um exemplo</button>
+              <button type="submit" id="botao-classificar">Classificar</button>
+            </div>
+          </div>
+        </form>
+
+        <p id="mensagem-classificacao" class="mensagem" role="status"></p>
+        <div id="resultado-classificacao" class="resultado" aria-live="polite"></div>
+
+        <p class="painel__rodape">Modelo: regressão logística sobre o embedding de sentença (MiniLM), treinada com as sinopses do corpus. Na avaliação por validação cruzada, acerta cerca de dois terços dos filmes (F1 macro de 66%); comédia é o gênero mais difícil.</p>
+      </div>
+    </section>
   </main>
 
   <div id="modal" class="modal oculto" role="dialog" aria-modal="true" aria-label="Detalhes do filme">
@@ -40,6 +72,6 @@
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=3"></script>
 </body>
 </html>

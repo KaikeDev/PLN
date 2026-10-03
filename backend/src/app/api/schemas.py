@@ -75,6 +75,26 @@ class NoInterpretation(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
 
+class GenreScore(BaseModel):
+    """Probabilidade de um gênero."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    genero: str
+    probabilidade: float
+
+
+class ClassificationResponse(BaseModel):
+    """Resultado de `/classificacao`: gêneros do mais ao menos provável e o modelo usado."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    genero_previsto: str
+    generos: list[GenreScore]
+    representacao: str
+    sinopses_de_treino: int
+
+
 class SearchResponse(BaseModel):
     """Resultado de `/pesquisa`."""
 

@@ -42,3 +42,8 @@ class CorpusSynopsisIndex:
 
     def movie(self, movie_id: int) -> dict:
         return dict(self._movies[movie_id])
+
+    @property
+    def hybrid(self) -> HybridIndex:
+        """Índice híbrido, para reaproveitar as representações já construídas (o classificador da tela usa uma delas)."""
+        return self._hybrid

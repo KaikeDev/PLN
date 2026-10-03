@@ -18,6 +18,7 @@ Na orientação em vídeo de 31/08/2026, o professor pede representações suces
 | Pesquisa auxiliar | Regras léxicas com limiares nomeados; título exato tem prioridade no modo automático | [0005](adr/0005-pesquisa-por-regras-lexicas.md), [0006](adr/0006-prioridade-de-titulo-exato.md) |
 | Vetorização | Tokens da Etapa 1, cosseno com norma L2, K-Means com k = 4, SVD 2D, modelos com revisão fixa | [0011](adr/0011-formatos-e-modelos-seguros.md), [0012](adr/0012-parametros-do-experimento-vetorial.md) |
 | Aula 7 | BERTimbau, word2vec CBOW × skip-gram, sondas de polissemia e síntese comparativa | [0015](adr/0015-aula7-bert-cbow-e-polissemia.md) |
+| Classificação na tela | Regressão logística da Etapa 3 sobre o embedding de sentença, ajustada com as 325 sinopses de um gênero; `GET /classificacao` | [0021](adr/0021-classificacao-na-tela.md) |
 | Aula 8 | Classificação de gêneros com as oito representações, classificadores alternativos e K-Means × classificador | [0017](adr/0017-aula8-classificacao-de-generos.md) |
 | Tarefas | Busca, recomendação, agrupamento e visualização para cada representação; rótulos unificados; vetores densos reaproveitados | [0018](adr/0018-tarefas-do-ciclo-de-pln.md) |
 | Busca por tema | 0,3 × TF-IDF sem stopwords + 0,7 × embedding de sentença, escolhida em 20 consultas anotadas; filtros das regras aplicados aos filmes da amostra | [0020](adr/0020-busca-hibrida-tfidf-e-sentenca.md) |

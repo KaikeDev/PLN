@@ -123,12 +123,15 @@ Interface: <http://127.0.0.1:5500>. A pesquisa permite escolher título, prefer�
 
 O modo de título permite resolver ambiguidades.
 
+**Classificar uma sinopse:** na aba "Classificar sinopse", escreva ou cole uma sinopse (ou use um dos exemplos do corpus) para ver o gênero previsto e a probabilidade de cada um. O modelo é a regressão logística da Etapa 3 sobre o embedding de sentença, com F1 macro de 66,1% na validação cruzada. Comédia é o gênero mais difícil, e frases curtas fora do estilo das sinopses erram com frequência ([ADR 0021](docs/adr/0021-classificacao-na-tela.md)).
+
 **Busca por tema** (`modo=sinopse`): ordena os 428 filmes da amostra por 0,3 × TF-IDF sem stopwords + 0,7 × embedding de sentença (`sentenca_minilm`). Gênero, período, nota e negação reconhecidos pelas regras filtram os filmes. Em "quero um filme de ação sobre máquinas", só entram filmes de ação, ordenados pela proximidade com "máquinas". A combinação foi escolhida comparando as oito representações em 20 consultas anotadas ([ADR 0020](docs/adr/0020-busca-hibrida-tfidf-e-sentenca.md)). Filmes fora da amostra continuam acessíveis pelo título e pela descoberta. Explicação completa, com os algoritmos, o exemplo passo a passo e os limites: [docs/busca.md](docs/busca.md).
 
 | Rota implementada | Função |
 |---|---|
 | `GET /saude` | Saúde da aplicação |
 | `GET /filmes/603` | Detalhes do filme, com elenco e vídeos |
+| `GET /classificacao?texto=...` | Gênero previsto para uma sinopse e a probabilidade de cada gênero (regressão logística sobre o embedding de sentença); `texto` com até 1.000 caracteres |
 | `GET /pesquisa?q=...&modo=auto` | Título, tema nas sinopses ou preferências reconhecidas; `modo=titulo`, `modo=descoberta` e `modo=sinopse` também disponíveis; `q` com até 200 caracteres |
 
 A rota `/busca` foi removida: `GET /pesquisa?q=...&modo=titulo` faz a mesma busca por título. O cliente chama `/discover/movie` para preferências. Configurações opcionais em `backend/.env`: `TMDB_LANGUAGE`, `TMDB_TIMEOUT`, `CORS_ORIGINS` e `RATE_LIMIT_PER_MINUTE` (padrão 60 requisições por minuto por IP; acima disso, HTTP 429). O CORS só libera as origens da interface e não é controle de acesso; por isso a API roda em `127.0.0.1` e tem limite de requisições. A interface lê o endereço da API na meta tag `api-base` de `frontend/index.html`, que também define a política de segurança de conteúdo (CSP).

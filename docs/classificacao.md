@@ -47,6 +47,10 @@ A pasta de saída não pode existir. Com as mesmas entradas, os arquivos de cont
 | Critérios de escolha | Dados rotulados (os do TMDB), custo (tempo e parâmetros), interpretabilidade (termos por gênero só nas lexicais) e incerteza (log loss e confiança em acertos × erros) |
 | LLM e Jev | O Jev foi executado à parte, sem treino, com uma Choice e um Noul por gênero, e comparado a TF-IDF + regressão logística nos mesmos filmes ([ADR 0019](adr/0019-aula8-jev-classificacao-de-genero.md), [resultados](../data/jev/tmdb_2026-09-12/report.md)). LLM com instrução foi discutido e não executado ([ADR 0017](adr/0017-aula8-classificacao-de-generos.md)) |
 
+## Na tela do site
+
+A seção "Classificar uma sinopse" usa `GET /classificacao`: a regressão logística desta etapa, ajustada com as 325 sinopses de um gênero sobre `sentenca_minilm`, a mesma representação da busca por tema ([ADR 0021](adr/0021-classificacao-na-tela.md)). A qualidade esperada é a medida aqui por validação cruzada (F1 macro de 66,1%).
+
 ## Arquivos gerados
 
 | Arquivo | Conteúdo |
