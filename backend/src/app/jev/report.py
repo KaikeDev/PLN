@@ -21,7 +21,7 @@ def make_report(metrics: dict, rows: Sequence[dict], config: JevConfig, names: M
         "",
         f"Filmes avaliados: {metrics['evaluated']} de {metrics['films']} ({metrics['failed']} falhas do Jev, fora de todas as métricas). "
         f"Modelo informado pela API: {', '.join(f'`{model}`' for model in models) or 'não informado'}. "
-        "Os gêneros de referência são os recortes de coleta do TMDB, não um julgamento sobre a sinopse.",
+        "Os gêneros de referência são os `genre_ids` do TMDB restritos aos gêneros avaliados, não um julgamento sobre a sinopse.",
         "",
         "## Resumo",
         "",
@@ -76,7 +76,7 @@ def make_report(metrics: dict, rows: Sequence[dict], config: JevConfig, names: M
         "",
         "Casos de menor confiança:",
         "",
-        "| Filme | Gêneros de coleta | Choice | Confiança | Probabilidades |",
+        "| Filme | Gêneros do TMDB | Choice | Confiança | Probabilidades |",
         "|---|---|---|---:|---|",
     ]
     for case in confidence["lowest"]:
@@ -87,7 +87,7 @@ def make_report(metrics: dict, rows: Sequence[dict], config: JevConfig, names: M
     misses = [row for row in rows if row["jev"] is not None and row["jev"]["choice"] not in row["gold"]]
     lines += ["", "## Erros da Choice do Jev", ""]
     if misses:
-        lines += ["| Filme | Gêneros de coleta | Jev | Confiança | TF-IDF + RL |", "|---|---|---|---:|---|"]
+        lines += ["| Filme | Gêneros do TMDB | Jev | Confiança | TF-IDF + RL |", "|---|---|---|---:|---|"]
         for row in misses:
             lines.append(
                 f"| {_cell(row['title'])} | {_genres(row['gold'], names)} | {names[row['jev']['choice']]} | "
@@ -103,7 +103,7 @@ def make_report(metrics: dict, rows: Sequence[dict], config: JevConfig, names: M
         "## Limitações",
         "",
         "A amostra é pequena porque cada filme é uma chamada paga a uma API externa; as diferenças entre os métodos servem como ilustração, "
-        "não como teste estatístico. O rótulo é o recorte de coleta, e muitos filmes pertencem a gêneros não avaliados (ação, romance, suspense), "
+        "não como teste estatístico. O rótulo são os gêneros do TMDB restritos aos avaliados, e muitos filmes também pertencem a gêneros fora das opções (ação, romance, suspense), "
         "que ficam fora das opções. O Jev é acessado pelo alias mais recente: o modelo registrado acima pode mudar entre execuções, "
         "por isso as respostas brutas ficam em `responses.jsonl` e podem ser reavaliadas sem novas chamadas (`--reuse`). "
         "As perguntas e os critérios fazem parte da tarefa: outra redação pode mudar os resultados. "

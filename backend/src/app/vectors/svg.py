@@ -1,23 +1,25 @@
 """Gráfico de dispersão em SVG sem dependências. Todo texto vindo dos dados é escapado.
 
 A paleta é Okabe–Ito, legível por pessoas com daltonismo. Os rótulos recebem contorno branco para
-continuar legíveis sobre os pontos, e os pontos neutros são desenhados primeiro para que os de gênero
-único fiquem por cima.
+continuar legíveis sobre os pontos, e os pontos neutros são desenhados primeiro para que os coloridos
+fiquem por cima. O mesmo gráfico serve para colorir por gênero ou por cluster: muda só o `label` dos pontos.
 """
 
 from html import escape
 
 PALETTE = ("#0072B2", "#E69F00", "#009E73", "#CC79A7", "#D55E00", "#56B4E9")
 NEUTRAL = "#9A9A9A"
-NEUTRAL_LABEL = "Mais de um gênero de coleta"
+NEUTRAL_LABEL = "Nenhum ou mais de um gênero"
 WIDTH, HEIGHT, MARGIN, LEGEND, HEADER, PADDING, LABEL_GAP = 760, 540, 48, 210, 28, 10, 18
 HALO = 'stroke="#ffffff" stroke-width="3" paint-order="stroke"'
 
 
-def render_projection(heading: str, points: list[dict], variance: list[float], highlight_ids: set[int]) -> str:
-    """SVG com os pontos coloridos por gênero de coleta, legenda e rótulos dos filmes destacados."""
-    genres = sorted({point["genre"] for point in points if point["genre"]})
-    colors = {genre: PALETTE[index % len(PALETTE)] for index, genre in enumerate(genres)}
+def render_projection(
+    heading: str, points: list[dict], variance: list[float], highlight_ids: set[int], neutral_label: str = NEUTRAL_LABEL
+) -> str:
+    """SVG com os pontos coloridos por `label` (None = neutro), legenda e rótulos dos filmes destacados."""
+    labels = sorted({point["label"] for point in points if point["label"]})
+    colors = {label: PALETTE[index % len(PALETTE)] for index, label in enumerate(labels)}
     left, top = MARGIN, MARGIN + HEADER
     width, height = WIDTH - 2 * MARGIN - LEGEND, HEIGHT - top - MARGIN
     xs, ys = [point["x"] for point in points], [point["y"] for point in points]
@@ -40,11 +42,11 @@ def render_projection(heading: str, points: list[dict], variance: list[float], h
         f'<text x="16" y="{top + height / 2:.1f}" text-anchor="middle" fill="#555555" transform="rotate(-90 16 {top + height / 2:.1f})">'
         f"Componente 2 ({variance[1]:.1%} da variância)</text>",
     ]
-    for point in sorted(points, key=lambda item: item["genre"] is not None):
+    for point in sorted(points, key=lambda item: item["label"] is not None):
         x, y = position(point)
-        label = point["genre"] or NEUTRAL_LABEL
+        label = point["label"] or neutral_label
         parts.append(
-            f'<circle cx="{x:.1f}" cy="{y:.1f}" r="3.5" fill="{colors.get(point["genre"], NEUTRAL)}" fill-opacity="0.8">'
+            f'<circle cx="{x:.1f}" cy="{y:.1f}" r="3.5" fill="{colors.get(point["label"], NEUTRAL)}" fill-opacity="0.8">'
             f"<title>{escape(point['title'])} ({point['id']}) — {escape(label)}</title></circle>"
         )
     highlighted = sorted(((point, *position(point)) for point in points if point["id"] in highlight_ids), key=lambda item: item[2])
@@ -56,8 +58,11 @@ def render_projection(heading: str, points: list[dict], variance: list[float], h
             f'<text x="{label_x + (-3 if anchor == "end" else 3):.1f}" y="{label_y:.1f}" text-anchor="{anchor}" font-weight="600" '
             f'fill="#1f1f1f" {HALO}>{escape(point["title"])}</text>'
         )
+    legend = [*colors.items()]
+    if any(point["label"] is None for point in points):
+        legend.append((neutral_label, NEUTRAL))
     legend_x = left + width + 24
-    for index, (label, color) in enumerate([*colors.items(), (NEUTRAL_LABEL, NEUTRAL)]):
+    for index, (label, color) in enumerate(legend):
         y = top + 12 + index * 22
         parts.append(f'<circle cx="{legend_x}" cy="{y}" r="5" fill="{color}"/>')
         parts.append(f'<text x="{legend_x + 12}" y="{y + 4}" fill="#1f1f1f">{escape(label)}</text>')

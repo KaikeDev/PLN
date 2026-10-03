@@ -1,6 +1,6 @@
 # Busca do site
 
-Como o site encontra filmes a partir do que o usuário digita, quais algoritmos do projeto participam e por que foram escolhidos. A decisão formal, com as alternativas descartadas, está no [ADR 0018](adr/0018-busca-hibrida-tfidf-e-sentenca.md).
+Como o site encontra filmes a partir do que o usuário digita, quais algoritmos do projeto participam e por que foram escolhidos. A decisão formal, com as alternativas descartadas, está no [ADR 0020](adr/0020-busca-hibrida-tfidf-e-sentenca.md).
 
 ## Visão geral
 

@@ -6,7 +6,7 @@ interativa em http://127.0.0.1:8000/docs.
 `create_app` monta a composição (Composition Root): configurações, cliente do TMDB, catálogo com
 cache, índice de sinopses, serviço de pesquisa e limite de requisições. Sem `catalog` injetado, a
 inicialização falha quando `TMDB_BEARER_TOKEN` não está configurado. O índice de sinopses carrega os
-modelos da busca por tema (ADR 0018); se não puder ser carregado, por exemplo sem o extra `semantico`,
+modelos da busca por tema (ADR 0020); se não puder ser carregado, por exemplo sem o extra `semantico`,
 a API sobe mesmo assim e o modo `sinopse` responde que está indisponível. O CORS só libera origens de navegador conhecidas; ele
 não é controle de acesso, papel do bind em localhost e do limite de requisições (ADR 0002).
 """

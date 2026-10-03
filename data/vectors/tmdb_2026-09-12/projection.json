@@ -464,7 +464,7 @@
       {
         "id": 628,
         "title": "Entrevista com o Vampiro",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.69368,
         "y": 0.19763
       },
@@ -506,7 +506,7 @@
       {
         "id": 686,
         "title": "Contato",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": 0.62325,
         "y": -0.03964
       },
@@ -534,7 +534,7 @@
       {
         "id": 747,
         "title": "Todo Mundo Quase Morto",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.59863,
         "y": 0.07741
       },
@@ -569,14 +569,14 @@
       {
         "id": 765,
         "title": "Uma Noite Alucinante 2",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.60152,
         "y": -0.07317
       },
       {
         "id": 766,
         "title": "Uma Noite Alucinante 3",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.61957,
         "y": -0.18931
       },
@@ -632,7 +632,7 @@
       {
         "id": 814,
         "title": "Um Lobisomem Americano em Londres",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.45462,
         "y": -0.08057
       },
@@ -688,7 +688,7 @@
       {
         "id": 924,
         "title": "Madrugada dos Mortos",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.62004,
         "y": 0.00459
       },
@@ -765,14 +765,14 @@
       {
         "id": 1547,
         "title": "Os Garotos Perdidos",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.58655,
         "y": -0.12772
       },
       {
         "id": 1562,
         "title": "Extermínio 2",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.5738,
         "y": -0.05201
       },
@@ -821,7 +821,7 @@
       {
         "id": 1923,
         "title": "Twin Peaks: Os Últimos Dias de Laura Palmer",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.48428,
         "y": 0.26013
       },
@@ -877,7 +877,7 @@
       {
         "id": 2300,
         "title": "Space Jam: O Jogo do Século",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": 0.67035,
         "y": 0.25032
       },
@@ -975,7 +975,7 @@
       {
         "id": 4951,
         "title": "10 Coisas Que Eu Odeio em Você",
-        "genre": "Comédia",
+        "genre": null,
         "x": 0.4055,
         "y": -0.21863
       },
@@ -989,7 +989,7 @@
       {
         "id": 5876,
         "title": "O Nevoeiro",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.58513,
         "y": -0.12157
       },
@@ -1010,7 +1010,7 @@
       {
         "id": 6479,
         "title": "Eu Sou a Lenda",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": 0.56364,
         "y": -0.03179
       },
@@ -1038,14 +1038,14 @@
       {
         "id": 8077,
         "title": "Alien³",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.57855,
         "y": -0.09397
       },
       {
         "id": 8078,
         "title": "Alien: A Ressurreição",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.5462,
         "y": -0.05498
       },
@@ -1094,7 +1094,7 @@
       {
         "id": 8656,
         "title": "Impacto Profundo",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": 0.74451,
         "y": -0.02941
       },
@@ -1143,14 +1143,14 @@
       {
         "id": 9100,
         "title": "Jovens Bruxas",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.46678,
         "y": -0.13012
       },
       {
         "id": 9276,
         "title": "Prova Final",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.63966,
         "y": 0.01192
       },
@@ -1164,7 +1164,7 @@
       {
         "id": 9297,
         "title": "A Casa Monstro",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.62869,
         "y": 0.0192
       },
@@ -1206,14 +1206,14 @@
       {
         "id": 9362,
         "title": "O Ataque dos Vermes Malditos",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.58338,
         "y": 0.10272
       },
       {
         "id": 9374,
         "title": "A Morte lhe Cai Bem",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.6212,
         "y": -0.07553
       },
@@ -1325,7 +1325,7 @@
       {
         "id": 10386,
         "title": "O Gigante de Ferro",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": 0.63458,
         "y": 0.02576
       },
@@ -1479,7 +1479,7 @@
       {
         "id": 18491,
         "title": "Neon Genesis Evangelion: O Fim do Evangelho",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": 0.51832,
         "y": -0.09508
       },
@@ -1500,14 +1500,14 @@
       {
         "id": 19908,
         "title": "Zumbilândia",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.5084,
         "y": 0.26399
       },
       {
         "id": 19994,
         "title": "Garota Infernal",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.57056,
         "y": -0.16113
       },
@@ -1549,7 +1549,7 @@
       {
         "id": 22970,
         "title": "O Segredo da Cabana",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.30826,
         "y": -0.08927
       },
@@ -1563,7 +1563,7 @@
       {
         "id": 25237,
         "title": "Vá e Veja",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.555,
         "y": -0.05663
       },
@@ -1598,7 +1598,7 @@
       {
         "id": 36648,
         "title": "Blade Trinity",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.20578,
         "y": -0.04414
       },
@@ -1696,7 +1696,7 @@
       {
         "id": 53064,
         "title": "Midori",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.63672,
         "y": 0.14612
       },
@@ -1724,7 +1724,7 @@
       {
         "id": 61791,
         "title": "Planeta dos Macacos: A Origem",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": 0.63437,
         "y": -0.10052
       },
@@ -1773,7 +1773,7 @@
       {
         "id": 74997,
         "title": "A Centopéia Humana 2",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.5783,
         "y": -0.07561
       },
@@ -1857,7 +1857,7 @@
       {
         "id": 93456,
         "title": "Meu Malvado Favorito 2",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": 0.53365,
         "y": -0.23478
       },
@@ -1906,7 +1906,7 @@
       {
         "id": 120467,
         "title": "O Grande Hotel Budapeste",
-        "genre": "Comédia",
+        "genre": null,
         "x": 0.56458,
         "y": 0.09516
       },
@@ -2067,7 +2067,7 @@
       {
         "id": 263115,
         "title": "Logan",
-        "genre": "Drama",
+        "genre": null,
         "x": 0.60424,
         "y": 0.34591
       },
@@ -2193,7 +2193,7 @@
       {
         "id": 310131,
         "title": "A Bruxa",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.48414,
         "y": -0.11722
       },
@@ -2235,7 +2235,7 @@
       {
         "id": 329865,
         "title": "A Chegada",
-        "genre": "Drama",
+        "genre": null,
         "x": 0.57077,
         "y": -0.03735
       },
@@ -2263,7 +2263,7 @@
       {
         "id": 345940,
         "title": "Megatubarão",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.63654,
         "y": 0.18299
       },
@@ -2424,7 +2424,7 @@
       {
         "id": 460458,
         "title": "Resident Evil: Bem-Vindo a Raccoon City",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.54964,
         "y": -0.08354
       },
@@ -2501,7 +2501,7 @@
       {
         "id": 519182,
         "title": "Meu Malvado Favorito 4",
-        "genre": "Comédia",
+        "genre": null,
         "x": 0.4903,
         "y": -0.29421
       },
@@ -2515,7 +2515,7 @@
       {
         "id": 530385,
         "title": "Midsommar: O Mal Não Espera a Noite",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.77438,
         "y": 0.0403
       },
@@ -2543,7 +2543,7 @@
       {
         "id": 550988,
         "title": "Free Guy: Assumindo o Controle",
-        "genre": "Comédia",
+        "genre": null,
         "x": 0.6939,
         "y": 0.02033
       },
@@ -2564,7 +2564,7 @@
       {
         "id": 567609,
         "title": "Casamento Sangrento",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.7169,
         "y": 0.17369
       },
@@ -2599,7 +2599,7 @@
       {
         "id": 604079,
         "title": "A Longa Marcha: Caminhe ou Morra",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.46484,
         "y": 0.33721
       },
@@ -2613,7 +2613,7 @@
       {
         "id": 615656,
         "title": "Megatubarão 2",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.586,
         "y": 0.39239
       },
@@ -2732,7 +2732,7 @@
       {
         "id": 893723,
         "title": "Patrulha Canina: Um Filme Superpoderoso",
-        "genre": "Comédia",
+        "genre": null,
         "x": 0.39768,
         "y": -0.17251
       },
@@ -2781,7 +2781,7 @@
       {
         "id": 940721,
         "title": "Godzilla Minus One",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.52758,
         "y": -0.23391
       },
@@ -2858,7 +2858,7 @@
       {
         "id": 1064028,
         "title": "Alice: Subservience",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.36119,
         "y": 0.0826
       },
@@ -2872,7 +2872,7 @@
       {
         "id": 1084199,
         "title": "Acompanhante Perfeita",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.50332,
         "y": -0.23374
       },
@@ -2900,7 +2900,7 @@
       {
         "id": 1124620,
         "title": "O Macaco",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.50311,
         "y": -0.21041
       },
@@ -2928,7 +2928,7 @@
       {
         "id": 1205229,
         "title": "Zoopocalipse - Uma Aventura Animal",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.67276,
         "y": 0.12711
       },
@@ -2949,7 +2949,7 @@
       {
         "id": 1234731,
         "title": "Anaconda",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.61547,
         "y": 0.08572
       },
@@ -2984,7 +2984,7 @@
       {
         "id": 1333141,
         "title": "A Sapatona Galáctica",
-        "genre": "Comédia",
+        "genre": null,
         "x": 0.52109,
         "y": -0.20577
       },
@@ -3469,7 +3469,7 @@
       {
         "id": 628,
         "title": "Entrevista com o Vampiro",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.23338,
         "y": -0.11578
       },
@@ -3511,7 +3511,7 @@
       {
         "id": 686,
         "title": "Contato",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": 0.18493,
         "y": 0.0091
       },
@@ -3539,7 +3539,7 @@
       {
         "id": 747,
         "title": "Todo Mundo Quase Morto",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.18538,
         "y": 0.03512
       },
@@ -3574,14 +3574,14 @@
       {
         "id": 765,
         "title": "Uma Noite Alucinante 2",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.11674,
         "y": 0.03196
       },
       {
         "id": 766,
         "title": "Uma Noite Alucinante 3",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.17778,
         "y": -0.16431
       },
@@ -3637,7 +3637,7 @@
       {
         "id": 814,
         "title": "Um Lobisomem Americano em Londres",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.13718,
         "y": -0.00015
       },
@@ -3693,7 +3693,7 @@
       {
         "id": 924,
         "title": "Madrugada dos Mortos",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.23641,
         "y": 0.03159
       },
@@ -3770,14 +3770,14 @@
       {
         "id": 1547,
         "title": "Os Garotos Perdidos",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.23915,
         "y": 0.05631
       },
       {
         "id": 1562,
         "title": "Extermínio 2",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.30264,
         "y": -0.05146
       },
@@ -3826,7 +3826,7 @@
       {
         "id": 1923,
         "title": "Twin Peaks: Os Últimos Dias de Laura Palmer",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.15635,
         "y": -0.15252
       },
@@ -3882,7 +3882,7 @@
       {
         "id": 2300,
         "title": "Space Jam: O Jogo do Século",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": 0.13105,
         "y": -0.00413
       },
@@ -3980,7 +3980,7 @@
       {
         "id": 4951,
         "title": "10 Coisas Que Eu Odeio em Você",
-        "genre": "Comédia",
+        "genre": null,
         "x": 0.07155,
         "y": 0.02519
       },
@@ -3994,7 +3994,7 @@
       {
         "id": 5876,
         "title": "O Nevoeiro",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.22317,
         "y": -0.08211
       },
@@ -4015,7 +4015,7 @@
       {
         "id": 6479,
         "title": "Eu Sou a Lenda",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": 0.10162,
         "y": 0.01959
       },
@@ -4043,14 +4043,14 @@
       {
         "id": 8077,
         "title": "Alien³",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.17551,
         "y": -0.00129
       },
       {
         "id": 8078,
         "title": "Alien: A Ressurreição",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.20637,
         "y": -0.04082
       },
@@ -4099,7 +4099,7 @@
       {
         "id": 8656,
         "title": "Impacto Profundo",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": 0.18647,
         "y": 0.00731
       },
@@ -4148,14 +4148,14 @@
       {
         "id": 9100,
         "title": "Jovens Bruxas",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.06512,
         "y": -0.00783
       },
       {
         "id": 9276,
         "title": "Prova Final",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.27184,
         "y": -0.18233
       },
@@ -4169,7 +4169,7 @@
       {
         "id": 9297,
         "title": "A Casa Monstro",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.18676,
         "y": 0.11224
       },
@@ -4211,14 +4211,14 @@
       {
         "id": 9362,
         "title": "O Ataque dos Vermes Malditos",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.16708,
         "y": 0.01238
       },
       {
         "id": 9374,
         "title": "A Morte lhe Cai Bem",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.18249,
         "y": 0.0028
       },
@@ -4330,7 +4330,7 @@
       {
         "id": 10386,
         "title": "O Gigante de Ferro",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": 0.16604,
         "y": 0.02808
       },
@@ -4484,7 +4484,7 @@
       {
         "id": 18491,
         "title": "Neon Genesis Evangelion: O Fim do Evangelho",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": 0.03194,
         "y": -0.00664
       },
@@ -4505,14 +4505,14 @@
       {
         "id": 19908,
         "title": "Zumbilândia",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.09651,
         "y": 0.14352
       },
       {
         "id": 19994,
         "title": "Garota Infernal",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.17474,
         "y": -0.09527
       },
@@ -4554,7 +4554,7 @@
       {
         "id": 22970,
         "title": "O Segredo da Cabana",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.08898,
         "y": -0.02153
       },
@@ -4568,7 +4568,7 @@
       {
         "id": 25237,
         "title": "Vá e Veja",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.12767,
         "y": -0.02308
       },
@@ -4603,7 +4603,7 @@
       {
         "id": 36648,
         "title": "Blade Trinity",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.12634,
         "y": -0.04853
       },
@@ -4701,7 +4701,7 @@
       {
         "id": 53064,
         "title": "Midori",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.23733,
         "y": -0.15957
       },
@@ -4729,7 +4729,7 @@
       {
         "id": 61791,
         "title": "Planeta dos Macacos: A Origem",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": 0.11843,
         "y": 0.04843
       },
@@ -4778,7 +4778,7 @@
       {
         "id": 74997,
         "title": "A Centopéia Humana 2",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.05885,
         "y": -0.00586
       },
@@ -4862,7 +4862,7 @@
       {
         "id": 93456,
         "title": "Meu Malvado Favorito 2",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": 0.1949,
         "y": -0.09331
       },
@@ -4911,7 +4911,7 @@
       {
         "id": 120467,
         "title": "O Grande Hotel Budapeste",
-        "genre": "Comédia",
+        "genre": null,
         "x": 0.18053,
         "y": 0.14117
       },
@@ -5072,7 +5072,7 @@
       {
         "id": 263115,
         "title": "Logan",
-        "genre": "Drama",
+        "genre": null,
         "x": 0.09711,
         "y": 0.00506
       },
@@ -5198,7 +5198,7 @@
       {
         "id": 310131,
         "title": "A Bruxa",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.18795,
         "y": 0.23073
       },
@@ -5240,7 +5240,7 @@
       {
         "id": 329865,
         "title": "A Chegada",
-        "genre": "Drama",
+        "genre": null,
         "x": 0.088,
         "y": 0.01505
       },
@@ -5268,7 +5268,7 @@
       {
         "id": 345940,
         "title": "Megatubarão",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.11028,
         "y": -0.11734
       },
@@ -5429,7 +5429,7 @@
       {
         "id": 460458,
         "title": "Resident Evil: Bem-Vindo a Raccoon City",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.20042,
         "y": 0.04795
       },
@@ -5506,7 +5506,7 @@
       {
         "id": 519182,
         "title": "Meu Malvado Favorito 4",
-        "genre": "Comédia",
+        "genre": null,
         "x": 0.1839,
         "y": 0.27662
       },
@@ -5520,7 +5520,7 @@
       {
         "id": 530385,
         "title": "Midsommar: O Mal Não Espera a Noite",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.18503,
         "y": -0.03238
       },
@@ -5548,7 +5548,7 @@
       {
         "id": 550988,
         "title": "Free Guy: Assumindo o Controle",
-        "genre": "Comédia",
+        "genre": null,
         "x": 0.18597,
         "y": -0.02462
       },
@@ -5569,7 +5569,7 @@
       {
         "id": 567609,
         "title": "Casamento Sangrento",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.16595,
         "y": 0.21931
       },
@@ -5604,7 +5604,7 @@
       {
         "id": 604079,
         "title": "A Longa Marcha: Caminhe ou Morra",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.0679,
         "y": -0.03857
       },
@@ -5618,7 +5618,7 @@
       {
         "id": 615656,
         "title": "Megatubarão 2",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.06901,
         "y": -0.00106
       },
@@ -5737,7 +5737,7 @@
       {
         "id": 893723,
         "title": "Patrulha Canina: Um Filme Superpoderoso",
-        "genre": "Comédia",
+        "genre": null,
         "x": 0.05154,
         "y": -0.01308
       },
@@ -5786,7 +5786,7 @@
       {
         "id": 940721,
         "title": "Godzilla Minus One",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.1176,
         "y": -0.02018
       },
@@ -5863,7 +5863,7 @@
       {
         "id": 1064028,
         "title": "Alice: Subservience",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.1238,
         "y": 0.21907
       },
@@ -5877,7 +5877,7 @@
       {
         "id": 1084199,
         "title": "Acompanhante Perfeita",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.16725,
         "y": -0.23057
       },
@@ -5905,7 +5905,7 @@
       {
         "id": 1124620,
         "title": "O Macaco",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.20875,
         "y": 0.03049
       },
@@ -5933,7 +5933,7 @@
       {
         "id": 1205229,
         "title": "Zoopocalipse - Uma Aventura Animal",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.15825,
         "y": -0.01919
       },
@@ -5954,7 +5954,7 @@
       {
         "id": 1234731,
         "title": "Anaconda",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.08573,
         "y": -0.01718
       },
@@ -5989,7 +5989,7 @@
       {
         "id": 1333141,
         "title": "A Sapatona Galáctica",
-        "genre": "Comédia",
+        "genre": null,
         "x": 0.11803,
         "y": -0.02597
       },
@@ -6474,7 +6474,7 @@
       {
         "id": 628,
         "title": "Entrevista com o Vampiro",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.28015,
         "y": -0.00768
       },
@@ -6516,7 +6516,7 @@
       {
         "id": 686,
         "title": "Contato",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": 0.26085,
         "y": 0.06072
       },
@@ -6544,7 +6544,7 @@
       {
         "id": 747,
         "title": "Todo Mundo Quase Morto",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.27397,
         "y": 0.14962
       },
@@ -6579,14 +6579,14 @@
       {
         "id": 765,
         "title": "Uma Noite Alucinante 2",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.26749,
         "y": 0.00643
       },
       {
         "id": 766,
         "title": "Uma Noite Alucinante 3",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.30147,
         "y": 0.0511
       },
@@ -6642,7 +6642,7 @@
       {
         "id": 814,
         "title": "Um Lobisomem Americano em Londres",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.18652,
         "y": 0.0738
       },
@@ -6698,7 +6698,7 @@
       {
         "id": 924,
         "title": "Madrugada dos Mortos",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.29218,
         "y": 0.05589
       },
@@ -6775,14 +6775,14 @@
       {
         "id": 1547,
         "title": "Os Garotos Perdidos",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.2655,
         "y": 0.00589
       },
       {
         "id": 1562,
         "title": "Extermínio 2",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.258,
         "y": 0.02202
       },
@@ -6831,7 +6831,7 @@
       {
         "id": 1923,
         "title": "Twin Peaks: Os Últimos Dias de Laura Palmer",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.16711,
         "y": -0.09072
       },
@@ -6887,7 +6887,7 @@
       {
         "id": 2300,
         "title": "Space Jam: O Jogo do Século",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": 0.28923,
         "y": -0.11308
       },
@@ -6985,7 +6985,7 @@
       {
         "id": 4951,
         "title": "10 Coisas Que Eu Odeio em Você",
-        "genre": "Comédia",
+        "genre": null,
         "x": 0.2016,
         "y": 0.20178
       },
@@ -6999,7 +6999,7 @@
       {
         "id": 5876,
         "title": "O Nevoeiro",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.23765,
         "y": 0.0714
       },
@@ -7020,7 +7020,7 @@
       {
         "id": 6479,
         "title": "Eu Sou a Lenda",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": 0.22363,
         "y": -0.00532
       },
@@ -7048,14 +7048,14 @@
       {
         "id": 8077,
         "title": "Alien³",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.23718,
         "y": 0.09835
       },
       {
         "id": 8078,
         "title": "Alien: A Ressurreição",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.23512,
         "y": 0.05076
       },
@@ -7104,7 +7104,7 @@
       {
         "id": 8656,
         "title": "Impacto Profundo",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": 0.3232,
         "y": -0.04163
       },
@@ -7153,14 +7153,14 @@
       {
         "id": 9100,
         "title": "Jovens Bruxas",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.20753,
         "y": 0.01276
       },
       {
         "id": 9276,
         "title": "Prova Final",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.28722,
         "y": -0.07548
       },
@@ -7174,7 +7174,7 @@
       {
         "id": 9297,
         "title": "A Casa Monstro",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.29789,
         "y": -0.02371
       },
@@ -7216,14 +7216,14 @@
       {
         "id": 9362,
         "title": "O Ataque dos Vermes Malditos",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.25096,
         "y": -0.13239
       },
       {
         "id": 9374,
         "title": "A Morte lhe Cai Bem",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.24637,
         "y": 0.05747
       },
@@ -7335,7 +7335,7 @@
       {
         "id": 10386,
         "title": "O Gigante de Ferro",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": 0.24232,
         "y": -0.08668
       },
@@ -7489,7 +7489,7 @@
       {
         "id": 18491,
         "title": "Neon Genesis Evangelion: O Fim do Evangelho",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": 0.14779,
         "y": -0.08903
       },
@@ -7510,14 +7510,14 @@
       {
         "id": 19908,
         "title": "Zumbilândia",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.17708,
         "y": -0.04772
       },
       {
         "id": 19994,
         "title": "Garota Infernal",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.23029,
         "y": 0.05097
       },
@@ -7559,7 +7559,7 @@
       {
         "id": 22970,
         "title": "O Segredo da Cabana",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.13861,
         "y": -0.05888
       },
@@ -7573,7 +7573,7 @@
       {
         "id": 25237,
         "title": "Vá e Veja",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.23094,
         "y": 0.07869
       },
@@ -7608,7 +7608,7 @@
       {
         "id": 36648,
         "title": "Blade Trinity",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.13169,
         "y": 0.05831
       },
@@ -7706,7 +7706,7 @@
       {
         "id": 53064,
         "title": "Midori",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.26906,
         "y": 0.1192
       },
@@ -7734,7 +7734,7 @@
       {
         "id": 61791,
         "title": "Planeta dos Macacos: A Origem",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": 0.25018,
         "y": 0.02125
       },
@@ -7783,7 +7783,7 @@
       {
         "id": 74997,
         "title": "A Centopéia Humana 2",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.20938,
         "y": 0.01144
       },
@@ -7867,7 +7867,7 @@
       {
         "id": 93456,
         "title": "Meu Malvado Favorito 2",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": 0.22346,
         "y": 0.11339
       },
@@ -7916,7 +7916,7 @@
       {
         "id": 120467,
         "title": "O Grande Hotel Budapeste",
-        "genre": "Comédia",
+        "genre": null,
         "x": 0.2297,
         "y": -0.14756
       },
@@ -8077,7 +8077,7 @@
       {
         "id": 263115,
         "title": "Logan",
-        "genre": "Drama",
+        "genre": null,
         "x": 0.23576,
         "y": -0.1203
       },
@@ -8203,7 +8203,7 @@
       {
         "id": 310131,
         "title": "A Bruxa",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.21524,
         "y": 0.022
       },
@@ -8245,7 +8245,7 @@
       {
         "id": 329865,
         "title": "A Chegada",
-        "genre": "Drama",
+        "genre": null,
         "x": 0.23568,
         "y": -0.14136
       },
@@ -8273,7 +8273,7 @@
       {
         "id": 345940,
         "title": "Megatubarão",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.22596,
         "y": -0.02459
       },
@@ -8434,7 +8434,7 @@
       {
         "id": 460458,
         "title": "Resident Evil: Bem-Vindo a Raccoon City",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.27344,
         "y": -0.04374
       },
@@ -8511,7 +8511,7 @@
       {
         "id": 519182,
         "title": "Meu Malvado Favorito 4",
-        "genre": "Comédia",
+        "genre": null,
         "x": 0.21022,
         "y": 0.05469
       },
@@ -8525,7 +8525,7 @@
       {
         "id": 530385,
         "title": "Midsommar: O Mal Não Espera a Noite",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.32694,
         "y": -0.0627
       },
@@ -8553,7 +8553,7 @@
       {
         "id": 550988,
         "title": "Free Guy: Assumindo o Controle",
-        "genre": "Comédia",
+        "genre": null,
         "x": 0.31447,
         "y": 0.19748
       },
@@ -8574,7 +8574,7 @@
       {
         "id": 567609,
         "title": "Casamento Sangrento",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.31332,
         "y": -0.06015
       },
@@ -8609,7 +8609,7 @@
       {
         "id": 604079,
         "title": "A Longa Marcha: Caminhe ou Morra",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.14812,
         "y": -0.11673
       },
@@ -8623,7 +8623,7 @@
       {
         "id": 615656,
         "title": "Megatubarão 2",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.22915,
         "y": -0.17666
       },
@@ -8742,7 +8742,7 @@
       {
         "id": 893723,
         "title": "Patrulha Canina: Um Filme Superpoderoso",
-        "genre": "Comédia",
+        "genre": null,
         "x": 0.15887,
         "y": -0.11659
       },
@@ -8791,7 +8791,7 @@
       {
         "id": 940721,
         "title": "Godzilla Minus One",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.20482,
         "y": -0.03917
       },
@@ -8868,7 +8868,7 @@
       {
         "id": 1064028,
         "title": "Alice: Subservience",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.14985,
         "y": -0.00619
       },
@@ -8882,7 +8882,7 @@
       {
         "id": 1084199,
         "title": "Acompanhante Perfeita",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.20957,
         "y": 0.06576
       },
@@ -8910,7 +8910,7 @@
       {
         "id": 1124620,
         "title": "O Macaco",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.24463,
         "y": 0.01091
       },
@@ -8938,7 +8938,7 @@
       {
         "id": 1205229,
         "title": "Zoopocalipse - Uma Aventura Animal",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.26506,
         "y": -0.0751
       },
@@ -8959,7 +8959,7 @@
       {
         "id": 1234731,
         "title": "Anaconda",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.22293,
         "y": -0.02423
       },
@@ -8994,7 +8994,7 @@
       {
         "id": 1333141,
         "title": "A Sapatona Galáctica",
-        "genre": "Comédia",
+        "genre": null,
         "x": 0.20799,
         "y": 0.07116
       },
@@ -9479,7 +9479,7 @@
       {
         "id": 628,
         "title": "Entrevista com o Vampiro",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.14617,
         "y": -0.06655
       },
@@ -9521,7 +9521,7 @@
       {
         "id": 686,
         "title": "Contato",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": 0.14744,
         "y": -0.06584
       },
@@ -9549,7 +9549,7 @@
       {
         "id": 747,
         "title": "Todo Mundo Quase Morto",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.13711,
         "y": 0.05752
       },
@@ -9584,14 +9584,14 @@
       {
         "id": 765,
         "title": "Uma Noite Alucinante 2",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.11251,
         "y": 0.02877
       },
       {
         "id": 766,
         "title": "Uma Noite Alucinante 3",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.14058,
         "y": 0.04567
       },
@@ -9647,7 +9647,7 @@
       {
         "id": 814,
         "title": "Um Lobisomem Americano em Londres",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.06853,
         "y": 0.04783
       },
@@ -9703,7 +9703,7 @@
       {
         "id": 924,
         "title": "Madrugada dos Mortos",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.16681,
         "y": 0.04496
       },
@@ -9780,14 +9780,14 @@
       {
         "id": 1547,
         "title": "Os Garotos Perdidos",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.16895,
         "y": 0.13365
       },
       {
         "id": 1562,
         "title": "Extermínio 2",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.20714,
         "y": 0.00486
       },
@@ -9836,7 +9836,7 @@
       {
         "id": 1923,
         "title": "Twin Peaks: Os Últimos Dias de Laura Palmer",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.11844,
         "y": 0.01451
       },
@@ -9892,7 +9892,7 @@
       {
         "id": 2300,
         "title": "Space Jam: O Jogo do Século",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": 0.11647,
         "y": -0.02066
       },
@@ -9990,7 +9990,7 @@
       {
         "id": 4951,
         "title": "10 Coisas Que Eu Odeio em Você",
-        "genre": "Comédia",
+        "genre": null,
         "x": 0.06794,
         "y": 0.03265
       },
@@ -10004,7 +10004,7 @@
       {
         "id": 5876,
         "title": "O Nevoeiro",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.16133,
         "y": 0.15846
       },
@@ -10025,7 +10025,7 @@
       {
         "id": 6479,
         "title": "Eu Sou a Lenda",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": 0.09669,
         "y": -0.01627
       },
@@ -10053,14 +10053,14 @@
       {
         "id": 8077,
         "title": "Alien³",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.1035,
         "y": 0.00844
       },
       {
         "id": 8078,
         "title": "Alien: A Ressurreição",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.13719,
         "y": -0.03613
       },
@@ -10109,7 +10109,7 @@
       {
         "id": 8656,
         "title": "Impacto Profundo",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": 0.13367,
         "y": -0.06106
       },
@@ -10158,14 +10158,14 @@
       {
         "id": 9100,
         "title": "Jovens Bruxas",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.06603,
         "y": 0.00917
       },
       {
         "id": 9276,
         "title": "Prova Final",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.19433,
         "y": 0.06835
       },
@@ -10179,7 +10179,7 @@
       {
         "id": 9297,
         "title": "A Casa Monstro",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.16894,
         "y": 0.08473
       },
@@ -10221,14 +10221,14 @@
       {
         "id": 9362,
         "title": "O Ataque dos Vermes Malditos",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.12251,
         "y": 0.03338
       },
       {
         "id": 9374,
         "title": "A Morte lhe Cai Bem",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.11375,
         "y": 0.07115
       },
@@ -10340,7 +10340,7 @@
       {
         "id": 10386,
         "title": "O Gigante de Ferro",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": 0.13816,
         "y": 0.05959
       },
@@ -10494,7 +10494,7 @@
       {
         "id": 18491,
         "title": "Neon Genesis Evangelion: O Fim do Evangelho",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": 0.0318,
         "y": 7e-05
       },
@@ -10515,14 +10515,14 @@
       {
         "id": 19908,
         "title": "Zumbilândia",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.09311,
         "y": 0.00622
       },
       {
         "id": 19994,
         "title": "Garota Infernal",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.11026,
         "y": 0.0008
       },
@@ -10564,7 +10564,7 @@
       {
         "id": 22970,
         "title": "O Segredo da Cabana",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.07563,
         "y": 0.04212
       },
@@ -10578,7 +10578,7 @@
       {
         "id": 25237,
         "title": "Vá e Veja",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.10832,
         "y": 0.02298
       },
@@ -10613,7 +10613,7 @@
       {
         "id": 36648,
         "title": "Blade Trinity",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.11642,
         "y": -0.17338
       },
@@ -10711,7 +10711,7 @@
       {
         "id": 53064,
         "title": "Midori",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.13339,
         "y": -0.00132
       },
@@ -10739,7 +10739,7 @@
       {
         "id": 61791,
         "title": "Planeta dos Macacos: A Origem",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": 0.09599,
         "y": -0.03263
       },
@@ -10788,7 +10788,7 @@
       {
         "id": 74997,
         "title": "A Centopéia Humana 2",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.06088,
         "y": -0.02533
       },
@@ -10872,7 +10872,7 @@
       {
         "id": 93456,
         "title": "Meu Malvado Favorito 2",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": 0.12565,
         "y": 0.01445
       },
@@ -10921,7 +10921,7 @@
       {
         "id": 120467,
         "title": "O Grande Hotel Budapeste",
-        "genre": "Comédia",
+        "genre": null,
         "x": 0.12669,
         "y": 0.06433
       },
@@ -11082,7 +11082,7 @@
       {
         "id": 263115,
         "title": "Logan",
-        "genre": "Drama",
+        "genre": null,
         "x": 0.0692,
         "y": -0.03967
       },
@@ -11208,7 +11208,7 @@
       {
         "id": 310131,
         "title": "A Bruxa",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.1429,
         "y": 0.17261
       },
@@ -11250,7 +11250,7 @@
       {
         "id": 329865,
         "title": "A Chegada",
-        "genre": "Drama",
+        "genre": null,
         "x": 0.07558,
         "y": -0.10139
       },
@@ -11278,7 +11278,7 @@
       {
         "id": 345940,
         "title": "Megatubarão",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.06734,
         "y": 0.01065
       },
@@ -11439,7 +11439,7 @@
       {
         "id": 460458,
         "title": "Resident Evil: Bem-Vindo a Raccoon City",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.16748,
         "y": 0.08781
       },
@@ -11516,7 +11516,7 @@
       {
         "id": 519182,
         "title": "Meu Malvado Favorito 4",
-        "genre": "Comédia",
+        "genre": null,
         "x": 0.14421,
         "y": 0.11714
       },
@@ -11530,7 +11530,7 @@
       {
         "id": 530385,
         "title": "Midsommar: O Mal Não Espera a Noite",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.13573,
         "y": -0.00746
       },
@@ -11558,7 +11558,7 @@
       {
         "id": 550988,
         "title": "Free Guy: Assumindo o Controle",
-        "genre": "Comédia",
+        "genre": null,
         "x": 0.13827,
         "y": -0.09605
       },
@@ -11579,7 +11579,7 @@
       {
         "id": 567609,
         "title": "Casamento Sangrento",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.12686,
         "y": 0.05775
       },
@@ -11614,7 +11614,7 @@
       {
         "id": 604079,
         "title": "A Longa Marcha: Caminhe ou Morra",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.05555,
         "y": -0.00741
       },
@@ -11628,7 +11628,7 @@
       {
         "id": 615656,
         "title": "Megatubarão 2",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.06928,
         "y": -0.12449
       },
@@ -11747,7 +11747,7 @@
       {
         "id": 893723,
         "title": "Patrulha Canina: Um Filme Superpoderoso",
-        "genre": "Comédia",
+        "genre": null,
         "x": 0.05371,
         "y": -0.02397
       },
@@ -11796,7 +11796,7 @@
       {
         "id": 940721,
         "title": "Godzilla Minus One",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.09093,
         "y": -0.03955
       },
@@ -11873,7 +11873,7 @@
       {
         "id": 1064028,
         "title": "Alice: Subservience",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.09798,
         "y": 0.08089
       },
@@ -11887,7 +11887,7 @@
       {
         "id": 1084199,
         "title": "Acompanhante Perfeita",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.11621,
         "y": 0.03351
       },
@@ -11915,7 +11915,7 @@
       {
         "id": 1124620,
         "title": "O Macaco",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.15979,
         "y": 0.10342
       },
@@ -11943,7 +11943,7 @@
       {
         "id": 1205229,
         "title": "Zoopocalipse - Uma Aventura Animal",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.12311,
         "y": -0.01187
       },
@@ -11964,7 +11964,7 @@
       {
         "id": 1234731,
         "title": "Anaconda",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.08873,
         "y": -0.02159
       },
@@ -11999,7 +11999,7 @@
       {
         "id": 1333141,
         "title": "A Sapatona Galáctica",
-        "genre": "Comédia",
+        "genre": null,
         "x": 0.08713,
         "y": -0.05032
       },
@@ -12484,7 +12484,7 @@
       {
         "id": 628,
         "title": "Entrevista com o Vampiro",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.77401,
         "y": 0.187
       },
@@ -12526,7 +12526,7 @@
       {
         "id": 686,
         "title": "Contato",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": 0.77855,
         "y": 0.07078
       },
@@ -12554,7 +12554,7 @@
       {
         "id": 747,
         "title": "Todo Mundo Quase Morto",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.77357,
         "y": 0.27049
       },
@@ -12589,14 +12589,14 @@
       {
         "id": 765,
         "title": "Uma Noite Alucinante 2",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.79542,
         "y": 0.13065
       },
       {
         "id": 766,
         "title": "Uma Noite Alucinante 3",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.76801,
         "y": -0.12958
       },
@@ -12652,7 +12652,7 @@
       {
         "id": 814,
         "title": "Um Lobisomem Americano em Londres",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.71928,
         "y": 0.14847
       },
@@ -12708,7 +12708,7 @@
       {
         "id": 924,
         "title": "Madrugada dos Mortos",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.75135,
         "y": -0.09757
       },
@@ -12785,14 +12785,14 @@
       {
         "id": 1547,
         "title": "Os Garotos Perdidos",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.73924,
         "y": 0.1284
       },
       {
         "id": 1562,
         "title": "Extermínio 2",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.67481,
         "y": -0.17754
       },
@@ -12841,7 +12841,7 @@
       {
         "id": 1923,
         "title": "Twin Peaks: Os Últimos Dias de Laura Palmer",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.6207,
         "y": 0.15988
       },
@@ -12897,7 +12897,7 @@
       {
         "id": 2300,
         "title": "Space Jam: O Jogo do Século",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": 0.78671,
         "y": -0.11064
       },
@@ -12995,7 +12995,7 @@
       {
         "id": 4951,
         "title": "10 Coisas Que Eu Odeio em Você",
-        "genre": "Comédia",
+        "genre": null,
         "x": 0.69415,
         "y": 0.36643
       },
@@ -13009,7 +13009,7 @@
       {
         "id": 5876,
         "title": "O Nevoeiro",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.74044,
         "y": 0.08437
       },
@@ -13030,7 +13030,7 @@
       {
         "id": 6479,
         "title": "Eu Sou a Lenda",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": 0.73109,
         "y": -0.07847
       },
@@ -13058,14 +13058,14 @@
       {
         "id": 8077,
         "title": "Alien³",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.69161,
         "y": -0.07913
       },
       {
         "id": 8078,
         "title": "Alien: A Ressurreição",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.72067,
         "y": -0.0734
       },
@@ -13114,7 +13114,7 @@
       {
         "id": 8656,
         "title": "Impacto Profundo",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": 0.72016,
         "y": -0.18517
       },
@@ -13163,14 +13163,14 @@
       {
         "id": 9100,
         "title": "Jovens Bruxas",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.64588,
         "y": 0.2047
       },
       {
         "id": 9276,
         "title": "Prova Final",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.73106,
         "y": -0.109
       },
@@ -13184,7 +13184,7 @@
       {
         "id": 9297,
         "title": "A Casa Monstro",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.80499,
         "y": 0.08142
       },
@@ -13226,14 +13226,14 @@
       {
         "id": 9362,
         "title": "O Ataque dos Vermes Malditos",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.64786,
         "y": -0.28077
       },
       {
         "id": 9374,
         "title": "A Morte lhe Cai Bem",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.70253,
         "y": 0.34494
       },
@@ -13345,7 +13345,7 @@
       {
         "id": 10386,
         "title": "O Gigante de Ferro",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": 0.77865,
         "y": -0.0703
       },
@@ -13499,7 +13499,7 @@
       {
         "id": 18491,
         "title": "Neon Genesis Evangelion: O Fim do Evangelho",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": 0.57502,
         "y": -0.15998
       },
@@ -13520,14 +13520,14 @@
       {
         "id": 19908,
         "title": "Zumbilândia",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.67876,
         "y": 0.03134
       },
       {
         "id": 19994,
         "title": "Garota Infernal",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.74736,
         "y": 0.15468
       },
@@ -13569,7 +13569,7 @@
       {
         "id": 22970,
         "title": "O Segredo da Cabana",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.54312,
         "y": -0.07438
       },
@@ -13583,7 +13583,7 @@
       {
         "id": 25237,
         "title": "Vá e Veja",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.68993,
         "y": -0.0564
       },
@@ -13618,7 +13618,7 @@
       {
         "id": 36648,
         "title": "Blade Trinity",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.57507,
         "y": -0.07718
       },
@@ -13716,7 +13716,7 @@
       {
         "id": 53064,
         "title": "Midori",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.66662,
         "y": 0.11646
       },
@@ -13744,7 +13744,7 @@
       {
         "id": 61791,
         "title": "Planeta dos Macacos: A Origem",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": 0.77933,
         "y": -0.02797
       },
@@ -13793,7 +13793,7 @@
       {
         "id": 74997,
         "title": "A Centopéia Humana 2",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.76073,
         "y": 0.13288
       },
@@ -13877,7 +13877,7 @@
       {
         "id": 93456,
         "title": "Meu Malvado Favorito 2",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": 0.77467,
         "y": 0.12887
       },
@@ -13926,7 +13926,7 @@
       {
         "id": 120467,
         "title": "O Grande Hotel Budapeste",
-        "genre": "Comédia",
+        "genre": null,
         "x": 0.62797,
         "y": -0.06147
       },
@@ -14087,7 +14087,7 @@
       {
         "id": 263115,
         "title": "Logan",
-        "genre": "Drama",
+        "genre": null,
         "x": 0.75211,
         "y": 0.05928
       },
@@ -14213,7 +14213,7 @@
       {
         "id": 310131,
         "title": "A Bruxa",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.71653,
         "y": 0.03643
       },
@@ -14255,7 +14255,7 @@
       {
         "id": 329865,
         "title": "A Chegada",
-        "genre": "Drama",
+        "genre": null,
         "x": 0.71234,
         "y": -0.1012
       },
@@ -14283,7 +14283,7 @@
       {
         "id": 345940,
         "title": "Megatubarão",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.64893,
         "y": -0.10876
       },
@@ -14444,7 +14444,7 @@
       {
         "id": 460458,
         "title": "Resident Evil: Bem-Vindo a Raccoon City",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.74962,
         "y": -0.13046
       },
@@ -14521,7 +14521,7 @@
       {
         "id": 519182,
         "title": "Meu Malvado Favorito 4",
-        "genre": "Comédia",
+        "genre": null,
         "x": 0.72059,
         "y": 0.2104
       },
@@ -14535,7 +14535,7 @@
       {
         "id": 530385,
         "title": "Midsommar: O Mal Não Espera a Noite",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.77922,
         "y": 0.02641
       },
@@ -14563,7 +14563,7 @@
       {
         "id": 550988,
         "title": "Free Guy: Assumindo o Controle",
-        "genre": "Comédia",
+        "genre": null,
         "x": 0.75367,
         "y": 0.03212
       },
@@ -14584,7 +14584,7 @@
       {
         "id": 567609,
         "title": "Casamento Sangrento",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.7874,
         "y": 0.03831
       },
@@ -14619,7 +14619,7 @@
       {
         "id": 604079,
         "title": "A Longa Marcha: Caminhe ou Morra",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.45927,
         "y": -0.18117
       },
@@ -14633,7 +14633,7 @@
       {
         "id": 615656,
         "title": "Megatubarão 2",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.65531,
         "y": -0.27424
       },
@@ -14752,7 +14752,7 @@
       {
         "id": 893723,
         "title": "Patrulha Canina: Um Filme Superpoderoso",
-        "genre": "Comédia",
+        "genre": null,
         "x": 0.65531,
         "y": -0.17462
       },
@@ -14801,7 +14801,7 @@
       {
         "id": 940721,
         "title": "Godzilla Minus One",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.59649,
         "y": -0.14317
       },
@@ -14878,7 +14878,7 @@
       {
         "id": 1064028,
         "title": "Alice: Subservience",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.67854,
         "y": -0.11018
       },
@@ -14892,7 +14892,7 @@
       {
         "id": 1084199,
         "title": "Acompanhante Perfeita",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.67088,
         "y": 0.1464
       },
@@ -14920,7 +14920,7 @@
       {
         "id": 1124620,
         "title": "O Macaco",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.68875,
         "y": -0.14286
       },
@@ -14948,7 +14948,7 @@
       {
         "id": 1205229,
         "title": "Zoopocalipse - Uma Aventura Animal",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.82391,
         "y": 0.03902
       },
@@ -14969,7 +14969,7 @@
       {
         "id": 1234731,
         "title": "Anaconda",
-        "genre": "Terror",
+        "genre": null,
         "x": 0.77089,
         "y": 0.02214
       },
@@ -15004,7 +15004,7 @@
       {
         "id": 1333141,
         "title": "A Sapatona Galáctica",
-        "genre": "Comédia",
+        "genre": null,
         "x": 0.81188,
         "y": 0.11713
       },
@@ -15489,7 +15489,7 @@
       {
         "id": 628,
         "title": "Entrevista com o Vampiro",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.78881,
         "y": -0.2686
       },
@@ -15531,7 +15531,7 @@
       {
         "id": 686,
         "title": "Contato",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": -0.84098,
         "y": -0.05856
       },
@@ -15559,7 +15559,7 @@
       {
         "id": 747,
         "title": "Todo Mundo Quase Morto",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.80738,
         "y": -0.19562
       },
@@ -15594,14 +15594,14 @@
       {
         "id": 765,
         "title": "Uma Noite Alucinante 2",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.81572,
         "y": -0.14056
       },
       {
         "id": 766,
         "title": "Uma Noite Alucinante 3",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.79576,
         "y": 0.07436
       },
@@ -15657,7 +15657,7 @@
       {
         "id": 814,
         "title": "Um Lobisomem Americano em Londres",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.75813,
         "y": -0.23789
       },
@@ -15713,7 +15713,7 @@
       {
         "id": 924,
         "title": "Madrugada dos Mortos",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.79986,
         "y": 0.13929
       },
@@ -15790,14 +15790,14 @@
       {
         "id": 1547,
         "title": "Os Garotos Perdidos",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.82669,
         "y": -0.12551
       },
       {
         "id": 1562,
         "title": "Extermínio 2",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.75592,
         "y": 0.23686
       },
@@ -15846,7 +15846,7 @@
       {
         "id": 1923,
         "title": "Twin Peaks: Os Últimos Dias de Laura Palmer",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.70844,
         "y": -0.09118
       },
@@ -15902,7 +15902,7 @@
       {
         "id": 2300,
         "title": "Space Jam: O Jogo do Século",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": -0.81084,
         "y": 0.09136
       },
@@ -16000,7 +16000,7 @@
       {
         "id": 4951,
         "title": "10 Coisas Que Eu Odeio em Você",
-        "genre": "Comédia",
+        "genre": null,
         "x": -0.77139,
         "y": -0.40075
       },
@@ -16014,7 +16014,7 @@
       {
         "id": 5876,
         "title": "O Nevoeiro",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.84113,
         "y": 0.02353
       },
@@ -16035,7 +16035,7 @@
       {
         "id": 6479,
         "title": "Eu Sou a Lenda",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": -0.79668,
         "y": 0.08368
       },
@@ -16063,14 +16063,14 @@
       {
         "id": 8077,
         "title": "Alien³",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.76962,
         "y": 0.03311
       },
       {
         "id": 8078,
         "title": "Alien: A Ressurreição",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.82761,
         "y": 0.11621
       },
@@ -16119,7 +16119,7 @@
       {
         "id": 8656,
         "title": "Impacto Profundo",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": -0.74646,
         "y": 0.25686
       },
@@ -16168,14 +16168,14 @@
       {
         "id": 9100,
         "title": "Jovens Bruxas",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.67491,
         "y": -0.27282
       },
       {
         "id": 9276,
         "title": "Prova Final",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.80984,
         "y": 0.25027
       },
@@ -16189,7 +16189,7 @@
       {
         "id": 9297,
         "title": "A Casa Monstro",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.81678,
         "y": -0.04745
       },
@@ -16231,14 +16231,14 @@
       {
         "id": 9362,
         "title": "O Ataque dos Vermes Malditos",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.65032,
         "y": 0.41421
       },
       {
         "id": 9374,
         "title": "A Morte lhe Cai Bem",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.73016,
         "y": -0.40175
       },
@@ -16350,7 +16350,7 @@
       {
         "id": 10386,
         "title": "O Gigante de Ferro",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": -0.83802,
         "y": 0.06202
       },
@@ -16504,7 +16504,7 @@
       {
         "id": 18491,
         "title": "Neon Genesis Evangelion: O Fim do Evangelho",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": -0.54285,
         "y": 0.02026
       },
@@ -16525,14 +16525,14 @@
       {
         "id": 19908,
         "title": "Zumbilândia",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.77078,
         "y": 0.02579
       },
       {
         "id": 19994,
         "title": "Garota Infernal",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.80558,
         "y": -0.17096
       },
@@ -16574,7 +16574,7 @@
       {
         "id": 22970,
         "title": "O Segredo da Cabana",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.64957,
         "y": 0.20962
       },
@@ -16588,7 +16588,7 @@
       {
         "id": 25237,
         "title": "Vá e Veja",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.78472,
         "y": 0.09841
       },
@@ -16623,7 +16623,7 @@
       {
         "id": 36648,
         "title": "Blade Trinity",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.70294,
         "y": -0.01662
       },
@@ -16721,7 +16721,7 @@
       {
         "id": 53064,
         "title": "Midori",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.71324,
         "y": -0.08249
       },
@@ -16749,7 +16749,7 @@
       {
         "id": 61791,
         "title": "Planeta dos Macacos: A Origem",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": -0.80329,
         "y": -0.01688
       },
@@ -16798,7 +16798,7 @@
       {
         "id": 74997,
         "title": "A Centopéia Humana 2",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.79973,
         "y": -0.17743
       },
@@ -16882,7 +16882,7 @@
       {
         "id": 93456,
         "title": "Meu Malvado Favorito 2",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": -0.83637,
         "y": -0.1553
       },
@@ -16931,7 +16931,7 @@
       {
         "id": 120467,
         "title": "O Grande Hotel Budapeste",
-        "genre": "Comédia",
+        "genre": null,
         "x": -0.62119,
         "y": 0.1867
       },
@@ -17092,7 +17092,7 @@
       {
         "id": 263115,
         "title": "Logan",
-        "genre": "Drama",
+        "genre": null,
         "x": -0.7822,
         "y": -0.10719
       },
@@ -17218,7 +17218,7 @@
       {
         "id": 310131,
         "title": "A Bruxa",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.78273,
         "y": 0.11679
       },
@@ -17260,7 +17260,7 @@
       {
         "id": 329865,
         "title": "A Chegada",
-        "genre": "Drama",
+        "genre": null,
         "x": -0.72756,
         "y": 0.14423
       },
@@ -17288,7 +17288,7 @@
       {
         "id": 345940,
         "title": "Megatubarão",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.69252,
         "y": 0.13006
       },
@@ -17449,7 +17449,7 @@
       {
         "id": 460458,
         "title": "Resident Evil: Bem-Vindo a Raccoon City",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.78909,
         "y": 0.18008
       },
@@ -17526,7 +17526,7 @@
       {
         "id": 519182,
         "title": "Meu Malvado Favorito 4",
-        "genre": "Comédia",
+        "genre": null,
         "x": -0.75605,
         "y": -0.32972
       },
@@ -17540,7 +17540,7 @@
       {
         "id": 530385,
         "title": "Midsommar: O Mal Não Espera a Noite",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.79834,
         "y": 0.03002
       },
@@ -17568,7 +17568,7 @@
       {
         "id": 550988,
         "title": "Free Guy: Assumindo o Controle",
-        "genre": "Comédia",
+        "genre": null,
         "x": -0.76684,
         "y": 0.00081
       },
@@ -17589,7 +17589,7 @@
       {
         "id": 567609,
         "title": "Casamento Sangrento",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.83942,
         "y": -0.08011
       },
@@ -17624,7 +17624,7 @@
       {
         "id": 604079,
         "title": "A Longa Marcha: Caminhe ou Morra",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.51993,
         "y": 0.25936
       },
@@ -17638,7 +17638,7 @@
       {
         "id": 615656,
         "title": "Megatubarão 2",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.64284,
         "y": 0.26393
       },
@@ -17757,7 +17757,7 @@
       {
         "id": 893723,
         "title": "Patrulha Canina: Um Filme Superpoderoso",
-        "genre": "Comédia",
+        "genre": null,
         "x": -0.73525,
         "y": 0.08084
       },
@@ -17806,7 +17806,7 @@
       {
         "id": 940721,
         "title": "Godzilla Minus One",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.60831,
         "y": 0.212
       },
@@ -17883,7 +17883,7 @@
       {
         "id": 1064028,
         "title": "Alice: Subservience",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.65115,
         "y": 0.23342
       },
@@ -17897,7 +17897,7 @@
       {
         "id": 1084199,
         "title": "Acompanhante Perfeita",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.78939,
         "y": -0.19623
       },
@@ -17925,7 +17925,7 @@
       {
         "id": 1124620,
         "title": "O Macaco",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.73481,
         "y": 0.27709
       },
@@ -17953,7 +17953,7 @@
       {
         "id": 1205229,
         "title": "Zoopocalipse - Uma Aventura Animal",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.80484,
         "y": -0.08369
       },
@@ -17974,7 +17974,7 @@
       {
         "id": 1234731,
         "title": "Anaconda",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.80429,
         "y": -0.03513
       },
@@ -18009,7 +18009,7 @@
       {
         "id": 1333141,
         "title": "A Sapatona Galáctica",
-        "genre": "Comédia",
+        "genre": null,
         "x": -0.84178,
         "y": -0.11601
       },
@@ -18494,7 +18494,7 @@
       {
         "id": 628,
         "title": "Entrevista com o Vampiro",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.92858,
         "y": 0.07345
       },
@@ -18536,7 +18536,7 @@
       {
         "id": 686,
         "title": "Contato",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": -0.91681,
         "y": 0.01104
       },
@@ -18564,7 +18564,7 @@
       {
         "id": 747,
         "title": "Todo Mundo Quase Morto",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.92677,
         "y": 0.18792
       },
@@ -18599,14 +18599,14 @@
       {
         "id": 765,
         "title": "Uma Noite Alucinante 2",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.94264,
         "y": 0.03121
       },
       {
         "id": 766,
         "title": "Uma Noite Alucinante 3",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.91845,
         "y": -0.0677
       },
@@ -18662,7 +18662,7 @@
       {
         "id": 814,
         "title": "Um Lobisomem Americano em Londres",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.93909,
         "y": 0.05933
       },
@@ -18718,7 +18718,7 @@
       {
         "id": 924,
         "title": "Madrugada dos Mortos",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.93771,
         "y": 0.08858
       },
@@ -18795,14 +18795,14 @@
       {
         "id": 1547,
         "title": "Os Garotos Perdidos",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.94849,
         "y": 0.10834
       },
       {
         "id": 1562,
         "title": "Extermínio 2",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.92703,
         "y": 0.01745
       },
@@ -18851,7 +18851,7 @@
       {
         "id": 1923,
         "title": "Twin Peaks: Os Últimos Dias de Laura Palmer",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.87138,
         "y": 0.0159
       },
@@ -18907,7 +18907,7 @@
       {
         "id": 2300,
         "title": "Space Jam: O Jogo do Século",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": -0.92996,
         "y": -0.10903
       },
@@ -19005,7 +19005,7 @@
       {
         "id": 4951,
         "title": "10 Coisas Que Eu Odeio em Você",
-        "genre": "Comédia",
+        "genre": null,
         "x": -0.92383,
         "y": 0.18064
       },
@@ -19019,7 +19019,7 @@
       {
         "id": 5876,
         "title": "O Nevoeiro",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.93717,
         "y": 0.1205
       },
@@ -19040,7 +19040,7 @@
       {
         "id": 6479,
         "title": "Eu Sou a Lenda",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": -0.9272,
         "y": -0.06937
       },
@@ -19068,14 +19068,14 @@
       {
         "id": 8077,
         "title": "Alien³",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.91786,
         "y": -0.09712
       },
       {
         "id": 8078,
         "title": "Alien: A Ressurreição",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.90931,
         "y": -0.12998
       },
@@ -19124,7 +19124,7 @@
       {
         "id": 8656,
         "title": "Impacto Profundo",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": -0.93082,
         "y": 0.02518
       },
@@ -19173,14 +19173,14 @@
       {
         "id": 9100,
         "title": "Jovens Bruxas",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.91268,
         "y": 0.02301
       },
       {
         "id": 9276,
         "title": "Prova Final",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.93885,
         "y": -0.00416
       },
@@ -19194,7 +19194,7 @@
       {
         "id": 9297,
         "title": "A Casa Monstro",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.9482,
         "y": 0.07356
       },
@@ -19236,14 +19236,14 @@
       {
         "id": 9362,
         "title": "O Ataque dos Vermes Malditos",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.92846,
         "y": 0.03986
       },
       {
         "id": 9374,
         "title": "A Morte lhe Cai Bem",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.91622,
         "y": 0.14175
       },
@@ -19355,7 +19355,7 @@
       {
         "id": 10386,
         "title": "O Gigante de Ferro",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": -0.93777,
         "y": 0.00993
       },
@@ -19509,7 +19509,7 @@
       {
         "id": 18491,
         "title": "Neon Genesis Evangelion: O Fim do Evangelho",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": -0.81354,
         "y": -0.32525
       },
@@ -19530,14 +19530,14 @@
       {
         "id": 19908,
         "title": "Zumbilândia",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.90654,
         "y": -0.06841
       },
       {
         "id": 19994,
         "title": "Garota Infernal",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.93212,
         "y": 0.04058
       },
@@ -19579,7 +19579,7 @@
       {
         "id": 22970,
         "title": "O Segredo da Cabana",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.83842,
         "y": -0.0279
       },
@@ -19593,7 +19593,7 @@
       {
         "id": 25237,
         "title": "Vá e Veja",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.9116,
         "y": 0.08291
       },
@@ -19628,7 +19628,7 @@
       {
         "id": 36648,
         "title": "Blade Trinity",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.85097,
         "y": -0.31783
       },
@@ -19726,7 +19726,7 @@
       {
         "id": 53064,
         "title": "Midori",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.8949,
         "y": 0.18839
       },
@@ -19754,7 +19754,7 @@
       {
         "id": 61791,
         "title": "Planeta dos Macacos: A Origem",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": -0.9447,
         "y": 0.0529
       },
@@ -19803,7 +19803,7 @@
       {
         "id": 74997,
         "title": "A Centopéia Humana 2",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.93592,
         "y": 0.02198
       },
@@ -19887,7 +19887,7 @@
       {
         "id": 93456,
         "title": "Meu Malvado Favorito 2",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": -0.91819,
         "y": -0.11603
       },
@@ -19936,7 +19936,7 @@
       {
         "id": 120467,
         "title": "O Grande Hotel Budapeste",
-        "genre": "Comédia",
+        "genre": null,
         "x": -0.90777,
         "y": 0.13114
       },
@@ -20097,7 +20097,7 @@
       {
         "id": 263115,
         "title": "Logan",
-        "genre": "Drama",
+        "genre": null,
         "x": -0.93503,
         "y": -0.08401
       },
@@ -20223,7 +20223,7 @@
       {
         "id": 310131,
         "title": "A Bruxa",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.92862,
         "y": 0.16849
       },
@@ -20265,7 +20265,7 @@
       {
         "id": 329865,
         "title": "A Chegada",
-        "genre": "Drama",
+        "genre": null,
         "x": -0.92645,
         "y": 0.01712
       },
@@ -20293,7 +20293,7 @@
       {
         "id": 345940,
         "title": "Megatubarão",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.91003,
         "y": -0.07528
       },
@@ -20454,7 +20454,7 @@
       {
         "id": 460458,
         "title": "Resident Evil: Bem-Vindo a Raccoon City",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.92303,
         "y": -0.11368
       },
@@ -20531,7 +20531,7 @@
       {
         "id": 519182,
         "title": "Meu Malvado Favorito 4",
-        "genre": "Comédia",
+        "genre": null,
         "x": -0.92238,
         "y": -0.09306
       },
@@ -20545,7 +20545,7 @@
       {
         "id": 530385,
         "title": "Midsommar: O Mal Não Espera a Noite",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.9437,
         "y": 0.13169
       },
@@ -20573,7 +20573,7 @@
       {
         "id": 550988,
         "title": "Free Guy: Assumindo o Controle",
-        "genre": "Comédia",
+        "genre": null,
         "x": -0.9064,
         "y": 0.04292
       },
@@ -20594,7 +20594,7 @@
       {
         "id": 567609,
         "title": "Casamento Sangrento",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.94068,
         "y": 0.04821
       },
@@ -20629,7 +20629,7 @@
       {
         "id": 604079,
         "title": "A Longa Marcha: Caminhe ou Morra",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.78657,
         "y": 0.04969
       },
@@ -20643,7 +20643,7 @@
       {
         "id": 615656,
         "title": "Megatubarão 2",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.88216,
         "y": -0.08398
       },
@@ -20762,7 +20762,7 @@
       {
         "id": 893723,
         "title": "Patrulha Canina: Um Filme Superpoderoso",
-        "genre": "Comédia",
+        "genre": null,
         "x": -0.89606,
         "y": -0.25809
       },
@@ -20811,7 +20811,7 @@
       {
         "id": 940721,
         "title": "Godzilla Minus One",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.86031,
         "y": -0.02715
       },
@@ -20888,7 +20888,7 @@
       {
         "id": 1064028,
         "title": "Alice: Subservience",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.88843,
         "y": 0.061
       },
@@ -20902,7 +20902,7 @@
       {
         "id": 1084199,
         "title": "Acompanhante Perfeita",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.9141,
         "y": 0.06163
       },
@@ -20930,7 +20930,7 @@
       {
         "id": 1124620,
         "title": "O Macaco",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.92897,
         "y": 0.05706
       },
@@ -20958,7 +20958,7 @@
       {
         "id": 1205229,
         "title": "Zoopocalipse - Uma Aventura Animal",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.91939,
         "y": -0.08357
       },
@@ -20979,7 +20979,7 @@
       {
         "id": 1234731,
         "title": "Anaconda",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.91663,
         "y": 0.01854
       },
@@ -21014,7 +21014,7 @@
       {
         "id": 1333141,
         "title": "A Sapatona Galáctica",
-        "genre": "Comédia",
+        "genre": null,
         "x": -0.90674,
         "y": -0.08671
       },
@@ -21499,7 +21499,7 @@
       {
         "id": 628,
         "title": "Entrevista com o Vampiro",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.55397,
         "y": -0.11367
       },
@@ -21541,7 +21541,7 @@
       {
         "id": 686,
         "title": "Contato",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": -0.60902,
         "y": -0.17014
       },
@@ -21569,7 +21569,7 @@
       {
         "id": 747,
         "title": "Todo Mundo Quase Morto",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.35883,
         "y": -0.45711
       },
@@ -21604,14 +21604,14 @@
       {
         "id": 765,
         "title": "Uma Noite Alucinante 2",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.53904,
         "y": -0.34439
       },
       {
         "id": 766,
         "title": "Uma Noite Alucinante 3",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.52864,
         "y": 0.11951
       },
@@ -21667,7 +21667,7 @@
       {
         "id": 814,
         "title": "Um Lobisomem Americano em Londres",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.55421,
         "y": -0.00716
       },
@@ -21723,7 +21723,7 @@
       {
         "id": 924,
         "title": "Madrugada dos Mortos",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.59894,
         "y": -0.1475
       },
@@ -21800,14 +21800,14 @@
       {
         "id": 1547,
         "title": "Os Garotos Perdidos",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.55425,
         "y": -0.1747
       },
       {
         "id": 1562,
         "title": "Extermínio 2",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.54209,
         "y": 0.17944
       },
@@ -21856,7 +21856,7 @@
       {
         "id": 1923,
         "title": "Twin Peaks: Os Últimos Dias de Laura Palmer",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.49583,
         "y": -0.14967
       },
@@ -21912,7 +21912,7 @@
       {
         "id": 2300,
         "title": "Space Jam: O Jogo do Século",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": -0.61537,
         "y": 0.08638
       },
@@ -22010,7 +22010,7 @@
       {
         "id": 4951,
         "title": "10 Coisas Que Eu Odeio em Você",
-        "genre": "Comédia",
+        "genre": null,
         "x": -0.43236,
         "y": -0.50356
       },
@@ -22024,7 +22024,7 @@
       {
         "id": 5876,
         "title": "O Nevoeiro",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.57854,
         "y": -0.11227
       },
@@ -22045,7 +22045,7 @@
       {
         "id": 6479,
         "title": "Eu Sou a Lenda",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": -0.52972,
         "y": 0.11777
       },
@@ -22073,14 +22073,14 @@
       {
         "id": 8077,
         "title": "Alien³",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.50217,
         "y": 0.20947
       },
       {
         "id": 8078,
         "title": "Alien: A Ressurreição",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.49992,
         "y": -0.00277
       },
@@ -22129,7 +22129,7 @@
       {
         "id": 8656,
         "title": "Impacto Profundo",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": -0.50397,
         "y": 0.13046
       },
@@ -22178,14 +22178,14 @@
       {
         "id": 9100,
         "title": "Jovens Bruxas",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.48329,
         "y": -0.29912
       },
       {
         "id": 9276,
         "title": "Prova Final",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.60266,
         "y": -0.12525
       },
@@ -22199,7 +22199,7 @@
       {
         "id": 9297,
         "title": "A Casa Monstro",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.51135,
         "y": -0.20507
       },
@@ -22241,14 +22241,14 @@
       {
         "id": 9362,
         "title": "O Ataque dos Vermes Malditos",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.46031,
         "y": 0.14318
       },
       {
         "id": 9374,
         "title": "A Morte lhe Cai Bem",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.43449,
         "y": -0.34092
       },
@@ -22360,7 +22360,7 @@
       {
         "id": 10386,
         "title": "O Gigante de Ferro",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": -0.5759,
         "y": 0.21339
       },
@@ -22514,7 +22514,7 @@
       {
         "id": 18491,
         "title": "Neon Genesis Evangelion: O Fim do Evangelho",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": -0.39821,
         "y": 0.03653
       },
@@ -22535,14 +22535,14 @@
       {
         "id": 19908,
         "title": "Zumbilândia",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.44051,
         "y": -0.13105
       },
       {
         "id": 19994,
         "title": "Garota Infernal",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.51732,
         "y": -0.30666
       },
@@ -22584,7 +22584,7 @@
       {
         "id": 22970,
         "title": "O Segredo da Cabana",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.31213,
         "y": -0.16786
       },
@@ -22598,7 +22598,7 @@
       {
         "id": 25237,
         "title": "Vá e Veja",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.52786,
         "y": 0.05226
       },
@@ -22633,7 +22633,7 @@
       {
         "id": 36648,
         "title": "Blade Trinity",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.54813,
         "y": 0.2906
       },
@@ -22731,7 +22731,7 @@
       {
         "id": 53064,
         "title": "Midori",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.38512,
         "y": -0.26905
       },
@@ -22759,7 +22759,7 @@
       {
         "id": 61791,
         "title": "Planeta dos Macacos: A Origem",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": -0.53503,
         "y": 0.18935
       },
@@ -22808,7 +22808,7 @@
       {
         "id": 74997,
         "title": "A Centopéia Humana 2",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.58638,
         "y": -0.09259
       },
@@ -22892,7 +22892,7 @@
       {
         "id": 93456,
         "title": "Meu Malvado Favorito 2",
-        "genre": "Ficção científica",
+        "genre": null,
         "x": -0.67424,
         "y": -0.00337
       },
@@ -22941,7 +22941,7 @@
       {
         "id": 120467,
         "title": "O Grande Hotel Budapeste",
-        "genre": "Comédia",
+        "genre": null,
         "x": -0.433,
         "y": -0.04181
       },
@@ -23102,7 +23102,7 @@
       {
         "id": 263115,
         "title": "Logan",
-        "genre": "Drama",
+        "genre": null,
         "x": -0.62969,
         "y": -0.03459
       },
@@ -23228,7 +23228,7 @@
       {
         "id": 310131,
         "title": "A Bruxa",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.47188,
         "y": -0.36151
       },
@@ -23270,7 +23270,7 @@
       {
         "id": 329865,
         "title": "A Chegada",
-        "genre": "Drama",
+        "genre": null,
         "x": -0.56968,
         "y": 0.07601
       },
@@ -23298,7 +23298,7 @@
       {
         "id": 345940,
         "title": "Megatubarão",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.39709,
         "y": 0.33519
       },
@@ -23459,7 +23459,7 @@
       {
         "id": 460458,
         "title": "Resident Evil: Bem-Vindo a Raccoon City",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.46822,
         "y": 0.14976
       },
@@ -23536,7 +23536,7 @@
       {
         "id": 519182,
         "title": "Meu Malvado Favorito 4",
-        "genre": "Comédia",
+        "genre": null,
         "x": -0.57016,
         "y": -0.07507
       },
@@ -23550,7 +23550,7 @@
       {
         "id": 530385,
         "title": "Midsommar: O Mal Não Espera a Noite",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.42247,
         "y": -0.43126
       },
@@ -23578,7 +23578,7 @@
       {
         "id": 550988,
         "title": "Free Guy: Assumindo o Controle",
-        "genre": "Comédia",
+        "genre": null,
         "x": -0.56648,
         "y": 0.07989
       },
@@ -23599,7 +23599,7 @@
       {
         "id": 567609,
         "title": "Casamento Sangrento",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.58784,
         "y": -0.20192
       },
@@ -23634,7 +23634,7 @@
       {
         "id": 604079,
         "title": "A Longa Marcha: Caminhe ou Morra",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.17651,
         "y": 0.03746
       },
@@ -23648,7 +23648,7 @@
       {
         "id": 615656,
         "title": "Megatubarão 2",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.48672,
         "y": 0.29983
       },
@@ -23767,7 +23767,7 @@
       {
         "id": 893723,
         "title": "Patrulha Canina: Um Filme Superpoderoso",
-        "genre": "Comédia",
+        "genre": null,
         "x": -0.55549,
         "y": 0.24796
       },
@@ -23816,7 +23816,7 @@
       {
         "id": 940721,
         "title": "Godzilla Minus One",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.41302,
         "y": 0.29124
       },
@@ -23893,7 +23893,7 @@
       {
         "id": 1064028,
         "title": "Alice: Subservience",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.51326,
         "y": 0.07139
       },
@@ -23907,7 +23907,7 @@
       {
         "id": 1084199,
         "title": "Acompanhante Perfeita",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.38986,
         "y": -0.3206
       },
@@ -23935,7 +23935,7 @@
       {
         "id": 1124620,
         "title": "O Macaco",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.60279,
         "y": -0.02391
       },
@@ -23963,7 +23963,7 @@
       {
         "id": 1205229,
         "title": "Zoopocalipse - Uma Aventura Animal",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.56031,
         "y": 0.2012
       },
@@ -23984,7 +23984,7 @@
       {
         "id": 1234731,
         "title": "Anaconda",
-        "genre": "Terror",
+        "genre": null,
         "x": -0.65314,
         "y": -0.05163
       },
@@ -24019,7 +24019,7 @@
       {
         "id": 1333141,
         "title": "A Sapatona Galáctica",
-        "genre": "Comédia",
+        "genre": null,
         "x": -0.60678,
         "y": -0.23447
       },

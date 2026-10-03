@@ -1,0 +1,1170 @@
+{
+  "bow_sem_pontuacao": [
+    {
+      "id": 149,
+      "title": "Akira",
+      "dobra": 0,
+      "real": [
+        "Ficção científica"
+      ],
+      "previsto": [
+        "Comédia"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.034,
+        "Comédia": 0.8801,
+        "Terror": 0.0588,
+        "Ficção científica": 0.0272
+      }
+    },
+    {
+      "id": 115,
+      "title": "O Grande Lebowski",
+      "dobra": 2,
+      "real": [
+        "Comédia"
+      ],
+      "previsto": [
+        "Drama"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.7316,
+        "Comédia": 0.1121,
+        "Terror": 0.0158,
+        "Ficção científica": 0.1405
+      }
+    },
+    {
+      "id": 194,
+      "title": "O Fabuloso Destino de Amélie Poulain",
+      "dobra": 2,
+      "real": [
+        "Comédia"
+      ],
+      "previsto": [
+        "Terror"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.0484,
+        "Comédia": 0.0706,
+        "Terror": 0.7285,
+        "Ficção científica": 0.1525
+      }
+    },
+    {
+      "id": 940551,
+      "title": "Patos!",
+      "dobra": 0,
+      "real": [
+        "Comédia"
+      ],
+      "previsto": [
+        "Terror"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.0755,
+        "Comédia": 0.0826,
+        "Terror": 0.6957,
+        "Ficção científica": 0.1463
+      }
+    },
+    {
+      "id": 36586,
+      "title": "Blade II: O Caçador de Vampiros",
+      "dobra": 2,
+      "real": [
+        "Terror"
+      ],
+      "previsto": [
+        "Ficção científica"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.0678,
+        "Comédia": 0.2328,
+        "Terror": 0.0539,
+        "Ficção científica": 0.6455
+      }
+    },
+    {
+      "id": 694,
+      "title": "O Iluminado",
+      "dobra": 2,
+      "real": [
+        "Terror"
+      ],
+      "previsto": [
+        "Drama"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.6441,
+        "Comédia": 0.0768,
+        "Terror": 0.1005,
+        "Ficção científica": 0.1786
+      }
+    },
+    {
+      "id": 588,
+      "title": "Terror em Silent Hill",
+      "dobra": 4,
+      "real": [
+        "Terror"
+      ],
+      "previsto": [
+        "Drama"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.6402,
+        "Comédia": 0.0771,
+        "Terror": 0.2476,
+        "Ficção científica": 0.0351
+      }
+    },
+    {
+      "id": 752,
+      "title": "V de Vingança",
+      "dobra": 0,
+      "real": [
+        "Ficção científica"
+      ],
+      "previsto": [
+        "Drama"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.6374,
+        "Comédia": 0.0523,
+        "Terror": 0.1502,
+        "Ficção científica": 0.1601
+      }
+    }
+  ],
+  "bow_sem_stopwords": [
+    {
+      "id": 270303,
+      "title": "Corrente do Mal",
+      "dobra": 1,
+      "real": [
+        "Terror"
+      ],
+      "previsto": [
+        "Drama"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.9532,
+        "Comédia": 0.0162,
+        "Terror": 0.0093,
+        "Ficção científica": 0.0213
+      }
+    },
+    {
+      "id": 207703,
+      "title": "Kingsman: Serviço Secreto",
+      "dobra": 4,
+      "real": [
+        "Comédia"
+      ],
+      "previsto": [
+        "Drama"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.9094,
+        "Comédia": 0.0175,
+        "Terror": 0.0171,
+        "Ficção científica": 0.056
+      }
+    },
+    {
+      "id": 149,
+      "title": "Akira",
+      "dobra": 0,
+      "real": [
+        "Ficção científica"
+      ],
+      "previsto": [
+        "Comédia"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.0621,
+        "Comédia": 0.8931,
+        "Terror": 0.0222,
+        "Ficção científica": 0.0226
+      }
+    },
+    {
+      "id": 616037,
+      "title": "Thor: Amor e Trovão",
+      "dobra": 3,
+      "real": [
+        "Comédia"
+      ],
+      "previsto": [
+        "Ficção científica"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.0663,
+        "Comédia": 0.0972,
+        "Terror": 0.0394,
+        "Ficção científica": 0.7971
+      }
+    },
+    {
+      "id": 9532,
+      "title": "Premonição",
+      "dobra": 4,
+      "real": [
+        "Terror"
+      ],
+      "previsto": [
+        "Comédia"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.0084,
+        "Comédia": 0.7966,
+        "Terror": 0.1424,
+        "Ficção científica": 0.0525
+      }
+    },
+    {
+      "id": 275,
+      "title": "Fargo: Uma Comédia de Erros",
+      "dobra": 1,
+      "real": [
+        "Drama"
+      ],
+      "previsto": [
+        "Comédia"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.0669,
+        "Comédia": 0.7948,
+        "Terror": 0.0839,
+        "Ficção científica": 0.0544
+      }
+    },
+    {
+      "id": 114,
+      "title": "Uma Linda Mulher",
+      "dobra": 2,
+      "real": [
+        "Comédia"
+      ],
+      "previsto": [
+        "Drama"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.724,
+        "Comédia": 0.073,
+        "Terror": 0.0703,
+        "Ficção científica": 0.1328
+      }
+    },
+    {
+      "id": 634649,
+      "title": "Homem-Aranha: Sem Volta Para Casa",
+      "dobra": 4,
+      "real": [
+        "Ficção científica"
+      ],
+      "previsto": [
+        "Drama"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.7018,
+        "Comédia": 0.0808,
+        "Terror": 0.0227,
+        "Ficção científica": 0.1947
+      }
+    }
+  ],
+  "tfidf_sem_pontuacao": [
+    {
+      "id": 73861,
+      "title": "A Serbian Film - Terror sem Limites",
+      "dobra": 3,
+      "real": [
+        "Terror"
+      ],
+      "previsto": [
+        "Drama"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.9132,
+        "Comédia": 0.051,
+        "Terror": 0.0104,
+        "Ficção científica": 0.0255
+      }
+    },
+    {
+      "id": 299710,
+      "title": "Aos 14",
+      "dobra": 3,
+      "real": [
+        "Drama"
+      ],
+      "previsto": [
+        "Comédia"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.0305,
+        "Comédia": 0.896,
+        "Terror": 0.0438,
+        "Ficção científica": 0.0297
+      }
+    },
+    {
+      "id": 45612,
+      "title": "Contra o Tempo",
+      "dobra": 2,
+      "real": [
+        "Ficção científica"
+      ],
+      "previsto": [
+        "Drama"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.8944,
+        "Comédia": 0.01,
+        "Terror": 0.0463,
+        "Ficção científica": 0.0493
+      }
+    },
+    {
+      "id": 169,
+      "title": "O Predador 2: A Caçada Continua",
+      "dobra": 2,
+      "real": [
+        "Ficção científica"
+      ],
+      "previsto": [
+        "Drama"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.8903,
+        "Comédia": 0.0555,
+        "Terror": 0.0123,
+        "Ficção científica": 0.0419
+      }
+    },
+    {
+      "id": 207703,
+      "title": "Kingsman: Serviço Secreto",
+      "dobra": 4,
+      "real": [
+        "Comédia"
+      ],
+      "previsto": [
+        "Drama"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.8883,
+        "Comédia": 0.0177,
+        "Terror": 0.0333,
+        "Ficção científica": 0.0606
+      }
+    },
+    {
+      "id": 149,
+      "title": "Akira",
+      "dobra": 0,
+      "real": [
+        "Ficção científica"
+      ],
+      "previsto": [
+        "Comédia"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.0743,
+        "Comédia": 0.887,
+        "Terror": 0.0178,
+        "Ficção científica": 0.0209
+      }
+    },
+    {
+      "id": 629,
+      "title": "Os Suspeitos",
+      "dobra": 3,
+      "real": [
+        "Drama"
+      ],
+      "previsto": [
+        "Terror"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.0241,
+        "Comédia": 0.0066,
+        "Terror": 0.8726,
+        "Ficção científica": 0.0967
+      }
+    },
+    {
+      "id": 803796,
+      "title": "Guerreiras do K-Pop",
+      "dobra": 2,
+      "real": [
+        "Comédia"
+      ],
+      "previsto": [
+        "Ficção científica"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.0415,
+        "Comédia": 0.0824,
+        "Terror": 0.005,
+        "Ficção científica": 0.8711
+      }
+    }
+  ],
+  "tfidf_sem_stopwords": [
+    {
+      "id": 114,
+      "title": "Uma Linda Mulher",
+      "dobra": 2,
+      "real": [
+        "Comédia"
+      ],
+      "previsto": [
+        "Drama"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.9345,
+        "Comédia": 0.014,
+        "Terror": 0.0231,
+        "Ficção científica": 0.0284
+      }
+    },
+    {
+      "id": 207703,
+      "title": "Kingsman: Serviço Secreto",
+      "dobra": 4,
+      "real": [
+        "Comédia"
+      ],
+      "previsto": [
+        "Drama"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.8796,
+        "Comédia": 0.0188,
+        "Terror": 0.0191,
+        "Ficção científica": 0.0826
+      }
+    },
+    {
+      "id": 616037,
+      "title": "Thor: Amor e Trovão",
+      "dobra": 3,
+      "real": [
+        "Comédia"
+      ],
+      "previsto": [
+        "Ficção científica"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.0435,
+        "Comédia": 0.0646,
+        "Terror": 0.0178,
+        "Ficção científica": 0.8741
+      }
+    },
+    {
+      "id": 746036,
+      "title": "O Dublê",
+      "dobra": 2,
+      "real": [
+        "Comédia"
+      ],
+      "previsto": [
+        "Terror"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.064,
+        "Comédia": 0.0487,
+        "Terror": 0.8637,
+        "Ficção científica": 0.0236
+      }
+    },
+    {
+      "id": 275,
+      "title": "Fargo: Uma Comédia de Erros",
+      "dobra": 1,
+      "real": [
+        "Drama"
+      ],
+      "previsto": [
+        "Comédia"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.0665,
+        "Comédia": 0.852,
+        "Terror": 0.0515,
+        "Ficção científica": 0.0301
+      }
+    },
+    {
+      "id": 270303,
+      "title": "Corrente do Mal",
+      "dobra": 1,
+      "real": [
+        "Terror"
+      ],
+      "previsto": [
+        "Drama"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.8464,
+        "Comédia": 0.0603,
+        "Terror": 0.0447,
+        "Ficção científica": 0.0486
+      }
+    },
+    {
+      "id": 803796,
+      "title": "Guerreiras do K-Pop",
+      "dobra": 2,
+      "real": [
+        "Comédia"
+      ],
+      "previsto": [
+        "Ficção científica"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.0621,
+        "Comédia": 0.0861,
+        "Terror": 0.0132,
+        "Ficção científica": 0.8386
+      }
+    },
+    {
+      "id": 149,
+      "title": "Akira",
+      "dobra": 0,
+      "real": [
+        "Ficção científica"
+      ],
+      "previsto": [
+        "Comédia"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.1271,
+        "Comédia": 0.8185,
+        "Terror": 0.0198,
+        "Ficção científica": 0.0346
+      }
+    }
+  ],
+  "word2vec_cbow": [
+    {
+      "id": 629,
+      "title": "Os Suspeitos",
+      "dobra": 3,
+      "real": [
+        "Drama"
+      ],
+      "previsto": [
+        "Terror"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.0819,
+        "Comédia": 0.012,
+        "Terror": 0.8804,
+        "Ficção científica": 0.0257
+      }
+    },
+    {
+      "id": 198663,
+      "title": "Maze Runner: Correr ou Morrer",
+      "dobra": 2,
+      "real": [
+        "Ficção científica"
+      ],
+      "previsto": [
+        "Terror"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.0369,
+        "Comédia": 0.0688,
+        "Terror": 0.8147,
+        "Ficção científica": 0.0796
+      }
+    },
+    {
+      "id": 36647,
+      "title": "Blade: O Caçador de Vampiros",
+      "dobra": 4,
+      "real": [
+        "Terror"
+      ],
+      "previsto": [
+        "Ficção científica"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.0315,
+        "Comédia": 0.0684,
+        "Terror": 0.0903,
+        "Ficção científica": 0.8099
+      }
+    },
+    {
+      "id": 752,
+      "title": "V de Vingança",
+      "dobra": 0,
+      "real": [
+        "Ficção científica"
+      ],
+      "previsto": [
+        "Drama"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.7765,
+        "Comédia": 0.046,
+        "Terror": 0.0396,
+        "Ficção científica": 0.1379
+      }
+    },
+    {
+      "id": 9336,
+      "title": "Loucademia de Polícia",
+      "dobra": 2,
+      "real": [
+        "Comédia"
+      ],
+      "previsto": [
+        "Drama"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.7455,
+        "Comédia": 0.1502,
+        "Terror": 0.0328,
+        "Ficção científica": 0.0715
+      }
+    },
+    {
+      "id": 372058,
+      "title": "Your Name.",
+      "dobra": 4,
+      "real": [
+        "Drama"
+      ],
+      "previsto": [
+        "Comédia"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.1153,
+        "Comédia": 0.7386,
+        "Terror": 0.1241,
+        "Ficção científica": 0.022
+      }
+    },
+    {
+      "id": 746036,
+      "title": "O Dublê",
+      "dobra": 2,
+      "real": [
+        "Comédia"
+      ],
+      "previsto": [
+        "Terror"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.0496,
+        "Comédia": 0.2056,
+        "Terror": 0.7206,
+        "Ficção científica": 0.0242
+      }
+    },
+    {
+      "id": 299710,
+      "title": "Aos 14",
+      "dobra": 3,
+      "real": [
+        "Drama"
+      ],
+      "previsto": [
+        "Comédia"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.1387,
+        "Comédia": 0.7126,
+        "Terror": 0.1379,
+        "Ficção científica": 0.0109
+      }
+    }
+  ],
+  "word2vec_skipgram": [
+    {
+      "id": 629,
+      "title": "Os Suspeitos",
+      "dobra": 3,
+      "real": [
+        "Drama"
+      ],
+      "previsto": [
+        "Terror"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.0931,
+        "Comédia": 0.0154,
+        "Terror": 0.8767,
+        "Ficção científica": 0.0147
+      }
+    },
+    {
+      "id": 38365,
+      "title": "Gente Grande",
+      "dobra": 1,
+      "real": [
+        "Comédia"
+      ],
+      "previsto": [
+        "Drama"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.8732,
+        "Comédia": 0.0839,
+        "Terror": 0.036,
+        "Ficção científica": 0.0069
+      }
+    },
+    {
+      "id": 752,
+      "title": "V de Vingança",
+      "dobra": 0,
+      "real": [
+        "Ficção científica"
+      ],
+      "previsto": [
+        "Drama"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.8027,
+        "Comédia": 0.0207,
+        "Terror": 0.0155,
+        "Ficção científica": 0.1611
+      }
+    },
+    {
+      "id": 384018,
+      "title": "Velozes & Furiosos: Hobbs & Shaw",
+      "dobra": 2,
+      "real": [
+        "Comédia"
+      ],
+      "previsto": [
+        "Ficção científica"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.0555,
+        "Comédia": 0.1263,
+        "Terror": 0.0366,
+        "Ficção científica": 0.7816
+      }
+    },
+    {
+      "id": 372058,
+      "title": "Your Name.",
+      "dobra": 4,
+      "real": [
+        "Drama"
+      ],
+      "previsto": [
+        "Comédia"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.1301,
+        "Comédia": 0.7767,
+        "Terror": 0.0699,
+        "Ficção científica": 0.0234
+      }
+    },
+    {
+      "id": 36586,
+      "title": "Blade II: O Caçador de Vampiros",
+      "dobra": 2,
+      "real": [
+        "Terror"
+      ],
+      "previsto": [
+        "Ficção científica"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.0187,
+        "Comédia": 0.0381,
+        "Terror": 0.1716,
+        "Ficção científica": 0.7716
+      }
+    },
+    {
+      "id": 275,
+      "title": "Fargo: Uma Comédia de Erros",
+      "dobra": 1,
+      "real": [
+        "Drama"
+      ],
+      "previsto": [
+        "Comédia"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.1234,
+        "Comédia": 0.7467,
+        "Terror": 0.0706,
+        "Ficção científica": 0.0594
+      }
+    },
+    {
+      "id": 1184918,
+      "title": "Robô Selvagem",
+      "dobra": 2,
+      "real": [
+        "Ficção científica"
+      ],
+      "previsto": [
+        "Comédia"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.0806,
+        "Comédia": 0.6945,
+        "Terror": 0.0443,
+        "Ficção científica": 0.1806
+      }
+    }
+  ],
+  "bert_base_pt": [
+    {
+      "id": 205596,
+      "title": "O Jogo da Imitação",
+      "dobra": 3,
+      "real": [
+        "Drama"
+      ],
+      "previsto": [
+        "Ficção científica"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.0273,
+        "Comédia": 0.0208,
+        "Terror": 0.0405,
+        "Ficção científica": 0.9113
+      }
+    },
+    {
+      "id": 522627,
+      "title": "Magnatas do Crime",
+      "dobra": 3,
+      "real": [
+        "Comédia"
+      ],
+      "previsto": [
+        "Drama"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.8964,
+        "Comédia": 0.0932,
+        "Terror": 0.0037,
+        "Ficção científica": 0.0067
+      }
+    },
+    {
+      "id": 616037,
+      "title": "Thor: Amor e Trovão",
+      "dobra": 3,
+      "real": [
+        "Comédia"
+      ],
+      "previsto": [
+        "Ficção científica"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.0131,
+        "Comédia": 0.064,
+        "Terror": 0.047,
+        "Ficção científica": 0.8759
+      }
+    },
+    {
+      "id": 752,
+      "title": "V de Vingança",
+      "dobra": 0,
+      "real": [
+        "Ficção científica"
+      ],
+      "previsto": [
+        "Drama"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.8734,
+        "Comédia": 0.025,
+        "Terror": 0.0053,
+        "Ficção científica": 0.0962
+      }
+    },
+    {
+      "id": 2109,
+      "title": "A Hora do Rush",
+      "dobra": 1,
+      "real": [
+        "Comédia"
+      ],
+      "previsto": [
+        "Drama"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.8731,
+        "Comédia": 0.0798,
+        "Terror": 0.0201,
+        "Ficção científica": 0.0269
+      }
+    },
+    {
+      "id": 4488,
+      "title": "Sexta-Feira 13",
+      "dobra": 2,
+      "real": [
+        "Terror"
+      ],
+      "previsto": [
+        "Comédia"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.0983,
+        "Comédia": 0.8724,
+        "Terror": 0.0152,
+        "Ficção científica": 0.0141
+      }
+    },
+    {
+      "id": 115,
+      "title": "O Grande Lebowski",
+      "dobra": 2,
+      "real": [
+        "Comédia"
+      ],
+      "previsto": [
+        "Drama"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.8606,
+        "Comédia": 0.1202,
+        "Terror": 0.0089,
+        "Ficção científica": 0.0103
+      }
+    },
+    {
+      "id": 207703,
+      "title": "Kingsman: Serviço Secreto",
+      "dobra": 4,
+      "real": [
+        "Comédia"
+      ],
+      "previsto": [
+        "Drama"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.8482,
+        "Comédia": 0.0502,
+        "Terror": 0.0091,
+        "Ficção científica": 0.0925
+      }
+    }
+  ],
+  "sentenca_minilm": [
+    {
+      "id": 616037,
+      "title": "Thor: Amor e Trovão",
+      "dobra": 3,
+      "real": [
+        "Comédia"
+      ],
+      "previsto": [
+        "Ficção científica"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.0115,
+        "Comédia": 0.0153,
+        "Terror": 0.0033,
+        "Ficção científica": 0.9698
+      }
+    },
+    {
+      "id": 4247,
+      "title": "Todo Mundo em Pânico",
+      "dobra": 4,
+      "real": [
+        "Comédia"
+      ],
+      "previsto": [
+        "Terror"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.0328,
+        "Comédia": 0.016,
+        "Terror": 0.9465,
+        "Ficção científica": 0.0046
+      }
+    },
+    {
+      "id": 38365,
+      "title": "Gente Grande",
+      "dobra": 1,
+      "real": [
+        "Comédia"
+      ],
+      "previsto": [
+        "Drama"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.9204,
+        "Comédia": 0.0399,
+        "Terror": 0.0274,
+        "Ficção científica": 0.0122
+      }
+    },
+    {
+      "id": 2109,
+      "title": "A Hora do Rush",
+      "dobra": 1,
+      "real": [
+        "Comédia"
+      ],
+      "previsto": [
+        "Drama"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.892,
+        "Comédia": 0.0526,
+        "Terror": 0.0194,
+        "Ficção científica": 0.0361
+      }
+    },
+    {
+      "id": 522627,
+      "title": "Magnatas do Crime",
+      "dobra": 3,
+      "real": [
+        "Comédia"
+      ],
+      "previsto": [
+        "Drama"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.8877,
+        "Comédia": 0.0995,
+        "Terror": 0.0022,
+        "Ficção científica": 0.0106
+      }
+    },
+    {
+      "id": 637649,
+      "title": "Infiltrado",
+      "dobra": 1,
+      "real": [
+        "Drama"
+      ],
+      "previsto": [
+        "Comédia"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.0583,
+        "Comédia": 0.8356,
+        "Terror": 0.0132,
+        "Ficção científica": 0.0929
+      }
+    },
+    {
+      "id": 275,
+      "title": "Fargo: Uma Comédia de Erros",
+      "dobra": 1,
+      "real": [
+        "Drama"
+      ],
+      "previsto": [
+        "Comédia"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.1013,
+        "Comédia": 0.8324,
+        "Terror": 0.0561,
+        "Ficção científica": 0.0102
+      }
+    },
+    {
+      "id": 9336,
+      "title": "Loucademia de Polícia",
+      "dobra": 2,
+      "real": [
+        "Comédia"
+      ],
+      "previsto": [
+        "Drama"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "Drama": 0.8204,
+        "Comédia": 0.1564,
+        "Terror": 0.0077,
+        "Ficção científica": 0.0154
+      }
+    }
+  ]
+}

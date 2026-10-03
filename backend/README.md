@@ -11,6 +11,7 @@ uv run --frozen ruff check src tests && uv run --frozen ruff format --check src 
 uv run --frozen mypy
 uv run --frozen python -m app.corpus --help
 uv run --frozen python -m app.vectors --help
+uv run --frozen python -m app.classification --help
 uv run --frozen uvicorn app.main:app --host 127.0.0.1
 ```
 
@@ -18,6 +19,7 @@ uv run --frozen uvicorn app.main:app --host 127.0.0.1
 |---|---|
 | `src/app/corpus` | Etapa 1: coleta e preparação da base |
 | `src/app/vectors` | Etapa 2: representações vetoriais e análises |
+| `src/app/classification` | Etapa 3: classificação de gêneros a partir das sinopses |
 | `src/app/api`, `src/app/domain`, `src/app/infra` | Demonstração auxiliar de pesquisa (API FastAPI sobre o TMDB) |
 | `src/app/shared` | Artefatos, manifesto, validação e regras de língua compartilhadas |
 

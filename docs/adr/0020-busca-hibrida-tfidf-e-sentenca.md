@@ -1,4 +1,4 @@
-# 0018 — Busca do site por tema: TF-IDF + embedding de sentença, com os filtros das regras
+# 0020 — Busca do site por tema: TF-IDF + embedding de sentença, com os filtros das regras
 
 - Estado: Aceita
 - Data: 2026-09-29

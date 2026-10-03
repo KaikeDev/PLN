@@ -3,7 +3,7 @@
 - `titulo`: busca direta por título.
 - `descoberta`: preferências extraídas por regras viram consulta de descoberta.
 - `sinopse`: busca por tema nas sinopses do corpus, com a combinação TF-IDF + embedding de sentença
-  (ADR 0018); as preferências reconhecidas pelas regras filtram os filmes.
+  (ADR 0020); as preferências reconhecidas pelas regras filtram os filmes.
 - `auto`: prioriza correspondência exata com título localizado ou original na primeira página; sem
   correspondência, usa a busca por sinopse quando ela está disponível e encontra filmes, depois as
   preferências quando existem e, por fim, a busca por título.

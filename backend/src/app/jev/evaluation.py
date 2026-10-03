@@ -1,6 +1,6 @@
 """Métricas iguais para o Jev e para o classificador de referência, sobre os mesmos filmes.
 
-Cada linha de previsão tem `gold` (gêneros de coleta) e, por método, `choice` (gênero principal) e
+Cada linha de previsão tem `gold` (gêneros do TMDB entre os avaliados) e, por método, `choice` (gênero principal) e
 `labels` (probabilidade de cada gênero). Filmes em que o Jev falhou ficam fora de todas as métricas,
 inclusive das do classificador de referência, para que os dois sejam medidos no mesmo conjunto.
 

@@ -17,21 +17,35 @@ MIN_DOCUMENTS = 3
 
 @dataclass(frozen=True)
 class Document:
-    """Sinopse preenchida do corpus; `genres` são os gêneros dos recortes de coleta que retornaram o filme."""
+    """Sinopse preenchida do corpus.
+
+    `genres` é o rótulo de gênero usado por todas as etapas (ADR 0018): os gêneros que o TMDB atribui ao
+    filme (`genre_ids`) restritos aos gêneros da coleta. `tmdb_genres` são todos os gêneros do TMDB. O
+    recorte de coleta que retornou o filme fica só em `memberships.json`, como proveniência.
+    """
 
     id: int
     title: str
     genres: frozenset[int]
+    tmdb_genres: frozenset[int] = frozenset()
 
 
 class ProcessedCorpus:
     """Isola o formato dos arquivos: as análises dependem de documentos, não de caminhos."""
 
-    def __init__(self, root: Path, documents: tuple[Document, ...], genre_names: dict[int, str], stopwords: frozenset[str]):
+    def __init__(
+        self,
+        root: Path,
+        documents: tuple[Document, ...],
+        genre_names: dict[int, str],
+        stopwords: frozenset[str],
+        collection_genres: frozenset[int] = frozenset(),
+    ):
         self.root = root
         self.documents = documents
         self.genre_names = genre_names
         self.stopwords = stopwords
+        self.collection_genres = collection_genres
         self.ids = tuple(document.id for document in documents)
         self.by_id = {document.id: document for document in documents}
         self._stages: dict[str, list] = {}
@@ -43,18 +57,17 @@ class ProcessedCorpus:
         memberships = json.loads((root / "memberships.json").read_text(encoding="utf-8"))
         genres = json.loads((root / "genres.json").read_text(encoding="utf-8")).get("genres", [])
         stopwords = json.loads((root / "stopwords_used.json").read_text(encoding="utf-8"))
-        documents = tuple(
-            Document(
-                row["id"],
-                row.get("title") or row.get("original_title") or f"Filme {row['id']}",
-                _slice_genres(memberships.get(str(row["id"]), [])),
-            )
-            for row in read_jsonl(root / "metadata.jsonl")
-            if not row["overview_missing"]
-        )
+        collection = frozenset().union(*(_slice_genres(labels) for labels in memberships.values()))
+        documents = []
+        for row in read_jsonl(root / "metadata.jsonl"):
+            if row["overview_missing"]:
+                continue
+            tmdb = frozenset(row.get("genre_ids") or ())
+            title = row.get("title") or row.get("original_title") or f"Filme {row['id']}"
+            documents.append(Document(row["id"], title, tmdb & collection, tmdb))
         if len(documents) < MIN_DOCUMENTS:
             raise ValueError(f"São necessárias ao menos {MIN_DOCUMENTS} sinopses para comparar vetores")
-        return cls(root, documents, {genre["id"]: genre["name"] for genre in genres}, frozenset(stopwords))
+        return cls(root, tuple(documents), {genre["id"]: genre["name"] for genre in genres}, frozenset(stopwords), collection)
 
     @property
     def manifest_sha256(self) -> str:
@@ -103,12 +116,20 @@ class ProcessedCorpus:
         return self._stages[stage]
 
     def genre_name(self, document: Document) -> str | None:
-        """Nome do gênero quando o filme veio de um único gênero de coleta; None caso contrário."""
+        """Nome do gênero quando o filme tem exatamente um gênero da coleta; None caso contrário."""
         if len(document.genres) != 1:
             return None
-        genre = next(iter(document.genres))
+        return self.genre_label(next(iter(document.genres)))
+
+    def genre_label(self, genre: int) -> str:
+        """Nome do gênero na lista do TMDB, ou o número quando desconhecido."""
         return self.genre_names.get(genre, str(genre))
+
+    def genre_labels(self, genres: frozenset[int]) -> list[str]:
+        """Nomes ordenados de um conjunto de gêneros."""
+        return sorted(self.genre_label(genre) for genre in genres)
 
 
 def _slice_genres(labels: list[str]) -> frozenset[int]:
+    """Gêneros dos recortes de coleta (`genre_<id>_<ano>_<ano>`) em que um filme apareceu."""
     return frozenset(int(match.group(1)) for label in labels if (match := GENRE_SLICE_RE.fullmatch(label)))

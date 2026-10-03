@@ -1,7 +1,7 @@
 [project]
 name = "pln-main"
 version = "0.1.0"
-description = "Coleta, preparação e vetorização rastreáveis de sinopses do TMDB"
+description = "Coleta, preparação, vetorização e classificação rastreáveis de sinopses do TMDB"
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [

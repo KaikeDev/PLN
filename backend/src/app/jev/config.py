@@ -69,7 +69,7 @@ class JevConfig:
         return questions
 
     def gold(self, document: Document) -> tuple[str, ...]:
-        """Gêneros avaliados dos recortes de coleta que retornaram o filme, na ordem da configuração."""
+        """Gêneros avaliados do filme (`genre_ids` do TMDB entre os da configuração), na ordem da configuração."""
         return tuple(genre.key for genre in self.genres if genre.id in document.genres)
 
 

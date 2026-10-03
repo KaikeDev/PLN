@@ -25,7 +25,10 @@ def make_report(results: dict, context: AnalysisContext, analyses: Sequence[Repo
         "# Evidências das representações vetoriais",
         "",
         f"Representações calculadas sobre {len(context.corpus.documents)} sinopses preenchidas de uma pasta processada com hashes verificados. "
-        "Gêneros de coleta são rótulos aproximados da amostragem, não julgamentos de relevância.",
+        "As seções seguem as tarefas do ciclo de PLN aplicadas a cada representação: busca, recomendação, agrupamento e visualização; "
+        "a classificação é a Etapa 3. Os rótulos de gênero são os `genre_ids` do TMDB restritos aos gêneros da coleta "
+        f"({', '.join(context.corpus.genre_labels(context.corpus.collection_genres))}): "
+        "servem de aproximação de relevância, não de julgamento humano.",
         "",
     ]
     for analysis in analyses:
@@ -38,7 +41,8 @@ def make_report(results: dict, context: AnalysisContext, analyses: Sequence[Repo
         "(não distingue sentidos) e a média apaga ordem e negação. Transformers dependem do texto usado no treino do modelo; o BERT pré-treinado só com "
         "modelagem de linguagem mascarada não foi ajustado para comparar sentenças, e o modelo de sentença trunca sinopses longas. "
         "As sondas linguísticas são poucas frases escritas pela equipe: ilustram os conceitos da aula, não medem desempenho. "
-        "A concordância de gênero e as métricas de clustering usam os recortes de coleta como aproximação; filmes com vários gêneros são ambíguos. "
+        "A precisão da recomendação e as métricas de agrupamento usam os gêneros como aproximação de relevância: dois filmes do mesmo gênero "
+        "não são necessariamente boas recomendações um para o outro, e filmes com vários gêneros são ambíguos. "
         "As consultas anotadas são poucas e a lista de relevantes é parcial, portanto servem como casos didáticos, não como avaliação estatística.",
         "",
         "## Fonte",
@@ -81,31 +85,51 @@ def dimensions_section(results: dict, context: AnalysisContext) -> list[str]:
     return [*lines, ""]
 
 
-def neighbors_section(results: dict, context: AnalysisContext) -> list[str]:
+def recommendation_section(results: dict, context: AnalysisContext) -> list[str]:
     names = context.representation_names
     k = context.config.neighbors_k
     lines = [
-        "## Similaridade do cosseno",
+        "## Recomendação: filmes parecidos",
         "",
-        f"Para cada sinopse foram buscados os {k} vizinhos de maior cosseno. A concordância é a fração desses vizinhos com ao menos um gênero de coleta em comum; "
-        "a referência é essa fração calculada sobre todos os demais filmes, ou seja, o esperado sem usar o texto. "
-        "Nas representações lexicais a explicação lista termos idênticos; no word2vec, pares de palavras próximas (≈); o modelo contextual não é explicável por palavras.",
+        f"Recomendação por conteúdo: para cada filme, os {k} filmes de maior cosseno com a sinopse dele (item → item); para um perfil, "
+        "os de maior cosseno com a média dos filmes de que a pessoa gostou. Sem avaliações de usuários, a relevância é aproximada pelos gêneros: "
+        "a precisão @k é a fração dos recomendados com ao menos um gênero em comum, e a referência é essa fração sobre todos os demais filmes, "
+        "o esperado de uma recomendação que ignora o texto. As recomendações de todos os filmes estão em `<representação>.recommendations.jsonl`. "
+        "Nas representações lexicais a explicação lista termos idênticos; no word2vec, pares de palavras próximas (≈); "
+        "o modelo contextual não é explicável por palavras.",
         "",
-        f"| Representação | Concordância de gênero @{k} | Referência | Filmes avaliados |",
-        "|---|---:|---:|---:|",
+        f"| Representação | Precisão @{k} | Referência | Ganho sobre a referência | Filmes avaliados |",
+        "|---|---:|---:|---:|---:|",
     ]
     for name in names:
         row = results[name]
-        lines.append(
-            f"| {name} | {_number(row['genre_agreement_at_k'])} | {_number(row['genre_agreement_baseline'])} | {row['documents_evaluated']} |"
-        )
+        precision, baseline = row["precision_at_k"], row["baseline"]
+        gain = precision - baseline if precision is not None and baseline is not None else None
+        lines.append(f"| {name} | {_number(precision)} | {_number(baseline)} | {_number(gain)} | {row['documents_evaluated']} |")
     lines.append("")
     for index, movie_id in enumerate(context.config.example_ids):
-        lines += [f"### Vizinhos de {context.corpus.by_id[movie_id].title} ({movie_id})", ""]
+        example = results[names[0]]["examples"][index]
+        genres = ", ".join(example["genres"]) or "nenhum da coleta"
+        lines += [f"### Quem gostou de {example['title']} ({movie_id})", "", f"Gêneros: {genres}.", ""]
         for name in names:
-            neighbors = results[name]["examples"][index]["neighbors"][:3]
-            described = "; ".join(_titled(item) for item in neighbors) or "nenhum vizinho com cosseno positivo"
-            lines.append(f"- **{name}**: {described}")
+            items = results[name]["examples"][index]["recommendations"][:3]
+            lines.append(f"- **{name}**: {'; '.join(_titled(item) for item in items) or 'nenhuma recomendação'}")
+        lines.append("")
+    for index, profile in enumerate(context.config.profiles):
+        first = results[names[0]]["profiles"][index]
+        lines += [f"### Perfil `{profile.id}`: gostou de {', '.join(movie['title'] for movie in first['movies'])}", ""]
+        if profile.note:
+            lines += [profile.note, ""]
+        lines += [
+            f"Gêneros do perfil: {', '.join(first['genres']) or 'nenhum da coleta'}.",
+            "",
+            f"| Representação | Precisão @{k} | Primeiras recomendações |",
+            "|---|---:|---|",
+        ]
+        for name in names:
+            item = results[name]["profiles"][index]
+            top = "; ".join(f"{rec['title']} ({rec['score']:.3f})" for rec in item["recommendations"][:3]) or "nenhuma recomendação"
+            lines.append(f"| {name} | {_number(item['precision_at_k'])} | {top} |")
         lines.append("")
     return lines
 
@@ -113,21 +137,22 @@ def neighbors_section(results: dict, context: AnalysisContext) -> list[str]:
 def clustering_section(results: dict, context: AnalysisContext) -> list[str]:
     names = context.representation_names
     lines = [
-        "## Clustering",
+        "## Agrupamento (K-Means)",
         "",
-        f"K-Means com k = {context.config.clusters}. ARI, NMI e pureza comparam os clusters com o gênero de coleta dos filmes que vieram de um único gênero; "
-        "a silhueta usa distância do cosseno e não depende de rótulos. Os termos descritivos vêm da média TF-IDF (sem stopwords) dos membros de cada cluster, "
-        "o mesmo vocabulário para todas as representações.",
+        f"K-Means com k = {context.config.clusters}, sem rótulos. ARI, NMI e pureza comparam os clusters com o gênero dos filmes que têm exatamente um "
+        "gênero da coleta; a silhueta usa distância do cosseno e não depende de rótulos. Os termos descritivos vêm da média TF-IDF (sem stopwords) "
+        "dos membros de cada cluster, o mesmo vocabulário para todas as representações. "
+        "O gráfico de cada representação é a projeção da seção seguinte colorida pelo cluster encontrado.",
         "",
-        "| Representação | ARI | NMI | Pureza | Silhueta | Filmes rotulados | Tamanhos |",
-        "|---|---:|---:|---:|---:|---:|---|",
+        "| Representação | ARI | NMI | Pureza | Silhueta | Filmes rotulados | Tamanhos | Gráfico |",
+        "|---|---:|---:|---:|---:|---:|---|---|",
     ]
     for name in names:
         row = results[name]
         sizes = ", ".join(str(cluster["size"]) for cluster in row["clusters"])
         lines.append(
             f"| {name} | {_number(row['adjusted_rand_index'])} | {_number(row['normalized_mutual_information'])} | {_number(row['purity'])} | "
-            f"{_number(row['silhouette_cosine'])} | {row['labeled_documents']} | {sizes} |"
+            f"{_number(row['silhouette_cosine'])} | {row['labeled_documents']} | {sizes} | [{name}.clusters.svg]({name}.clusters.svg) |"
         )
     for name in names:
         lines += ["", f"### {name}", ""]
@@ -140,18 +165,22 @@ def clustering_section(results: dict, context: AnalysisContext) -> list[str]:
 def projection_section(results: dict, context: AnalysisContext) -> list[str]:
     names = context.representation_names
     lines = [
-        "## Projeção em duas dimensões",
+        "## Visualização: projeção em duas dimensões",
         "",
         "TruncatedSVD reduz as dimensões a dois componentes para inspeção visual (nas matrizes lexicais, é a LSA). "
         "Variância explicada baixa indica que o plano mostra só parte da estrutura; distâncias no gráfico não substituem o cosseno original. "
-        "Sem centralização, o primeiro componente tende a seguir a direção média das sinopses e pode explicar menos variância que o segundo.",
+        "Sem centralização, o primeiro componente tende a seguir a direção média das sinopses e pode explicar menos variância que o segundo. "
+        "Cada representação tem dois gráficos com as mesmas coordenadas: um colorido pelo gênero e outro pelo cluster do K-Means. "
+        "Comparar os dois mostra se os grupos encontrados sem rótulos seguem os gêneros.",
         "",
-        "| Representação | Variância componente 1 | Variância componente 2 | Gráfico |",
-        "|---|---:|---:|---|",
+        "| Representação | Variância componente 1 | Variância componente 2 | Por gênero | Por cluster |",
+        "|---|---:|---:|---|---|",
     ]
     for name in names:
         first, second = results[name]["explained_variance_ratio"]
-        lines.append(f"| {name} | {first:.2%} | {second:.2%} | [{name}.projection.svg]({name}.projection.svg) |")
+        lines.append(
+            f"| {name} | {first:.2%} | {second:.2%} | [{name}.projection.svg]({name}.projection.svg) | [{name}.clusters.svg]({name}.clusters.svg) |"
+        )
     return [*lines, ""]
 
 
@@ -305,9 +334,10 @@ def retrieval_section(results: dict, context: AnalysisContext) -> list[str]:
         return []
     k = context.config.neighbors_k
     lines = [
-        "## Consultas anotadas",
+        "## Busca: consultas anotadas",
         "",
-        "A consulta passa pelas mesmas regras de preparação da entrada de cada representação e vira um vetor no mesmo espaço. "
+        "Busca é recuperação de informação: um texto de consulta vira um vetor no mesmo espaço das sinopses, que são ordenadas pelo cosseno. "
+        "A consulta passa pelas mesmas regras de preparação da entrada de cada representação. "
         "A posição é a do primeiro filme anotado como relevante entre os filmes com cosseno positivo. "
         "MRR e acerto só olham o primeiro relevante; a precisão média (MAP) considera a posição de todos, "
         f"e a precisão @{k} é a fração relevante dos {k} primeiros resultados.",

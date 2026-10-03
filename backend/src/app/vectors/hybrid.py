@@ -1,4 +1,4 @@
-"""Busca híbrida: soma ponderada dos cossenos de várias representações das mesmas sinopses (ADR 0018).
+"""Busca híbrida: soma ponderada dos cossenos de várias representações das mesmas sinopses (ADR 0020).
 
 Para cada consulta, o cosseno de cada representação é dividido pelo maior cosseno positivo dela, de
 modo que representações com escalas diferentes (TF-IDF esparso e embedding denso) fiquem comparáveis.

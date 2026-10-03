@@ -22,8 +22,10 @@ O código não tem comentários fora de docstrings. Quando uma docstring cita �
 | [0014](#0014--amostragem-intencional-da-coleta) | Amostragem intencional da coleta | Dados |
 | [0015](#0015--bert-cbow--skip-gram-e-polissemia-aula-7) | BERT, CBOW × skip-gram e polissemia (Aula 7) | PLN |
 | [0016](#0016--política-do-gitignore) | Política do `.gitignore` | Repositório |
-| [0017](#0017--jev-e-tf-idf--regressão-logística-aula-8) | Jev e TF-IDF + regressão logística (Aula 8) | PLN |
-| [0018](#0018--busca-por-tema-tf-idf--embedding-de-sentença) | Busca por tema: TF-IDF + embedding de sentença | PLN |
+| [0017](#0017--classificação-de-gêneros-aula-8) | Classificação de gêneros (Aula 8) | PLN |
+| [0018](#0018--tarefas-do-ciclo-de-pln-para-cada-representação) | Tarefas do ciclo de PLN para cada representação | PLN |
+| [0019](#0019--jev-e-tf-idf--regressão-logística-aula-8) | Jev e TF-IDF + regressão logística (Aula 8) | PLN |
+| [0020](#0020--busca-por-tema-tf-idf--embedding-de-sentença) | Busca por tema: TF-IDF + embedding de sentença | PLN |
 
 ---
 
@@ -205,7 +207,35 @@ O código não tem comentários fora de docstrings. Quando uma docstring cita �
 
 **Consequência.** Uma nova amostra oficial exige uma exceção em `data/*`. `git ls-files -ci --exclude-standard` deve continuar vazio. [Detalhes](docs/adr/0016-politica-do-gitignore.md)
 
-## 0017 — Jev e TF-IDF + regressão logística (Aula 8)
+## 0017 — Classificação de gêneros (Aula 8)
+
+**Decisão.**
+
+- Prever o gênero do filme a partir da sinopse em duas formulações: multiclasse (325 filmes com exatamente um dos quatro gêneros) e multirrótulo (428 filmes, um classificador binário por gênero).
+- Usar como rótulos os `genre_ids` do TMDB, não o recorte de coleta.
+- Aplicar a mesma regressão logística, com pesos balanceados, às oito representações da Etapa 2.
+- Escolher `C` pela log loss em dobras internas e avaliar em 5 dobras externas iguais para todas as representações, sem vazamento: vocabulário, idf, padronização e `C` vêm só do treino.
+- Reportar uma referência que ignora o texto, F1 macro/micro, métricas por gênero, desvio entre dobras, matriz de confusão, Hamming, acerto exato, log loss e confiança em acertos × erros.
+
+**Por quê.** A Aula 8 pede classificação × clusterização, os tipos de classificação, pipelines TF-IDF × BERT e métricas além da acurácia. O corpus já traz rótulos de gênero, e cerca de um quarto dos filmes tem mais de um, o que torna o multirrótulo natural. Com `C` fixo, o TF-IDF ficava regularizado demais (probabilidades quase uniformes), e um único `C` não serve igualmente a representações de escalas e dimensões diferentes. Escolher `C` pelo F1 achatava as probabilidades; pela log loss, elas acompanham a acurácia sem perda de F1. O ajuste fino do BERT e o LLM zero-shot ficaram de fora por custo, pela amostra pequena e pela reprodutibilidade.
+
+**Consequência.** Na multiclasse, as representações densas superam o melhor TF-IDF em 7 a 12 pontos de F1 macro; skip-gram e BERTimbau empatam dentro do desvio entre dobras. Medidos nas mesmas dobras, o Naive Bayes vence só nas contagens brutas, o SVM empata sem dar probabilidades, e o K-Means coincide muito menos com os gêneros que o classificador ([justificativa](docs/escolha-dos-modelos.md)). Parte dos erros confiantes vem de rótulos ruidosos (filmes de ação reduzidos a “comédia”). [Detalhes](docs/adr/0017-aula8-classificacao-de-generos.md)
+
+## 0018 — Tarefas do ciclo de PLN para cada representação
+
+**Decisão.**
+
+- Aplicar cada representação às quatro tarefas do quadro da Aula 8: busca, recomendação, agrupamento com visualização e classificação.
+- Implementar a recomendação por conteúdo (`Recommendation`): item → item para todos os filmes e por perfil (média dos filmes de que a pessoa gostou), avaliada pela precisão @k de gênero compartilhado contra uma referência que ignora o texto.
+- Gerar, para cada representação, a projeção 2D colorida pelo cluster ao lado da colorida pelo gênero.
+- Unificar os rótulos das duas etapas nos `genre_ids` do TMDB restritos aos gêneros da coleta, e usar um único K-Means (`app.vectors.clusters`).
+- Permitir que a Etapa 3 leia os vetores densos verificados da Etapa 2 (`--vectors`) em vez de recalculá-los.
+
+**Por quê.** A auditoria de 29/09/2026 mostrou que a recomendação não existia, que os clusters não eram visualizados, que as etapas usavam rótulos diferentes e que a Etapa 3 recalculava cerca de 100 s de vetores já salvos. Sem avaliações de usuários, só a recomendação por conteúdo é possível; os gêneros são a aproximação automática de relevância. Reestruturar em quatro pipelines reescreveria código testado sem ganho: o padrão `Analysis` já acomoda cada tarefa.
+
+**Consequência.** Nenhuma representação vence todas as tarefas: o modelo de sentença lidera a busca, o BERTimbau a recomendação (63,6% contra 37,9% da referência) e o agrupamento, e o skip-gram a classificação. Os números de agrupamento da Etapa 2 mudaram com os novos rótulos. Com `--vectors`, a Etapa 3 cai para cerca de 2,5 minutos e dispensa o extra `semantico`. [Detalhes](docs/adr/0018-tarefas-do-ciclo-de-pln.md)
+
+## 0019 — Jev e TF-IDF + regressão logística (Aula 8)
 
 **Decisão.**
 
@@ -217,9 +247,9 @@ O código não tem comentários fora de docstrings. Quando uma docstring cita �
 
 **Por quê.** A Aula 8 contrapõe decisões estruturadas sem treino ao pipeline clássico. Os gêneros de coleta são o único rótulo do corpus que a sinopse expressa, por isso não há Score. Cada chamada é paga e o alias do modelo muda, então as respostas brutas precisam ser guardadas e reavaliadas sem novas chamadas.
 
-**Consequência.** A amostra pequena ilustra a comparação, mas não é teste estatístico. A redação das perguntas faz parte da tarefa. O `uv.lock` precisa incluir o extra `jev`. [Detalhes](docs/adr/0017-aula8-jev-classificacao-de-genero.md)
+**Consequência.** A amostra pequena ilustra a comparação, mas não é teste estatístico. A redação das perguntas faz parte da tarefa. O `uv.lock` precisa incluir o extra `jev`. [Detalhes](docs/adr/0019-aula8-jev-classificacao-de-genero.md)
 
-## 0018 — Busca por tema: TF-IDF + embedding de sentença
+## 0020 — Busca por tema: TF-IDF + embedding de sentença
 
 **Decisão.**
 
@@ -230,4 +260,4 @@ O código não tem comentários fora de docstrings. Quando uma docstring cita �
 
 **Por quê.** O embedding de sentença foi o melhor sozinho (MAP de 0,56) e acerta o tema sem palavras em comum. O TF-IDF acerta palavras-chave fortes, como "zumbis" e "casa assombrada". Juntos, chegam a MAP de 0,61. O ganho se manteve quando o peso foi escolhido numa metade das consultas e medido na outra (95% de 500 divisões). O skip-gram quase não somava e custaria mais um modelo.
 
-**Consequência.** A busca por tema cobre só os 428 filmes da amostra, e a API passa a depender do extra `semantico`; sem ele, o modo `sinopse` avisa que está indisponível. [Detalhes](docs/adr/0018-busca-hibrida-tfidf-e-sentenca.md)
+**Consequência.** A busca por tema cobre só os 428 filmes da amostra, e a API passa a depender do extra `semantico`; sem ele, o modo `sinopse` avisa que está indisponível. [Detalhes](docs/adr/0020-busca-hibrida-tfidf-e-sentenca.md)

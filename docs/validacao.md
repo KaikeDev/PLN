@@ -58,7 +58,7 @@ Mesmo ambiente da Etapa 2. Modelos novos com revisão fixada: `neuralmind/bert-b
 
 ## Aula 8 — Jev × TF-IDF + regressão logística (28/09/2026)
 
-Execução local em Python 3.14.7, com typesafe-sdk 0.7.2 (extra `jev`), scikit-learn 1.9.1, NumPy 2.5.3 e SciPy 1.18.1, fixados em `uv.lock`. Modelo informado pela API: `jev-1.13.0`. Decisões no [ADR 0017](adr/0017-aula8-jev-classificacao-de-genero.md).
+Execução local em Python 3.14.7, com typesafe-sdk 0.7.2 (extra `jev`), scikit-learn 1.9.1, NumPy 2.5.3 e SciPy 1.18.1, fixados em `uv.lock`. Modelo informado pela API: `jev-1.13.0`. Decisões no [ADR 0019](adr/0019-aula8-jev-classificacao-de-genero.md).
 
 | Verificação | Resultado e alcance |
 |---|---|
@@ -75,7 +75,7 @@ uv run --frozen python -m app.jev verify --input ../data/jev/tmdb_2026-09-12
 
 ## Busca por tema: TF-IDF + embedding de sentença (28–29/09/2026)
 
-Escolha da combinação e integração com a busca do site. Decisões no [ADR 0018](adr/0018-busca-hibrida-tfidf-e-sentenca.md).
+Escolha da combinação e integração com a busca do site. Decisões no [ADR 0020](adr/0020-busca-hibrida-tfidf-e-sentenca.md).
 
 | Verificação | Resultado e alcance |
 |---|---|
@@ -87,6 +87,18 @@ Escolha da combinação e integração com a busca do site. Decisões no [ADR 00
 | Comando da combinação | `python -m app.vectors hybrid --queries ../config/consultas.json` com os modelos reais reproduziu os números do script: `tfidf_sem_stopwords` MAP 0,446; `sentenca_minilm` 0,560; combinação 0,613 (MRR 0,912, acerto @5 de 100%, precisão @5 de 0,56). |
 | Regeneração | `data/vectors/tmdb_2026-09-12` foi regenerada com as 20 consultas; `verify` aprovou os 34 arquivos. Além de consultas, busca, relatório e manifesto, mudaram só `bert_base_pt.embeddings.jsonl`, um ponto de `projection.json` e um cosseno de `sentence_pairs.json`, todos na sexta casa decimal: variação de ponto flutuante entre máquinas (Python 3.14.0 × 3.14.7, mesmas bibliotecas). |
 | Ambiente | O Controle Inteligente de Aplicativos do Windows chegou a bloquear o `python.exe` dos ambientes virtuais e DLLs do scikit-learn; as verificações acima rodaram depois de ele ser desativado. |
+
+## Junção com a classificação de gêneros (03/10/2026)
+
+Merge da branch `luana-classificacao` (ADRs 0017 e 0018) no `trabalho-3`. As ADRs do Jev e da busca foram renumeradas para 0019 e 0020.
+
+| Verificação | Resultado e alcance |
+|---|---|
+| Testes automatizados | 107 testes aprovados: os da classificação, da recomendação e dos rótulos unificados, junto com os do Jev e da busca por tema. |
+| Lint, formatação e tipos | `ruff check`, `ruff format --check` e `mypy` sem apontamentos. |
+| Vetores | `data/vectors/tmdb_2026-09-12` foi regenerada com a recomendação, os rótulos do TMDB e as 20 consultas; `verify` aprovou os 50 arquivos. Em relação à versão da branch, só mudaram o relatório, o manifesto e as recomendações do BERTimbau, na sexta casa decimal. |
+| Classificação | `data/classification/tmdb_2026-09-12` foi regenerada a partir dos vetores novos (`--vectors`); `verify` aprovou os 25 arquivos. Métricas e relatório idênticos aos da branch; mudaram só as probabilidades do BERTimbau, na sexta casa decimal, e o manifesto. |
+| **Pendente** | Refazer o Jev com os rótulos do TMDB: a amostra passa a ter 73 sinopses sem resposta guardada, e a chave da API deixou de ser aceita (HTTP 403). A execução anterior continua verificável (`app.jev verify`). |
 
 ## Revisão de arquitetura e segurança (14/09/2026)
 

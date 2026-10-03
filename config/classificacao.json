@@ -1,0 +1,55 @@
+{
+  "representations": [
+    {
+      "name": "bow_sem_pontuacao",
+      "method": "bow",
+      "stage": "05_without_punctuation.jsonl"
+    },
+    {
+      "name": "bow_sem_stopwords",
+      "method": "bow",
+      "stage": "06_without_stopwords.jsonl"
+    },
+    {
+      "name": "tfidf_sem_pontuacao",
+      "method": "tfidf",
+      "stage": "05_without_punctuation.jsonl"
+    },
+    {
+      "name": "tfidf_sem_stopwords",
+      "method": "tfidf",
+      "stage": "06_without_stopwords.jsonl"
+    }
+  ],
+  "labels": [
+    18,
+    35,
+    27,
+    878
+  ],
+  "folds": 5,
+  "inner_folds": 3,
+  "random_state": 42,
+  "regularization_grid": [
+    1e-06,
+    1e-05,
+    0.0001,
+    0.001,
+    0.01,
+    0.1,
+    1,
+    10,
+    100,
+    1000,
+    10000
+  ],
+  "min_df": 1,
+  "top_features": 10,
+  "error_examples": 8,
+  "alternatives": [
+    "naive_bayes",
+    "svm_linear",
+    "floresta_aleatoria",
+    "knn"
+  ]
+}

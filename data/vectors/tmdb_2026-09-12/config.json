@@ -76,5 +76,34 @@
     "guerra",
     "banco",
     "cachorro"
+  ],
+  "profiles": [
+    {
+      "id": "ficcao_mente_realidade",
+      "movie_ids": [
+        603,
+        27205,
+        38
+      ],
+      "note": "Gostou de ficção científica sobre mente, sonho e realidade."
+    },
+    {
+      "id": "terror_sobrenatural",
+      "movie_ids": [
+        138843,
+        493922,
+        280092
+      ],
+      "note": "Gostou de terror sobrenatural dentro de casa e da família."
+    },
+    {
+      "id": "animacao_familia",
+      "movie_ids": [
+        862,
+        14160,
+        585
+      ],
+      "note": "Gostou de animações para toda a família."
+    }
   ]
 }
