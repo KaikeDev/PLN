@@ -203,21 +203,20 @@ O módulo `app.jev` usa o [Jev](https://docs.typesafe.ai/introduction), da TypeS
 - uma **Choice** com o gênero principal (Drama, Comédia, Terror ou Ficção científica);
 - um **Noul** por gênero, que dá a probabilidade de o filme ser daquele gênero.
 
-As mesmas sinopses passam por um **TF-IDF + regressão logística**, o pipeline clássico, treinado com os filmes fora da amostra. Os dois são medidos nos mesmos filmes e com as mesmas métricas. A amostra tem 120 filmes (25 por gênero único e 20 com dois gêneros), ou seja, 120 chamadas à API, e deixa cerca de 300 filmes para o treino da referência. As perguntas e os critérios ficam em [`config/jev.json`](config/jev.json).
+As mesmas sinopses passam por um **TF-IDF + regressão logística**, o pipeline clássico, treinado com os filmes fora da amostra. Os dois são medidos nos mesmos filmes e com as mesmas métricas. A amostra tem 120 filmes (25 por gênero único e 20 com dois gêneros), ou seja, 120 chamadas à API, e deixa cerca de 300 filmes para o treino da referência. As perguntas e os critérios ficam em [`config/jev.json`](config/jev.json). O rótulo são os `genre_ids` do TMDB restritos aos quatro gêneros, o mesmo da classificação da Etapa 3.
 
-> **Pendente:** A execução registrada em `data/jev/tmdb_2026-09-12` foi feita antes da unificação dos rótulos da [ADR 0018](docs/adr/0018-tarefas-do-ciclo-de-pln.md), com o recorte de coleta como rótulo. Com os `genre_ids` do TMDB, a amostra muda: 47 das 120 sinopses já têm resposta guardada e 73 precisam de chamadas novas. A nova execução está pendente porque a chave da API usada até aqui deixou de ser aceita (HTTP 403). Os números abaixo são dessa execução.
 
 | Métrica (120 filmes, modelo `jev-1.13.0`) | Jev | TF-IDF + RL |
 |---|---:|---:|
-| Gênero principal entre os gêneros do filme | **85,8%** | 62,5% |
-| Acurácia nos 100 filmes de um gênero | **83,0%** | 61,0% |
-| F1 macro da Choice | **0,83** | 0,61 |
-| ROC AUC macro por gênero (Noul × regressão binária) | **0,95** | 0,84 |
-| Conjunto de gêneros exato | **62,5%** | 34,2% |
+| Gênero principal entre os gêneros do filme | **87,5%** | 60,0% |
+| Acurácia nos 100 filmes de um gênero | **85,0%** | 56,0% |
+| F1 macro da Choice | **0,85** | 0,54 |
+| ROC AUC macro por gênero (Noul × regressão binária) | **0,96** | 0,82 |
+| Conjunto de gêneros exato | **67,5%** | 35,0% |
 
-- **O Jev foi melhor em todas as métricas do resumo** sem ver nenhum exemplo rotulado do corpus. Com 100 filmes, o intervalo de 95% da diferença de acurácia vai de cerca de 10 a 34 pontos, portanto a vantagem não se explica só pelo tamanho da amostra.
-- **O TF-IDF puxa quase tudo para terror:** 7 dramas, 8 comédias e 9 ficções científicas saíram como terror. O Jev acertou 24 dos 25 dramas; o erro mais comum dele foi comédia classificada como ficção científica (5 de 25), em animações e aventuras como Operação Big Hero e Free Guy.
-- **Confiança não é acerto:** a confiança média da Choice é 0,91 quando o Jev acerta e 0,72 quando erra, mas há erros com confiança alta (Police Story: A Guerra das Drogas, comédia, saiu como drama com confiança 1,0). A Choice coincide com o Noul mais alto em 95% dos filmes.
+- **O Jev foi melhor em todas as métricas do resumo** sem ver nenhum exemplo rotulado do corpus. Com 100 filmes, o intervalo de 95% da diferença de acurácia vai de cerca de 17 a 41 pontos, portanto a vantagem não se explica só pelo tamanho da amostra. Na classificação da Etapa 3, com validação cruzada nas 325 sinopses de um gênero, o melhor classificador treinado chega a 71,0% de F1 macro (skip-gram); os conjuntos de teste são diferentes, mas a ordem de grandeza mostra a vantagem do Jev neste corpus.
+- **O TF-IDF puxa muitos filmes para drama:** 14 dos 25 filmes de terror e 10 das 25 comédias saíram como drama. O Jev acertou os 25 filmes de terror e 24 dos 25 dramas; o erro mais comum dele foi comédia classificada como drama (6 de 25), em comédias de ação como Police Story e Os Bad Boys.
+- **Confiança não é acerto:** a confiança média da Choice é 0,93 quando o Jev acerta e 0,63 quando erra, mas há erros com confiança alta (Velozes & Furiosos: Hobbs & Shaw, comédia, saiu como ficção científica com confiança 1,0). A Choice coincide com o Noul mais alto em 94% dos filmes.
 
 Resultados completos: [relatório](data/jev/tmdb_2026-09-12/report.md), [métricas](data/jev/tmdb_2026-09-12/metrics.json) e [respostas brutas](data/jev/tmdb_2026-09-12/responses.jsonl). Decisões: [ADR 0019](docs/adr/0019-aula8-jev-classificacao-de-genero.md).
 

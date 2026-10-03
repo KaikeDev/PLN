@@ -47,7 +47,7 @@ O notebook de exemplo da aula classifica avaliações do B2W. Aqui, o corpus é 
 
 - Com 120 filmes, as diferenças entre os métodos ilustram a aula, mas não são teste estatístico formal.
 - Desde a [ADR 0018](0018-tarefas-do-ciclo-de-pln.md), o rótulo são os `genre_ids` do TMDB restritos aos quatro gêneros, os mesmos da classificação da [ADR 0017](0017-aula8-classificacao-de-generos.md), e o código do Jev passou a usá-los. Muitos filmes têm gêneros fora das opções (ação, romance, suspense).
-- **Pendente:** A execução registrada em `data/jev/tmdb_2026-09-12` foi feita antes da unificação dos rótulos da [ADR 0018](0018-tarefas-do-ciclo-de-pln.md), com o recorte de coleta como rótulo. Com os `genre_ids` do TMDB, a amostra muda: 47 das 120 sinopses já têm resposta guardada e 73 precisam de chamadas novas. A nova execução está pendente porque a chave da API usada até aqui deixou de ser aceita (HTTP 403). Refazer com `--reuse ../data/jev/tmdb_2026-09-12` assim que houver uma chave válida.
+- **Nova execução com os rótulos do TMDB (03/10/2026):** a amostra mudou; 47 das 120 sinopses reaproveitaram a resposta guardada (`--reuse`) e 73 foram chamadas de novo. Resultado: acurácia de 85,0% contra 56,0% do TF-IDF + regressão logística nos 100 filmes de um gênero, F1 macro de 0,85 contra 0,54 e ROC AUC macro por gênero de 0,96 contra 0,82.
 - A redação das perguntas faz parte da tarefa: mudá-la muda o hash e impede o reaproveitamento das respostas.
 - Com as mesmas respostas, os arquivos de conteúdo são idênticos byte a byte (ADR 0009). Já uma nova chamada ao Jev pode dar outro resultado.
 - O `uv.lock` precisa ser regenerado (`uv lock`) para incluir o extra `jev`.

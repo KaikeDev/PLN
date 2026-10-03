@@ -98,7 +98,7 @@ Merge da branch `luana-classificacao` (ADRs 0017 e 0018) no `trabalho-3`. As ADR
 | Lint, formatação e tipos | `ruff check`, `ruff format --check` e `mypy` sem apontamentos. |
 | Vetores | `data/vectors/tmdb_2026-09-12` foi regenerada com a recomendação, os rótulos do TMDB e as 20 consultas; `verify` aprovou os 50 arquivos. Em relação à versão da branch, só mudaram o relatório, o manifesto e as recomendações do BERTimbau, na sexta casa decimal. |
 | Classificação | `data/classification/tmdb_2026-09-12` foi regenerada a partir dos vetores novos (`--vectors`); `verify` aprovou os 25 arquivos. Métricas e relatório idênticos aos da branch; mudaram só as probabilidades do BERTimbau, na sexta casa decimal, e o manifesto. |
-| **Pendente** | Refazer o Jev com os rótulos do TMDB: a amostra passa a ter 73 sinopses sem resposta guardada, e a chave da API deixou de ser aceita (HTTP 403). A execução anterior continua verificável (`app.jev verify`). |
+| Jev com os rótulos do TMDB | Nova amostra de 120 sinopses: 47 respostas reaproveitadas e 73 chamadas novas (`jev-1.13.0`), nenhuma falha, em 41 s. `verify` aprovou os 7 arquivos. Repetição com `--reuse` a partir da entrega: 0 chamadas e arquivos de conteúdo idênticos byte a byte. Acurácia de 85,0% contra 56,0% da referência nos 100 filmes de um gênero. A primeira tentativa falhou com HTTP 403 e não gravou nada; a chave foi trocada em `backend/.env`. |
 
 ## Revisão de arquitetura e segurança (14/09/2026)
 

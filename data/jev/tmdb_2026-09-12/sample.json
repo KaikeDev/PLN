@@ -1,22 +1,14 @@
 [
   {
-    "id": 74,
-    "title": "Guerra dos Mundos",
+    "id": 63,
+    "title": "Os 12 Macacos",
     "gold": [
       "ficcao_cientifica"
     ]
   },
   {
-    "id": 105,
-    "title": "De Volta para o Futuro",
-    "gold": [
-      "comedia",
-      "ficcao_cientifica"
-    ]
-  },
-  {
-    "id": 106,
-    "title": "O Predador",
+    "id": 95,
+    "title": "Armageddon",
     "gold": [
       "ficcao_cientifica"
     ]
@@ -29,8 +21,8 @@
     ]
   },
   {
-    "id": 118,
-    "title": "A Fantástica Fábrica de Chocolate",
+    "id": 115,
+    "title": "O Grande Lebowski",
     "gold": [
       "comedia"
     ]
@@ -50,10 +42,10 @@
     ]
   },
   {
-    "id": 197,
-    "title": "Coração Valente",
+    "id": 218,
+    "title": "O Exterminador do Futuro",
     "gold": [
-      "drama"
+      "ficcao_cientifica"
     ]
   },
   {
@@ -71,22 +63,15 @@
     ]
   },
   {
-    "id": 329,
-    "title": "Jurassic Park: O Parque dos Dinossauros",
-    "gold": [
-      "ficcao_cientifica"
-    ]
-  },
-  {
-    "id": 345,
-    "title": "De Olhos Bem Fechados",
+    "id": 311,
+    "title": "Era Uma Vez na América",
     "gold": [
       "drama"
     ]
   },
   {
-    "id": 423,
-    "title": "O Pianista",
+    "id": 345,
+    "title": "De Olhos Bem Fechados",
     "gold": [
       "drama"
     ]
@@ -99,10 +84,17 @@
     ]
   },
   {
-    "id": 565,
-    "title": "O Chamado",
+    "id": 561,
+    "title": "Constantine",
     "gold": [
       "terror"
+    ]
+  },
+  {
+    "id": 563,
+    "title": "Tropas Estelares",
+    "gold": [
+      "ficcao_cientifica"
     ]
   },
   {
@@ -113,10 +105,25 @@
     ]
   },
   {
-    "id": 603,
-    "title": "Matrix",
+    "id": 679,
+    "title": "Aliens: O Resgate",
     "gold": [
       "ficcao_cientifica"
+    ]
+  },
+  {
+    "id": 686,
+    "title": "Contato",
+    "gold": [
+      "drama",
+      "ficcao_cientifica"
+    ]
+  },
+  {
+    "id": 694,
+    "title": "O Iluminado",
+    "gold": [
+      "terror"
     ]
   },
   {
@@ -127,10 +134,24 @@
     ]
   },
   {
-    "id": 765,
-    "title": "Uma Noite Alucinante 2",
+    "id": 755,
+    "title": "Um Drink no Inferno",
     "gold": [
       "terror"
+    ]
+  },
+  {
+    "id": 764,
+    "title": "Uma Noite Alucinante: A Morte do Demônio",
+    "gold": [
+      "terror"
+    ]
+  },
+  {
+    "id": 772,
+    "title": "Esqueceram de Mim 2: Perdido em Nova York",
+    "gold": [
+      "comedia"
     ]
   },
   {
@@ -141,84 +162,38 @@
     ]
   },
   {
-    "id": 810,
-    "title": "Shrek Terceiro",
+    "id": 809,
+    "title": "Shrek 2",
     "gold": [
       "comedia"
     ]
   },
   {
-    "id": 814,
-    "title": "Um Lobisomem Americano em Londres",
-    "gold": [
-      "terror"
-    ]
-  },
-  {
-    "id": 841,
-    "title": "Duna",
-    "gold": [
-      "ficcao_cientifica"
-    ]
-  },
-  {
-    "id": 862,
-    "title": "Toy Story: Um Mundo de Aventuras",
+    "id": 854,
+    "title": "O Máskara",
     "gold": [
       "comedia"
     ]
   },
   {
-    "id": 927,
-    "title": "Gremlins",
-    "gold": [
-      "comedia",
-      "terror"
-    ]
-  },
-  {
-    "id": 949,
-    "title": "Fogo Contra Fogo",
+    "id": 857,
+    "title": "O Resgate do Soldado Ryan",
     "gold": [
       "drama"
     ]
   },
   {
-    "id": 957,
-    "title": "S.O.S.: Tem um Louco Solto no Espaço",
-    "gold": [
-      "comedia",
-      "ficcao_cientifica"
-    ]
-  },
-  {
-    "id": 1091,
-    "title": "O Enigma de Outro Mundo",
-    "gold": [
-      "terror",
-      "ficcao_cientifica"
-    ]
-  },
-  {
-    "id": 1124,
-    "title": "O Grande Truque",
-    "gold": [
-      "drama",
-      "ficcao_cientifica"
-    ]
-  },
-  {
-    "id": 1417,
-    "title": "O Labirinto do Fauno",
+    "id": 1368,
+    "title": "Rambo: Programado Para Matar",
     "gold": [
       "drama"
     ]
   },
   {
-    "id": 1562,
-    "title": "Extermínio 2",
+    "id": 1891,
+    "title": "Guerra nas Estrelas: O Império Contra-Ataca",
     "gold": [
-      "terror"
+      "ficcao_cientifica"
     ]
   },
   {
@@ -229,9 +204,25 @@
     ]
   },
   {
+    "id": 1923,
+    "title": "Twin Peaks: Os Últimos Dias de Laura Palmer",
+    "gold": [
+      "drama",
+      "terror"
+    ]
+  },
+  {
     "id": 2048,
     "title": "Eu, Robô",
     "gold": [
+      "ficcao_cientifica"
+    ]
+  },
+  {
+    "id": 2300,
+    "title": "Space Jam: O Jogo do Século",
+    "gold": [
+      "comedia",
       "ficcao_cientifica"
     ]
   },
@@ -243,10 +234,24 @@
     ]
   },
   {
+    "id": 2907,
+    "title": "A Família Addams",
+    "gold": [
+      "comedia"
+    ]
+  },
+  {
     "id": 4011,
     "title": "Os Fantasmas se Divertem",
     "gold": [
       "comedia"
+    ]
+  },
+  {
+    "id": 4233,
+    "title": "Pânico 2",
+    "gold": [
+      "terror"
     ]
   },
   {
@@ -257,13 +262,6 @@
     ]
   },
   {
-    "id": 4951,
-    "title": "10 Coisas Que Eu Odeio em Você",
-    "gold": [
-      "comedia"
-    ]
-  },
-  {
     "id": 5548,
     "title": "RoboCop - O Policial do Futuro",
     "gold": [
@@ -271,22 +269,38 @@
     ]
   },
   {
-    "id": 5876,
-    "title": "O Nevoeiro",
+    "id": 6435,
+    "title": "Da Magia à Sedução",
     "gold": [
-      "terror"
+      "comedia"
     ]
   },
   {
     "id": 6479,
     "title": "Eu Sou a Lenda",
     "gold": [
+      "drama",
       "ficcao_cientifica"
     ]
   },
   {
-    "id": 7518,
-    "title": "Os Sem-Floresta",
+    "id": 7974,
+    "title": "A Garota da Fábrica de Caixas de Fósforos",
+    "gold": [
+      "drama"
+    ]
+  },
+  {
+    "id": 8077,
+    "title": "Alien³",
+    "gold": [
+      "terror",
+      "ficcao_cientifica"
+    ]
+  },
+  {
+    "id": 8355,
+    "title": "A Era do Gelo 3",
     "gold": [
       "comedia"
     ]
@@ -299,8 +313,23 @@
     ]
   },
   {
-    "id": 8587,
-    "title": "O Rei Leão",
+    "id": 8467,
+    "title": "Debi & Lóide: Dois Idiotas em Apuros",
+    "gold": [
+      "comedia"
+    ]
+  },
+  {
+    "id": 8656,
+    "title": "Impacto Profundo",
+    "gold": [
+      "drama",
+      "ficcao_cientifica"
+    ]
+  },
+  {
+    "id": 8966,
+    "title": "Crepúsculo",
     "gold": [
       "drama"
     ]
@@ -313,25 +342,10 @@
     ]
   },
   {
-    "id": 9340,
-    "title": "Os Goonies",
-    "gold": [
-      "comedia"
-    ]
-  },
-  {
-    "id": 9374,
-    "title": "A Morte lhe Cai Bem",
+    "id": 9360,
+    "title": "Anaconda",
     "gold": [
       "terror"
-    ]
-  },
-  {
-    "id": 9426,
-    "title": "A Mosca",
-    "gold": [
-      "terror",
-      "ficcao_cientifica"
     ]
   },
   {
@@ -342,46 +356,45 @@
     ]
   },
   {
-    "id": 9769,
-    "title": "Lolita",
+    "id": 9737,
+    "title": "Os Bad Boys",
     "gold": [
-      "drama"
+      "comedia"
     ]
   },
   {
-    "id": 9902,
-    "title": "Pânico na Floresta",
+    "id": 9820,
+    "title": "Operação Cupido",
+    "gold": [
+      "comedia"
+    ]
+  },
+  {
+    "id": 9946,
+    "title": "Fim dos Dias",
     "gold": [
       "terror"
     ]
   },
   {
-    "id": 10192,
-    "title": "Shrek Para Sempre",
+    "id": 10375,
+    "title": "D-Tox",
     "gold": [
-      "comedia"
+      "terror"
     ]
   },
   {
-    "id": 10193,
-    "title": "Toy Story 3",
-    "gold": [
-      "comedia"
-    ]
-  },
-  {
-    "id": 10386,
-    "title": "O Gigante de Ferro",
+    "id": 10681,
+    "title": "WALL-E",
     "gold": [
       "ficcao_cientifica"
     ]
   },
   {
-    "id": 10625,
-    "title": "Meninas Malvadas",
+    "id": 10775,
+    "title": "Conflitos Internos",
     "gold": [
-      "drama",
-      "comedia"
+      "drama"
     ]
   },
   {
@@ -399,6 +412,14 @@
     ]
   },
   {
+    "id": 11544,
+    "title": "Lilo & Stitch",
+    "gold": [
+      "comedia",
+      "ficcao_cientifica"
+    ]
+  },
+  {
     "id": 13207,
     "title": "Sexta-Feira 13",
     "gold": [
@@ -406,17 +427,18 @@
     ]
   },
   {
-    "id": 14097,
-    "title": "9º Pelotão",
-    "gold": [
-      "drama"
-    ]
-  },
-  {
     "id": 18491,
     "title": "Neon Genesis Evangelion: O Fim do Evangelho",
     "gold": [
+      "drama",
       "ficcao_cientifica"
+    ]
+  },
+  {
+    "id": 18785,
+    "title": "Se Beber, Não Case!",
+    "gold": [
+      "comedia"
     ]
   },
   {
@@ -428,17 +450,17 @@
     ]
   },
   {
-    "id": 19994,
-    "title": "Garota Infernal",
+    "id": 19995,
+    "title": "Avatar",
     "gold": [
-      "terror"
+      "ficcao_cientifica"
     ]
   },
   {
-    "id": 21484,
-    "title": "Possessão",
+    "id": 26827,
+    "title": "Quem é Essa Garota?",
     "gold": [
-      "terror"
+      "comedia"
     ]
   },
   {
@@ -449,21 +471,6 @@
     ]
   },
   {
-    "id": 44214,
-    "title": "Cisne Negro",
-    "gold": [
-      "drama",
-      "terror"
-    ]
-  },
-  {
-    "id": 49013,
-    "title": "Carros 2",
-    "gold": [
-      "comedia"
-    ]
-  },
-  {
     "id": 49018,
     "title": "Sobrenatural",
     "gold": [
@@ -471,17 +478,10 @@
     ]
   },
   {
-    "id": 49519,
-    "title": "Os Croods",
+    "id": 49494,
+    "title": "A Águia da Legião Perdida",
     "gold": [
-      "comedia"
-    ]
-  },
-  {
-    "id": 49521,
-    "title": "O Homem de Aço",
-    "gold": [
-      "ficcao_cientifica"
+      "drama"
     ]
   },
   {
@@ -492,17 +492,38 @@
     ]
   },
   {
-    "id": 68718,
-    "title": "Django Livre",
+    "id": 55779,
+    "title": "Premonição 5",
     "gold": [
-      "drama"
+      "terror"
     ]
   },
   {
-    "id": 76600,
-    "title": "Avatar: O Caminho da Água",
+    "id": 57800,
+    "title": "A Era do Gelo 4",
+    "gold": [
+      "comedia"
+    ]
+  },
+  {
+    "id": 68721,
+    "title": "Homem de Ferro 3",
     "gold": [
       "ficcao_cientifica"
+    ]
+  },
+  {
+    "id": 73861,
+    "title": "A Serbian Film - Terror sem Limites",
+    "gold": [
+      "terror"
+    ]
+  },
+  {
+    "id": 80321,
+    "title": "Madagascar 3: Os Procurados",
+    "gold": [
+      "comedia"
     ]
   },
   {
@@ -513,37 +534,30 @@
     ]
   },
   {
-    "id": 82690,
-    "title": "Detona Ralph",
+    "id": 83533,
+    "title": "Avatar: Fogo e Cinzas",
     "gold": [
-      "comedia"
+      "ficcao_cientifica"
     ]
   },
   {
     "id": 93456,
     "title": "Meu Malvado Favorito 2",
     "gold": [
+      "comedia",
       "ficcao_cientifica"
     ]
   },
   {
-    "id": 102382,
-    "title": "O Espetacular Homem-Aranha 2: A Ameaça de Electro",
+    "id": 99861,
+    "title": "Vingadores: Era de Ultron",
     "gold": [
       "ficcao_cientifica"
     ]
   },
   {
-    "id": 106646,
-    "title": "O Lobo de Wall Street",
-    "gold": [
-      "drama",
-      "comedia"
-    ]
-  },
-  {
-    "id": 131631,
-    "title": "Jogos Vorazes: A Esperança - Parte 1",
+    "id": 127585,
+    "title": "X-Men: Dias de um Futuro Esquecido",
     "gold": [
       "ficcao_cientifica"
     ]
@@ -556,23 +570,15 @@
     ]
   },
   {
-    "id": 150540,
-    "title": "Divertida Mente",
+    "id": 198663,
+    "title": "Maze Runner: Correr ou Morrer",
     "gold": [
-      "drama",
-      "comedia"
+      "ficcao_cientifica"
     ]
   },
   {
-    "id": 177572,
-    "title": "Operação Big Hero",
-    "gold": [
-      "comedia"
-    ]
-  },
-  {
-    "id": 228150,
-    "title": "Corações de Ferro",
+    "id": 210577,
+    "title": "Garota Exemplar",
     "gold": [
       "drama"
     ]
@@ -585,6 +591,13 @@
     ]
   },
   {
+    "id": 242582,
+    "title": "O Abutre",
+    "gold": [
+      "drama"
+    ]
+  },
+  {
     "id": 244786,
     "title": "Whiplash: Em Busca da Perfeição",
     "gold": [
@@ -592,45 +605,16 @@
     ]
   },
   {
-    "id": 256274,
-    "title": "Assim na Terra Como no Inferno",
-    "gold": [
-      "terror"
-    ]
-  },
-  {
-    "id": 260514,
-    "title": "Carros 3",
+    "id": 273248,
+    "title": "Os Oito Odiados",
     "gold": [
       "drama"
     ]
   },
   {
-    "id": 271110,
-    "title": "Capitão América: Guerra Civil",
+    "id": 283995,
+    "title": "Guardiões da Galáxia - Vol. 2",
     "gold": [
-      "ficcao_cientifica"
-    ]
-  },
-  {
-    "id": 280092,
-    "title": "Sobrenatural: A Origem",
-    "gold": [
-      "terror"
-    ]
-  },
-  {
-    "id": 281957,
-    "title": "O Regresso",
-    "gold": [
-      "drama"
-    ]
-  },
-  {
-    "id": 284053,
-    "title": "Thor: Ragnarok",
-    "gold": [
-      "comedia",
       "ficcao_cientifica"
     ]
   },
@@ -647,22 +631,30 @@
     "title": "Maggie - A Transformação",
     "gold": [
       "drama",
-      "terror"
+      "terror",
+      "ficcao_cientifica"
     ]
   },
   {
-    "id": 299534,
-    "title": "Vingadores: Ultimato",
+    "id": 301528,
+    "title": "Toy Story 4",
+    "gold": [
+      "comedia"
+    ]
+  },
+  {
+    "id": 315635,
+    "title": "Homem-Aranha: De Volta ao Lar",
     "gold": [
       "ficcao_cientifica"
     ]
   },
   {
-    "id": 313369,
-    "title": "La La Land: Cantando Estações",
+    "id": 335984,
+    "title": "Blade Runner 2049",
     "gold": [
       "drama",
-      "comedia"
+      "ficcao_cientifica"
     ]
   },
   {
@@ -680,10 +672,38 @@
     ]
   },
   {
-    "id": 436969,
-    "title": "O Esquadrão Suicida",
+    "id": 383498,
+    "title": "Deadpool 2",
     "gold": [
       "comedia"
+    ]
+  },
+  {
+    "id": 384018,
+    "title": "Velozes & Furiosos: Hobbs & Shaw",
+    "gold": [
+      "comedia"
+    ]
+  },
+  {
+    "id": 396535,
+    "title": "Invasão Zumbi",
+    "gold": [
+      "terror"
+    ]
+  },
+  {
+    "id": 414419,
+    "title": "Kill Bill: The Whole Bloody Affair",
+    "gold": [
+      "drama"
+    ]
+  },
+  {
+    "id": 439079,
+    "title": "A Freira",
+    "gold": [
+      "terror"
     ]
   },
   {
@@ -694,49 +714,41 @@
     ]
   },
   {
-    "id": 447332,
-    "title": "Um Lugar Silencioso",
+    "id": 460458,
+    "title": "Resident Evil: Bem-Vindo a Raccoon City",
+    "gold": [
+      "terror",
+      "ficcao_cientifica"
+    ]
+  },
+  {
+    "id": 490132,
+    "title": "Green Book: O Guia",
+    "gold": [
+      "drama",
+      "comedia"
+    ]
+  },
+  {
+    "id": 508947,
+    "title": "Red: Crescer é Uma Fera",
+    "gold": [
+      "comedia"
+    ]
+  },
+  {
+    "id": 530385,
+    "title": "Midsommar: O Mal Não Espera a Noite",
     "gold": [
       "drama",
       "terror"
     ]
   },
   {
-    "id": 466272,
-    "title": "Era Uma Vez em… Hollywood",
-    "gold": [
-      "drama",
-      "comedia"
-    ]
-  },
-  {
-    "id": 496243,
-    "title": "Parasita",
-    "gold": [
-      "drama",
-      "comedia"
-    ]
-  },
-  {
-    "id": 502356,
-    "title": "Super Mario Bros. O Filme",
+    "id": 546554,
+    "title": "Entre Facas e Segredos",
     "gold": [
       "comedia"
-    ]
-  },
-  {
-    "id": 550988,
-    "title": "Free Guy: Assumindo o Controle",
-    "gold": [
-      "comedia"
-    ]
-  },
-  {
-    "id": 552524,
-    "title": "Lilo & Stitch",
-    "gold": [
-      "comedia",
-      "ficcao_cientifica"
     ]
   },
   {
@@ -744,20 +756,6 @@
     "title": "Gladiador 2",
     "gold": [
       "drama"
-    ]
-  },
-  {
-    "id": 587424,
-    "title": "Infecção",
-    "gold": [
-      "terror"
-    ]
-  },
-  {
-    "id": 604079,
-    "title": "A Longa Marcha: Caminhe ou Morra",
-    "gold": [
-      "terror"
     ]
   },
   {
@@ -775,13 +773,6 @@
     ]
   },
   {
-    "id": 629542,
-    "title": "Os Caras Malvados",
-    "gold": [
-      "comedia"
-    ]
-  },
-  {
     "id": 744275,
     "title": "After: Depois do Desencontro",
     "gold": [
@@ -796,38 +787,47 @@
     ]
   },
   {
-    "id": 803796,
-    "title": "Guerreiras do K-Pop",
+    "id": 934433,
+    "title": "Pânico VI",
     "gold": [
-      "comedia"
+      "terror"
     ]
   },
   {
-    "id": 893723,
-    "title": "Patrulha Canina: Um Filme Superpoderoso",
+    "id": 939243,
+    "title": "Sonic 3: O Filme",
     "gold": [
-      "comedia"
+      "comedia",
+      "ficcao_cientifica"
     ]
   },
   {
-    "id": 933260,
-    "title": "A Substância",
+    "id": 1078605,
+    "title": "A Hora do Mal",
+    "gold": [
+      "terror"
+    ]
+  },
+  {
+    "id": 1084199,
+    "title": "Acompanhante Perfeita",
     "gold": [
       "terror",
       "ficcao_cientifica"
     ]
   },
   {
-    "id": 1022789,
-    "title": "Divertida Mente 2",
+    "id": 1084242,
+    "title": "Zootopia 2",
     "gold": [
       "comedia"
     ]
   },
   {
-    "id": 1233413,
-    "title": "Pecadores",
+    "id": 1234731,
+    "title": "Anaconda",
     "gold": [
+      "comedia",
       "terror"
     ]
   },
@@ -842,7 +842,8 @@
     "id": 1333141,
     "title": "A Sapatona Galáctica",
     "gold": [
-      "comedia"
+      "comedia",
+      "ficcao_cientifica"
     ]
   },
   {

@@ -33,7 +33,7 @@ Na orientação em vídeo de 31/08/2026, o professor pede representações suces
 - A pesquisa auxiliar não interpreta toda a semântica da negação, títulos alternativos nem perguntas com contexto adicional. "Depois de X" é inclusivo por convenção do protótipo, a refinar em avaliação futura.
 - As 20 consultas anotadas foram escritas e julgadas pela equipe; servem para comparar representações, não como avaliação com usuários. A busca por tema cobre só os filmes da amostra.
 - A recomendação é avaliada por gênero compartilhado: dois filmes do mesmo gênero não são necessariamente boas recomendações um para o outro. Não há avaliações de usuários para uma avaliação colaborativa.
-- Na Aula 8, o rótulo de gênero são os `genre_ids` do TMDB restritos aos quatro gêneros, e muitos filmes têm gêneros fora dessas opções (ação, romance, suspense). A execução do Jev registrada ainda usa o recorte de coleta e precisa ser refeita com uma chave válida ([ADR 0019](adr/0019-aula8-jev-classificacao-de-genero.md)). O Jev é um serviço externo e pago: uma nova execução depende da chave e pode usar outro modelo por trás do alias `jev-latest`. A redação das perguntas faz parte da tarefa.
+- Na Aula 8, o rótulo de gênero são os `genre_ids` do TMDB restritos aos quatro gêneros, e muitos filmes têm gêneros fora dessas opções (ação, romance, suspense). O Jev foi refeito com esse rótulo ([ADR 0019](adr/0019-aula8-jev-classificacao-de-genero.md)). O Jev é um serviço externo e pago: uma nova execução depende da chave e pode usar outro modelo por trás do alias `jev-latest`. A redação das perguntas faz parte da tarefa.
 
 ## Próximas experiências
 
