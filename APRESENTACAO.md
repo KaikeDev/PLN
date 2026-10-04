@@ -27,7 +27,7 @@ Por fim, um **site** usa duas dessas tarefas na prática: a busca de filmes e a 
 
 📄 [docs/1-coleta-e-preparacao.md](docs/1-coleta-e-preparacao.md) · 💻 [`corpus/`](backend/src/app/corpus/) · 📁 [`data/coleta/`](data/coleta/tmdb_2026-09-12/), [`data/preparacao/`](data/preparacao/tmdb_2026-09-12/)
 
-- **Amostra intencional:** 4 gêneros (Drama, Comédia, Terror, Ficção científica) × 3 períodos (1980–1999, 2000–2014, 2015–2025). Pegamos os filmes mais populares de cada combinação, com pelo menos 50 votos. Matrix entrou como caso pedido pelo professor.
+- **Amostra intencional:** 4 gêneros (Drama, Comédia, Terror, Ficção científica) × 3 períodos (1980–1999, 2000–2014, 2015–2025). Pegamos os filmes mais populares de cada combinação, com pelo menos 50 votos. .
 - **Volume:** 481 registros recebidos e 51 duplicatas removidas, resultando em **430 filmes únicos**, dos quais 428 têm sinopse em português.
 - **Seis preparações do mesmo texto**, cada uma salva separadamente: original → limpa → normalizada → tokenizada → sem pontuação → sem stopwords. Acentos, números e negações ("não", "nunca") são preservados.
 - **Reprodutível:** coleta automatizada em um comando, respostas originais da API salvas e um manifesto com o hash de cada arquivo.
