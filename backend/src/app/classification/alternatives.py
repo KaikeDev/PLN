@@ -24,7 +24,7 @@ from sklearn.svm import LinearSVC
 from app.classification.config import ClassificationConfig
 from app.classification.dataset import Task
 from app.classification.evaluation import Features, Folds, f1_macro_score
-from app.vectors.metrics import rounded
+from app.representations.metrics import rounded
 
 NAIVE_BAYES_ALPHAS = [0.001, 0.01, 0.1, 0.5, 1.0]
 NEIGHBORS = [1, 5, 9, 15, 25, 35, 51, 75]

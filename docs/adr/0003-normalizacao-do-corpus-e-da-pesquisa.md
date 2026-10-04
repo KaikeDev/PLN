@@ -10,7 +10,7 @@ O corpus de sinopses serve para comparar técnicas de PLN; acentos distinguem pa
 ## Decisão
 
 - **Corpus** (`app.corpus.transform`): limpeza com Unicode NFC e `casefold`, preservando acentos.
-- **Pesquisa** (`app.domain.search.normalization`): minúsculas e remoção de acentos (NFKD sem marcas combinantes).
+- **Pesquisa** (`app.search.normalization`): minúsculas e remoção de acentos (NFKD sem marcas combinantes).
 - **Regras compartilhadas** (`app.shared.language`): marcadores de negação ("não", "nem", "nunca", "sem") e limites de ano de lançamento ficam em um único lugar, na forma acentuada. Cada consumidor aplica a própria normalização.
 
 ## Alternativas consideradas

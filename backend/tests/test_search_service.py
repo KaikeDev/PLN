@@ -2,9 +2,9 @@
 
 import unittest
 
-from app.domain.search.extractor import ExtractedFilters
-from app.domain.search.ports import DiscoverQuery
-from app.domain.search.service import PAGE_SIZE, FilterInterpretation, Notice, SearchMode, SearchService
+from app.search.ports import DiscoverQuery
+from app.search.rules.extractor import ExtractedFilters
+from app.search.service import PAGE_SIZE, FilterInterpretation, Notice, SearchMode, SearchService
 from tests.fakes import FakeCatalog, FakeSynopsisIndex
 
 MOVIES = {

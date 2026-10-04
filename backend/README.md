@@ -1,26 +1,26 @@
 # Backend de PLN
 
-As instruções completas, o mapa da rubrica e as evidências estão no [README principal](../README.md). A organização do código está em [docs/arquitetura.md](../docs/arquitetura.md), e as decisões, em [docs/adr](../docs/adr/README.md).
+O código fica em `src/app`, com uma pasta por tarefa da disciplina. A visão geral está no [README principal](../README.md), a apresentação em [APRESENTACAO.md](../APRESENTACAO.md), todos os comandos em [docs/tecnico/como-executar.md](../docs/tecnico/como-executar.md) e a organização do código em [docs/tecnico/arquitetura.md](../docs/tecnico/arquitetura.md).
+
+| Pasta em `src/app` | Tarefa | Comando |
+|---|---|---|
+| `corpus/` | 1. Coleta e preparação | `python -m app.corpus collect / process / verify` |
+| `representations/` | 2. As oito representações e o pipeline das análises | `python -m app.representations build / verify` |
+| `search/` | 3. Busca (regras, combinação TF-IDF + embedding de sentença, avaliação) | `python -m app.search query / hybrid` |
+| `recommendation/` | 4. Recomendação | roda dentro de `app.representations build` |
+| `clustering/` | 5. Agrupamento e visualização | roda dentro de `app.representations build` |
+| `classification/` | 6. Classificação (regressão logística, Jev em `jev/`, classificador da tela) | `python -m app.classification build / verify`, `python -m app.classification.jev run / verify` |
+| `api/`, `main.py`, `settings.py` | Site: API FastAPI | `uvicorn app.main:app --host 127.0.0.1` |
+| `tmdb/` | Cliente da API do TMDB | — |
+| `shared/` | Artefatos, manifesto, validação e regras de língua | — |
 
 Nesta pasta:
 
 ```bash
-uv sync --frozen
+uv sync --frozen --extra semantico --extra jev
 uv run --frozen python -m unittest discover -s tests -v
 uv run --frozen ruff check src tests && uv run --frozen ruff format --check src tests
 uv run --frozen mypy
-uv run --frozen python -m app.corpus --help
-uv run --frozen python -m app.vectors --help
-uv run --frozen python -m app.classification --help
-uv run --frozen uvicorn app.main:app --host 127.0.0.1
 ```
 
-| Pacote | Conteúdo |
-|---|---|
-| `src/app/corpus` | Etapa 1: coleta e preparação da base |
-| `src/app/vectors` | Etapa 2: representações vetoriais e análises |
-| `src/app/classification` | Etapa 3: classificação de gêneros a partir das sinopses |
-| `src/app/api`, `src/app/domain`, `src/app/infra` | Demonstração auxiliar de pesquisa (API FastAPI sobre o TMDB) |
-| `src/app/shared` | Artefatos, manifesto, validação e regras de língua compartilhadas |
-
-A credencial fica apenas em `backend/.env` (modelo em `.env.example`) ou em variável de ambiente, e só é necessária para a API e para uma nova coleta. O processamento e a vetorização dos dados já salvos funcionam offline.
+As credenciais ficam só em `backend/.env` (modelo em `.env.example`) ou em variáveis de ambiente. Elas só são necessárias para o site, para uma coleta nova e para chamadas novas ao Jev. Conferir e refazer os dados já entregues funciona sem rede.

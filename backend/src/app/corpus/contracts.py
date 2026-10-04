@@ -1,4 +1,4 @@
-"""Contrato público da pasta processada, consumido por `app.vectors` sem depender do processamento.
+"""Contrato público da pasta processada, consumido por `app.representations` sem depender do processamento.
 
 `STAGES` associa cada arquivo de etapa à chave de `Representations` que ele serializa. A ordem é a
 ordem de produção e é registrada no manifesto; alterá-la muda o formato da pasta processada.

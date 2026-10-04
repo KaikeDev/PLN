@@ -10,7 +10,7 @@ from fastapi import APIRouter, Depends, HTTPException, Query, status
 
 from app.api.dependencies import enforce_rate_limit, get_genre_classifier
 from app.api.schemas import ClassificationResponse, GenreScore
-from app.domain.classification.ports import GenreClassifier
+from app.classification.ports import GenreClassifier
 
 MAX_TEXT_LENGTH = 1000
 

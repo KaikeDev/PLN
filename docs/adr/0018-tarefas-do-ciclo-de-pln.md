@@ -29,8 +29,8 @@ Cada representação deve ser aplicada às quatro tarefas. A auditoria de 29/09/
   - exemplos explicados: termos idênticos nas lexicais e pares de palavras próximas (≈) no word2vec.
 - **Visualização dos clusters:** cada representação ganha `<representação>.clusters.svg`, com as mesmas coordenadas da projeção por gênero, coloridas pelo cluster. `clustering.json` guarda o cluster de cada sinopse (`assignments`).
 - **Rótulos unificados:** `Document.genres` passa a ser o conjunto de `genre_ids` do TMDB restrito aos gêneros da coleta, em todas as etapas. Os gêneros da coleta são derivados dos recortes em `memberships.json`, que continua registrando a proveniência.
-- **Um único K-Means:** `app.vectors.clusters` (`fit_kmeans`, `project_2d`, `descriptive_terms`) é usado pelas duas etapas. A Etapa 2 agrupa as 428 sinopses; a Etapa 3 agrupa as 325 da tarefa multiclasse, para comparar com o classificador nas mesmas sinopses. Por isso o ARI das duas etapas difere.
-- **Reaproveitamento dos vetores densos:** `python -m app.classification build --vectors <pasta da Etapa 2>`. `app.vectors.stored` aceita a pasta só se:
+- **Um único K-Means:** `app.clustering.kmeans` (`fit_kmeans`, `project_2d`, `descriptive_terms`) é usado pelas duas etapas. A Etapa 2 agrupa as 428 sinopses; a Etapa 3 agrupa as 325 da tarefa multiclasse, para comparar com o classificador nas mesmas sinopses. Por isso o ARI das duas etapas difere.
+- **Reaproveitamento dos vetores densos:** `python -m app.classification build --vectors <pasta da Etapa 2>`. `app.representations.stored` aceita a pasta só se:
   - os hashes do manifesto conferem;
   - ela veio do mesmo corpus processado;
   - as sinopses estão na mesma ordem;
@@ -51,7 +51,7 @@ Cada representação deve ser aplicada às quatro tarefas. A auditoria de 29/09/
 ## Consequências
 
 - **Arquivos da Etapa 2:** `neighbors.json` dá lugar a `recommendation.json`; `documents.json` passa a trazer os gêneros por nome; `clustering.json` ganha `assignments`. ARI, NMI e pureza foram recalculados com os novos rótulos e não são comparáveis com a versão anterior.
-- **Resultados** ([relatório da Etapa 2](../../data/vectors/tmdb_2026-09-12/report.md)):
+- **Resultados** ([relatório da Etapa 2](../../data/representacoes/tmdb_2026-09-12/report.md)):
   - recomendação: o BERTimbau tem a maior precisão @5 (63,6%, contra 37,9% da referência) e o maior ARI (0,144);
   - busca: o modelo de sentença tem o maior MRR (0,750), com só duas consultas;
   - classificação: o skip-gram tem o maior F1 macro (71,0%). Nenhuma representação vence todas as tarefas.

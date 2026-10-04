@@ -8,7 +8,7 @@ from dataclasses import dataclass
 
 import numpy as np
 
-from app.vectors.corpus import ProcessedCorpus
+from app.representations.corpus import ProcessedCorpus
 
 MULTICLASS = "multiclasse"
 MULTILABEL = "multirrotulo"

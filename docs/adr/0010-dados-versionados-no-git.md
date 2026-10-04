@@ -9,7 +9,7 @@ A avaliação pede um repositório navegável em que dados brutos, transformaç�
 
 ## Decisão
 
-Versionar no Git apenas a amostra oficial `tmdb_2026-09-12` em `data/raw`, `data/processed` e `data/vectors`. Reproduções locais ficam fora do repositório pelo `.gitignore`. Modelos pré-treinados e caches do Hugging Face nunca são versionados. Toda saída mantém a atribuição ao TMDB.
+Versionar no Git apenas a amostra oficial `tmdb_2026-09-12` em `data/coleta`, `data/preparacao` e `data/representacoes`. Reproduções locais ficam fora do repositório pelo `.gitignore`. Modelos pré-treinados e caches do Hugging Face nunca são versionados. Toda saída mantém a atribuição ao TMDB.
 
 ## Alternativas consideradas
 

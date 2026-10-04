@@ -1,1 +1,1 @@
-"""Etapa 3: classificação de gêneros a partir das sinopses (Aula 8)."""
+"""Classificação de gênero: regressão logística sobre as representações (validação cruzada), o Jev sem treino e o classificador da tela do site."""

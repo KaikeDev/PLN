@@ -1,7 +1,0 @@
-{
-  "description": "Busca por tema do site: soma ponderada dos cossenos normalizados das representações abaixo, definidas em vetorizacao_semantica.json. Pesos escolhidos com as consultas de config/consultas.json (ADR 0020).",
-  "representations": [
-    {"name": "tfidf_sem_stopwords", "weight": 0.3},
-    {"name": "sentenca_minilm", "weight": 0.7}
-  ]
-}

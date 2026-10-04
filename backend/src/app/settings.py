@@ -34,11 +34,11 @@ class Settings(BaseSettings):
     rate_limit_per_minute: int = Field(60, ge=1, le=10_000)
     typesafe_api_key: SecretStr | None = None
     synopsis_search: bool = True
-    synopsis_processed_dir: Path = REPOSITORY_DIR / "data" / "processed" / SAMPLE
-    synopsis_raw_dir: Path = REPOSITORY_DIR / "data" / "raw" / SAMPLE
-    synopsis_vectors_config: Path = REPOSITORY_DIR / "config" / "vetorizacao_semantica.json"
-    synopsis_search_config: Path = REPOSITORY_DIR / "config" / "busca.json"
-    synopsis_classifier_config: Path = REPOSITORY_DIR / "config" / "classificacao_semantica.json"
+    synopsis_processed_dir: Path = REPOSITORY_DIR / "data" / "preparacao" / SAMPLE
+    synopsis_raw_dir: Path = REPOSITORY_DIR / "data" / "coleta" / SAMPLE
+    synopsis_vectors_config: Path = REPOSITORY_DIR / "config" / "representacoes" / "vetorizacao_semantica.json"
+    synopsis_search_config: Path = REPOSITORY_DIR / "config" / "busca" / "busca.json"
+    synopsis_classifier_config: Path = REPOSITORY_DIR / "config" / "classificacao" / "classificacao_semantica.json"
     synopsis_classifier_representation: str = "sentenca_minilm"
 
     def require_tmdb_token(self) -> str:

@@ -22,8 +22,8 @@ from sklearn.preprocessing import StandardScaler
 from app.classification.config import ClassificationConfig
 from app.classification.dataset import Task
 from app.classification.grouping import agreement
-from app.vectors.metrics import rounded
-from app.vectors.space import LexicalSpace, Representation
+from app.representations.metrics import rounded
+from app.representations.space import LexicalSpace, Representation
 
 BASELINE = "maioria"
 LOGISTIC = "regressao_logistica"

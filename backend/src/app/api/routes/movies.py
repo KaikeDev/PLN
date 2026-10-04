@@ -10,8 +10,8 @@ from fastapi import APIRouter, Depends, HTTPException, Path, Query, status
 
 from app.api.dependencies import enforce_rate_limit, get_details_provider, get_search_service
 from app.api.schemas import MovieDetails, SearchResponse
-from app.domain.search.ports import CatalogError, MovieDetailsProvider
-from app.domain.search.service import SearchMode, SearchService
+from app.search.ports import CatalogError, MovieDetailsProvider
+from app.search.service import SearchMode, SearchService
 from app.shared.language import MAX_RELEASE_YEAR, MIN_RELEASE_YEAR
 
 MAX_QUERY_LENGTH = 200

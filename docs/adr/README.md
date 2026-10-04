@@ -25,7 +25,8 @@ Cada ADR registra uma decisão com contexto, alternativas e consequências, no f
 | [0019](0019-aula8-jev-classificacao-de-genero.md) | Classificação de gênero com o Jev × TF-IDF + regressão logística (Aula 8) | Aceita |
 | [0020](0020-busca-hibrida-tfidf-e-sentenca.md) | Busca do site por tema: TF-IDF + embedding de sentença, com os filtros das regras | Aceita |
 | [0021](0021-classificacao-na-tela.md) | Classificação de gênero na tela do site | Aceita |
+| [0022](0022-organizacao-por-tarefa.md) | Repositório organizado por tarefa da disciplina | Aceita |
 
-O resumo de todas as decisões e das justificativas está em [`adr.md`](../../adr.md), na raiz do repositório.
+O resumo de todas as decisões e das justificativas está em [`resumo.md`](resumo.md).
 
-Modelo para uma nova ADR: copie a estrutura de qualquer arquivo, use o próximo número, acrescente uma linha nesta tabela e uma entrada em `adr.md`.
+Modelo para uma nova ADR: copie a estrutura de qualquer arquivo, use o próximo número, acrescente uma linha nesta tabela e uma entrada em `resumo.md`.

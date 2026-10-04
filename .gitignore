@@ -44,12 +44,14 @@ coverage.xml
 *.h5
 pytorch_model.bin
 
-data/raw/*
-!data/raw/tmdb_2026-09-12/
-data/processed/*
-!data/processed/tmdb_2026-09-12/
-data/vectors/*
-!data/vectors/tmdb_2026-09-12/
+data/coleta/*
+!data/coleta/tmdb_2026-09-12/
+data/preparacao/*
+!data/preparacao/tmdb_2026-09-12/
+data/representacoes/*
+!data/representacoes/tmdb_2026-09-12/
+data/classificacao/*
+!data/classificacao/tmdb_2026-09-12/
 data/jev/*
 !data/jev/tmdb_2026-09-12/
 

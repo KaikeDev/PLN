@@ -33,8 +33,8 @@ def collect(config_path: Path, output: Path, fetch: Fetch | None = None) -> dict
 
 
 def _tmdb_fetch() -> Fetch:
-    from app.infra.tmdb.client import TMDBClient
     from app.settings import get_settings
+    from app.tmdb.client import TMDBClient
 
     return TMDBClient.from_settings(get_settings()).get
 

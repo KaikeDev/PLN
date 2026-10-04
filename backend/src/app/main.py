@@ -22,16 +22,16 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from app.api.rate_limit import RateLimiter
 from app.api.router import api_router
-from app.domain.classification.ports import GenreClassifier
-from app.domain.search.ports import MovieSource, SynopsisIndex
-from app.domain.search.service import SearchService
-from app.infra.tmdb.cache import CachedMovieCatalog
-from app.infra.tmdb.catalog import TMDBMovieCatalog
-from app.infra.tmdb.client import TMDBClient
+from app.classification.ports import GenreClassifier
+from app.search.ports import MovieSource, SynopsisIndex
+from app.search.service import SearchService
 from app.settings import Settings, get_settings
+from app.tmdb.cache import CachedMovieCatalog
+from app.tmdb.catalog import TMDBMovieCatalog
+from app.tmdb.client import TMDBClient
 
 if TYPE_CHECKING:
-    from app.infra.synopsis.index import CorpusSynopsisIndex
+    from app.search.synopsis_index import CorpusSynopsisIndex
 
 logger = logging.getLogger(__name__)
 
@@ -84,7 +84,7 @@ def create_app(
 
 
 def _load_synopsis_index(settings: Settings) -> CorpusSynopsisIndex | None:
-    from app.infra.synopsis.index import CorpusSynopsisIndex
+    from app.search.synopsis_index import CorpusSynopsisIndex
 
     try:
         index = CorpusSynopsisIndex.load(
@@ -101,7 +101,7 @@ def _load_genre_classifier(settings: Settings, index: CorpusSynopsisIndex) -> Ge
     from app.classification.alternatives import ALTERNATIVES
     from app.classification.config import load_config
     from app.classification.live import GenreClassifier as TrainedClassifier
-    from app.vectors.methods import METHODS
+    from app.representations.methods import METHODS
 
     name = settings.synopsis_classifier_representation
     try:

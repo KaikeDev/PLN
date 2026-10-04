@@ -15,10 +15,10 @@ from app.classification.live import GenreClassifier
 from app.classification.pipeline import build, verify
 from app.corpus.collect import collect
 from app.corpus.process import process
+from app.representations.corpus import ProcessedCorpus
+from app.representations.pipeline import build as build_vectors
 from app.shared.artifacts import read_json_array, read_json_object, read_jsonl, write_json
-from app.vectors.corpus import ProcessedCorpus
-from app.vectors.pipeline import build as build_vectors
-from tests.test_vectors import FAKE_METHODS, REVISION
+from tests.test_representations import FAKE_METHODS, REVISION
 
 DRAMA, SCIFI = 18, 878
 SYNOPSES = {

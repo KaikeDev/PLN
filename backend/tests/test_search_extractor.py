@@ -3,9 +3,9 @@
 import unittest
 from typing import ClassVar
 
-from app.domain.search.extractor import FilterExtractor
-from app.domain.search.negation import is_negated
-from app.domain.search.period import extract_period
+from app.search.rules.extractor import FilterExtractor
+from app.search.rules.negation import is_negated
+from app.search.rules.period import extract_period
 from tests.fakes import FakeCatalog
 
 COMEDY, FAMILY, HORROR, DRAMA, ROMANCE, ACTION = 35, 10751, 27, 18, 10749, 28

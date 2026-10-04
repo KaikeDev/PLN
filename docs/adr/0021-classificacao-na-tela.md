@@ -17,7 +17,7 @@ A classificação de gêneros ([ADR 0017](0017-aula8-classificacao-de-generos.md
   - Textos acima de 500 caracteres são cortados no último espaço antes do limite, já que o modelo de sentença trunca a entrada em 128 tokens.
 - **Tela:** a seção "Classificar uma sinopse", com um campo de texto, mostra o gênero previsto e uma barra (`<progress>`) por gênero. A barra não depende de estilo inline, que a política de segurança da página bloqueia.
 - **Arquitetura:**
-  - a porta `GenreClassifier` fica em `app.domain.classification`;
+  - a porta `GenreClassifier` fica em `app.classification`;
   - o modelo, em `app.classification.live`;
   - a montagem, em `app.main`, logo depois do índice de sinopses.
 

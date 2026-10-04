@@ -6,16 +6,16 @@ import unittest
 from pathlib import Path
 from types import SimpleNamespace
 
+from app.classification.jev.config import draw_sample, load_config
+from app.classification.jev.pipeline import run, verify
+from app.classification.jev.ports import Question
+from app.classification.jev.responses import validate_response
+from app.classification.jev.typesafe_client import normalize_response
 from app.corpus.collect import collect
 from app.corpus.process import process
-from app.infra.typesafe.client import normalize_response
-from app.jev.config import draw_sample, load_config
-from app.jev.pipeline import run, verify
-from app.jev.ports import Question
-from app.jev.responses import validate_response
+from app.representations.corpus import ProcessedCorpus
 from app.settings import Settings
 from app.shared.artifacts import read_json_object, read_jsonl, write_json
-from app.vectors.corpus import ProcessedCorpus
 
 DRAMA = [
     (1, "Família em crise", "Uma família enfrenta o luto e reconstrói a vida depois da perda do pai."),

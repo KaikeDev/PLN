@@ -5,8 +5,8 @@ import unittest
 from fastapi.testclient import TestClient
 
 from app.api.rate_limit import RateLimiter
-from app.domain.search.ports import CatalogError
 from app.main import create_app
+from app.search.ports import CatalogError
 from app.settings import Settings
 from tests.fakes import FakeCatalog, FakeGenreClassifier, FakeSynopsisIndex
 

@@ -8,7 +8,7 @@ from typing import Literal
 
 from pydantic import BaseModel, ConfigDict
 
-from app.domain.search.service import FilterInterpretation, Notice, SearchResult
+from app.search.service import FilterInterpretation, Notice, SearchResult
 
 
 class Health(BaseModel):

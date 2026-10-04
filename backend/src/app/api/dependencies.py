@@ -3,9 +3,9 @@
 from fastapi import Request
 
 from app.api.rate_limit import RateLimiter
-from app.domain.classification.ports import GenreClassifier
-from app.domain.search.ports import MovieDetailsProvider
-from app.domain.search.service import SearchService
+from app.classification.ports import GenreClassifier
+from app.search.ports import MovieDetailsProvider
+from app.search.service import SearchService
 
 
 def get_search_service(request: Request) -> SearchService:

@@ -31,11 +31,11 @@ jobs:
         run: uv run --frozen python -m unittest discover -s tests -v
       - name: Integridade dos dados entregues
         run: |
-          uv run --frozen python -m app.corpus verify --input ../data/processed/tmdb_2026-09-12
-          uv run --frozen python -m app.vectors verify --input ../data/vectors/tmdb_2026-09-12
-          uv run --frozen python -m app.classification verify --input ../data/classification/tmdb_2026-09-12
+          uv run --frozen python -m app.corpus verify --input ../data/preparacao/tmdb_2026-09-12
+          uv run --frozen python -m app.representations verify --input ../data/representacoes/tmdb_2026-09-12
+          uv run --frozen python -m app.classification verify --input ../data/classificacao/tmdb_2026-09-12
       - name: Integridade da saída do Jev
-        run: uv run --frozen python -m app.jev verify --input ../data/jev/tmdb_2026-09-12
+        run: uv run --frozen python -m app.classification.jev verify --input ../data/jev/tmdb_2026-09-12
 
   frontend:
     runs-on: ubuntu-latest

@@ -5,11 +5,11 @@ import unittest
 
 import requests
 
-from app.domain.search.ports import DiscoverQuery
-from app.infra.tmdb.cache import CachedMovieCatalog
-from app.infra.tmdb.catalog import TMDBMovieCatalog
-from app.infra.tmdb.client import RETRY_STATUSES, TMDBClient, TMDBError, create_session
+from app.search.ports import DiscoverQuery
 from app.settings import Settings
+from app.tmdb.cache import CachedMovieCatalog
+from app.tmdb.catalog import TMDBMovieCatalog
+from app.tmdb.client import RETRY_STATUSES, TMDBClient, TMDBError, create_session
 from tests.fakes import FakeCatalog
 
 TOKEN = "token-de-teste-nao-real"

@@ -3,7 +3,7 @@
 Ajusta a mesma regressão logística avaliada na Etapa 3 (`estimator`: padronização, `C` escolhido pela
 log loss em dobras internas e classes balanceadas) com todas as sinopses da tarefa multiclasse, numa
 representação densa já construída. A qualidade esperada é a medida por validação cruzada em
-`data/classification`; aqui o modelo só é ajustado para uso.
+`data/classificacao`; aqui o modelo só é ajustado para uso.
 
 Textos acima de `MAX_QUERY_CHARS` são cortados no último espaço antes do limite: o modelo de sentença já
 trunca a entrada em 128 tokens, de tamanho parecido, então o corte quase não muda a previsão.
@@ -14,9 +14,9 @@ import numpy as np
 from app.classification.config import ClassificationConfig
 from app.classification.dataset import make_tasks
 from app.classification.evaluation import LOGISTIC, estimator, features
-from app.vectors.config import MAX_QUERY_CHARS
-from app.vectors.corpus import ProcessedCorpus
-from app.vectors.space import LexicalSpace, Representation
+from app.representations.config import MAX_QUERY_CHARS
+from app.representations.corpus import ProcessedCorpus
+from app.representations.space import LexicalSpace, Representation
 
 
 class GenreClassifier:

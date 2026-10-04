@@ -16,7 +16,7 @@ O professor pediu representações sucessivas dos mesmos dados, comparação fut
 - **Deduplicação por ID**: a primeira ocorrência é preservada e `memberships.json` registra todos os recortes de cada filme.
 - **Intervalo entre chamadas**: 0,3 s.
 
-Os parâmetros ficam em `config/coleta.json`, validado por `app.corpus.config`.
+Os parâmetros ficam em `config/coleta/coleta.json`, validado por `app.corpus.config`.
 
 ## Alternativas consideradas
 

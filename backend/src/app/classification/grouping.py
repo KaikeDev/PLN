@@ -1,4 +1,4 @@
-"""Clusterização × classificação: o mesmo K-Means da Etapa 2 (`app.vectors.clusters`) sobre as sinopses da tarefa multiclasse.
+"""Clusterização × classificação: o mesmo K-Means da Etapa 2 (`app.clustering.kmeans`) sobre as sinopses da tarefa multiclasse.
 
 O K-Means não vê rótulos: agrupa pela proximidade no espaço da representação, e os gêneros só entram
 depois, para medir quanto os grupos coincidem com as classes. ARI, NMI e pureza não dependem do nome
@@ -12,10 +12,10 @@ from scipy.optimize import linear_sum_assignment
 from sklearn.metrics import accuracy_score, adjusted_rand_score, f1_score, normalized_mutual_info_score
 
 from app.classification.dataset import Task
-from app.vectors.clusters import descriptive_terms, fit_kmeans
-from app.vectors.corpus import ProcessedCorpus
-from app.vectors.metrics import purity, rounded
-from app.vectors.space import LexicalSpace, Representation
+from app.clustering.kmeans import descriptive_terms, fit_kmeans
+from app.representations.corpus import ProcessedCorpus
+from app.representations.metrics import purity, rounded
+from app.representations.space import LexicalSpace, Representation
 
 
 def agreement(truth: np.ndarray, groups: np.ndarray) -> dict:

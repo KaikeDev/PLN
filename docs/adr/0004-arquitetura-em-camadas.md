@@ -16,7 +16,7 @@ app/
 ├── infra/tmdb/     cliente HTTP, catálogo (Adapter) e cache (Decorator)
 ├── shared/         artefatos, manifesto, validação de configuração, regras de língua
 ├── corpus/         Etapa 1 (CLI python -m app.corpus)
-├── vectors/        Etapa 2 (CLI python -m app.vectors)
+├── vectors/        Etapa 2 (CLI python -m app.representations)
 ├── settings.py     configuração
 └── main.py         composição da aplicação (create_app)
 ```

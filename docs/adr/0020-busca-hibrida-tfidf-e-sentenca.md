@@ -9,7 +9,7 @@ A busca do site entendia título e preferências por regras (gênero, período, 
 
 ## Decisão
 
-- **Avaliação antes da escolha:** `config/consultas.json` passou de 2 para 20 consultas, escritas como um usuário digitaria. A equipe fechou os relevantes lendo as 428 sinopses antes de rodar qualquer ranking. A análise `retrieval` ganhou a precisão média (MAP) e a precisão @5, que consideram todos os relevantes, e não só o primeiro, como o MRR e o acerto @5.
+- **Avaliação antes da escolha:** `config/busca/consultas.json` passou de 2 para 20 consultas, escritas como um usuário digitaria. A equipe fechou os relevantes lendo as 428 sinopses antes de rodar qualquer ranking. A análise `retrieval` ganhou a precisão média (MAP) e a precisão @5, que consideram todos os relevantes, e não só o primeiro, como o MRR e o acerto @5.
 - **Resultado de cada representação** (20 consultas):
 
   | Representação | MAP | MRR | Acerto @5 |
@@ -25,7 +25,7 @@ A busca do site entendia título e preferências por regras (gênero, período, 
 
 - **Combinação escolhida:** 0,3 × `tfidf_sem_stopwords` + 0,7 × `sentenca_minilm` (MAP de 0,613, MRR de 0,912, acerto @5 de 100%).
   - Antes da soma, o cosseno de cada representação é dividido pelo maior cosseno dela na consulta, porque o TF-IDF esparso e o embedding denso têm escalas diferentes.
-  - Os pesos ficam em `config/busca.json`; a combinação, em `app.vectors.hybrid`; e o comando `python -m app.vectors hybrid --queries` refaz a comparação.
+  - Os pesos ficam em `config/busca/busca.json`; a combinação, em `app.search.hybrid`; e o comando `python -m app.search hybrid --queries` refaz a comparação.
 - **Integração com as regras:** o novo modo `sinopse` ordena os filmes da amostra pela combinação e aplica os mesmos filtros da descoberta, aos campos do TMDB de cada filme: gêneros incluídos e excluídos, período, ano, nota e votos. O modo `auto` passa a usar essa ordem:
   1. título exato;
   2. sinopse, se encontrar filmes;

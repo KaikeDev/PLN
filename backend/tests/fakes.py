@@ -2,7 +2,7 @@
 
 from collections.abc import Mapping
 
-from app.domain.search.ports import CatalogError, DiscoverQuery
+from app.search.ports import CatalogError, DiscoverQuery
 
 TEST_GENRES = {
     28: "Ação",

@@ -23,7 +23,7 @@ A Etapa 2 já tinha BoW, TF-IDF, word2vec skip-gram e um modelo de sentenças, m
   - No word2vec, devolve o mesmo vetor em qualquer frase.
   - Nos transformers, roda o modelo e faz a média das subpalavras da ocorrência, localizadas pelos deslocamentos de caracteres do tokenizador.
   - BoW e TF-IDF não implementam: a palavra é sempre a mesma coluna.
-- **Sondas linguísticas:** ficam em `config/sondas_semanticas.json`, separadas do corpus e das consultas, e são validadas por `app.vectors.probes`. São pares de frases com relação esperada, pares de palavras e palavras polissêmicas com frases rotuladas por sentido (no mínimo dois sentidos; a palavra precisa aparecer em cada frase).
+- **Sondas linguísticas:** ficam em `config/representacoes/sondas_semanticas.json`, separadas do corpus e das consultas, e são validadas por `app.representations.probes`. São pares de frases com relação esperada, pares de palavras e palavras polissêmicas com frases rotuladas por sentido (no mínimo dois sentidos; a palavra precisa aparecer em cada frase).
 - **Novas análises:**
   - `sentence_pairs`: cosseno e explicação por par de frases.
   - `word_senses`: média de cosseno entre usos do mesmo sentido, média entre sentidos diferentes e a diferença entre elas.

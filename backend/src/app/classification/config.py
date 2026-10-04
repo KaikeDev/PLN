@@ -1,6 +1,6 @@
 """Configuração validada do experimento de classificação. Arquivos de entrada são dados, nunca código.
 
-As representações usam o mesmo esquema e a mesma validação da Etapa 2 (`app.vectors.config`), de modo
+As representações usam o mesmo esquema e a mesma validação da Etapa 2 (`app.representations.config`), de modo
 que um nome de representação significa a mesma coisa nos dois experimentos.
 """
 
@@ -8,8 +8,8 @@ from collections.abc import Collection, Mapping
 from dataclasses import dataclass
 from pathlib import Path
 
+from app.representations.config import MAX_REPRESENTATIONS, ExperimentConfig, MethodInfo, RepresentationSpec, parse_representation
 from app.shared.validation import read_config_json, require_ids, require_int, require_number, require_object, require_unique
-from app.vectors.config import MAX_REPRESENTATIONS, ExperimentConfig, MethodInfo, RepresentationSpec, parse_representation
 
 DEFAULTS = {
     "folds": 5,

@@ -31,6 +31,11 @@ from app.classification.evaluation import (
 )
 from app.classification.grouping import cluster
 from app.classification.report import Findings, make_report
+from app.representations.corpus import ProcessedCorpus
+from app.representations.methods import METHODS, Method
+from app.representations.pipeline import DESCRIPTOR, library_versions
+from app.representations.space import TFIDF
+from app.representations.stored import StoredVectors
 from app.shared.artifacts import (
     create_output,
     json_text,
@@ -43,11 +48,6 @@ from app.shared.artifacts import (
     write_text,
 )
 from app.shared.manifest import MANIFEST_NAME, hash_files, read_manifest, require_plain_filename, verify_hashes
-from app.vectors.corpus import ProcessedCorpus
-from app.vectors.methods import METHODS, Method
-from app.vectors.pipeline import DESCRIPTOR, library_versions
-from app.vectors.space import TFIDF
-from app.vectors.stored import StoredVectors
 
 
 def prepare(
