@@ -46,6 +46,7 @@ header h1 {
 .status--ok { color: var(--cor-ok); border-color: var(--cor-ok); }
 .status--erro { color: var(--cor-erro); border-color: var(--cor-erro); }
 .status--pendente { color: var(--cor-texto-fraco); }
+.status--aviso { color: var(--cor-destaque); border-color: var(--cor-destaque); }
 
 main {
   max-width: 960px;
@@ -521,4 +522,24 @@ button:disabled {
 
 .parecidos__aviso {
   margin: 0.75rem 0 0;
+}
+
+.aviso-catalogo {
+  margin: 0;
+  padding: 0.75rem 1.5rem;
+  background: color-mix(in srgb, var(--cor-destaque) 14%, var(--cor-fundo));
+  border-bottom: 1px solid var(--cor-destaque);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.aviso-catalogo[hidden] {
+  display: none;
+}
+
+.aviso-catalogo code {
+  font-size: 0.85em;
+  background: var(--cor-superficie);
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
 }

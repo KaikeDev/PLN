@@ -85,6 +85,20 @@ uv run --frozen --extra jev python -m app.classification.jev run --input ../data
 
 Sem `--reuse`, cada filme é uma chamada paga à API (exige `TYPESAFE_API_KEY`). Se a primeira chamada falhar, nada é gravado.
 
+## Catálogo do site
+
+> **Obrigatório depois de clonar o repositório**, para o site usar o catálogo completo. Sem ele, a API registra um aviso no terminal, o site mostra uma faixa amarela no topo, e a busca e os filmes parecidos usam só a amostra de 428 filmes. A rota `/saude` informa a origem e o tamanho do catálogo carregado.
+
+A busca por tema e os filmes parecidos do site procuram num catálogo de cerca de 5.500 filmes de 18 gêneros, separado da amostra avaliada ([ADR 0024](../adr/0024-catalogo-do-site.md)). Ele fica fora do Git e é gerado com três comandos, em `backend` (exige `TMDB_BEARER_TOKEN`; cerca de 5 minutos de coleta e alguns minutos de vetores):
+
+```bash
+uv run --frozen python -m app.corpus collect --config ../config/coleta/coleta_site.json --output ../data/coleta/site_2026-10-05
+uv run --frozen python -m app.corpus process --input ../data/coleta/site_2026-10-05 --output ../data/preparacao/site_2026-10-05 --stopwords ../config/coleta/stopwords_pt.txt
+uv run --frozen --extra semantico python -m app.representations build --input ../data/preparacao/site_2026-10-05 --output ../data/representacoes/site_2026-10-05 --config ../config/representacoes/vetorizacao_site.json
+```
+
+Sem o catálogo, a API usa a amostra avaliada de 428 filmes e registra um aviso. Uma coleta nova pode trazer filmes um pouco diferentes, porque o ranking do TMDB muda; para usar outra pasta, ajuste `SYNOPSIS_PROCESSED_DIR`, `SYNOPSIS_RAW_DIR` e `SYNOPSIS_VECTORS_DIR` em `backend/.env`.
+
 ## O site
 
 Terminal 1, em `backend` (exige `TMDB_BEARER_TOKEN`):
@@ -107,7 +121,7 @@ Abra <http://127.0.0.1:5500>. A API leva alguns segundos para iniciar, porque ca
 | `GET /saude` | Saúde da aplicação |
 | `GET /pesquisa?q=...&modo=auto` | Título, tema nas sinopses ou preferências; `modo` também aceita `titulo`, `descoberta` e `sinopse`; `q` com até 200 caracteres |
 | `GET /filmes/603` | Ficha do filme, com elenco e vídeos |
-| `GET /filmes/603/parecidos?quantidade=5` | Filmes de sinopse mais parecida (só para os 428 filmes da amostra) |
+| `GET /filmes/603/parecidos?quantidade=5` | Filmes de sinopse mais parecida (só para os filmes do catálogo do site) |
 | `GET /classificacao?texto=...` | Gênero previsto para uma sinopse e a probabilidade de cada gênero; até 1.000 caracteres |
 
 Configurações opcionais em `backend/.env`: `TMDB_LANGUAGE`, `TMDB_TIMEOUT`, `CORS_ORIGINS` e `RATE_LIMIT_PER_MINUTE` (padrão de 60 requisições por minuto por IP). O CORS só libera as origens da interface, e a API roda em `127.0.0.1` ([ADR 0002](../adr/0002-credencial-e-exposicao-da-api.md)).

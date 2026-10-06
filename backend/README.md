@@ -23,4 +23,6 @@ uv run --frozen ruff check src tests && uv run --frozen ruff format --check src 
 uv run --frozen mypy
 ```
 
+**Depois de clonar:** gere o catálogo do site (passo 2 do [README principal](../README.md#como-executar)); sem ele, a busca por tema e os filmes parecidos usam só os 428 filmes da amostra.
+
 As credenciais ficam só em `backend/.env` (modelo em `.env.example`) ou em variáveis de ambiente. Elas só são necessárias para o site, para uma coleta nova e para chamadas novas ao Jev. Conferir e refazer os dados já entregues funciona sem rede.

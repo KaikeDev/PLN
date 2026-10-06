@@ -100,6 +100,30 @@ Merge da branch `luana-classificacao` (ADRs 0017 e 0018) no `trabalho-3`. As ADR
 | Classificação | `data/classificacao/tmdb_2026-09-12` foi regenerada a partir dos vetores novos (`--vectors`); `verify` aprovou os 25 arquivos. Métricas e relatório idênticos aos da branch; mudaram só as probabilidades do BERTimbau, na sexta casa decimal, e o manifesto. |
 | Jev com os rótulos do TMDB | Nova amostra de 120 sinopses: 47 respostas reaproveitadas e 73 chamadas novas (`jev-1.13.0`), nenhuma falha, em 41 s. `verify` aprovou os 7 arquivos. Repetição com `--reuse` a partir da entrega: 0 chamadas e arquivos de conteúdo idênticos byte a byte. Acurácia de 85,0% contra 56,0% da referência nos 100 filmes de um gênero. A primeira tentativa falhou com HTTP 403 e não gravou nada; a chave foi trocada em `backend/.env`. |
 
+## Preparação da consulta (05/10/2026)
+
+Decisões no [ADR 0025](../adr/0025-preparacao-da-consulta.md).
+
+| Verificação | Resultado e alcance |
+|---|---|
+| Consultas anotadas | `python -m app.search hybrid --queries ../config/busca/consultas.json`: combinação MAP 0,613 → 0,627, MRR 0,912 → 0,912, precisão @5 0,56 → 0,57, acerto @5 de 100%. Sozinhos: TF-IDF sem stopwords 0,446 → 0,459; embedding de sentença 0,560 → 0,566. Mudaram só "filme sobre simulação da realidade" (TF-IDF 0,091 → 0,250; combinação igual) e "quero um filme de ação sobre máquinas" (combinação 0,483 → 0,760), sempre para melhor. |
+| Primeira versão descartada | Recolocar acentos em qualquer palavra fora do vocabulário estragava palavras curtas ("a" → "á", "que" → "quê") e baixava 7 consultas. Por isso a troca vale só para palavras sem acento com 4 letras ou mais. |
+| Testes automatizados | 121 testes aprovados; 6 novos em `test_search_query.py` (limpeza, acentos e casos que não podem mudar). `ruff` e `mypy` sem apontamentos. |
+| API real, catálogo do site | "filmes sobre saude mental" e "filmes sobre saúde mental" dão o mesmo resultado (*Van Gogh*, *O Passageiro do Futuro*, *Whiplash*, *Garota, Interrompida*); antes, vinham filmes sobre cinema. "quero um filme de ação sobre máquinas" → *O Exterminador do Futuro*, *Gigantes de Aço*, *RoboCop*, *Eu, Robô*. "filme sobre simulação da realidade" → *eXistenZ*, *Matrix Revolutions*, *Free Guy*. |
+| Observação | No Git Bash do Windows, `curl --data-urlencode` enviou os acentos em outra codificação e devolveu resultados sem sentido; pelo navegador ou pelo Python, a busca recebe UTF-8 corretamente. |
+
+## Catálogo do site (05/10/2026)
+
+Decisões no [ADR 0024](../adr/0024-catalogo-do-site.md).
+
+| Verificação | Resultado e alcance |
+|---|---|
+| Coleta | `config/coleta/coleta_site.json`: 520 requisições bem-sucedidas, 10.312 registros recebidos, 4.459 repetidos removidos e 5.853 filmes únicos; estado `complete`. |
+| Preparação | 5.853 filmes, 5.525 sinopses preenchidas e 328 ausentes. |
+| Vetores | `config/representacoes/vetorizacao_site.json`: TF-IDF em 0,08 s e embedding de sentença em 123 s. O catálogo inteiro ocupa cerca de 68 MB e fica fora do Git. |
+| Testes automatizados | 114 testes aprovados. Novo: a busca montada com os vetores guardados ordena como a recalculada, e o modelo continua codificando consultas. |
+| API real | Inicia em cerca de 17 s, lendo os vetores guardados. A classificação continua treinada nas 325 sinopses da amostra. Recomendação: Matrix → O Passageiro do Futuro, 13º Andar, Matrix Resurrections; Batman: O Cavaleiro das Trevas, antes fora da amostra, → outros filmes do Batman. Busca: "cobras gigantes" → Anaconda 3 em 1º; "astronautas perdidos no espaço" → Apollo 13, O Enigma do Horizonte, Interestelar; "filme de cobra" traz filmes em que "Cobra" é nome de personagem. A qualidade da busca no catálogo não é medida, porque as consultas anotadas valem só para a amostra. |
+
 ## Filmes parecidos no site (05/10/2026)
 
 Decisões no [ADR 0023](../adr/0023-recomendacao-no-site.md).

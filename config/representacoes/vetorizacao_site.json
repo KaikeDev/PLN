@@ -1,0 +1,19 @@
+{
+  "representations": [
+    {
+      "name": "tfidf_sem_stopwords",
+      "method": "tfidf",
+      "stage": "06_without_stopwords.jsonl"
+    },
+    {
+      "name": "sentenca_minilm",
+      "method": "contextual",
+      "stage": "02_clean.jsonl",
+      "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+    }
+  ],
+  "neighbors_k": 5,
+  "clusters": 4,
+  "random_state": 42
+}

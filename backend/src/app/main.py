@@ -16,6 +16,7 @@ não é controle de acesso, papel do bind em localhost e do limite de requisiç�
 import logging
 from collections.abc import AsyncIterator
 from contextlib import asynccontextmanager
+from pathlib import Path
 from typing import TYPE_CHECKING
 
 from fastapi import FastAPI
@@ -61,17 +62,21 @@ def create_app(
         index = synopsis_index
         classifier = genre_classifier
         similar = recommender
-        if catalog is None and settings.synopsis_search and index is None:
-            loaded = _load_synopsis_index(settings)
-            index = loaded
-            if loaded is not None and classifier is None:
-                classifier = _load_genre_classifier(settings, loaded)
-            if loaded is not None and similar is None:
-                similar = _load_recommender(settings, loaded)
+        if catalog is None and settings.synopsis_search:
+            if index is None:
+                loaded, origin = _load_synopsis_index(settings)
+                index = loaded
+                if loaded is not None:
+                    app.state.catalog = {"origem": origin, "filmes": loaded.size}
+                if loaded is not None and similar is None:
+                    similar = _load_recommender(settings, loaded)
+            if classifier is None:
+                classifier = _load_genre_classifier(settings)
         app.state.details_provider = details
         app.state.genre_classifier = classifier
         app.state.recommender = similar
         app.state.synopsis_index = index
+        app.state.catalog = getattr(app.state, "catalog", None)
         app.state.search_service = SearchService(CachedMovieCatalog(details), index)
         app.state.rate_limiter = RateLimiter(settings.rate_limit_per_minute)
         try:
@@ -91,33 +96,63 @@ def create_app(
     return app
 
 
-def _load_synopsis_index(settings: Settings) -> CorpusSynopsisIndex | None:
+CATALOG_HELP = "docs/tecnico/como-executar.md#catálogo-do-site"
+
+
+def catalog_paths(settings: Settings) -> tuple[Path, Path, Path, str]:
+    """Pastas (preparada, bruta, vetores) e origem do catálogo da busca: o do site, se foi gerado; senão, a amostra avaliada."""
+    if settings.synopsis_processed_dir.exists() and settings.synopsis_raw_dir.exists():
+        return settings.synopsis_processed_dir, settings.synopsis_raw_dir, settings.synopsis_vectors_dir, "catalogo_do_site"
+    return settings.sample_processed_dir, settings.sample_raw_dir, settings.sample_vectors_dir, "amostra_avaliada"
+
+
+def _load_synopsis_index(settings: Settings) -> tuple[CorpusSynopsisIndex | None, str]:
     from app.search.synopsis_index import CorpusSynopsisIndex
 
+    processed, raw, vectors, origin = catalog_paths(settings)
+    if origin == "amostra_avaliada":
+        logger.warning(
+            "\n%s\nCATÁLOGO DO SITE NÃO ENCONTRADO em %s.\n"
+            "A busca por tema e os filmes parecidos vão usar só a amostra avaliada (428 filmes).\n"
+            "Para usar o catálogo de cerca de 5.500 filmes, gere-o com os três comandos de %s.\n%s",
+            "=" * 78,
+            settings.synopsis_processed_dir,
+            CATALOG_HELP,
+            "=" * 78,
+        )
     try:
         index = CorpusSynopsisIndex.load(
-            settings.synopsis_processed_dir, settings.synopsis_raw_dir, settings.synopsis_vectors_config, settings.synopsis_search_config
+            processed,
+            raw,
+            settings.synopsis_vectors_config,
+            settings.synopsis_search_config,
+            vectors=vectors if vectors.exists() else None,
         )
     except (ValueError, FileNotFoundError, ImportError) as exc:
         logger.warning("Busca por sinopse indisponível: %s", exc)
-        return None
-    logger.info("Busca por sinopse carregada")
-    return index
+        return None, origin
+    logger.info("Busca por sinopse carregada com %d filmes (%s)", index.size, origin)
+    return index, origin
 
 
-def _load_genre_classifier(settings: Settings, index: CorpusSynopsisIndex) -> GenreClassifier | None:
+def _load_genre_classifier(settings: Settings) -> GenreClassifier | None:
+    """Regressão logística da Etapa 3 treinada na amostra avaliada, com os vetores já calculados dela."""
     from app.classification.alternatives import ALTERNATIVES
     from app.classification.config import load_config
     from app.classification.live import GenreClassifier as TrainedClassifier
     from app.representations.methods import METHODS
+    from app.representations.pipeline import build_one
 
-    name = settings.synopsis_classifier_representation
+    vectors = settings.sample_vectors_dir
     try:
-        representations = {representation.spec.name: representation for representation, _ in index.hybrid.members}
-        if name not in representations:
-            raise ValueError(f"a representação {name!r} não faz parte da busca por tema")
+        corpus, representation = build_one(
+            settings.sample_processed_dir,
+            settings.synopsis_vectors_config,
+            settings.synopsis_classifier_representation,
+            vectors=vectors if vectors.exists() else None,
+        )
         config = load_config(settings.synopsis_classifier_config, METHODS, ALTERNATIVES)
-        classifier = TrainedClassifier(index.hybrid.corpus, representations[name], config)
+        classifier = TrainedClassifier(corpus, representation, config)
     except (ValueError, FileNotFoundError, ImportError) as exc:
         logger.warning("Classificação indisponível: %s", exc)
         return None

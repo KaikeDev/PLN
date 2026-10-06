@@ -28,20 +28,31 @@ class CorpusSynopsisIndex:
 
     @classmethod
     def load(
-        cls, processed: Path, raw: Path, vectors_config: Path, search_config: Path, methods: Mapping[str, Method] = METHODS
+        cls,
+        processed: Path,
+        raw: Path,
+        vectors_config: Path,
+        search_config: Path,
+        methods: Mapping[str, Method] = METHODS,
+        vectors: Path | None = None,
     ) -> CorpusSynopsisIndex:
         """Verifica as duas pastas, confere que a processada veio da bruta e constrói o índice; `methods` substitui os modelos em testes."""
         verify_raw(raw)
         if read_json_object(processed / "manifest.json").get("source_movies_sha256") != sha256(raw / "movies.jsonl"):
             raise ValueError("A pasta processada não foi gerada a partir desta coleta bruta")
         movies = {row["id"]: {field: row.get(field) for field in SUMMARY_FIELDS} for row in read_jsonl(raw / "movies.jsonl")}
-        return cls(HybridIndex.build(processed, vectors_config, load_search_config(search_config), methods), movies)
+        return cls(HybridIndex.build(processed, vectors_config, load_search_config(search_config), methods, vectors), movies)
 
     def rank(self, text: str) -> list[tuple[int, float]]:
         return self._hybrid.rank(text)
 
     def movie(self, movie_id: int) -> dict:
         return dict(self._movies[movie_id])
+
+    @property
+    def size(self) -> int:
+        """Número de filmes com sinopse no catálogo."""
+        return len(self._hybrid.corpus.ids)
 
     @property
     def hybrid(self) -> HybridIndex:

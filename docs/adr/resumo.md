@@ -29,6 +29,8 @@ O código não tem comentários fora de docstrings. Quando uma docstring cita �
 | [0021](#0021--classificação-de-gênero-na-tela) | Classificação de gênero na tela | API |
 | [0022](#0022--repositório-organizado-por-tarefa) | Repositório organizado por tarefa | Repositório |
 | [0023](#0023--filmes-parecidos-na-ficha-do-filme) | Filmes parecidos na ficha do filme | API |
+| [0024](#0024--catálogo-maior-para-a-busca-e-a-recomendação-do-site) | Catálogo maior para a busca e a recomendação do site | Dados |
+| [0025](#0025--preparação-da-consulta-da-busca-por-tema) | Preparação da consulta da busca por tema | Busca |
 
 ---
 
@@ -294,3 +296,19 @@ As análises que estavam juntas em `vectors/analyses.py` foram separadas por tar
 **Por quê.** A recomendação só existia como avaliação. Mostrá-la a partir de um filme dispensa guardar perfis de usuários e não carrega modelo novo; o BERTimbau teria só 1 ponto a mais de precisão @5.
 
 **Consequência.** Funciona muito bem em franquias e temas marcados e é mais fraca em temas abstratos. Filmes fora dos 428 da amostra mostram um aviso no lugar das recomendações. [Detalhes](0023-recomendacao-no-site.md)
+
+## 0024 — Catálogo maior para a busca e a recomendação do site
+
+**Decisão.** A busca por tema e os filmes parecidos passam a procurar num catálogo de 5.525 sinopses de 18 gêneros (`site_2026-10-05`), coletado pelo mesmo pipeline da Etapa 1. A amostra de 428 sinopses continua sendo a base de todas as avaliações e do classificador da tela. Os vetores do catálogo são calculados uma vez; a API só codifica as consultas. O catálogo fica fora do Git e é refeito com três comandos; sem ele, a API usa a amostra.
+
+**Por quê.** A amostra foi feita para avaliar as técnicas, e não para servir de catálogo: "filme de cobra" encontrava só três sinopses. Ampliar a própria amostra invalidaria as consultas anotadas e as métricas entregues.
+
+**Consequência.** O site encontra muito mais filmes, mas a qualidade da busca no catálogo não é medida: as consultas anotadas valem só para a amostra. [Detalhes](0024-catalogo-do-site.md)
+
+## 0025 — Preparação da consulta da busca por tema
+
+**Decisão.** Antes de ordenar, a busca por tema tira da frase as palavras de pedido ("quero", "me indica", "um filme sobre") e recoloca acentos que faltem, quando a palavra sem acento corresponde a uma só palavra acentuada do vocabulário do TF-IDF ("saude" → "saúde"). Algoritmos, pesos e regras não mudam.
+
+**Por quê.** "Filmes sobre saude mental" trazia filmes sobre cinema: "filmes" pesava como conteúdo, e "saude" não casava com "saúde".
+
+**Consequência.** Nas 20 consultas anotadas, a combinação passou de MAP 0,613 para 0,627, sem nenhuma consulta pior. Temas abstratos continuam mais difíceis que temas concretos. [Detalhes](0025-preparacao-da-consulta.md)

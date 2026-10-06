@@ -7,13 +7,17 @@
   <meta name="referrer" content="no-referrer" />
   <meta name="api-base" content="http://127.0.0.1:8000" />
   <title>API de Filmes (TMDB)</title>
-  <link rel="stylesheet" href="style.css?v=4" />
+  <link rel="stylesheet" href="style.css?v=6" />
 </head>
 <body>
   <header>
     <h1>API de Filmes (TMDB)</h1>
     <div id="status" class="status status--pendente">verificando servidor...</div>
   </header>
+
+  <div id="aviso-catalogo" class="aviso-catalogo" role="status" hidden>
+    <strong>Catálogo do site não gerado.</strong> A busca por tema e os filmes parecidos estão usando só os 428 filmes da amostra avaliada. Para usar o catálogo de cerca de 5.500 filmes, rode os três comandos da seção "Catálogo do site" em <code>docs/tecnico/como-executar.md</code> e reinicie a API.
+  </div>
 
   <main>
     <div class="abas" role="tablist" aria-label="Funções do site">
@@ -72,6 +76,6 @@
     </div>
   </div>
 
-  <script src="script.js?v=4"></script>
+  <script src="script.js?v=6"></script>
 </body>
 </html>

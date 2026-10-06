@@ -61,7 +61,7 @@ Dois exemplos da aula, medidos nos dados:
 4. Testamos as combinações e escolhemos **0,3 × TF-IDF + 0,7 × MiniLM: MAP de 0,613**, com um filme relevante entre os 5 primeiros em todas as 20 consultas.
 5. Para não escolher pesos "decorados", sorteamos 500 vezes metade das consultas para escolher o peso e medimos na outra metade. A combinação ganhou do MiniLM sozinho em 95% dos sorteios.
 
-**No site:** as regras extraem da frase gênero, período, nota e negação ("ação", "dos anos 80", "sem comédia"), e a combinação ordena os filmes pelo tema ("máquinas"). Em "quero um filme de ação sobre máquinas", o site traz O Exterminador do Futuro, Gigantes de Aço, Eu, Robô… Eu, Robô não tem nenhuma palavra da frase, mas o MiniLM entende que robôs são máquinas.
+**No site:** a busca procura num **catálogo de 5.525 filmes de 18 gêneros**, coletado pelo mesmo pipeline, e não só nos 428 da avaliação. As regras extraem da frase gênero, período, nota e negação ("ação", "dos anos 80", "sem comédia"), e a combinação ordena os filmes pelo tema ("máquinas"). Em "quero um filme de ação sobre máquinas", o site traz O Exterminador do Futuro, Gigantes de Aço, Eu, Robô… Eu, Robô não tem nenhuma palavra da frase, mas o MiniLM entende que robôs são máquinas.
 
 ## 5. Recomendação
 
@@ -70,7 +70,7 @@ Dois exemplos da aula, medidos nos dados:
 - **Filme → filmes:** os 5 filmes de vetor mais próximo. **Perfil → filmes:** a média dos filmes de que a pessoa gostou.
 - Sem avaliações de usuários, usamos os gêneros como aproximação: o **BERTimbau acerta 63,6%**, contra 37,9% de uma recomendação que ignora o texto.
 - Para quem gostou de Invocação do Mal, Hereditário e Sobrenatural, o embedding de sentença recomenda Invocação do Mal 2 e 4, A Morte do Demônio… todos de terror sobrenatural.
-- **No site:** a ficha de cada filme da amostra mostra os 5 **filmes parecidos**, com a mesma conta da avaliação. Um teste confirma que são as mesmas recomendações.
+- **No site:** a ficha de cada filme mostra os 5 **filmes parecidos**, com a mesma conta da avaliação, buscando no catálogo de 5.525 filmes. Com o catálogo maior, Matrix passa a recomendar 13º Andar e as continuações de Matrix, e Toy Story, Lightyear e Toy Story 3.
 
 ## 6. Agrupamento e visualização
 
@@ -98,6 +98,8 @@ Três abordagens para o mesmo problema: **qual o gênero desta sinopse?**
 
 ## 8. Roteiro da demonstração
 
+> **Antes da apresentação:** gere o catálogo do site ([passo 2 do README](README.md#como-executar)). Sem ele, a busca e os filmes parecidos usam só os 428 filmes, e os exemplos abaixo mudam. O indicador no topo do site deve mostrar "5.525 filmes".
+
 Com o site rodando ([como executar](docs/tecnico/como-executar.md#o-site)), em <http://127.0.0.1:5500>:
 
 **Aba "Buscar filmes"**
@@ -105,17 +107,18 @@ Com o site rodando ([como executar](docs/tecnico/como-executar.md#o-site)), em <
 | Digitar | O que mostrar |
 |---|---|
 | `Matrix` | Título exato: o site vai direto ao filme |
-| `quero um filme de ação sobre máquinas` | O gênero "ação" vira filtro, e "máquinas" ordena por tema: O Exterminador do Futuro, Gigantes de Aço, Eu, Robô |
+| `quero um filme de ação sobre máquinas` | O gênero "ação" vira filtro, e "máquinas" ordena por tema: O Exterminador do Futuro em 1º |
 | `terror sem comédia` | A negação ("sem comédia") é entendida pelas regras |
-| `casa assombrada por espíritos` | Busca só por tema: Invocação do Mal 2, Os Outros, Cemitério Maldito |
-| `astronautas perdidos no espaço` | Tema sem palavra-chave de gênero: O Enigma do Horizonte, Interestelar, Aliens |
+| `casa assombrada por espíritos` | Busca só por tema: O Grito, Invocação do Mal 2, Os Outros |
+| `astronautas perdidos no espaço` | Tema sem palavra-chave de gênero: Apollo 13, O Enigma do Horizonte, Interestelar |
+| `cobras gigantes` | Agora o catálogo tem filmes de cobra: Anaconda 3 em 1º |
 
 **Ficha do filme (recomendação)**
 
 Clicar num resultado da busca abre a ficha com a seção **"Filmes parecidos"**. Bons exemplos:
-- **Invocação do Mal** → Invocação do Mal 4, Invocação do Mal 2, A Morte do Demônio: A Ascensão;
-- **Toy Story** → Toy Story 3 aparece entre os parecidos;
-- **Matrix** → Contato, Monstros S.A. Bom para mostrar o limite: o tema de Matrix é abstrato.
+- **Matrix** → O Passageiro do Futuro, 13º Andar, Matrix Resurrections, Matrix Revolutions;
+- **Invocação do Mal** → Invocação do Mal 4, Invocação do Mal 2, Annabelle 3;
+- **Toy Story** → Lightyear, Gigantes de Aço, Bumblebee, Toy Story 3.
 
 Clicando num parecido, abre a ficha dele, com os parecidos dele.
 
@@ -135,12 +138,12 @@ Clicando num parecido, abre a ficha dele, com os parecidos dele.
 
 ## 10. Limitações e próximos passos
 
-- **Base pequena e popular:** a busca por tema e a classificação só conhecem os 428 filmes da amostra. "Filme de cobra", por exemplo, traz poucos filmes de cobra. Ampliar a base é o próximo passo natural.
+- **Catálogo do site:** a busca e a recomendação do site procuram em 5.525 filmes populares de 18 gêneros. A qualidade delas foi **medida só na amostra de 428**, porque anotar milhares de filmes à mão é inviável. No catálogo, a busca fica mais ruidosa: em "filme de cobra", aparecem filmes em que "Cobra" é nome de personagem.
 - **Rótulos aproximados:** os gêneros do TMDB restritos a quatro opções apagam outros gêneros, como ação e romance, e geram parte dos "erros".
 - **Avaliação da equipe:** as 20 consultas da busca foram escritas e julgadas por nós; a recomendação é avaliada por gênero, não por usuários.
 - **Busca:**
   - não há nota mínima de corte, então a página sempre traz 20 filmes;
-  - palavras de pedido ainda pesam no TF-IDF: em "filme sobre viagem no tempo", Holocausto Canibal aparece em 1º porque a sinopse dele começa com "O filme…";
+  - palavras de pedido ("quero", "me indica", "filme sobre") são removidas antes da busca por tema, e acentos que faltam voltam ("saude" → "saúde"); formas fora da lista continuam pesando, e temas abstratos, como saúde mental, trazem resultados mais misturados que temas concretos;
   - as regras tratam "família" como o gênero Família: "família aterrorizada por espíritos" filtra só filmes familiares.
 
 ---

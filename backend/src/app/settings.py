@@ -14,14 +14,16 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 BACKEND_DIR = Path(__file__).resolve().parents[2]
 REPOSITORY_DIR = BACKEND_DIR.parent
 SAMPLE = "tmdb_2026-09-12"
+CATALOG = "site_2026-10-05"
 
 
 class Settings(BaseSettings):
     """Parâmetros de integração com o TMDB e o Jev, da busca por sinopse e de exposição da API local.
 
-    A busca por sinopse usa a amostra entregue e as configurações do repositório; `synopsis_search`
-    falso desliga o carregamento dos modelos na inicialização. O classificador de gênero da tela usa a
-    regressão logística da Etapa 3 sobre `synopsis_classifier_representation`, uma das representações da busca.
+    A busca por tema e os filmes parecidos usam o catálogo do site (`synopsis_*_dir`, cerca de 5 mil filmes,
+    ADR 0024), com os vetores das sinopses já calculados; sem o catálogo, a API usa a amostra avaliada
+    (`sample_*_dir`, 428 filmes). O classificador da tela é sempre treinado na amostra avaliada.
+    `synopsis_search` falso desliga o carregamento dos modelos na inicialização.
     """
 
     model_config = SettingsConfigDict(env_file=BACKEND_DIR / ".env", env_file_encoding="utf-8", extra="ignore")
@@ -34,8 +36,12 @@ class Settings(BaseSettings):
     rate_limit_per_minute: int = Field(60, ge=1, le=10_000)
     typesafe_api_key: SecretStr | None = None
     synopsis_search: bool = True
-    synopsis_processed_dir: Path = REPOSITORY_DIR / "data" / "preparacao" / SAMPLE
-    synopsis_raw_dir: Path = REPOSITORY_DIR / "data" / "coleta" / SAMPLE
+    synopsis_processed_dir: Path = REPOSITORY_DIR / "data" / "preparacao" / CATALOG
+    synopsis_raw_dir: Path = REPOSITORY_DIR / "data" / "coleta" / CATALOG
+    synopsis_vectors_dir: Path = REPOSITORY_DIR / "data" / "representacoes" / CATALOG
+    sample_processed_dir: Path = REPOSITORY_DIR / "data" / "preparacao" / SAMPLE
+    sample_raw_dir: Path = REPOSITORY_DIR / "data" / "coleta" / SAMPLE
+    sample_vectors_dir: Path = REPOSITORY_DIR / "data" / "representacoes" / SAMPLE
     synopsis_vectors_config: Path = REPOSITORY_DIR / "config" / "representacoes" / "vetorizacao_semantica.json"
     synopsis_search_config: Path = REPOSITORY_DIR / "config" / "busca" / "busca.json"
     synopsis_classifier_config: Path = REPOSITORY_DIR / "config" / "classificacao" / "classificacao_semantica.json"

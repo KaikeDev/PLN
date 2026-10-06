@@ -1,11 +1,12 @@
 """Rotas HTTP com catálogo falso injetado: contrato JSON, validação, erros, CORS e limite."""
 
 import unittest
+from pathlib import Path
 
 from fastapi.testclient import TestClient
 
 from app.api.rate_limit import RateLimiter
-from app.main import create_app
+from app.main import catalog_paths, create_app
 from app.search.ports import CatalogError
 from app.settings import Settings
 from tests.fakes import FakeCatalog, FakeGenreClassifier, FakeRecommender, FakeSynopsisIndex
@@ -27,7 +28,15 @@ def client_for(
 class ApiTests(unittest.TestCase):
     def test_health(self) -> None:
         with client_for(FakeCatalog()) as client:
-            self.assertEqual(client.get("/saude").json(), {"status": "ok"})
+            self.assertEqual(client.get("/saude").json(), {"status": "ok", "catalogo": None})
+
+    def test_missing_site_catalog_falls_back_to_evaluated_sample(self) -> None:
+        missing = Path("nao-existe")
+        settings = Settings(_env_file=None, synopsis_processed_dir=missing, synopsis_raw_dir=missing)
+        processed, _, vectors, origin = catalog_paths(settings)
+        self.assertEqual((processed, vectors, origin), (settings.sample_processed_dir, settings.sample_vectors_dir, "amostra_avaliada"))
+        present = Settings(_env_file=None, synopsis_processed_dir=Path("."), synopsis_raw_dir=Path("."))
+        self.assertEqual(catalog_paths(present)[3], "catalogo_do_site")
 
     def test_title_search_contract(self) -> None:
         catalog = FakeCatalog(titles=[{"id": 603, "title": "Matrix", "original_title": "The Matrix", "popularity": 9.5}])

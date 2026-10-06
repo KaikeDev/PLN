@@ -12,8 +12,8 @@ Equipe: Kaike Ventura Tuerpe, Luana Nitsche, Pedro Henrique Ortunio e Thiago Bod
 |---|---|---|---|---|---|
 | 1 | Coleta e preparação | 430 filmes de 4 gêneros e 3 períodos; 6 preparações do texto | 428 sinopses, todas as etapas alinhadas pelo ID | [1-coleta-e-preparacao.md](docs/1-coleta-e-preparacao.md) | [`corpus/`](backend/src/app/corpus/) |
 | 2 | Representações | BoW, TF-IDF, word2vec (CBOW e skip-gram), BERTimbau e embedding de sentença | 8 representações comparadas em todas as tarefas | [2-representacoes.md](docs/2-representacoes.md) | [`representations/`](backend/src/app/representations/) |
-| 3 | Busca | Regras para gênero e período + 0,3 × TF-IDF + 0,7 × embedding de sentença | MAP de 0,613 em 20 consultas anotadas | [3-busca.md](docs/3-busca.md) | [`search/`](backend/src/app/search/) |
-| 4 | Recomendação | Filmes parecidos com um filme ou com um perfil; no site, na ficha de cada filme | Precisão @5 de 63,6% (BERTimbau) contra 37,9% ao acaso | [4-recomendacao.md](docs/4-recomendacao.md) | [`recommendation/`](backend/src/app/recommendation/) |
+| 3 | Busca | Regras para gênero e período + 0,3 × TF-IDF + 0,7 × embedding de sentença; no site, num catálogo de 5.525 filmes | MAP de 0,613 em 20 consultas anotadas | [3-busca.md](docs/3-busca.md) | [`search/`](backend/src/app/search/) |
+| 4 | Recomendação | Filmes parecidos com um filme ou com um perfil; no site, na ficha de cada filme, no mesmo catálogo | Precisão @5 de 63,6% (BERTimbau) contra 37,9% ao acaso | [4-recomendacao.md](docs/4-recomendacao.md) | [`recommendation/`](backend/src/app/recommendation/) |
 | 5 | Agrupamento e visualização | K-Means sem rótulos e projeção 2D | Grupos lembram pouco os gêneros (ARI de até 0,144) | [5-agrupamento.md](docs/5-agrupamento.md) | [`clustering/`](backend/src/app/clustering/) |
 | 6 | Classificação | Regressão logística nas 8 representações, Jev sem treino e classificação na tela | F1 de 71,0% (skip-gram); Jev com 85,0% de acurácia | [6-classificacao.md](docs/6-classificacao.md) | [`classification/`](backend/src/app/classification/) |
 
@@ -57,15 +57,35 @@ frontend/                 ← site: busca de filmes, filmes parecidos e classifi
 
 ## Como executar
 
-Em `backend`, com o [uv](https://docs.astral.sh/uv/) instalado:
+Em `backend`, com o [uv](https://docs.astral.sh/uv/) instalado. A credencial do TMDB vai em `backend/.env` (copie `backend/.env.example` e preencha `TMDB_BEARER_TOKEN`).
+
+**1. Ambiente e testes**
 
 ```bash
 uv sync --frozen --extra semantico --extra jev
-uv run --frozen python -m unittest discover -s tests -v                       # testes
-uv run --frozen --extra semantico uvicorn app.main:app --host 127.0.0.1       # site: API (exige TMDB_BEARER_TOKEN)
+uv run --frozen python -m unittest discover -s tests -v
 ```
 
-Em outro terminal, na raiz: `cd frontend && python -m http.server 5500` e abra <http://127.0.0.1:5500>.
+**2. Gerar o catálogo do site — obrigatório depois de clonar**
+
+> [!IMPORTANT]
+> O catálogo de cerca de 5.500 filmes que a **busca por tema** e os **filmes parecidos** usam **não vem no repositório** (são cerca de 68 MB de dados derivados). Sem ele, o site funciona, mas procura só nos 428 filmes da amostra avaliada: a API mostra um aviso no terminal, e o site mostra uma faixa amarela no topo. Para gerar o catálogo (cerca de 5 minutos de coleta e 3 de vetores):
+
+```bash
+uv run --frozen python -m app.corpus collect --config ../config/coleta/coleta_site.json --output ../data/coleta/site_2026-10-05
+uv run --frozen python -m app.corpus process --input ../data/coleta/site_2026-10-05 --output ../data/preparacao/site_2026-10-05 --stopwords ../config/coleta/stopwords_pt.txt
+uv run --frozen --extra semantico python -m app.representations build --input ../data/preparacao/site_2026-10-05 --output ../data/representacoes/site_2026-10-05 --config ../config/representacoes/vetorizacao_site.json
+```
+
+Uma coleta nova pode trazer filmes um pouco diferentes, porque o ranking do TMDB muda. Todas as **avaliações** do projeto continuam na amostra de 428, que vem no repositório ([por quê](docs/adr/0024-catalogo-do-site.md)).
+
+**3. Site**
+
+```bash
+uv run --frozen --extra semantico --extra jev uvicorn app.main:app --host 127.0.0.1
+```
+
+Em outro terminal, na raiz: `cd frontend && python -m http.server 5500` e abra <http://127.0.0.1:5500>. O indicador no canto superior direito mostra em quantos filmes a busca está procurando.
 
 Todos os comandos (refazer cada etapa, conferir os dados, credenciais e problemas conhecidos) estão em [docs/tecnico/como-executar.md](docs/tecnico/como-executar.md).
 

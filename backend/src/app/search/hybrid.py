@@ -6,6 +6,9 @@ Um filme sem cosseno positivo numa representação recebe zero dela. A pontuaç�
 
 `evaluate` mede cada representação sozinha e a combinação nas consultas anotadas, com as mesmas
 métricas da análise `retrieval`.
+
+Antes de ordenar, a consulta perde as palavras de pedido e recupera os acentos do vocabulário do TF-IDF
+(`app.search.query`, ADR 0025).
 """
 
 from collections.abc import Callable, Mapping, Sequence
@@ -20,7 +23,8 @@ from app.representations.corpus import ProcessedCorpus
 from app.representations.methods import METHODS, Method
 from app.representations.metrics import average_precision, precision_at_k, reciprocal_rank, rounded
 from app.representations.pipeline import prepare
-from app.representations.space import Representation
+from app.representations.space import LexicalSpace, Representation
+from app.search.query import AccentRestorer, prepare_query
 from app.search.retrieval import search
 from app.shared.validation import read_config_json, require_name, require_number, require_object, require_unique
 
@@ -59,32 +63,55 @@ def load_search_config(path: Path) -> SearchConfig:
 class HybridIndex:
     """Ordena as sinopses de um corpus pela soma ponderada dos cossenos normalizados."""
 
-    def __init__(self, corpus: ProcessedCorpus, members: Sequence[tuple[Representation, float]]) -> None:
+    def __init__(
+        self,
+        corpus: ProcessedCorpus,
+        members: Sequence[tuple[Representation, float]],
+        restorer: AccentRestorer | None = None,
+    ) -> None:
         self.corpus = corpus
         self.members = tuple(members)
         self._rows = {movie_id: row for row, movie_id in enumerate(corpus.ids)}
+        vocabulary = {
+            term for representation, _ in self.members if isinstance(representation, LexicalSpace) for term in representation.terms
+        }
+        self.restorer = restorer if restorer is not None else AccentRestorer(vocabulary)
 
     @classmethod
     def build(
-        cls, processed: Path, vectors_config: Path, search_config: SearchConfig, methods: Mapping[str, Method] = METHODS
+        cls,
+        processed: Path,
+        vectors_config: Path,
+        search_config: SearchConfig,
+        methods: Mapping[str, Method] = METHODS,
+        vectors: Path | None = None,
     ) -> HybridIndex:
-        """Constrói só as representações usadas pela busca, com as especificações da configuração vetorial."""
+        """Constrói só as representações usadas pela busca, com as especificações da configuração vetorial.
+
+        Com `vectors`, uma pasta verificada de `app.representations build` do mesmo corpus, os vetores densos das
+        sinopses são lidos do arquivo, e o modelo só codifica as consultas: a API inicia rápido mesmo com milhares de filmes.
+        """
+        from app.representations.stored import StoredVectors, build_representation
+
         corpus, config, _ = prepare(processed, vectors_config, methods=methods)
+        stored = StoredVectors(vectors, corpus) if vectors is not None else None
         specs = {spec.name: spec for spec in config.representations}
         if missing := sorted(member.name for member in search_config.representations if member.name not in specs):
             raise ValueError(f"Representações da busca ausentes de {vectors_config.name}: {missing}")
         members = [
-            (methods[specs[member.name].method].build(specs[member.name], corpus, config), member.weight)
+            (build_representation(specs[member.name], corpus, config, methods, stored), member.weight)
             for member in search_config.representations
         ]
         return cls(corpus, members)
 
     def only(self, name: str) -> HybridIndex:
         """Índice com uma única representação, para comparar com a combinação."""
-        return HybridIndex(self.corpus, [(representation, 1.0) for representation, _ in self.members if representation.spec.name == name])
+        members = [(representation, 1.0) for representation, _ in self.members if representation.spec.name == name]
+        return HybridIndex(self.corpus, members, self.restorer)
 
     def rank(self, text: str) -> list[tuple[int, float]]:
         """Pares (id, pontuação) com pontuação positiva, em ordem decrescente e, no empate, por id."""
+        text = prepare_query(text, self.restorer)
         combined = np.zeros(len(self.corpus.ids))
         for representation, weight in self.members:
             ranked = search(representation, self.corpus, text).ranked

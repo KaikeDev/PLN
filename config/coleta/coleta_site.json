@@ -1,0 +1,11 @@
+{
+  "language": "pt-BR",
+  "pages_per_slice": 10,
+  "genres": [28, 12, 16, 35, 80, 99, 18, 10751, 14, 36, 27, 10402, 9648, 10749, 878, 53, 10752, 37],
+  "periods": [[1980, 1999], [2000, 2014], [2015, 2025]],
+  "vote_count_gte": 50,
+  "include_adult": false,
+  "sort_by": "popularity.desc",
+  "seed_movie_ids": [603],
+  "request_interval_seconds": 0.3
+}

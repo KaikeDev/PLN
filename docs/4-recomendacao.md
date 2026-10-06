@@ -38,15 +38,18 @@ Sem avaliações de usuários, a avaliação usa os gêneros como aproximação.
 
 ## No site
 
-Ao abrir a ficha de um filme da amostra, a seção **"Filmes parecidos"** mostra os 5 filmes de sinopse mais próxima, com a similaridade do cosseno. Cada um abre a própria ficha. Por trás, `GET /filmes/{id}/parecidos` faz a mesma conta da avaliação, sobre o embedding de sentença que a busca já carrega; um teste confirma que as recomendações do site são as mesmas da avaliação.
+Ao abrir a ficha de um filme, a seção **"Filmes parecidos"** mostra os 5 filmes de sinopse mais próxima, com a similaridade do cosseno. Cada um abre a própria ficha. Por trás, `GET /filmes/{id}/parecidos` faz a mesma conta da avaliação, sobre o embedding de sentença que a busca já carrega; um teste confirma que o cálculo do site é o mesmo da avaliação.
 
-| Filme | Filmes parecidos no site |
-|---|---|
-| Invocação do Mal | Invocação do Mal 4, Invocação do Mal 2, A Morte do Demônio: A Ascensão, A Entidade, Extermínio: A Evolução |
-| Toy Story | Gigantes de Aço, Toy Story 3, O Macaco, Free Guy, Sonic 3 |
-| Matrix | Contato, Monstros S.A., A Hora do Pesadelo, A Mosca, Free Guy |
+No site, a recomendação procura no **catálogo de 5.525 sinopses** de 18 gêneros ([ADR 0024](adr/0024-catalogo-do-site.md)), e não só na amostra avaliada. Com mais filmes, as recomendações melhoram visivelmente:
 
-Filmes fora dos 428 da amostra, que o site encontra pela busca por título, mostram um aviso no lugar das recomendações.
+| Filme | Na amostra de 428 | No catálogo do site |
+|---|---|---|
+| Matrix | Contato, Monstros S.A., A Hora do Pesadelo | O Passageiro do Futuro, 13º Andar, Matrix Resurrections, Matrix Revolutions |
+| Toy Story | Gigantes de Aço, Toy Story 3, O Macaco | Lightyear, Gigantes de Aço, Bumblebee, Toy Story 3 |
+| Invocação do Mal | Invocação do Mal 4, Invocação do Mal 2, A Morte do Demônio: A Ascensão | Invocação do Mal 4, Invocação do Mal 2, Annabelle 3 |
+| Batman: O Cavaleiro das Trevas | fora da amostra | Batman, Batman: A Máscara do Fantasma, Batman Contra o Capuz Vermelho |
+
+Filmes fora do catálogo, que o site encontra pela busca por título, mostram um aviso no lugar das recomendações.
 
 ## Limitações
 

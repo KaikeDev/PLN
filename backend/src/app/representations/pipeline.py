@@ -168,14 +168,20 @@ def verify(output: Path) -> dict:
 
 
 def build_one(
-    processed: Path, config_path: Path, name: str, methods: Mapping[str, Method] = METHODS
+    processed: Path, config_path: Path, name: str, methods: Mapping[str, Method] = METHODS, vectors: Path | None = None
 ) -> tuple[ProcessedCorpus, Representation]:
-    """Constrói uma única representação da configuração (usado pelo comando `query`)."""
+    """Constrói uma única representação da configuração (comando `query` e classificador da API).
+
+    Com `vectors`, uma pasta verificada desta etapa, os vetores densos das sinopses são lidos em vez de recalculados.
+    """
+    from app.representations.stored import StoredVectors, build_representation
+
     corpus, config, _ = prepare(processed, config_path, methods=methods)
     specs = {spec.name: spec for spec in config.representations}
     if name not in specs:
         raise ValueError(f"Representação desconhecida; use uma de {sorted(specs)}")
-    return corpus, methods[specs[name].method].build(specs[name], corpus, config)
+    stored = StoredVectors(vectors, corpus) if vectors is not None else None
+    return corpus, build_representation(specs[name], corpus, config, methods, stored)
 
 
 def library_versions() -> dict[str, str | None]:

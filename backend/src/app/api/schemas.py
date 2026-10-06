@@ -11,10 +11,20 @@ from pydantic import BaseModel, ConfigDict
 from app.search.service import FilterInterpretation, Notice, SearchResult
 
 
+class SearchCatalog(BaseModel):
+    """Onde a busca por tema e os filmes parecidos procuram: o catálogo do site ou, sem ele, a amostra avaliada."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    origem: Literal["catalogo_do_site", "amostra_avaliada"]
+    filmes: int
+
+
 class Health(BaseModel):
-    """Estado do servidor."""
+    """Estado do servidor e, quando carregado, o catálogo da busca por tema (`null` sem busca por tema)."""
 
     status: Literal["ok"] = "ok"
+    catalogo: SearchCatalog | None = None
 
 
 class Genre(BaseModel):

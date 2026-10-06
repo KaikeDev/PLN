@@ -14,19 +14,23 @@ A busca junta duas técnicas que se completam:
 
   **pontuação = 0,3 × TF-IDF sem stopwords + 0,7 × embedding de sentença (MiniLM)**
 
-As regras filtram, e a busca por tema ordena.
+As regras filtram, e a busca por tema ordena. Antes de ordenar, a frase perde as palavras de pedido e recupera acentos que faltem ([Preparação da consulta](#preparação-da-consulta)).
 
 ```mermaid
 flowchart TD
     Q["Frase do usuário<br/>“quero um filme de ação sobre máquinas”"] --> T{Título exato no TMDB?}
     T -- sim --> RT[Resultados por título]
     T -- não --> R[Regras léxicas<br/>gênero = Ação]
-    R --> H[Busca por tema nas 428 sinopses<br/>0,3 × TF-IDF + 0,7 × MiniLM]
+    R --> H[Busca por tema no catálogo do site<br/>5.525 sinopses · 0,3 × TF-IDF + 0,7 × MiniLM]
     H --> F[Filtro das regras<br/>só filmes de ação]
     F --> OK{Achou filmes?}
     OK -- sim --> RS[Resultados por tema, com pontuação]
     OK -- não --> D[Descoberta no TMDB pelas preferências<br/>ou busca por título]
 ```
+
+## Onde a busca procura
+
+Os algoritmos foram **escolhidos e medidos** na amostra avaliada de 428 sinopses, onde as respostas certas de 20 consultas foram anotadas à mão. No site, eles procuram num **catálogo maior**, de 5.525 sinopses de 18 gêneros, coletado pelo mesmo pipeline ([ADR 0024](adr/0024-catalogo-do-site.md)). Sem o catálogo gerado, o site usa a própria amostra.
 
 ## Os modos de busca
 
@@ -71,7 +75,25 @@ Cada um erra onde o outro acerta. Precisão média (AP) em algumas das consultas
 
 Somados, os dois ficam melhores que qualquer um sozinho na média das 20 consultas. A combinação melhora 13 delas e piora 4 em relação ao MiniLM sozinho.
 
+## Preparação da consulta
+
+Antes da busca por tema, a frase passa por duas correções ([ADR 0025](adr/0025-preparacao-da-consulta.md)):
+
+- **Palavras de pedido saem:** "quero", "me indica", "um filme sobre", "filmes de"… descrevem o pedido, não o tema. Sem essa limpeza, "filmes sobre saude mental" trazia filmes **sobre cinema**, porque "filmes" pesava tanto quanto "mental".
+- **Acentos voltam:** uma palavra sem acento, com 4 letras ou mais e fora do vocabulário do TF-IDF, vira a forma acentuada do vocabulário, se só houver uma ("saude" → "saúde").
+
+| Frase digitada | Frase usada na busca por tema |
+|---|---|
+| `filmes sobre saude mental` | `saúde mental` |
+| `quero um filme de ação sobre máquinas` | `ação sobre máquinas` |
+| `me indica algum filme que fale de luto` | `luto` |
+| `casa assombrada por espíritos` | sem mudança |
+
+As regras de gênero e período continuam lendo a frase original. Nas 20 consultas anotadas, a combinação passou de MAP 0,613 para **0,627**: só mudaram as consultas com palavras de pedido, e nenhuma piorou.
+
 ## Como a pontuação é calculada
+
+*Exemplo calculado na amostra avaliada de 428 sinopses.*
 
 Os dois algoritmos dão notas em escalas diferentes. O cosseno do TF-IDF costuma ficar entre 0 e 0,3; o do MiniLM, entre 0,2 e 0,6. Somar direto daria peso demais ao MiniLM. Por isso, em cada consulta, **a nota de cada algoritmo é dividida pela maior nota que ele deu naquela consulta**, e o melhor filme de cada um vale 1. Só depois entram os pesos.
 
@@ -121,7 +143,8 @@ Exemplo real, "quero um filme de ação sobre máquinas". O maior cosseno do TF-
    - Com 20 consultas, diferenças abaixo de 0,01 são ruído.
    - Qualquer peso do TF-IDF entre 0,2 e 0,4 dá MAP de 0,60 a 0,62, e 0,3 fica no meio dessa faixa.
    - Acrescentar o skip-gram quase não muda o resultado e exigiria mais um modelo de cerca de 1,1 GB no servidor.
-6. **Conferência contra sorte:** foram 500 sorteios, cada um escolhendo o peso com metade das consultas e medindo na outra metade. A combinação ganhou do MiniLM sozinho em 95% deles.
+6. **Depois da escolha:** com a [preparação da consulta](#preparação-da-consulta), a combinação escolhida passou para MAP 0,627, MRR 0,912 e precisão @5 de 0,57, sem mudar algoritmos nem pesos.
+7. **Conferência contra sorte:** foram 500 sorteios, cada um escolhendo o peso com metade das consultas e medindo na outra metade. A combinação ganhou do MiniLM sozinho em 95% deles.
 
 **Por que os outros algoritmos ficaram de fora:**
 - O BoW é uma versão pior do TF-IDF, que é o próprio BoW com pesos.
@@ -134,6 +157,7 @@ Exemplo real, "quero um filme de ação sobre máquinas". O maior cosseno do TF-
 |---|---|
 | Pesos da combinação | [config/busca/busca.json](../config/busca/busca.json) |
 | Combinação e avaliação | [backend/src/app/search/hybrid.py](../backend/src/app/search/hybrid.py) |
+| Palavras de pedido e acentos | [backend/src/app/search/query.py](../backend/src/app/search/query.py) |
 | Índice carregado pela API (sinopses, pôster, nota) | [backend/src/app/search/synopsis_index.py](../backend/src/app/search/synopsis_index.py) |
 | Modo `sinopse` e ordem do modo automático | [backend/src/app/search/service.py](../backend/src/app/search/service.py) (`SynopsisSearch`, `AutomaticSearch`) |
 | Filtros das regras aplicados aos filmes | [backend/src/app/search/rules/extractor.py](../backend/src/app/search/rules/extractor.py) (`ExtractedFilters.accepts`) |
@@ -157,9 +181,11 @@ Para testar outra combinação, basta mudar os nomes e os pesos em `config/busca
 
 ## Limitações
 
-- **Só encontra o que está na base.** A busca por tema procura entre os **428 filmes da amostra**, coletados em 4 gêneros. Em "filme de cobra", só as duas *Anaconda* e *Zootopia 2* falam de cobras ou répteis; os outros resultados são apenas os menos distantes. Filmes fora da amostra continuam acessíveis pelo título e pela descoberta do TMDB.
+- **Só encontra o que está no catálogo.** A busca por tema procura entre as 5.525 sinopses do catálogo do site, os filmes mais populares de 18 gêneros. Filmes fora dele continuam acessíveis pelo título e pela descoberta do TMDB.
+- **Qualidade não medida no catálogo.** As consultas anotadas valem só para a amostra. No catálogo, há mais candidatos parecidos, e o ranking fica mais ruidoso: "cobras gigantes" traz *Anaconda 3* em 1º, mas "filme de cobra" traz *Stallone: Cobra* e *G.I. Joe: A Origem de Cobra*, em que "Cobra" é nome de personagem, e o TF-IDF casa a palavra idêntica.
 - **Não há nota mínima.** A busca mostra todo filme com alguma semelhança, então sempre completa a página, mesmo quando poucos resultados são relevantes.
-- **Palavras de pedido pesam.** "Quero" e "filme" entram no TF-IDF e favorecem sinopses que as contêm. Com o filtro de gênero o efeito é pequeno; sem filtro, pode trazer filmes fora do tema, como Holocausto Canibal em "filme sobre simulação da realidade".
+- **Palavras de pedido fora da lista.** A limpeza reconhece as formas mais comuns ("quero", "me indica", "filme sobre"…). Outras, como "tem algum filme…", continuam entrando na busca por tema.
+- **Temas abstratos.** Em "filmes sobre saude mental", a lista mistura filmes do tema (*Garota, Interrompida*, *Whiplash*) com filmes só próximos (*O Passageiro do Futuro*). O embedding de sentença acerta melhor temas concretos, como "cobras gigantes" ou "viagem no tempo".
 - **Palavras comuns podem virar filtro.** As regras tratam "família" como o gênero Família: em "família aterrorizada por espíritos em uma casa assombrada", o modo automático filtra só filmes familiares. Sem a palavra ("casa assombrada por espíritos"), a busca traz Invocação do Mal 2 e Os Outros.
 - **Tom e gênero são difíceis para o ranking.** Em "comédia romântica leve", todos os algoritmos erraram (MAP de 0,12). Nesses casos, os filtros das regras ajudam mais.
 - **A avaliação é da equipe.** As 20 consultas foram escritas e julgadas pela equipe. Servem para comparar os algoritmos, mas não substituem um teste com usuários.
@@ -168,7 +194,5 @@ Para testar outra combinação, basta mudar os nomes e os pesos em `config/busca
 
 | Melhoria | Resolve |
 |---|---|
-| Remover palavras de pedido ("quero", "filme de", "me indica") antes de ordenar | Resultados fora do tema puxados por "filme" |
 | Nota mínima, calibrada nas consultas anotadas, e aviso de "nenhum filme encontrado" | Página completada com filmes irrelevantes |
-| Base maior para o site, com milhares de filmes de todos os gêneros e separada da amostra entregue | "Filme de cobra" e outros temas ausentes da amostra |
 | Reordenar com o MiniLM candidatos buscados no TMDB ao vivo | Busca por tema em todo o catálogo do TMDB |

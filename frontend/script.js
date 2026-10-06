@@ -7,6 +7,7 @@ const POSTER_PATH = /^\/[\w.-]+$/;
 const ELENCO_EXIBIDO = 6;
 
 const elStatus = document.getElementById("status");
+const elAvisoCatalogo = document.getElementById("aviso-catalogo");
 const elForm = document.getElementById("form-busca");
 const elTitulo = document.getElementById("campo-titulo");
 const elModo = document.getElementById("modo-busca");
@@ -82,9 +83,18 @@ async function obterJson(caminho, mensagemPadrao) {
 
 async function verificarSaude() {
   try {
-    await obterJson("/saude", "offline");
-    elStatus.textContent = "servidor online";
-    elStatus.className = "status status--ok";
+    const dados = await obterJson("/saude", "offline");
+    const catalogo = dados.catalogo;
+    const filmes = Number.isInteger(catalogo?.filmes) ? catalogo.filmes.toLocaleString("pt-BR") : null;
+    if (catalogo?.origem === "amostra_avaliada") {
+      elStatus.textContent = `servidor online · só a amostra (${filmes} filmes)`;
+      elStatus.className = "status status--aviso";
+      elAvisoCatalogo.hidden = false;
+    } else {
+      elStatus.textContent = filmes ? `servidor online · ${filmes} filmes` : "servidor online";
+      elStatus.className = "status status--ok";
+      elAvisoCatalogo.hidden = true;
+    }
   } catch {
     elStatus.textContent = "servidor offline (rode o uvicorn)";
     elStatus.className = "status status--erro";
@@ -234,7 +244,7 @@ async function carregarParecidos(filmeId, secao, abertura) {
     if (abertura !== aberturaAtual) return;
     const filmes = Array.isArray(dados.parecidos) ? dados.parecidos.filter((filme) => Number.isInteger(filme.id)) : [];
     if (!dados.na_amostra) {
-      corpo.textContent = "Este filme não está entre os 428 da amostra do projeto, então não há recomendações para ele.";
+      corpo.textContent = "Este filme não está no catálogo de sinopses do site, então não há recomendações para ele.";
       return;
     }
     corpo.replaceWith(

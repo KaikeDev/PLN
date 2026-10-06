@@ -7,13 +7,15 @@ guardados têm seis casas decimais; por isso um resultado com reaproveitamento p
 do mesmo resultado com os vetores recalculados.
 """
 
+from collections.abc import Mapping
 from dataclasses import asdict
 from pathlib import Path
 
 import numpy as np
 
-from app.representations.config import RepresentationSpec
+from app.representations.config import ExperimentConfig, RepresentationSpec
 from app.representations.corpus import ProcessedCorpus
+from app.representations.methods import Method
 from app.representations.metrics import rounded
 from app.representations.pipeline import verify
 from app.representations.space import Encoded, Representation
@@ -79,3 +81,16 @@ class StoredVectors:
         return StoredDenseSpace(
             spec, self.corpus.ids, matrix, info.get("family", "dense"), bool(info.get("learned", True)), info.get("parameters")
         )
+
+
+def build_representation(
+    spec: RepresentationSpec, corpus: ProcessedCorpus, config: ExperimentConfig, methods: Mapping[str, Method], stored: StoredVectors | None
+) -> Representation:
+    """Constrói a representação; se a pasta guardada tem vetores com a mesma especificação e o método sabe usá-los,
+    os vetores das sinopses vêm do arquivo e o modelo é carregado só para codificar consultas."""
+    method = methods[spec.method]
+    with_vectors = getattr(method, "build_with_vectors", None)
+    saved = stored.load(spec) if stored is not None and with_vectors is not None else None
+    if with_vectors is not None and saved is not None:
+        return with_vectors(spec, corpus, saved.matrix)
+    return method.build(spec, corpus, config)

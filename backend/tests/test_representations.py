@@ -490,6 +490,17 @@ class VectorTests(unittest.TestCase):
         self.assertEqual(scores, sorted(scores, reverse=True))
         self.assertLessEqual(scores[0], 1.0)
 
+    def test_hybrid_reads_stored_sentence_vectors_and_still_encodes_queries(self):
+        config = SearchConfig((WeightedRepresentation("tfidf_sem_stopwords", 0.3), WeightedRepresentation("contextual_teste", 0.7)))
+        stored = HybridIndex.build(self.processed, self.config, config, FAKE_METHODS, vectors=self.output)
+        rebuilt = self.hybrid()
+        for text in ("simulação da realidade", "programador conectado a um sistema de computadores", "família em luto"):
+            self.assertEqual([movie for movie, _ in stored.rank(text)], [movie for movie, _ in rebuilt.rank(text)])
+        dense = dict((rep.spec.name, rep) for rep, _ in stored.members)["contextual_teste"]
+        self.assertTrue(
+            np.allclose(dense.unit, dict((rep.spec.name, rep) for rep, _ in rebuilt.members)["contextual_teste"].unit, atol=1e-5)
+        )
+
     def test_hybrid_normalizes_each_representation_by_its_best_cosine(self):
         index = self.hybrid()
         for name in ("tfidf_sem_stopwords", "contextual_teste"):

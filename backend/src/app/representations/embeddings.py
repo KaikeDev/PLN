@@ -5,7 +5,7 @@ As bibliotecas pesadas só são importadas ao carregar um modelo, então BoW e T
 
 import re
 from collections.abc import Callable
-from functools import cached_property
+from functools import cache, cached_property
 from typing import Protocol
 
 import numpy as np
@@ -168,9 +168,13 @@ class ContextualSpace(Representation):
     learned = True
     supports_word_in_context = True
 
-    def __init__(self, spec: RepresentationSpec, ids: tuple[int, ...], texts: list[str], encoder: TextEncoder):
+    def __init__(
+        self, spec: RepresentationSpec, ids: tuple[int, ...], texts: list[str], encoder: TextEncoder, matrix: np.ndarray | None = None
+    ):
+        """`matrix` reaproveita vetores já calculados das sinopses; o codificador continua servindo às consultas."""
         self.encoder, self.texts = encoder, texts
-        super().__init__(spec, ids, np.asarray(encoder.encode(texts), dtype=np.float64))
+        vectors = encoder.encode(texts) if matrix is None else matrix
+        super().__init__(spec, ids, np.asarray(vectors, dtype=np.float64))
 
     def encode(self, text: str, corpus: ProcessedCorpus) -> Encoded:
         prepared = corpus.query_text(text, self.spec.stage_key)
@@ -201,8 +205,12 @@ class ContextualSpace(Representation):
         return {"embeddings.jsonl": _dense_rows(self)}
 
 
+@cache
 def _sentence_transformer(spec: RepresentationSpec):
-    """Carrega o modelo na revisão fixada, com `trust_remote_code=False`: nenhum código do repositório do modelo é executado."""
+    """Carrega o modelo na revisão fixada, com `trust_remote_code=False`: nenhum código do repositório do modelo é executado.
+
+    O modelo é carregado uma vez por especificação e compartilhado, por exemplo entre a busca e o classificador da API.
+    """
     try:
         from sentence_transformers import SentenceTransformer
         from transformers.utils import logging as transformers_logging
@@ -294,3 +302,9 @@ class ContextualMethod:
 
     def build(self, spec: RepresentationSpec, corpus: ProcessedCorpus, config: ExperimentConfig) -> ContextualSpace:
         return ContextualSpace(spec, corpus.ids, corpus.texts(spec.stage), self._loader(spec))
+
+    def build_with_vectors(self, spec: RepresentationSpec, corpus: ProcessedCorpus, matrix: np.ndarray) -> ContextualSpace:
+        """Representação com os vetores das sinopses já calculados; o modelo só codifica as consultas."""
+        if matrix.shape[0] != len(corpus.ids):
+            raise ValueError(f"{spec.name}: vetores guardados não correspondem às sinopses do corpus")
+        return ContextualSpace(spec, corpus.ids, corpus.texts(spec.stage), self._loader(spec), matrix)
