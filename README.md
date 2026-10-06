@@ -1,6 +1,6 @@
 # PLN 2026/2 — Sinopses de filmes
 
-Sinopses de filmes do TMDB coletadas, preparadas, transformadas em oito representações e usadas nas quatro tarefas de PLN da disciplina: **busca, recomendação, agrupamento com visualização e classificação**. Um site de demonstração usa a busca e a classificação.
+Sinopses de filmes do TMDB coletadas, preparadas, transformadas em oito representações e usadas nas quatro tarefas de PLN da disciplina: **busca, recomendação, agrupamento com visualização e classificação**. Um site de demonstração usa a busca, a recomendação e a classificação.
 
 Equipe: Kaike Ventura Tuerpe, Luana Nitsche, Pedro Henrique Ortunio e Thiago Bodnar — Ciência da Computação, FURB.
 
@@ -13,7 +13,7 @@ Equipe: Kaike Ventura Tuerpe, Luana Nitsche, Pedro Henrique Ortunio e Thiago Bod
 | 1 | Coleta e preparação | 430 filmes de 4 gêneros e 3 períodos; 6 preparações do texto | 428 sinopses, todas as etapas alinhadas pelo ID | [1-coleta-e-preparacao.md](docs/1-coleta-e-preparacao.md) | [`corpus/`](backend/src/app/corpus/) |
 | 2 | Representações | BoW, TF-IDF, word2vec (CBOW e skip-gram), BERTimbau e embedding de sentença | 8 representações comparadas em todas as tarefas | [2-representacoes.md](docs/2-representacoes.md) | [`representations/`](backend/src/app/representations/) |
 | 3 | Busca | Regras para gênero e período + 0,3 × TF-IDF + 0,7 × embedding de sentença | MAP de 0,613 em 20 consultas anotadas | [3-busca.md](docs/3-busca.md) | [`search/`](backend/src/app/search/) |
-| 4 | Recomendação | Filmes parecidos com um filme ou com um perfil | Precisão @5 de 63,6% (BERTimbau) contra 37,9% ao acaso | [4-recomendacao.md](docs/4-recomendacao.md) | [`recommendation/`](backend/src/app/recommendation/) |
+| 4 | Recomendação | Filmes parecidos com um filme ou com um perfil; no site, na ficha de cada filme | Precisão @5 de 63,6% (BERTimbau) contra 37,9% ao acaso | [4-recomendacao.md](docs/4-recomendacao.md) | [`recommendation/`](backend/src/app/recommendation/) |
 | 5 | Agrupamento e visualização | K-Means sem rótulos e projeção 2D | Grupos lembram pouco os gêneros (ARI de até 0,144) | [5-agrupamento.md](docs/5-agrupamento.md) | [`clustering/`](backend/src/app/clustering/) |
 | 6 | Classificação | Regressão logística nas 8 representações, Jev sem treino e classificação na tela | F1 de 71,0% (skip-gram); Jev com 85,0% de acurácia | [6-classificacao.md](docs/6-classificacao.md) | [`classification/`](backend/src/app/classification/) |
 
@@ -52,7 +52,7 @@ backend/src/app/          ← código, uma pasta por tarefa
   corpus/  representations/  search/  recommendation/  clustering/  classification/
   api/  tmdb/  shared/  main.py  settings.py   ← site e utilitários
 backend/tests/            ← testes automatizados (sem rede)
-frontend/                 ← site: busca de filmes e classificação de sinopses
+frontend/                 ← site: busca de filmes, filmes parecidos e classificação de sinopses
 ```
 
 ## Como executar

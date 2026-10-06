@@ -21,7 +21,7 @@ coleta → preparação → representações (8) ─┬─ busca
 
 A mesma base e as mesmas oito representações passam pelas quatro tarefas. Assim, dá para comparar as técnicas lado a lado: qual representação funciona melhor para quê, e por quê.
 
-Por fim, um **site** usa duas dessas tarefas na prática: a busca de filmes e a classificação de uma sinopse digitada.
+Por fim, um **site** usa três dessas tarefas na prática: a busca de filmes, os filmes parecidos na ficha de cada filme e a classificação de uma sinopse digitada.
 
 ## 2. Coleta e preparação (Etapa 1)
 
@@ -70,6 +70,7 @@ Dois exemplos da aula, medidos nos dados:
 - **Filme → filmes:** os 5 filmes de vetor mais próximo. **Perfil → filmes:** a média dos filmes de que a pessoa gostou.
 - Sem avaliações de usuários, usamos os gêneros como aproximação: o **BERTimbau acerta 63,6%**, contra 37,9% de uma recomendação que ignora o texto.
 - Para quem gostou de Invocação do Mal, Hereditário e Sobrenatural, o embedding de sentença recomenda Invocação do Mal 2 e 4, A Morte do Demônio… todos de terror sobrenatural.
+- **No site:** a ficha de cada filme da amostra mostra os 5 **filmes parecidos**, com a mesma conta da avaliação. Um teste confirma que são as mesmas recomendações.
 
 ## 6. Agrupamento e visualização
 
@@ -108,6 +109,15 @@ Com o site rodando ([como executar](docs/tecnico/como-executar.md#o-site)), em <
 | `terror sem comédia` | A negação ("sem comédia") é entendida pelas regras |
 | `casa assombrada por espíritos` | Busca só por tema: Invocação do Mal 2, Os Outros, Cemitério Maldito |
 | `astronautas perdidos no espaço` | Tema sem palavra-chave de gênero: O Enigma do Horizonte, Interestelar, Aliens |
+
+**Ficha do filme (recomendação)**
+
+Clicar num resultado da busca abre a ficha com a seção **"Filmes parecidos"**. Bons exemplos:
+- **Invocação do Mal** → Invocação do Mal 4, Invocação do Mal 2, A Morte do Demônio: A Ascensão;
+- **Toy Story** → Toy Story 3 aparece entre os parecidos;
+- **Matrix** → Contato, Monstros S.A. Bom para mostrar o limite: o tema de Matrix é abstrato.
+
+Clicando num parecido, abre a ficha dele, com os parecidos dele.
 
 **Aba "Classificar sinopse"**
 

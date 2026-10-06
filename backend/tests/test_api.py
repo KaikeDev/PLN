@@ -8,7 +8,7 @@ from app.api.rate_limit import RateLimiter
 from app.main import create_app
 from app.search.ports import CatalogError
 from app.settings import Settings
-from tests.fakes import FakeCatalog, FakeGenreClassifier, FakeSynopsisIndex
+from tests.fakes import FakeCatalog, FakeGenreClassifier, FakeRecommender, FakeSynopsisIndex
 
 ORIGIN = "http://127.0.0.1:5500"
 
@@ -18,9 +18,10 @@ def client_for(
     rate_limit: int = 100,
     synopsis_index: FakeSynopsisIndex | None = None,
     classifier: FakeGenreClassifier | None = None,
+    recommender: FakeRecommender | None = None,
 ) -> TestClient:
     settings = Settings(_env_file=None, cors_origins=[ORIGIN], rate_limit_per_minute=rate_limit)
-    return TestClient(create_app(settings, catalog, synopsis_index, classifier))
+    return TestClient(create_app(settings, catalog, synopsis_index, classifier, recommender))
 
 
 class ApiTests(unittest.TestCase):
@@ -68,6 +69,30 @@ class ApiTests(unittest.TestCase):
         with client_for(FakeCatalog()) as client:
             notice = client.get("/pesquisa", params={"q": "máquinas", "modo": "sinopse"}).json()
         self.assertEqual(notice["interpretacao"], {"aviso": "Busca por sinopse indisponível"})
+
+    def test_similar_movies_contract(self) -> None:
+        movies = {
+            218: {"id": 218, "title": "O Exterminador do Futuro", "poster_path": "/a.jpg"},
+            280: {"id": 280, "title": "O Exterminador do Futuro 2", "poster_path": "/b.jpg"},
+            2048: {"id": 2048, "title": "Eu, Robô", "poster_path": None},
+        }
+        index = FakeSynopsisIndex([], movies)
+        recommender = FakeRecommender({218: [(280, 0.91234), (2048, 0.8)]})
+        with client_for(FakeCatalog(), synopsis_index=index, recommender=recommender) as client:
+            body = client.get("/filmes/218/parecidos").json()
+            one = client.get("/filmes/218/parecidos", params={"quantidade": 1}).json()
+            outside = client.get("/filmes/999/parecidos").json()
+            invalid = client.get("/filmes/218/parecidos", params={"quantidade": 21})
+        self.assertEqual((body["filme_id"], body["na_amostra"], body["representacao"]), (218, True, "teste"))
+        self.assertEqual([movie["title"] for movie in body["parecidos"]], ["O Exterminador do Futuro 2", "Eu, Robô"])
+        self.assertEqual(body["parecidos"][0]["pontuacao"], 0.9123)
+        self.assertEqual(len(one["parecidos"]), 1)
+        self.assertEqual((outside["na_amostra"], outside["parecidos"]), (False, []))
+        self.assertEqual(invalid.status_code, 422)
+        self.assertEqual(recommender.calls, [(218, 5), (218, 1), (999, 5)])
+        with client_for(FakeCatalog()) as client:
+            unavailable = client.get("/filmes/218/parecidos")
+        self.assertEqual((unavailable.status_code, unavailable.json()["detail"]), (503, "Recomendação indisponível"))
 
     def test_classification_contract(self) -> None:
         classifier = FakeGenreClassifier([("Terror", 0.7), ("Drama", 0.2), ("Comédia", 0.06), ("Ficção científica", 0.04)])

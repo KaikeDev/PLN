@@ -40,6 +40,7 @@ class Settings(BaseSettings):
     synopsis_search_config: Path = REPOSITORY_DIR / "config" / "busca" / "busca.json"
     synopsis_classifier_config: Path = REPOSITORY_DIR / "config" / "classificacao" / "classificacao_semantica.json"
     synopsis_classifier_representation: str = "sentenca_minilm"
+    synopsis_recommendation_representation: str = "sentenca_minilm"
 
     def require_tmdb_token(self) -> str:
         """Token de leitura do TMDB; falha com mensagem orientativa quando não configurado."""

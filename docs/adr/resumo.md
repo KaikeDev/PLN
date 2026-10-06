@@ -28,6 +28,7 @@ O código não tem comentários fora de docstrings. Quando uma docstring cita �
 | [0020](#0020--busca-por-tema-tf-idf--embedding-de-sentença) | Busca por tema: TF-IDF + embedding de sentença | PLN |
 | [0021](#0021--classificação-de-gênero-na-tela) | Classificação de gênero na tela | API |
 | [0022](#0022--repositório-organizado-por-tarefa) | Repositório organizado por tarefa | Repositório |
+| [0023](#0023--filmes-parecidos-na-ficha-do-filme) | Filmes parecidos na ficha do filme | API |
 
 ---
 
@@ -285,3 +286,11 @@ As análises que estavam juntas em `vectors/analyses.py` foram separadas por tar
 **Por quê.** A estrutura seguia a ordem das etapas, e a busca, por exemplo, estava espalhada em cinco lugares. Organizar por tarefa deixa cada parte avaliada pelo professor numa pasta só, do algoritmo à avaliação e aos resultados.
 
 **Consequência.** Os comandos mudaram de nome (`python -m app.representations`, `python -m app.search`, `python -m app.classification.jev`). Os dados não mudaram, e os quatro `verify` passam nas pastas novas. A branch antiga `luana-classificacao` fica incompatível com a estrutura nova. [Detalhes](0022-organizacao-por-tarefa.md)
+
+## 0023 — Filmes parecidos na ficha do filme
+
+**Decisão.** A ficha de cada filme da amostra mostra os 5 filmes de sinopse mais parecida, pela mesma conta da análise `Recommendation` (maior cosseno, sem o próprio filme), sobre o embedding de sentença que a busca já carrega. A rota é `GET /filmes/{id}/parecidos`.
+
+**Por quê.** A recomendação só existia como avaliação. Mostrá-la a partir de um filme dispensa guardar perfis de usuários e não carrega modelo novo; o BERTimbau teria só 1 ponto a mais de precisão @5.
+
+**Consequência.** Funciona muito bem em franquias e temas marcados e é mais fraca em temas abstratos. Filmes fora dos 428 da amostra mostram um aviso no lugar das recomendações. [Detalhes](0023-recomendacao-no-site.md)

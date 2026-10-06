@@ -78,6 +78,21 @@ class FakeGenreClassifier:
         return list(self.scores)
 
 
+class FakeRecommender:
+    """Filmes parecidos fixos por ID; IDs ausentes do dicionário estão fora da amostra."""
+
+    representation_name = "teste"
+
+    def __init__(self, similar: dict[int, list[tuple[int, float]]]) -> None:
+        self.similar_by_id = similar
+        self.calls: list[tuple[int, int]] = []
+
+    def similar(self, movie_id: int, k: int) -> list[tuple[int, float]] | None:
+        self.calls.append((movie_id, k))
+        ranked = self.similar_by_id.get(movie_id)
+        return None if ranked is None else ranked[:k]
+
+
 class FakeSynopsisIndex:
     """Devolve uma ordenação fixa e registra os textos recebidos."""
 

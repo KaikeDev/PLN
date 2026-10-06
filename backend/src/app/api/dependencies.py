@@ -4,7 +4,8 @@ from fastapi import Request
 
 from app.api.rate_limit import RateLimiter
 from app.classification.ports import GenreClassifier
-from app.search.ports import MovieDetailsProvider
+from app.recommendation.ports import SimilarMoviesProvider
+from app.search.ports import MovieDetailsProvider, SynopsisIndex
 from app.search.service import SearchService
 
 
@@ -21,6 +22,16 @@ def get_details_provider(request: Request) -> MovieDetailsProvider:
 def get_genre_classifier(request: Request) -> GenreClassifier | None:
     """Classificador de gênero da aplicação, ou None quando não pôde ser carregado."""
     return request.app.state.genre_classifier
+
+
+def get_recommender(request: Request) -> SimilarMoviesProvider | None:
+    """Recomendador de filmes parecidos, ou None quando não pôde ser carregado."""
+    return request.app.state.recommender
+
+
+def get_synopsis_index(request: Request) -> SynopsisIndex | None:
+    """Índice de sinopses da amostra, com os dados de exibição de cada filme."""
+    return request.app.state.synopsis_index
 
 
 def enforce_rate_limit(request: Request) -> None:

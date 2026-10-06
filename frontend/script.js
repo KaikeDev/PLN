@@ -44,6 +44,7 @@ const EXEMPLOS = [
   },
 ];
 let proximoExemplo = 0;
+let aberturaAtual = 0;
 let exemploAtual = null;
 
 function elemento(tag, { classe, texto, atributos = {} } = {}, filhos = []) {
@@ -210,14 +211,55 @@ function criarDetalhe(filme) {
   ]);
 }
 
+function buscarParecidos(filmeId) {
+  return obterJson(`/filmes/${encodeURIComponent(filmeId)}/parecidos`, "Falha ao buscar filmes parecidos.");
+}
+
+function criarParecido(filme) {
+  const titulo = filme.title ?? "Sem título";
+  const card = elemento("button", { classe: "parecido", atributos: { type: "button", title: `Abrir ${titulo}` } }, [
+    elemento("img", { atributos: { src: urlPoster(filme.poster_path), alt: "", loading: "lazy" } }),
+    elemento("span", { classe: "parecido__titulo", texto: titulo }),
+    elemento("span", { classe: "parecido__meta", texto: `${anoDe(filme.release_date)} · ${porcentagem(filme.pontuacao)} parecido` }),
+  ]);
+  card.addEventListener("click", () => abrirDetalhes(filme.id));
+  return card;
+}
+
+async function carregarParecidos(filmeId, secao, abertura) {
+  const corpo = elemento("p", { classe: "parecidos__aviso", texto: "Procurando filmes com sinopse parecida..." });
+  secao.replaceChildren(elemento("h3", { texto: "Filmes parecidos" }), corpo);
+  try {
+    const dados = await buscarParecidos(filmeId);
+    if (abertura !== aberturaAtual) return;
+    const filmes = Array.isArray(dados.parecidos) ? dados.parecidos.filter((filme) => Number.isInteger(filme.id)) : [];
+    if (!dados.na_amostra) {
+      corpo.textContent = "Este filme não está entre os 428 da amostra do projeto, então não há recomendações para ele.";
+      return;
+    }
+    corpo.replaceWith(
+      elemento("div", { classe: "parecidos__lista" }, filmes.map(criarParecido)),
+      elemento("p", { classe: "parecidos__aviso", texto: `Pela sinopse, com o embedding de sentença (${dados.representacao}). A porcentagem é a similaridade do cosseno.` }),
+    );
+  } catch (erro) {
+    if (abertura === aberturaAtual) corpo.textContent = erro.message;
+  }
+}
+
 async function abrirDetalhes(filmeId) {
+  const abertura = ++aberturaAtual;
   elModalCorpo.replaceChildren(elemento("p", { texto: "Carregando..." }));
   elModal.classList.remove("oculto");
   elFecharModal.focus();
   try {
-    elModalCorpo.replaceChildren(criarDetalhe(await buscarDetalhes(filmeId)));
+    const filme = await buscarDetalhes(filmeId);
+    if (abertura !== aberturaAtual) return;
+    const secaoParecidos = elemento("section", { classe: "parecidos", atributos: { "aria-label": "Filmes parecidos" } });
+    elModalCorpo.replaceChildren(criarDetalhe(filme), secaoParecidos);
+    elModalCorpo.parentElement.scrollTop = 0;
+    carregarParecidos(filmeId, secaoParecidos, abertura);
   } catch (erro) {
-    elModalCorpo.replaceChildren(elemento("p", { classe: "mensagem", texto: erro.message }));
+    if (abertura === aberturaAtual) elModalCorpo.replaceChildren(elemento("p", { classe: "mensagem", texto: erro.message }));
   }
 }
 

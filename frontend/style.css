@@ -459,3 +459,66 @@ button:disabled {
     flex: 1;
   }
 }
+
+.parecidos {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--cor-borda);
+}
+
+.parecidos h3 {
+  font-size: 1rem;
+  margin: 0 0 0.75rem;
+}
+
+.parecidos__lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 0.75rem;
+}
+
+.parecido {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 0;
+  text-align: left;
+  background: transparent;
+  border: none;
+  color: var(--cor-texto);
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.parecido:hover {
+  filter: none;
+}
+
+.parecido img {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 8px;
+  background: var(--cor-borda);
+  transition: transform 0.15s ease;
+}
+
+.parecido:hover img {
+  transform: translateY(-3px);
+}
+
+.parecido__titulo {
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.parecido__meta,
+.parecidos__aviso {
+  font-size: 0.75rem;
+  color: var(--cor-texto-fraco);
+}
+
+.parecidos__aviso {
+  margin: 0.75rem 0 0;
+}

@@ -12,6 +12,7 @@ from sklearn.preprocessing import normalize
 from app.clustering.svg import render_projection
 from app.corpus.collect import collect
 from app.corpus.process import process
+from app.recommendation.similar import SimilarMovies
 from app.representations.config import load_config, load_queries
 from app.representations.corpus import ProcessedCorpus
 from app.representations.embeddings import ContextualMethod, Word2VecMethod
@@ -261,6 +262,22 @@ class VectorTests(unittest.TestCase):
         self.assertEqual(contextual[0]["explanation"], [])
         self.assertGreater(recommendation["tfidf_sem_stopwords"]["precision_at_k"], recommendation["tfidf_sem_stopwords"]["baseline"])
         self.assertEqual(recommendation["tfidf_sem_stopwords"]["documents_evaluated"], 8)
+
+    def test_site_recommender_matches_offline_recommendations(self):
+        corpus = ProcessedCorpus.load(self.processed)
+        config = load_config(self.config, FAKE_METHODS)
+        spec = next(spec for spec in config.representations if spec.name == "tfidf_sem_stopwords")
+        recommender = SimilarMovies(FAKE_METHODS[spec.method].build(spec, corpus, config))
+        offline = {
+            row["id"]: [item["id"] for item in row["recommendations"]]
+            for row in read_jsonl(self.output / "tfidf_sem_stopwords.recommendations.jsonl")
+        }
+        for movie_id, expected in offline.items():
+            ranked = recommender.similar(movie_id, len(expected))
+            self.assertEqual([other for other, _ in ranked], expected)
+            self.assertNotIn(movie_id, [other for other, _ in ranked])
+        self.assertIsNone(recommender.similar(999999, 3))
+        self.assertEqual(recommender.representation_name, "tfidf_sem_stopwords")
 
     def test_every_movie_gets_k_recommendations_without_itself(self):
         for row in read_jsonl(self.output / "tfidf_sem_stopwords.recommendations.jsonl"):

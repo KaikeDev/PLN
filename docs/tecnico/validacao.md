@@ -100,6 +100,16 @@ Merge da branch `luana-classificacao` (ADRs 0017 e 0018) no `trabalho-3`. As ADR
 | Classificação | `data/classificacao/tmdb_2026-09-12` foi regenerada a partir dos vetores novos (`--vectors`); `verify` aprovou os 25 arquivos. Métricas e relatório idênticos aos da branch; mudaram só as probabilidades do BERTimbau, na sexta casa decimal, e o manifesto. |
 | Jev com os rótulos do TMDB | Nova amostra de 120 sinopses: 47 respostas reaproveitadas e 73 chamadas novas (`jev-1.13.0`), nenhuma falha, em 41 s. `verify` aprovou os 7 arquivos. Repetição com `--reuse` a partir da entrega: 0 chamadas e arquivos de conteúdo idênticos byte a byte. Acurácia de 85,0% contra 56,0% da referência nos 100 filmes de um gênero. A primeira tentativa falhou com HTTP 403 e não gravou nada; a chave foi trocada em `backend/.env`. |
 
+## Filmes parecidos no site (05/10/2026)
+
+Decisões no [ADR 0023](../adr/0023-recomendacao-no-site.md).
+
+| Verificação | Resultado e alcance |
+|---|---|
+| Testes automatizados | 113 testes aprovados. Novos: o recomendador do site devolve, para todos os filmes do corpus de teste, as mesmas recomendações da análise `Recommendation`, sem o próprio filme, e `None` fora da amostra; contrato de `/filmes/{id}/parecidos`, `quantidade`, filme fora da amostra e 503 sem recomendador (com dublês). |
+| Lint, formatação e tipos | `ruff check`, `ruff format --check` e `mypy` sem apontamentos; sintaxe do `script.js` conferida com um analisador de JavaScript. |
+| API real | Invocação do Mal → Invocação do Mal 4, Invocação do Mal 2, A Morte do Demônio: A Ascensão; Toy Story → Gigantes de Aço, Toy Story 3; Matrix → Contato, Monstros S.A.; Batman: O Cavaleiro das Trevas (fora da amostra) → `na_amostra: false`. |
+
 ## Reorganização por tarefa (03/10/2026)
 
 Decisões no [ADR 0022](../adr/0022-organizacao-por-tarefa.md).

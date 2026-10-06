@@ -4,7 +4,8 @@ Dado um filme (ou um conjunto de filmes de que uma pessoa gostou), recomendar ou
 
 - **Código:** [`backend/src/app/recommendation/analysis.py`](../backend/src/app/recommendation/analysis.py)
 - **Resultados:** seção "Recomendação" do [relatório](../data/representacoes/tmdb_2026-09-12/report.md), [`recommendation.json`](../data/representacoes/tmdb_2026-09-12/recommendation.json) e um arquivo `<representação>.recommendations.jsonl` por representação
-- **Decisões:** [ADR 0018](adr/0018-tarefas-do-ciclo-de-pln.md)
+- **No site:** seção "Filmes parecidos" na ficha de cada filme ([`recommendation/similar.py`](../backend/src/app/recommendation/similar.py))
+- **Decisões:** [ADR 0018](adr/0018-tarefas-do-ciclo-de-pln.md) e [ADR 0023](adr/0023-recomendacao-no-site.md)
 
 ## Como funciona
 
@@ -34,6 +35,18 @@ Sem avaliações de usuários, a avaliação usa os gêneros como aproximação.
 - **Perfil "terror sobrenatural"** (Invocação do Mal, Hereditário, Sobrenatural: A Origem): o embedding de sentença recomenda Invocação do Mal 2, Invocação do Mal 4, A Morte do Demônio, A Morte do Demônio: A Ascensão e Sobrenatural: A Última Chave, todos de terror.
 - **Perfil "animação e família"** (Toy Story, Up, Monstros S.A.): o TF-IDF encontra Toy Story 2, 3 e 4 pelos nomes dos personagens (Woody, Buzz, Andy). É um acerto, mas mostra que as representações lexicais dependem de palavras repetidas, como nomes de franquia.
 - **Perfil "mente e realidade"** (Matrix, A Origem, Brilho Eterno): é o mais difícil; nenhuma representação traz só filmes desse tema.
+
+## No site
+
+Ao abrir a ficha de um filme da amostra, a seção **"Filmes parecidos"** mostra os 5 filmes de sinopse mais próxima, com a similaridade do cosseno. Cada um abre a própria ficha. Por trás, `GET /filmes/{id}/parecidos` faz a mesma conta da avaliação, sobre o embedding de sentença que a busca já carrega; um teste confirma que as recomendações do site são as mesmas da avaliação.
+
+| Filme | Filmes parecidos no site |
+|---|---|
+| Invocação do Mal | Invocação do Mal 4, Invocação do Mal 2, A Morte do Demônio: A Ascensão, A Entidade, Extermínio: A Evolução |
+| Toy Story | Gigantes de Aço, Toy Story 3, O Macaco, Free Guy, Sonic 3 |
+| Matrix | Contato, Monstros S.A., A Hora do Pesadelo, A Mosca, Free Guy |
+
+Filmes fora dos 428 da amostra, que o site encontra pela busca por título, mostram um aviso no lugar das recomendações.
 
 ## Limitações
 

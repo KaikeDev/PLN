@@ -95,6 +95,17 @@ class ClassificationResponse(BaseModel):
     sinopses_de_treino: int
 
 
+class SimilarMoviesResponse(BaseModel):
+    """Resultado de `/filmes/{id}/parecidos`: os filmes mais parecidos, do mais ao menos próximo."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    filme_id: int
+    na_amostra: bool
+    representacao: str
+    parecidos: list[MovieSummary]
+
+
 class SearchResponse(BaseModel):
     """Resultado de `/pesquisa`."""
 

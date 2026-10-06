@@ -26,6 +26,7 @@ Cada ADR registra uma decisão com contexto, alternativas e consequências, no f
 | [0020](0020-busca-hibrida-tfidf-e-sentenca.md) | Busca do site por tema: TF-IDF + embedding de sentença, com os filtros das regras | Aceita |
 | [0021](0021-classificacao-na-tela.md) | Classificação de gênero na tela do site | Aceita |
 | [0022](0022-organizacao-por-tarefa.md) | Repositório organizado por tarefa da disciplina | Aceita |
+| [0023](0023-recomendacao-no-site.md) | Filmes parecidos na ficha do filme | Aceita |
 
 O resumo de todas as decisões e das justificativas está em [`resumo.md`](resumo.md).
 

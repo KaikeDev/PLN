@@ -9,10 +9,10 @@ O backend (`backend/src/app`) é organizado **por tarefa da disciplina**: cada p
 | `corpus/` | 1. Coleta e preparação | Coleta no TMDB, seis preparações do texto, estatísticas, relatório e verificação |
 | `representations/` | 2. Representações | As oito representações (`space.py`, `embeddings.py`, `methods.py`), o pipeline que as constrói e roda as análises (`pipeline.py`), sondas da Aula 7 e relatório |
 | `search/` | 3. Busca | Regras léxicas (`rules/`), busca por cosseno (`retrieval.py`), combinação TF-IDF + embedding de sentença (`hybrid.py`), avaliação com consultas anotadas (`evaluation.py`), serviço do site (`service.py`) e índice de sinopses (`synopsis_index.py`) |
-| `recommendation/` | 4. Recomendação | Filme → filmes e perfil → filmes, com avaliação por gênero compartilhado (`analysis.py`) |
+| `recommendation/` | 4. Recomendação | Filme → filmes e perfil → filmes, com avaliação por gênero compartilhado (`analysis.py`), e os filmes parecidos do site (`similar.py`) |
 | `clustering/` | 5. Agrupamento e visualização | K-Means e projeção 2D (`kmeans.py`), avaliação (`analysis.py`) e gráficos SVG (`svg.py`) |
 | `classification/` | 6. Classificação | Regressão logística com validação cruzada (`pipeline.py`, `evaluation.py`), classificadores alternativos, classificador da tela (`live.py`) e o Jev (`jev/`) |
-| `api/` | Site | Rotas `/pesquisa`, `/filmes`, `/classificacao` e `/saude`, esquemas de resposta e limite de requisições |
+| `api/` | Site | Rotas `/pesquisa`, `/filmes`, `/filmes/{id}/parecidos`, `/classificacao` e `/saude`, esquemas de resposta e limite de requisições |
 | `tmdb/` | Fonte de dados | Cliente HTTP do TMDB, catálogo e cache, usados pela coleta e pela API |
 | `shared/` | — | Artefatos determinísticos, manifesto, validação de configuração e regras de língua |
 | `main.py`, `settings.py` | Site | Montagem da API (`create_app`) e configuração lida do ambiente e de `backend/.env` |
@@ -34,6 +34,7 @@ flowchart LR
     CLUS -. análises .-> REP
     API[api + main] --> SEARCH
     API --> CLASS
+    API --> RECO
     API --> TMDB[tmdb]
     CORPUS --> TMDB
 ```
@@ -65,7 +66,7 @@ Os rótulos de gênero são os mesmos em todas as etapas: `Document.genres` é o
    - **automático:** título exato, depois tema, depois preferências, depois título ([ADR 0006](../adr/0006-prioridade-de-titulo-exato.md)).
 3. A resposta é traduzida para o contrato JSON em português (`modo`, `resultados`, `interpretacao`). Falhas do TMDB viram 502, e filme inexistente vira 404.
 
-`GET /classificacao` passa o texto ao classificador da tela, treinado na inicialização com a representação que a busca por tema já carrega ([ADR 0021](../adr/0021-classificacao-na-tela.md)).
+`GET /filmes/{id}/parecidos` devolve os filmes de maior cosseno com o filme, na mesma representação ([ADR 0023](../adr/0023-recomendacao-no-site.md)). `GET /classificacao` passa o texto ao classificador da tela, treinado na inicialização com a representação que a busca por tema já carrega ([ADR 0021](../adr/0021-classificacao-na-tela.md)).
 
 ## Portas e adaptadores
 
@@ -76,6 +77,7 @@ Mesmo organizado por tarefa, o código mantém as dependências externas atrás 
 | `MovieCatalog`, `MovieDetailsProvider` | `search/ports.py` | `tmdb/catalog.py` com cache | `FakeCatalog` |
 | `SynopsisIndex` | `search/ports.py` | `search/synopsis_index.py` | `FakeSynopsisIndex` |
 | `GenreClassifier` | `classification/ports.py` | `classification/live.py` | `FakeGenreClassifier` |
+| `SimilarMoviesProvider` | `recommendation/ports.py` | `recommendation/similar.py` | `FakeRecommender` |
 | `DecisionClient` | `classification/jev/ports.py` | `classification/jev/typesafe_client.py` | Jev falso em `test_jev.py` |
 
 ## Como estender

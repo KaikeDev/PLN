@@ -107,6 +107,7 @@ Abra <http://127.0.0.1:5500>. A API leva alguns segundos para iniciar, porque ca
 | `GET /saude` | Saúde da aplicação |
 | `GET /pesquisa?q=...&modo=auto` | Título, tema nas sinopses ou preferências; `modo` também aceita `titulo`, `descoberta` e `sinopse`; `q` com até 200 caracteres |
 | `GET /filmes/603` | Ficha do filme, com elenco e vídeos |
+| `GET /filmes/603/parecidos?quantidade=5` | Filmes de sinopse mais parecida (só para os 428 filmes da amostra) |
 | `GET /classificacao?texto=...` | Gênero previsto para uma sinopse e a probabilidade de cada gênero; até 1.000 caracteres |
 
 Configurações opcionais em `backend/.env`: `TMDB_LANGUAGE`, `TMDB_TIMEOUT`, `CORS_ORIGINS` e `RATE_LIMIT_PER_MINUTE` (padrão de 60 requisições por minuto por IP). O CORS só libera as origens da interface, e a API roda em `127.0.0.1` ([ADR 0002](../adr/0002-credencial-e-exposicao-da-api.md)).
