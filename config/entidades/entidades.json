@@ -1,0 +1,10 @@
+{
+  "description": "NER e extração de relações nas sinopses com o spaCy pt_core_news_sm (Aula 9, ADR 0027). coordination: verbos coordenados herdam o sujeito, além das regras do notebook.",
+  "model": "pt_core_news_sm",
+  "stage": "02_clean.jsonl",
+  "coordination": true,
+  "example_ids": [603, 278, 13, 11324],
+  "review_sample": 40,
+  "random_state": 42,
+  "top": 15
+}

@@ -1,0 +1,334 @@
+{
+  "sinopses": 428,
+  "sentencas": 1220,
+  "sentencas_com_tripla": 775,
+  "entidades": 1671,
+  "entidades_por_categoria": {
+    "LOC": 491,
+    "MISC": 199,
+    "ORG": 102,
+    "PER": 879
+  },
+  "entidades_mais_frequentes": {
+    "LOC": [
+      [
+        "Terra",
+        26
+      ],
+      [
+        "Nova York",
+        15
+      ],
+      [
+        "Los Angeles",
+        15
+      ],
+      [
+        "Estados Unidos",
+        10
+      ],
+      [
+        "Paris",
+        8
+      ],
+      [
+        "Woody",
+        7
+      ],
+      [
+        "Londres",
+        5
+      ],
+      [
+        "Europa",
+        5
+      ],
+      [
+        "Inglaterra",
+        5
+      ],
+      [
+        "Tóquio",
+        4
+      ],
+      [
+        "Morte",
+        4
+      ],
+      [
+        "Brooklyn",
+        4
+      ],
+      [
+        "Thanos",
+        4
+      ],
+      [
+        "Boston",
+        3
+      ],
+      [
+        "Maximus",
+        3
+      ]
+    ],
+    "MISC": [
+      [
+        "Segunda Guerra Mundial",
+        10
+      ],
+      [
+        "Alex",
+        6
+      ],
+      [
+        "Blade",
+        5
+      ],
+      [
+        "Nick",
+        4
+      ],
+      [
+        "Harry",
+        3
+      ],
+      [
+        "Guerra do Vietnã",
+        2
+      ],
+      [
+        "T-800",
+        2
+      ],
+      [
+        "Matrix",
+        2
+      ],
+      [
+        "Zion",
+        2
+      ],
+      [
+        "Natal",
+        2
+      ],
+      [
+        "Lei dos Robóticos",
+        2
+      ],
+      [
+        "RJ",
+        2
+      ],
+      [
+        "Iris",
+        2
+      ],
+      [
+        "Creeds",
+        2
+      ],
+      [
+        "Gru",
+        2
+      ]
+    ],
+    "ORG": [
+      [
+        "FBI",
+        8
+      ],
+      [
+        "Marty",
+        4
+      ],
+      [
+        "Força",
+        4
+      ],
+      [
+        "Dra",
+        2
+      ],
+      [
+        "Jaegers",
+        2
+      ],
+      [
+        "Caso Watergate",
+        1
+      ],
+      [
+        "Palhaços",
+        1
+      ],
+      [
+        "McFly",
+        1
+      ],
+      [
+        "Welton Academy",
+        1
+      ],
+      [
+        "Gotham City",
+        1
+      ],
+      [
+        "Operação Reinhard",
+        1
+      ],
+      [
+        "MIT",
+        1
+      ],
+      [
+        "Monstros S.A.",
+        1
+      ],
+      [
+        "Gertie",
+        1
+      ],
+      [
+        "Homens de Preto",
+        1
+      ]
+    ],
+    "PER": [
+      [
+        "Andy",
+        8
+      ],
+      [
+        "Peter Parker",
+        8
+      ],
+      [
+        "Ash",
+        8
+      ],
+      [
+        "Shrek",
+        7
+      ],
+      [
+        "David",
+        7
+      ],
+      [
+        "Thor",
+        7
+      ],
+      [
+        "Ripley",
+        6
+      ],
+      [
+        "Fiona",
+        6
+      ],
+      [
+        "Homem de Ferro",
+        6
+      ],
+      [
+        "Noah",
+        6
+      ],
+      [
+        "Edward",
+        5
+      ],
+      [
+        "Homem-Aranha",
+        5
+      ],
+      [
+        "Sam",
+        5
+      ],
+      [
+        "Michael",
+        4
+      ],
+      [
+        "Batman",
+        4
+      ]
+    ]
+  },
+  "triplas": 1435,
+  "triplas_por_regra": {
+    "coordenacao": 88,
+    "obl": 615,
+    "svo": 732
+  },
+  "triplas_regras_do_notebook": 1347,
+  "relacoes_mais_frequentes": [
+    [
+      "ter",
+      45
+    ],
+    [
+      "levar",
+      36
+    ],
+    [
+      "encontrar",
+      28
+    ],
+    [
+      "tornar",
+      21
+    ],
+    [
+      "fazer",
+      17
+    ],
+    [
+      "descobrir",
+      16
+    ],
+    [
+      "conhecer",
+      15
+    ],
+    [
+      "mudar",
+      14
+    ],
+    [
+      "enfrentar",
+      14
+    ],
+    [
+      "transformar",
+      12
+    ],
+    [
+      "formar",
+      11
+    ],
+    [
+      "entrar_em",
+      10
+    ],
+    [
+      "passar",
+      10
+    ],
+    [
+      "dar",
+      10
+    ],
+    [
+      "precisar",
+      9
+    ]
+  ],
+  "triplas_com_duas_entidades": 31,
+  "sujeitos_pronomes": 499,
+  "segundos_spacy": 3.34
+}

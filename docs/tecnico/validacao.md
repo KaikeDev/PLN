@@ -100,6 +100,35 @@ Merge da branch `luana-classificacao` (ADRs 0017 e 0018) no `trabalho-3`. As ADR
 | Classificação | `data/classificacao/tmdb_2026-09-12` foi regenerada a partir dos vetores novos (`--vectors`); `verify` aprovou os 25 arquivos. Métricas e relatório idênticos aos da branch; mudaram só as probabilidades do BERTimbau, na sexta casa decimal, e o manifesto. |
 | Jev com os rótulos do TMDB | Nova amostra de 120 sinopses: 47 respostas reaproveitadas e 73 chamadas novas (`jev-1.13.0`), nenhuma falha, em 41 s. `verify` aprovou os 7 arquivos. Repetição com `--reuse` a partir da entrega: 0 chamadas e arquivos de conteúdo idênticos byte a byte. Acurácia de 85,0% contra 56,0% da referência nos 100 filmes de um gênero. A primeira tentativa falhou com HTTP 403 e não gravou nada; a chave foi trocada em `backend/.env`. |
 
+## Entidades e relações (10/10/2026)
+
+Decisões no [ADR 0027](../adr/0027-entidades-e-relacoes.md).
+
+| Verificação | Resultado e alcance |
+|---|---|
+| Dependência | spaCy 3.8.16 e `pt_core_news_sm` 3.8.0 no extra `entidades`, registrados no `uv.lock`. A primeira sincronização falhou com "Acesso negado" num arquivo do ambiente virtual; a segunda, sem nenhum processo aberto, concluiu. |
+| Fidelidade ao notebook | As frases do notebook dão as mesmas triplas, inclusive (Marie Curie, trabalhar_em, Universidade de Paris), e a versão bruta mantém "na Universidade de Paris". Sem a regra de coordenação, o texto da Marie Curie dá as triplas da seção 7.2 do notebook; com ela, mais 2. |
+| Créditos | 430 chamadas a `/movie/{id}/credits`, sem erros. |
+| Execução | 428 sinopses em cerca de 15 s (3,6 s no spaCy); `verify` aprovado. 1.671 entidades e 1.435 triplas. |
+| Conferência com os créditos | 983 menções creditadas em 325 sinopses: 73,7% como PER, 98,5% com alguma categoria; precisão estimada de PER de 81,6%. Uma primeira versão não reconhecia apelidos entre aspas nos créditos ("'Red'"): 976 menções e 73,5%. |
+| Testes automatizados | 9 em `test_entities.py` (regras do notebook, coordenação, tabelas, créditos, extrator da tela, pipeline e adulteração; os que usam o spaCy são pulados sem o extra) e 2 em `test_api.py` (`/entidades`). |
+| API real | Inicia com o spaCy. Matrix: Thomas Anderson, Morpheus e Trinity como PER e Matrix como MISC; triplas (Thomas, conhecer, misteriosos Morpheus e Trinity), (que, manipular, mente das pessoas) e o erro (sonho, repetir, À medida que). |
+
+## Análise de sentimentos (10/10/2026)
+
+Decisões no [ADR 0026](../adr/0026-analise-de-sentimentos.md).
+
+| Verificação | Resultado e alcance |
+|---|---|
+| Coleta | 5.853 chamadas a `/movie/{id}/reviews` em pt-BR, em 349 s, sem erros; 2.008 críticas de 1.710 filmes. |
+| Preparação | 1.859 críticas mantidas (1.634 filmes, 86 autores); 107 sem nota, 24 em outro idioma e 18 curtas demais ficaram de fora. 187 críticas bilíngues tiveram a seção em inglês removida. Um autor tem 66,5% das críticas mantidas. |
+| Primeiras versões descartadas | O filtro de idioma excluía críticas bilíngues inteiras, e o cabeçalho "**Portuguese**" (em inglês) não era reconhecido, o que deixava 156 críticas "curtas demais". Corrigido antes do experimento. |
+| Leitura de JSONL | Críticas com U+2028 e U+0085 quebravam `read_jsonl`, que usava `splitlines`; agora a leitura separa só em LF, como a gravação. |
+| Experimento | 45 min 30 s com as 8 representações; o BERTimbau levou 39 min para codificar as críticas em partes. Polaridade: BERTimbau F1 macro 0,867; TF-IDF sem stopwords 0,856; referência 0,415. Nota: BERTimbau erro médio 1,334; média do treino 1,979. `verify` aprovado. |
+| Entre autores | Treino sem o autor principal → teste nele: BERTimbau 0,808, TF-IDF sem stopwords 0,507. |
+| Testes automatizados | 12 novos em `test_sentiment.py` (seções bilíngues, filtros, anonimização, paginação da coleta, partes dos transformers, dobras por filme, experimento de ponta a ponta, modelo da tela, adulteração) e 2 em `test_api.py` (`/sentimento`). |
+| API real | Inicia com o analisador TF-IDF ajustado com 1.422 críticas. Exemplos da tela: elogio → positivo 99,7%, nota 9,3; crítica negativa → negativo, nota 4,5; "Não é um filme ruim…" → negativo (negação); "Ótimo… Genial." → positivo 95,5% (ironia). |
+
 ## Preparação da consulta (05/10/2026)
 
 Decisões no [ADR 0025](../adr/0025-preparacao-da-consulta.md).

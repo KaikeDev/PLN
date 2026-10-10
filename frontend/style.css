@@ -446,6 +446,48 @@ button:disabled {
 .genero--comedia { --cor-genero: #ffb703; }
 .genero--terror { --cor-genero: #ff6b6b; }
 .genero--ficcao-cientifica { --cor-genero: #b388ff; }
+.sentimento--positivo { --cor-genero: var(--cor-ok); }
+.sentimento--negativo { --cor-genero: var(--cor-erro); }
+.sentimento--nota { --cor-genero: var(--cor-destaque); }
+
+.palavras-grupo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 1rem;
+}
+
+.palavras__titulo {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--cor-texto-fraco);
+  margin-bottom: 0.5rem;
+}
+
+.palavras__lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.palavra {
+  --cor-genero: var(--cor-destaque);
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid var(--cor-genero);
+  color: var(--cor-genero);
+  background: color-mix(in srgb, var(--cor-genero) 10%, transparent);
+  font-size: 0.85rem;
+}
+
+.palavras__vazio {
+  font-size: 0.85rem;
+  color: var(--cor-texto-fraco);
+}
 
 @media (max-width: 560px) {
   .barra {
@@ -522,6 +564,69 @@ button:disabled {
 
 .parecidos__aviso {
   margin: 0.75rem 0 0;
+}
+
+.entidade--per { --cor-genero: #5aa9e6; }
+.entidade--loc { --cor-genero: var(--cor-ok); }
+.entidade--org { --cor-genero: #b388ff; }
+.entidade--misc { --cor-genero: var(--cor-destaque); }
+
+.entidades__texto {
+  line-height: 1.9;
+  margin: 0 0 1rem;
+}
+
+.entidade {
+  --cor-genero: var(--cor-destaque);
+  color: var(--cor-texto);
+  background: color-mix(in srgb, var(--cor-genero) 22%, transparent);
+  border-bottom: 2px solid var(--cor-genero);
+  border-radius: 4px;
+  padding: 0.05rem 0.25rem;
+}
+
+.entidade__rotulo {
+  margin-left: 0.3rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--cor-genero);
+}
+
+.entidades__grupos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  gap: 1rem;
+}
+
+.entidades__subtitulo {
+  font-size: 0.85rem;
+  margin: 1.25rem 0 0.5rem;
+}
+
+.relacoes {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.4rem;
+  font-size: 0.88rem;
+}
+
+.relacao {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  align-items: baseline;
+}
+
+.relacao__argumento {
+  font-weight: 600;
+}
+
+.relacao__verbo {
+  color: var(--cor-destaque);
+  font-family: ui-monospace, monospace;
+  font-size: 0.82rem;
 }
 
 .aviso-catalogo {

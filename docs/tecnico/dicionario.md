@@ -49,6 +49,31 @@ Campos principais das respostas de filmes:
 
 Textos ausentes geram listas vazias nas etapas tokenizadas. As métricas de extensão e vocabulário usam apenas as sinopses originalmente preenchidas; as contagens de filmes e ausência usam toda a base. Títulos ficam nos metadados e não passam pelo filtro de stopwords.
 
+## Críticas (análise de sentimentos)
+
+| Arquivo/campo | Tipo | Regra |
+|---|---|---|
+| `data/coleta/criticas_*/reviews.jsonl` | Objeto por linha | Uma crítica do TMDB, ordenada por (`movie_id`, `review_id`). |
+| `review_id` | Texto | Identificador da crítica no TMDB; chave da crítica. |
+| `movie_id`, `title` | Inteiro, texto | Filme criticado e o seu título em português. |
+| `rating` | Número ou null | Nota de 0 a 10 que o autor deu ao filme (`author_details.rating`); null quando o autor não deu nota. |
+| `author_key` | Texto ou null | SHA-256 truncado em 16 caracteres do usuário do autor. Nome, usuário e avatar não são gravados. |
+| `content` | Texto | Texto original da crítica, com a marcação do TMDB. |
+| `data/preparacao/criticas_*/metadata.jsonl` | Objeto por linha | `id` sequencial (1, 2, …) usado pelas seis etapas de texto, `review_id`, `movie_id`, `title`, `rating`, `author_key`, `created_at`. |
+| `excluded.json` | Lista de objetos | Críticas fora do corpus, com o motivo: `sem_nota`, `curta_demais` ou `outro_idioma`. |
+| `data/sentimento/*/<representação>.polaridade.predictions.jsonl` | Objeto por linha | Dobra, polaridade real e prevista, probabilidades, nota real e `review_id`. |
+| `data/sentimento/*/<representação>.nota.predictions.jsonl` | Objeto por linha | Dobra, nota real e nota prevista (0 a 10). |
+
+## Entidades e relações
+
+| Arquivo/campo | Tipo | Regra |
+|---|---|---|
+| `data/coleta/creditos_*/credits.jsonl` | Objeto por linha | `movie_id` e `cast`, com os 15 primeiros do elenco: `name` (ator) e `character` (personagem). |
+| `data/entidades/*/entities.jsonl` | Objeto por linha | `id`, `title` e `entidades`: `entidade`, `categoria` (PER, LOC, ORG ou MISC), `inicio` e `fim` (posições de caractere no texto limpo, `fim` exclusivo). |
+| `relations.jsonl` → `triplas` | Lista de objetos | `subject`, `relation` (lema do verbo, com a preposição no `obl`), `object`, `sentence` (a partir de 1), `rule` (`svo`, `obl` ou `coordenacao`), `subject_is_entity`, `object_is_entity`. |
+| `credits_check.jsonl` | Objeto por linha | Menções creditadas com a categoria que o NER deu (null quando não reconhecida) e entidades PER com `confirmada` (tem nome dos créditos). |
+| `review_sample.json` | Lista de objetos | Triplas sorteadas com a sentença de origem e `correta` = null, para conferência manual. |
+
 ## Definições das medidas
 
 - Registros recebidos: ocorrências de filmes em respostas de descoberta e detalhes; respostas da lista de gêneros não entram nessa contagem.

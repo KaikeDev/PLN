@@ -59,8 +59,12 @@ def read_json_array(path: Path) -> list:
 
 
 def read_jsonl(path: Path) -> list[dict]:
-    """Lê um arquivo JSONL, ignorando linhas em branco."""
-    return [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
+    """Lê um arquivo JSONL, ignorando linhas em branco.
+
+    Separa só em LF: `splitlines` também quebraria em separadores Unicode (U+2028, U+0085…) que o JSON
+    grava sem escape dentro de textos, como em críticas de usuários.
+    """
+    return [json.loads(line) for line in path.read_text(encoding="utf-8").split("\n") if line.strip()]
 
 
 def sha256(path: Path) -> str:

@@ -15,6 +15,7 @@ BACKEND_DIR = Path(__file__).resolve().parents[2]
 REPOSITORY_DIR = BACKEND_DIR.parent
 SAMPLE = "tmdb_2026-09-12"
 CATALOG = "site_2026-10-05"
+REVIEWS = "criticas_2026-10-10"
 
 
 class Settings(BaseSettings):
@@ -22,7 +23,8 @@ class Settings(BaseSettings):
 
     A busca por tema e os filmes parecidos usam o catálogo do site (`synopsis_*_dir`, cerca de 5 mil filmes,
     ADR 0024), com os vetores das sinopses já calculados; sem o catálogo, a API usa a amostra avaliada
-    (`sample_*_dir`, 428 filmes). O classificador da tela é sempre treinado na amostra avaliada.
+    (`sample_*_dir`, 428 filmes). O classificador da tela é sempre treinado na amostra avaliada, e a análise de sentimento, nas críticas
+    preparadas (`sentiment_processed_dir`, ADR 0026).
     `synopsis_search` falso desliga o carregamento dos modelos na inicialização.
     """
 
@@ -47,6 +49,9 @@ class Settings(BaseSettings):
     synopsis_classifier_config: Path = REPOSITORY_DIR / "config" / "classificacao" / "classificacao_semantica.json"
     synopsis_classifier_representation: str = "sentenca_minilm"
     synopsis_recommendation_representation: str = "sentenca_minilm"
+    sentiment_processed_dir: Path = REPOSITORY_DIR / "data" / "preparacao" / REVIEWS
+    sentiment_config: Path = REPOSITORY_DIR / "config" / "sentimento" / "sentimento.json"
+    sentiment_representation: str = "tfidf_sem_stopwords"
 
     def require_tmdb_token(self) -> str:
         """Token de leitura do TMDB; falha com mensagem orientativa quando não configurado."""

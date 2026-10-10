@@ -96,6 +96,37 @@ Três abordagens para o mesmo problema: **qual o gênero desta sinopse?**
 - A regressão logística foi comparada com Naive Bayes, SVM, floresta aleatória e kNN nas mesmas dobras. A justificativa está em [6-classificacao-escolha-dos-modelos.md](docs/6-classificacao-escolha-dos-modelos.md).
 - O Jev é melhor, mas cada classificação é uma **chamada paga** a um serviço externo. Por isso a tela do site usa a regressão logística.
 
+## 7b. Análise de sentimentos (Aula 9)
+
+📄 [docs/7-sentimentos.md](docs/7-sentimentos.md) · 💻 [`sentiment/`](backend/src/app/sentiment/)
+
+Sinopses não opinam, então o sentimento foi medido em **críticas de usuários do TMDB**, que vêm com a nota que o próprio autor deu ao filme: um conjunto rotulado **sem anotação manual**.
+
+| | Resultado |
+|---|---|
+| Dados | 1.859 críticas em português de 1.634 filmes; 414 negativas (nota ≤ 4) e 1.008 positivas (nota ≥ 7) |
+| Polaridade | F1 macro de **86,7%** (BERTimbau) e 85,6% (TF-IDF), contra 41,5% de chutar sempre "positivo" |
+| Nota de 0 a 10 | Erro médio de **1,33 ponto** (BERTimbau), contra 1,98 de chutar a média |
+
+- **Um autor escreveu 67% das críticas.** Treinando sem ele e testando nele, o TF-IDF cai para 50,7%, e o BERTimbau mantém 80,8%: os vetores pré-treinados generalizam melhor para quem escreve diferente.
+- **Negação atrapalha todas as representações:** no TF-IDF, a acurácia cai de 95,2% sem negação para 87,8% com negação.
+- **Na tela**, a aba "Analisar crítica" usa o TF-IDF, que treina na hora e mostra as palavras que mais pesaram. Os exemplos da equipe incluem uma negação ("Não é um filme ruim…", lida como negativa) e uma ironia ("Ótimo… Genial.", lida como positiva).
+
+## 7c. Entidades nomeadas e relações (Aula 9)
+
+📄 [docs/8-entidades-e-relacoes.md](docs/8-entidades-e-relacoes.md) · 💻 [`entities/`](backend/src/app/entities/)
+
+O notebook da aula aplicado às 428 sinopses, com o mesmo modelo (spaCy `pt_core_news_sm`) e as mesmas regras: **dependências → NER → relações → grafo**.
+
+| | Resultado |
+|---|---|
+| NER | 1.671 menções. Comparando com os **créditos do TMDB**, 73,7% das pessoas creditadas saem como PER, e 81,6% das PER têm nome dos créditos |
+| Relações | 1.435 triplas sujeito — relação → objeto; 88 delas pela regra a mais de coordenação ("nasceu … e estudou …") |
+
+- **O NER encontra os nomes, mas erra a categoria:** "Maximus" e "Mathilda" viram lugares, e "Forrest Gump", MISC. O modelo foi treinado em notícias.
+- **Correferência é o maior limite:** 35% das triplas têm "ele", "ela" ou "que" como sujeito, como o "Ela" do grafo da Marie Curie no notebook.
+- **No site:** a ficha de cada filme mostra a sinopse com as entidades marcadas por cor, as pessoas e os lugares, e as triplas.
+
 ## 8. Roteiro da demonstração
 
 > **Antes da apresentação:** gere o catálogo do site ([passo 2 do README](README.md#como-executar)). Sem ele, a busca e os filmes parecidos usam só os 428 filmes, e os exemplos abaixo mudam. O indicador no topo do site deve mostrar "5.525 filmes".

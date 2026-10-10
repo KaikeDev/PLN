@@ -53,6 +53,8 @@ Cada etapa lê e grava pastas próprias. Toda saída tem `manifest.json` com o S
 | Busca combinada | `config/busca/busca.json` | `python -m app.search hybrid` | saída no terminal |
 | Classificação treinada | `config/classificacao/classificacao*.json` | `python -m app.classification build` | `data/classificacao/` |
 | Jev | `config/classificacao/jev.json` | `python -m app.classification.jev run` | `data/jev/` |
+| Análise de sentimentos | `config/sentimento/coleta_criticas.json`, `config/sentimento/sentimento.json` | `python -m app.sentiment collect`, `process`, `build` e `verify` | `data/coleta/criticas_2026-10-10/`, `data/preparacao/criticas_2026-10-10/` (fora do Git), `data/sentimento/` |
+| Entidades e relações | `config/entidades/entidades.json` | `python -m app.entities credits`, `build` e `verify` | `data/coleta/creditos_2026-10-10/`, `data/entidades/` |
 | Catálogo do site (busca e recomendação na API) | `config/coleta/coleta_site.json`, `config/representacoes/vetorizacao_site.json` | `corpus collect`, `corpus process` e `representations build` | `data/*/site_2026-10-05/` (fora do Git) |
 
 Os rótulos de gênero são os mesmos em todas as etapas: `Document.genres` é o conjunto de `genre_ids` do TMDB restrito aos quatro gêneros da coleta.

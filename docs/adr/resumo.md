@@ -31,6 +31,8 @@ O código não tem comentários fora de docstrings. Quando uma docstring cita �
 | [0023](#0023--filmes-parecidos-na-ficha-do-filme) | Filmes parecidos na ficha do filme | API |
 | [0024](#0024--catálogo-maior-para-a-busca-e-a-recomendação-do-site) | Catálogo maior para a busca e a recomendação do site | Dados |
 | [0025](#0025--preparação-da-consulta-da-busca-por-tema) | Preparação da consulta da busca por tema | Busca |
+| [0026](#0026--análise-de-sentimentos-de-críticas-do-tmdb-aula-9) | Análise de sentimentos de críticas do TMDB (Aula 9) | Método |
+| [0027](#0027--entidades-nomeadas-e-relações-nas-sinopses-com-o-spacy-aula-9) | Entidades nomeadas e relações nas sinopses com o spaCy (Aula 9) | Método |
 
 ---
 
@@ -312,3 +314,19 @@ As análises que estavam juntas em `vectors/analyses.py` foram separadas por tar
 **Por quê.** "Filmes sobre saude mental" trazia filmes sobre cinema: "filmes" pesava como conteúdo, e "saude" não casava com "saúde".
 
 **Consequência.** Nas 20 consultas anotadas, a combinação passou de MAP 0,613 para 0,627, sem nenhuma consulta pior. Temas abstratos continuam mais difíceis que temas concretos. [Detalhes](0025-preparacao-da-consulta.md)
+
+## 0026 — Análise de sentimentos de críticas do TMDB (Aula 9)
+
+**Decisão.** O sentimento é medido em críticas em português do TMDB, rotuladas pela nota do autor: polaridade (nota ≤ 4 × nota ≥ 7) e nota de 0 a 10, com as oito representações e a mesma validação cruzada da classificação de gêneros. As dobras agrupam as críticas por filme; à parte, um teste treina sem o autor que escreveu 67% das críticas e testa nele. Os transformers leem a crítica em partes. A tela usa o TF-IDF sem stopwords.
+
+**Por quê.** Sinopses não opinam; as críticas trazem texto e rótulo juntos, sem anotação manual. O TF-IDF fica a 0,011 do BERTimbau no F1, treina na hora e mostra as palavras que decidiram.
+
+**Consequência.** F1 macro de 0,867 (BERTimbau) e 0,856 (TF-IDF); nota com erro médio de 1,33 ponto. Treinando sem o autor principal, o TF-IDF cai para 0,507, e o BERTimbau mantém 0,808. [Detalhes](0026-analise-de-sentimentos.md)
+
+## 0027 — Entidades nomeadas e relações nas sinopses com o spaCy (Aula 9)
+
+**Decisão.** As funções do notebook da Aula 9 (dependências, NER, sintagmas, argumentos, preposições e relações) são aplicadas às 428 sinopses com o spaCy `pt_core_news_sm`, num extra opcional `entidades`. Uma regra a mais, separável, dá aos verbos coordenados o sujeito do verbo anterior. O NER é conferido com os créditos do TMDB; as relações ficam com uma amostra para conferência manual.
+
+**Por quê.** O projeto não tinha modelo de NER ou parsing, e o notebook usa o spaCy. Os créditos medem as pessoas sem anotação manual.
+
+**Consequência.** Revocação de pessoas de 73,7% e precisão estimada de 81,6%; 1.435 triplas, 35% delas com um pronome como sujeito, que fica sem correferência. [Detalhes](0027-entidades-e-relacoes.md)

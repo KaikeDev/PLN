@@ -2,7 +2,10 @@
 
 from collections.abc import Mapping
 
+from app.entities.extraction import Triple
+from app.entities.live import Extraction
 from app.search.ports import CatalogError, DiscoverQuery
+from app.sentiment.live import SentimentResult
 
 TEST_GENRES = {
     28: "Ação",
@@ -76,6 +79,43 @@ class FakeGenreClassifier:
         if self.error:
             raise ValueError(self.error)
         return list(self.scores)
+
+
+class FakeSentimentAnalyzer:
+    """Devolve um resultado fixo; `error` simula um texto que o modelo não consegue ler."""
+
+    representation_name = "teste"
+    training_size = 20
+
+    def __init__(self, result: SentimentResult | None = None, error: str | None = None) -> None:
+        self.result = result or SentimentResult("positivo", 0.9, 8.5, (("excelente", 0.4),), (("chato", -0.1),))
+        self.error = error
+        self.texts: list[str] = []
+
+    def analyze(self, text: str) -> SentimentResult:
+        self.texts.append(text)
+        if self.error:
+            raise ValueError(self.error)
+        return self.result
+
+
+class FakeEntityExtractor:
+    """Devolve entidades e uma tripla fixas; `error` simula um texto inválido."""
+
+    model_name = "teste"
+
+    def __init__(self, error: str | None = None) -> None:
+        self.error = error
+        self.texts: list[str] = []
+
+    def extract(self, text: str) -> Extraction:
+        self.texts.append(text)
+        if self.error:
+            raise ValueError(self.error)
+        return Extraction(
+            [{"entidade": "Marie Curie", "categoria": "PER", "inicio": 0, "fim": 11}],
+            [Triple("Marie Curie", "nascer_em", "Varsóvia", 1, "obl", True, True)],
+        )
 
 
 class FakeRecommender:

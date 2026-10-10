@@ -29,6 +29,8 @@ Cada ADR registra uma decisão com contexto, alternativas e consequências, no f
 | [0023](0023-recomendacao-no-site.md) | Filmes parecidos na ficha do filme | Aceita |
 | [0024](0024-catalogo-do-site.md) | Catálogo maior para a busca e a recomendação do site | Aceita |
 | [0025](0025-preparacao-da-consulta.md) | Preparação da consulta da busca por tema | Aceita |
+| [0026](0026-analise-de-sentimentos.md) | Análise de sentimentos de críticas do TMDB (Aula 9) | Aceita |
+| [0027](0027-entidades-e-relacoes.md) | Entidades nomeadas e relações nas sinopses com o spaCy (Aula 9) | Aceita |
 
 O resumo de todas as decisões e das justificativas está em [`resumo.md`](resumo.md).
 

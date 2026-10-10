@@ -1,0 +1,7 @@
+{
+  "description": "Críticas em português dos filmes do catálogo do site, com a nota que o autor deu ao filme (ADR 0026).",
+  "language": "pt-BR",
+  "max_pages_per_movie": 5,
+  "request_interval_seconds": 0.05,
+  "workers": 4
+}

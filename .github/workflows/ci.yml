@@ -36,6 +36,14 @@ jobs:
           uv run --frozen python -m app.classification verify --input ../data/classificacao/tmdb_2026-09-12
       - name: Integridade da saída do Jev
         run: uv run --frozen python -m app.classification.jev verify --input ../data/jev/tmdb_2026-09-12
+      - name: Integridade da análise de sentimentos
+        run: |
+          uv run --frozen python -m app.sentiment verify --input ../data/coleta/criticas_2026-10-10
+          uv run --frozen python -m app.sentiment verify --input ../data/sentimento/criticas_2026-10-10
+      - name: Integridade de entidades e relações
+        run: |
+          uv run --frozen python -m app.entities verify --input ../data/coleta/creditos_2026-10-10
+          uv run --frozen python -m app.entities verify --input ../data/entidades/tmdb_2026-09-12
 
   frontend:
     runs-on: ubuntu-latest

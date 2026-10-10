@@ -1,0 +1,12 @@
+{
+  "reviews": 1859,
+  "movies": 1634,
+  "authors": 86,
+  "main_author_share": 0.6654,
+  "polarity": {
+    "negativo": 414,
+    "positivo": 1008
+  },
+  "middle_excluded_from_polarity": 437,
+  "with_negation": 1276
+}

@@ -10,6 +10,8 @@ O código fica em `src/app`, com uma pasta por tarefa da disciplina. A visão ge
 | `recommendation/` | 4. Recomendação | roda dentro de `app.representations build` |
 | `clustering/` | 5. Agrupamento e visualização | roda dentro de `app.representations build` |
 | `classification/` | 6. Classificação (regressão logística, Jev em `jev/`, classificador da tela) | `python -m app.classification build / verify`, `python -m app.classification.jev run / verify` |
+| `sentiment/` | 7. Análise de sentimentos de críticas (Aula 9) | `python -m app.sentiment collect / process / build / verify` |
+| `entities/` | 8. Entidades nomeadas e relações com o spaCy (Aula 9) | `python -m app.entities credits / build / verify` |
 | `api/`, `main.py`, `settings.py` | Site: API FastAPI | `uvicorn app.main:app --host 127.0.0.1` |
 | `tmdb/` | Cliente da API do TMDB | — |
 | `shared/` | Artefatos, manifesto, validação e regras de língua | — |
@@ -17,11 +19,13 @@ O código fica em `src/app`, com uma pasta por tarefa da disciplina. A visão ge
 Nesta pasta:
 
 ```bash
-uv sync --frozen --extra semantico --extra jev
+uv sync --frozen --extra semantico --extra jev --extra entidades
 uv run --frozen python -m unittest discover -s tests -v
 uv run --frozen ruff check src tests && uv run --frozen ruff format --check src tests
 uv run --frozen mypy
 ```
+
+**Para rodar o site:** siga [docs/tecnico/rodar-o-site.md](../docs/tecnico/rodar-o-site.md).
 
 **Depois de clonar:** gere o catálogo do site (passo 2 do [README principal](../README.md#como-executar)); sem ele, a busca por tema e os filmes parecidos usam só os 428 filmes da amostra.
 

@@ -7,7 +7,7 @@
   <meta name="referrer" content="no-referrer" />
   <meta name="api-base" content="http://127.0.0.1:8000" />
   <title>API de Filmes (TMDB)</title>
-  <link rel="stylesheet" href="style.css?v=6" />
+  <link rel="stylesheet" href="style.css?v=8" />
 </head>
 <body>
   <header>
@@ -23,6 +23,7 @@
     <div class="abas" role="tablist" aria-label="Funções do site">
       <button type="button" class="aba aba--ativa" id="aba-busca" role="tab" aria-selected="true" aria-controls="painel-busca">Buscar filmes</button>
       <button type="button" class="aba" id="aba-classificacao" role="tab" aria-selected="false" aria-controls="painel-classificacao" tabindex="-1">Classificar sinopse</button>
+      <button type="button" class="aba" id="aba-sentimento" role="tab" aria-selected="false" aria-controls="painel-sentimento" tabindex="-1">Analisar crítica</button>
     </div>
 
     <section id="painel-busca" role="tabpanel" aria-labelledby="aba-busca">
@@ -67,6 +68,31 @@
         <p class="painel__rodape">Modelo: regressão logística sobre o embedding de sentença (MiniLM), treinada com as sinopses do corpus. Na avaliação por validação cruzada, acerta cerca de dois terços dos filmes (F1 macro de 66%); comédia é o gênero mais difícil.</p>
       </div>
     </section>
+
+    <section id="painel-sentimento" role="tabpanel" aria-labelledby="aba-sentimento" hidden>
+      <div class="painel">
+        <div class="painel__cabecalho">
+          <h2>Analisar uma crítica</h2>
+          <p class="painel__ajuda">Escreva ou cole uma opinião sobre um filme e veja se ela soa positiva ou negativa, a nota de 0 a 10 que o modelo espera do autor e as palavras que mais pesaram.</p>
+        </div>
+
+        <form id="form-sentimento" class="form-classificacao">
+          <textarea id="campo-critica" rows="7" maxlength="5000" required aria-label="Crítica" placeholder="Ex.: O elenco é ótimo, mas o roteiro se perde na segunda metade e o final decepciona."></textarea>
+          <div class="form-classificacao__rodape">
+            <span id="contador-critica" class="contador">0 / 5000</span>
+            <div class="form-classificacao__acoes">
+              <button type="button" id="exemplo-critica" class="botao-secundario">Usar um exemplo</button>
+              <button type="submit" id="botao-analisar">Analisar</button>
+            </div>
+          </div>
+        </form>
+
+        <p id="mensagem-sentimento" class="mensagem" role="status"></p>
+        <div id="resultado-sentimento" class="resultado" aria-live="polite"></div>
+
+        <p id="rodape-sentimento" class="painel__rodape">Modelo: regressão logística (sentimento) e Ridge (nota) sobre o TF-IDF, treinados com 1.859 críticas em português do TMDB, rotuladas pela nota que o próprio autor deu ao filme. Na validação cruzada, acerta 88% das críticas (F1 macro de 86%) e erra a nota em 1,4 ponto em média. Negação e ironia ainda enganam o modelo.</p>
+      </div>
+    </section>
   </main>
 
   <div id="modal" class="modal oculto" role="dialog" aria-modal="true" aria-label="Detalhes do filme">
@@ -76,6 +102,6 @@
     </div>
   </div>
 
-  <script src="script.js?v=6"></script>
+  <script src="script.js?v=8"></script>
 </body>
 </html>

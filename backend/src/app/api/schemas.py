@@ -105,6 +105,65 @@ class ClassificationResponse(BaseModel):
     sinopses_de_treino: int
 
 
+class TermWeight(BaseModel):
+    """Palavra do texto e a sua contribuição para a polaridade."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    palavra: str
+    peso: float
+
+
+class SentimentResponse(BaseModel):
+    """Resultado de `/sentimento`: polaridade, probabilidade de ser positiva, nota prevista e o modelo usado.
+
+    As listas de palavras vêm vazias quando a representação não é lexical.
+    """
+
+    model_config = ConfigDict(extra="forbid")
+
+    polaridade: Literal["positivo", "negativo"]
+    probabilidade_positiva: float
+    nota_prevista: float
+    palavras_positivas: list[TermWeight]
+    palavras_negativas: list[TermWeight]
+    representacao: str
+    criticas_de_treino: int
+
+
+class EntityMention(BaseModel):
+    """Menção reconhecida pelo NER, com as posições de caractere no texto (`fim` exclusivo)."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    texto: str
+    categoria: str
+    inicio: int
+    fim: int
+
+
+class RelationTriple(BaseModel):
+    """Tripla sujeito — relação → objeto, a sentença de origem (a partir de 1) e a regra que a gerou."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    sujeito: str
+    relacao: str
+    objeto: str
+    sentenca: int
+    regra: Literal["svo", "obl", "coordenacao"]
+
+
+class EntitiesResponse(BaseModel):
+    """Resultado de `/entidades`: menções na ordem do texto, triplas e o modelo usado."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    entidades: list[EntityMention]
+    relacoes: list[RelationTriple]
+    modelo: str
+
+
 class SimilarMoviesResponse(BaseModel):
     """Resultado de `/filmes/{id}/parecidos`: os filmes mais parecidos, do mais ao menos próximo."""
 

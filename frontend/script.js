@@ -24,6 +24,34 @@ const elResultadoClassificacao = document.getElementById("resultado-classificaca
 const elContadorSinopse = document.getElementById("contador-sinopse");
 const elExemploSinopse = document.getElementById("exemplo-sinopse");
 const elBotaoClassificar = document.getElementById("botao-classificar");
+const elFormSentimento = document.getElementById("form-sentimento");
+const elCritica = document.getElementById("campo-critica");
+const elMensagemSentimento = document.getElementById("mensagem-sentimento");
+const elResultadoSentimento = document.getElementById("resultado-sentimento");
+const elContadorCritica = document.getElementById("contador-critica");
+const elExemploCritica = document.getElementById("exemplo-critica");
+const elBotaoAnalisar = document.getElementById("botao-analisar");
+const LIMITE_CRITICA = 5000;
+const EXEMPLOS_CRITICA = [
+  {
+    tipo: "elogio direto",
+    texto: "Que filme maravilhoso! A fotografia é deslumbrante, as atuações são excelentes e a trilha sonora emociona do começo ao fim. Saí do cinema querendo ver de novo.",
+  },
+  {
+    tipo: "crítica negativa",
+    texto: "Uma perda de tempo. O roteiro é confuso, os diálogos são fracos e o final é previsível. Fiquei entediado na metade e não recomendo.",
+  },
+  {
+    tipo: "negações",
+    texto: "Não é um filme ruim. Não chega a ser uma obra-prima, mas não decepciona, e o elenco não deixa a desejar.",
+  },
+  {
+    tipo: "ironia",
+    texto: "Ótimo, mais uma continuação que ninguém pediu, com as mesmas piadas de sempre e duas horas e meia de explosões. Genial.",
+  },
+];
+let proximoExemploCritica = 0;
+let exemploCriticaAtual = null;
 const elAbas = Array.from(document.querySelectorAll('[role="tab"]'));
 const LIMITE_SINOPSE = 1000;
 const EXEMPLOS = [
@@ -160,6 +188,67 @@ function renderizarClassificacao(dados) {
   elResultadoClassificacao.replaceChildren(...filhos);
 }
 
+function analisarCritica(texto) {
+  return obterJson(`/sentimento?${new URLSearchParams({ texto })}`, "Falha ao analisar a crítica.");
+}
+
+function decimal(valor, casas = 1) {
+  const numero = Number(valor);
+  return Number.isFinite(numero) ? numero.toFixed(casas).replace(".", ",") : "?";
+}
+
+function listaPalavras(titulo, palavras, classe) {
+  const itens = Array.isArray(palavras) ? palavras : [];
+  return elemento("div", { classe: "palavras" }, [
+    elemento("span", { classe: "palavras__titulo", texto: titulo }),
+    itens.length
+      ? elemento("ul", { classe: "palavras__lista" }, itens.map((item) => elemento("li", { classe: `palavra ${classe}`, texto: String(item.palavra) })))
+      : elemento("span", { classe: "palavras__vazio", texto: "nenhuma" }),
+  ]);
+}
+
+function renderizarSentimento(dados) {
+  const positivo = dados.polaridade === "positivo";
+  const classe = positivo ? "sentimento--positivo" : "sentimento--negativo";
+  const chance = positivo ? Number(dados.probabilidade_positiva) : 1 - Number(dados.probabilidade_positiva);
+  const destaque = elemento("div", { classe: `destaque ${classe}` }, [
+    elemento("div", {}, [
+      elemento("span", { classe: "destaque__rotulo", texto: "Sentimento previsto" }),
+      elemento("span", { classe: "destaque__genero", texto: positivo ? "Positivo" : "Negativo" }),
+    ]),
+    elemento("span", { classe: "destaque__valor", texto: porcentagem(chance) }),
+  ]);
+  const barras = elemento("ul", { classe: "barras", atributos: { "aria-label": "Probabilidade e nota prevista" } }, [
+    elemento("li", { classe: "barra sentimento--positivo" }, [
+      elemento("span", { texto: "Chance de positivo" }),
+      elemento("progress", { atributos: { max: "1", value: String(Number(dados.probabilidade_positiva) || 0), "aria-label": "Probabilidade de ser positiva" } }),
+      elemento("span", { classe: "barra__valor", texto: porcentagem(dados.probabilidade_positiva) }),
+    ]),
+    elemento("li", { classe: "barra sentimento--nota" }, [
+      elemento("span", { texto: "Nota prevista" }),
+      elemento("progress", { atributos: { max: "10", value: String(Number(dados.nota_prevista) || 0), "aria-label": "Nota prevista de 0 a 10" } }),
+      elemento("span", { classe: "barra__valor", texto: decimal(dados.nota_prevista) }),
+    ]),
+  ]);
+  const filhos = [destaque, barras];
+  if ((dados.palavras_positivas ?? []).length || (dados.palavras_negativas ?? []).length) {
+    filhos.push(
+      elemento("div", { classe: "palavras-grupo" }, [
+        listaPalavras("Puxaram para positivo", dados.palavras_positivas, "sentimento--positivo"),
+        listaPalavras("Puxaram para negativo", dados.palavras_negativas, "sentimento--negativo"),
+      ]),
+    );
+  }
+  if (exemploCriticaAtual) {
+    filhos.unshift(elemento("p", { classe: "resultado__exemplo", texto: `Exemplo escrito pela equipe (${exemploCriticaAtual}), fora das críticas de treino.` }));
+  }
+  elResultadoSentimento.replaceChildren(...filhos);
+}
+
+function atualizarContadorCritica() {
+  elContadorCritica.textContent = `${elCritica.value.length} / ${LIMITE_CRITICA}`;
+}
+
 function atualizarContador() {
   elContadorSinopse.textContent = `${elSinopse.value.length} / ${LIMITE_SINOPSE}`;
 }
@@ -221,6 +310,93 @@ function criarDetalhe(filme) {
   ]);
 }
 
+const CATEGORIAS = [
+  { rotulo: "PER", nome: "Pessoas" },
+  { rotulo: "LOC", nome: "Lugares" },
+  { rotulo: "ORG", nome: "Organizações" },
+  { rotulo: "MISC", nome: "Outros" },
+];
+const LIMITE_ENTIDADES = 2000;
+
+function buscarEntidades(texto) {
+  return obterJson(`/entidades?${new URLSearchParams({ texto })}`, "Falha ao extrair entidades e relações.");
+}
+
+function textoMarcado(texto, entidades) {
+  const partes = [];
+  let posicao = 0;
+  for (const entidade of [...entidades].sort((a, b) => a.inicio - b.inicio)) {
+    if (!Number.isInteger(entidade.inicio) || !Number.isInteger(entidade.fim) || entidade.inicio < posicao || entidade.fim > texto.length) continue;
+    partes.push(texto.slice(posicao, entidade.inicio));
+    partes.push(
+      elemento("mark", { classe: `entidade entidade--${String(entidade.categoria).toLowerCase()}`, atributos: { title: String(entidade.categoria) } }, [
+        texto.slice(entidade.inicio, entidade.fim),
+        elemento("span", { classe: "entidade__rotulo", texto: String(entidade.categoria) }),
+      ]),
+    );
+    posicao = entidade.fim;
+  }
+  partes.push(texto.slice(posicao));
+  return elemento("p", { classe: "entidades__texto" }, partes);
+}
+
+function gruposEntidades(entidades) {
+  return elemento(
+    "div",
+    { classe: "entidades__grupos" },
+    CATEGORIAS.map(({ rotulo, nome }) => {
+      const nomes = [...new Set(entidades.filter((entidade) => entidade.categoria === rotulo).map((entidade) => String(entidade.texto)))];
+      return elemento("div", { classe: "palavras" }, [
+        elemento("span", { classe: "palavras__titulo", texto: nome }),
+        nomes.length
+          ? elemento("ul", { classe: "palavras__lista" }, nomes.map((texto) => elemento("li", { classe: `palavra entidade--${rotulo.toLowerCase()}`, texto })))
+          : elemento("span", { classe: "palavras__vazio", texto: "nenhum" }),
+      ]);
+    }),
+  );
+}
+
+function listaRelacoes(relacoes) {
+  if (!relacoes.length) return elemento("p", { classe: "parecidos__aviso", texto: "Nenhuma relação extraída pelas regras." });
+  return elemento(
+    "ul",
+    { classe: "relacoes" },
+    relacoes.map((tripla) =>
+      elemento("li", { classe: "relacao" }, [
+        elemento("span", { classe: "relacao__argumento", texto: String(tripla.sujeito) }),
+        elemento("span", { classe: "relacao__verbo", texto: `— ${tripla.relacao} →` }),
+        elemento("span", { classe: "relacao__argumento", texto: String(tripla.objeto) }),
+      ]),
+    ),
+  );
+}
+
+async function carregarEntidades(sinopse, secao, abertura) {
+  const titulo = elemento("h3", { texto: "Personagens, lugares e relações" });
+  const corpo = elemento("p", { classe: "parecidos__aviso", texto: "Lendo a sinopse..." });
+  secao.replaceChildren(titulo, corpo);
+  const texto = String(sinopse ?? "").trim();
+  if (!texto) {
+    corpo.textContent = "Sem sinopse para analisar.";
+    return;
+  }
+  try {
+    const dados = await buscarEntidades(texto.slice(0, LIMITE_ENTIDADES));
+    if (abertura !== aberturaAtual) return;
+    const entidades = Array.isArray(dados.entidades) ? dados.entidades : [];
+    const relacoes = Array.isArray(dados.relacoes) ? dados.relacoes : [];
+    corpo.replaceWith(
+      textoMarcado(texto.slice(0, LIMITE_ENTIDADES), entidades),
+      gruposEntidades(entidades),
+      elemento("h4", { classe: "entidades__subtitulo", texto: "Relações (sujeito — relação → objeto)" }),
+      listaRelacoes(relacoes),
+      elemento("p", { classe: "parecidos__aviso", texto: `Pelo spaCy ${dados.modelo}, com as regras de dependência da Aula 9. São previsões do modelo: confira com a sinopse.` }),
+    );
+  } catch (erro) {
+    if (abertura === aberturaAtual) corpo.textContent = erro.message;
+  }
+}
+
 function buscarParecidos(filmeId) {
   return obterJson(`/filmes/${encodeURIComponent(filmeId)}/parecidos`, "Falha ao buscar filmes parecidos.");
 }
@@ -264,9 +440,11 @@ async function abrirDetalhes(filmeId) {
   try {
     const filme = await buscarDetalhes(filmeId);
     if (abertura !== aberturaAtual) return;
+    const secaoEntidades = elemento("section", { classe: "parecidos entidades", atributos: { "aria-label": "Personagens, lugares e relações" } });
     const secaoParecidos = elemento("section", { classe: "parecidos", atributos: { "aria-label": "Filmes parecidos" } });
-    elModalCorpo.replaceChildren(criarDetalhe(filme), secaoParecidos);
+    elModalCorpo.replaceChildren(criarDetalhe(filme), secaoEntidades, secaoParecidos);
     elModalCorpo.parentElement.scrollTop = 0;
+    carregarEntidades(filme.overview, secaoEntidades, abertura);
     carregarParecidos(filmeId, secaoParecidos, abertura);
   } catch (erro) {
     if (abertura === aberturaAtual) elModalCorpo.replaceChildren(elemento("p", { classe: "mensagem", texto: erro.message }));
@@ -318,6 +496,38 @@ elExemploSinopse.addEventListener("click", () => {
   elResultadoClassificacao.replaceChildren();
   elMensagemClassificacao.textContent = "";
   elSinopse.focus();
+});
+
+elFormSentimento.addEventListener("submit", async (evento) => {
+  evento.preventDefault();
+  elMensagemSentimento.textContent = "";
+  elResultadoSentimento.replaceChildren();
+  elBotaoAnalisar.disabled = true;
+  elBotaoAnalisar.textContent = "Analisando...";
+  try {
+    renderizarSentimento(await analisarCritica(elCritica.value.trim()));
+  } catch (erro) {
+    elMensagemSentimento.textContent = erro.message;
+  } finally {
+    elBotaoAnalisar.disabled = false;
+    elBotaoAnalisar.textContent = "Analisar";
+  }
+});
+
+elCritica.addEventListener("input", () => {
+  exemploCriticaAtual = null;
+  atualizarContadorCritica();
+});
+
+elExemploCritica.addEventListener("click", () => {
+  const exemplo = EXEMPLOS_CRITICA[proximoExemploCritica];
+  proximoExemploCritica = (proximoExemploCritica + 1) % EXEMPLOS_CRITICA.length;
+  elCritica.value = exemplo.texto;
+  exemploCriticaAtual = exemplo.tipo;
+  atualizarContadorCritica();
+  elResultadoSentimento.replaceChildren();
+  elMensagemSentimento.textContent = "";
+  elCritica.focus();
 });
 
 for (const aba of elAbas) {

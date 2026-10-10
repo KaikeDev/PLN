@@ -4,9 +4,11 @@ from fastapi import Request
 
 from app.api.rate_limit import RateLimiter
 from app.classification.ports import GenreClassifier
+from app.entities.ports import EntityExtractor
 from app.recommendation.ports import SimilarMoviesProvider
 from app.search.ports import MovieDetailsProvider, SynopsisIndex
 from app.search.service import SearchService
+from app.sentiment.ports import SentimentAnalyzer
 
 
 def get_search_service(request: Request) -> SearchService:
@@ -27,6 +29,16 @@ def get_genre_classifier(request: Request) -> GenreClassifier | None:
 def get_recommender(request: Request) -> SimilarMoviesProvider | None:
     """Recomendador de filmes parecidos, ou None quando não pôde ser carregado."""
     return request.app.state.recommender
+
+
+def get_sentiment_analyzer(request: Request) -> SentimentAnalyzer | None:
+    """Analisador de sentimento da aplicação, ou None quando não pôde ser carregado."""
+    return request.app.state.sentiment_analyzer
+
+
+def get_entity_extractor(request: Request) -> EntityExtractor | None:
+    """Extrator de entidades e relações da aplicação, ou None sem o extra `entidades`."""
+    return request.app.state.entity_extractor
 
 
 def get_synopsis_index(request: Request) -> SynopsisIndex | None:

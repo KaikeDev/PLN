@@ -46,6 +46,8 @@ pytorch_model.bin
 
 data/coleta/*
 !data/coleta/tmdb_2026-09-12/
+!data/coleta/criticas_2026-10-10/
+!data/coleta/creditos_2026-10-10/
 data/preparacao/*
 !data/preparacao/tmdb_2026-09-12/
 data/representacoes/*
@@ -54,6 +56,10 @@ data/classificacao/*
 !data/classificacao/tmdb_2026-09-12/
 data/jev/*
 !data/jev/tmdb_2026-09-12/
+data/sentimento/*
+!data/sentimento/criticas_2026-10-10/
+data/entidades/*
+!data/entidades/tmdb_2026-09-12/
 
 node_modules/
 .parcel-cache/

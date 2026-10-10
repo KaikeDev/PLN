@@ -7,7 +7,7 @@ Todos os comandos são executados na pasta `backend`, salvo indicação. Requisi
 ```bash
 cd backend
 uv sync --frozen                                   # dependências básicas
-uv sync --frozen --extra semantico --extra jev     # + modelos (torch) e SDK do Jev
+uv sync --frozen --extra semantico --extra jev --extra entidades     # + modelos (torch), SDK do Jev e spaCy
 uv run --frozen python -m unittest discover -s tests -v
 uv run --frozen ruff check src tests
 uv run --frozen ruff format --check src tests
@@ -85,6 +85,25 @@ uv run --frozen --extra jev python -m app.classification.jev run --input ../data
 
 Sem `--reuse`, cada filme é uma chamada paga à API (exige `TYPESAFE_API_KEY`). Se a primeira chamada falhar, nada é gravado.
 
+### 6. Análise de sentimentos
+
+```bash
+# preparação das críticas entregues, sem rede (segundos); necessária para a aba "Analisar crítica"
+uv run --frozen python -m app.sentiment process --input ../data/coleta/criticas_2026-10-10 --output ../data/preparacao/criticas_2026-10-10 --stopwords ../config/coleta/stopwords_pt.txt
+# experimento com as 8 representações (cerca de 45 minutos, 39 deles no BERTimbau)
+uv run --frozen --extra semantico python -m app.sentiment build --input ../data/preparacao/criticas_2026-10-10 --output ../data/sentimento/reproducao --config ../config/sentimento/sentimento.json
+```
+
+Uma coleta nova de críticas (exige `TMDB_BEARER_TOKEN` e o catálogo do site) está em [7-sentimentos.md](../7-sentimentos.md#como-executar).
+
+### 7. Entidades e relações
+
+```bash
+uv sync --frozen --extra semantico --extra jev --extra entidades
+# cerca de 15 segundos; usa os créditos entregues em data/coleta/creditos_2026-10-10
+uv run --frozen --extra entidades python -m app.entities build --input ../data/preparacao/tmdb_2026-09-12 --credits ../data/coleta/creditos_2026-10-10 --output ../data/entidades/reproducao --config ../config/entidades/entidades.json
+```
+
 ## Catálogo do site
 
 > **Obrigatório depois de clonar o repositório**, para o site usar o catálogo completo. Sem ele, a API registra um aviso no terminal, o site mostra uma faixa amarela no topo, e a busca e os filmes parecidos usam só a amostra de 428 filmes. A rota `/saude` informa a origem e o tamanho do catálogo carregado.
@@ -101,20 +120,21 @@ Sem o catálogo, a API usa a amostra avaliada de 428 filmes e registra um aviso.
 
 ## O site
 
+O passo a passo completo para quem vai só abrir o site está em [rodar-o-site.md](rodar-o-site.md).
+
 Terminal 1, em `backend` (exige `TMDB_BEARER_TOKEN`):
 
 ```bash
-uv run --frozen --extra semantico --extra jev uvicorn app.main:app --host 127.0.0.1 --reload
+uv run --frozen --extra semantico --extra jev --extra entidades uvicorn app.main:app --host 127.0.0.1 --reload
 ```
 
-Terminal 2, na raiz:
+Terminal 2, também em `backend`:
 
 ```bash
-cd frontend
-python -m http.server 5500
+uv run --frozen python -m http.server 5500 --directory ../frontend
 ```
 
-Abra <http://127.0.0.1:5500>. A API leva alguns segundos para iniciar, porque carrega os modelos da busca por tema e treina o classificador da tela. Sem o extra `semantico`, ela sobe mesmo assim, e a busca por tema e a classificação avisam que estão indisponíveis. A documentação interativa da API fica em <http://127.0.0.1:8000/docs>.
+Abra <http://127.0.0.1:5500>. A API leva alguns segundos para iniciar, porque carrega os modelos da busca por tema e treina o classificador da tela. Sem o extra `semantico`, ela sobe mesmo assim, e a busca por tema e a classificação avisam que estão indisponíveis; o mesmo vale para o extra `entidades` e para as críticas preparadas. A documentação interativa da API fica em <http://127.0.0.1:8000/docs>.
 
 | Rota | Função |
 |---|---|
@@ -123,6 +143,8 @@ Abra <http://127.0.0.1:5500>. A API leva alguns segundos para iniciar, porque ca
 | `GET /filmes/603` | Ficha do filme, com elenco e vídeos |
 | `GET /filmes/603/parecidos?quantidade=5` | Filmes de sinopse mais parecida (só para os filmes do catálogo do site) |
 | `GET /classificacao?texto=...` | Gênero previsto para uma sinopse e a probabilidade de cada gênero; até 1.000 caracteres |
+| `GET /sentimento?texto=...` | Polaridade, probabilidade de ser positiva, nota prevista e palavras de maior peso de uma crítica; até 5.000 caracteres |
+| `GET /entidades?texto=...` | Entidades (PER, LOC, ORG, MISC) e triplas sujeito — relação → objeto de um texto; até 2.000 caracteres |
 
 Configurações opcionais em `backend/.env`: `TMDB_LANGUAGE`, `TMDB_TIMEOUT`, `CORS_ORIGINS` e `RATE_LIMIT_PER_MINUTE` (padrão de 60 requisições por minuto por IP). O CORS só libera as origens da interface, e a API roda em `127.0.0.1` ([ADR 0002](../adr/0002-credencial-e-exposicao-da-api.md)).
 

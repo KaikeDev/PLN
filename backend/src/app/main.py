@@ -25,9 +25,11 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.api.rate_limit import RateLimiter
 from app.api.router import api_router
 from app.classification.ports import GenreClassifier
+from app.entities.ports import EntityExtractor
 from app.recommendation.ports import SimilarMoviesProvider
 from app.search.ports import MovieSource, SynopsisIndex
 from app.search.service import SearchService
+from app.sentiment.ports import SentimentAnalyzer
 from app.settings import Settings, get_settings
 from app.tmdb.cache import CachedMovieCatalog
 from app.tmdb.catalog import TMDBMovieCatalog
@@ -45,10 +47,12 @@ def create_app(
     synopsis_index: SynopsisIndex | None = None,
     genre_classifier: GenreClassifier | None = None,
     recommender: SimilarMoviesProvider | None = None,
+    sentiment_analyzer: SentimentAnalyzer | None = None,
+    entity_extractor: EntityExtractor | None = None,
 ) -> FastAPI:
-    """Aplicação configurada; `catalog`, `synopsis_index`, `genre_classifier` e `recommender` substituem os reais (usados em testes).
+    """Aplicação configurada; `catalog`, `synopsis_index`, `genre_classifier`, `recommender`, `sentiment_analyzer` e `entity_extractor` substituem os reais (usados em testes).
 
-    Com `catalog` injetado, o índice, o classificador e o recomendador reais não são carregados.
+    Com `catalog` injetado, o índice, o classificador, o recomendador, o analisador de sentimento e o extrator de entidades reais não são carregados.
     """
     settings = settings or get_settings()
 
@@ -62,6 +66,8 @@ def create_app(
         index = synopsis_index
         classifier = genre_classifier
         similar = recommender
+        sentiment = sentiment_analyzer
+        extractor = entity_extractor
         if catalog is None and settings.synopsis_search:
             if index is None:
                 loaded, origin = _load_synopsis_index(settings)
@@ -72,9 +78,15 @@ def create_app(
                     similar = _load_recommender(settings, loaded)
             if classifier is None:
                 classifier = _load_genre_classifier(settings)
+            if sentiment is None:
+                sentiment = _load_sentiment_analyzer(settings)
+            if extractor is None:
+                extractor = _load_entity_extractor()
         app.state.details_provider = details
         app.state.genre_classifier = classifier
         app.state.recommender = similar
+        app.state.sentiment_analyzer = sentiment
+        app.state.entity_extractor = extractor
         app.state.synopsis_index = index
         app.state.catalog = getattr(app.state, "catalog", None)
         app.state.search_service = SearchService(CachedMovieCatalog(details), index)
@@ -87,7 +99,7 @@ def create_app(
 
     app = FastAPI(
         title="API de Filmes (TMDB)",
-        description="Demonstração auxiliar: pesquisa por título, por preferências ou por tema nas sinopses, classificação de gênero e filmes parecidos.",
+        description="Demonstração auxiliar: pesquisa por título, por preferências ou por tema nas sinopses, classificação de gênero, filmes parecidos, análise de sentimento e entidades e relações.",
         version="0.2.0",
         lifespan=lifespan,
     )
@@ -158,6 +170,32 @@ def _load_genre_classifier(settings: Settings) -> GenreClassifier | None:
         return None
     logger.info("Classificador de gênero treinado com %d sinopses", classifier.training_size)
     return classifier
+
+
+def _load_sentiment_analyzer(settings: Settings) -> SentimentAnalyzer | None:
+    """Polaridade e nota ajustadas com as críticas preparadas, na representação configurada."""
+    from app.sentiment.live import SentimentAnalyzer as TrainedAnalyzer
+
+    try:
+        analyzer = TrainedAnalyzer.load(settings.sentiment_processed_dir, settings.sentiment_config, settings.sentiment_representation)
+    except (ValueError, FileNotFoundError, ImportError) as exc:
+        logger.warning("Análise de sentimento indisponível: %s", exc)
+        return None
+    logger.info("Análise de sentimento treinada com %d críticas (%s)", analyzer.training_size, analyzer.representation_name)
+    return analyzer
+
+
+def _load_entity_extractor() -> EntityExtractor | None:
+    """spaCy `pt_core_news_sm`, instalado pelo extra `entidades`."""
+    from app.entities.live import EntityExtractor as SpacyExtractor
+
+    try:
+        extractor = SpacyExtractor()
+    except ValueError as exc:
+        logger.warning("Entidades e relações indisponíveis: %s", exc)
+        return None
+    logger.info("Entidades e relações com o spaCy %s", extractor.model_name)
+    return extractor
 
 
 def _load_recommender(settings: Settings, index: CorpusSynopsisIndex) -> SimilarMoviesProvider | None:

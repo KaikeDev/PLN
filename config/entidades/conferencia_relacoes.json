@@ -1,0 +1,407 @@
+{
+  "description": "Conferência manual das 40 triplas sorteadas em data/entidades/tmdb_2026-09-12/review_sample.json (ADR 0027). Para cada tripla, troque null por true (a tripla está correta) ou false (está errada), lendo a sentença. Use observacao para explicar erros. Fica fora da pasta de resultados para não alterar os hashes do manifesto.",
+  "criterio": "Correta quando a sentença afirma que o sujeito faz a relação com o objeto, e os dois lados estão com os limites certos. Um pronome como sujeito (ela, ele, que) conta como correto se a relação estiver certa para quem ele se refere.",
+  "triplas": [
+    {
+      "n": 1,
+      "filme": "Akira",
+      "sentenca": "Uma grande explosão fez com que Tóquio fosse destruída em 1988.",
+      "sujeito": "Tóquio",
+      "relacao": "destruir_em",
+      "objeto": "1988",
+      "correta": true,
+      "observacao": ""
+    },
+    {
+      "n": 2,
+      "filme": "O Fabuloso Destino de Amélie Poulain",
+      "sentenca": "Então, a partir de pequenos gestos, ela passa a ajudar as pessoas que a rodeiam, vendo nisto um novo sentido para sua existência.",
+      "sujeito": "ela",
+      "relacao": "passar_a",
+      "objeto": "partir de pequenos gestos",
+      "correta": false,
+      "observacao": "complemento errado: ela passa a ajudar as pessoas; 'a partir de pequenos gestos' é circunstância, não o que ela 'passa a'"
+    },
+    {
+      "n": 3,
+      "filme": "Coração Valente",
+      "sentenca": "No século XIII, soldados ingleses matam a mulher do escocês William Wallace, bem na sua noite de núpcias.",
+      "sujeito": "soldados ingleses",
+      "relacao": "matar_em",
+      "objeto": "bem na sua noite de núpcias",
+      "correta": true,
+      "observacao": "relação de tempo certa; 'bem' sobra no objeto, sem mudar o sentido"
+    },
+    {
+      "n": 4,
+      "filme": "Sociedade dos Poetas Mortos",
+      "sentenca": "Em 1959 na Welton Academy, uma tradicional escola preparatória, um ex-aluno se torna o novo professor de literatura, mas logo seus métodos de incentivar os alunos a pensarem por si mesmos cria um choque com a ortodoxa direção do colégio, principalmente quando ele fala aos seus alunos sobre a \"Sociedade dos Poetas Mortos\".",
+      "sujeito": "ele",
+      "relacao": "falar",
+      "objeto": "alunos sobre a Sociedade dos Poetas Mortos",
+      "correta": true,
+      "observacao": "objeto junta 'alunos' e o assunto, mas o sentido (fala aos alunos sobre a Sociedade) está certo"
+    },
+    {
+      "n": 5,
+      "filme": "O Exterminador do Futuro",
+      "sentenca": "Em um futuro próximo, a guerra entre humanos e máquinas foi iniciada.",
+      "sujeito": "guerra entre humanos e máquinas",
+      "relacao": "iniciar_em",
+      "objeto": "futuro próximo",
+      "correta": true,
+      "observacao": ""
+    },
+    {
+      "n": 6,
+      "filme": "O Diabo Veste Prada",
+      "sentenca": "Andrea Sachs é uma jovem que conseguiu um emprego na Runaway Magazine, a mais importante revista de moda de Nova York.",
+      "sujeito": "que",
+      "relacao": "conseguir",
+      "objeto": "emprego na Runaway Magazine",
+      "correta": true,
+      "observacao": "'que' = Andrea Sachs"
+    },
+    {
+      "n": 7,
+      "filme": "Independence Day",
+      "sentenca": "Na véspera do Dia da Independência dos Estados Unidos, naves gigantescas aparecem no céu.",
+      "sujeito": "naves gigantescas",
+      "relacao": "aparecer_em",
+      "objeto": "véspera do Dia da Independência dos Estados Unidos",
+      "correta": true,
+      "observacao": ""
+    },
+    {
+      "n": 8,
+      "filme": "Os Suspeitos",
+      "sentenca": "O suspeito conta uma história sobre os eventos que levaram ele e mais quatro criminosos ao local do crime, deixando dúvidas sobre a verdade.",
+      "sujeito": "suspeito",
+      "relacao": "contar",
+      "objeto": "história sobre os eventos que levaram ele e mais quatro criminosos ao local do crime",
+      "correta": true,
+      "observacao": "objeto longo, mas certo"
+    },
+    {
+      "n": 9,
+      "filme": "A Outra Face",
+      "sentenca": "Obcecado em trazer o terrorista Castor Troy à justiça, o agente do FBI Sean Archer rastreia Troy, que embarcou em um avião em Los Angeles.",
+      "sujeito": "Obcecado em trazer o terrorista Castor Troy à justiça o agente do FBI Sean Archer que embarcou em um avião em Los Angeles",
+      "relacao": "rastrear",
+      "objeto": "Troy",
+      "correta": false,
+      "observacao": "sujeito misturado: junta o Archer com 'que embarcou em um avião', que é o Troy"
+    },
+    {
+      "n": 10,
+      "filme": "O Resgate do Soldado Ryan",
+      "sentenca": "Ao desembarcar na Normandia, no dia 6 de junho de 1944, o capitão Miller recebe a missão de comandar um grupo do segundo batalhão para o resgate do soldado James Ryan, caçula de quatro irmãos,",
+      "sujeito": "capitão",
+      "relacao": "receber",
+      "objeto": "missão de comandar um grupo do segundo batalhão para o resgate do soldado James Ryan",
+      "correta": true,
+      "observacao": ""
+    },
+    {
+      "n": 11,
+      "filme": "A Lenda do Cavaleiro Sem Cabeça",
+      "sentenca": "O jovem e cético detetive Ichabod Crane é transferido para a aldeia de Sleepy Hollow, em Nova Iorque, onde é encarregado de investigar as decapitações de três pessoas - assassinatos que os habitantes da cidade atribuem a um fantasma lendário, O Cavaleiro Sem Cabeça.",
+      "sujeito": "habitantes da cidade",
+      "relacao": "atribuir",
+      "objeto": "fantasma lendário",
+      "correta": true,
+      "observacao": "a preposição 'a' se perdeu: os habitantes atribuem (os assassinatos) a um fantasma"
+    },
+    {
+      "n": 12,
+      "filme": "Drácula de Bram Stoker",
+      "sentenca": "O vampiro Conde Drácula vem à Inglaterra atrás de quem ele acredita ser sua antiga paixão, de quando ainda era um mortal.",
+      "sujeito": "vampiro Conde Drácula",
+      "relacao": "vir_a",
+      "objeto": "Inglaterra",
+      "correta": true,
+      "observacao": ""
+    },
+    {
+      "n": 13,
+      "filme": "Alien: A Ressurreição",
+      "sentenca": "Mas essa nova geração de aliens é muito mais inteligente do que foram seus antecessores - um fato que os cientistas só percebem após a nave The Betty ter chegado com mais hospedeiros humanos.",
+      "sujeito": "The Betty",
+      "relacao": "chegar_com",
+      "objeto": "hospedeiros humanos",
+      "correta": true,
+      "observacao": ""
+    },
+    {
+      "n": 14,
+      "filme": "Meu Nome é Taylor, Drillbit Taylor",
+      "sentenca": "O que eles não contavam é que seu novo segurança fosse uma verdadeira fraude, com um monte de trapalhadas na manga, e que os fizesse passar por malucos e estranhos métodos de treinamento.",
+      "sujeito": "eles",
+      "relacao": "contar",
+      "objeto": "que",
+      "correta": false,
+      "observacao": "'contar' aqui é 'esperar' (o que eles não contavam), e o objeto é só 'que'"
+    },
+    {
+      "n": 15,
+      "filme": "Cemitério Maldito",
+      "sentenca": "Os vizinhos dos Creeds estão relutantes em falar sobre o cemitério e eles tem um bom motivo para tal comportamento.",
+      "sujeito": "eles",
+      "relacao": "ter",
+      "objeto": "bom motivo",
+      "correta": true,
+      "observacao": "'eles' = os vizinhos"
+    },
+    {
+      "n": 16,
+      "filme": "Cemitério Maldito",
+      "sentenca": "Quando o gato da família morre atropelado, eles o enterram em um cemitério indígena que tem o poder de ressuscitar o que for deixado naquele terreno, mas as consequências são inimagináveis.",
+      "sujeito": "que",
+      "relacao": "ter",
+      "objeto": "poder de ressuscitar o que for deixado naquele terreno mas as consequências são inimagináveis",
+      "correta": false,
+      "observacao": "objeto engole outra oração ('mas as consequências são inimagináveis')"
+    },
+    {
+      "n": 17,
+      "filme": "Olhos Famintos",
+      "sentenca": "Ao voltarem para casa por uma estrada sem movimento, os irmãos Trish e Darry veem um vulto atirando o que parece ser um corpo embrulhado.",
+      "sujeito": "irmãos Trish e Darry",
+      "relacao": "veem",
+      "objeto": "vulto atirando o que parece ser um corpo embrulhado",
+      "correta": true,
+      "observacao": "relação sem lema ('veem'), mas certa"
+    },
+    {
+      "n": 18,
+      "filme": "Premonição",
+      "sentenca": "Confuso entre a idéia de Alex ter salvo a todos e a possibilidade de ele ter provocado o acidente, o grupo não sabe como reagir.",
+      "sujeito": "ele",
+      "relacao": "provocar",
+      "objeto": "acidente",
+      "correta": false,
+      "observacao": "modalidade perdida: a sentença fala da possibilidade de ele ter provocado o acidente, não afirma"
+    },
+    {
+      "n": 19,
+      "filme": "Lolita",
+      "sentenca": "Um homem (Humbert) e uma menina precoce (Lolita) embarcam numa excursão pecaminosa pelos Estados Unidos, seguidos por alguém que nós sabemos, desde logo, ser Clare Quilty.",
+      "sujeito": "nós",
+      "relacao": "saber_desde",
+      "objeto": "logo",
+      "correta": false,
+      "observacao": "'desde logo' é advérbio; 'logo' não é o que se sabe"
+    },
+    {
+      "n": 20,
+      "filme": "Fim dos Dias",
+      "sentenca": "Nos últimos dias de 1999 um de seus clientes, um banqueiro, sofre uma emboscada.",
+      "sujeito": "últimos dias de 1999 um de seus clientes um banqueiro",
+      "relacao": "sofrer",
+      "objeto": "emboscada",
+      "correta": false,
+      "observacao": "sujeito misturado com a data: o sujeito é 'um de seus clientes, um banqueiro'"
+    },
+    {
+      "n": 21,
+      "filme": "Conflitos Internos",
+      "sentenca": "Mas um espião foi plantado no departamento de polícia... e agora Chang corre perigo.",
+      "sujeito": "Chang",
+      "relacao": "correr",
+      "objeto": "perigo",
+      "correta": true,
+      "observacao": ""
+    },
+    {
+      "n": 22,
+      "filme": "Ilha do Medo",
+      "sentenca": "Logo eles descobrem que o centro guarda muitos segredos e que a ilha esconde algo mais perigoso que os pacientes.",
+      "sujeito": "ilha",
+      "relacao": "esconder",
+      "objeto": "algo",
+      "correta": true,
+      "observacao": ""
+    },
+    {
+      "n": 23,
+      "filme": "Gigantes de Aço",
+      "sentenca": "As lutas de boxe, nesse contexto, acontecem entre robôs de alta tecnologia e Charlie, um ex-lutador frustrado, não consegue se adaptar a isso.",
+      "sujeito": "lutas de boxe",
+      "relacao": "acontecer_em esse",
+      "objeto": "contexto",
+      "correta": false,
+      "observacao": "relação malformada ('acontecer_em esse') e objeto 'contexto'; o conteúdo é que as lutas acontecem entre robôs"
+    },
+    {
+      "n": 24,
+      "filme": "Lanterna Verde",
+      "sentenca": "Hal Jordan, um vaidoso piloto de testes, recebe um poderoso anel e é recrutado por um esquadrão intergaláctico chamado Lanterna Verde para lutar contra um feroz inimigo que ameaça acabar com o equilíbrio do universo.",
+      "sujeito": "Hal Jordan",
+      "relacao": "receber",
+      "objeto": "poderoso anel",
+      "correta": true,
+      "observacao": ""
+    },
+    {
+      "n": 25,
+      "filme": "Contra o Tempo",
+      "sentenca": "Um soldado assume a mente de um homem nos últimos oito minutos de sua vida, antes da explosão de um trem.",
+      "sujeito": "soldado",
+      "relacao": "assumir",
+      "objeto": "mente de um homem",
+      "correta": true,
+      "observacao": ""
+    },
+    {
+      "n": 26,
+      "filme": "Madagascar 3: Os Procurados",
+      "sentenca": "Em plena fuga, o grupo encontra abrigo em um circo em crise.",
+      "sujeito": "grupo",
+      "relacao": "encontrar_em",
+      "objeto": "plena fuga",
+      "correta": true,
+      "observacao": "relação de circunstância ('em plena fuga'), como na 3; o que o grupo encontra é abrigo"
+    },
+    {
+      "n": 27,
+      "filme": "Capitão América: O Soldado Invernal",
+      "sentenca": "Após os eventos catastróficos em Nova York com Os Vingadores, Steve Rogers segue tentando se ajustar ao mundo moderno.",
+      "sujeito": "Steve Rogers",
+      "relacao": "seguir_após",
+      "objeto": "eventos catastróficos em Nova York com Os Vingadores",
+      "correta": true,
+      "observacao": "'segue tentando' = continua tentando, após os eventos"
+    },
+    {
+      "n": 28,
+      "filme": "X-Men: Dias de um Futuro Esquecido",
+      "sentenca": "Ele desenvolve gigantescos robôs chamados Sentinelas, que perseguem impiedosamente os mutantes.",
+      "sujeito": "que",
+      "relacao": "perseguir",
+      "objeto": "mutantes",
+      "correta": true,
+      "observacao": "'que' = os Sentinelas"
+    },
+    {
+      "n": 29,
+      "filme": "Garota Exemplar",
+      "sentenca": "Com o apoio da sua irmã gêmea, Margo, Nick tenta provar a sua inocência e, ao mesmo tempo, procura descobrir o que aconteceu com Amy.",
+      "sujeito": "Nick",
+      "relacao": "tentar_com",
+      "objeto": "apoio da sua irmã gêmea Margo",
+      "correta": true,
+      "observacao": ""
+    },
+    {
+      "n": 30,
+      "filme": "Uma Noite de Crime: Anarquia",
+      "sentenca": "Buscando refúgio no carro blindado de Leo, Shane e Liz formam um grupo com esses outros três estranhos.",
+      "sujeito": "Buscando refúgio no carro blindado de Leo Shane e Liz",
+      "relacao": "formar",
+      "objeto": "três estranhos",
+      "correta": false,
+      "observacao": "sujeito misturado: 'Buscando refúgio no carro blindado de Leo' entrou no sujeito"
+    },
+    {
+      "n": 31,
+      "filme": "Sobrenatural: A Origem",
+      "sentenca": "Vítima de uma entidade sobrenatural perigosa, a adolescente Quinn Brenner busca a ajuda da médium Elise Rainier, que por meio de suas habilidades paranormais descobre a existência de um demônio com sede de almas humanas.",
+      "sujeito": "adolescente Quinn Brenner",
+      "relacao": "buscar",
+      "objeto": "Vítima",
+      "correta": false,
+      "observacao": "'Vítima' descreve a Quinn; ela busca a ajuda da médium"
+    },
+    {
+      "n": 32,
+      "filme": "Cinquenta Tons de Liberdade",
+      "sentenca": "A vida, no entanto, ainda reserva surpresas para os dois e fantasmas do passado como Jack Hyde e Elena Lincoln voltam a impedir a paz do casal.",
+      "sujeito": "vida",
+      "relacao": "reservar_para",
+      "objeto": "dois e fantasmas do passado",
+      "correta": false,
+      "observacao": "objeto misturado com o sujeito da oração seguinte ('fantasmas do passado')"
+    },
+    {
+      "n": 33,
+      "filme": "Dunkirk",
+      "sentenca": "A história segue os destinos entrelaçados de soldados, pilotos, marinheiros e civis britânicos durante a evacuação de Dunquerque.",
+      "sujeito": "história",
+      "relacao": "seguir",
+      "objeto": "destinos entrelaçados de soldados pilotos marinheiros e civis britânicos",
+      "correta": true,
+      "observacao": ""
+    },
+    {
+      "n": 34,
+      "filme": "Deadpool 2",
+      "sentenca": "Quando o super soldado Cable chega em uma missão para assassinar o jovem mutante Russel, o mercenário Deadpool precisa aprender o que é ser herói de verdade para salvá-lo.",
+      "sujeito": "super soldado Cable",
+      "relacao": "chegar_em",
+      "objeto": "missão",
+      "correta": true,
+      "observacao": ""
+    },
+    {
+      "n": 35,
+      "filme": "Sobrenatural: A Última Chave",
+      "sentenca": "Ao lado de Specs e Tucker, Elise se depara com seu caso mais pessoal.",
+      "sujeito": "Elise",
+      "relacao": "deparar_com",
+      "objeto": "caso mais pessoal",
+      "correta": true,
+      "observacao": ""
+    },
+    {
+      "n": 36,
+      "filme": "Homem-Aranha: Longe de Casa",
+      "sentenca": "Convocado para mais uma missão heroica, ele precisa enfrentar vários vilões que surgem em cidades-símbolo do continente, como Londres, Paris e Veneza, e também a aparição do enigmático Mysterio.",
+      "sujeito": "que",
+      "relacao": "surgir_em",
+      "objeto": "cidades-símbolo do continente",
+      "correta": true,
+      "observacao": "'que' = os vilões"
+    },
+    {
+      "n": 37,
+      "filme": "Midsommar: O Mal Não Espera a Noite",
+      "sentenca": "Dani e Christian formam um jovem casal americano com um relacionamento prestes a desmoronar.",
+      "sujeito": "Dani",
+      "relacao": "formar",
+      "objeto": "jovem casal americano",
+      "correta": false,
+      "observacao": "sujeito cortado: quem forma o casal são Dani e Christian"
+    },
+    {
+      "n": 38,
+      "filme": "Homem-Aranha: Sem Volta Para Casa",
+      "sentenca": "Quando ele pede ajuda ao Doutor Estranho, os riscos se tornam ainda mais perigosos, e o forçam a descobrir o que realmente significa ser o Homem-Aranha...",
+      "sujeito": "ele",
+      "relacao": "pedir",
+      "objeto": "ajuda ao Doutor Estranho",
+      "correta": true,
+      "observacao": "'ele' = Peter Parker"
+    },
+    {
+      "n": 39,
+      "filme": "Um Filme Minecraft",
+      "sentenca": "Juntos, sua aventura desafiará todos os cinco a serem ousados e se reconectarem com as qualidades que tornam cada um deles singularmente criativo.",
+      "sujeito": "aventura",
+      "relacao": "desafiar",
+      "objeto": "os cinco",
+      "correta": true,
+      "observacao": ""
+    },
+    {
+      "n": 40,
+      "filme": "Jurassic World: Recomeço",
+      "sentenca": "Cinco anos após os eventos de Jurassic World: Domínio, a ecologia do planeta se mostrou inóspita para os dinossauros, com os poucos sobreviventes vivendo isolados nas regiões equatoriais.",
+      "sujeito": "ecologia do planeta",
+      "relacao": "mostrar",
+      "objeto": "Cinco anos após os eventos de Jurassic World Domínio",
+      "correta": false,
+      "observacao": "objeto é uma data; a sentença diz que a ecologia se mostrou inóspita para os dinossauros"
+    }
+  ],
+  "conferido_por": "Equipe"
+}

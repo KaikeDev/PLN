@@ -1,0 +1,1234 @@
+{
+  "bow_sem_pontuacao": [
+    {
+      "id": 151,
+      "title": "O Feitiço de Áquila",
+      "dobra": 3,
+      "real": [
+        "negativo"
+      ],
+      "previsto": [
+        "positivo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.0025,
+        "positivo": 0.9975
+      },
+      "review_id": "67fd4e4e3015363286d948cd",
+      "nota": 4.0,
+      "trecho": "**Extremamente datado e antiquado, funciona bem, mas está condenado ao esquecimento gradual.** Vi este filme há muitos anos e não gostei, achei que era apenas uma fábula sem interesse. No entanto, eu cresci, amadureci, e resolvi dar-lhe uma nova oportunidade agora que sou mais adulto. Trata-se, efectivamente, de um filme de fantasia feito em meados dos anos 80 e ambientado na Europa Medieval. A…"
+    },
+    {
+      "id": 1416,
+      "title": "Fome de Poder",
+      "dobra": 4,
+      "real": [
+        "negativo"
+      ],
+      "previsto": [
+        "positivo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.006,
+        "positivo": 0.994
+      },
+      "review_id": "62fbf8f3ca7ec6007e8abff0",
+      "nota": 3.0,
+      "trecho": "**Um filme decente, ainda que a história contada seja substancialmente empolada e tornada mais tensa do que terá realmente sido.** Todos sabemos que o mundo dos negócios não é para meninos. Como o próprio protagonista do filme assume, há que estar preparado para a dureza dos concorrentes e jogadas que muitas vezes não são leais. Porém, é precisamente por isso que os grandes empresários são…"
+    },
+    {
+      "id": 468,
+      "title": "À Beira da Loucura",
+      "dobra": 1,
+      "real": [
+        "negativo"
+      ],
+      "previsto": [
+        "positivo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.0091,
+        "positivo": 0.9909
+      },
+      "review_id": "5c18f3b50e0a2603783f1585",
+      "nota": 4.0,
+      "trecho": "**Bom suspense, um bom Sam Neill, um tema interessante por detrás da história, mas nada mais.** Neste filme, um grande escritor de histórias de terror desapareceu sem entregar a cópia completa do seu mais recente livro. Os fãs estão a enlouquecer, há motins nas livrarias, a editora está a ficar preocupada. Parece uma coisa de loucos, num mundo como o nosso, onde as pessoas são capazes de ficar…"
+    },
+    {
+      "id": 309,
+      "title": "Caçadores de Emoção",
+      "dobra": 1,
+      "real": [
+        "negativo"
+      ],
+      "previsto": [
+        "positivo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.0102,
+        "positivo": 0.9898
+      },
+      "review_id": "686182c11a96c102737b4b7f",
+      "nota": 4.0,
+      "trecho": "**Um filme que funcionou muito bem na década em que apareceu, mas que não tem o que é preciso para se tornar memorável.** Apesar de ter alguma recordação de ter visto este filme na infância, a verdade é que não me lembrava dele quando resolvi revê-lo anteontem. E realmente é daqueles filmes que raramente vemos na TV e que a maioria das pessoas não recorda: é bom o bastante como peça de…"
+    },
+    {
+      "id": 104,
+      "title": "Nada É Para Sempre",
+      "dobra": 4,
+      "real": [
+        "negativo"
+      ],
+      "previsto": [
+        "positivo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.0139,
+        "positivo": 0.9861
+      },
+      "review_id": "5fd6b6dcc995ee003d50f4ba",
+      "nota": 4.0,
+      "trecho": "**Longo demais, é um filme lento e morno sobre dois irmãos iguais a tantos outros irmãos.** A história deste filme é ligeiramente baseada num livro de memórias e conta as peripécias de juventude de dois irmãos com personalidades muito diferentes. Filhos de um pai rígido, que é também o pastor presbiteriano local, os dois jovens cresceram numa área rural do Montana em meio às primeiras décadas do…"
+    },
+    {
+      "id": 830,
+      "title": "A Época da Inocência",
+      "dobra": 2,
+      "real": [
+        "positivo"
+      ],
+      "previsto": [
+        "negativo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.9857,
+        "positivo": 0.0143
+      },
+      "review_id": "5ef3b80762fcd30034d243b1",
+      "nota": 7.0,
+      "trecho": "**Grandioso, opulento, verdadeiramente rigoroso na forma como retracta o comportamento e as convenções sociais da época, mas sem muita história para contar.** Fazer filmes de época é um desafio para qualquer director, na medida em que o rigor histórico é algo verdadeiramente importante e difícil de atingir. Tão difícil que muitos filmes optam por relativizar a sua importância e fazer filmes que…"
+    },
+    {
+      "id": 401,
+      "title": "Star Wars: Episódio I - A Ameaça Fantasma",
+      "dobra": 4,
+      "real": [
+        "positivo"
+      ],
+      "previsto": [
+        "negativo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.9837,
+        "positivo": 0.0163
+      },
+      "review_id": "5a901ad60e0a263998010ed2",
+      "nota": 7.0,
+      "trecho": "**O filme é bom e ainda merece parabéns, mas apresenta falhas importantes.** Este filme, lançado mais de dez anos após o último filme da trilogia original, marca o início da segunda trilogia da Star Wars, uma prequela dos filmes originais. Se a primeira trilogia foi a história de Luke Skywalker, a segunda é a de Darth Vader. Neste filme, dirigido e escrito por George Lucas, tem a participação de…"
+    },
+    {
+      "id": 714,
+      "title": "Babe, o Porquinho Atrapalhado na Cidade",
+      "dobra": 2,
+      "real": [
+        "positivo"
+      ],
+      "previsto": [
+        "negativo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.9778,
+        "positivo": 0.0222
+      },
+      "review_id": "64192618e74146008217ece4",
+      "nota": 8.0,
+      "trecho": "**Fiel ao original, esta sequela não merecia tantas críticas e vaias.** Confesso que fiquei impressionado quando me apercebi que este filme tinha sido não apenas um rotundo fracasso de bilheteira, mas também altamente criticado e vilipendiado, tanto pela crítica especializada quanto pela crítica amadora. Eu posso até estar a ser um pouco parcial em virtude de o filme ter feito parte da minha…"
+    }
+  ],
+  "bow_sem_stopwords": [
+    {
+      "id": 830,
+      "title": "A Época da Inocência",
+      "dobra": 2,
+      "real": [
+        "positivo"
+      ],
+      "previsto": [
+        "negativo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.9882,
+        "positivo": 0.0118
+      },
+      "review_id": "5ef3b80762fcd30034d243b1",
+      "nota": 7.0,
+      "trecho": "**Grandioso, opulento, verdadeiramente rigoroso na forma como retracta o comportamento e as convenções sociais da época, mas sem muita história para contar.** Fazer filmes de época é um desafio para qualquer director, na medida em que o rigor histórico é algo verdadeiramente importante e difícil de atingir. Tão difícil que muitos filmes optam por relativizar a sua importância e fazer filmes que…"
+    },
+    {
+      "id": 151,
+      "title": "O Feitiço de Áquila",
+      "dobra": 3,
+      "real": [
+        "negativo"
+      ],
+      "previsto": [
+        "positivo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.0133,
+        "positivo": 0.9867
+      },
+      "review_id": "67fd4e4e3015363286d948cd",
+      "nota": 4.0,
+      "trecho": "**Extremamente datado e antiquado, funciona bem, mas está condenado ao esquecimento gradual.** Vi este filme há muitos anos e não gostei, achei que era apenas uma fábula sem interesse. No entanto, eu cresci, amadureci, e resolvi dar-lhe uma nova oportunidade agora que sou mais adulto. Trata-se, efectivamente, de um filme de fantasia feito em meados dos anos 80 e ambientado na Europa Medieval. A…"
+    },
+    {
+      "id": 309,
+      "title": "Caçadores de Emoção",
+      "dobra": 1,
+      "real": [
+        "negativo"
+      ],
+      "previsto": [
+        "positivo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.0144,
+        "positivo": 0.9856
+      },
+      "review_id": "686182c11a96c102737b4b7f",
+      "nota": 4.0,
+      "trecho": "**Um filme que funcionou muito bem na década em que apareceu, mas que não tem o que é preciso para se tornar memorável.** Apesar de ter alguma recordação de ter visto este filme na infância, a verdade é que não me lembrava dele quando resolvi revê-lo anteontem. E realmente é daqueles filmes que raramente vemos na TV e que a maioria das pessoas não recorda: é bom o bastante como peça de…"
+    },
+    {
+      "id": 401,
+      "title": "Star Wars: Episódio I - A Ameaça Fantasma",
+      "dobra": 4,
+      "real": [
+        "positivo"
+      ],
+      "previsto": [
+        "negativo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.9841,
+        "positivo": 0.0159
+      },
+      "review_id": "5a901ad60e0a263998010ed2",
+      "nota": 7.0,
+      "trecho": "**O filme é bom e ainda merece parabéns, mas apresenta falhas importantes.** Este filme, lançado mais de dez anos após o último filme da trilogia original, marca o início da segunda trilogia da Star Wars, uma prequela dos filmes originais. Se a primeira trilogia foi a história de Luke Skywalker, a segunda é a de Darth Vader. Neste filme, dirigido e escrito por George Lucas, tem a participação de…"
+    },
+    {
+      "id": 390,
+      "title": "O Senhor das Armas",
+      "dobra": 2,
+      "real": [
+        "positivo"
+      ],
+      "previsto": [
+        "negativo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.9798,
+        "positivo": 0.0202
+      },
+      "review_id": "5b58e169c3a3685c91053377",
+      "nota": 7.0,
+      "trecho": "**Aborda um assunto difícil com leveza, sarcasmo de uma forma mentalmente provocadora.** Este filme, alegadamente baseado (muito ligeiramente) em factos reais, conta a história de um negociante de armas russo-americano e traz à luz a imoralidade do tráfico de armas internacional. Um filme sarcástico, que seria até deprimente se não fosse absolutamente irónico. A ironia é a chave para perceber as…"
+    },
+    {
+      "id": 104,
+      "title": "Nada É Para Sempre",
+      "dobra": 4,
+      "real": [
+        "negativo"
+      ],
+      "previsto": [
+        "positivo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.0245,
+        "positivo": 0.9755
+      },
+      "review_id": "5fd6b6dcc995ee003d50f4ba",
+      "nota": 4.0,
+      "trecho": "**Longo demais, é um filme lento e morno sobre dois irmãos iguais a tantos outros irmãos.** A história deste filme é ligeiramente baseada num livro de memórias e conta as peripécias de juventude de dois irmãos com personalidades muito diferentes. Filhos de um pai rígido, que é também o pastor presbiteriano local, os dois jovens cresceram numa área rural do Montana em meio às primeiras décadas do…"
+    },
+    {
+      "id": 468,
+      "title": "À Beira da Loucura",
+      "dobra": 1,
+      "real": [
+        "negativo"
+      ],
+      "previsto": [
+        "positivo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.0255,
+        "positivo": 0.9745
+      },
+      "review_id": "5c18f3b50e0a2603783f1585",
+      "nota": 4.0,
+      "trecho": "**Bom suspense, um bom Sam Neill, um tema interessante por detrás da história, mas nada mais.** Neste filme, um grande escritor de histórias de terror desapareceu sem entregar a cópia completa do seu mais recente livro. Os fãs estão a enlouquecer, há motins nas livrarias, a editora está a ficar preocupada. Parece uma coisa de loucos, num mundo como o nosso, onde as pessoas são capazes de ficar…"
+    },
+    {
+      "id": 843,
+      "title": "A Sombra e a Escuridão",
+      "dobra": 2,
+      "real": [
+        "positivo"
+      ],
+      "previsto": [
+        "negativo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.9729,
+        "positivo": 0.0271
+      },
+      "review_id": "658adc4a07216667e4a62814",
+      "nota": 7.0,
+      "trecho": "**No geral, um bom filme de aventuras na África.** No geral, gostei deste filme. A África exerce desde sempre um fascínio sobre os europeus e quem já viveu por lá vai certamente reconhecer que deixa uma marca, uma espécie de feitiço ou encantamento. Quem estiver lá por certo tempo nunca esquece a África e traz sempre consigo um pouco desse magnifico e martirizado continente. O filme consegue dar…"
+    }
+  ],
+  "tfidf_sem_pontuacao": [
+    {
+      "id": 84,
+      "title": "Meninos Não Choram",
+      "dobra": 1,
+      "real": [
+        "negativo"
+      ],
+      "previsto": [
+        "positivo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.0042,
+        "positivo": 0.9958
+      },
+      "review_id": "5767287b9251413e16000831",
+      "nota": 1.0,
+      "trecho": "O filme é muito bem feito, entretanto fica aquela ideia de que um relacionamento entre homem e mulher, quando não dá certo, deveria ser substituído por mulher e mulher, homem e homem. Discordo. É um convite à heterofobia. Mas a atuação dela é brilhante no filme."
+    },
+    {
+      "id": 151,
+      "title": "O Feitiço de Áquila",
+      "dobra": 3,
+      "real": [
+        "negativo"
+      ],
+      "previsto": [
+        "positivo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.0169,
+        "positivo": 0.9831
+      },
+      "review_id": "67fd4e4e3015363286d948cd",
+      "nota": 4.0,
+      "trecho": "**Extremamente datado e antiquado, funciona bem, mas está condenado ao esquecimento gradual.** Vi este filme há muitos anos e não gostei, achei que era apenas uma fábula sem interesse. No entanto, eu cresci, amadureci, e resolvi dar-lhe uma nova oportunidade agora que sou mais adulto. Trata-se, efectivamente, de um filme de fantasia feito em meados dos anos 80 e ambientado na Europa Medieval. A…"
+    },
+    {
+      "id": 1622,
+      "title": "Madame Teia",
+      "dobra": 0,
+      "real": [
+        "negativo"
+      ],
+      "previsto": [
+        "positivo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.0208,
+        "positivo": 0.9792
+      },
+      "review_id": "65d1fbeadb72c0018639e700",
+      "nota": 3.0,
+      "trecho": "Ao assistir \"Madame Web\", deparei-me com uma experiência inadvertidamente cómica devido a situações mal escritas e interpretações que pareciam mais adequadas para um filme do estilo \"Scary Movie\". A obra revelou-se uma mistura peculiar de mediocridade e hilariante, podendo potencialmente tornar-se um clássico dos maus filmes de super-heróis, comparável a \"Catwoman\" ou \"Batman & Robin\",…"
+    },
+    {
+      "id": 1416,
+      "title": "Fome de Poder",
+      "dobra": 4,
+      "real": [
+        "negativo"
+      ],
+      "previsto": [
+        "positivo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.0261,
+        "positivo": 0.9739
+      },
+      "review_id": "62fbf8f3ca7ec6007e8abff0",
+      "nota": 3.0,
+      "trecho": "**Um filme decente, ainda que a história contada seja substancialmente empolada e tornada mais tensa do que terá realmente sido.** Todos sabemos que o mundo dos negócios não é para meninos. Como o próprio protagonista do filme assume, há que estar preparado para a dureza dos concorrentes e jogadas que muitas vezes não são leais. Porém, é precisamente por isso que os grandes empresários são…"
+    },
+    {
+      "id": 468,
+      "title": "À Beira da Loucura",
+      "dobra": 1,
+      "real": [
+        "negativo"
+      ],
+      "previsto": [
+        "positivo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.0274,
+        "positivo": 0.9726
+      },
+      "review_id": "5c18f3b50e0a2603783f1585",
+      "nota": 4.0,
+      "trecho": "**Bom suspense, um bom Sam Neill, um tema interessante por detrás da história, mas nada mais.** Neste filme, um grande escritor de histórias de terror desapareceu sem entregar a cópia completa do seu mais recente livro. Os fãs estão a enlouquecer, há motins nas livrarias, a editora está a ficar preocupada. Parece uma coisa de loucos, num mundo como o nosso, onde as pessoas são capazes de ficar…"
+    },
+    {
+      "id": 401,
+      "title": "Star Wars: Episódio I - A Ameaça Fantasma",
+      "dobra": 4,
+      "real": [
+        "positivo"
+      ],
+      "previsto": [
+        "negativo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.9705,
+        "positivo": 0.0295
+      },
+      "review_id": "5a901ad60e0a263998010ed2",
+      "nota": 7.0,
+      "trecho": "**O filme é bom e ainda merece parabéns, mas apresenta falhas importantes.** Este filme, lançado mais de dez anos após o último filme da trilogia original, marca o início da segunda trilogia da Star Wars, uma prequela dos filmes originais. Se a primeira trilogia foi a história de Luke Skywalker, a segunda é a de Darth Vader. Neste filme, dirigido e escrito por George Lucas, tem a participação de…"
+    },
+    {
+      "id": 1424,
+      "title": "Cobain: Montage of Heck",
+      "dobra": 2,
+      "real": [
+        "negativo"
+      ],
+      "previsto": [
+        "positivo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.0344,
+        "positivo": 0.9656
+      },
+      "review_id": "5ab0969bc3a36861a300564e",
+      "nota": 2.0,
+      "trecho": "Este documentário trata da versão da Courtney Love. Há duas versões da morte do Kurt, uma em que ele se suicidou, que é a versão retratada neste filme e a outra versão de que a Courtney seria responsável pela morte dele. O filme Soaked in bleach, disponível no YouTube, retrata a morte do Kurt como assassinato."
+    },
+    {
+      "id": 360,
+      "title": "Gilbert Grape: Aprendiz de Sonhador",
+      "dobra": 0,
+      "real": [
+        "negativo"
+      ],
+      "previsto": [
+        "positivo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.0379,
+        "positivo": 0.9621
+      },
+      "review_id": "63833eabb3316b00aff4d197",
+      "nota": 3.0,
+      "trecho": "**Um drama familiar bastante convencional e mediano, onde as performances de DiCaprio e Depp acabam por ser a única nota verdadeiramente meritória.** Por vezes, o que faz um filme ser marcante é o desempenho extraordinário de um actor, e isso torna-se ainda mais digno de admiração quando esse actor é extremamente jovem. É isso que temos neste filme, um drama familiar relativamente convencional,…"
+    }
+  ],
+  "tfidf_sem_stopwords": [
+    {
+      "id": 84,
+      "title": "Meninos Não Choram",
+      "dobra": 1,
+      "real": [
+        "negativo"
+      ],
+      "previsto": [
+        "positivo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.0003,
+        "positivo": 0.9997
+      },
+      "review_id": "5767287b9251413e16000831",
+      "nota": 1.0,
+      "trecho": "O filme é muito bem feito, entretanto fica aquela ideia de que um relacionamento entre homem e mulher, quando não dá certo, deveria ser substituído por mulher e mulher, homem e homem. Discordo. É um convite à heterofobia. Mas a atuação dela é brilhante no filme."
+    },
+    {
+      "id": 40,
+      "title": "A Fantástica Fábrica de Chocolate",
+      "dobra": 1,
+      "real": [
+        "negativo"
+      ],
+      "previsto": [
+        "positivo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.0035,
+        "positivo": 0.9965
+      },
+      "review_id": "5a8360bbc3a3682ddf003d11",
+      "nota": 2.0,
+      "trecho": "**_Seria mais interessante como filme de animação_** Este filme conta a história de Charlie, uma criança de origens modestas que ganha um bilhete de ouro que lhe dá a possibilidade de visitar a fábrica de chocolate do excêntrico Willie Wonka, cuja história também é contada através do filme. O foco da acção é, contudo, a jornada de Charlie dentro da fábrica, com outras cinco crianças e os seus…"
+    },
+    {
+      "id": 468,
+      "title": "À Beira da Loucura",
+      "dobra": 1,
+      "real": [
+        "negativo"
+      ],
+      "previsto": [
+        "positivo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.0057,
+        "positivo": 0.9943
+      },
+      "review_id": "5c18f3b50e0a2603783f1585",
+      "nota": 4.0,
+      "trecho": "**Bom suspense, um bom Sam Neill, um tema interessante por detrás da história, mas nada mais.** Neste filme, um grande escritor de histórias de terror desapareceu sem entregar a cópia completa do seu mais recente livro. Os fãs estão a enlouquecer, há motins nas livrarias, a editora está a ficar preocupada. Parece uma coisa de loucos, num mundo como o nosso, onde as pessoas são capazes de ficar…"
+    },
+    {
+      "id": 1599,
+      "title": "A Guerra do Amanhã",
+      "dobra": 1,
+      "real": [
+        "negativo"
+      ],
+      "previsto": [
+        "positivo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.0085,
+        "positivo": 0.9915
+      },
+      "review_id": "60ed2668140bad0046244413",
+      "nota": 2.0,
+      "trecho": "Dá a César o que é de César diz a máxima..... então receba um 2/10 por tratar o cinema com um desleixo pouco visto para uma superprodução com os recursos que dispunha."
+    },
+    {
+      "id": 1280,
+      "title": "No Limite do Amanhã",
+      "dobra": 1,
+      "real": [
+        "positivo"
+      ],
+      "previsto": [
+        "negativo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.9908,
+        "positivo": 0.0092
+      },
+      "review_id": "64d780b7f14dad00ad4efe03",
+      "nota": 7.0,
+      "trecho": "**Um filme eficaz, que funciona razoavelmente, mas que não deixa de parecer um pretexto para o CGI massivo.** Em anos recentes, parece que se convencionou de que basta uma quantidade insana de efeitos especiais para fazer um bom filme. Há imensos filmes que parecem desculpas ou pretextos para uma tonelada de efeitos, CGI e gráficos incríveis, sem grande conteúdo a dar-lhes uma base sólida. Este…"
+    },
+    {
+      "id": 309,
+      "title": "Caçadores de Emoção",
+      "dobra": 1,
+      "real": [
+        "negativo"
+      ],
+      "previsto": [
+        "positivo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.0125,
+        "positivo": 0.9875
+      },
+      "review_id": "686182c11a96c102737b4b7f",
+      "nota": 4.0,
+      "trecho": "**Um filme que funcionou muito bem na década em que apareceu, mas que não tem o que é preciso para se tornar memorável.** Apesar de ter alguma recordação de ter visto este filme na infância, a verdade é que não me lembrava dele quando resolvi revê-lo anteontem. E realmente é daqueles filmes que raramente vemos na TV e que a maioria das pessoas não recorda: é bom o bastante como peça de…"
+    },
+    {
+      "id": 1726,
+      "title": "Teen Wolf: O Filme",
+      "dobra": 1,
+      "real": [
+        "negativo"
+      ],
+      "previsto": [
+        "positivo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.0191,
+        "positivo": 0.9809
+      },
+      "review_id": "6ab83e9eac76a5ec6bdc83db",
+      "nota": 3.0,
+      "trecho": "poucas experiências cinematográficas despertaram em mim uma aversão tão imediata e visceral quanto esta. assistir a este filme uma única vez já me pareceu mais do que suficiente para uma vida inteira; uma segunda exibição exigiria de mim um nível de resistência emocional que, francamente, não possuo. não apenas não pretendo revê-lo como considero a simples possibilidade uma ameaça à minha paz de…"
+    },
+    {
+      "id": 151,
+      "title": "O Feitiço de Áquila",
+      "dobra": 3,
+      "real": [
+        "negativo"
+      ],
+      "previsto": [
+        "positivo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.0201,
+        "positivo": 0.9799
+      },
+      "review_id": "67fd4e4e3015363286d948cd",
+      "nota": 4.0,
+      "trecho": "**Extremamente datado e antiquado, funciona bem, mas está condenado ao esquecimento gradual.** Vi este filme há muitos anos e não gostei, achei que era apenas uma fábula sem interesse. No entanto, eu cresci, amadureci, e resolvi dar-lhe uma nova oportunidade agora que sou mais adulto. Trata-se, efectivamente, de um filme de fantasia feito em meados dos anos 80 e ambientado na Europa Medieval. A…"
+    }
+  ],
+  "word2vec_cbow": [
+    {
+      "id": 91,
+      "title": "King Kong",
+      "dobra": 0,
+      "real": [
+        "negativo"
+      ],
+      "previsto": [
+        "positivo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.0073,
+        "positivo": 0.9927
+      },
+      "review_id": "6051ea361130bd003d299f7a",
+      "nota": 3.0,
+      "trecho": "Uma longa e tediosa hora de filme que poderia ter sido resumida em 5 min, foi o que fez esse filme ficar pior que o de 1976, Se Quiser assitir a historia contada aqui assista o 1976, E se quiser a Historia com elementos novos na ilha que foram aderidos nesse filme assista o de 2017."
+    },
+    {
+      "id": 1790,
+      "title": "Imaculada",
+      "dobra": 4,
+      "real": [
+        "negativo"
+      ],
+      "previsto": [
+        "positivo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.019,
+        "positivo": 0.981
+      },
+      "review_id": "66bbd614c2fddd06c2823a81",
+      "nota": 4.0,
+      "trecho": "Garota perspicaz ! Sydney Sweeney fez o teste para o longa em 2014, quando tinha 17 anos. Mas o projeto nunca se concretizou. Anos depois, ela assumiu o papel de produtora e entrou em contato com o escritor, adquiriu e revisou o roteiro, contratou um diretor, encontrou financiadores e vendeu o filme para a Neon."
+    },
+    {
+      "id": 309,
+      "title": "Caçadores de Emoção",
+      "dobra": 1,
+      "real": [
+        "negativo"
+      ],
+      "previsto": [
+        "positivo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.027,
+        "positivo": 0.973
+      },
+      "review_id": "686182c11a96c102737b4b7f",
+      "nota": 4.0,
+      "trecho": "**Um filme que funcionou muito bem na década em que apareceu, mas que não tem o que é preciso para se tornar memorável.** Apesar de ter alguma recordação de ter visto este filme na infância, a verdade é que não me lembrava dele quando resolvi revê-lo anteontem. E realmente é daqueles filmes que raramente vemos na TV e que a maioria das pessoas não recorda: é bom o bastante como peça de…"
+    },
+    {
+      "id": 1516,
+      "title": "A Pequena Sereia",
+      "dobra": 0,
+      "real": [
+        "negativo"
+      ],
+      "previsto": [
+        "positivo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.0307,
+        "positivo": 0.9693
+      },
+      "review_id": "64bbde81e9da69012e0da4f7",
+      "nota": 1.0,
+      "trecho": "Apenas mais uma porcaria WOKE de Hollywoke. Não assista! Tenha um pouco de dignidade."
+    },
+    {
+      "id": 880,
+      "title": "Querida, Estiquei o Bebê",
+      "dobra": 3,
+      "real": [
+        "negativo"
+      ],
+      "previsto": [
+        "positivo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.0452,
+        "positivo": 0.9548
+      },
+      "review_id": "5af87c3d0e0a2674dc001246",
+      "nota": 4.0,
+      "trecho": "**Uma sequela bem orquestrada.** Este filme é a continuação do filme \"Querida, Encolhi os Miúdos\", um filme de grande sucesso. Aqui, a história continua, com a máquina ainda a funcionar da maneira errada. Desta vez, o filho mais novo do professor Szalinski foi ampliado para a altura de um gigante. E se um bebê normal dá trabalho aos pais, imagine um bebê gigantesco... O filme continua a fazer…"
+    },
+    {
+      "id": 1280,
+      "title": "No Limite do Amanhã",
+      "dobra": 1,
+      "real": [
+        "positivo"
+      ],
+      "previsto": [
+        "negativo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.9536,
+        "positivo": 0.0464
+      },
+      "review_id": "64d780b7f14dad00ad4efe03",
+      "nota": 7.0,
+      "trecho": "**Um filme eficaz, que funciona razoavelmente, mas que não deixa de parecer um pretexto para o CGI massivo.** Em anos recentes, parece que se convencionou de que basta uma quantidade insana de efeitos especiais para fazer um bom filme. Há imensos filmes que parecem desculpas ou pretextos para uma tonelada de efeitos, CGI e gráficos incríveis, sem grande conteúdo a dar-lhes uma base sólida. Este…"
+    },
+    {
+      "id": 1676,
+      "title": "O Exorcista do Papa",
+      "dobra": 3,
+      "real": [
+        "negativo"
+      ],
+      "previsto": [
+        "positivo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.0522,
+        "positivo": 0.9478
+      },
+      "review_id": "64558da55a07f5017c8a1e57",
+      "nota": 4.0,
+      "trecho": "O Exorcista do Papa é um longa de terror dirigido por Julius Avery, o filme é baseado na vida de Gabriele Amorth, um padre que se tornou o exorcista chefe do Vaticano, tendo realizado aproximadamente, 100 mil desobsessões. O filme é protagonizado por Russell Crowe e conta a história de Amorth enquanto investiga a possessão de um jovem garoto que acaba revelando uma conspiração centenária que o…"
+    },
+    {
+      "id": 1624,
+      "title": "Madame Teia",
+      "dobra": 0,
+      "real": [
+        "negativo"
+      ],
+      "previsto": [
+        "positivo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.0579,
+        "positivo": 0.9421
+      },
+      "review_id": "660a8b4aa88587017ce5b394",
+      "nota": 2.0,
+      "trecho": "Os criminosos responsáveis por isso merecem ir para a cadeia. Eu não tinha expectativa nenhuma e mesmo assim me decepcionei com tanta vagabundagem"
+    }
+  ],
+  "word2vec_skipgram": [
+    {
+      "id": 1790,
+      "title": "Imaculada",
+      "dobra": 4,
+      "real": [
+        "negativo"
+      ],
+      "previsto": [
+        "positivo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.0074,
+        "positivo": 0.9926
+      },
+      "review_id": "66bbd614c2fddd06c2823a81",
+      "nota": 4.0,
+      "trecho": "Garota perspicaz ! Sydney Sweeney fez o teste para o longa em 2014, quando tinha 17 anos. Mas o projeto nunca se concretizou. Anos depois, ela assumiu o papel de produtora e entrou em contato com o escritor, adquiriu e revisou o roteiro, contratou um diretor, encontrou financiadores e vendeu o filme para a Neon."
+    },
+    {
+      "id": 91,
+      "title": "King Kong",
+      "dobra": 0,
+      "real": [
+        "negativo"
+      ],
+      "previsto": [
+        "positivo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.0253,
+        "positivo": 0.9747
+      },
+      "review_id": "6051ea361130bd003d299f7a",
+      "nota": 3.0,
+      "trecho": "Uma longa e tediosa hora de filme que poderia ter sido resumida em 5 min, foi o que fez esse filme ficar pior que o de 1976, Se Quiser assitir a historia contada aqui assista o 1976, E se quiser a Historia com elementos novos na ilha que foram aderidos nesse filme assista o de 2017."
+    },
+    {
+      "id": 1280,
+      "title": "No Limite do Amanhã",
+      "dobra": 1,
+      "real": [
+        "positivo"
+      ],
+      "previsto": [
+        "negativo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.9708,
+        "positivo": 0.0292
+      },
+      "review_id": "64d780b7f14dad00ad4efe03",
+      "nota": 7.0,
+      "trecho": "**Um filme eficaz, que funciona razoavelmente, mas que não deixa de parecer um pretexto para o CGI massivo.** Em anos recentes, parece que se convencionou de que basta uma quantidade insana de efeitos especiais para fazer um bom filme. Há imensos filmes que parecem desculpas ou pretextos para uma tonelada de efeitos, CGI e gráficos incríveis, sem grande conteúdo a dar-lhes uma base sólida. Este…"
+    },
+    {
+      "id": 309,
+      "title": "Caçadores de Emoção",
+      "dobra": 1,
+      "real": [
+        "negativo"
+      ],
+      "previsto": [
+        "positivo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.044,
+        "positivo": 0.956
+      },
+      "review_id": "686182c11a96c102737b4b7f",
+      "nota": 4.0,
+      "trecho": "**Um filme que funcionou muito bem na década em que apareceu, mas que não tem o que é preciso para se tornar memorável.** Apesar de ter alguma recordação de ter visto este filme na infância, a verdade é que não me lembrava dele quando resolvi revê-lo anteontem. E realmente é daqueles filmes que raramente vemos na TV e que a maioria das pessoas não recorda: é bom o bastante como peça de…"
+    },
+    {
+      "id": 84,
+      "title": "Meninos Não Choram",
+      "dobra": 1,
+      "real": [
+        "negativo"
+      ],
+      "previsto": [
+        "positivo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.0461,
+        "positivo": 0.9539
+      },
+      "review_id": "5767287b9251413e16000831",
+      "nota": 1.0,
+      "trecho": "O filme é muito bem feito, entretanto fica aquela ideia de que um relacionamento entre homem e mulher, quando não dá certo, deveria ser substituído por mulher e mulher, homem e homem. Discordo. É um convite à heterofobia. Mas a atuação dela é brilhante no filme."
+    },
+    {
+      "id": 161,
+      "title": "Homem-Aranha",
+      "dobra": 4,
+      "real": [
+        "positivo"
+      ],
+      "previsto": [
+        "negativo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.9344,
+        "positivo": 0.0656
+      },
+      "review_id": "5d9a7370bb2602002312363c",
+      "nota": 7.0,
+      "trecho": "**Bom, mas não extraordinário.** Este filme mostra, basicamente, o surgimento do Homem Aranha: a forma como Peter Parker, um adolescente, muda de vida após ter sido picado por uma aranha geneticamente modificada. Ele torna-se um herói, capaz de fazer justiça e proteger os mais fracos. Porém, do outro lado da barricada, surge o Duende Verde, um vilão que só ele pode travar. Não sou um fã dos…"
+    },
+    {
+      "id": 1624,
+      "title": "Madame Teia",
+      "dobra": 0,
+      "real": [
+        "negativo"
+      ],
+      "previsto": [
+        "positivo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.0719,
+        "positivo": 0.9281
+      },
+      "review_id": "660a8b4aa88587017ce5b394",
+      "nota": 2.0,
+      "trecho": "Os criminosos responsáveis por isso merecem ir para a cadeia. Eu não tinha expectativa nenhuma e mesmo assim me decepcionei com tanta vagabundagem"
+    },
+    {
+      "id": 880,
+      "title": "Querida, Estiquei o Bebê",
+      "dobra": 3,
+      "real": [
+        "negativo"
+      ],
+      "previsto": [
+        "positivo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.0805,
+        "positivo": 0.9195
+      },
+      "review_id": "5af87c3d0e0a2674dc001246",
+      "nota": 4.0,
+      "trecho": "**Uma sequela bem orquestrada.** Este filme é a continuação do filme \"Querida, Encolhi os Miúdos\", um filme de grande sucesso. Aqui, a história continua, com a máquina ainda a funcionar da maneira errada. Desta vez, o filho mais novo do professor Szalinski foi ampliado para a altura de um gigante. E se um bebê normal dá trabalho aos pais, imagine um bebê gigantesco... O filme continua a fazer…"
+    }
+  ],
+  "bert_base_pt": [
+    {
+      "id": 1542,
+      "title": "Parasita",
+      "dobra": 1,
+      "real": [
+        "positivo"
+      ],
+      "previsto": [
+        "negativo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.9948,
+        "positivo": 0.0052
+      },
+      "review_id": "637528dfd4cc8e00797560c1",
+      "nota": 10.0,
+      "trecho": "Um bom filme não precisa de milhões investidos"
+    },
+    {
+      "id": 1280,
+      "title": "No Limite do Amanhã",
+      "dobra": 1,
+      "real": [
+        "positivo"
+      ],
+      "previsto": [
+        "negativo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.9914,
+        "positivo": 0.0086
+      },
+      "review_id": "64d780b7f14dad00ad4efe03",
+      "nota": 7.0,
+      "trecho": "**Um filme eficaz, que funciona razoavelmente, mas que não deixa de parecer um pretexto para o CGI massivo.** Em anos recentes, parece que se convencionou de que basta uma quantidade insana de efeitos especiais para fazer um bom filme. Há imensos filmes que parecem desculpas ou pretextos para uma tonelada de efeitos, CGI e gráficos incríveis, sem grande conteúdo a dar-lhes uma base sólida. Este…"
+    },
+    {
+      "id": 1806,
+      "title": "A Hora do Mal",
+      "dobra": 2,
+      "real": [
+        "negativo"
+      ],
+      "previsto": [
+        "positivo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.0096,
+        "positivo": 0.9904
+      },
+      "review_id": "6a52ca0baa3dc731a11dbb31",
+      "nota": 4.0,
+      "trecho": "“Hora do Desaparecimento” parte de uma premissa sólida e inquietante, capaz de convocar medos coletivos e um suspense social que, à partida, prometia muito mais do que acaba por cumprir. A estrutura em capítulos, centrada em diferentes personagens, permite algum fôlego à narrativa e cria momentos de interesse genuíno, sobretudo quando esboça o impacto do mistério na comunidade. No entanto, a…"
+    },
+    {
+      "id": 484,
+      "title": "Frankenstein de Mary Shelley",
+      "dobra": 2,
+      "real": [
+        "positivo"
+      ],
+      "previsto": [
+        "negativo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.9827,
+        "positivo": 0.0173
+      },
+      "review_id": "5b86dc860e0a26110d010bdc",
+      "nota": 8.0,
+      "trecho": "**Fiel ao livro, mas cheio de presunção.** Quando a jovem Mary Shelley escreveu \"Frankenstein\", ela estava longe de imaginar o impacto que isso teria. Há literalmente dezenas de filmes que abordam a história, mas o cinema nunca conseguiu fazer um filme que fosse fiel ao romance original. Este filme é o que mais se aproxima, embora também apresente mudanças. Muitas são muito positivas, mas algumas…"
+    },
+    {
+      "id": 1649,
+      "title": "Resgate 2",
+      "dobra": 3,
+      "real": [
+        "positivo"
+      ],
+      "previsto": [
+        "negativo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.9821,
+        "positivo": 0.0179
+      },
+      "review_id": "648fa5cc559d2200e206ff76",
+      "nota": 7.0,
+      "trecho": "Chris Hemsworth deveria se aposentar de Thor e seguir fazendo isso |"
+    },
+    {
+      "id": 873,
+      "title": "Diário de uma Paixão",
+      "dobra": 4,
+      "real": [
+        "negativo"
+      ],
+      "previsto": [
+        "positivo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.0281,
+        "positivo": 0.9719
+      },
+      "review_id": "5d7c1ff1069f0e066d3379d9",
+      "nota": 4.0,
+      "trecho": "**Mais um filme ultra-romântico com um amor proibido. O bom elenco e as boas actuações são interessantes, mas quase tudo o resto é comum.** Este é o típico romance dramático que sai da mente de Nicholas Sparks, o autor preferido das jovens adolescentes. A história conta o romance entre Noah, um jovem de origens humildes, e Allie, filha de pais ricos que não aprovam aquele namoro e decidem casá-la…"
+    },
+    {
+      "id": 880,
+      "title": "Querida, Estiquei o Bebê",
+      "dobra": 3,
+      "real": [
+        "negativo"
+      ],
+      "previsto": [
+        "positivo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.0313,
+        "positivo": 0.9687
+      },
+      "review_id": "5af87c3d0e0a2674dc001246",
+      "nota": 4.0,
+      "trecho": "**Uma sequela bem orquestrada.** Este filme é a continuação do filme \"Querida, Encolhi os Miúdos\", um filme de grande sucesso. Aqui, a história continua, com a máquina ainda a funcionar da maneira errada. Desta vez, o filho mais novo do professor Szalinski foi ampliado para a altura de um gigante. E se um bebê normal dá trabalho aos pais, imagine um bebê gigantesco... O filme continua a fazer…"
+    },
+    {
+      "id": 1766,
+      "title": "Thunderbolts*",
+      "dobra": 3,
+      "real": [
+        "positivo"
+      ],
+      "previsto": [
+        "negativo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.9623,
+        "positivo": 0.0377
+      },
+      "review_id": "6816be103cf2bab098f48261",
+      "nota": 8.0,
+      "trecho": "Depois de anos a tropeçar na fracassada tentativa de explorar o Multiverso com argumentos rebuscados, sem muito sentido ou ambição, somando a uma overdose de novas personagens pobres, chatas e mal exploradas, a Marvel Studios acerta finalmente com Thunderbolts. E fá-lo de forma surpreendente: não ao tentar inovar, mas ao focar-se em contar uma boa história. Thunderbolts é o melhor filme da Marvel…"
+    }
+  ],
+  "sentenca_minilm": [
+    {
+      "id": 1486,
+      "title": "No Limite",
+      "dobra": 4,
+      "real": [
+        "negativo"
+      ],
+      "previsto": [
+        "positivo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.0014,
+        "positivo": 0.9986
+      },
+      "review_id": "636daee6ca4f67009b53f7ca",
+      "nota": 4.0,
+      "trecho": "A melhor coisa do filme é ver Ana de Armas !"
+    },
+    {
+      "id": 1806,
+      "title": "A Hora do Mal",
+      "dobra": 2,
+      "real": [
+        "negativo"
+      ],
+      "previsto": [
+        "positivo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.02,
+        "positivo": 0.98
+      },
+      "review_id": "6a52ca0baa3dc731a11dbb31",
+      "nota": 4.0,
+      "trecho": "“Hora do Desaparecimento” parte de uma premissa sólida e inquietante, capaz de convocar medos coletivos e um suspense social que, à partida, prometia muito mais do que acaba por cumprir. A estrutura em capítulos, centrada em diferentes personagens, permite algum fôlego à narrativa e cria momentos de interesse genuíno, sobretudo quando esboça o impacto do mistério na comunidade. No entanto, a…"
+    },
+    {
+      "id": 880,
+      "title": "Querida, Estiquei o Bebê",
+      "dobra": 3,
+      "real": [
+        "negativo"
+      ],
+      "previsto": [
+        "positivo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.0213,
+        "positivo": 0.9787
+      },
+      "review_id": "5af87c3d0e0a2674dc001246",
+      "nota": 4.0,
+      "trecho": "**Uma sequela bem orquestrada.** Este filme é a continuação do filme \"Querida, Encolhi os Miúdos\", um filme de grande sucesso. Aqui, a história continua, com a máquina ainda a funcionar da maneira errada. Desta vez, o filho mais novo do professor Szalinski foi ampliado para a altura de um gigante. E se um bebê normal dá trabalho aos pais, imagine um bebê gigantesco... O filme continua a fazer…"
+    },
+    {
+      "id": 1624,
+      "title": "Madame Teia",
+      "dobra": 0,
+      "real": [
+        "negativo"
+      ],
+      "previsto": [
+        "positivo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.0234,
+        "positivo": 0.9766
+      },
+      "review_id": "660a8b4aa88587017ce5b394",
+      "nota": 2.0,
+      "trecho": "Os criminosos responsáveis por isso merecem ir para a cadeia. Eu não tinha expectativa nenhuma e mesmo assim me decepcionei com tanta vagabundagem"
+    },
+    {
+      "id": 1215,
+      "title": "[REC] 3: Gênesis",
+      "dobra": 0,
+      "real": [
+        "positivo"
+      ],
+      "previsto": [
+        "negativo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.9703,
+        "positivo": 0.0297
+      },
+      "review_id": "698ceef7bd33461c054aabab",
+      "nota": 7.0,
+      "trecho": "Decidi rever REC 3 porque estou a rever a saga e já não me lembrava de nada sobre este filme. Os críticos continuam a tratá-lo como o pior capítulo da franquia. Talvez seja mesmo o mais fraco, mas isso não faz dele terrível. Continua a ser interessante e, acima de tudo, entretém até ao fim. Desta vez, o filme funciona como uma prequela, com ligeiras ligações ao original. Nada é explicado de forma…"
+    },
+    {
+      "id": 1726,
+      "title": "Teen Wolf: O Filme",
+      "dobra": 1,
+      "real": [
+        "negativo"
+      ],
+      "previsto": [
+        "positivo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.0305,
+        "positivo": 0.9695
+      },
+      "review_id": "6ab83e9eac76a5ec6bdc83db",
+      "nota": 3.0,
+      "trecho": "poucas experiências cinematográficas despertaram em mim uma aversão tão imediata e visceral quanto esta. assistir a este filme uma única vez já me pareceu mais do que suficiente para uma vida inteira; uma segunda exibição exigiria de mim um nível de resistência emocional que, francamente, não possuo. não apenas não pretendo revê-lo como considero a simples possibilidade uma ameaça à minha paz de…"
+    },
+    {
+      "id": 1782,
+      "title": "Divertida Mente 2",
+      "dobra": 3,
+      "real": [
+        "positivo"
+      ],
+      "previsto": [
+        "negativo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.9695,
+        "positivo": 0.0305
+      },
+      "review_id": "66f7157c4d26253c99c11c88",
+      "nota": 8.0,
+      "trecho": "Bicho, as vezes os críticos dessa rede social são tão chatos que não perdoam nem uma animação. Não sei se eu falo sobre o filme, ou se eu desabafo. 😡 Aí, tá vendo, já tem um monte de “divertidamentes” na sala de controle do meu cérebro, apertando os botões e tentando me conter. Acho que se você não tem filhos, nunca teve ansiedade, depressão ou algo do tipo. Nunca vai alcançar um filme desses.…"
+    },
+    {
+      "id": 1446,
+      "title": "Kingsman: O Círculo Dourado",
+      "dobra": 1,
+      "real": [
+        "positivo"
+      ],
+      "previsto": [
+        "negativo"
+      ],
+      "acertou": false,
+      "probabilidades": {
+        "negativo": 0.9632,
+        "positivo": 0.0368
+      },
+      "review_id": "62251ff5253fab001b41ed0b",
+      "nota": 8.0,
+      "trecho": "Nunca que esse filme pode ser taxado como genérico. Para começar, essa sequencia consegue reunir um elenco ainda mais incrível que o do primeiro filme. Até Elton FUCK John dá as caras. O filme permanece com o tom de sátira e cenas de ação eletrizantes e bem orquestradas. A trilha sonora é outra que ganha pontos e mantem o tom do filme. Todo mérito para atuação do Taron Egerton, que manda super…"
+    }
+  ]
+}

@@ -1,0 +1,861 @@
+{
+  "polaridade": {
+    "maioria": {
+      "f1_macro": 0.414815,
+      "f1_micro": 0.708861,
+      "f1_macro_dobras": {
+        "media": 0.414815,
+        "desvio": 0.000441,
+        "valores": [
+          0.414433,
+          0.415638,
+          0.414433,
+          0.414784,
+          0.414784
+        ]
+      },
+      "c_escolhido": [],
+      "por_genero": {
+        "negativo": {
+          "precisao": 0.0,
+          "revocacao": 0.0,
+          "f1": 0.0,
+          "suporte": 414
+        },
+        "positivo": {
+          "precisao": 0.708861,
+          "revocacao": 1.0,
+          "f1": 0.82963,
+          "suporte": 1008
+        }
+      },
+      "acuracia": 0.708861,
+      "ari": 0.0,
+      "nmi": 0.0,
+      "pureza": 0.708861,
+      "log_loss": 0.603171,
+      "confianca_media": {
+        "acertos": 0.70886,
+        "erros": 0.708862
+      },
+      "matriz_confusao": [
+        [
+          0,
+          414
+        ],
+        [
+          0,
+          1008
+        ]
+      ]
+    },
+    "bow_sem_pontuacao": {
+      "f1_macro": 0.808957,
+      "f1_micro": 0.843882,
+      "f1_macro_dobras": {
+        "media": 0.809032,
+        "desvio": 0.034492,
+        "valores": [
+          0.850515,
+          0.819971,
+          0.823616,
+          0.804258,
+          0.746802
+        ]
+      },
+      "c_escolhido": [
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.1
+      ],
+      "por_genero": {
+        "negativo": {
+          "precisao": 0.74,
+          "revocacao": 0.714976,
+          "f1": 0.727273,
+          "suporte": 414
+        },
+        "positivo": {
+          "precisao": 0.88454,
+          "revocacao": 0.896825,
+          "f1": 0.89064,
+          "suporte": 1008
+        }
+      },
+      "acuracia": 0.843882,
+      "ari": 0.454553,
+      "nmi": 0.308738,
+      "pureza": 0.843882,
+      "log_loss": 0.353808,
+      "confianca_media": {
+        "acertos": 0.895927,
+        "erros": 0.73673
+      },
+      "matriz_confusao": [
+        [
+          296,
+          118
+        ],
+        [
+          104,
+          904
+        ]
+      ],
+      "negacao": {
+        "com": {
+          "criticas": 1276,
+          "acuracia": 0.832288
+        },
+        "sem": {
+          "criticas": 146,
+          "acuracia": 0.945205
+        }
+      },
+      "entre_autores": {
+        "treino_sem_autor_principal": {
+          "treino": 495,
+          "teste": 927,
+          "f1_macro": 0.537505,
+          "acuracia": 0.670982
+        },
+        "treino_so_autor_principal": {
+          "treino": 927,
+          "teste": 495,
+          "f1_macro": 0.581928,
+          "acuracia": 0.686869
+        }
+      }
+    },
+    "bow_sem_stopwords": {
+      "f1_macro": 0.829588,
+      "f1_micro": 0.861463,
+      "f1_macro_dobras": {
+        "media": 0.829995,
+        "desvio": 0.030529,
+        "valores": [
+          0.872364,
+          0.822302,
+          0.841973,
+          0.83472,
+          0.778613
+        ]
+      },
+      "c_escolhido": [
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.1
+      ],
+      "por_genero": {
+        "negativo": {
+          "precisao": 0.776081,
+          "revocacao": 0.736715,
+          "f1": 0.755886,
+          "suporte": 414
+        },
+        "positivo": {
+          "precisao": 0.894072,
+          "revocacao": 0.912698,
+          "f1": 0.903289,
+          "suporte": 1008
+        }
+      },
+      "acuracia": 0.861463,
+      "ari": 0.505117,
+      "nmi": 0.35494,
+      "pureza": 0.861463,
+      "log_loss": 0.324369,
+      "confianca_media": {
+        "acertos": 0.87507,
+        "erros": 0.711702
+      },
+      "matriz_confusao": [
+        [
+          305,
+          109
+        ],
+        [
+          88,
+          920
+        ]
+      ],
+      "negacao": {
+        "com": {
+          "criticas": 1276,
+          "acuracia": 0.851097
+        },
+        "sem": {
+          "criticas": 146,
+          "acuracia": 0.952055
+        }
+      },
+      "entre_autores": {
+        "treino_sem_autor_principal": {
+          "treino": 495,
+          "teste": 927,
+          "f1_macro": 0.646525,
+          "acuracia": 0.717368
+        },
+        "treino_so_autor_principal": {
+          "treino": 927,
+          "teste": 495,
+          "f1_macro": 0.611514,
+          "acuracia": 0.739394
+        }
+      }
+    },
+    "tfidf_sem_pontuacao": {
+      "f1_macro": 0.846798,
+      "f1_micro": 0.877637,
+      "f1_macro_dobras": {
+        "media": 0.847082,
+        "desvio": 0.041796,
+        "valores": [
+          0.91299,
+          0.868078,
+          0.829681,
+          0.837143,
+          0.787516
+        ]
+      },
+      "c_escolhido": [
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "por_genero": {
+        "negativo": {
+          "precisao": 0.824324,
+          "revocacao": 0.736715,
+          "f1": 0.778061,
+          "suporte": 414
+        },
+        "positivo": {
+          "precisao": 0.896388,
+          "revocacao": 0.935516,
+          "f1": 0.915534,
+          "suporte": 1008
+        }
+      },
+      "acuracia": 0.877637,
+      "ari": 0.552268,
+      "nmi": 0.401078,
+      "pureza": 0.877637,
+      "log_loss": 0.295399,
+      "confianca_media": {
+        "acertos": 0.898355,
+        "erros": 0.730621
+      },
+      "matriz_confusao": [
+        [
+          305,
+          109
+        ],
+        [
+          65,
+          943
+        ]
+      ],
+      "negacao": {
+        "com": {
+          "criticas": 1276,
+          "acuracia": 0.869906
+        },
+        "sem": {
+          "criticas": 146,
+          "acuracia": 0.945205
+        }
+      },
+      "entre_autores": {
+        "treino_sem_autor_principal": {
+          "treino": 495,
+          "teste": 927,
+          "f1_macro": 0.474013,
+          "acuracia": 0.647249
+        },
+        "treino_so_autor_principal": {
+          "treino": 927,
+          "teste": 495,
+          "f1_macro": 0.672902,
+          "acuracia": 0.80202
+        }
+      }
+    },
+    "tfidf_sem_stopwords": {
+      "f1_macro": 0.85568,
+      "f1_micro": 0.885373,
+      "f1_macro_dobras": {
+        "media": 0.855786,
+        "desvio": 0.037234,
+        "valores": [
+          0.916376,
+          0.858601,
+          0.828351,
+          0.868243,
+          0.807361
+        ]
+      },
+      "c_escolhido": [
+        100.0,
+        1000.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "por_genero": {
+        "negativo": {
+          "precisao": 0.84573,
+          "revocacao": 0.741546,
+          "f1": 0.790219,
+          "suporte": 414
+        },
+        "positivo": {
+          "precisao": 0.898961,
+          "revocacao": 0.944444,
+          "f1": 0.921142,
+          "suporte": 1008
+        }
+      },
+      "acuracia": 0.885373,
+      "ari": 0.576143,
+      "nmi": 0.426214,
+      "pureza": 0.885373,
+      "log_loss": 0.299244,
+      "confianca_media": {
+        "acertos": 0.906106,
+        "erros": 0.758203
+      },
+      "matriz_confusao": [
+        [
+          307,
+          107
+        ],
+        [
+          56,
+          952
+        ]
+      ],
+      "negacao": {
+        "com": {
+          "criticas": 1276,
+          "acuracia": 0.877743
+        },
+        "sem": {
+          "criticas": 146,
+          "acuracia": 0.952055
+        }
+      },
+      "entre_autores": {
+        "treino_sem_autor_principal": {
+          "treino": 495,
+          "teste": 927,
+          "f1_macro": 0.506935,
+          "acuracia": 0.659115
+        },
+        "treino_so_autor_principal": {
+          "treino": 927,
+          "teste": 495,
+          "f1_macro": 0.716392,
+          "acuracia": 0.856566
+        }
+      }
+    },
+    "word2vec_cbow": {
+      "f1_macro": 0.793397,
+      "f1_micro": 0.819972,
+      "f1_macro_dobras": {
+        "media": 0.793266,
+        "desvio": 0.016204,
+        "valores": [
+          0.823143,
+          0.79152,
+          0.78533,
+          0.791837,
+          0.774501
+        ]
+      },
+      "c_escolhido": [
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01
+      ],
+      "por_genero": {
+        "negativo": {
+          "precisao": 0.658635,
+          "revocacao": 0.792271,
+          "f1": 0.719298,
+          "suporte": 414
+        },
+        "positivo": {
+          "precisao": 0.906926,
+          "revocacao": 0.831349,
+          "f1": 0.867495,
+          "suporte": 1008
+        }
+      },
+      "acuracia": 0.819972,
+      "ari": 0.399812,
+      "nmi": 0.283328,
+      "pureza": 0.819972,
+      "log_loss": 0.399606,
+      "confianca_media": {
+        "acertos": 0.82074,
+        "erros": 0.671235
+      },
+      "matriz_confusao": [
+        [
+          328,
+          86
+        ],
+        [
+          170,
+          838
+        ]
+      ],
+      "negacao": {
+        "com": {
+          "criticas": 1276,
+          "acuracia": 0.807994
+        },
+        "sem": {
+          "criticas": 146,
+          "acuracia": 0.924658
+        }
+      },
+      "entre_autores": {
+        "treino_sem_autor_principal": {
+          "treino": 495,
+          "teste": 927,
+          "f1_macro": 0.710131,
+          "acuracia": 0.7411
+        },
+        "treino_so_autor_principal": {
+          "treino": 927,
+          "teste": 495,
+          "f1_macro": 0.548433,
+          "acuracia": 0.648485
+        }
+      }
+    },
+    "word2vec_skipgram": {
+      "f1_macro": 0.800313,
+      "f1_micro": 0.825598,
+      "f1_macro_dobras": {
+        "media": 0.800464,
+        "desvio": 0.02428,
+        "valores": [
+          0.841878,
+          0.802484,
+          0.781938,
+          0.804968,
+          0.771053
+        ]
+      },
+      "c_escolhido": [
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01
+      ],
+      "por_genero": {
+        "negativo": {
+          "precisao": 0.665339,
+          "revocacao": 0.806763,
+          "f1": 0.729258,
+          "suporte": 414
+        },
+        "positivo": {
+          "precisao": 0.913043,
+          "revocacao": 0.833333,
+          "f1": 0.871369,
+          "suporte": 1008
+        }
+      },
+      "acuracia": 0.825598,
+      "ari": 0.414924,
+      "nmi": 0.298608,
+      "pureza": 0.825598,
+      "log_loss": 0.383201,
+      "confianca_media": {
+        "acertos": 0.823477,
+        "erros": 0.664485
+      },
+      "matriz_confusao": [
+        [
+          334,
+          80
+        ],
+        [
+          168,
+          840
+        ]
+      ],
+      "negacao": {
+        "com": {
+          "criticas": 1276,
+          "acuracia": 0.814263
+        },
+        "sem": {
+          "criticas": 146,
+          "acuracia": 0.924658
+        }
+      },
+      "entre_autores": {
+        "treino_sem_autor_principal": {
+          "treino": 495,
+          "teste": 927,
+          "f1_macro": 0.748603,
+          "acuracia": 0.769148
+        },
+        "treino_so_autor_principal": {
+          "treino": 927,
+          "teste": 495,
+          "f1_macro": 0.535742,
+          "acuracia": 0.628283
+        }
+      }
+    },
+    "bert_base_pt": {
+      "f1_macro": 0.866947,
+      "f1_micro": 0.886779,
+      "f1_macro_dobras": {
+        "media": 0.867366,
+        "desvio": 0.029962,
+        "valores": [
+          0.868275,
+          0.89786,
+          0.874912,
+          0.884922,
+          0.810861
+        ]
+      },
+      "c_escolhido": [
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01
+      ],
+      "por_genero": {
+        "negativo": {
+          "precisao": 0.775599,
+          "revocacao": 0.859903,
+          "f1": 0.815578,
+          "suporte": 414
+        },
+        "positivo": {
+          "precisao": 0.939772,
+          "revocacao": 0.897817,
+          "f1": 0.918316,
+          "suporte": 1008
+        }
+      },
+      "acuracia": 0.886779,
+      "ari": 0.589179,
+      "nmi": 0.449923,
+      "pureza": 0.886779,
+      "log_loss": 0.277737,
+      "confianca_media": {
+        "acertos": 0.891491,
+        "erros": 0.707094
+      },
+      "matriz_confusao": [
+        [
+          356,
+          58
+        ],
+        [
+          103,
+          905
+        ]
+      ],
+      "negacao": {
+        "com": {
+          "criticas": 1276,
+          "acuracia": 0.884013
+        },
+        "sem": {
+          "criticas": 146,
+          "acuracia": 0.910959
+        }
+      },
+      "entre_autores": {
+        "treino_sem_autor_principal": {
+          "treino": 495,
+          "teste": 927,
+          "f1_macro": 0.807504,
+          "acuracia": 0.828479
+        },
+        "treino_so_autor_principal": {
+          "treino": 927,
+          "teste": 495,
+          "f1_macro": 0.678076,
+          "acuracia": 0.781818
+        }
+      }
+    },
+    "sentenca_minilm": {
+      "f1_macro": 0.819783,
+      "f1_micro": 0.843882,
+      "f1_macro_dobras": {
+        "media": 0.819672,
+        "desvio": 0.013074,
+        "valores": [
+          0.825084,
+          0.811812,
+          0.824618,
+          0.837607,
+          0.799241
+        ]
+      },
+      "c_escolhido": [
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01
+      ],
+      "por_genero": {
+        "negativo": {
+          "precisao": 0.696721,
+          "revocacao": 0.821256,
+          "f1": 0.75388,
+          "suporte": 414
+        },
+        "positivo": {
+          "precisao": 0.920771,
+          "revocacao": 0.853175,
+          "f1": 0.885685,
+          "suporte": 1008
+        }
+      },
+      "acuracia": 0.843882,
+      "ari": 0.463529,
+      "nmi": 0.338165,
+      "pureza": 0.843882,
+      "log_loss": 0.333145,
+      "confianca_media": {
+        "acertos": 0.878046,
+        "erros": 0.692833
+      },
+      "matriz_confusao": [
+        [
+          340,
+          74
+        ],
+        [
+          148,
+          860
+        ]
+      ],
+      "negacao": {
+        "com": {
+          "criticas": 1276,
+          "acuracia": 0.836207
+        },
+        "sem": {
+          "criticas": 146,
+          "acuracia": 0.910959
+        }
+      },
+      "entre_autores": {
+        "treino_sem_autor_principal": {
+          "treino": 495,
+          "teste": 927,
+          "f1_macro": 0.735862,
+          "acuracia": 0.778857
+        },
+        "treino_so_autor_principal": {
+          "treino": 927,
+          "teste": 495,
+          "f1_macro": 0.643506,
+          "acuracia": 0.753535
+        }
+      }
+    }
+  },
+  "nota": {
+    "media_do_treino": {
+      "erro_absoluto_medio": 1.978815,
+      "raiz_erro_quadratico": 2.399681,
+      "spearman": -0.006973,
+      "ate_1_ponto": 0.305541,
+      "erro_absoluto_dobras": [
+        1.977694,
+        1.98611,
+        1.981392,
+        1.973502,
+        1.975367
+      ],
+      "alfa_escolhido": []
+    },
+    "bow_sem_pontuacao": {
+      "erro_absoluto_medio": 1.401507,
+      "raiz_erro_quadratico": 1.767162,
+      "spearman": 0.673086,
+      "ate_1_ponto": 0.429801,
+      "erro_absoluto_dobras": [
+        1.357728,
+        1.412005,
+        1.40577,
+        1.413098,
+        1.418982
+      ],
+      "alfa_escolhido": [
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ]
+    },
+    "bow_sem_stopwords": {
+      "erro_absoluto_medio": 1.397687,
+      "raiz_erro_quadratico": 1.757693,
+      "spearman": 0.683045,
+      "ate_1_ponto": 0.439484,
+      "erro_absoluto_dobras": [
+        1.325142,
+        1.413755,
+        1.431267,
+        1.379602,
+        1.438779
+      ],
+      "alfa_escolhido": [
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ]
+    },
+    "tfidf_sem_pontuacao": {
+      "erro_absoluto_medio": 1.362686,
+      "raiz_erro_quadratico": 1.703003,
+      "spearman": 0.691739,
+      "ate_1_ponto": 0.433566,
+      "erro_absoluto_dobras": [
+        1.324025,
+        1.378228,
+        1.369052,
+        1.336527,
+        1.405715
+      ],
+      "alfa_escolhido": [
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.1
+      ]
+    },
+    "tfidf_sem_stopwords": {
+      "erro_absoluto_medio": 1.366668,
+      "raiz_erro_quadratico": 1.715237,
+      "spearman": 0.686645,
+      "ate_1_ponto": 0.43787,
+      "erro_absoluto_dobras": [
+        1.319498,
+        1.374938,
+        1.388916,
+        1.328528,
+        1.421608
+      ],
+      "alfa_escolhido": [
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.1
+      ]
+    },
+    "word2vec_cbow": {
+      "erro_absoluto_medio": 1.522459,
+      "raiz_erro_quadratico": 1.884567,
+      "spearman": 0.623561,
+      "ate_1_ponto": 0.389457,
+      "erro_absoluto_dobras": [
+        1.448848,
+        1.469842,
+        1.580028,
+        1.532671,
+        1.581065
+      ],
+      "alfa_escolhido": [
+        1000.0,
+        1000.0,
+        1000.0,
+        1000.0,
+        1000.0
+      ]
+    },
+    "word2vec_skipgram": {
+      "erro_absoluto_medio": 1.514085,
+      "raiz_erro_quadratico": 1.865481,
+      "spearman": 0.637684,
+      "ate_1_ponto": 0.39376,
+      "erro_absoluto_dobras": [
+        1.438914,
+        1.459626,
+        1.556155,
+        1.535888,
+        1.580017
+      ],
+      "alfa_escolhido": [
+        1000.0,
+        1000.0,
+        1000.0,
+        1000.0,
+        1000.0
+      ]
+    },
+    "bert_base_pt": {
+      "erro_absoluto_medio": 1.3339,
+      "raiz_erro_quadratico": 1.653328,
+      "spearman": 0.731675,
+      "ate_1_ponto": 0.445401,
+      "erro_absoluto_dobras": [
+        1.300049,
+        1.34552,
+        1.36927,
+        1.352935,
+        1.301641
+      ],
+      "alfa_escolhido": [
+        1000.0,
+        1000.0,
+        1000.0,
+        1000.0,
+        1000.0
+      ]
+    },
+    "sentenca_minilm": {
+      "erro_absoluto_medio": 1.414059,
+      "raiz_erro_quadratico": 1.752213,
+      "spearman": 0.678342,
+      "ate_1_ponto": 0.425498,
+      "erro_absoluto_dobras": [
+        1.337686,
+        1.446586,
+        1.401947,
+        1.434368,
+        1.449805
+      ],
+      "alfa_escolhido": [
+        1000.0,
+        1000.0,
+        1000.0,
+        1000.0,
+        1000.0
+      ]
+    }
+  }
+}

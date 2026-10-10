@@ -1,0 +1,15 @@
+{
+  "mencoes_creditadas": 983,
+  "filmes_com_mencao": 325,
+  "revocacao_per": 0.736521,
+  "revocacao_qualquer_categoria": 0.984741,
+  "categorias_das_mencoes": {
+    "LOC": 145,
+    "MISC": 68,
+    "ORG": 31,
+    "PER": 724,
+    "nao_reconhecida": 15
+  },
+  "pessoas_previstas": 879,
+  "precisao_estimada_per": 0.8157
+}

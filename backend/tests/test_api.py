@@ -9,7 +9,7 @@ from app.api.rate_limit import RateLimiter
 from app.main import catalog_paths, create_app
 from app.search.ports import CatalogError
 from app.settings import Settings
-from tests.fakes import FakeCatalog, FakeGenreClassifier, FakeRecommender, FakeSynopsisIndex
+from tests.fakes import FakeCatalog, FakeEntityExtractor, FakeGenreClassifier, FakeRecommender, FakeSentimentAnalyzer, FakeSynopsisIndex
 
 ORIGIN = "http://127.0.0.1:5500"
 
@@ -20,9 +20,11 @@ def client_for(
     synopsis_index: FakeSynopsisIndex | None = None,
     classifier: FakeGenreClassifier | None = None,
     recommender: FakeRecommender | None = None,
+    sentiment: FakeSentimentAnalyzer | None = None,
+    extractor: FakeEntityExtractor | None = None,
 ) -> TestClient:
     settings = Settings(_env_file=None, cors_origins=[ORIGIN], rate_limit_per_minute=rate_limit)
-    return TestClient(create_app(settings, catalog, synopsis_index, classifier, recommender))
+    return TestClient(create_app(settings, catalog, synopsis_index, classifier, recommender, sentiment, extractor))
 
 
 class ApiTests(unittest.TestCase):
@@ -122,6 +124,47 @@ class ApiTests(unittest.TestCase):
         with client_for(FakeCatalog(), classifier=FakeGenreClassifier([], error="Texto sem palavras conhecidas")) as client:
             invalid = client.get("/classificacao", params={"texto": "???"})
         self.assertEqual((invalid.status_code, invalid.json()["detail"]), (422, "Texto sem palavras conhecidas"))
+
+    def test_sentiment_contract(self) -> None:
+        analyzer = FakeSentimentAnalyzer()
+        with client_for(FakeCatalog(), sentiment=analyzer) as client:
+            body = client.get("/sentimento", params={"texto": "Um filme excelente, adorei."}).json()
+            too_long = client.get("/sentimento", params={"texto": "x" * 5001})
+            empty = client.get("/sentimento", params={"texto": ""})
+        self.assertEqual((body["polaridade"], body["probabilidade_positiva"], body["nota_prevista"]), ("positivo", 0.9, 8.5))
+        self.assertEqual(body["palavras_positivas"], [{"palavra": "excelente", "peso": 0.4}])
+        self.assertEqual(body["palavras_negativas"], [{"palavra": "chato", "peso": -0.1}])
+        self.assertEqual((body["representacao"], body["criticas_de_treino"]), ("teste", 20))
+        self.assertEqual(analyzer.texts, ["Um filme excelente, adorei."])
+        self.assertEqual((too_long.status_code, empty.status_code), (422, 422))
+
+    def test_sentiment_unavailable_or_invalid_text(self) -> None:
+        with client_for(FakeCatalog()) as client:
+            unavailable = client.get("/sentimento", params={"texto": "um filme"})
+        self.assertEqual((unavailable.status_code, unavailable.json()["detail"]), (503, "Análise de sentimento indisponível"))
+        with client_for(FakeCatalog(), sentiment=FakeSentimentAnalyzer(error="O texto não tem palavras que o modelo conheça")) as client:
+            invalid = client.get("/sentimento", params={"texto": "???"})
+        self.assertEqual(invalid.status_code, 422)
+
+    def test_entities_contract(self) -> None:
+        extractor = FakeEntityExtractor()
+        with client_for(FakeCatalog(), extractor=extractor) as client:
+            body = client.get("/entidades", params={"texto": "Marie Curie nasceu em Varsóvia."}).json()
+            too_long = client.get("/entidades", params={"texto": "x" * 2001})
+        self.assertEqual(body["entidades"], [{"texto": "Marie Curie", "categoria": "PER", "inicio": 0, "fim": 11}])
+        self.assertEqual(
+            body["relacoes"], [{"sujeito": "Marie Curie", "relacao": "nascer_em", "objeto": "Varsóvia", "sentenca": 1, "regra": "obl"}]
+        )
+        self.assertEqual(body["modelo"], "teste")
+        self.assertEqual(too_long.status_code, 422)
+
+    def test_entities_unavailable_or_invalid_text(self) -> None:
+        with client_for(FakeCatalog()) as client:
+            unavailable = client.get("/entidades", params={"texto": "um filme"})
+        self.assertEqual((unavailable.status_code, unavailable.json()["detail"]), (503, "Entidades e relações indisponíveis"))
+        with client_for(FakeCatalog(), extractor=FakeEntityExtractor(error="Digite um texto")) as client:
+            invalid = client.get("/entidades", params={"texto": "  "})
+        self.assertEqual(invalid.status_code, 422)
 
     def test_invalid_parameters_are_rejected(self) -> None:
         with client_for(FakeCatalog()) as client:

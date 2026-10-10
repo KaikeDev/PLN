@@ -1,0 +1,1477 @@
+[
+  {
+    "id": 13,
+    "title": "Forrest Gump: O Contador de Histórias",
+    "texto": "Quarenta anos da história dos Estados Unidos, vistos pelos olhos de Forrest Gump, um rapaz com QI abaixo da média e com boas intenções. Por obra do acaso, ele consegue participar de momentos cruciais, como a Guerra do Vietnã e o Caso Watergate, mas continua pensando no seu amor de infância, Jenny Curran.",
+    "dependencias_primeira_sentenca": [
+      {
+        "token": "Quarenta",
+        "lema": "quarenta",
+        "classe": "NUM",
+        "dependencia": "nummod",
+        "nucleo": "anos"
+      },
+      {
+        "token": "anos",
+        "lema": "ano",
+        "classe": "NOUN",
+        "dependencia": "ROOT",
+        "nucleo": "anos"
+      },
+      {
+        "token": "da",
+        "lema": "de o",
+        "classe": "ADP",
+        "dependencia": "case",
+        "nucleo": "história"
+      },
+      {
+        "token": "história",
+        "lema": "história",
+        "classe": "NOUN",
+        "dependencia": "nmod",
+        "nucleo": "anos"
+      },
+      {
+        "token": "dos",
+        "lema": "de o",
+        "classe": "ADP",
+        "dependencia": "case",
+        "nucleo": "Estados"
+      },
+      {
+        "token": "Estados",
+        "lema": "Estados",
+        "classe": "PROPN",
+        "dependencia": "nmod",
+        "nucleo": "história"
+      },
+      {
+        "token": "Unidos",
+        "lema": "Unidos",
+        "classe": "PROPN",
+        "dependencia": "flat:name",
+        "nucleo": "Estados"
+      },
+      {
+        "token": ",",
+        "lema": ",",
+        "classe": "PUNCT",
+        "dependencia": "punct",
+        "nucleo": "vistos"
+      },
+      {
+        "token": "vistos",
+        "lema": "visto",
+        "classe": "ADJ",
+        "dependencia": "appos",
+        "nucleo": "anos"
+      },
+      {
+        "token": "pelos",
+        "lema": "por o",
+        "classe": "ADP",
+        "dependencia": "case",
+        "nucleo": "olhos"
+      },
+      {
+        "token": "olhos",
+        "lema": "olho",
+        "classe": "NOUN",
+        "dependencia": "obl:agent",
+        "nucleo": "vistos"
+      },
+      {
+        "token": "de",
+        "lema": "de",
+        "classe": "ADP",
+        "dependencia": "case",
+        "nucleo": "Forrest"
+      },
+      {
+        "token": "Forrest",
+        "lema": "Forrest",
+        "classe": "PROPN",
+        "dependencia": "nmod",
+        "nucleo": "olhos"
+      },
+      {
+        "token": "Gump",
+        "lema": "Gump",
+        "classe": "PROPN",
+        "dependencia": "flat:name",
+        "nucleo": "Forrest"
+      },
+      {
+        "token": ",",
+        "lema": ",",
+        "classe": "PUNCT",
+        "dependencia": "punct",
+        "nucleo": "rapaz"
+      },
+      {
+        "token": "um",
+        "lema": "um",
+        "classe": "DET",
+        "dependencia": "det",
+        "nucleo": "rapaz"
+      },
+      {
+        "token": "rapaz",
+        "lema": "rapaz",
+        "classe": "NOUN",
+        "dependencia": "conj",
+        "nucleo": "anos"
+      },
+      {
+        "token": "com",
+        "lema": "com",
+        "classe": "ADP",
+        "dependencia": "case",
+        "nucleo": "QI"
+      },
+      {
+        "token": "QI",
+        "lema": "QI",
+        "classe": "PROPN",
+        "dependencia": "nmod",
+        "nucleo": "rapaz"
+      },
+      {
+        "token": "abaixo",
+        "lema": "abaixo",
+        "classe": "ADV",
+        "dependencia": "advmod",
+        "nucleo": "rapaz"
+      },
+      {
+        "token": "da",
+        "lema": "de o",
+        "classe": "ADP",
+        "dependencia": "case",
+        "nucleo": "média"
+      },
+      {
+        "token": "média",
+        "lema": "média",
+        "classe": "NOUN",
+        "dependencia": "obl",
+        "nucleo": "abaixo"
+      },
+      {
+        "token": "e",
+        "lema": "e",
+        "classe": "CCONJ",
+        "dependencia": "cc",
+        "nucleo": "intenções"
+      },
+      {
+        "token": "com",
+        "lema": "com",
+        "classe": "ADP",
+        "dependencia": "case",
+        "nucleo": "intenções"
+      },
+      {
+        "token": "boas",
+        "lema": "bom",
+        "classe": "ADJ",
+        "dependencia": "amod",
+        "nucleo": "intenções"
+      },
+      {
+        "token": "intenções",
+        "lema": "intenção",
+        "classe": "NOUN",
+        "dependencia": "conj",
+        "nucleo": "média"
+      },
+      {
+        "token": ".",
+        "lema": ".",
+        "classe": "PUNCT",
+        "dependencia": "punct",
+        "nucleo": "anos"
+      }
+    ],
+    "entidades": [
+      {
+        "entidade": "Estados Unidos",
+        "categoria": "LOC",
+        "inicio": 30,
+        "fim": 44
+      },
+      {
+        "entidade": "Forrest Gump",
+        "categoria": "MISC",
+        "inicio": 68,
+        "fim": 80
+      },
+      {
+        "entidade": "Guerra do Vietnã",
+        "categoria": "MISC",
+        "inicio": 208,
+        "fim": 224
+      },
+      {
+        "entidade": "Caso Watergate",
+        "categoria": "ORG",
+        "inicio": 229,
+        "fim": 243
+      },
+      {
+        "entidade": "Jenny Curran",
+        "categoria": "PER",
+        "inicio": 292,
+        "fim": 304
+      }
+    ],
+    "triplas": [
+      {
+        "subject": "ele",
+        "relation": "conseguir_por",
+        "object": "obra do acaso",
+        "sentence": 2,
+        "rule": "obl",
+        "subject_is_entity": false,
+        "object_is_entity": false
+      },
+      {
+        "subject": "ele",
+        "relation": "conseguir_como",
+        "object": "Guerra do Vietnã",
+        "sentence": 2,
+        "rule": "obl",
+        "subject_is_entity": false,
+        "object_is_entity": true
+      }
+    ]
+  },
+  {
+    "id": 278,
+    "title": "Um Sonho de Liberdade",
+    "texto": "Em 1946, Andy Dufresne, um banqueiro jovem e bem sucedido, tem a sua vida radicalmente modificada ao ser condenado por um crime que nunca cometeu, o homicídio de sua esposa e do amante dela. Ele é mandado para uma prisão que é o pesadelo de qualquer detento, a Penitenciária Estadual de Shawshank, no Maine. Lá ele irá cumprir a pena perpétua. Andy logo será apresentado a Warden Norton, o corrupto e cruel agente penitenciário, que usa a Bíblia como arma de controle e ao Capitão Byron Hadley que trata os internos como animais. Andy faz amizade com Ellis Boyd Redding, um prisioneiro que cumpre pena há 20 anos e controla o mercado negro da instituição.",
+    "dependencias_primeira_sentenca": [
+      {
+        "token": "Em",
+        "lema": "em",
+        "classe": "ADP",
+        "dependencia": "case",
+        "nucleo": "1946"
+      },
+      {
+        "token": "1946",
+        "lema": "1946",
+        "classe": "NUM",
+        "dependencia": "obl",
+        "nucleo": "tem"
+      },
+      {
+        "token": ",",
+        "lema": ",",
+        "classe": "PUNCT",
+        "dependencia": "punct",
+        "nucleo": "1946"
+      },
+      {
+        "token": "Andy",
+        "lema": "Andy",
+        "classe": "PROPN",
+        "dependencia": "nsubj",
+        "nucleo": "tem"
+      },
+      {
+        "token": "Dufresne",
+        "lema": "Dufresne",
+        "classe": "PROPN",
+        "dependencia": "flat:name",
+        "nucleo": "Andy"
+      },
+      {
+        "token": ",",
+        "lema": ",",
+        "classe": "PUNCT",
+        "dependencia": "punct",
+        "nucleo": "banqueiro"
+      },
+      {
+        "token": "um",
+        "lema": "um",
+        "classe": "DET",
+        "dependencia": "det",
+        "nucleo": "banqueiro"
+      },
+      {
+        "token": "banqueiro",
+        "lema": "banqueiro",
+        "classe": "NOUN",
+        "dependencia": "appos",
+        "nucleo": "Andy"
+      },
+      {
+        "token": "jovem",
+        "lema": "jovem",
+        "classe": "ADJ",
+        "dependencia": "amod",
+        "nucleo": "banqueiro"
+      },
+      {
+        "token": "e",
+        "lema": "e",
+        "classe": "CCONJ",
+        "dependencia": "cc",
+        "nucleo": "sucedido"
+      },
+      {
+        "token": "bem",
+        "lema": "bem",
+        "classe": "ADV",
+        "dependencia": "advmod",
+        "nucleo": "sucedido"
+      },
+      {
+        "token": "sucedido",
+        "lema": "sucedido",
+        "classe": "ADJ",
+        "dependencia": "conj",
+        "nucleo": "jovem"
+      },
+      {
+        "token": ",",
+        "lema": ",",
+        "classe": "PUNCT",
+        "dependencia": "punct",
+        "nucleo": "banqueiro"
+      },
+      {
+        "token": "tem",
+        "lema": "ter",
+        "classe": "VERB",
+        "dependencia": "ROOT",
+        "nucleo": "tem"
+      },
+      {
+        "token": "a",
+        "lema": "o",
+        "classe": "DET",
+        "dependencia": "det",
+        "nucleo": "vida"
+      },
+      {
+        "token": "sua",
+        "lema": "seu",
+        "classe": "DET",
+        "dependencia": "det",
+        "nucleo": "vida"
+      },
+      {
+        "token": "vida",
+        "lema": "vida",
+        "classe": "NOUN",
+        "dependencia": "obj",
+        "nucleo": "tem"
+      },
+      {
+        "token": "radicalmente",
+        "lema": "radicalmente",
+        "classe": "ADJ",
+        "dependencia": "advmod",
+        "nucleo": "modificada"
+      },
+      {
+        "token": "modificada",
+        "lema": "modificar",
+        "classe": "VERB",
+        "dependencia": "acl",
+        "nucleo": "vida"
+      },
+      {
+        "token": "ao",
+        "lema": "a o",
+        "classe": "SCONJ",
+        "dependencia": "mark",
+        "nucleo": "condenado"
+      },
+      {
+        "token": "ser",
+        "lema": "ser",
+        "classe": "AUX",
+        "dependencia": "aux:pass",
+        "nucleo": "condenado"
+      },
+      {
+        "token": "condenado",
+        "lema": "condenar",
+        "classe": "VERB",
+        "dependencia": "acl",
+        "nucleo": "vida"
+      },
+      {
+        "token": "por",
+        "lema": "por",
+        "classe": "ADP",
+        "dependencia": "case",
+        "nucleo": "crime"
+      },
+      {
+        "token": "um",
+        "lema": "um",
+        "classe": "DET",
+        "dependencia": "det",
+        "nucleo": "crime"
+      },
+      {
+        "token": "crime",
+        "lema": "crime",
+        "classe": "NOUN",
+        "dependencia": "obl:agent",
+        "nucleo": "condenado"
+      },
+      {
+        "token": "que",
+        "lema": "que",
+        "classe": "PRON",
+        "dependencia": "nsubj",
+        "nucleo": "cometeu"
+      },
+      {
+        "token": "nunca",
+        "lema": "nunca",
+        "classe": "ADV",
+        "dependencia": "advmod",
+        "nucleo": "cometeu"
+      },
+      {
+        "token": "cometeu",
+        "lema": "cometer",
+        "classe": "VERB",
+        "dependencia": "acl:relcl",
+        "nucleo": "crime"
+      },
+      {
+        "token": ",",
+        "lema": ",",
+        "classe": "PUNCT",
+        "dependencia": "punct",
+        "nucleo": "cometeu"
+      },
+      {
+        "token": "o",
+        "lema": "o",
+        "classe": "DET",
+        "dependencia": "det",
+        "nucleo": "homicídio"
+      },
+      {
+        "token": "homicídio",
+        "lema": "homicídio",
+        "classe": "NOUN",
+        "dependencia": "obj",
+        "nucleo": "cometeu"
+      },
+      {
+        "token": "de",
+        "lema": "de",
+        "classe": "ADP",
+        "dependencia": "case",
+        "nucleo": "esposa"
+      },
+      {
+        "token": "sua",
+        "lema": "seu",
+        "classe": "DET",
+        "dependencia": "det",
+        "nucleo": "esposa"
+      },
+      {
+        "token": "esposa",
+        "lema": "esposo",
+        "classe": "NOUN",
+        "dependencia": "nmod",
+        "nucleo": "homicídio"
+      },
+      {
+        "token": "e",
+        "lema": "e",
+        "classe": "CCONJ",
+        "dependencia": "cc",
+        "nucleo": "amante"
+      },
+      {
+        "token": "do",
+        "lema": "de o",
+        "classe": "ADP",
+        "dependencia": "case",
+        "nucleo": "amante"
+      },
+      {
+        "token": "amante",
+        "lema": "amante",
+        "classe": "NOUN",
+        "dependencia": "conj",
+        "nucleo": "esposa"
+      },
+      {
+        "token": "dela",
+        "lema": "de ela",
+        "classe": "PRON",
+        "dependencia": "nmod",
+        "nucleo": "amante"
+      },
+      {
+        "token": ".",
+        "lema": ".",
+        "classe": "PUNCT",
+        "dependencia": "punct",
+        "nucleo": "tem"
+      }
+    ],
+    "entidades": [
+      {
+        "entidade": "Andy Dufresne",
+        "categoria": "PER",
+        "inicio": 9,
+        "fim": 22
+      },
+      {
+        "entidade": "Penitenciária Estadual de Shawshank",
+        "categoria": "LOC",
+        "inicio": 261,
+        "fim": 296
+      },
+      {
+        "entidade": "Maine",
+        "categoria": "LOC",
+        "inicio": 301,
+        "fim": 306
+      },
+      {
+        "entidade": "Warden Norton",
+        "categoria": "PER",
+        "inicio": 373,
+        "fim": 386
+      },
+      {
+        "entidade": "Bíblia",
+        "categoria": "MISC",
+        "inicio": 439,
+        "fim": 445
+      },
+      {
+        "entidade": "Capitão Byron Hadley",
+        "categoria": "PER",
+        "inicio": 473,
+        "fim": 493
+      },
+      {
+        "entidade": "Andy",
+        "categoria": "PER",
+        "inicio": 530,
+        "fim": 534
+      },
+      {
+        "entidade": "Ellis Boyd Redding",
+        "categoria": "PER",
+        "inicio": 551,
+        "fim": 569
+      }
+    ],
+    "triplas": [
+      {
+        "subject": "Andy Dufresne",
+        "relation": "ter_em",
+        "object": "1946",
+        "sentence": 1,
+        "rule": "obl",
+        "subject_is_entity": true,
+        "object_is_entity": false
+      },
+      {
+        "subject": "Andy Dufresne",
+        "relation": "ter",
+        "object": "vida radicalmente modificada ao ser condenado por um crime que nunca cometeu o homicídio de sua esposa e do amante dela",
+        "sentence": 1,
+        "rule": "svo",
+        "subject_is_entity": true,
+        "object_is_entity": false
+      },
+      {
+        "subject": "que",
+        "relation": "cometer",
+        "object": "homicídio de sua esposa e do amante dela",
+        "sentence": 1,
+        "rule": "svo",
+        "subject_is_entity": false,
+        "object_is_entity": false
+      },
+      {
+        "subject": "Ele",
+        "relation": "mandar_para",
+        "object": "prisão que é o pesadelo de qualquer detento a Penitenciária Estadual de Shawshank no Maine",
+        "sentence": 2,
+        "rule": "obl",
+        "subject_is_entity": false,
+        "object_is_entity": false
+      },
+      {
+        "subject": "ele",
+        "relation": "cumprir",
+        "object": "pena perpétua",
+        "sentence": 3,
+        "rule": "svo",
+        "subject_is_entity": false,
+        "object_is_entity": false
+      },
+      {
+        "subject": "Andy",
+        "relation": "apresentar_a",
+        "object": "Warden Norton",
+        "sentence": 4,
+        "rule": "obl",
+        "subject_is_entity": false,
+        "object_is_entity": true
+      },
+      {
+        "subject": "que",
+        "relation": "usar",
+        "object": "Bíblia",
+        "sentence": 4,
+        "rule": "svo",
+        "subject_is_entity": false,
+        "object_is_entity": true
+      },
+      {
+        "subject": "que",
+        "relation": "tratar",
+        "object": "internos",
+        "sentence": 4,
+        "rule": "svo",
+        "subject_is_entity": false,
+        "object_is_entity": false
+      },
+      {
+        "subject": "Andy",
+        "relation": "fazer",
+        "object": "amizade com Ellis Boyd Redding",
+        "sentence": 5,
+        "rule": "svo",
+        "subject_is_entity": true,
+        "object_is_entity": false
+      },
+      {
+        "subject": "Andy",
+        "relation": "fazer",
+        "object": "prisioneiro que cumpre pena há 20 anos e controla o mercado negro da instituição",
+        "sentence": 5,
+        "rule": "svo",
+        "subject_is_entity": true,
+        "object_is_entity": false
+      },
+      {
+        "subject": "que",
+        "relation": "cumprir",
+        "object": "pena há 20 anos",
+        "sentence": 5,
+        "rule": "svo",
+        "subject_is_entity": false,
+        "object_is_entity": false
+      },
+      {
+        "subject": "que",
+        "relation": "controlar",
+        "object": "mercado negro da instituição",
+        "sentence": 5,
+        "rule": "coordenacao",
+        "subject_is_entity": false,
+        "object_is_entity": false
+      }
+    ]
+  },
+  {
+    "id": 603,
+    "title": "Matrix",
+    "texto": "O jovem programador Thomas Anderson é atormentado por estranhos pesadelos em que está sempre conectado por cabos a um imenso sistema de computadores do futuro. À medida que o sonho se repete, ele começa a desconfiar da realidade. Thomas conhece os misteriosos Morpheus e Trinity e descobre que é vítima de um sistema inteligente e artificial chamado Matrix, que manipula a mente das pessoas e cria a ilusão de um mundo real enquanto usa os cérebros e corpos dos indivíduos para produzir energia.",
+    "dependencias_primeira_sentenca": [
+      {
+        "token": "O",
+        "lema": "o",
+        "classe": "DET",
+        "dependencia": "det",
+        "nucleo": "programador"
+      },
+      {
+        "token": "jovem",
+        "lema": "jovem",
+        "classe": "ADJ",
+        "dependencia": "amod",
+        "nucleo": "programador"
+      },
+      {
+        "token": "programador",
+        "lema": "programador",
+        "classe": "NOUN",
+        "dependencia": "nsubj:pass",
+        "nucleo": "atormentado"
+      },
+      {
+        "token": "Thomas",
+        "lema": "Thomas",
+        "classe": "PROPN",
+        "dependencia": "appos",
+        "nucleo": "programador"
+      },
+      {
+        "token": "Anderson",
+        "lema": "Anderson",
+        "classe": "PROPN",
+        "dependencia": "flat:name",
+        "nucleo": "Thomas"
+      },
+      {
+        "token": "é",
+        "lema": "ser",
+        "classe": "AUX",
+        "dependencia": "aux:pass",
+        "nucleo": "atormentado"
+      },
+      {
+        "token": "atormentado",
+        "lema": "atormentar",
+        "classe": "VERB",
+        "dependencia": "ROOT",
+        "nucleo": "atormentado"
+      },
+      {
+        "token": "por",
+        "lema": "por",
+        "classe": "ADP",
+        "dependencia": "case",
+        "nucleo": "pesadelos"
+      },
+      {
+        "token": "estranhos",
+        "lema": "estranho",
+        "classe": "ADJ",
+        "dependencia": "amod",
+        "nucleo": "pesadelos"
+      },
+      {
+        "token": "pesadelos",
+        "lema": "pesadelo",
+        "classe": "NOUN",
+        "dependencia": "obl:agent",
+        "nucleo": "atormentado"
+      },
+      {
+        "token": "em",
+        "lema": "em",
+        "classe": "ADP",
+        "dependencia": "case",
+        "nucleo": "que"
+      },
+      {
+        "token": "que",
+        "lema": "que",
+        "classe": "PRON",
+        "dependencia": "obl",
+        "nucleo": "conectado"
+      },
+      {
+        "token": "está",
+        "lema": "estar",
+        "classe": "AUX",
+        "dependencia": "aux:pass",
+        "nucleo": "conectado"
+      },
+      {
+        "token": "sempre",
+        "lema": "sempre",
+        "classe": "ADV",
+        "dependencia": "advmod",
+        "nucleo": "conectado"
+      },
+      {
+        "token": "conectado",
+        "lema": "conectar",
+        "classe": "VERB",
+        "dependencia": "acl:relcl",
+        "nucleo": "pesadelos"
+      },
+      {
+        "token": "por",
+        "lema": "por",
+        "classe": "ADP",
+        "dependencia": "case",
+        "nucleo": "cabos"
+      },
+      {
+        "token": "cabos",
+        "lema": "cabo",
+        "classe": "NOUN",
+        "dependencia": "obl:agent",
+        "nucleo": "conectado"
+      },
+      {
+        "token": "a",
+        "lema": "a",
+        "classe": "ADP",
+        "dependencia": "case",
+        "nucleo": "sistema"
+      },
+      {
+        "token": "um",
+        "lema": "um",
+        "classe": "DET",
+        "dependencia": "det",
+        "nucleo": "sistema"
+      },
+      {
+        "token": "imenso",
+        "lema": "imenso",
+        "classe": "ADJ",
+        "dependencia": "amod",
+        "nucleo": "sistema"
+      },
+      {
+        "token": "sistema",
+        "lema": "sistema",
+        "classe": "NOUN",
+        "dependencia": "obl",
+        "nucleo": "conectado"
+      },
+      {
+        "token": "de",
+        "lema": "de",
+        "classe": "ADP",
+        "dependencia": "case",
+        "nucleo": "computadores"
+      },
+      {
+        "token": "computadores",
+        "lema": "computador",
+        "classe": "NOUN",
+        "dependencia": "nmod",
+        "nucleo": "sistema"
+      },
+      {
+        "token": "do",
+        "lema": "de o",
+        "classe": "ADP",
+        "dependencia": "case",
+        "nucleo": "futuro"
+      },
+      {
+        "token": "futuro",
+        "lema": "futuro",
+        "classe": "NOUN",
+        "dependencia": "nmod",
+        "nucleo": "computadores"
+      },
+      {
+        "token": ".",
+        "lema": ".",
+        "classe": "PUNCT",
+        "dependencia": "punct",
+        "nucleo": "atormentado"
+      }
+    ],
+    "entidades": [
+      {
+        "entidade": "Thomas Anderson",
+        "categoria": "PER",
+        "inicio": 20,
+        "fim": 35
+      },
+      {
+        "entidade": "Thomas",
+        "categoria": "PER",
+        "inicio": 230,
+        "fim": 236
+      },
+      {
+        "entidade": "Morpheus",
+        "categoria": "PER",
+        "inicio": 260,
+        "fim": 268
+      },
+      {
+        "entidade": "Trinity",
+        "categoria": "PER",
+        "inicio": 271,
+        "fim": 278
+      },
+      {
+        "entidade": "Matrix",
+        "categoria": "MISC",
+        "inicio": 350,
+        "fim": 356
+      }
+    ],
+    "triplas": [
+      {
+        "subject": "sonho",
+        "relation": "repetir",
+        "object": "À medida que",
+        "sentence": 2,
+        "rule": "obl",
+        "subject_is_entity": false,
+        "object_is_entity": false
+      },
+      {
+        "subject": "Thomas",
+        "relation": "conhecer",
+        "object": "misteriosos Morpheus e Trinity",
+        "sentence": 3,
+        "rule": "svo",
+        "subject_is_entity": true,
+        "object_is_entity": false
+      },
+      {
+        "subject": "que",
+        "relation": "manipular",
+        "object": "mente das pessoas",
+        "sentence": 3,
+        "rule": "svo",
+        "subject_is_entity": false,
+        "object_is_entity": false
+      }
+    ]
+  },
+  {
+    "id": 11324,
+    "title": "Ilha do Medo",
+    "texto": "No verão de 1954, os agentes judiciais Teddy Daniels (DiCaprio) e Chuck Aule (Ruffalo) foram designados para uma ilha remota do porto de Boston para investigar o desaparecimento de uma perigosa assassina (Mortimer) que estava reclusa no hospital psiquiátrico Ashecliffe, um centro penitenciário para criminosos perturbados dirigido pelo sinistro médico John Cawley. (Kingsley). Logo eles descobrem que o centro guarda muitos segredos e que a ilha esconde algo mais perigoso que os pacientes.",
+    "dependencias_primeira_sentenca": [
+      {
+        "token": "No",
+        "lema": "em o",
+        "classe": "ADP",
+        "dependencia": "case",
+        "nucleo": "verão"
+      },
+      {
+        "token": "verão",
+        "lema": "verão",
+        "classe": "NOUN",
+        "dependencia": "obl",
+        "nucleo": "designados"
+      },
+      {
+        "token": "de",
+        "lema": "de",
+        "classe": "ADP",
+        "dependencia": "case",
+        "nucleo": "1954"
+      },
+      {
+        "token": "1954",
+        "lema": "1954",
+        "classe": "NUM",
+        "dependencia": "nmod",
+        "nucleo": "verão"
+      },
+      {
+        "token": ",",
+        "lema": ",",
+        "classe": "PUNCT",
+        "dependencia": "punct",
+        "nucleo": "verão"
+      },
+      {
+        "token": "os",
+        "lema": "o",
+        "classe": "DET",
+        "dependencia": "det",
+        "nucleo": "agentes"
+      },
+      {
+        "token": "agentes",
+        "lema": "agente",
+        "classe": "NOUN",
+        "dependencia": "nsubj:pass",
+        "nucleo": "designados"
+      },
+      {
+        "token": "judiciais",
+        "lema": "judicial",
+        "classe": "ADJ",
+        "dependencia": "amod",
+        "nucleo": "agentes"
+      },
+      {
+        "token": "Teddy",
+        "lema": "Teddy",
+        "classe": "PROPN",
+        "dependencia": "appos",
+        "nucleo": "agentes"
+      },
+      {
+        "token": "Daniels",
+        "lema": "Daniels",
+        "classe": "PROPN",
+        "dependencia": "flat:name",
+        "nucleo": "Teddy"
+      },
+      {
+        "token": "(",
+        "lema": "(",
+        "classe": "PUNCT",
+        "dependencia": "punct",
+        "nucleo": "DiCaprio"
+      },
+      {
+        "token": "DiCaprio",
+        "lema": "DiCaprio",
+        "classe": "PROPN",
+        "dependencia": "parataxis",
+        "nucleo": "Teddy"
+      },
+      {
+        "token": ")",
+        "lema": ")",
+        "classe": "PUNCT",
+        "dependencia": "punct",
+        "nucleo": "DiCaprio"
+      },
+      {
+        "token": "e",
+        "lema": "e",
+        "classe": "CCONJ",
+        "dependencia": "cc",
+        "nucleo": "Chuck"
+      },
+      {
+        "token": "Chuck",
+        "lema": "Chuck",
+        "classe": "PROPN",
+        "dependencia": "conj",
+        "nucleo": "Teddy"
+      },
+      {
+        "token": "Aule",
+        "lema": "Aule",
+        "classe": "PROPN",
+        "dependencia": "flat:name",
+        "nucleo": "Chuck"
+      },
+      {
+        "token": "(",
+        "lema": "(",
+        "classe": "PUNCT",
+        "dependencia": "punct",
+        "nucleo": "Ruffalo"
+      },
+      {
+        "token": "Ruffalo",
+        "lema": "Ruffalo",
+        "classe": "PROPN",
+        "dependencia": "parataxis",
+        "nucleo": "Chuck"
+      },
+      {
+        "token": ")",
+        "lema": ")",
+        "classe": "PUNCT",
+        "dependencia": "punct",
+        "nucleo": "Ruffalo"
+      },
+      {
+        "token": "foram",
+        "lema": "ser",
+        "classe": "AUX",
+        "dependencia": "aux:pass",
+        "nucleo": "designados"
+      },
+      {
+        "token": "designados",
+        "lema": "designar",
+        "classe": "VERB",
+        "dependencia": "ROOT",
+        "nucleo": "designados"
+      },
+      {
+        "token": "para",
+        "lema": "para",
+        "classe": "ADP",
+        "dependencia": "case",
+        "nucleo": "ilha"
+      },
+      {
+        "token": "uma",
+        "lema": "um",
+        "classe": "DET",
+        "dependencia": "det",
+        "nucleo": "ilha"
+      },
+      {
+        "token": "ilha",
+        "lema": "ilha",
+        "classe": "NOUN",
+        "dependencia": "obl",
+        "nucleo": "designados"
+      },
+      {
+        "token": "remota",
+        "lema": "remoto",
+        "classe": "ADJ",
+        "dependencia": "amod",
+        "nucleo": "ilha"
+      },
+      {
+        "token": "do",
+        "lema": "de o",
+        "classe": "ADP",
+        "dependencia": "case",
+        "nucleo": "porto"
+      },
+      {
+        "token": "porto",
+        "lema": "porto",
+        "classe": "PROPN",
+        "dependencia": "nmod",
+        "nucleo": "ilha"
+      },
+      {
+        "token": "de",
+        "lema": "de",
+        "classe": "ADP",
+        "dependencia": "case",
+        "nucleo": "Boston"
+      },
+      {
+        "token": "Boston",
+        "lema": "Boston",
+        "classe": "PROPN",
+        "dependencia": "nmod",
+        "nucleo": "porto"
+      },
+      {
+        "token": "para",
+        "lema": "para",
+        "classe": "SCONJ",
+        "dependencia": "mark",
+        "nucleo": "investigar"
+      },
+      {
+        "token": "investigar",
+        "lema": "investigar",
+        "classe": "VERB",
+        "dependencia": "advcl",
+        "nucleo": "designados"
+      },
+      {
+        "token": "o",
+        "lema": "o",
+        "classe": "DET",
+        "dependencia": "det",
+        "nucleo": "desaparecimento"
+      },
+      {
+        "token": "desaparecimento",
+        "lema": "desaparecimento",
+        "classe": "NOUN",
+        "dependencia": "obj",
+        "nucleo": "investigar"
+      },
+      {
+        "token": "de",
+        "lema": "de",
+        "classe": "ADP",
+        "dependencia": "case",
+        "nucleo": "assassina"
+      },
+      {
+        "token": "uma",
+        "lema": "um",
+        "classe": "DET",
+        "dependencia": "det",
+        "nucleo": "assassina"
+      },
+      {
+        "token": "perigosa",
+        "lema": "perigoso",
+        "classe": "ADJ",
+        "dependencia": "amod",
+        "nucleo": "assassina"
+      },
+      {
+        "token": "assassina",
+        "lema": "assassina",
+        "classe": "NOUN",
+        "dependencia": "nmod",
+        "nucleo": "desaparecimento"
+      },
+      {
+        "token": "(",
+        "lema": "(",
+        "classe": "PUNCT",
+        "dependencia": "punct",
+        "nucleo": "Mortimer"
+      },
+      {
+        "token": "Mortimer",
+        "lema": "Mortimer",
+        "classe": "PROPN",
+        "dependencia": "appos",
+        "nucleo": "assassina"
+      },
+      {
+        "token": ")",
+        "lema": ")",
+        "classe": "PUNCT",
+        "dependencia": "punct",
+        "nucleo": "Mortimer"
+      },
+      {
+        "token": "que",
+        "lema": "que",
+        "classe": "PRON",
+        "dependencia": "nsubj",
+        "nucleo": "reclusa"
+      },
+      {
+        "token": "estava",
+        "lema": "estar",
+        "classe": "AUX",
+        "dependencia": "cop",
+        "nucleo": "reclusa"
+      },
+      {
+        "token": "reclusa",
+        "lema": "recluso",
+        "classe": "ADJ",
+        "dependencia": "acl:relcl",
+        "nucleo": "assassina"
+      },
+      {
+        "token": "no",
+        "lema": "em o",
+        "classe": "ADP",
+        "dependencia": "case",
+        "nucleo": "hospital"
+      },
+      {
+        "token": "hospital",
+        "lema": "hospital",
+        "classe": "NOUN",
+        "dependencia": "obl",
+        "nucleo": "reclusa"
+      },
+      {
+        "token": "psiquiátrico",
+        "lema": "psiquiátrico",
+        "classe": "ADJ",
+        "dependencia": "amod",
+        "nucleo": "hospital"
+      },
+      {
+        "token": "Ashecliffe",
+        "lema": "Ashecliffe",
+        "classe": "PROPN",
+        "dependencia": "appos",
+        "nucleo": "hospital"
+      },
+      {
+        "token": ",",
+        "lema": ",",
+        "classe": "PUNCT",
+        "dependencia": "punct",
+        "nucleo": "centro"
+      },
+      {
+        "token": "um",
+        "lema": "um",
+        "classe": "DET",
+        "dependencia": "det",
+        "nucleo": "centro"
+      },
+      {
+        "token": "centro",
+        "lema": "centro",
+        "classe": "NOUN",
+        "dependencia": "appos",
+        "nucleo": "assassina"
+      },
+      {
+        "token": "penitenciário",
+        "lema": "penitenciário",
+        "classe": "ADJ",
+        "dependencia": "amod",
+        "nucleo": "centro"
+      },
+      {
+        "token": "para",
+        "lema": "para",
+        "classe": "ADP",
+        "dependencia": "case",
+        "nucleo": "criminosos"
+      },
+      {
+        "token": "criminosos",
+        "lema": "criminoso",
+        "classe": "NOUN",
+        "dependencia": "nmod",
+        "nucleo": "centro"
+      },
+      {
+        "token": "perturbados",
+        "lema": "perturbar",
+        "classe": "VERB",
+        "dependencia": "acl",
+        "nucleo": "criminosos"
+      },
+      {
+        "token": "dirigido",
+        "lema": "dirigir",
+        "classe": "VERB",
+        "dependencia": "acl",
+        "nucleo": "criminosos"
+      },
+      {
+        "token": "pelo",
+        "lema": "por o",
+        "classe": "ADP",
+        "dependencia": "case",
+        "nucleo": "sinistro"
+      },
+      {
+        "token": "sinistro",
+        "lema": "sinistro",
+        "classe": "NOUN",
+        "dependencia": "obl:agent",
+        "nucleo": "dirigido"
+      },
+      {
+        "token": "médico",
+        "lema": "médico",
+        "classe": "NOUN",
+        "dependencia": "amod",
+        "nucleo": "sinistro"
+      },
+      {
+        "token": "John",
+        "lema": "John",
+        "classe": "PROPN",
+        "dependencia": "appos",
+        "nucleo": "médico"
+      },
+      {
+        "token": "Cawley",
+        "lema": "Cawley",
+        "classe": "PROPN",
+        "dependencia": "flat:name",
+        "nucleo": "John"
+      },
+      {
+        "token": ".",
+        "lema": ".",
+        "classe": "PUNCT",
+        "dependencia": "punct",
+        "nucleo": "designados"
+      }
+    ],
+    "entidades": [
+      {
+        "entidade": "Teddy Daniels",
+        "categoria": "PER",
+        "inicio": 39,
+        "fim": 52
+      },
+      {
+        "entidade": "DiCaprio",
+        "categoria": "PER",
+        "inicio": 54,
+        "fim": 62
+      },
+      {
+        "entidade": "Chuck Aule",
+        "categoria": "PER",
+        "inicio": 66,
+        "fim": 76
+      },
+      {
+        "entidade": "Ruffalo",
+        "categoria": "PER",
+        "inicio": 78,
+        "fim": 85
+      },
+      {
+        "entidade": "Boston",
+        "categoria": "LOC",
+        "inicio": 137,
+        "fim": 143
+      },
+      {
+        "entidade": "Mortimer",
+        "categoria": "PER",
+        "inicio": 205,
+        "fim": 213
+      },
+      {
+        "entidade": "Ashecliffe",
+        "categoria": "LOC",
+        "inicio": 259,
+        "fim": 269
+      },
+      {
+        "entidade": "John Cawley",
+        "categoria": "PER",
+        "inicio": 353,
+        "fim": 364
+      },
+      {
+        "entidade": "Kingsley",
+        "categoria": "PER",
+        "inicio": 367,
+        "fim": 375
+      }
+    ],
+    "triplas": [
+      {
+        "subject": "agentes judiciais Teddy Daniels DiCaprio e Chuck Aule Ruffalo",
+        "relation": "designar_em",
+        "object": "verão de 1954",
+        "sentence": 1,
+        "rule": "obl",
+        "subject_is_entity": false,
+        "object_is_entity": false
+      },
+      {
+        "subject": "agentes judiciais Teddy Daniels DiCaprio e Chuck Aule Ruffalo",
+        "relation": "designar_para",
+        "object": "ilha remota do porto de Boston",
+        "sentence": 1,
+        "rule": "obl",
+        "subject_is_entity": false,
+        "object_is_entity": false
+      },
+      {
+        "subject": "centro",
+        "relation": "guardar",
+        "object": "segredos",
+        "sentence": 3,
+        "rule": "svo",
+        "subject_is_entity": false,
+        "object_is_entity": false
+      },
+      {
+        "subject": "ilha",
+        "relation": "esconder",
+        "object": "algo",
+        "sentence": 3,
+        "rule": "svo",
+        "subject_is_entity": false,
+        "object_is_entity": false
+      },
+      {
+        "subject": "ilha",
+        "relation": "esconder",
+        "object": "que os pacientes",
+        "sentence": 3,
+        "rule": "svo",
+        "subject_is_entity": false,
+        "object_is_entity": false
+      }
+    ]
+  }
+]

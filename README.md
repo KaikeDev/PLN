@@ -4,7 +4,6 @@ Sinopses de filmes do TMDB coletadas, preparadas, transformadas em oito represen
 
 Equipe: Kaike Ventura Tuerpe, Luana Nitsche, Pedro Henrique Ortunio e Thiago Bodnar — Ciência da Computação, FURB.
 
-> **Para a apresentação, comece por [APRESENTACAO.md](APRESENTACAO.md):** o que foi feito, os resultados e o roteiro da demonstração.
 
 ## As tarefas
 
@@ -16,6 +15,8 @@ Equipe: Kaike Ventura Tuerpe, Luana Nitsche, Pedro Henrique Ortunio e Thiago Bod
 | 4 | Recomendação | Filmes parecidos com um filme ou com um perfil; no site, na ficha de cada filme, no mesmo catálogo | Precisão @5 de 63,6% (BERTimbau) contra 37,9% ao acaso | [4-recomendacao.md](docs/4-recomendacao.md) | [`recommendation/`](backend/src/app/recommendation/) |
 | 5 | Agrupamento e visualização | K-Means sem rótulos e projeção 2D | Grupos lembram pouco os gêneros (ARI de até 0,144) | [5-agrupamento.md](docs/5-agrupamento.md) | [`clustering/`](backend/src/app/clustering/) |
 | 6 | Classificação | Regressão logística nas 8 representações, Jev sem treino e classificação na tela | F1 de 71,0% (skip-gram); Jev com 85,0% de acurácia | [6-classificacao.md](docs/6-classificacao.md) | [`classification/`](backend/src/app/classification/) |
+| 7 | Análise de sentimentos (Aula 9) | 1.859 críticas do TMDB rotuladas pela nota do autor; polaridade e nota com as 8 representações; análise de críticas na tela | F1 macro de 86,7% (BERTimbau) e 85,6% (TF-IDF); nota com erro médio de 1,33 ponto | [7-sentimentos.md](docs/7-sentimentos.md) | [`sentiment/`](backend/src/app/sentiment/) |
+| 8 | Entidades e relações (Aula 9) | spaCy `pt_core_news_sm` e as regras de dependência do notebook nas 428 sinopses; entidades e relações na ficha do filme | 73,7% das pessoas creditadas reconhecidas como pessoa; 1.435 triplas | [8-entidades-e-relacoes.md](docs/8-entidades-e-relacoes.md) | [`entities/`](backend/src/app/entities/) |
 
 ## Tarefas × representações
 
@@ -41,56 +42,45 @@ Nenhuma representação vence todas as tarefas: o embedding de sentença é o me
 README.md                 ← esta página
 APRESENTACAO.md           ← o que foi feito, para apresentar ao professor
 docs/
-  1-coleta-e-preparacao.md … 6-classificacao.md   ← uma explicação por tarefa
+  1-coleta-e-preparacao.md … 8-entidades-e-relacoes.md   ← uma explicação por tarefa
   tecnico/                ← como executar, arquitetura, validação, decisões, dicionário de dados
   adr/                    ← registro das decisões (ADRs) e resumo
   entregas/               ← documento Word da Etapa 1
-config/                   ← parâmetros de cada etapa: coleta/, representacoes/, busca/, classificacao/
+config/                   ← parâmetros de cada etapa: coleta/, representacoes/, busca/, classificacao/, sentimento/, entidades/
 data/                     ← resultados entregues, com manifesto e hashes
-  coleta/  preparacao/  representacoes/  classificacao/  jev/
+  coleta/  preparacao/  representacoes/  classificacao/  jev/  sentimento/  entidades/
 backend/src/app/          ← código, uma pasta por tarefa
-  corpus/  representations/  search/  recommendation/  clustering/  classification/
+  corpus/  representations/  search/  recommendation/  clustering/  classification/  sentiment/  entities/
   api/  tmdb/  shared/  main.py  settings.py   ← site e utilitários
 backend/tests/            ← testes automatizados (sem rede)
-frontend/                 ← site: busca de filmes, filmes parecidos e classificação de sinopses
+frontend/                 ← site: busca de filmes, filmes parecidos, classificação de sinopses, análise de críticas e entidades e relações
 ```
 
 ## Como executar
 
-Em `backend`, com o [uv](https://docs.astral.sh/uv/) instalado. A credencial do TMDB vai em `backend/.env` (copie `backend/.env.example` e preencha `TMDB_BEARER_TOKEN`).
+📘 **Passo a passo completo, do zero até o site aberto: [docs/tecnico/rodar-o-site.md](docs/tecnico/rodar-o-site.md)**, com o que instalar, onde rodar cada comando, o que testar em cada tela e como resolver os problemas comuns.
 
-**1. Ambiente e testes**
+Resumo. Todos os comandos rodam **na pasta `backend`**, com o [uv](https://docs.astral.sh/uv/) instalado:
 
-```bash
-uv sync --frozen --extra semantico --extra jev
-uv run --frozen python -m unittest discover -s tests -v
-```
+| Quando | Passo | Comando |
+|---|---|---|
+| 1ª vez | 1. Token do TMDB | Copie `backend/.env.example` para `backend/.env` e preencha `TMDB_BEARER_TOKEN` |
+| 1ª vez | 2. Instalar | `uv sync --frozen --extra semantico --extra jev --extra entidades` |
+| 1ª vez | 3. Catálogo do site (~8 min) | os 3 comandos de [rodar-o-site.md](docs/tecnico/rodar-o-site.md#passo-3--gerar-o-catálogo-do-site-cerca-de-8-minutos-uma-vez-só) |
+| 1ª vez | 4. Críticas (segundos) | `uv run --frozen python -m app.sentiment process --input ../data/coleta/criticas_2026-10-10 --output ../data/preparacao/criticas_2026-10-10 --stopwords ../config/coleta/stopwords_pt.txt` |
+| **Sempre** | 5a. API, no terminal 1 | `uv run --frozen --extra semantico --extra jev --extra entidades uvicorn app.main:app --host 127.0.0.1` |
+| **Sempre** | 5b. Telas, no terminal 2 | `uv run --frozen python -m http.server 5500 --directory ../frontend` |
 
-**2. Gerar o catálogo do site — obrigatório depois de clonar**
+Depois, abra <http://127.0.0.1:5500>.
 
 > [!IMPORTANT]
-> O catálogo de cerca de 5.500 filmes que a **busca por tema** e os **filmes parecidos** usam **não vem no repositório** (são cerca de 68 MB de dados derivados). Sem ele, o site funciona, mas procura só nos 428 filmes da amostra avaliada: a API mostra um aviso no terminal, e o site mostra uma faixa amarela no topo. Para gerar o catálogo (cerca de 5 minutos de coleta e 3 de vetores):
+> O **catálogo do site** (passo 3) e as **críticas preparadas** (passo 4) não vêm no repositório. Sem o catálogo, a busca por tema e os filmes parecidos usam só os 428 filmes da amostra, e aparece uma faixa amarela no topo. Sem as críticas, a aba "Analisar crítica" fica indisponível. Todas as **avaliações** do projeto usam os dados que vêm no repositório ([por quê](docs/adr/0024-catalogo-do-site.md)).
 
-```bash
-uv run --frozen python -m app.corpus collect --config ../config/coleta/coleta_site.json --output ../data/coleta/site_2026-10-05
-uv run --frozen python -m app.corpus process --input ../data/coleta/site_2026-10-05 --output ../data/preparacao/site_2026-10-05 --stopwords ../config/coleta/stopwords_pt.txt
-uv run --frozen --extra semantico python -m app.representations build --input ../data/preparacao/site_2026-10-05 --output ../data/representacoes/site_2026-10-05 --config ../config/representacoes/vetorizacao_site.json
-```
-
-Uma coleta nova pode trazer filmes um pouco diferentes, porque o ranking do TMDB muda. Todas as **avaliações** do projeto continuam na amostra de 428, que vem no repositório ([por quê](docs/adr/0024-catalogo-do-site.md)).
-
-**3. Site**
-
-```bash
-uv run --frozen --extra semantico --extra jev uvicorn app.main:app --host 127.0.0.1
-```
-
-Em outro terminal, na raiz: `cd frontend && python -m http.server 5500` e abra <http://127.0.0.1:5500>. O indicador no canto superior direito mostra em quantos filmes a busca está procurando.
-
-Todos os comandos (refazer cada etapa, conferir os dados, credenciais e problemas conhecidos) estão em [docs/tecnico/como-executar.md](docs/tecnico/como-executar.md).
+Refazer cada etapa e conferir os dados entregues: [docs/tecnico/como-executar.md](docs/tecnico/como-executar.md).
 
 ## Documentação técnica
 
+- [Como rodar o site](docs/tecnico/rodar-o-site.md): passo a passo do zero
 - [Arquitetura do código](docs/tecnico/arquitetura.md)
 - [Validação técnica](docs/tecnico/validacao.md): o que foi testado e verificado em cada etapa
 - [Decisões e limitações](docs/tecnico/decisoes.md), [resumo das ADRs](docs/adr/resumo.md) e [ADRs completas](docs/adr/README.md)
