@@ -40,6 +40,8 @@ jobs:
         run: |
           uv run --frozen python -m app.sentiment verify --input ../data/coleta/criticas_2026-10-10
           uv run --frozen python -m app.sentiment verify --input ../data/sentimento/criticas_2026-10-10
+      - name: Integridade da varredura de clusters
+        run: uv run --frozen python -m app.clustering verify --input ../data/agrupamento/tmdb_2026-09-12
       - name: Integridade de entidades e relações
         run: |
           uv run --frozen python -m app.entities verify --input ../data/coleta/creditos_2026-10-10

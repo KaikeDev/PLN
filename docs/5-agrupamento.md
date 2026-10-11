@@ -38,6 +38,21 @@ Exemplos de gráfico: [BERTimbau por gênero](../data/representacoes/tmdb_2026-0
 - **O K-Means agrupa por outros temas.** No BERTimbau, um grupo junta terror e ficção científica com termos como "grupo", "vírus" e "missão"; outro reúne drama com "guerra", "polícia" e "jovem".
 - **Agrupar × classificar:** nas mesmas sinopses e com a mesma representação, a classificação coincide muito mais com os gêneros. No skip-gram, o ARI é de 0,381 contra 0,055 do K-Means; no BERTimbau, de 0,369 contra 0,132 ([6-classificacao.md](6-classificacao.md)). É a diferença entre aprender com rótulos e sem eles.
 
+## Quantos clusters
+
+Uma varredura de k = 2 a 10 ([ADR 0028](adr/0028-varredura-do-numero-de-clusters.md); [relatório](../data/agrupamento/tmdb_2026-09-12/report.md)) mede, para cada representação:
+- a compactação dos grupos (distância ao centroide, inércia);
+- a separação entre eles (distância entre centroides);
+- os índices que combinam as duas: silhueta, Davies-Bouldin e Calinski-Harabasz.
+
+```bash
+uv run --frozen --extra semantico python -m app.clustering sweep --input ../data/preparacao/tmdb_2026-09-12 --vectors-config ../config/representacoes/vetorizacao_semantica.json --vectors ../data/representacoes/tmdb_2026-09-12 --output ../data/agrupamento/<nova_pasta> --config ../config/agrupamento/varredura_k.json
+```
+
+- **Não há grupos naturais bem separados:** a silhueta fica abaixo de 0,10 em todas as representações e é praticamente zero nas lexicais.
+- **As métricas internas se contradizem:** a silhueta e o Calinski-Harabasz preferem k = 2, o Davies-Bouldin melhora sempre com mais grupos, e a inércia cai sem cotovelo.
+- **Contra os gêneros, k = 4 a 5 é o melhor:** o ARI do BERTimbau tem o pico de 0,144 nos dois. Com k = 5, o grupo de ameaça coletiva se divide em fim do mundo (*O Exterminador do Futuro 2*, *2012*) e terror de grupo (*A Morte do Demônio*, *Terror em Silent Hill*).
+
 ## Limitações
 
 Os gêneros são uma régua aproximada: o K-Means pode encontrar agrupamentos legítimos (tom, época, tema) que não coincidem com eles. Filmes com vários gêneros ficam fora das métricas.

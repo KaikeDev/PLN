@@ -31,6 +31,7 @@ Cada ADR registra uma decisão com contexto, alternativas e consequências, no f
 | [0025](0025-preparacao-da-consulta.md) | Preparação da consulta da busca por tema | Aceita |
 | [0026](0026-analise-de-sentimentos.md) | Análise de sentimentos de críticas do TMDB (Aula 9) | Aceita |
 | [0027](0027-entidades-e-relacoes.md) | Entidades nomeadas e relações nas sinopses com o spaCy (Aula 9) | Aceita |
+| [0028](0028-varredura-do-numero-de-clusters.md) | Varredura do número de clusters com métricas intra e intercluster | Aceita |
 
 O resumo de todas as decisões e das justificativas está em [`resumo.md`](resumo.md).
 

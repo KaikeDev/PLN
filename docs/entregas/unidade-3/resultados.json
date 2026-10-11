@@ -1,0 +1,4283 @@
+{
+  "busca": {
+    "consultas": [
+      {
+        "id": "matrix_literal",
+        "texto": "programador conectado a um sistema de computadores",
+        "relevantes": [
+          603
+        ]
+      },
+      {
+        "id": "matrix_simulacao",
+        "texto": "filme sobre simulação da realidade",
+        "relevantes": [
+          603
+        ]
+      },
+      {
+        "id": "acao_maquinas",
+        "texto": "quero um filme de ação sobre máquinas",
+        "relevantes": [
+          218,
+          280,
+          603,
+          604,
+          2048,
+          5548,
+          39254,
+          68726,
+          99861,
+          127585,
+          177572
+        ]
+      },
+      {
+        "id": "robo_amizade",
+        "texto": "robô que cria laços de amizade com uma criança ou com animais",
+        "relevantes": [
+          280,
+          10386,
+          10681,
+          177572,
+          1184918
+        ]
+      },
+      {
+        "id": "ia_rebelde",
+        "texto": "inteligência artificial que se volta contra a humanidade",
+        "relevantes": [
+          78,
+          218,
+          603,
+          2048,
+          99861,
+          1064028,
+          1084199
+        ]
+      },
+      {
+        "id": "viagem_no_tempo",
+        "texto": "viagem no tempo para mudar o passado",
+        "relevantes": [
+          63,
+          105,
+          165,
+          218,
+          280,
+          14139,
+          45612,
+          127585,
+          137113
+        ]
+      },
+      {
+        "id": "invasao_alienigena",
+        "texto": "alienígenas invadem e atacam a Terra",
+        "relevantes": [
+          74,
+          563,
+          602,
+          9276,
+          137113
+        ]
+      },
+      {
+        "id": "casa_assombrada",
+        "texto": "família aterrorizada por espíritos em uma casa assombrada",
+        "relevantes": [
+          1933,
+          4011,
+          49018,
+          91586,
+          138843,
+          259693,
+          406563
+        ]
+      },
+      {
+        "id": "possessao",
+        "texto": "possessão demoníaca e exorcismo",
+        "relevantes": [
+          561,
+          764,
+          765,
+          19994,
+          91586,
+          109428,
+          423108
+        ]
+      },
+      {
+        "id": "zumbis",
+        "texto": "sobreviventes em um mundo tomado por zumbis",
+        "relevantes": [
+          170,
+          747,
+          924,
+          1562,
+          6479,
+          19908,
+          72190,
+          396535,
+          1100988
+        ]
+      },
+      {
+        "id": "assassino_mascarado",
+        "texto": "assassino mascarado persegue um grupo de adolescentes",
+        "relevantes": [
+          4232,
+          4233,
+          4247,
+          4488,
+          13207,
+          934433
+        ]
+      },
+      {
+        "id": "vampiros",
+        "texto": "vampiros",
+        "relevantes": [
+          628,
+          1246049,
+          1547,
+          6114,
+          7131,
+          36586,
+          36647,
+          36648,
+          76492
+        ]
+      },
+      {
+        "id": "astronautas_perdidos",
+        "texto": "astronautas perdidos no espaço lutando para sobreviver",
+        "relevantes": [
+          679,
+          8413,
+          70981,
+          157336,
+          286217,
+          945961
+        ]
+      },
+      {
+        "id": "segunda_guerra",
+        "texto": "soldados lutando na Segunda Guerra Mundial",
+        "relevantes": [
+          857,
+          16869,
+          25237,
+          228150,
+          324786,
+          374720
+        ]
+      },
+      {
+        "id": "comedia_romantica",
+        "texto": "comédia romântica leve sobre um casal que se apaixona",
+        "relevantes": [
+          114,
+          4951,
+          18240,
+          19404,
+          313369,
+          746036
+        ]
+      },
+      {
+        "id": "prisao_injusta",
+        "texto": "homem preso injustamente sobrevivendo na prisão",
+        "relevantes": [
+          278,
+          497,
+          53653
+        ]
+      },
+      {
+        "id": "mafia",
+        "texto": "gângsteres e a máfia",
+        "relevantes": [
+          111,
+          242,
+          311,
+          680,
+          769,
+          1422,
+          10775,
+          522627,
+          718930
+        ]
+      },
+      {
+        "id": "mundo_falso",
+        "texto": "personagem descobre que vive em um mundo falso",
+        "relevantes": [
+          603,
+          37165,
+          550988
+        ]
+      },
+      {
+        "id": "enganar_a_morte",
+        "texto": "jovens escapam de um acidente, mas a morte volta para buscá-los",
+        "relevantes": [
+          9286,
+          9358,
+          9532,
+          55779,
+          574475
+        ]
+      },
+      {
+        "id": "dinossauros",
+        "texto": "dinossauros recriados a partir de DNA",
+        "relevantes": [
+          329,
+          1234821
+        ]
+      }
+    ],
+    "top5": {
+      "bow_sem_pontuacao": {
+        "matrix_literal": [
+          {
+            "id": 603,
+            "title": "Matrix"
+          },
+          {
+            "id": 256274,
+            "title": "Assim na Terra Como no Inferno"
+          },
+          {
+            "id": 45612,
+            "title": "Contra o Tempo"
+          },
+          {
+            "id": 617126,
+            "title": "Quarteto Fantástico: Primeiros Passos"
+          },
+          {
+            "id": 563,
+            "title": "Tropas Estelares"
+          }
+        ],
+        "matrix_simulacao": [
+          {
+            "id": 1228246,
+            "title": "Five Nights at Freddy's 2"
+          },
+          {
+            "id": 493922,
+            "title": "Hereditário"
+          },
+          {
+            "id": 460458,
+            "title": "Resident Evil: Bem-Vindo a Raccoon City"
+          },
+          {
+            "id": 99861,
+            "title": "Vingadores: Era de Ultron"
+          },
+          {
+            "id": 746036,
+            "title": "O Dublê"
+          }
+        ],
+        "acao_maquinas": [
+          {
+            "id": 2667,
+            "title": "A Bruxa de Blair"
+          },
+          {
+            "id": 256274,
+            "title": "Assim na Terra Como no Inferno"
+          },
+          {
+            "id": 81774,
+            "title": "A Iniciação"
+          },
+          {
+            "id": 927,
+            "title": "Gremlins"
+          },
+          {
+            "id": 1569947,
+            "title": "O Padre: Massacre no Dia de Ação de Graças"
+          }
+        ],
+        "robo_amizade": [
+          {
+            "id": 149,
+            "title": "Akira"
+          },
+          {
+            "id": 106646,
+            "title": "O Lobo de Wall Street"
+          },
+          {
+            "id": 7974,
+            "title": "A Garota da Fábrica de Caixas de Fósforos"
+          },
+          {
+            "id": 82507,
+            "title": "A Entidade"
+          },
+          {
+            "id": 26827,
+            "title": "Quem é Essa Garota?"
+          }
+        ],
+        "ia_rebelde": [
+          {
+            "id": 565,
+            "title": "O Chamado"
+          },
+          {
+            "id": 72190,
+            "title": "Guerra Mundial Z"
+          },
+          {
+            "id": 1422,
+            "title": "Os Infiltrados"
+          },
+          {
+            "id": 18,
+            "title": "O Quinto Elemento"
+          },
+          {
+            "id": 602,
+            "title": "Independence Day"
+          }
+        ],
+        "viagem_no_tempo": [
+          {
+            "id": 383498,
+            "title": "Deadpool 2"
+          },
+          {
+            "id": 63,
+            "title": "Os 12 Macacos"
+          },
+          {
+            "id": 614479,
+            "title": "Sobrenatural: A Porta Vermelha"
+          },
+          {
+            "id": 280,
+            "title": "O Exterminador do Futuro 2: O Julgamento Final"
+          },
+          {
+            "id": 177572,
+            "title": "Operação Big Hero"
+          }
+        ],
+        "invasao_alienigena": [
+          {
+            "id": 329865,
+            "title": "A Chegada"
+          },
+          {
+            "id": 8656,
+            "title": "Impacto Profundo"
+          },
+          {
+            "id": 337167,
+            "title": "Cinquenta Tons de Liberdade"
+          },
+          {
+            "id": 83533,
+            "title": "Avatar: Fogo e Cinzas"
+          },
+          {
+            "id": 218,
+            "title": "O Exterminador do Futuro"
+          }
+        ],
+        "casa_assombrada": [
+          {
+            "id": 1242898,
+            "title": "Predador: Terras Selvagens"
+          },
+          {
+            "id": 447332,
+            "title": "Um Lugar Silencioso"
+          },
+          {
+            "id": 49519,
+            "title": "Os Croods"
+          },
+          {
+            "id": 138843,
+            "title": "Invocação do Mal"
+          },
+          {
+            "id": 281957,
+            "title": "O Regresso"
+          }
+        ],
+        "possessao": [
+          {
+            "id": 1054867,
+            "title": "Uma Batalha Após a Outra"
+          },
+          {
+            "id": 337167,
+            "title": "Cinquenta Tons de Liberdade"
+          },
+          {
+            "id": 9820,
+            "title": "Operação Cupido"
+          },
+          {
+            "id": 83533,
+            "title": "Avatar: Fogo e Cinzas"
+          },
+          {
+            "id": 755,
+            "title": "Um Drink no Inferno"
+          }
+        ],
+        "zumbis": [
+          {
+            "id": 924,
+            "title": "Madrugada dos Mortos"
+          },
+          {
+            "id": 1242898,
+            "title": "Predador: Terras Selvagens"
+          },
+          {
+            "id": 49519,
+            "title": "Os Croods"
+          },
+          {
+            "id": 263115,
+            "title": "Logan"
+          },
+          {
+            "id": 176,
+            "title": "Jogos Mortais"
+          }
+        ],
+        "assassino_mascarado": [
+          {
+            "id": 256274,
+            "title": "Assim na Terra Como no Inferno"
+          },
+          {
+            "id": 55779,
+            "title": "Premonição 5"
+          },
+          {
+            "id": 604079,
+            "title": "A Longa Marcha: Caminhe ou Morra"
+          },
+          {
+            "id": 299710,
+            "title": "Aos 14"
+          },
+          {
+            "id": 13207,
+            "title": "Sexta-Feira 13"
+          }
+        ],
+        "vampiros": [
+          {
+            "id": 36586,
+            "title": "Blade II: O Caçador de Vampiros"
+          },
+          {
+            "id": 1547,
+            "title": "Os Garotos Perdidos"
+          }
+        ],
+        "astronautas_perdidos": [
+          {
+            "id": 614479,
+            "title": "Sobrenatural: A Porta Vermelha"
+          },
+          {
+            "id": 8467,
+            "title": "Debi & Lóide: Dois Idiotas em Apuros"
+          },
+          {
+            "id": 346698,
+            "title": "Barbie"
+          },
+          {
+            "id": 950396,
+            "title": "Entre Montanhas"
+          },
+          {
+            "id": 11324,
+            "title": "Ilha do Medo"
+          }
+        ],
+        "segunda_guerra": [
+          {
+            "id": 374720,
+            "title": "Dunkirk"
+          },
+          {
+            "id": 16869,
+            "title": "Bastardos Inglórios"
+          },
+          {
+            "id": 21835,
+            "title": "Uma Odisséia Chinesa: Parte Dois – Cinderela"
+          },
+          {
+            "id": 228150,
+            "title": "Corações de Ferro"
+          },
+          {
+            "id": 940721,
+            "title": "Godzilla Minus One"
+          }
+        ],
+        "comedia_romantica": [
+          {
+            "id": 924,
+            "title": "Madrugada dos Mortos"
+          },
+          {
+            "id": 377,
+            "title": "A Hora do Pesadelo"
+          },
+          {
+            "id": 10375,
+            "title": "D-Tox"
+          },
+          {
+            "id": 11544,
+            "title": "Lilo & Stitch"
+          },
+          {
+            "id": 2666,
+            "title": "Cidade das Sombras"
+          }
+        ],
+        "prisao_injusta": [
+          {
+            "id": 377,
+            "title": "A Hora do Pesadelo"
+          },
+          {
+            "id": 1368,
+            "title": "Rambo: Programado Para Matar"
+          },
+          {
+            "id": 10625,
+            "title": "Meninas Malvadas"
+          },
+          {
+            "id": 21835,
+            "title": "Uma Odisséia Chinesa: Parte Dois – Cinderela"
+          },
+          {
+            "id": 36648,
+            "title": "Blade Trinity"
+          }
+        ],
+        "mafia": [
+          {
+            "id": 337167,
+            "title": "Cinquenta Tons de Liberdade"
+          },
+          {
+            "id": 83533,
+            "title": "Avatar: Fogo e Cinzas"
+          },
+          {
+            "id": 218,
+            "title": "O Exterminador do Futuro"
+          },
+          {
+            "id": 329865,
+            "title": "A Chegada"
+          },
+          {
+            "id": 829557,
+            "title": "365 Dias: Hoje"
+          }
+        ],
+        "mundo_falso": [
+          {
+            "id": 49519,
+            "title": "Os Croods"
+          },
+          {
+            "id": 550988,
+            "title": "Free Guy: Assumindo o Controle"
+          },
+          {
+            "id": 359410,
+            "title": "Matador de Aluguel"
+          },
+          {
+            "id": 176,
+            "title": "Jogos Mortais"
+          },
+          {
+            "id": 950387,
+            "title": "Um Filme Minecraft"
+          }
+        ],
+        "enganar_a_morte": [
+          {
+            "id": 9358,
+            "title": "Premonição 2"
+          },
+          {
+            "id": 101,
+            "title": "O Profissional"
+          },
+          {
+            "id": 256274,
+            "title": "Assim na Terra Como no Inferno"
+          },
+          {
+            "id": 9286,
+            "title": "Premonição 3"
+          },
+          {
+            "id": 563,
+            "title": "Tropas Estelares"
+          }
+        ],
+        "dinossauros": [
+          {
+            "id": 567609,
+            "title": "Casamento Sangrento"
+          },
+          {
+            "id": 194,
+            "title": "O Fabuloso Destino de Amélie Poulain"
+          },
+          {
+            "id": 280092,
+            "title": "Sobrenatural: A Origem"
+          },
+          {
+            "id": 374720,
+            "title": "Dunkirk"
+          },
+          {
+            "id": 563,
+            "title": "Tropas Estelares"
+          }
+        ]
+      },
+      "bow_sem_stopwords": {
+        "matrix_literal": [
+          {
+            "id": 603,
+            "title": "Matrix"
+          },
+          {
+            "id": 99861,
+            "title": "Vingadores: Era de Ultron"
+          },
+          {
+            "id": 8413,
+            "title": "O Enigma do Horizonte"
+          },
+          {
+            "id": 74997,
+            "title": "A Centopéia Humana 2"
+          }
+        ],
+        "matrix_simulacao": [
+          {
+            "id": 746036,
+            "title": "O Dublê"
+          },
+          {
+            "id": 1234731,
+            "title": "Anaconda"
+          },
+          {
+            "id": 8689,
+            "title": "Holocausto Canibal"
+          },
+          {
+            "id": 81774,
+            "title": "A Iniciação"
+          },
+          {
+            "id": 73861,
+            "title": "A Serbian Film - Terror sem Limites"
+          }
+        ],
+        "acao_maquinas": [
+          {
+            "id": 746036,
+            "title": "O Dublê"
+          },
+          {
+            "id": 1234731,
+            "title": "Anaconda"
+          },
+          {
+            "id": 8689,
+            "title": "Holocausto Canibal"
+          },
+          {
+            "id": 218,
+            "title": "O Exterminador do Futuro"
+          },
+          {
+            "id": 81774,
+            "title": "A Iniciação"
+          }
+        ],
+        "robo_amizade": [
+          {
+            "id": 177572,
+            "title": "Operação Big Hero"
+          },
+          {
+            "id": 552524,
+            "title": "Lilo & Stitch"
+          },
+          {
+            "id": 1184918,
+            "title": "Robô Selvagem"
+          },
+          {
+            "id": 10386,
+            "title": "O Gigante de Ferro"
+          },
+          {
+            "id": 10681,
+            "title": "WALL-E"
+          }
+        ],
+        "ia_rebelde": [
+          {
+            "id": 1064028,
+            "title": "Alice: Subservience"
+          },
+          {
+            "id": 72190,
+            "title": "Guerra Mundial Z"
+          },
+          {
+            "id": 61791,
+            "title": "Planeta dos Macacos: A Origem"
+          },
+          {
+            "id": 1419406,
+            "title": "Operação Sombra"
+          },
+          {
+            "id": 99861,
+            "title": "Vingadores: Era de Ultron"
+          }
+        ],
+        "viagem_no_tempo": [
+          {
+            "id": 63,
+            "title": "Os 12 Macacos"
+          },
+          {
+            "id": 105,
+            "title": "De Volta para o Futuro"
+          },
+          {
+            "id": 497698,
+            "title": "Viúva Negra"
+          },
+          {
+            "id": 694,
+            "title": "O Iluminado"
+          },
+          {
+            "id": 115,
+            "title": "O Grande Lebowski"
+          }
+        ],
+        "invasao_alienigena": [
+          {
+            "id": 602,
+            "title": "Independence Day"
+          },
+          {
+            "id": 78,
+            "title": "Blade Runner: O Caçador de Andróides"
+          },
+          {
+            "id": 297,
+            "title": "Encontro Marcado"
+          },
+          {
+            "id": 329865,
+            "title": "A Chegada"
+          },
+          {
+            "id": 607,
+            "title": "MIB - Homens de Preto"
+          }
+        ],
+        "casa_assombrada": [
+          {
+            "id": 1933,
+            "title": "Os Outros"
+          },
+          {
+            "id": 49018,
+            "title": "Sobrenatural"
+          },
+          {
+            "id": 493922,
+            "title": "Hereditário"
+          },
+          {
+            "id": 259693,
+            "title": "Invocação do Mal 2"
+          },
+          {
+            "id": 496243,
+            "title": "Parasita"
+          }
+        ],
+        "possessao": [
+          {
+            "id": 423108,
+            "title": "Invocação do Mal 3: A Ordem do Demônio"
+          },
+          {
+            "id": 439079,
+            "title": "A Freira"
+          }
+        ],
+        "zumbis": [
+          {
+            "id": 924,
+            "title": "Madrugada dos Mortos"
+          },
+          {
+            "id": 346698,
+            "title": "Barbie"
+          },
+          {
+            "id": 550988,
+            "title": "Free Guy: Assumindo o Controle"
+          },
+          {
+            "id": 602,
+            "title": "Independence Day"
+          },
+          {
+            "id": 100402,
+            "title": "Capitão América: O Soldado Invernal"
+          }
+        ],
+        "assassino_mascarado": [
+          {
+            "id": 604079,
+            "title": "A Longa Marcha: Caminhe ou Morra"
+          },
+          {
+            "id": 4247,
+            "title": "Todo Mundo em Pânico"
+          },
+          {
+            "id": 55779,
+            "title": "Premonição 5"
+          },
+          {
+            "id": 4232,
+            "title": "Pânico"
+          },
+          {
+            "id": 13207,
+            "title": "Sexta-Feira 13"
+          }
+        ],
+        "vampiros": [
+          {
+            "id": 36586,
+            "title": "Blade II: O Caçador de Vampiros"
+          },
+          {
+            "id": 1547,
+            "title": "Os Garotos Perdidos"
+          }
+        ],
+        "astronautas_perdidos": [
+          {
+            "id": 176,
+            "title": "Jogos Mortais"
+          },
+          {
+            "id": 950396,
+            "title": "Entre Montanhas"
+          },
+          {
+            "id": 8413,
+            "title": "O Enigma do Horizonte"
+          },
+          {
+            "id": 466272,
+            "title": "Era Uma Vez em… Hollywood"
+          },
+          {
+            "id": 490132,
+            "title": "Green Book: O Guia"
+          }
+        ],
+        "segunda_guerra": [
+          {
+            "id": 374720,
+            "title": "Dunkirk"
+          },
+          {
+            "id": 228150,
+            "title": "Corações de Ferro"
+          },
+          {
+            "id": 940721,
+            "title": "Godzilla Minus One"
+          },
+          {
+            "id": 872585,
+            "title": "Oppenheimer"
+          },
+          {
+            "id": 16869,
+            "title": "Bastardos Inglórios"
+          }
+        ],
+        "comedia_romantica": [
+          {
+            "id": 1038392,
+            "title": "Invocação do Mal 4: O Último Ritual"
+          },
+          {
+            "id": 214756,
+            "title": "Ted 2"
+          },
+          {
+            "id": 1084199,
+            "title": "Acompanhante Perfeita"
+          },
+          {
+            "id": 337167,
+            "title": "Cinquenta Tons de Liberdade"
+          },
+          {
+            "id": 755,
+            "title": "Um Drink no Inferno"
+          }
+        ],
+        "prisao_injusta": [
+          {
+            "id": 1368,
+            "title": "Rambo: Programado Para Matar"
+          },
+          {
+            "id": 53653,
+            "title": "Prisioneiro do Inferno"
+          },
+          {
+            "id": 377,
+            "title": "A Hora do Pesadelo"
+          },
+          {
+            "id": 36648,
+            "title": "Blade Trinity"
+          },
+          {
+            "id": 137,
+            "title": "Feitiço do Tempo"
+          }
+        ],
+        "mafia": [
+          {
+            "id": 829557,
+            "title": "365 Dias: Hoje"
+          },
+          {
+            "id": 1422,
+            "title": "Os Infiltrados"
+          },
+          {
+            "id": 769,
+            "title": "Os Bons Companheiros"
+          },
+          {
+            "id": 718930,
+            "title": "Trem-Bala"
+          },
+          {
+            "id": 522627,
+            "title": "Magnatas do Crime"
+          }
+        ],
+        "mundo_falso": [
+          {
+            "id": 550988,
+            "title": "Free Guy: Assumindo o Controle"
+          },
+          {
+            "id": 346698,
+            "title": "Barbie"
+          },
+          {
+            "id": 924,
+            "title": "Madrugada dos Mortos"
+          },
+          {
+            "id": 49521,
+            "title": "O Homem de Aço"
+          },
+          {
+            "id": 950387,
+            "title": "Um Filme Minecraft"
+          }
+        ],
+        "enganar_a_morte": [
+          {
+            "id": 9286,
+            "title": "Premonição 3"
+          },
+          {
+            "id": 9358,
+            "title": "Premonição 2"
+          },
+          {
+            "id": 297,
+            "title": "Encontro Marcado"
+          },
+          {
+            "id": 1419406,
+            "title": "Operação Sombra"
+          },
+          {
+            "id": 14097,
+            "title": "9º Pelotão"
+          }
+        ],
+        "dinossauros": [
+          {
+            "id": 329,
+            "title": "Jurassic Park: O Parque dos Dinossauros"
+          },
+          {
+            "id": 1234821,
+            "title": "Jurassic World: Recomeço"
+          },
+          {
+            "id": 1726,
+            "title": "Homem de Ferro"
+          },
+          {
+            "id": 557,
+            "title": "Homem-Aranha"
+          },
+          {
+            "id": 423,
+            "title": "O Pianista"
+          }
+        ]
+      },
+      "tfidf_sem_pontuacao": {
+        "matrix_literal": [
+          {
+            "id": 603,
+            "title": "Matrix"
+          },
+          {
+            "id": 99861,
+            "title": "Vingadores: Era de Ultron"
+          },
+          {
+            "id": 8413,
+            "title": "O Enigma do Horizonte"
+          },
+          {
+            "id": 74997,
+            "title": "A Centopéia Humana 2"
+          },
+          {
+            "id": 256274,
+            "title": "Assim na Terra Como no Inferno"
+          }
+        ],
+        "matrix_simulacao": [
+          {
+            "id": 746036,
+            "title": "O Dublê"
+          },
+          {
+            "id": 1234731,
+            "title": "Anaconda"
+          },
+          {
+            "id": 299536,
+            "title": "Vingadores: Guerra Infinita"
+          },
+          {
+            "id": 8689,
+            "title": "Holocausto Canibal"
+          },
+          {
+            "id": 1228246,
+            "title": "Five Nights at Freddy's 2"
+          }
+        ],
+        "acao_maquinas": [
+          {
+            "id": 746036,
+            "title": "O Dublê"
+          },
+          {
+            "id": 218,
+            "title": "O Exterminador do Futuro"
+          },
+          {
+            "id": 1234731,
+            "title": "Anaconda"
+          },
+          {
+            "id": 8689,
+            "title": "Holocausto Canibal"
+          },
+          {
+            "id": 604,
+            "title": "Matrix Reloaded"
+          }
+        ],
+        "robo_amizade": [
+          {
+            "id": 552524,
+            "title": "Lilo & Stitch"
+          },
+          {
+            "id": 177572,
+            "title": "Operação Big Hero"
+          },
+          {
+            "id": 1184918,
+            "title": "Robô Selvagem"
+          },
+          {
+            "id": 11544,
+            "title": "Lilo & Stitch"
+          },
+          {
+            "id": 280,
+            "title": "O Exterminador do Futuro 2: O Julgamento Final"
+          }
+        ],
+        "ia_rebelde": [
+          {
+            "id": 1064028,
+            "title": "Alice: Subservience"
+          },
+          {
+            "id": 99861,
+            "title": "Vingadores: Era de Ultron"
+          },
+          {
+            "id": 61791,
+            "title": "Planeta dos Macacos: A Origem"
+          },
+          {
+            "id": 72190,
+            "title": "Guerra Mundial Z"
+          },
+          {
+            "id": 602,
+            "title": "Independence Day"
+          }
+        ],
+        "viagem_no_tempo": [
+          {
+            "id": 63,
+            "title": "Os 12 Macacos"
+          },
+          {
+            "id": 105,
+            "title": "De Volta para o Futuro"
+          },
+          {
+            "id": 694,
+            "title": "O Iluminado"
+          },
+          {
+            "id": 311,
+            "title": "Era Uma Vez na América"
+          },
+          {
+            "id": 497698,
+            "title": "Viúva Negra"
+          }
+        ],
+        "invasao_alienigena": [
+          {
+            "id": 602,
+            "title": "Independence Day"
+          },
+          {
+            "id": 329865,
+            "title": "A Chegada"
+          },
+          {
+            "id": 563,
+            "title": "Tropas Estelares"
+          },
+          {
+            "id": 137113,
+            "title": "No Limite do Amanhã"
+          },
+          {
+            "id": 607,
+            "title": "MIB - Homens de Preto"
+          }
+        ],
+        "casa_assombrada": [
+          {
+            "id": 259693,
+            "title": "Invocação do Mal 2"
+          },
+          {
+            "id": 1933,
+            "title": "Os Outros"
+          },
+          {
+            "id": 138843,
+            "title": "Invocação do Mal"
+          },
+          {
+            "id": 764,
+            "title": "Uma Noite Alucinante: A Morte do Demônio"
+          },
+          {
+            "id": 49018,
+            "title": "Sobrenatural"
+          }
+        ],
+        "possessao": [
+          {
+            "id": 423108,
+            "title": "Invocação do Mal 3: A Ordem do Demônio"
+          },
+          {
+            "id": 439079,
+            "title": "A Freira"
+          },
+          {
+            "id": 9820,
+            "title": "Operação Cupido"
+          },
+          {
+            "id": 83533,
+            "title": "Avatar: Fogo e Cinzas"
+          },
+          {
+            "id": 402431,
+            "title": "Wicked"
+          }
+        ],
+        "zumbis": [
+          {
+            "id": 924,
+            "title": "Madrugada dos Mortos"
+          },
+          {
+            "id": 170,
+            "title": "Extermínio"
+          },
+          {
+            "id": 72190,
+            "title": "Guerra Mundial Z"
+          },
+          {
+            "id": 396535,
+            "title": "Invasão Zumbi"
+          },
+          {
+            "id": 6479,
+            "title": "Eu Sou a Lenda"
+          }
+        ],
+        "assassino_mascarado": [
+          {
+            "id": 4247,
+            "title": "Todo Mundo em Pânico"
+          },
+          {
+            "id": 604079,
+            "title": "A Longa Marcha: Caminhe ou Morra"
+          },
+          {
+            "id": 13207,
+            "title": "Sexta-Feira 13"
+          },
+          {
+            "id": 4232,
+            "title": "Pânico"
+          },
+          {
+            "id": 55779,
+            "title": "Premonição 5"
+          }
+        ],
+        "vampiros": [
+          {
+            "id": 36586,
+            "title": "Blade II: O Caçador de Vampiros"
+          },
+          {
+            "id": 1547,
+            "title": "Os Garotos Perdidos"
+          }
+        ],
+        "astronautas_perdidos": [
+          {
+            "id": 8413,
+            "title": "O Enigma do Horizonte"
+          },
+          {
+            "id": 157336,
+            "title": "Interestelar"
+          },
+          {
+            "id": 744,
+            "title": "Top Gun - Ases Indomáveis"
+          },
+          {
+            "id": 679,
+            "title": "Aliens: O Resgate"
+          },
+          {
+            "id": 950396,
+            "title": "Entre Montanhas"
+          }
+        ],
+        "segunda_guerra": [
+          {
+            "id": 374720,
+            "title": "Dunkirk"
+          },
+          {
+            "id": 228150,
+            "title": "Corações de Ferro"
+          },
+          {
+            "id": 940721,
+            "title": "Godzilla Minus One"
+          },
+          {
+            "id": 872585,
+            "title": "Oppenheimer"
+          },
+          {
+            "id": 16869,
+            "title": "Bastardos Inglórios"
+          }
+        ],
+        "comedia_romantica": [
+          {
+            "id": 629,
+            "title": "Os Suspeitos"
+          },
+          {
+            "id": 1228246,
+            "title": "Five Nights at Freddy's 2"
+          },
+          {
+            "id": 4951,
+            "title": "10 Coisas Que Eu Odeio em Você"
+          },
+          {
+            "id": 1084199,
+            "title": "Acompanhante Perfeita"
+          },
+          {
+            "id": 2667,
+            "title": "A Bruxa de Blair"
+          }
+        ],
+        "prisao_injusta": [
+          {
+            "id": 53653,
+            "title": "Prisioneiro do Inferno"
+          },
+          {
+            "id": 1368,
+            "title": "Rambo: Programado Para Matar"
+          },
+          {
+            "id": 1054867,
+            "title": "Uma Batalha Após a Outra"
+          },
+          {
+            "id": 552524,
+            "title": "Lilo & Stitch"
+          },
+          {
+            "id": 137,
+            "title": "Feitiço do Tempo"
+          }
+        ],
+        "mafia": [
+          {
+            "id": 829557,
+            "title": "365 Dias: Hoje"
+          },
+          {
+            "id": 1422,
+            "title": "Os Infiltrados"
+          },
+          {
+            "id": 769,
+            "title": "Os Bons Companheiros"
+          },
+          {
+            "id": 522627,
+            "title": "Magnatas do Crime"
+          },
+          {
+            "id": 718930,
+            "title": "Trem-Bala"
+          }
+        ],
+        "mundo_falso": [
+          {
+            "id": 550988,
+            "title": "Free Guy: Assumindo o Controle"
+          },
+          {
+            "id": 346698,
+            "title": "Barbie"
+          },
+          {
+            "id": 49519,
+            "title": "Os Croods"
+          },
+          {
+            "id": 924,
+            "title": "Madrugada dos Mortos"
+          },
+          {
+            "id": 950387,
+            "title": "Um Filme Minecraft"
+          }
+        ],
+        "enganar_a_morte": [
+          {
+            "id": 9358,
+            "title": "Premonição 2"
+          },
+          {
+            "id": 9286,
+            "title": "Premonição 3"
+          },
+          {
+            "id": 1419406,
+            "title": "Operação Sombra"
+          },
+          {
+            "id": 55779,
+            "title": "Premonição 5"
+          },
+          {
+            "id": 297,
+            "title": "Encontro Marcado"
+          }
+        ],
+        "dinossauros": [
+          {
+            "id": 329,
+            "title": "Jurassic Park: O Parque dos Dinossauros"
+          },
+          {
+            "id": 1234821,
+            "title": "Jurassic World: Recomeço"
+          },
+          {
+            "id": 1726,
+            "title": "Homem de Ferro"
+          },
+          {
+            "id": 8078,
+            "title": "Alien: A Ressurreição"
+          },
+          {
+            "id": 194,
+            "title": "O Fabuloso Destino de Amélie Poulain"
+          }
+        ]
+      },
+      "tfidf_sem_stopwords": {
+        "matrix_literal": [
+          {
+            "id": 603,
+            "title": "Matrix"
+          },
+          {
+            "id": 99861,
+            "title": "Vingadores: Era de Ultron"
+          },
+          {
+            "id": 8413,
+            "title": "O Enigma do Horizonte"
+          },
+          {
+            "id": 74997,
+            "title": "A Centopéia Humana 2"
+          }
+        ],
+        "matrix_simulacao": [
+          {
+            "id": 746036,
+            "title": "O Dublê"
+          },
+          {
+            "id": 1234731,
+            "title": "Anaconda"
+          },
+          {
+            "id": 8689,
+            "title": "Holocausto Canibal"
+          },
+          {
+            "id": 81774,
+            "title": "A Iniciação"
+          },
+          {
+            "id": 550988,
+            "title": "Free Guy: Assumindo o Controle"
+          }
+        ],
+        "acao_maquinas": [
+          {
+            "id": 746036,
+            "title": "O Dublê"
+          },
+          {
+            "id": 218,
+            "title": "O Exterminador do Futuro"
+          },
+          {
+            "id": 604,
+            "title": "Matrix Reloaded"
+          },
+          {
+            "id": 1234731,
+            "title": "Anaconda"
+          },
+          {
+            "id": 8689,
+            "title": "Holocausto Canibal"
+          }
+        ],
+        "robo_amizade": [
+          {
+            "id": 177572,
+            "title": "Operação Big Hero"
+          },
+          {
+            "id": 552524,
+            "title": "Lilo & Stitch"
+          },
+          {
+            "id": 1184918,
+            "title": "Robô Selvagem"
+          },
+          {
+            "id": 10386,
+            "title": "O Gigante de Ferro"
+          },
+          {
+            "id": 10681,
+            "title": "WALL-E"
+          }
+        ],
+        "ia_rebelde": [
+          {
+            "id": 1064028,
+            "title": "Alice: Subservience"
+          },
+          {
+            "id": 99861,
+            "title": "Vingadores: Era de Ultron"
+          },
+          {
+            "id": 61791,
+            "title": "Planeta dos Macacos: A Origem"
+          },
+          {
+            "id": 72190,
+            "title": "Guerra Mundial Z"
+          },
+          {
+            "id": 214756,
+            "title": "Ted 2"
+          }
+        ],
+        "viagem_no_tempo": [
+          {
+            "id": 63,
+            "title": "Os 12 Macacos"
+          },
+          {
+            "id": 105,
+            "title": "De Volta para o Futuro"
+          },
+          {
+            "id": 497698,
+            "title": "Viúva Negra"
+          },
+          {
+            "id": 115,
+            "title": "O Grande Lebowski"
+          },
+          {
+            "id": 1010581,
+            "title": "Minha Culpa"
+          }
+        ],
+        "invasao_alienigena": [
+          {
+            "id": 602,
+            "title": "Independence Day"
+          },
+          {
+            "id": 607,
+            "title": "MIB - Homens de Preto"
+          },
+          {
+            "id": 329865,
+            "title": "A Chegada"
+          },
+          {
+            "id": 137113,
+            "title": "No Limite do Amanhã"
+          },
+          {
+            "id": 563,
+            "title": "Tropas Estelares"
+          }
+        ],
+        "casa_assombrada": [
+          {
+            "id": 259693,
+            "title": "Invocação do Mal 2"
+          },
+          {
+            "id": 1933,
+            "title": "Os Outros"
+          },
+          {
+            "id": 138843,
+            "title": "Invocação do Mal"
+          },
+          {
+            "id": 49018,
+            "title": "Sobrenatural"
+          },
+          {
+            "id": 764,
+            "title": "Uma Noite Alucinante: A Morte do Demônio"
+          }
+        ],
+        "possessao": [
+          {
+            "id": 423108,
+            "title": "Invocação do Mal 3: A Ordem do Demônio"
+          },
+          {
+            "id": 439079,
+            "title": "A Freira"
+          }
+        ],
+        "zumbis": [
+          {
+            "id": 924,
+            "title": "Madrugada dos Mortos"
+          },
+          {
+            "id": 170,
+            "title": "Extermínio"
+          },
+          {
+            "id": 72190,
+            "title": "Guerra Mundial Z"
+          },
+          {
+            "id": 1246049,
+            "title": "Drácula - Uma História de Amor Eterno"
+          },
+          {
+            "id": 63,
+            "title": "Os 12 Macacos"
+          }
+        ],
+        "assassino_mascarado": [
+          {
+            "id": 4247,
+            "title": "Todo Mundo em Pânico"
+          },
+          {
+            "id": 604079,
+            "title": "A Longa Marcha: Caminhe ou Morra"
+          },
+          {
+            "id": 13207,
+            "title": "Sexta-Feira 13"
+          },
+          {
+            "id": 4232,
+            "title": "Pânico"
+          },
+          {
+            "id": 49026,
+            "title": "Batman: O Cavaleiro das Trevas Ressurge"
+          }
+        ],
+        "vampiros": [
+          {
+            "id": 36586,
+            "title": "Blade II: O Caçador de Vampiros"
+          },
+          {
+            "id": 1547,
+            "title": "Os Garotos Perdidos"
+          }
+        ],
+        "astronautas_perdidos": [
+          {
+            "id": 8413,
+            "title": "O Enigma do Horizonte"
+          },
+          {
+            "id": 157336,
+            "title": "Interestelar"
+          },
+          {
+            "id": 744,
+            "title": "Top Gun - Ases Indomáveis"
+          },
+          {
+            "id": 950396,
+            "title": "Entre Montanhas"
+          },
+          {
+            "id": 679,
+            "title": "Aliens: O Resgate"
+          }
+        ],
+        "segunda_guerra": [
+          {
+            "id": 374720,
+            "title": "Dunkirk"
+          },
+          {
+            "id": 228150,
+            "title": "Corações de Ferro"
+          },
+          {
+            "id": 940721,
+            "title": "Godzilla Minus One"
+          },
+          {
+            "id": 872585,
+            "title": "Oppenheimer"
+          },
+          {
+            "id": 324786,
+            "title": "Até o Último Homem"
+          }
+        ],
+        "comedia_romantica": [
+          {
+            "id": 4951,
+            "title": "10 Coisas Que Eu Odeio em Você"
+          },
+          {
+            "id": 1084199,
+            "title": "Acompanhante Perfeita"
+          },
+          {
+            "id": 1038392,
+            "title": "Invocação do Mal 4: O Último Ritual"
+          },
+          {
+            "id": 214756,
+            "title": "Ted 2"
+          },
+          {
+            "id": 337167,
+            "title": "Cinquenta Tons de Liberdade"
+          }
+        ],
+        "prisao_injusta": [
+          {
+            "id": 1368,
+            "title": "Rambo: Programado Para Matar"
+          },
+          {
+            "id": 53653,
+            "title": "Prisioneiro do Inferno"
+          },
+          {
+            "id": 1054867,
+            "title": "Uma Batalha Após a Outra"
+          },
+          {
+            "id": 552524,
+            "title": "Lilo & Stitch"
+          },
+          {
+            "id": 137,
+            "title": "Feitiço do Tempo"
+          }
+        ],
+        "mafia": [
+          {
+            "id": 829557,
+            "title": "365 Dias: Hoje"
+          },
+          {
+            "id": 1422,
+            "title": "Os Infiltrados"
+          },
+          {
+            "id": 769,
+            "title": "Os Bons Companheiros"
+          },
+          {
+            "id": 522627,
+            "title": "Magnatas do Crime"
+          },
+          {
+            "id": 718930,
+            "title": "Trem-Bala"
+          }
+        ],
+        "mundo_falso": [
+          {
+            "id": 550988,
+            "title": "Free Guy: Assumindo o Controle"
+          },
+          {
+            "id": 346698,
+            "title": "Barbie"
+          },
+          {
+            "id": 924,
+            "title": "Madrugada dos Mortos"
+          },
+          {
+            "id": 49521,
+            "title": "O Homem de Aço"
+          },
+          {
+            "id": 49519,
+            "title": "Os Croods"
+          }
+        ],
+        "enganar_a_morte": [
+          {
+            "id": 9286,
+            "title": "Premonição 3"
+          },
+          {
+            "id": 9358,
+            "title": "Premonição 2"
+          },
+          {
+            "id": 1419406,
+            "title": "Operação Sombra"
+          },
+          {
+            "id": 297,
+            "title": "Encontro Marcado"
+          },
+          {
+            "id": 945961,
+            "title": "Alien: Romulus"
+          }
+        ],
+        "dinossauros": [
+          {
+            "id": 329,
+            "title": "Jurassic Park: O Parque dos Dinossauros"
+          },
+          {
+            "id": 1234821,
+            "title": "Jurassic World: Recomeço"
+          },
+          {
+            "id": 8078,
+            "title": "Alien: A Ressurreição"
+          },
+          {
+            "id": 1726,
+            "title": "Homem de Ferro"
+          },
+          {
+            "id": 557,
+            "title": "Homem-Aranha"
+          }
+        ]
+      },
+      "word2vec_cbow": {
+        "matrix_literal": [
+          {
+            "id": 603,
+            "title": "Matrix"
+          },
+          {
+            "id": 550988,
+            "title": "Free Guy: Assumindo o Controle"
+          },
+          {
+            "id": 755898,
+            "title": "A Guerra dos Mundos"
+          },
+          {
+            "id": 9426,
+            "title": "A Mosca"
+          },
+          {
+            "id": 39254,
+            "title": "Gigantes de Aço"
+          }
+        ],
+        "matrix_simulacao": [
+          {
+            "id": 550988,
+            "title": "Free Guy: Assumindo o Controle"
+          },
+          {
+            "id": 746036,
+            "title": "O Dublê"
+          },
+          {
+            "id": 1234731,
+            "title": "Anaconda"
+          },
+          {
+            "id": 615656,
+            "title": "Megatubarão 2"
+          },
+          {
+            "id": 1228246,
+            "title": "Five Nights at Freddy's 2"
+          }
+        ],
+        "acao_maquinas": [
+          {
+            "id": 746036,
+            "title": "O Dublê"
+          },
+          {
+            "id": 2300,
+            "title": "Space Jam: O Jogo do Século"
+          },
+          {
+            "id": 20352,
+            "title": "Meu Malvado Favorito"
+          },
+          {
+            "id": 4247,
+            "title": "Todo Mundo em Pânico"
+          },
+          {
+            "id": 2667,
+            "title": "A Bruxa de Blair"
+          }
+        ],
+        "robo_amizade": [
+          {
+            "id": 552524,
+            "title": "Lilo & Stitch"
+          },
+          {
+            "id": 1064028,
+            "title": "Alice: Subservience"
+          },
+          {
+            "id": 603,
+            "title": "Matrix"
+          },
+          {
+            "id": 1184918,
+            "title": "Robô Selvagem"
+          },
+          {
+            "id": 808,
+            "title": "Shrek"
+          }
+        ],
+        "ia_rebelde": [
+          {
+            "id": 99861,
+            "title": "Vingadores: Era de Ultron"
+          },
+          {
+            "id": 602,
+            "title": "Independence Day"
+          },
+          {
+            "id": 72190,
+            "title": "Guerra Mundial Z"
+          },
+          {
+            "id": 615656,
+            "title": "Megatubarão 2"
+          },
+          {
+            "id": 61791,
+            "title": "Planeta dos Macacos: A Origem"
+          }
+        ],
+        "viagem_no_tempo": [
+          {
+            "id": 105,
+            "title": "De Volta para o Futuro"
+          },
+          {
+            "id": 63,
+            "title": "Os 12 Macacos"
+          },
+          {
+            "id": 311,
+            "title": "Era Uma Vez na América"
+          },
+          {
+            "id": 1100782,
+            "title": "Sorria 2"
+          },
+          {
+            "id": 218,
+            "title": "O Exterminador do Futuro"
+          }
+        ],
+        "invasao_alienigena": [
+          {
+            "id": 127585,
+            "title": "X-Men: Dias de um Futuro Esquecido"
+          },
+          {
+            "id": 78,
+            "title": "Blade Runner: O Caçador de Andróides"
+          },
+          {
+            "id": 602,
+            "title": "Independence Day"
+          },
+          {
+            "id": 552524,
+            "title": "Lilo & Stitch"
+          },
+          {
+            "id": 1124620,
+            "title": "O Macaco"
+          }
+        ],
+        "casa_assombrada": [
+          {
+            "id": 496243,
+            "title": "Parasita"
+          },
+          {
+            "id": 493922,
+            "title": "Hereditário"
+          },
+          {
+            "id": 310131,
+            "title": "A Bruxa"
+          },
+          {
+            "id": 940551,
+            "title": "Patos!"
+          },
+          {
+            "id": 242,
+            "title": "O Poderoso Chefão: Parte III"
+          }
+        ],
+        "possessao": [
+          {
+            "id": 439079,
+            "title": "A Freira"
+          },
+          {
+            "id": 616037,
+            "title": "Thor: Amor e Trovão"
+          },
+          {
+            "id": 280092,
+            "title": "Sobrenatural: A Origem"
+          },
+          {
+            "id": 808,
+            "title": "Shrek"
+          },
+          {
+            "id": 423108,
+            "title": "Invocação do Mal 3: A Ordem do Demônio"
+          }
+        ],
+        "zumbis": [
+          {
+            "id": 924,
+            "title": "Madrugada dos Mortos"
+          },
+          {
+            "id": 127585,
+            "title": "X-Men: Dias de um Futuro Esquecido"
+          },
+          {
+            "id": 170,
+            "title": "Extermínio"
+          },
+          {
+            "id": 436270,
+            "title": "Adão Negro"
+          },
+          {
+            "id": 246655,
+            "title": "X-Men: Apocalipse"
+          }
+        ],
+        "assassino_mascarado": [
+          {
+            "id": 377,
+            "title": "A Hora do Pesadelo"
+          },
+          {
+            "id": 177572,
+            "title": "Operação Big Hero"
+          },
+          {
+            "id": 272,
+            "title": "Batman Begins"
+          },
+          {
+            "id": 383498,
+            "title": "Deadpool 2"
+          },
+          {
+            "id": 1205229,
+            "title": "Zoopocalipse - Uma Aventura Animal"
+          }
+        ],
+        "vampiros": [
+          {
+            "id": 127585,
+            "title": "X-Men: Dias de um Futuro Esquecido"
+          },
+          {
+            "id": 36586,
+            "title": "Blade II: O Caçador de Vampiros"
+          },
+          {
+            "id": 9487,
+            "title": "Vida de Inseto"
+          },
+          {
+            "id": 616037,
+            "title": "Thor: Amor e Trovão"
+          },
+          {
+            "id": 415,
+            "title": "Batman & Robin"
+          }
+        ],
+        "astronautas_perdidos": [
+          {
+            "id": 127585,
+            "title": "X-Men: Dias de um Futuro Esquecido"
+          },
+          {
+            "id": 286217,
+            "title": "Perdido em Marte"
+          },
+          {
+            "id": 950396,
+            "title": "Entre Montanhas"
+          },
+          {
+            "id": 8413,
+            "title": "O Enigma do Horizonte"
+          },
+          {
+            "id": 1100988,
+            "title": "Extermínio: A Evolução"
+          }
+        ],
+        "segunda_guerra": [
+          {
+            "id": 14097,
+            "title": "9º Pelotão"
+          },
+          {
+            "id": 228150,
+            "title": "Corações de Ferro"
+          },
+          {
+            "id": 374720,
+            "title": "Dunkirk"
+          },
+          {
+            "id": 16869,
+            "title": "Bastardos Inglórios"
+          },
+          {
+            "id": 324786,
+            "title": "Até o Último Homem"
+          }
+        ],
+        "comedia_romantica": [
+          {
+            "id": 597,
+            "title": "Titanic"
+          },
+          {
+            "id": 27,
+            "title": "9 Canções"
+          },
+          {
+            "id": 74997,
+            "title": "A Centopéia Humana 2"
+          },
+          {
+            "id": 9374,
+            "title": "A Morte lhe Cai Bem"
+          },
+          {
+            "id": 19994,
+            "title": "Garota Infernal"
+          }
+        ],
+        "prisao_injusta": [
+          {
+            "id": 53653,
+            "title": "Prisioneiro do Inferno"
+          },
+          {
+            "id": 73,
+            "title": "A Outra História Americana"
+          },
+          {
+            "id": 278,
+            "title": "Um Sonho de Liberdade"
+          },
+          {
+            "id": 238636,
+            "title": "Uma Noite de Crime: Anarquia"
+          },
+          {
+            "id": 377,
+            "title": "A Hora do Pesadelo"
+          }
+        ],
+        "mafia": [
+          {
+            "id": 1422,
+            "title": "Os Infiltrados"
+          },
+          {
+            "id": 829557,
+            "title": "365 Dias: Hoje"
+          },
+          {
+            "id": 111,
+            "title": "Scarface"
+          },
+          {
+            "id": 522627,
+            "title": "Magnatas do Crime"
+          },
+          {
+            "id": 1419406,
+            "title": "Operação Sombra"
+          }
+        ],
+        "mundo_falso": [
+          {
+            "id": 346698,
+            "title": "Barbie"
+          },
+          {
+            "id": 2666,
+            "title": "Cidade das Sombras"
+          },
+          {
+            "id": 550988,
+            "title": "Free Guy: Assumindo o Controle"
+          },
+          {
+            "id": 21484,
+            "title": "Possessão"
+          },
+          {
+            "id": 603,
+            "title": "Matrix"
+          }
+        ],
+        "enganar_a_morte": [
+          {
+            "id": 9358,
+            "title": "Premonição 2"
+          },
+          {
+            "id": 9286,
+            "title": "Premonição 3"
+          },
+          {
+            "id": 55779,
+            "title": "Premonição 5"
+          },
+          {
+            "id": 9532,
+            "title": "Premonição"
+          },
+          {
+            "id": 297,
+            "title": "Encontro Marcado"
+          }
+        ],
+        "dinossauros": [
+          {
+            "id": 329,
+            "title": "Jurassic Park: O Parque dos Dinossauros"
+          },
+          {
+            "id": 1234821,
+            "title": "Jurassic World: Recomeço"
+          },
+          {
+            "id": 68726,
+            "title": "Círculo de Fogo"
+          },
+          {
+            "id": 78,
+            "title": "Blade Runner: O Caçador de Andróides"
+          },
+          {
+            "id": 563,
+            "title": "Tropas Estelares"
+          }
+        ]
+      },
+      "word2vec_skipgram": {
+        "matrix_literal": [
+          {
+            "id": 603,
+            "title": "Matrix"
+          },
+          {
+            "id": 2048,
+            "title": "Eu, Robô"
+          },
+          {
+            "id": 205596,
+            "title": "O Jogo da Imitação"
+          },
+          {
+            "id": 39254,
+            "title": "Gigantes de Aço"
+          },
+          {
+            "id": 9426,
+            "title": "A Mosca"
+          }
+        ],
+        "matrix_simulacao": [
+          {
+            "id": 550988,
+            "title": "Free Guy: Assumindo o Controle"
+          },
+          {
+            "id": 1234731,
+            "title": "Anaconda"
+          },
+          {
+            "id": 746036,
+            "title": "O Dublê"
+          },
+          {
+            "id": 73861,
+            "title": "A Serbian Film - Terror sem Limites"
+          },
+          {
+            "id": 603,
+            "title": "Matrix"
+          }
+        ],
+        "acao_maquinas": [
+          {
+            "id": 746036,
+            "title": "O Dublê"
+          },
+          {
+            "id": 73861,
+            "title": "A Serbian Film - Terror sem Limites"
+          },
+          {
+            "id": 861,
+            "title": "O Vingador do Futuro"
+          },
+          {
+            "id": 862,
+            "title": "Toy Story: Um Mundo de Aventuras"
+          },
+          {
+            "id": 5548,
+            "title": "RoboCop - O Policial do Futuro"
+          }
+        ],
+        "robo_amizade": [
+          {
+            "id": 552524,
+            "title": "Lilo & Stitch"
+          },
+          {
+            "id": 603,
+            "title": "Matrix"
+          },
+          {
+            "id": 36586,
+            "title": "Blade II: O Caçador de Vampiros"
+          },
+          {
+            "id": 1064028,
+            "title": "Alice: Subservience"
+          },
+          {
+            "id": 11544,
+            "title": "Lilo & Stitch"
+          }
+        ],
+        "ia_rebelde": [
+          {
+            "id": 99861,
+            "title": "Vingadores: Era de Ultron"
+          },
+          {
+            "id": 602,
+            "title": "Independence Day"
+          },
+          {
+            "id": 563,
+            "title": "Tropas Estelares"
+          },
+          {
+            "id": 72190,
+            "title": "Guerra Mundial Z"
+          },
+          {
+            "id": 615656,
+            "title": "Megatubarão 2"
+          }
+        ],
+        "viagem_no_tempo": [
+          {
+            "id": 105,
+            "title": "De Volta para o Futuro"
+          },
+          {
+            "id": 63,
+            "title": "Os 12 Macacos"
+          },
+          {
+            "id": 18785,
+            "title": "Se Beber, Não Case!"
+          },
+          {
+            "id": 165,
+            "title": "De Volta para o Futuro II"
+          },
+          {
+            "id": 13207,
+            "title": "Sexta-Feira 13"
+          }
+        ],
+        "invasao_alienigena": [
+          {
+            "id": 127585,
+            "title": "X-Men: Dias de um Futuro Esquecido"
+          },
+          {
+            "id": 602,
+            "title": "Independence Day"
+          },
+          {
+            "id": 9487,
+            "title": "Vida de Inseto"
+          },
+          {
+            "id": 78,
+            "title": "Blade Runner: O Caçador de Andróides"
+          },
+          {
+            "id": 8355,
+            "title": "A Era do Gelo 3"
+          }
+        ],
+        "casa_assombrada": [
+          {
+            "id": 493922,
+            "title": "Hereditário"
+          },
+          {
+            "id": 496243,
+            "title": "Parasita"
+          },
+          {
+            "id": 49018,
+            "title": "Sobrenatural"
+          },
+          {
+            "id": 1933,
+            "title": "Os Outros"
+          },
+          {
+            "id": 940551,
+            "title": "Patos!"
+          }
+        ],
+        "possessao": [
+          {
+            "id": 439079,
+            "title": "A Freira"
+          },
+          {
+            "id": 280092,
+            "title": "Sobrenatural: A Origem"
+          },
+          {
+            "id": 616037,
+            "title": "Thor: Amor e Trovão"
+          },
+          {
+            "id": 36647,
+            "title": "Blade: O Caçador de Vampiros"
+          },
+          {
+            "id": 415,
+            "title": "Batman & Robin"
+          }
+        ],
+        "zumbis": [
+          {
+            "id": 924,
+            "title": "Madrugada dos Mortos"
+          },
+          {
+            "id": 127585,
+            "title": "X-Men: Dias de um Futuro Esquecido"
+          },
+          {
+            "id": 602,
+            "title": "Independence Day"
+          },
+          {
+            "id": 246655,
+            "title": "X-Men: Apocalipse"
+          },
+          {
+            "id": 1100988,
+            "title": "Extermínio: A Evolução"
+          }
+        ],
+        "assassino_mascarado": [
+          {
+            "id": 377,
+            "title": "A Hora do Pesadelo"
+          },
+          {
+            "id": 383498,
+            "title": "Deadpool 2"
+          },
+          {
+            "id": 49026,
+            "title": "Batman: O Cavaleiro das Trevas Ressurge"
+          },
+          {
+            "id": 238636,
+            "title": "Uma Noite de Crime: Anarquia"
+          },
+          {
+            "id": 10585,
+            "title": "Brinquedo Assassino"
+          }
+        ],
+        "vampiros": [
+          {
+            "id": 127585,
+            "title": "X-Men: Dias de um Futuro Esquecido"
+          },
+          {
+            "id": 36586,
+            "title": "Blade II: O Caçador de Vampiros"
+          },
+          {
+            "id": 8355,
+            "title": "A Era do Gelo 3"
+          },
+          {
+            "id": 109428,
+            "title": "A Morte do Demônio"
+          },
+          {
+            "id": 616037,
+            "title": "Thor: Amor e Trovão"
+          }
+        ],
+        "astronautas_perdidos": [
+          {
+            "id": 127585,
+            "title": "X-Men: Dias de um Futuro Esquecido"
+          },
+          {
+            "id": 950396,
+            "title": "Entre Montanhas"
+          },
+          {
+            "id": 286217,
+            "title": "Perdido em Marte"
+          },
+          {
+            "id": 957,
+            "title": "S.O.S.: Tem um Louco Solto no Espaço"
+          },
+          {
+            "id": 8413,
+            "title": "O Enigma do Horizonte"
+          }
+        ],
+        "segunda_guerra": [
+          {
+            "id": 228150,
+            "title": "Corações de Ferro"
+          },
+          {
+            "id": 324786,
+            "title": "Até o Último Homem"
+          },
+          {
+            "id": 16869,
+            "title": "Bastardos Inglórios"
+          },
+          {
+            "id": 374720,
+            "title": "Dunkirk"
+          },
+          {
+            "id": 14097,
+            "title": "9º Pelotão"
+          }
+        ],
+        "comedia_romantica": [
+          {
+            "id": 9374,
+            "title": "A Morte lhe Cai Bem"
+          },
+          {
+            "id": 74997,
+            "title": "A Centopéia Humana 2"
+          },
+          {
+            "id": 44214,
+            "title": "Cisne Negro"
+          },
+          {
+            "id": 73861,
+            "title": "A Serbian Film - Terror sem Limites"
+          },
+          {
+            "id": 597,
+            "title": "Titanic"
+          }
+        ],
+        "prisao_injusta": [
+          {
+            "id": 53653,
+            "title": "Prisioneiro do Inferno"
+          },
+          {
+            "id": 278,
+            "title": "Um Sonho de Liberdade"
+          },
+          {
+            "id": 73,
+            "title": "A Outra História Americana"
+          },
+          {
+            "id": 1368,
+            "title": "Rambo: Programado Para Matar"
+          },
+          {
+            "id": 546554,
+            "title": "Entre Facas e Segredos"
+          }
+        ],
+        "mafia": [
+          {
+            "id": 522627,
+            "title": "Magnatas do Crime"
+          },
+          {
+            "id": 829557,
+            "title": "365 Dias: Hoje"
+          },
+          {
+            "id": 1422,
+            "title": "Os Infiltrados"
+          },
+          {
+            "id": 111,
+            "title": "Scarface"
+          },
+          {
+            "id": 9737,
+            "title": "Os Bad Boys"
+          }
+        ],
+        "mundo_falso": [
+          {
+            "id": 2666,
+            "title": "Cidade das Sombras"
+          },
+          {
+            "id": 346698,
+            "title": "Barbie"
+          },
+          {
+            "id": 10192,
+            "title": "Shrek Para Sempre"
+          },
+          {
+            "id": 550988,
+            "title": "Free Guy: Assumindo o Controle"
+          },
+          {
+            "id": 1417,
+            "title": "O Labirinto do Fauno"
+          }
+        ],
+        "enganar_a_morte": [
+          {
+            "id": 9286,
+            "title": "Premonição 3"
+          },
+          {
+            "id": 9358,
+            "title": "Premonição 2"
+          },
+          {
+            "id": 588,
+            "title": "Terror em Silent Hill"
+          },
+          {
+            "id": 9532,
+            "title": "Premonição"
+          },
+          {
+            "id": 1233413,
+            "title": "Pecadores"
+          }
+        ],
+        "dinossauros": [
+          {
+            "id": 329,
+            "title": "Jurassic Park: O Parque dos Dinossauros"
+          },
+          {
+            "id": 1234821,
+            "title": "Jurassic World: Recomeço"
+          },
+          {
+            "id": 78,
+            "title": "Blade Runner: O Caçador de Andróides"
+          },
+          {
+            "id": 8355,
+            "title": "A Era do Gelo 3"
+          },
+          {
+            "id": 68726,
+            "title": "Círculo de Fogo"
+          }
+        ]
+      },
+      "bert_base_pt": {
+        "matrix_literal": [
+          {
+            "id": 755898,
+            "title": "A Guerra dos Mundos"
+          },
+          {
+            "id": 603,
+            "title": "Matrix"
+          },
+          {
+            "id": 1419406,
+            "title": "Operação Sombra"
+          },
+          {
+            "id": 489,
+            "title": "Gênio Indomável"
+          },
+          {
+            "id": 207703,
+            "title": "Kingsman: Serviço Secreto"
+          }
+        ],
+        "matrix_simulacao": [
+          {
+            "id": 21835,
+            "title": "Uma Odisséia Chinesa: Parte Dois – Cinderela"
+          },
+          {
+            "id": 10625,
+            "title": "Meninas Malvadas"
+          },
+          {
+            "id": 1062722,
+            "title": "Frankenstein"
+          },
+          {
+            "id": 45612,
+            "title": "Contra o Tempo"
+          },
+          {
+            "id": 73861,
+            "title": "A Serbian Film - Terror sem Limites"
+          }
+        ],
+        "acao_maquinas": [
+          {
+            "id": 1234731,
+            "title": "Anaconda"
+          },
+          {
+            "id": 73861,
+            "title": "A Serbian Film - Terror sem Limites"
+          },
+          {
+            "id": 21835,
+            "title": "Uma Odisséia Chinesa: Parte Dois – Cinderela"
+          },
+          {
+            "id": 746036,
+            "title": "O Dublê"
+          },
+          {
+            "id": 533535,
+            "title": "Deadpool & Wolverine"
+          }
+        ],
+        "robo_amizade": [
+          {
+            "id": 2048,
+            "title": "Eu, Robô"
+          },
+          {
+            "id": 1184918,
+            "title": "Robô Selvagem"
+          },
+          {
+            "id": 68726,
+            "title": "Círculo de Fogo"
+          },
+          {
+            "id": 61791,
+            "title": "Planeta dos Macacos: A Origem"
+          },
+          {
+            "id": 552524,
+            "title": "Lilo & Stitch"
+          }
+        ],
+        "ia_rebelde": [
+          {
+            "id": 72190,
+            "title": "Guerra Mundial Z"
+          },
+          {
+            "id": 384018,
+            "title": "Velozes & Furiosos: Hobbs & Shaw"
+          },
+          {
+            "id": 8077,
+            "title": "Alien³"
+          },
+          {
+            "id": 10625,
+            "title": "Meninas Malvadas"
+          },
+          {
+            "id": 2048,
+            "title": "Eu, Robô"
+          }
+        ],
+        "viagem_no_tempo": [
+          {
+            "id": 105,
+            "title": "De Volta para o Futuro"
+          },
+          {
+            "id": 49519,
+            "title": "Os Croods"
+          },
+          {
+            "id": 137,
+            "title": "Feitiço do Tempo"
+          },
+          {
+            "id": 2756,
+            "title": "O Segredo do Abismo"
+          },
+          {
+            "id": 1234731,
+            "title": "Anaconda"
+          }
+        ],
+        "invasao_alienigena": [
+          {
+            "id": 602,
+            "title": "Independence Day"
+          },
+          {
+            "id": 127585,
+            "title": "X-Men: Dias de um Futuro Esquecido"
+          },
+          {
+            "id": 271110,
+            "title": "Capitão América: Guerra Civil"
+          },
+          {
+            "id": 607,
+            "title": "MIB - Homens de Preto"
+          },
+          {
+            "id": 945961,
+            "title": "Alien: Romulus"
+          }
+        ],
+        "casa_assombrada": [
+          {
+            "id": 138843,
+            "title": "Invocação do Mal"
+          },
+          {
+            "id": 259693,
+            "title": "Invocação do Mal 2"
+          },
+          {
+            "id": 447332,
+            "title": "Um Lugar Silencioso"
+          },
+          {
+            "id": 406563,
+            "title": "Sobrenatural: A Última Chave"
+          },
+          {
+            "id": 574475,
+            "title": "Premonição 6: Laços de Sangue"
+          }
+        ],
+        "possessao": [
+          {
+            "id": 18491,
+            "title": "Neon Genesis Evangelion: O Fim do Evangelho"
+          },
+          {
+            "id": 7131,
+            "title": "Van Helsing: O Caçador de Monstros"
+          },
+          {
+            "id": 10192,
+            "title": "Shrek Para Sempre"
+          },
+          {
+            "id": 280092,
+            "title": "Sobrenatural: A Origem"
+          },
+          {
+            "id": 436270,
+            "title": "Adão Negro"
+          }
+        ],
+        "zumbis": [
+          {
+            "id": 127585,
+            "title": "X-Men: Dias de um Futuro Esquecido"
+          },
+          {
+            "id": 713704,
+            "title": "A Morte do Demônio: A Ascensão"
+          },
+          {
+            "id": 19908,
+            "title": "Zumbilândia"
+          },
+          {
+            "id": 1242898,
+            "title": "Predador: Terras Selvagens"
+          },
+          {
+            "id": 176,
+            "title": "Jogos Mortais"
+          }
+        ],
+        "assassino_mascarado": [
+          {
+            "id": 19908,
+            "title": "Zumbilândia"
+          },
+          {
+            "id": 269149,
+            "title": "Zootopia: Essa Cidade é o Bicho"
+          },
+          {
+            "id": 169,
+            "title": "O Predador 2: A Caçada Continua"
+          },
+          {
+            "id": 475557,
+            "title": "Coringa"
+          },
+          {
+            "id": 273248,
+            "title": "Os Oito Odiados"
+          }
+        ],
+        "vampiros": [
+          {
+            "id": 18491,
+            "title": "Neon Genesis Evangelion: O Fim do Evangelho"
+          },
+          {
+            "id": 21835,
+            "title": "Uma Odisséia Chinesa: Parte Dois – Cinderela"
+          },
+          {
+            "id": 36648,
+            "title": "Blade Trinity"
+          },
+          {
+            "id": 384018,
+            "title": "Velozes & Furiosos: Hobbs & Shaw"
+          },
+          {
+            "id": 436969,
+            "title": "O Esquadrão Suicida"
+          }
+        ],
+        "astronautas_perdidos": [
+          {
+            "id": 127585,
+            "title": "X-Men: Dias de um Futuro Esquecido"
+          },
+          {
+            "id": 286217,
+            "title": "Perdido em Marte"
+          },
+          {
+            "id": 2756,
+            "title": "O Segredo do Abismo"
+          },
+          {
+            "id": 945961,
+            "title": "Alien: Romulus"
+          },
+          {
+            "id": 1241982,
+            "title": "Moana 2"
+          }
+        ],
+        "segunda_guerra": [
+          {
+            "id": 374720,
+            "title": "Dunkirk"
+          },
+          {
+            "id": 324786,
+            "title": "Até o Último Homem"
+          },
+          {
+            "id": 228150,
+            "title": "Corações de Ferro"
+          },
+          {
+            "id": 16869,
+            "title": "Bastardos Inglórios"
+          },
+          {
+            "id": 14097,
+            "title": "9º Pelotão"
+          }
+        ],
+        "comedia_romantica": [
+          {
+            "id": 27,
+            "title": "9 Canções"
+          },
+          {
+            "id": 81774,
+            "title": "A Iniciação"
+          },
+          {
+            "id": 21484,
+            "title": "Possessão"
+          },
+          {
+            "id": 746036,
+            "title": "O Dublê"
+          },
+          {
+            "id": 19404,
+            "title": "Dilwale vai levar a noiva"
+          }
+        ],
+        "prisao_injusta": [
+          {
+            "id": 9056,
+            "title": "Police Story: A Guerra das Drogas"
+          },
+          {
+            "id": 9739,
+            "title": "O Demolidor"
+          },
+          {
+            "id": 769,
+            "title": "Os Bons Companheiros"
+          },
+          {
+            "id": 1368,
+            "title": "Rambo: Programado Para Matar"
+          },
+          {
+            "id": 278,
+            "title": "Um Sonho de Liberdade"
+          }
+        ],
+        "mafia": [
+          {
+            "id": 769,
+            "title": "Os Bons Companheiros"
+          },
+          {
+            "id": 522627,
+            "title": "Magnatas do Crime"
+          },
+          {
+            "id": 269149,
+            "title": "Zootopia: Essa Cidade é o Bicho"
+          },
+          {
+            "id": 436969,
+            "title": "O Esquadrão Suicida"
+          },
+          {
+            "id": 1084242,
+            "title": "Zootopia 2"
+          }
+        ],
+        "mundo_falso": [
+          {
+            "id": 359410,
+            "title": "Matador de Aluguel"
+          },
+          {
+            "id": 10775,
+            "title": "Conflitos Internos"
+          },
+          {
+            "id": 346698,
+            "title": "Barbie"
+          },
+          {
+            "id": 49519,
+            "title": "Os Croods"
+          },
+          {
+            "id": 263115,
+            "title": "Logan"
+          }
+        ],
+        "enganar_a_morte": [
+          {
+            "id": 49018,
+            "title": "Sobrenatural"
+          },
+          {
+            "id": 9358,
+            "title": "Premonição 2"
+          },
+          {
+            "id": 574475,
+            "title": "Premonição 6: Laços de Sangue"
+          },
+          {
+            "id": 614479,
+            "title": "Sobrenatural: A Porta Vermelha"
+          },
+          {
+            "id": 9286,
+            "title": "Premonição 3"
+          }
+        ],
+        "dinossauros": [
+          {
+            "id": 329,
+            "title": "Jurassic Park: O Parque dos Dinossauros"
+          },
+          {
+            "id": 8078,
+            "title": "Alien: A Ressurreição"
+          },
+          {
+            "id": 19995,
+            "title": "Avatar"
+          },
+          {
+            "id": 2048,
+            "title": "Eu, Robô"
+          },
+          {
+            "id": 9360,
+            "title": "Anaconda"
+          }
+        ]
+      },
+      "sentenca_minilm": {
+        "matrix_literal": [
+          {
+            "id": 603,
+            "title": "Matrix"
+          },
+          {
+            "id": 9323,
+            "title": "Ghost in the Shell: O Fantasma do Futuro"
+          },
+          {
+            "id": 205596,
+            "title": "O Jogo da Imitação"
+          },
+          {
+            "id": 218,
+            "title": "O Exterminador do Futuro"
+          },
+          {
+            "id": 489,
+            "title": "Gênio Indomável"
+          }
+        ],
+        "matrix_simulacao": [
+          {
+            "id": 550988,
+            "title": "Free Guy: Assumindo o Controle"
+          },
+          {
+            "id": 603,
+            "title": "Matrix"
+          },
+          {
+            "id": 82507,
+            "title": "A Entidade"
+          },
+          {
+            "id": 2667,
+            "title": "A Bruxa de Blair"
+          },
+          {
+            "id": 565,
+            "title": "O Chamado"
+          }
+        ],
+        "acao_maquinas": [
+          {
+            "id": 218,
+            "title": "O Exterminador do Futuro"
+          },
+          {
+            "id": 2048,
+            "title": "Eu, Robô"
+          },
+          {
+            "id": 78,
+            "title": "Blade Runner: O Caçador de Andróides"
+          },
+          {
+            "id": 177572,
+            "title": "Operação Big Hero"
+          },
+          {
+            "id": 39254,
+            "title": "Gigantes de Aço"
+          }
+        ],
+        "robo_amizade": [
+          {
+            "id": 1184918,
+            "title": "Robô Selvagem"
+          },
+          {
+            "id": 1064028,
+            "title": "Alice: Subservience"
+          },
+          {
+            "id": 177572,
+            "title": "Operação Big Hero"
+          },
+          {
+            "id": 2048,
+            "title": "Eu, Robô"
+          },
+          {
+            "id": 78,
+            "title": "Blade Runner: O Caçador de Andróides"
+          }
+        ],
+        "ia_rebelde": [
+          {
+            "id": 2048,
+            "title": "Eu, Robô"
+          },
+          {
+            "id": 218,
+            "title": "O Exterminador do Futuro"
+          },
+          {
+            "id": 78,
+            "title": "Blade Runner: O Caçador de Andróides"
+          },
+          {
+            "id": 1064028,
+            "title": "Alice: Subservience"
+          },
+          {
+            "id": 99861,
+            "title": "Vingadores: Era de Ultron"
+          }
+        ],
+        "viagem_no_tempo": [
+          {
+            "id": 14139,
+            "title": "Crimes Temporais"
+          },
+          {
+            "id": 165,
+            "title": "De Volta para o Futuro II"
+          },
+          {
+            "id": 14161,
+            "title": "2012"
+          },
+          {
+            "id": 120467,
+            "title": "O Grande Hotel Budapeste"
+          },
+          {
+            "id": 137,
+            "title": "Feitiço do Tempo"
+          }
+        ],
+        "invasao_alienigena": [
+          {
+            "id": 563,
+            "title": "Tropas Estelares"
+          },
+          {
+            "id": 602,
+            "title": "Independence Day"
+          },
+          {
+            "id": 169,
+            "title": "O Predador 2: A Caçada Continua"
+          },
+          {
+            "id": 957,
+            "title": "S.O.S.: Tem um Louco Solto no Espaço"
+          },
+          {
+            "id": 95,
+            "title": "Armageddon"
+          }
+        ],
+        "casa_assombrada": [
+          {
+            "id": 447332,
+            "title": "Um Lugar Silencioso"
+          },
+          {
+            "id": 109428,
+            "title": "A Morte do Demônio"
+          },
+          {
+            "id": 493922,
+            "title": "Hereditário"
+          },
+          {
+            "id": 4011,
+            "title": "Os Fantasmas se Divertem"
+          },
+          {
+            "id": 1933,
+            "title": "Os Outros"
+          }
+        ],
+        "possessao": [
+          {
+            "id": 2978,
+            "title": "Os Caça-Fantasmas 2"
+          },
+          {
+            "id": 561,
+            "title": "Constantine"
+          },
+          {
+            "id": 423108,
+            "title": "Invocação do Mal 3: A Ordem do Demônio"
+          },
+          {
+            "id": 622,
+            "title": "O Último Portal"
+          },
+          {
+            "id": 933260,
+            "title": "A Substância"
+          }
+        ],
+        "zumbis": [
+          {
+            "id": 1100988,
+            "title": "Extermínio: A Evolução"
+          },
+          {
+            "id": 170,
+            "title": "Extermínio"
+          },
+          {
+            "id": 273248,
+            "title": "Os Oito Odiados"
+          },
+          {
+            "id": 1233413,
+            "title": "Pecadores"
+          },
+          {
+            "id": 55779,
+            "title": "Premonição 5"
+          }
+        ],
+        "assassino_mascarado": [
+          {
+            "id": 4247,
+            "title": "Todo Mundo em Pânico"
+          },
+          {
+            "id": 377,
+            "title": "A Hora do Pesadelo"
+          },
+          {
+            "id": 4232,
+            "title": "Pânico"
+          },
+          {
+            "id": 934433,
+            "title": "Pânico VI"
+          },
+          {
+            "id": 270303,
+            "title": "Corrente do Mal"
+          }
+        ],
+        "vampiros": [
+          {
+            "id": 628,
+            "title": "Entrevista com o Vampiro"
+          },
+          {
+            "id": 36586,
+            "title": "Blade II: O Caçador de Vampiros"
+          },
+          {
+            "id": 713704,
+            "title": "A Morte do Demônio: A Ascensão"
+          },
+          {
+            "id": 6114,
+            "title": "Drácula de Bram Stoker"
+          },
+          {
+            "id": 1038392,
+            "title": "Invocação do Mal 4: O Último Ritual"
+          }
+        ],
+        "astronautas_perdidos": [
+          {
+            "id": 945961,
+            "title": "Alien: Romulus"
+          },
+          {
+            "id": 157336,
+            "title": "Interestelar"
+          },
+          {
+            "id": 286217,
+            "title": "Perdido em Marte"
+          },
+          {
+            "id": 8413,
+            "title": "O Enigma do Horizonte"
+          },
+          {
+            "id": 957,
+            "title": "S.O.S.: Tem um Louco Solto no Espaço"
+          }
+        ],
+        "segunda_guerra": [
+          {
+            "id": 228150,
+            "title": "Corações de Ferro"
+          },
+          {
+            "id": 374720,
+            "title": "Dunkirk"
+          },
+          {
+            "id": 14097,
+            "title": "9º Pelotão"
+          },
+          {
+            "id": 45612,
+            "title": "Contra o Tempo"
+          },
+          {
+            "id": 857,
+            "title": "O Resgate do Soldado Ryan"
+          }
+        ],
+        "comedia_romantica": [
+          {
+            "id": 2251,
+            "title": "Infidelidade"
+          },
+          {
+            "id": 337167,
+            "title": "Cinquenta Tons de Liberdade"
+          },
+          {
+            "id": 313369,
+            "title": "La La Land: Cantando Estações"
+          },
+          {
+            "id": 744275,
+            "title": "After: Depois do Desencontro"
+          },
+          {
+            "id": 530385,
+            "title": "Midsommar: O Mal Não Espera a Noite"
+          }
+        ],
+        "prisao_injusta": [
+          {
+            "id": 278,
+            "title": "Um Sonho de Liberdade"
+          },
+          {
+            "id": 176,
+            "title": "Jogos Mortais"
+          },
+          {
+            "id": 497,
+            "title": "À Espera de um Milagre"
+          },
+          {
+            "id": 377,
+            "title": "A Hora do Pesadelo"
+          },
+          {
+            "id": 1368,
+            "title": "Rambo: Programado Para Matar"
+          }
+        ],
+        "mafia": [
+          {
+            "id": 522627,
+            "title": "Magnatas do Crime"
+          },
+          {
+            "id": 9737,
+            "title": "Os Bad Boys"
+          },
+          {
+            "id": 769,
+            "title": "Os Bons Companheiros"
+          },
+          {
+            "id": 1422,
+            "title": "Os Infiltrados"
+          },
+          {
+            "id": 629542,
+            "title": "Os Caras Malvados"
+          }
+        ],
+        "mundo_falso": [
+          {
+            "id": 550988,
+            "title": "Free Guy: Assumindo o Controle"
+          },
+          {
+            "id": 2978,
+            "title": "Os Caça-Fantasmas 2"
+          },
+          {
+            "id": 19995,
+            "title": "Avatar"
+          },
+          {
+            "id": 49521,
+            "title": "O Homem de Aço"
+          },
+          {
+            "id": 603,
+            "title": "Matrix"
+          }
+        ],
+        "enganar_a_morte": [
+          {
+            "id": 9286,
+            "title": "Premonição 3"
+          },
+          {
+            "id": 9358,
+            "title": "Premonição 2"
+          },
+          {
+            "id": 55779,
+            "title": "Premonição 5"
+          },
+          {
+            "id": 1233413,
+            "title": "Pecadores"
+          },
+          {
+            "id": 4247,
+            "title": "Todo Mundo em Pânico"
+          }
+        ],
+        "dinossauros": [
+          {
+            "id": 1234821,
+            "title": "Jurassic World: Recomeço"
+          },
+          {
+            "id": 329,
+            "title": "Jurassic Park: O Parque dos Dinossauros"
+          },
+          {
+            "id": 8078,
+            "title": "Alien: A Ressurreição"
+          },
+          {
+            "id": 8355,
+            "title": "A Era do Gelo 3"
+          },
+          {
+            "id": 70981,
+            "title": "Prometheus"
+          }
+        ]
+      },
+      "combinacao": {
+        "matrix_literal": [
+          {
+            "id": 603,
+            "title": "Matrix"
+          },
+          {
+            "id": 9323,
+            "title": "Ghost in the Shell: O Fantasma do Futuro"
+          },
+          {
+            "id": 205596,
+            "title": "O Jogo da Imitação"
+          },
+          {
+            "id": 218,
+            "title": "O Exterminador do Futuro"
+          },
+          {
+            "id": 489,
+            "title": "Gênio Indomável"
+          }
+        ],
+        "matrix_simulacao": [
+          {
+            "id": 550988,
+            "title": "Free Guy: Assumindo o Controle"
+          },
+          {
+            "id": 603,
+            "title": "Matrix"
+          },
+          {
+            "id": 9502,
+            "title": "Kung Fu Panda"
+          },
+          {
+            "id": 686,
+            "title": "Contato"
+          },
+          {
+            "id": 19995,
+            "title": "Avatar"
+          }
+        ],
+        "acao_maquinas": [
+          {
+            "id": 218,
+            "title": "O Exterminador do Futuro"
+          },
+          {
+            "id": 39254,
+            "title": "Gigantes de Aço"
+          },
+          {
+            "id": 604,
+            "title": "Matrix Reloaded"
+          },
+          {
+            "id": 2048,
+            "title": "Eu, Robô"
+          },
+          {
+            "id": 78,
+            "title": "Blade Runner: O Caçador de Andróides"
+          }
+        ],
+        "robo_amizade": [
+          {
+            "id": 1184918,
+            "title": "Robô Selvagem"
+          },
+          {
+            "id": 177572,
+            "title": "Operação Big Hero"
+          },
+          {
+            "id": 1064028,
+            "title": "Alice: Subservience"
+          },
+          {
+            "id": 552524,
+            "title": "Lilo & Stitch"
+          },
+          {
+            "id": 10386,
+            "title": "O Gigante de Ferro"
+          }
+        ],
+        "ia_rebelde": [
+          {
+            "id": 1064028,
+            "title": "Alice: Subservience"
+          },
+          {
+            "id": 99861,
+            "title": "Vingadores: Era de Ultron"
+          },
+          {
+            "id": 218,
+            "title": "O Exterminador do Futuro"
+          },
+          {
+            "id": 2048,
+            "title": "Eu, Robô"
+          },
+          {
+            "id": 78,
+            "title": "Blade Runner: O Caçador de Andróides"
+          }
+        ],
+        "viagem_no_tempo": [
+          {
+            "id": 63,
+            "title": "Os 12 Macacos"
+          },
+          {
+            "id": 105,
+            "title": "De Volta para o Futuro"
+          },
+          {
+            "id": 14139,
+            "title": "Crimes Temporais"
+          },
+          {
+            "id": 861,
+            "title": "O Vingador do Futuro"
+          },
+          {
+            "id": 137,
+            "title": "Feitiço do Tempo"
+          }
+        ],
+        "invasao_alienigena": [
+          {
+            "id": 602,
+            "title": "Independence Day"
+          },
+          {
+            "id": 563,
+            "title": "Tropas Estelares"
+          },
+          {
+            "id": 329865,
+            "title": "A Chegada"
+          },
+          {
+            "id": 137113,
+            "title": "No Limite do Amanhã"
+          },
+          {
+            "id": 95,
+            "title": "Armageddon"
+          }
+        ],
+        "casa_assombrada": [
+          {
+            "id": 259693,
+            "title": "Invocação do Mal 2"
+          },
+          {
+            "id": 1933,
+            "title": "Os Outros"
+          },
+          {
+            "id": 138843,
+            "title": "Invocação do Mal"
+          },
+          {
+            "id": 493922,
+            "title": "Hereditário"
+          },
+          {
+            "id": 447332,
+            "title": "Um Lugar Silencioso"
+          }
+        ],
+        "possessao": [
+          {
+            "id": 423108,
+            "title": "Invocação do Mal 3: A Ordem do Demônio"
+          },
+          {
+            "id": 439079,
+            "title": "A Freira"
+          },
+          {
+            "id": 2978,
+            "title": "Os Caça-Fantasmas 2"
+          },
+          {
+            "id": 561,
+            "title": "Constantine"
+          },
+          {
+            "id": 622,
+            "title": "O Último Portal"
+          }
+        ],
+        "zumbis": [
+          {
+            "id": 924,
+            "title": "Madrugada dos Mortos"
+          },
+          {
+            "id": 170,
+            "title": "Extermínio"
+          },
+          {
+            "id": 1100988,
+            "title": "Extermínio: A Evolução"
+          },
+          {
+            "id": 602,
+            "title": "Independence Day"
+          },
+          {
+            "id": 9286,
+            "title": "Premonição 3"
+          }
+        ],
+        "assassino_mascarado": [
+          {
+            "id": 4247,
+            "title": "Todo Mundo em Pânico"
+          },
+          {
+            "id": 4232,
+            "title": "Pânico"
+          },
+          {
+            "id": 377,
+            "title": "A Hora do Pesadelo"
+          },
+          {
+            "id": 934433,
+            "title": "Pânico VI"
+          },
+          {
+            "id": 604079,
+            "title": "A Longa Marcha: Caminhe ou Morra"
+          }
+        ],
+        "vampiros": [
+          {
+            "id": 36586,
+            "title": "Blade II: O Caçador de Vampiros"
+          },
+          {
+            "id": 628,
+            "title": "Entrevista com o Vampiro"
+          },
+          {
+            "id": 713704,
+            "title": "A Morte do Demônio: A Ascensão"
+          },
+          {
+            "id": 6114,
+            "title": "Drácula de Bram Stoker"
+          },
+          {
+            "id": 1547,
+            "title": "Os Garotos Perdidos"
+          }
+        ],
+        "astronautas_perdidos": [
+          {
+            "id": 8413,
+            "title": "O Enigma do Horizonte"
+          },
+          {
+            "id": 157336,
+            "title": "Interestelar"
+          },
+          {
+            "id": 679,
+            "title": "Aliens: O Resgate"
+          },
+          {
+            "id": 945961,
+            "title": "Alien: Romulus"
+          },
+          {
+            "id": 950396,
+            "title": "Entre Montanhas"
+          }
+        ],
+        "segunda_guerra": [
+          {
+            "id": 228150,
+            "title": "Corações de Ferro"
+          },
+          {
+            "id": 374720,
+            "title": "Dunkirk"
+          },
+          {
+            "id": 14097,
+            "title": "9º Pelotão"
+          },
+          {
+            "id": 16869,
+            "title": "Bastardos Inglórios"
+          },
+          {
+            "id": 324786,
+            "title": "Até o Último Homem"
+          }
+        ],
+        "comedia_romantica": [
+          {
+            "id": 337167,
+            "title": "Cinquenta Tons de Liberdade"
+          },
+          {
+            "id": 2251,
+            "title": "Infidelidade"
+          },
+          {
+            "id": 1084199,
+            "title": "Acompanhante Perfeita"
+          },
+          {
+            "id": 4951,
+            "title": "10 Coisas Que Eu Odeio em Você"
+          },
+          {
+            "id": 530385,
+            "title": "Midsommar: O Mal Não Espera a Noite"
+          }
+        ],
+        "prisao_injusta": [
+          {
+            "id": 1368,
+            "title": "Rambo: Programado Para Matar"
+          },
+          {
+            "id": 278,
+            "title": "Um Sonho de Liberdade"
+          },
+          {
+            "id": 53653,
+            "title": "Prisioneiro do Inferno"
+          },
+          {
+            "id": 73,
+            "title": "A Outra História Americana"
+          },
+          {
+            "id": 1054867,
+            "title": "Uma Batalha Após a Outra"
+          }
+        ],
+        "mafia": [
+          {
+            "id": 1422,
+            "title": "Os Infiltrados"
+          },
+          {
+            "id": 522627,
+            "title": "Magnatas do Crime"
+          },
+          {
+            "id": 769,
+            "title": "Os Bons Companheiros"
+          },
+          {
+            "id": 718930,
+            "title": "Trem-Bala"
+          },
+          {
+            "id": 9737,
+            "title": "Os Bad Boys"
+          }
+        ],
+        "mundo_falso": [
+          {
+            "id": 550988,
+            "title": "Free Guy: Assumindo o Controle"
+          },
+          {
+            "id": 346698,
+            "title": "Barbie"
+          },
+          {
+            "id": 49521,
+            "title": "O Homem de Aço"
+          },
+          {
+            "id": 950387,
+            "title": "Um Filme Minecraft"
+          },
+          {
+            "id": 603,
+            "title": "Matrix"
+          }
+        ],
+        "enganar_a_morte": [
+          {
+            "id": 9286,
+            "title": "Premonição 3"
+          },
+          {
+            "id": 9358,
+            "title": "Premonição 2"
+          },
+          {
+            "id": 55779,
+            "title": "Premonição 5"
+          },
+          {
+            "id": 1233413,
+            "title": "Pecadores"
+          },
+          {
+            "id": 49018,
+            "title": "Sobrenatural"
+          }
+        ],
+        "dinossauros": [
+          {
+            "id": 329,
+            "title": "Jurassic Park: O Parque dos Dinossauros"
+          },
+          {
+            "id": 1234821,
+            "title": "Jurassic World: Recomeço"
+          },
+          {
+            "id": 8078,
+            "title": "Alien: A Ressurreição"
+          },
+          {
+            "id": 8355,
+            "title": "A Era do Gelo 3"
+          },
+          {
+            "id": 70981,
+            "title": "Prometheus"
+          }
+        ]
+      }
+    },
+    "precisao": {
+      "bow_sem_pontuacao": {
+        "p@3": 0.15,
+        "p@5": 0.14
+      },
+      "bow_sem_stopwords": {
+        "p@3": 0.4167,
+        "p@5": 0.35
+      },
+      "tfidf_sem_pontuacao": {
+        "p@3": 0.5667,
+        "p@5": 0.46
+      },
+      "tfidf_sem_stopwords": {
+        "p@3": 0.5667,
+        "p@5": 0.44
+      },
+      "word2vec_cbow": {
+        "p@3": 0.35,
+        "p@5": 0.3
+      },
+      "word2vec_skipgram": {
+        "p@3": 0.3333,
+        "p@5": 0.3
+      },
+      "bert_base_pt": {
+        "p@3": 0.2833,
+        "p@5": 0.25
+      },
+      "sentenca_minilm": {
+        "p@3": 0.6167,
+        "p@5": 0.49
+      },
+      "combinacao": {
+        "p@3": 0.7,
+        "p@5": 0.57
+      }
+    }
+  },
+  "dados_novos": {
+    "tfidf_sem_stopwords": {
+      "treino": 325,
+      "teste": 3182,
+      "f1_macro": 0.5326,
+      "acuracia": 0.5739,
+      "f1_por_genero": {
+        "Drama": 0.6598,
+        "Comédia": 0.5134,
+        "Terror": 0.4739,
+        "Ficção científica": 0.4834
+      },
+      "suporte": {
+        "Drama": 1642,
+        "Comédia": 884,
+        "Terror": 363,
+        "Ficção científica": 293
+      },
+      "matriz_confusao": [
+        [
+          992,
+          316,
+          143,
+          191
+        ],
+        [
+          260,
+          451,
+          75,
+          98
+        ],
+        [
+          77,
+          64,
+          186,
+          36
+        ],
+        [
+          36,
+          42,
+          18,
+          197
+        ]
+      ],
+      "generos": [
+        "Drama",
+        "Comédia",
+        "Terror",
+        "Ficção científica"
+      ]
+    },
+    "sentenca_minilm": {
+      "treino": 325,
+      "teste": 3182,
+      "f1_macro": 0.5865,
+      "acuracia": 0.6307,
+      "f1_por_genero": {
+        "Drama": 0.7254,
+        "Comédia": 0.5416,
+        "Terror": 0.5161,
+        "Ficção científica": 0.5629
+      },
+      "suporte": {
+        "Drama": 1642,
+        "Comédia": 884,
+        "Terror": 363,
+        "Ficção científica": 293
+      },
+      "matriz_confusao": [
+        [
+          1137,
+          229,
+          179,
+          97
+        ],
+        [
+          273,
+          449,
+          95,
+          67
+        ],
+        [
+          59,
+          48,
+          233,
+          23
+        ],
+        [
+          24,
+          48,
+          33,
+          188
+        ]
+      ],
+      "generos": [
+        "Drama",
+        "Comédia",
+        "Terror",
+        "Ficção científica"
+      ]
+    }
+  }
+}

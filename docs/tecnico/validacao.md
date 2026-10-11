@@ -100,6 +100,15 @@ Merge da branch `luana-classificacao` (ADRs 0017 e 0018) no `trabalho-3`. As ADR
 | Classificação | `data/classificacao/tmdb_2026-09-12` foi regenerada a partir dos vetores novos (`--vectors`); `verify` aprovou os 25 arquivos. Métricas e relatório idênticos aos da branch; mudaram só as probabilidades do BERTimbau, na sexta casa decimal, e o manifesto. |
 | Jev com os rótulos do TMDB | Nova amostra de 120 sinopses: 47 respostas reaproveitadas e 73 chamadas novas (`jev-1.13.0`), nenhuma falha, em 41 s. `verify` aprovou os 7 arquivos. Repetição com `--reuse` a partir da entrega: 0 chamadas e arquivos de conteúdo idênticos byte a byte. Acurácia de 85,0% contra 56,0% da referência nos 100 filmes de um gênero. A primeira tentativa falhou com HTTP 403 e não gravou nada; a chave foi trocada em `backend/.env`. |
 
+## Trabalho da Unidade 3 (10/10/2026)
+
+| Verificação | Resultado e alcance |
+|---|---|
+| Varredura de k | 8 representações × k = 2 a 10 em 1 min 46 s; `verify` aprovado. Silhueta máxima de 0,098 (BERTimbau, k = 2); ARI máximo de 0,144 (BERTimbau, k = 4 e 5). 3 testes em `test_clustering_sweep.py`. |
+| Busca, top-3 e top-5 | `coletar_resultados.py` nas 20 consultas anotadas: combinação P@3 0,70 e P@5 0,57; MiniLM 0,62 e 0,49; TF-IDF sem stopwords 0,57 e 0,44; BERTimbau 0,28 e 0,25. |
+| Classificador em dados novos | Treinado nas 325 sinopses de um gênero da amostra e aplicado a 3.182 sinopses do catálogo fora da amostra, com um dos quatro gêneros: MiniLM F1 macro 0,587 e acurácia 0,631 (validação cruzada: 0,661); TF-IDF 0,533 e 0,574 (0,592). Terror cai de 0,693 para 0,516 no MiniLM. |
+| Documento | `gerar_documento.py` gerou o `.docx` com 6 figuras e 11 tabelas; o Word exportou o PDF com 12 páginas, conferidas página a página. Quatro afirmações da primeira versão não batiam com os números (faixa da silhueta nas lexicais, floresta aleatória no MiniLM, tamanho da queda em dados novos e gênero mais difícil) e foram corrigidas antes da entrega. |
+
 ## Entidades e relações (10/10/2026)
 
 Decisões no [ADR 0027](../adr/0027-entidades-e-relacoes.md).

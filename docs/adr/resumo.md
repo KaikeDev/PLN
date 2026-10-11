@@ -33,6 +33,7 @@ O código não tem comentários fora de docstrings. Quando uma docstring cita �
 | [0025](#0025--preparação-da-consulta-da-busca-por-tema) | Preparação da consulta da busca por tema | Busca |
 | [0026](#0026--análise-de-sentimentos-de-críticas-do-tmdb-aula-9) | Análise de sentimentos de críticas do TMDB (Aula 9) | Método |
 | [0027](#0027--entidades-nomeadas-e-relações-nas-sinopses-com-o-spacy-aula-9) | Entidades nomeadas e relações nas sinopses com o spaCy (Aula 9) | Método |
+| [0028](#0028--varredura-do-número-de-clusters-com-métricas-intra-e-intercluster) | Varredura do número de clusters com métricas intra e intercluster | Método |
 
 ---
 
@@ -330,3 +331,11 @@ As análises que estavam juntas em `vectors/analyses.py` foram separadas por tar
 **Por quê.** O projeto não tinha modelo de NER ou parsing, e o notebook usa o spaCy. Os créditos medem as pessoas sem anotação manual.
 
 **Consequência.** Revocação de pessoas de 73,7% e precisão estimada de 81,6%; 1.435 triplas, 35% delas com um pronome como sujeito, que fica sem correferência. [Detalhes](0027-entidades-e-relacoes.md)
+
+## 0028 — Varredura do número de clusters com métricas intra e intercluster
+
+**Decisão.** O mesmo K-Means da Etapa 2 roda para k de 2 a 10 nas oito representações, com métricas intracluster, intercluster, silhueta, Davies-Bouldin, Calinski-Harabasz e ARI/NMI/pureza contra os gêneros, numa pasta própria (`data/agrupamento`).
+
+**Por quê.** O Trabalho da Unidade 3 pede a melhor quantidade de clusters e a interpretação das métricas intra e intercluster; a Etapa 2 só usava k = 4 e métricas externas.
+
+**Consequência.** Silhueta abaixo de 0,10 em todas: não há grupos naturais bem separados, e as métricas internas não concordam sobre k. Contra os gêneros, o BERTimbau com k = 4 a 5 é o melhor (ARI de 0,144). [Detalhes](0028-varredura-do-numero-de-clusters.md)

@@ -1,0 +1,6 @@
+{
+  "k_min": 2,
+  "k_max": 10,
+  "random_state": 42,
+  "top_terms": 8
+}

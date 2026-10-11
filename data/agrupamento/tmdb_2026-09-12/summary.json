@@ -1,0 +1,58 @@
+{
+  "bow_sem_pontuacao": {
+    "maior_silhueta": 2,
+    "menor_davies_bouldin": 10,
+    "maior_calinski_harabasz": 2,
+    "maior_ari": 10,
+    "maior_nmi": 10
+  },
+  "bow_sem_stopwords": {
+    "maior_silhueta": 9,
+    "menor_davies_bouldin": 10,
+    "maior_calinski_harabasz": 2,
+    "maior_ari": 8,
+    "maior_nmi": 8
+  },
+  "tfidf_sem_pontuacao": {
+    "maior_silhueta": 2,
+    "menor_davies_bouldin": 10,
+    "maior_calinski_harabasz": 2,
+    "maior_ari": 10,
+    "maior_nmi": 10
+  },
+  "tfidf_sem_stopwords": {
+    "maior_silhueta": 2,
+    "menor_davies_bouldin": 10,
+    "maior_calinski_harabasz": 2,
+    "maior_ari": 10,
+    "maior_nmi": 10
+  },
+  "word2vec_cbow": {
+    "maior_silhueta": 2,
+    "menor_davies_bouldin": 8,
+    "maior_calinski_harabasz": 2,
+    "maior_ari": 5,
+    "maior_nmi": 8
+  },
+  "word2vec_skipgram": {
+    "maior_silhueta": 2,
+    "menor_davies_bouldin": 9,
+    "maior_calinski_harabasz": 2,
+    "maior_ari": 6,
+    "maior_nmi": 10
+  },
+  "bert_base_pt": {
+    "maior_silhueta": 2,
+    "menor_davies_bouldin": 10,
+    "maior_calinski_harabasz": 2,
+    "maior_ari": 4,
+    "maior_nmi": 10
+  },
+  "sentenca_minilm": {
+    "maior_silhueta": 2,
+    "menor_davies_bouldin": 9,
+    "maior_calinski_harabasz": 2,
+    "maior_ari": 9,
+    "maior_nmi": 9
+  }
+}

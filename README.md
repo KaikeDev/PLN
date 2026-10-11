@@ -13,7 +13,7 @@ Equipe: Kaike Ventura Tuerpe, Luana Nitsche, Pedro Henrique Ortunio e Thiago Bod
 | 2 | Representações | BoW, TF-IDF, word2vec (CBOW e skip-gram), BERTimbau e embedding de sentença | 8 representações comparadas em todas as tarefas | [2-representacoes.md](docs/2-representacoes.md) | [`representations/`](backend/src/app/representations/) |
 | 3 | Busca | Regras para gênero e período + 0,3 × TF-IDF + 0,7 × embedding de sentença; no site, num catálogo de 5.525 filmes | MAP de 0,613 em 20 consultas anotadas | [3-busca.md](docs/3-busca.md) | [`search/`](backend/src/app/search/) |
 | 4 | Recomendação | Filmes parecidos com um filme ou com um perfil; no site, na ficha de cada filme, no mesmo catálogo | Precisão @5 de 63,6% (BERTimbau) contra 37,9% ao acaso | [4-recomendacao.md](docs/4-recomendacao.md) | [`recommendation/`](backend/src/app/recommendation/) |
-| 5 | Agrupamento e visualização | K-Means sem rótulos e projeção 2D | Grupos lembram pouco os gêneros (ARI de até 0,144) | [5-agrupamento.md](docs/5-agrupamento.md) | [`clustering/`](backend/src/app/clustering/) |
+| 5 | Agrupamento e visualização | K-Means sem rótulos, projeção 2D e varredura de k = 2 a 10 | Grupos lembram pouco os gêneros (ARI de até 0,144) | [5-agrupamento.md](docs/5-agrupamento.md) | [`clustering/`](backend/src/app/clustering/) |
 | 6 | Classificação | Regressão logística nas 8 representações, Jev sem treino e classificação na tela | F1 de 71,0% (skip-gram); Jev com 85,0% de acurácia | [6-classificacao.md](docs/6-classificacao.md) | [`classification/`](backend/src/app/classification/) |
 | 7 | Análise de sentimentos (Aula 9) | 1.859 críticas do TMDB rotuladas pela nota do autor; polaridade e nota com as 8 representações; análise de críticas na tela | F1 macro de 86,7% (BERTimbau) e 85,6% (TF-IDF); nota com erro médio de 1,33 ponto | [7-sentimentos.md](docs/7-sentimentos.md) | [`sentiment/`](backend/src/app/sentiment/) |
 | 8 | Entidades e relações (Aula 9) | spaCy `pt_core_news_sm` e as regras de dependência do notebook nas 428 sinopses; entidades e relações na ficha do filme | 73,7% das pessoas creditadas reconhecidas como pessoa; 1.435 triplas | [8-entidades-e-relacoes.md](docs/8-entidades-e-relacoes.md) | [`entities/`](backend/src/app/entities/) |
@@ -45,7 +45,7 @@ docs/
   1-coleta-e-preparacao.md … 8-entidades-e-relacoes.md   ← uma explicação por tarefa
   tecnico/                ← como executar, arquitetura, validação, decisões, dicionário de dados
   adr/                    ← registro das decisões (ADRs) e resumo
-  entregas/               ← documento Word da Etapa 1
+  entregas/               ← documentos de entrega: Etapa 1 e Trabalho da Unidade 3 (unidade-3/)
 config/                   ← parâmetros de cada etapa: coleta/, representacoes/, busca/, classificacao/, sentimento/, entidades/
 data/                     ← resultados entregues, com manifesto e hashes
   coleta/  preparacao/  representacoes/  classificacao/  jev/  sentimento/  entidades/

@@ -23,6 +23,7 @@ Na orientação em vídeo de 31/08/2026, o professor pede representações suces
 | Preparação da consulta | A busca por tema tira palavras de pedido e recoloca acentos do vocabulário antes de ordenar | [0025](../adr/0025-preparacao-da-consulta.md) |
 | Análise de sentimentos | Críticas do TMDB rotuladas pela nota do autor; polaridade e nota com as 8 representações; dobras por filme e teste entre autores; tela com TF-IDF | [0026](../adr/0026-analise-de-sentimentos.md) |
 | Entidades e relações | spaCy `pt_core_news_sm` com as regras do notebook da Aula 9 e a regra de coordenação; NER conferido com os créditos do TMDB; rota `/entidades` na ficha do filme | [0027](../adr/0027-entidades-e-relacoes.md) |
+| Número de clusters | Varredura de k = 2 a 10 com métricas intra e intercluster e contra os gêneros; agrupamento da Etapa 2 inalterado | [0028](../adr/0028-varredura-do-numero-de-clusters.md) |
 | Recomendação no site | Filmes parecidos na ficha do filme: os 5 de maior cosseno no embedding de sentença; `GET /filmes/{id}/parecidos` | [0023](../adr/0023-recomendacao-no-site.md) |
 | Classificação na tela | Regressão logística da Etapa 3 sobre o embedding de sentença, ajustada com as 325 sinopses de um gênero; `GET /classificacao` | [0021](../adr/0021-classificacao-na-tela.md) |
 | Aula 8 | Classificação de gêneros com as oito representações, classificadores alternativos e K-Means × classificador | [0017](../adr/0017-aula8-classificacao-de-generos.md) |
