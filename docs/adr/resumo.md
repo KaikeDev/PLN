@@ -35,6 +35,7 @@ O código não tem comentários fora de docstrings. Quando uma docstring cita �
 | [0027](#0027--entidades-nomeadas-e-relações-nas-sinopses-com-o-spacy-aula-9) | Entidades nomeadas e relações nas sinopses com o spaCy (Aula 9) | Método |
 | [0028](#0028--varredura-do-número-de-clusters-com-métricas-intra-e-intercluster) | Varredura do número de clusters com métricas intra e intercluster | Método |
 | [0029](#0029--base-de-llm-por-api-gratuita-unidade-4) | Base de LLM por API gratuita (Unidade 4) | Arquitetura |
+| [0030](#0030--interpretação-da-consulta-por-llm-unidade-4) | Interpretação da consulta por LLM (Unidade 4) | Busca |
 
 ---
 
@@ -348,3 +349,11 @@ As análises que estavam juntas em `vectors/analyses.py` foram separadas por tar
 **Por quê.** A Unidade 4 pede técnicas com LLM, e o grupo escolheu só API gratuita. A cota gratuita acaba, muda sem aviso e pode ser esgotada pelo site público, e as respostas variam entre execuções. Um SDK por provedor traria políticas de erro e retry diferentes das do projeto.
 
 **Consequência.** As três técnicas da Unidade 4 usam a mesma porta e são testadas sem rede. Quando a cota acaba, o site degrada para as regras ou para os exemplos gravados. O que vale é o modelo exato gravado em cada resposta, não o alias configurado. [Detalhes](0029-base-de-llm-por-api-gratuita.md)
+
+## 0030 — Interpretação da consulta por LLM (Unidade 4)
+
+**Decisão.** Um LLM com saída estruturada extrai da frase os mesmos filtros das regras: gêneros, com a lista do catálogo como `enum`, exclusões, período e qualidade. O site usa a variante few-shot e, se o LLM falhar ou passar de 4 s, as regras; a resposta diz quem interpretou. O tema que o LLM separa não substitui a frase na busca por tema.
+
+**Por quê.** Em 50 frases anotadas antes da execução, as regras acertam 44% e põem filtro errado em 11; o LLM few-shot acerta de 94% a 98%, sem filtro inventado. Ele resolve paráfrases, períodos relativos e armadilhas como "família aterrorizada por espíritos".
+
+**Consequência.** Nas 20 consultas da busca, os filtros do LLM levam o MAP de 0,627 a 0,640, e os das regras, a 0,615. Cada pesquisa custa cerca de 1 s e 1.000 tokens; com a cota no fim, volta às regras. Com temperatura 0, até 5 de 50 respostas mudaram entre duas execuções. [Detalhes](0030-interpretacao-da-consulta-por-llm.md)

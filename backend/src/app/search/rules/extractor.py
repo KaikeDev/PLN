@@ -1,81 +1,25 @@
 """Extração de preferências: normalização → léxico → negação → qualidade → período → IDs de gênero.
 
 O catálogo só é consultado quando o texto contém algum gatilho de gênero, para que uma busca por
-título comum ("matrix") não exija o mapa de gêneros.
+título comum ("matrix") não exija o mapa de gêneros. `current_year` fixa o ano dos termos relativos
+("recente", "antigo"); a avaliação usa a data de referência das frases anotadas.
 """
 
-from dataclasses import dataclass, field, replace
+from collections.abc import Mapping
 
-from app.search.ports import POPULARITY_DESC, RATING_DESC, DiscoverQuery, MovieCatalog
+from app.search.filters import ExtractedFilters
+from app.search.ports import POPULARITY_DESC, RATING_DESC, GenreSource
 from app.search.rules import lexicon, negation
 from app.search.rules.normalization import normalize, tokenize
 from app.search.rules.period import extract_period
 
 
-@dataclass(frozen=True)
-class ExtractedFilters:
-    """Preferências reconhecidas; gêneros já resolvidos para IDs do catálogo."""
-
-    genres: tuple[int, ...] = field(default_factory=tuple)
-    excluded_genres: tuple[int, ...] = field(default_factory=tuple)
-    min_rating: float | None = None
-    min_votes: int | None = None
-    released_after: str | None = None
-    released_before: str | None = None
-    sort_by: str = POPULARITY_DESC
-
-    def has_filters(self) -> bool:
-        """Verdadeiro quando algum sinal descritivo (gênero, qualidade ou período) foi detectado."""
-        return bool(
-            self.genres
-            or self.excluded_genres
-            or self.min_rating is not None
-            or self.released_after is not None
-            or self.released_before is not None
-        )
-
-    def restricted_to_year(self, year: int) -> ExtractedFilters:
-        """Interseção do período extraído com o ano informado separadamente."""
-        first, last = f"{year}-01-01", f"{year}-12-31"
-        return replace(
-            self,
-            released_after=max(self.released_after or first, first),
-            released_before=min(self.released_before or last, last),
-        )
-
-    def has_empty_period(self) -> bool:
-        """Verdadeiro quando o limite inicial é posterior ao final."""
-        return bool(self.released_after and self.released_before and self.released_after > self.released_before)
-
-    def accepts(self, movie: dict) -> bool:
-        """Verdadeiro quando o filme (campos do TMDB) satisfaz as mesmas preferências da descoberta.
-
-        Gêneros incluídos valem com qualquer um (OU); datas e nota sem valor no filme não passam num filtro.
-        """
-        genres = set(movie.get("genre_ids") or ())
-        date = movie.get("release_date") or ""
-        rating, votes = movie.get("vote_average"), movie.get("vote_count")
-        return (
-            (not self.genres or bool(genres & set(self.genres)))
-            and not genres & set(self.excluded_genres)
-            and (self.released_after is None or (bool(date) and date >= self.released_after))
-            and (self.released_before is None or (bool(date) and date <= self.released_before))
-            and (self.min_rating is None or (rating is not None and rating >= self.min_rating))
-            and (self.min_votes is None or (votes is not None and votes >= self.min_votes))
-        )
-
-    def to_discover_query(self) -> DiscoverQuery:
-        """Consulta de descoberta equivalente."""
-        return DiscoverQuery(
-            self.genres, self.excluded_genres, self.min_rating, self.min_votes, self.released_after, self.released_before, self.sort_by
-        )
-
-
 class FilterExtractor:
     """Transforma texto livre em `ExtractedFilters`, usando o catálogo para resolver nomes de gênero."""
 
-    def __init__(self, catalog: MovieCatalog) -> None:
+    def __init__(self, catalog: GenreSource, current_year: int | None = None) -> None:
         self._catalog = catalog
+        self._current_year = current_year
 
     def extract(self, text: str) -> ExtractedFilters:
         """Preferências reconhecidas em `text`."""
@@ -83,13 +27,13 @@ class FilterExtractor:
         tokens = tokenize(normalized)
         included_names, excluded_names = negation.split_negated_genres(tokens, lexicon.find_genres(tokens))
         quality = lexicon.find_quality(normalized)
-        period = extract_period(normalized)
+        period = extract_period(normalized, self._current_year)
         included: tuple[int, ...] = ()
         excluded: tuple[int, ...] = ()
         if included_names or excluded_names:
-            ids_by_name = {normalize(name): genre_id for genre_id, name in self._catalog.genres().items()}
-            included = _resolve(included_names, ids_by_name)
-            excluded = _resolve(excluded_names, ids_by_name)
+            ids_by_name = genre_ids_by_name(self._catalog.genres())
+            included = resolve_genres(included_names, ids_by_name)
+            excluded = resolve_genres(excluded_names, ids_by_name)
         return ExtractedFilters(
             genres=included,
             excluded_genres=excluded,
@@ -101,6 +45,12 @@ class FilterExtractor:
         )
 
 
-def _resolve(names: list[str], ids_by_name: dict[str, int]) -> tuple[int, ...]:
+def genre_ids_by_name(genres: Mapping[int, str]) -> dict[str, int]:
+    """Mapa do nome normalizado (sem acento, minúsculo) para o ID do gênero."""
+    return {normalize(name): genre_id for genre_id, name in genres.items()}
+
+
+def resolve_genres(names: list[str], ids_by_name: Mapping[str, int]) -> tuple[int, ...]:
+    """IDs dos nomes conhecidos, sem repetição e na ordem dada; nomes desconhecidos são ignorados."""
     ids = (ids_by_name.get(normalize(name)) for name in names)
     return tuple(dict.fromkeys(genre_id for genre_id in ids if genre_id is not None))

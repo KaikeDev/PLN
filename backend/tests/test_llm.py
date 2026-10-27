@@ -11,6 +11,7 @@ from typing import Literal
 import requests
 from pydantic import BaseModel, Field
 
+from app.llm.batch import LazyModel, PacedModel
 from app.llm.budget import DailyBudget
 from app.llm.cache import CachedModel
 from app.llm.compose import available_providers, build_llm, stack_for
@@ -19,7 +20,7 @@ from app.llm.fallback import FallbackModel
 from app.llm.gemini import GeminiProvider, gemini_schema
 from app.llm.groq import GroqProvider
 from app.llm.ports import Completion, LLMRequest, LLMUnavailable, RawReply
-from app.llm.replay import RecordingModel, ReplayModel, to_record
+from app.llm.replay import RecordingModel, ReplayModel, ReuseModel, to_record
 from app.llm.structured import StructuredModel, parse
 from app.llm.transport import JsonPoster
 from app.settings import REPOSITORY_DIR, Settings
@@ -382,6 +383,48 @@ class ComposeTests(unittest.TestCase):
         self.assertEqual(stack.providers, ("gemini:gemini-flash-lite-latest", "groq:openai/gpt-oss-20b"))
         self.assertNotIn(SECRET, json.dumps(stack.status()))
         self.assertNotIn(SECRET, repr(settings))
+
+
+class BatchTests(unittest.TestCase):
+    def test_lazy_model_is_created_on_first_call(self) -> None:
+        created: list[FakeLanguageModel] = []
+
+        def factory() -> FakeLanguageModel:
+            created.append(FakeLanguageModel({"genero": "Terror", "confianca": 0.5}))
+            return created[-1]
+
+        lazy = LazyModel(factory)
+        self.assertEqual(created, [])
+        lazy.generate(request())
+        lazy.generate(request())
+        self.assertEqual((len(created), len(created[0].requests)), (1, 2))
+
+    def test_paced_model_waits_only_what_is_missing(self) -> None:
+        now = [100.0]
+        waits: list[float] = []
+
+        def sleep(seconds: float) -> None:
+            waits.append(seconds)
+            now[0] += seconds
+
+        paced = PacedModel(FakeLanguageModel({"genero": "Terror", "confianca": 0.5}), 4.0, sleep, lambda: now[0])
+        paced.generate(request())
+        now[0] += 1.5
+        paced.generate(request())
+        now[0] += 10
+        paced.generate(request())
+        self.assertEqual(waits, [2.5])
+
+    def test_reuse_model_answers_recorded_requests_without_calling(self) -> None:
+        recorder = RecordingModel(FakeLanguageModel({"genero": "Terror", "confianca": 0.5}))
+        recorder.generate(request())
+        inner = FakeLanguageModel({"genero": "Drama", "confianca": 0.5})
+        reuse = ReuseModel(ReplayModel(recorder.records), inner)
+        self.assertTrue(reuse.is_recorded(request()))
+        self.assertFalse(reuse.is_recorded(request("outra sinopse")))
+        self.assertEqual(reuse.generate(request()).data["genero"], "Terror")
+        self.assertEqual(reuse.generate(request("outra sinopse")).data["genero"], "Drama")
+        self.assertEqual((reuse.reused, reuse.calls, len(inner.requests)), (1, 1, 1))
 
 
 if __name__ == "__main__":

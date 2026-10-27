@@ -70,7 +70,7 @@ class MovieDetails(MovieSummary):
 
 
 class InterpretedFilters(BaseModel):
-    """Preferências reconhecidas na pesquisa."""
+    """Preferências reconhecidas na pesquisa; `origem` diz se vieram das regras ou do LLM, e `tema` é o assunto que o LLM separou (ADR 0030)."""
 
     model_config = ConfigDict(extra="forbid")
 
@@ -80,6 +80,8 @@ class InterpretedFilters(BaseModel):
     votos_minimos: int | None
     lancado_apos: str | None
     lancado_antes: str | None
+    origem: Literal["regras", "llm"]
+    tema: str | None
 
 
 class SearchNotice(BaseModel):
@@ -212,5 +214,7 @@ def _interpretation(value: FilterInterpretation | Notice | None) -> InterpretedF
             votos_minimos=value.min_votes,
             lancado_apos=value.released_after,
             lancado_antes=value.released_before,
+            origem=value.origin,
+            tema=value.theme,
         )
     return NoInterpretation()

@@ -13,6 +13,7 @@ const elTitulo = document.getElementById("campo-titulo");
 const elModo = document.getElementById("modo-busca");
 const elAno = document.getElementById("campo-ano");
 const elMensagem = document.getElementById("mensagem");
+const elInterpretacao = document.getElementById("interpretacao");
 const elResultados = document.getElementById("resultados");
 const elModal = document.getElementById("modal");
 const elModalCorpo = document.getElementById("modal-corpo");
@@ -134,7 +135,39 @@ async function buscarFilmes(texto, ano, modo) {
   if (ano) params.set("ano", ano);
   const dados = await obterJson(`/pesquisa?${params}`, "Falha ao buscar filmes.");
   const aviso = typeof dados.interpretacao?.aviso === "string" ? dados.interpretacao.aviso : "";
-  return { filmes: Array.isArray(dados.resultados) ? dados.resultados : [], aviso };
+  return { filmes: Array.isArray(dados.resultados) ? dados.resultados : [], aviso, interpretacao: dados.interpretacao };
+}
+
+function filtrosEntendidos(interpretacao) {
+  const lista = (valor) => (Array.isArray(valor) ? valor.map(String) : []);
+  const partes = [...lista(interpretacao.generos_incluidos)];
+  partes.push(...lista(interpretacao.generos_excluidos).map((genero) => `sem ${genero}`));
+  const depois = typeof interpretacao.lancado_apos === "string" ? interpretacao.lancado_apos.slice(0, 4) : "";
+  const antes = typeof interpretacao.lancado_antes === "string" ? interpretacao.lancado_antes.slice(0, 4) : "";
+  if (depois || antes) partes.push(depois && antes ? `de ${depois} a ${antes}` : depois ? `a partir de ${depois}` : `até ${antes}`);
+  if (Number.isFinite(interpretacao.nota_minima)) partes.push(`nota ≥ ${decimal(interpretacao.nota_minima)}`);
+  if (typeof interpretacao.tema === "string" && interpretacao.tema) partes.push(`tema: “${interpretacao.tema}”`);
+  return partes;
+}
+
+function renderizarInterpretacao(interpretacao) {
+  const origem = interpretacao?.origem;
+  if (origem !== "llm" && origem !== "regras") {
+    elInterpretacao.hidden = true;
+    elInterpretacao.replaceChildren();
+    return;
+  }
+  const partes = filtrosEntendidos(interpretacao);
+  const selo = elemento("span", {
+    classe: `selo selo--${origem}`,
+    texto: origem === "llm" ? "interpretado por IA" : "interpretado por regras",
+    atributos: { title: origem === "llm" ? "Filtros extraídos por um LLM (Gemini ou Groq)" : "Filtros extraídos pelas regras léxicas; o LLM não foi usado ou não respondeu" },
+  });
+  elInterpretacao.replaceChildren(
+    elemento("span", { texto: partes.length ? `Filtros entendidos: ${partes.join(" · ")}` : "Nenhum filtro entendido" }),
+    selo,
+  );
+  elInterpretacao.hidden = false;
 }
 
 function classificarSinopse(texto) {
@@ -287,7 +320,8 @@ function criarCard(filme) {
   return card;
 }
 
-function renderizarResultados({ filmes, aviso }) {
+function renderizarResultados({ filmes, aviso, interpretacao }) {
+  renderizarInterpretacao(interpretacao);
   elResultados.replaceChildren(...filmes.filter((filme) => Number.isInteger(filme.id)).map(criarCard));
   if (filmes.length === 0) elMensagem.textContent = aviso ? `${aviso}.` : "Nenhum filme encontrado.";
 }
@@ -459,6 +493,7 @@ elForm.addEventListener("submit", async (evento) => {
   evento.preventDefault();
   elMensagem.textContent = "";
   elResultados.replaceChildren();
+  renderizarInterpretacao(null);
   try {
     renderizarResultados(await buscarFilmes(elTitulo.value.trim(), elAno.value.trim(), elModo.value));
   } catch (erro) {

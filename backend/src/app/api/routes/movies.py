@@ -1,6 +1,7 @@
 """Rotas de filmes: ficha completa e pesquisa por título ou preferências.
 
-Falhas do catálogo viram 502, exceto filme inexistente, que vira 404. As mensagens de erro nunca
+Falhas do catálogo viram 502, exceto filme inexistente, que vira 404. Com `interpretacao=llm`, o LLM
+fora do ar vira 503; com `auto`, a pesquisa cai nas regras e não falha. As mensagens de erro nunca
 contêm URL ou credencial.
 """
 
@@ -10,8 +11,9 @@ from fastapi import APIRouter, Depends, HTTPException, Path, Query, status
 
 from app.api.dependencies import enforce_rate_limit, get_details_provider, get_search_service
 from app.api.schemas import MovieDetails, SearchResponse
+from app.llm.ports import LLMUnavailable
 from app.search.ports import CatalogError, MovieDetailsProvider
-from app.search.service import SearchMode, SearchService
+from app.search.service import InterpretationMode, SearchMode, SearchService
 from app.shared.language import MAX_RELEASE_YEAR, MIN_RELEASE_YEAR
 
 MAX_QUERY_LENGTH = 200
@@ -41,9 +43,14 @@ def search(
     pagina: Annotated[int, Query(ge=1, le=MAX_PAGE)] = 1,
     ano: Annotated[int | None, Query(ge=MIN_RELEASE_YEAR, le=MAX_RELEASE_YEAR, description="Ano de lançamento")] = None,
     modo: SearchMode = SearchMode.AUTO,
+    interpretacao: Annotated[
+        InterpretationMode, Query(description="Quem interpreta a frase: regras, LLM, ou LLM com reserva nas regras (auto)")
+    ] = InterpretationMode.AUTO,
 ) -> SearchResponse:
-    """Pesquisa por título exato, preferências reconhecidas por regras ou modo automático."""
+    """Pesquisa por título exato, por preferências reconhecidas na frase ou por tema nas sinopses."""
     try:
-        return SearchResponse.from_result(service.search(q, page=pagina, year=ano, mode=modo))
+        return SearchResponse.from_result(service.search(q, page=pagina, year=ano, mode=modo, interpretation=interpretacao))
     except CatalogError as exc:
         raise HTTPException(status.HTTP_502_BAD_GATEWAY, detail=str(exc)) from exc
+    except LLMUnavailable as exc:
+        raise HTTPException(status.HTTP_503_SERVICE_UNAVAILABLE, detail=str(exc)) from exc

@@ -60,6 +60,9 @@ data/sentimento/*
 !data/sentimento/criticas_2026-10-10/
 data/entidades/*
 !data/entidades/tmdb_2026-09-12/
+data/interpretacao/*
+!data/interpretacao/frases_2026-10-26/
+!data/interpretacao/frases_2026-10-26_execucao_1/
 
 node_modules/
 .parcel-cache/

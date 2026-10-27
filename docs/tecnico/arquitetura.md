@@ -8,7 +8,7 @@ O backend (`backend/src/app`) é organizado **por tarefa da disciplina**: cada p
 |---|---|---|
 | `corpus/` | 1. Coleta e preparação | Coleta no TMDB, seis preparações do texto, estatísticas, relatório e verificação |
 | `representations/` | 2. Representações | As oito representações (`space.py`, `embeddings.py`, `methods.py`), o pipeline que as constrói e roda as análises (`pipeline.py`), sondas da Aula 7 e relatório |
-| `search/` | 3. Busca | Regras léxicas (`rules/`), busca por cosseno (`retrieval.py`), combinação TF-IDF + embedding de sentença (`hybrid.py`), avaliação com consultas anotadas (`evaluation.py`), serviço do site (`service.py`) e índice de sinopses (`synopsis_index.py`) |
+| `search/` | 3. Busca | Regras léxicas (`rules/`), interpretação da frase por LLM e a sua avaliação (`interpretation/`, [ADR 0030](../adr/0030-interpretacao-da-consulta-por-llm.md)), busca por cosseno (`retrieval.py`), combinação TF-IDF + embedding de sentença (`hybrid.py`), avaliação com consultas anotadas (`evaluation.py`), serviço do site (`service.py`) e índice de sinopses (`synopsis_index.py`) |
 | `recommendation/` | 4. Recomendação | Filme → filmes e perfil → filmes, com avaliação por gênero compartilhado (`analysis.py`), e os filmes parecidos do site (`similar.py`) |
 | `clustering/` | 5. Agrupamento e visualização | K-Means e projeção 2D (`kmeans.py`), avaliação (`analysis.py`) e gráficos SVG (`svg.py`) |
 | `classification/` | 6. Classificação | Regressão logística com validação cruzada (`pipeline.py`, `evaluation.py`), classificadores alternativos, classificador da tela (`live.py`) e o Jev (`jev/`) |
@@ -63,13 +63,13 @@ Os rótulos de gênero são os mesmos em todas as etapas: `Document.genres` é o
 
 ## Fluxo de uma pesquisa no site
 
-1. `GET /pesquisa` valida `q`, `pagina`, `ano` e `modo` e aplica o limite de requisições.
-2. `search/service.py` escolhe a estratégia do modo:
-   - **título:** busca o título no TMDB;
-   - **preferências:** as regras extraem gênero, período e nota, e o TMDB faz a descoberta;
-   - **tema:** os filmes da amostra são ordenados por 0,3 × TF-IDF + 0,7 × embedding de sentença e filtrados pelas regras ([ADR 0020](../adr/0020-busca-hibrida-tfidf-e-sentenca.md));
+1. `GET /pesquisa` valida `q`, `pagina`, `ano`, `modo` e `interpretacao` e aplica o limite de requisições.
+2. `search/service.py` escolhe a estratégia do modo e o intérprete da frase. Com `interpretacao=auto` (o padrão), o LLM extrai os filtros e, se falhar ou passar de 4 s, as regras assumem; sem LLM configurado, só as regras ([ADR 0030](../adr/0030-interpretacao-da-consulta-por-llm.md)):
+   - **título:** busca o título no TMDB, sem interpretar a frase;
+   - **preferências:** o intérprete extrai gênero, período e nota, e o TMDB faz a descoberta;
+   - **tema:** os filmes da amostra são ordenados por 0,3 × TF-IDF + 0,7 × embedding de sentença e filtrados pelo intérprete ([ADR 0020](../adr/0020-busca-hibrida-tfidf-e-sentenca.md));
    - **automático:** título exato, depois tema, depois preferências, depois título ([ADR 0006](../adr/0006-prioridade-de-titulo-exato.md)).
-3. A resposta é traduzida para o contrato JSON em português (`modo`, `resultados`, `interpretacao`). Falhas do TMDB viram 502, e filme inexistente vira 404.
+3. A resposta é traduzida para o contrato JSON em português (`modo`, `resultados`, `interpretacao`, que diz em `origem` quem interpretou). Falhas do TMDB viram 502, filme inexistente vira 404, e `interpretacao=llm` com o LLM fora do ar vira 503.
 
 `GET /filmes/{id}/parecidos` devolve os filmes de maior cosseno com o filme, na mesma representação ([ADR 0023](../adr/0023-recomendacao-no-site.md)). `GET /classificacao` passa o texto ao classificador da tela, treinado na inicialização com a representação que a busca por tema já carrega ([ADR 0021](../adr/0021-classificacao-na-tela.md)).
 
@@ -81,6 +81,7 @@ Mesmo organizado por tarefa, o código mantém as dependências externas atrás 
 |---|---|---|---|
 | `MovieCatalog`, `MovieDetailsProvider` | `search/ports.py` | `tmdb/catalog.py` com cache | `FakeCatalog` |
 | `SynopsisIndex` | `search/ports.py` | `search/synopsis_index.py` | `FakeSynopsisIndex` |
+| `PreferenceExtractor` | `search/ports.py` | `search/rules/extractor.py` (regras), `search/interpretation/llm_extractor.py` (LLM) e `hybrid_extractor.py` (LLM com reserva nas regras) | `LLMFilterExtractor` sobre `FakeLanguageModel` |
 | `GenreClassifier` | `classification/ports.py` | `classification/live.py` | `FakeGenreClassifier` |
 | `SimilarMoviesProvider` | `recommendation/ports.py` | `recommendation/similar.py` | `FakeRecommender` |
 | `DecisionClient` | `classification/jev/ports.py` | `classification/jev/typesafe_client.py` | Jev falso em `test_jev.py` |
@@ -106,10 +107,11 @@ Mesmo organizado por tarefa, o código mantém as dependências externas atrás 
 | `test_representations.py` | Representações (com modelos falsos), rótulos, busca, recomendação, agrupamento e gráficos, sondas, relatório, segurança da configuração, verificação, busca combinada e índice de sinopses |
 | `test_search_extractor.py` | Regras: gatilhos, negação, qualidade e períodos |
 | `test_search_service.py` | Estratégias de pesquisa e busca por tema com índice falso |
+| `test_search_interpretation.py` | Prompt e variantes, extrator por LLM (esquema com os gêneros do catálogo, datas, limiares), reserva nas regras por falha e por prazo, rota com `interpretacao`, frases anotadas, métricas e avaliação com `--reuse` |
 | `test_classification.py` | Tarefas, validação cruzada, decisão multirrótulo, K-Means × classificador, alternativos, reaproveitamento dos vetores e classificador da tela |
 | `test_jev.py` | Amostra, perguntas, validação das respostas, falhas, reaproveitamento, métricas e adaptador do SDK (com um Jev falso) |
 | `test_tmdb.py` | Cliente, catálogo e cache do TMDB |
-| `test_llm.py` | Configuração, corpo e cabeçalhos dos pedidos ao Gemini e ao Groq, erros sem vazar chave, saída estruturada, reserva, cache, orçamento e replay |
+| `test_llm.py` | Configuração, corpo e cabeçalhos dos pedidos ao Gemini e ao Groq, erros sem vazar chave, saída estruturada, reserva, cache, orçamento, replay e os modelos das avaliações em lote |
 | `test_api.py` | Contrato das rotas, validação, erros, CORS e limite de requisições |
 
 `tests/fakes.py` contém os dublês compartilhados. Nenhum teste acessa a rede.

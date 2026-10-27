@@ -218,6 +218,18 @@ Decisões no [ADR 0029](../adr/0029-base-de-llm-por-api-gratuita.md).
 | Lint, formatação e tipos | `ruff check`, `ruff format --check` e `mypy` sem apontamentos. |
 | Chamada real (`python -m app.llm ping`) | Gemini: o alias `gemini-flash-lite-latest` respondeu como `gemini-3.5-flash-lite`, em 1,1 s, com 43 tokens de entrada e 24 de saída. Groq: `openai/gpt-oss-20b`, em 0,4 s, com 294 e 47. Os dois devolveram o JSON no formato pedido (gênero da lista fechada e confiança entre 0 e 1). A cota gratuita não foi medida; o orçamento de `config/llm/llm.json` deve ser conferido no painel de cada provedor. |
 
+## Unidade 4 — Interpretação da consulta por LLM (26/10/2026)
+
+Decisões e resultados no [ADR 0030](../adr/0030-interpretacao-da-consulta-por-llm.md); relatório em [`data/interpretacao/frases_2026-10-26/report.md`](../../data/interpretacao/frases_2026-10-26/report.md).
+
+| Verificação | Resultado e alcance |
+|---|---|
+| Testes automatizados | 212 testes aprovados, sem rede. Novos: prompt e variantes; esquema com os gêneros do catálogo; datas impossíveis recusadas; limiares de qualidade das regras; reserva nas regras por falha e por prazo, sem registrar a frase no log; título exato sem chamar o LLM; `/pesquisa` com `interpretacao=auto\|regras\|llm`; frases anotadas validadas; métricas; avaliação com `--reuse` sem chamadas e com os mesmos bytes; primeira falha sem gravar nada. |
+| Lint, formatação e tipos | `ruff check`, `ruff format --check` e `mypy` sem apontamentos. |
+| Ordem do gabarito | As 50 frases foram commitadas (`1c15e37`) antes da primeira execução de `interpret-eval`. |
+| Execução real | Duas execuções completas de 120 chamadas cada (50 frases × 2 variantes + 20 consultas). O Gemini respondeu 237 vezes e o Groq, 3, quando a cota por minuto estourou. Few-shot: acerto exato de 0,94 e 0,98, sem filtro inventado; regras: 0,44, com 11 filtros inventados. |
+| Reprodução | `interpret-eval --reuse` sem chaves gerou arquivos de conteúdo idênticos byte a byte aos da execução de referência; `interpret-verify` confere as duas pastas no CI. |
+
 ## Limites da validação
 
 O teste original imprime “100% (12/12)” para campos selecionados de cinco frases. Isso não é acurácia geral do assistente, nem medida de recuperação por sinopse. O projeto não executa reconhecimento de nomes próprios, stemming ou lematização; na Etapa 2, os modelos pré-treinados foram usados sem ajuste fino, e a avaliação de consultas tem só dois casos anotados. Na Aula 8, a amostra de 120 filmes permite comparar os métodos, mas não é um teste estatístico formal. O rótulo é o recorte de coleta, e uma nova chamada ao Jev pode dar outro resultado se o modelo por trás do alias mudar. A interface não passou por avaliação visual em navegador nesta revisão; suas chamadas foram verificadas na API. O bônus e a nota final dependem da avaliação do professor.

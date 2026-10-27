@@ -25,6 +25,7 @@ uv run --frozen python -m app.corpus verify --input ../data/preparacao/tmdb_2026
 uv run --frozen python -m app.representations verify --input ../data/representacoes/tmdb_2026-09-12
 uv run --frozen python -m app.classification verify --input ../data/classificacao/tmdb_2026-09-12
 uv run --frozen python -m app.classification.jev verify --input ../data/jev/tmdb_2026-09-12
+uv run --frozen python -m app.search interpret-verify --input ../data/interpretacao/frases_2026-10-26
 ```
 
 ## Refazer cada etapa
@@ -65,6 +66,14 @@ uv run --frozen --extra semantico python -m app.search query --input ../data/pre
 # a combinação do site: compara cada representação com a combinação nas 20 consultas
 uv run --frozen --extra semantico python -m app.search hybrid --input ../data/preparacao/tmdb_2026-09-12 --config ../config/representacoes/vetorizacao_semantica.json --search ../config/busca/busca.json --queries ../config/busca/consultas.json
 ```
+
+Interpretação da frase por regras e por LLM nas 50 frases anotadas ([ADR 0030](../adr/0030-interpretacao-da-consulta-por-llm.md)). Reavaliar **sem gastar cota**, reaproveitando as respostas salvas:
+
+```bash
+uv run --frozen --extra semantico python -m app.search interpret-eval --phrases ../config/busca/interpretacao.json --queries ../config/busca/consultas.json --output ../data/interpretacao/reproducao --reuse ../data/interpretacao/frases_2026-10-26
+```
+
+Sem `--reuse`, cada frase faz duas chamadas ao LLM (zero-shot e few-shot), e cada consulta de `--queries`, mais uma, com 4 s entre elas (exige `GEMINI_API_KEY` ou `GROQ_API_KEY`). Sem `--queries`, o efeito na busca não é medido e o extra `semantico` não é necessário.
 
 ### 4. Classificação treinada
 

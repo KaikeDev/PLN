@@ -46,6 +46,10 @@ jobs:
         run: |
           uv run --frozen python -m app.entities verify --input ../data/coleta/creditos_2026-10-10
           uv run --frozen python -m app.entities verify --input ../data/entidades/tmdb_2026-09-12
+      - name: Integridade da avaliação da interpretação
+        run: |
+          uv run --frozen python -m app.search interpret-verify --input ../data/interpretacao/frases_2026-10-26
+          uv run --frozen python -m app.search interpret-verify --input ../data/interpretacao/frases_2026-10-26_execucao_1
 
   frontend:
     runs-on: ubuntu-latest

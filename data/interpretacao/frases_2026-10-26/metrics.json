@@ -1,0 +1,330 @@
+{
+  "avaliacao": {
+    "sistemas": [
+      "regras",
+      "zero_shot",
+      "few_shot",
+      "reserva"
+    ],
+    "total": {
+      "regras": {
+        "frases": 50,
+        "acerto_exato": 0.44,
+        "f1_generos": 0.6301,
+        "f1_excluidos": 0.8,
+        "acerto_periodo": 0.86,
+        "acerto_qualidade": 1.0,
+        "filtro_inventado": 11,
+        "falhas": 0
+      },
+      "zero_shot": {
+        "frases": 50,
+        "acerto_exato": 0.92,
+        "f1_generos": 0.9512,
+        "f1_excluidos": 1.0,
+        "acerto_periodo": 0.98,
+        "acerto_qualidade": 1.0,
+        "filtro_inventado": 2,
+        "falhas": 0
+      },
+      "few_shot": {
+        "frases": 50,
+        "acerto_exato": 0.94,
+        "f1_generos": 0.9873,
+        "f1_excluidos": 1.0,
+        "acerto_periodo": 0.96,
+        "acerto_qualidade": 1.0,
+        "filtro_inventado": 0,
+        "falhas": 0
+      },
+      "reserva": {
+        "frases": 50,
+        "acerto_exato": 0.94,
+        "f1_generos": 0.9873,
+        "f1_excluidos": 1.0,
+        "acerto_periodo": 0.96,
+        "acerto_qualidade": 1.0,
+        "filtro_inventado": 0,
+        "falhas": 0
+      }
+    },
+    "por_categoria": {
+      "explicita": {
+        "regras": {
+          "frases": 10,
+          "acerto_exato": 1.0,
+          "f1_generos": 1.0,
+          "f1_excluidos": null,
+          "acerto_periodo": 1.0,
+          "acerto_qualidade": 1.0,
+          "filtro_inventado": 0,
+          "falhas": 0
+        },
+        "zero_shot": {
+          "frases": 10,
+          "acerto_exato": 1.0,
+          "f1_generos": 1.0,
+          "f1_excluidos": null,
+          "acerto_periodo": 1.0,
+          "acerto_qualidade": 1.0,
+          "filtro_inventado": 0,
+          "falhas": 0
+        },
+        "few_shot": {
+          "frases": 10,
+          "acerto_exato": 1.0,
+          "f1_generos": 1.0,
+          "f1_excluidos": null,
+          "acerto_periodo": 1.0,
+          "acerto_qualidade": 1.0,
+          "filtro_inventado": 0,
+          "falhas": 0
+        },
+        "reserva": {
+          "frases": 10,
+          "acerto_exato": 1.0,
+          "f1_generos": 1.0,
+          "f1_excluidos": null,
+          "acerto_periodo": 1.0,
+          "acerto_qualidade": 1.0,
+          "filtro_inventado": 0,
+          "falhas": 0
+        }
+      },
+      "parafrase": {
+        "regras": {
+          "frases": 10,
+          "acerto_exato": 0.0,
+          "f1_generos": 0.0,
+          "f1_excluidos": null,
+          "acerto_periodo": 1.0,
+          "acerto_qualidade": 1.0,
+          "filtro_inventado": 0,
+          "falhas": 0
+        },
+        "zero_shot": {
+          "frases": 10,
+          "acerto_exato": 0.9,
+          "f1_generos": 0.9565,
+          "f1_excluidos": null,
+          "acerto_periodo": 1.0,
+          "acerto_qualidade": 1.0,
+          "filtro_inventado": 1,
+          "falhas": 0
+        },
+        "few_shot": {
+          "frases": 10,
+          "acerto_exato": 1.0,
+          "f1_generos": 1.0,
+          "f1_excluidos": null,
+          "acerto_periodo": 1.0,
+          "acerto_qualidade": 1.0,
+          "filtro_inventado": 0,
+          "falhas": 0
+        },
+        "reserva": {
+          "frases": 10,
+          "acerto_exato": 1.0,
+          "f1_generos": 1.0,
+          "f1_excluidos": null,
+          "acerto_periodo": 1.0,
+          "acerto_qualidade": 1.0,
+          "filtro_inventado": 0,
+          "falhas": 0
+        }
+      },
+      "negacao": {
+        "regras": {
+          "frases": 8,
+          "acerto_exato": 0.625,
+          "f1_generos": 0.8571,
+          "f1_excluidos": 0.8,
+          "acerto_periodo": 0.875,
+          "acerto_qualidade": 1.0,
+          "filtro_inventado": 3,
+          "falhas": 0
+        },
+        "zero_shot": {
+          "frases": 8,
+          "acerto_exato": 0.875,
+          "f1_generos": 1.0,
+          "f1_excluidos": 1.0,
+          "acerto_periodo": 0.875,
+          "acerto_qualidade": 1.0,
+          "filtro_inventado": 0,
+          "falhas": 0
+        },
+        "few_shot": {
+          "frases": 8,
+          "acerto_exato": 0.875,
+          "f1_generos": 1.0,
+          "f1_excluidos": 1.0,
+          "acerto_periodo": 0.875,
+          "acerto_qualidade": 1.0,
+          "filtro_inventado": 0,
+          "falhas": 0
+        },
+        "reserva": {
+          "frases": 8,
+          "acerto_exato": 0.875,
+          "f1_generos": 1.0,
+          "f1_excluidos": 1.0,
+          "acerto_periodo": 0.875,
+          "acerto_qualidade": 1.0,
+          "filtro_inventado": 0,
+          "falhas": 0
+        }
+      },
+      "periodo": {
+        "regras": {
+          "frases": 8,
+          "acerto_exato": 0.125,
+          "f1_generos": 0.7273,
+          "f1_excluidos": null,
+          "acerto_periodo": 0.25,
+          "acerto_qualidade": 1.0,
+          "filtro_inventado": 0,
+          "falhas": 0
+        },
+        "zero_shot": {
+          "frases": 8,
+          "acerto_exato": 1.0,
+          "f1_generos": 1.0,
+          "f1_excluidos": null,
+          "acerto_periodo": 1.0,
+          "acerto_qualidade": 1.0,
+          "filtro_inventado": 0,
+          "falhas": 0
+        },
+        "few_shot": {
+          "frases": 8,
+          "acerto_exato": 0.875,
+          "f1_generos": 1.0,
+          "f1_excluidos": null,
+          "acerto_periodo": 0.875,
+          "acerto_qualidade": 1.0,
+          "filtro_inventado": 0,
+          "falhas": 0
+        },
+        "reserva": {
+          "frases": 8,
+          "acerto_exato": 0.875,
+          "f1_generos": 1.0,
+          "f1_excluidos": null,
+          "acerto_periodo": 0.875,
+          "acerto_qualidade": 1.0,
+          "filtro_inventado": 0,
+          "falhas": 0
+        }
+      },
+      "armadilha_lexica": {
+        "regras": {
+          "frases": 8,
+          "acerto_exato": 0.0,
+          "f1_generos": 0.1538,
+          "f1_excluidos": null,
+          "acerto_periodo": 1.0,
+          "acerto_qualidade": 1.0,
+          "filtro_inventado": 8,
+          "falhas": 0
+        },
+        "zero_shot": {
+          "frases": 8,
+          "acerto_exato": 0.75,
+          "f1_generos": 0.6667,
+          "f1_excluidos": null,
+          "acerto_periodo": 1.0,
+          "acerto_qualidade": 1.0,
+          "filtro_inventado": 1,
+          "falhas": 0
+        },
+        "few_shot": {
+          "frases": 8,
+          "acerto_exato": 0.875,
+          "f1_generos": 0.8571,
+          "f1_excluidos": null,
+          "acerto_periodo": 1.0,
+          "acerto_qualidade": 1.0,
+          "filtro_inventado": 0,
+          "falhas": 0
+        },
+        "reserva": {
+          "frases": 8,
+          "acerto_exato": 0.875,
+          "f1_generos": 0.8571,
+          "f1_excluidos": null,
+          "acerto_periodo": 1.0,
+          "acerto_qualidade": 1.0,
+          "filtro_inventado": 0,
+          "falhas": 0
+        }
+      },
+      "sem_filtro": {
+        "regras": {
+          "frases": 6,
+          "acerto_exato": 1.0,
+          "f1_generos": null,
+          "f1_excluidos": null,
+          "acerto_periodo": 1.0,
+          "acerto_qualidade": 1.0,
+          "filtro_inventado": 0,
+          "falhas": 0
+        },
+        "zero_shot": {
+          "frases": 6,
+          "acerto_exato": 1.0,
+          "f1_generos": null,
+          "f1_excluidos": null,
+          "acerto_periodo": 1.0,
+          "acerto_qualidade": 1.0,
+          "filtro_inventado": 0,
+          "falhas": 0
+        },
+        "few_shot": {
+          "frases": 6,
+          "acerto_exato": 1.0,
+          "f1_generos": null,
+          "f1_excluidos": null,
+          "acerto_periodo": 1.0,
+          "acerto_qualidade": 1.0,
+          "filtro_inventado": 0,
+          "falhas": 0
+        },
+        "reserva": {
+          "frases": 6,
+          "acerto_exato": 1.0,
+          "f1_generos": null,
+          "f1_excluidos": null,
+          "acerto_periodo": 1.0,
+          "acerto_qualidade": 1.0,
+          "filtro_inventado": 0,
+          "falhas": 0
+        }
+      }
+    }
+  },
+  "uso": {
+    "zero_shot": {
+      "respostas": 50,
+      "tokens_entrada_medio": 541.7,
+      "tokens_saida_medio": 64.2,
+      "provedores": {
+        "gemini": 48,
+        "groq": 2
+      },
+      "falhas_por_motivo": {}
+    },
+    "few_shot": {
+      "respostas": 50,
+      "tokens_entrada_medio": 980.5,
+      "tokens_saida_medio": 61.2,
+      "provedores": {
+        "gemini": 50
+      },
+      "falhas_por_motivo": {}
+    }
+  },
+  "reserva": {
+    "quedas_para_regras": 0
+  }
+}

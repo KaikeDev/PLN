@@ -3,7 +3,8 @@
 `RecordingModel` guarda cada resposta como um registro JSON sem a latência, que vai só para o manifesto
 (ADR 0009). `ReplayModel` responde a partir desses registros, sem rede, e revalida cada um contra o modelo
 do pedido. Um pedido não gravado vira `LLMUnavailable("indisponivel")`; assim,
-`FallbackModel([ReplayModel(...), modelo_real])` continua uma avaliação interrompida de onde parou.
+`FallbackModel([ReplayModel(...), modelo_real])` continua uma avaliação interrompida de onde parou; `ReuseModel` faz o
+mesmo sem registrar aviso a cada pedido novo e conta as chamadas feitas.
 """
 
 from collections.abc import Iterable
@@ -61,6 +62,9 @@ class ReplayModel:
     def __len__(self) -> int:
         return len(self._records)
 
+    def __contains__(self, request: object) -> bool:
+        return isinstance(request, LLMRequest) and request.key() in self._records
+
     def generate(self, request: LLMRequest) -> LLMResponse:
         record = self._records.get(request.key())
         if record is None:
@@ -78,3 +82,27 @@ class ReplayModel:
             output_tokens=int(record["output_tokens"]),
             latency_ms=0,
         )
+
+
+class ReuseModel:
+    """Responde com a resposta gravada quando há uma e, senão, chama `inner`; conta as reaproveitadas e as chamadas novas.
+
+    Diferente de `FallbackModel([ReplayModel, real])`, não registra aviso a cada pedido não gravado.
+    """
+
+    def __init__(self, replay: ReplayModel, inner: LanguageModel) -> None:
+        self._replay = replay
+        self._inner = inner
+        self.reused = 0
+        self.calls = 0
+
+    def is_recorded(self, request: LLMRequest) -> bool:
+        """Verdadeiro quando o pedido será respondido sem rede."""
+        return request in self._replay
+
+    def generate(self, request: LLMRequest) -> LLMResponse:
+        if request in self._replay:
+            self.reused += 1
+            return self._replay.generate(request)
+        self.calls += 1
+        return self._inner.generate(request)

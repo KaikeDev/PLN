@@ -1,0 +1,714 @@
+{
+  "description": "Frases para comparar a interpretação da consulta por regras (ADR 0005) e por LLM (spec 01 da Unidade 4). Cada frase traz o gabarito dos filtros que um usuário espera ao digitá-la no site. Anotadas e commitadas antes da primeira execução de interpret-eval. Rascunho redigido com apoio de IA generativa (Claude), a revisar pela equipe; os critérios estão em `criterios`.",
+  "data_referencia": "2026-10-26",
+  "criterios": [
+    "Gêneros só da lista dos 19 gêneros do TMDB, com os nomes em português do catálogo.",
+    "Um gênero entra quando a frase pede um tipo de filme (tom, estilo ou gênero dito com outras palavras); o assunto sozinho não é gênero: piratas, robôs ou astronautas não viram filtro.",
+    "Títulos e nomes próprios não são gênero: \"Guerra nas Estrelas\" não pede filmes de guerra.",
+    "Gêneros excluídos só quando a frase rejeita o gênero; \"sem ser sangrento\" rejeita uma característica, não um gênero.",
+    "Período com as convenções das regras (ADR 0005), relativas à data_referencia: recente ou \"não muito antigo\" = lançado a partir de 01/01 de dez anos atrás; antigo ou clássico = lançado antes de 01/01 de 25 anos atrás; \"dos anos NN\" = a década inteira; \"depois de X\" começa em 01/01/X e \"antes de X\" termina em 31/12/(X-1).",
+    "bem_avaliado é verdadeiro quando a frase pede qualidade (bem avaliado, aclamado, que a crítica elogiou); os dois níveis das regras contam igual.",
+    "Na dúvida, o gabarito não filtra: um filtro a mais esconde filmes certos."
+  ],
+  "frases": [
+    {
+      "id": "exp_comedia_anos_90",
+      "texto": "comédia dos anos 90",
+      "categoria": "explicita",
+      "esperado": {
+        "generos": [
+          "Comédia"
+        ],
+        "generos_excluidos": [],
+        "lancado_depois": "1990-01-01",
+        "lancado_antes": "1999-12-31",
+        "bem_avaliado": false
+      }
+    },
+    {
+      "id": "exp_terror_recente",
+      "texto": "filme de terror recente",
+      "categoria": "explicita",
+      "esperado": {
+        "generos": [
+          "Terror"
+        ],
+        "generos_excluidos": [],
+        "lancado_depois": "2016-01-01",
+        "lancado_antes": null,
+        "bem_avaliado": false
+      }
+    },
+    {
+      "id": "exp_animacao_bem_avaliada",
+      "texto": "uma animação bem avaliada",
+      "categoria": "explicita",
+      "esperado": {
+        "generos": [
+          "Animação"
+        ],
+        "generos_excluidos": [],
+        "lancado_depois": null,
+        "lancado_antes": null,
+        "bem_avaliado": true
+      }
+    },
+    {
+      "id": "exp_drama_de_guerra",
+      "texto": "drama de guerra",
+      "categoria": "explicita",
+      "esperado": {
+        "generos": [
+          "Drama",
+          "Guerra"
+        ],
+        "generos_excluidos": [],
+        "lancado_depois": null,
+        "lancado_antes": null,
+        "bem_avaliado": false
+      }
+    },
+    {
+      "id": "exp_romance_antes_2000",
+      "texto": "romance lançado antes de 2000",
+      "categoria": "explicita",
+      "esperado": {
+        "generos": [
+          "Romance"
+        ],
+        "generos_excluidos": [],
+        "lancado_depois": null,
+        "lancado_antes": "1999-12-31",
+        "bem_avaliado": false
+      }
+    },
+    {
+      "id": "exp_acao_depois_2015",
+      "texto": "filme de ação depois de 2015",
+      "categoria": "explicita",
+      "esperado": {
+        "generos": [
+          "Ação"
+        ],
+        "generos_excluidos": [],
+        "lancado_depois": "2015-01-01",
+        "lancado_antes": null,
+        "bem_avaliado": false
+      }
+    },
+    {
+      "id": "exp_documentario_natureza",
+      "texto": "documentário sobre a natureza",
+      "categoria": "explicita",
+      "esperado": {
+        "generos": [
+          "Documentário"
+        ],
+        "generos_excluidos": [],
+        "lancado_depois": null,
+        "lancado_antes": null,
+        "bem_avaliado": false
+      }
+    },
+    {
+      "id": "exp_ficcao_aclamada",
+      "texto": "ficção científica aclamada",
+      "categoria": "explicita",
+      "esperado": {
+        "generos": [
+          "Ficção científica"
+        ],
+        "generos_excluidos": [],
+        "lancado_depois": null,
+        "lancado_antes": null,
+        "bem_avaliado": true
+      }
+    },
+    {
+      "id": "exp_aventura_fantasia",
+      "texto": "aventura e fantasia",
+      "categoria": "explicita",
+      "esperado": {
+        "generos": [
+          "Aventura",
+          "Fantasia"
+        ],
+        "generos_excluidos": [],
+        "lancado_depois": null,
+        "lancado_antes": null,
+        "bem_avaliado": false
+      }
+    },
+    {
+      "id": "exp_policial_antigo",
+      "texto": "filme policial antigo",
+      "categoria": "explicita",
+      "esperado": {
+        "generos": [
+          "Crime"
+        ],
+        "generos_excluidos": [],
+        "lancado_depois": null,
+        "lancado_antes": "2000-12-31",
+        "bem_avaliado": false
+      }
+    },
+    {
+      "id": "par_me_faca_rir",
+      "texto": "algo que me faça rir",
+      "categoria": "parafrase",
+      "esperado": {
+        "generos": [
+          "Comédia"
+        ],
+        "generos_excluidos": [],
+        "lancado_depois": null,
+        "lancado_antes": null,
+        "bem_avaliado": false
+      }
+    },
+    {
+      "id": "par_nao_dormir",
+      "texto": "um filme pra não dormir à noite",
+      "categoria": "parafrase",
+      "esperado": {
+        "generos": [
+          "Terror"
+        ],
+        "generos_excluidos": [],
+        "lancado_depois": null,
+        "lancado_antes": null,
+        "bem_avaliado": false
+      }
+    },
+    {
+      "id": "par_pra_chorar",
+      "texto": "quero um filme pra chorar",
+      "categoria": "parafrase",
+      "esperado": {
+        "generos": [
+          "Drama"
+        ],
+        "generos_excluidos": [],
+        "lancado_depois": null,
+        "lancado_antes": null,
+        "bem_avaliado": false
+      }
+    },
+    {
+      "id": "par_dia_dos_namorados",
+      "texto": "algo pra ver com o namorado no dia dos namorados",
+      "categoria": "parafrase",
+      "esperado": {
+        "generos": [
+          "Romance"
+        ],
+        "generos_excluidos": [],
+        "lancado_depois": null,
+        "lancado_antes": null,
+        "bem_avaliado": false
+      }
+    },
+    {
+      "id": "par_explosoes",
+      "texto": "muita explosão e perseguição de carro",
+      "categoria": "parafrase",
+      "esperado": {
+        "generos": [
+          "Ação"
+        ],
+        "generos_excluidos": [],
+        "lancado_depois": null,
+        "lancado_antes": null,
+        "bem_avaliado": false
+      }
+    },
+    {
+      "id": "par_futuro_tecnologia",
+      "texto": "histórias que se passam no futuro com tecnologia avançada",
+      "categoria": "parafrase",
+      "esperado": {
+        "generos": [
+          "Ficção científica"
+        ],
+        "generos_excluidos": [],
+        "lancado_depois": null,
+        "lancado_antes": null,
+        "bem_avaliado": false
+      }
+    },
+    {
+      "id": "par_velho_oeste",
+      "texto": "bang-bang com cowboys no velho oeste",
+      "categoria": "parafrase",
+      "esperado": {
+        "generos": [
+          "Faroeste"
+        ],
+        "generos_excluidos": [],
+        "lancado_depois": null,
+        "lancado_antes": null,
+        "bem_avaliado": false
+      }
+    },
+    {
+      "id": "par_desenho_criancas",
+      "texto": "desenho animado para crianças",
+      "categoria": "parafrase",
+      "esperado": {
+        "generos": [
+          "Animação",
+          "Família"
+        ],
+        "generos_excluidos": [],
+        "lancado_depois": null,
+        "lancado_antes": null,
+        "bem_avaliado": false
+      }
+    },
+    {
+      "id": "par_quem_e_o_assassino",
+      "texto": "descobrir quem é o assassino só no final",
+      "categoria": "parafrase",
+      "esperado": {
+        "generos": [
+          "Mistério"
+        ],
+        "generos_excluidos": [],
+        "lancado_depois": null,
+        "lancado_antes": null,
+        "bem_avaliado": false
+      }
+    },
+    {
+      "id": "par_cancoes_e_danca",
+      "texto": "filme com muitas canções e números de dança",
+      "categoria": "parafrase",
+      "esperado": {
+        "generos": [
+          "Música"
+        ],
+        "generos_excluidos": [],
+        "lancado_depois": null,
+        "lancado_antes": null,
+        "bem_avaliado": false
+      }
+    },
+    {
+      "id": "neg_nada_de_romance",
+      "texto": "nada de romance, quero ação",
+      "categoria": "negacao",
+      "esperado": {
+        "generos": [
+          "Ação"
+        ],
+        "generos_excluidos": [
+          "Romance"
+        ],
+        "lancado_depois": null,
+        "lancado_antes": null,
+        "bem_avaliado": false
+      }
+    },
+    {
+      "id": "neg_terror_sem_sangue",
+      "texto": "terror sem ser sangrento demais",
+      "categoria": "negacao",
+      "esperado": {
+        "generos": [
+          "Terror"
+        ],
+        "generos_excluidos": [],
+        "lancado_depois": null,
+        "lancado_antes": null,
+        "bem_avaliado": false
+      },
+      "observacao": "A negação recai sobre o excesso de sangue, que não é gênero."
+    },
+    {
+      "id": "neg_comedia_sem_romance",
+      "texto": "comédia sem romance",
+      "categoria": "negacao",
+      "esperado": {
+        "generos": [
+          "Comédia"
+        ],
+        "generos_excluidos": [
+          "Romance"
+        ],
+        "lancado_depois": null,
+        "lancado_antes": null,
+        "bem_avaliado": false
+      }
+    },
+    {
+      "id": "neg_menos_terror",
+      "texto": "qualquer coisa menos terror",
+      "categoria": "negacao",
+      "esperado": {
+        "generos": [],
+        "generos_excluidos": [
+          "Terror"
+        ],
+        "lancado_depois": null,
+        "lancado_antes": null,
+        "bem_avaliado": false
+      }
+    },
+    {
+      "id": "neg_nao_animacao",
+      "texto": "não quero animação, prefiro algo de aventura",
+      "categoria": "negacao",
+      "esperado": {
+        "generos": [
+          "Aventura"
+        ],
+        "generos_excluidos": [
+          "Animação"
+        ],
+        "lancado_depois": null,
+        "lancado_antes": null,
+        "bem_avaliado": false
+      }
+    },
+    {
+      "id": "neg_nem_dramatico",
+      "texto": "não quero nada triste nem dramático",
+      "categoria": "negacao",
+      "esperado": {
+        "generos": [],
+        "generos_excluidos": [
+          "Drama"
+        ],
+        "lancado_depois": null,
+        "lancado_antes": null,
+        "bem_avaliado": false
+      }
+    },
+    {
+      "id": "neg_historico_sem_guerra",
+      "texto": "filme histórico que não seja de guerra",
+      "categoria": "negacao",
+      "esperado": {
+        "generos": [
+          "História"
+        ],
+        "generos_excluidos": [
+          "Guerra"
+        ],
+        "lancado_depois": null,
+        "lancado_antes": null,
+        "bem_avaliado": false
+      }
+    },
+    {
+      "id": "neg_policial_nao_antigo",
+      "texto": "filme policial que não seja antigo",
+      "categoria": "negacao",
+      "esperado": {
+        "generos": [
+          "Crime"
+        ],
+        "generos_excluidos": [],
+        "lancado_depois": "2016-01-01",
+        "lancado_antes": null,
+        "bem_avaliado": false
+      },
+      "observacao": "\"Não seja antigo\" segue a convenção de \"não muito antigo\": recente."
+    },
+    {
+      "id": "per_decada_passada",
+      "texto": "comédias da década passada",
+      "categoria": "periodo",
+      "esperado": {
+        "generos": [
+          "Comédia"
+        ],
+        "generos_excluidos": [],
+        "lancado_depois": "2010-01-01",
+        "lancado_antes": "2019-12-31",
+        "bem_avaliado": false
+      }
+    },
+    {
+      "id": "per_seculo_passado",
+      "texto": "filmes de guerra do século passado",
+      "categoria": "periodo",
+      "esperado": {
+        "generos": [
+          "Guerra"
+        ],
+        "generos_excluidos": [],
+        "lancado_depois": null,
+        "lancado_antes": "2000-12-31",
+        "bem_avaliado": false
+      }
+    },
+    {
+      "id": "per_ultimos_cinco_anos",
+      "texto": "dramas dos últimos cinco anos",
+      "categoria": "periodo",
+      "esperado": {
+        "generos": [
+          "Drama"
+        ],
+        "generos_excluidos": [],
+        "lancado_depois": "2021-01-01",
+        "lancado_antes": null,
+        "bem_avaliado": false
+      }
+    },
+    {
+      "id": "per_depois_de_matrix",
+      "texto": "ficção científica lançada depois de Matrix",
+      "categoria": "periodo",
+      "esperado": {
+        "generos": [
+          "Ficção científica"
+        ],
+        "generos_excluidos": [],
+        "lancado_depois": "2000-01-01",
+        "lancado_antes": null,
+        "bem_avaliado": false
+      },
+      "observacao": "Matrix é de 1999; a tolerância de um ano aceita 1999 ou 2000."
+    },
+    {
+      "id": "per_terror_anos_80",
+      "texto": "terror dos anos 80",
+      "categoria": "periodo",
+      "esperado": {
+        "generos": [
+          "Terror"
+        ],
+        "generos_excluidos": [],
+        "lancado_depois": "1980-01-01",
+        "lancado_antes": "1989-12-31",
+        "bem_avaliado": false
+      }
+    },
+    {
+      "id": "per_entre_2000_e_2010",
+      "texto": "filmes de ação entre 2000 e 2010",
+      "categoria": "periodo",
+      "esperado": {
+        "generos": [
+          "Ação"
+        ],
+        "generos_excluidos": [],
+        "lancado_depois": "2000-01-01",
+        "lancado_antes": "2010-12-31",
+        "bem_avaliado": false
+      }
+    },
+    {
+      "id": "per_deste_ano",
+      "texto": "lançamentos deste ano",
+      "categoria": "periodo",
+      "esperado": {
+        "generos": [],
+        "generos_excluidos": [],
+        "lancado_depois": "2026-01-01",
+        "lancado_antes": null,
+        "bem_avaliado": false
+      }
+    },
+    {
+      "id": "per_faroeste_classico",
+      "texto": "um faroeste clássico",
+      "categoria": "periodo",
+      "esperado": {
+        "generos": [
+          "Faroeste"
+        ],
+        "generos_excluidos": [],
+        "lancado_depois": null,
+        "lancado_antes": "2000-12-31",
+        "bem_avaliado": false
+      }
+    },
+    {
+      "id": "arm_familia_espiritos",
+      "texto": "família aterrorizada por espíritos",
+      "categoria": "armadilha_lexica",
+      "esperado": {
+        "generos": [
+          "Terror"
+        ],
+        "generos_excluidos": [],
+        "lancado_depois": null,
+        "lancado_antes": null,
+        "bem_avaliado": false
+      },
+      "observacao": "\"Família\" é o assunto; o tom pedido é de terror."
+    },
+    {
+      "id": "arm_guerra_nas_estrelas",
+      "texto": "Guerra nas Estrelas",
+      "categoria": "armadilha_lexica",
+      "esperado": {
+        "generos": [],
+        "generos_excluidos": [],
+        "lancado_depois": null,
+        "lancado_antes": null,
+        "bem_avaliado": false
+      },
+      "observacao": "Título antigo de Star Wars no Brasil; não pede filmes de guerra."
+    },
+    {
+      "id": "arm_crime_e_castigo",
+      "texto": "adaptação de Crime e Castigo",
+      "categoria": "armadilha_lexica",
+      "esperado": {
+        "generos": [],
+        "generos_excluidos": [],
+        "lancado_depois": null,
+        "lancado_antes": null,
+        "bem_avaliado": false
+      },
+      "observacao": "Título do romance de Dostoiévski."
+    },
+    {
+      "id": "arm_medo_de_altura",
+      "texto": "pessoa com medo de altura que precisa superar o trauma",
+      "categoria": "armadilha_lexica",
+      "esperado": {
+        "generos": [],
+        "generos_excluidos": [],
+        "lancado_depois": null,
+        "lancado_antes": null,
+        "bem_avaliado": false
+      },
+      "observacao": "O medo é do personagem; a frase descreve o assunto, não pede terror."
+    },
+    {
+      "id": "arm_acao_judicial",
+      "texto": "uma ação judicial contra uma grande empresa",
+      "categoria": "armadilha_lexica",
+      "esperado": {
+        "generos": [],
+        "generos_excluidos": [],
+        "lancado_depois": null,
+        "lancado_antes": null,
+        "bem_avaliado": false
+      },
+      "observacao": "\"Ação\" no sentido jurídico."
+    },
+    {
+      "id": "arm_romance_policial",
+      "texto": "adaptação de um romance policial da Agatha Christie",
+      "categoria": "armadilha_lexica",
+      "esperado": {
+        "generos": [
+          "Crime",
+          "Mistério"
+        ],
+        "generos_excluidos": [],
+        "lancado_depois": null,
+        "lancado_antes": null,
+        "bem_avaliado": false
+      },
+      "observacao": "\"Romance\" no sentido de livro; romance policial é história de crime e mistério."
+    },
+    {
+      "id": "arm_familia_romanov",
+      "texto": "a história da família Romanov",
+      "categoria": "armadilha_lexica",
+      "esperado": {
+        "generos": [
+          "História"
+        ],
+        "generos_excluidos": [],
+        "lancado_depois": null,
+        "lancado_antes": null,
+        "bem_avaliado": false
+      },
+      "observacao": "\"Família\" é a dinastia; o pedido é de filme histórico."
+    },
+    {
+      "id": "arm_terror_dos_mares",
+      "texto": "piratas que eram o terror dos mares",
+      "categoria": "armadilha_lexica",
+      "esperado": {
+        "generos": [],
+        "generos_excluidos": [],
+        "lancado_depois": null,
+        "lancado_antes": null,
+        "bem_avaliado": false
+      },
+      "observacao": "\"Terror dos mares\" é expressão; piratas são o assunto."
+    },
+    {
+      "id": "sem_astronautas",
+      "texto": "astronautas perdidos no espaço",
+      "categoria": "sem_filtro",
+      "esperado": {
+        "generos": [],
+        "generos_excluidos": [],
+        "lancado_depois": null,
+        "lancado_antes": null,
+        "bem_avaliado": false
+      }
+    },
+    {
+      "id": "sem_cachorro_fiel",
+      "texto": "um cachorro que espera pelo dono todos os dias",
+      "categoria": "sem_filtro",
+      "esperado": {
+        "generos": [],
+        "generos_excluidos": [],
+        "lancado_depois": null,
+        "lancado_antes": null,
+        "bem_avaliado": false
+      }
+    },
+    {
+      "id": "sem_inteligencia_artificial",
+      "texto": "filmes sobre inteligência artificial",
+      "categoria": "sem_filtro",
+      "esperado": {
+        "generos": [],
+        "generos_excluidos": [],
+        "lancado_depois": null,
+        "lancado_antes": null,
+        "bem_avaliado": false
+      }
+    },
+    {
+      "id": "sem_amizade_meninos",
+      "texto": "a amizade entre dois meninos de mundos diferentes",
+      "categoria": "sem_filtro",
+      "esperado": {
+        "generos": [],
+        "generos_excluidos": [],
+        "lancado_depois": null,
+        "lancado_antes": null,
+        "bem_avaliado": false
+      }
+    },
+    {
+      "id": "sem_viagem_no_tempo",
+      "texto": "viagem no tempo para salvar o mundo",
+      "categoria": "sem_filtro",
+      "esperado": {
+        "generos": [],
+        "generos_excluidos": [],
+        "lancado_depois": null,
+        "lancado_antes": null,
+        "bem_avaliado": false
+      }
+    },
+    {
+      "id": "sem_chef_restaurante",
+      "texto": "um chef de cozinha que abre o próprio restaurante",
+      "categoria": "sem_filtro",
+      "esperado": {
+        "generos": [],
+        "generos_excluidos": [],
+        "lancado_depois": null,
+        "lancado_antes": null,
+        "bem_avaliado": false
+      }
+    }
+  ]
+}

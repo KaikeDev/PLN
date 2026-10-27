@@ -1,8 +1,12 @@
-"""CLI: python -m app.search query/hybrid.
+"""CLI: python -m app.search query/hybrid/interpret-eval/interpret-verify.
 
 - `query`: busca uma frase com uma única representação.
 - `hybrid`: a combinação usada pelo site (`config/busca/busca.json`); com `--queries`, compara cada
   representação com a combinação nas consultas anotadas.
+- `interpret-eval`: compara a interpretação da frase por regras e por LLM nas frases anotadas (ADR 0030). O
+  prompt, os gêneros da amostra e a configuração do LLM vêm de `app.settings`; com `--queries`, mede também o
+  efeito na busca por tema da amostra (exige o extra `semantico`).
+- `interpret-verify`: confere os hashes e o alinhamento de uma pasta gerada por `interpret-eval`.
 """
 
 import argparse
@@ -34,9 +38,22 @@ def main() -> int:
     target.add_argument("--queries", type=Path, help="Consultas anotadas: compara cada representação com a combinação")
     target.add_argument("--text", help="Frase a buscar")
     hybrid.add_argument("--k", type=bounded_k, default=5)
+    interpret = commands.add_parser("interpret-eval", help="Comparar regras e LLM na interpretação das frases anotadas")
+    interpret.add_argument("--phrases", type=Path, required=True, help="Frases anotadas (config/busca/interpretacao.json)")
+    interpret.add_argument("--output", type=Path, required=True, help="Pasta nova; nunca é sobrescrita")
+    interpret.add_argument("--reuse", type=Path, help="Pasta de uma execução anterior cujas respostas serão reaproveitadas")
+    interpret.add_argument("--queries", type=Path, help="Consultas anotadas: mede o efeito do tema e dos filtros na busca da amostra")
+    interpret_verify = commands.add_parser("interpret-verify", help="Validar hashes e alinhamento de uma avaliação da interpretação")
+    interpret_verify.add_argument("--input", type=Path, required=True)
     args = parser.parse_args()
     try:
-        if args.command == "hybrid":
+        if args.command == "interpret-eval":
+            print(json.dumps(run_interpretation(args.phrases, args.output, args.reuse, args.queries), ensure_ascii=False))
+        elif args.command == "interpret-verify":
+            from app.search.interpretation.pipeline import verify
+
+            print(json.dumps(verify(args.input), ensure_ascii=False))
+        elif args.command == "hybrid":
             from app.representations.config import load_queries
             from app.search.hybrid import HybridIndex, evaluate, load_search_config
 
@@ -71,6 +88,33 @@ def main() -> int:
         return 0
     except (ValueError, FileExistsError, FileNotFoundError) as exc:
         parser.exit(2, f"Erro: {exc}\n")
+
+
+def run_interpretation(phrases: Path, output: Path, reuse: Path | None, queries: Path | None) -> dict:
+    """Avaliação da interpretação com o prompt, os gêneros e o LLM configurados em `app.settings`."""
+    from app.llm.compose import batch_model
+    from app.search.interpretation.pipeline import Inputs, SearchEffectInputs, run
+    from app.settings import get_settings
+
+    settings = get_settings()
+    inputs = Inputs(phrases, settings.interpretation_prompt, settings.sample_raw_dir / "genres.json", settings.llm_config)
+    effect = None
+    if queries is not None:
+        from app.search.synopsis_index import CorpusSynopsisIndex
+
+        vectors = settings.sample_vectors_dir
+
+        def sample_index() -> CorpusSynopsisIndex:
+            return CorpusSynopsisIndex.load(
+                settings.sample_processed_dir,
+                settings.sample_raw_dir,
+                settings.synopsis_vectors_config,
+                settings.synopsis_search_config,
+                vectors=vectors if vectors.exists() else None,
+            )
+
+        effect = SearchEffectInputs(queries, sample_index)
+    return run(inputs, output, lambda: batch_model(settings)[0], reuse, effect)
 
 
 if __name__ == "__main__":

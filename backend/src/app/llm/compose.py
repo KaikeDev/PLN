@@ -2,6 +2,9 @@
 
 O cache fica por fora do orçamento, para que respostas repetidas não gastem cota. Só entram os provedores com
 chave configurada; sem nenhuma, `build_llm` devolve None e as funções com LLM respondem 503 (ADR 0029).
+
+As avaliações em lote usam `batch_model`: a mesma reserva entre provedores, sem cache nem orçamento, que
+servem ao site; o intervalo entre chamadas fica com `app.llm.batch.PacedModel`.
 """
 
 from dataclasses import dataclass
@@ -54,3 +57,12 @@ def build_llm(settings: Settings) -> LLMStack | None:
     config = load_config(settings.llm_config)
     providers = available_providers(config, settings)
     return stack_for(providers, config) if providers else None
+
+
+def batch_model(settings: Settings) -> tuple[LanguageModel, LLMConfig]:
+    """Reserva entre os provedores com chave, sem cache nem orçamento, e a configuração lida; falha sem nenhuma chave."""
+    config = load_config(settings.llm_config)
+    providers = available_providers(config, settings)
+    if not providers:
+        raise ValueError("Defina GEMINI_API_KEY ou GROQ_API_KEY em backend/.env")
+    return FallbackModel([StructuredModel(provider, config) for provider in providers]), config

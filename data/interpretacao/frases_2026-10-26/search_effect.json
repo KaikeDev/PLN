@@ -1,0 +1,352 @@
+{
+  "k": 5,
+  "consultas": 20,
+  "metricas": {
+    "frase": {
+      "mrr": 0.9125,
+      "acerto_at_k": 1.0,
+      "map": 0.626949,
+      "precisao_at_k": 0.57
+    },
+    "tema": {
+      "mrr": 0.91,
+      "acerto_at_k": 1.0,
+      "map": 0.622829,
+      "precisao_at_k": 0.57
+    },
+    "frase_com_filtros_das_regras": {
+      "mrr": 0.866667,
+      "acerto_at_k": 0.95,
+      "map": 0.6147,
+      "precisao_at_k": 0.55
+    },
+    "frase_com_filtros_do_llm": {
+      "mrr": 0.916667,
+      "acerto_at_k": 1.0,
+      "map": 0.639726,
+      "precisao_at_k": 0.57
+    },
+    "tema_com_filtros_do_llm": {
+      "mrr": 0.916667,
+      "acerto_at_k": 1.0,
+      "map": 0.636103,
+      "precisao_at_k": 0.58
+    }
+  },
+  "por_consulta": [
+    {
+      "id": "matrix_literal",
+      "texto": "programador conectado a um sistema de computadores",
+      "tema": "programador conectado a um sistema de computadores",
+      "llm_falhou": false,
+      "relevantes_recusados_pelas_regras": [],
+      "relevantes_recusados_pelo_llm": [],
+      "precisao_media": {
+        "frase": 1.0,
+        "tema": 1.0,
+        "frase_com_filtros_das_regras": 1.0,
+        "frase_com_filtros_do_llm": 1.0,
+        "tema_com_filtros_do_llm": 1.0
+      }
+    },
+    {
+      "id": "matrix_simulacao",
+      "texto": "filme sobre simulação da realidade",
+      "tema": "simulação da realidade",
+      "llm_falhou": false,
+      "relevantes_recusados_pelas_regras": [],
+      "relevantes_recusados_pelo_llm": [],
+      "precisao_media": {
+        "frase": 0.5,
+        "tema": 0.5,
+        "frase_com_filtros_das_regras": 0.5,
+        "frase_com_filtros_do_llm": 0.5,
+        "tema_com_filtros_do_llm": 0.5
+      }
+    },
+    {
+      "id": "acao_maquinas",
+      "texto": "quero um filme de ação sobre máquinas",
+      "tema": "máquinas",
+      "llm_falhou": false,
+      "relevantes_recusados_pelas_regras": [],
+      "relevantes_recusados_pelo_llm": [],
+      "precisao_media": {
+        "frase": 0.760232,
+        "tema": 0.669433,
+        "frase_com_filtros_das_regras": 0.98416,
+        "frase_com_filtros_do_llm": 0.98416,
+        "tema_com_filtros_do_llm": 0.886303
+      }
+    },
+    {
+      "id": "robo_amizade",
+      "texto": "robô que cria laços de amizade com uma criança ou com animais",
+      "tema": "robô que cria laços de amizade com uma criança ou com animais",
+      "llm_falhou": false,
+      "relevantes_recusados_pelas_regras": [],
+      "relevantes_recusados_pelo_llm": [],
+      "precisao_media": {
+        "frase": 0.680317,
+        "tema": 0.680317,
+        "frase_com_filtros_das_regras": 0.680317,
+        "frase_com_filtros_do_llm": 0.680317,
+        "tema_com_filtros_do_llm": 0.680317
+      }
+    },
+    {
+      "id": "ia_rebelde",
+      "texto": "inteligência artificial que se volta contra a humanidade",
+      "tema": "inteligência artificial que se volta contra a humanidade",
+      "llm_falhou": false,
+      "relevantes_recusados_pelas_regras": [],
+      "relevantes_recusados_pelo_llm": [],
+      "precisao_media": {
+        "frase": 0.841386,
+        "tema": 0.841386,
+        "frase_com_filtros_das_regras": 0.841386,
+        "frase_com_filtros_do_llm": 0.841386,
+        "tema_com_filtros_do_llm": 0.841386
+      }
+    },
+    {
+      "id": "viagem_no_tempo",
+      "texto": "viagem no tempo para mudar o passado",
+      "tema": "viagem no tempo para mudar o passado",
+      "llm_falhou": false,
+      "relevantes_recusados_pelas_regras": [],
+      "relevantes_recusados_pelo_llm": [],
+      "precisao_media": {
+        "frase": 0.519374,
+        "tema": 0.519374,
+        "frase_com_filtros_das_regras": 0.519374,
+        "frase_com_filtros_do_llm": 0.519374,
+        "tema_com_filtros_do_llm": 0.519374
+      }
+    },
+    {
+      "id": "invasao_alienigena",
+      "texto": "alienígenas invadem e atacam a Terra",
+      "tema": "alienígenas invadem e atacam a Terra",
+      "llm_falhou": false,
+      "relevantes_recusados_pelas_regras": [],
+      "relevantes_recusados_pelo_llm": [],
+      "precisao_media": {
+        "frase": 0.686508,
+        "tema": 0.686508,
+        "frase_com_filtros_das_regras": 0.686508,
+        "frase_com_filtros_do_llm": 0.686508,
+        "tema_com_filtros_do_llm": 0.686508
+      }
+    },
+    {
+      "id": "casa_assombrada",
+      "texto": "família aterrorizada por espíritos em uma casa assombrada",
+      "tema": "família aterrorizada por espíritos em uma casa assombrada",
+      "llm_falhou": false,
+      "relevantes_recusados_pelas_regras": [
+        1933,
+        4011,
+        49018,
+        91586,
+        138843,
+        259693,
+        406563
+      ],
+      "relevantes_recusados_pelo_llm": [
+        4011
+      ],
+      "precisao_media": {
+        "frase": 0.659803,
+        "tema": 0.659803,
+        "frase_com_filtros_das_regras": 0.0,
+        "frase_com_filtros_do_llm": 0.592352,
+        "tema_com_filtros_do_llm": 0.592352
+      }
+    },
+    {
+      "id": "possessao",
+      "texto": "possessão demoníaca e exorcismo",
+      "tema": "possessão demoníaca e exorcismo",
+      "llm_falhou": false,
+      "relevantes_recusados_pelas_regras": [],
+      "relevantes_recusados_pelo_llm": [],
+      "precisao_media": {
+        "frase": 0.311073,
+        "tema": 0.311073,
+        "frase_com_filtros_das_regras": 0.311073,
+        "frase_com_filtros_do_llm": 0.374206,
+        "tema_com_filtros_do_llm": 0.374206
+      }
+    },
+    {
+      "id": "zumbis",
+      "texto": "sobreviventes em um mundo tomado por zumbis",
+      "tema": "sobreviventes em um mundo tomado por zumbis",
+      "llm_falhou": false,
+      "relevantes_recusados_pelas_regras": [],
+      "relevantes_recusados_pelo_llm": [],
+      "precisao_media": {
+        "frase": 0.442976,
+        "tema": 0.442976,
+        "frase_com_filtros_das_regras": 0.442976,
+        "frase_com_filtros_do_llm": 0.442976,
+        "tema_com_filtros_do_llm": 0.442976
+      }
+    },
+    {
+      "id": "assassino_mascarado",
+      "texto": "assassino mascarado persegue um grupo de adolescentes",
+      "tema": "assassino mascarado persegue um grupo de adolescentes",
+      "llm_falhou": false,
+      "relevantes_recusados_pelas_regras": [],
+      "relevantes_recusados_pelo_llm": [
+        4247
+      ],
+      "precisao_media": {
+        "frase": 0.569565,
+        "tema": 0.569565,
+        "frase_com_filtros_das_regras": 0.569565,
+        "frase_com_filtros_do_llm": 0.416834,
+        "tema_com_filtros_do_llm": 0.416834
+      }
+    },
+    {
+      "id": "vampiros",
+      "texto": "vampiros",
+      "tema": "vampiros",
+      "llm_falhou": false,
+      "relevantes_recusados_pelas_regras": [],
+      "relevantes_recusados_pelo_llm": [],
+      "precisao_media": {
+        "frase": 0.643343,
+        "tema": 0.643343,
+        "frase_com_filtros_das_regras": 0.643343,
+        "frase_com_filtros_do_llm": 0.643343,
+        "tema_com_filtros_do_llm": 0.643343
+      }
+    },
+    {
+      "id": "astronautas_perdidos",
+      "texto": "astronautas perdidos no espaço lutando para sobreviver",
+      "tema": "astronautas perdidos no espaço lutando para sobreviver",
+      "llm_falhou": false,
+      "relevantes_recusados_pelas_regras": [],
+      "relevantes_recusados_pelo_llm": [],
+      "precisao_media": {
+        "frase": 0.916667,
+        "tema": 0.916667,
+        "frase_com_filtros_das_regras": 0.916667,
+        "frase_com_filtros_do_llm": 0.916667,
+        "tema_com_filtros_do_llm": 0.916667
+      }
+    },
+    {
+      "id": "segunda_guerra",
+      "texto": "soldados lutando na Segunda Guerra Mundial",
+      "tema": "soldados lutando na Segunda Guerra Mundial",
+      "llm_falhou": false,
+      "relevantes_recusados_pelas_regras": [],
+      "relevantes_recusados_pelo_llm": [],
+      "precisao_media": {
+        "frase": 0.706566,
+        "tema": 0.706566,
+        "frase_com_filtros_das_regras": 0.830556,
+        "frase_com_filtros_do_llm": 0.830556,
+        "tema_com_filtros_do_llm": 0.830556
+      }
+    },
+    {
+      "id": "comedia_romantica",
+      "texto": "comédia romântica leve sobre um casal que se apaixona",
+      "tema": "um casal que se apaixona",
+      "llm_falhou": false,
+      "relevantes_recusados_pelas_regras": [],
+      "relevantes_recusados_pelo_llm": [],
+      "precisao_media": {
+        "frase": 0.120731,
+        "tema": 0.129136,
+        "frase_com_filtros_das_regras": 0.187642,
+        "frase_com_filtros_do_llm": 0.187642,
+        "tema_com_filtros_do_llm": 0.213031
+      }
+    },
+    {
+      "id": "prisao_injusta",
+      "texto": "homem preso injustamente sobrevivendo na prisão",
+      "tema": "homem preso injustamente sobrevivendo na prisão",
+      "llm_falhou": false,
+      "relevantes_recusados_pelas_regras": [],
+      "relevantes_recusados_pelo_llm": [],
+      "precisao_media": {
+        "frase": 0.488889,
+        "tema": 0.488889,
+        "frase_com_filtros_das_regras": 0.488889,
+        "frase_com_filtros_do_llm": 0.488889,
+        "tema_com_filtros_do_llm": 0.488889
+      }
+    },
+    {
+      "id": "mafia",
+      "texto": "gângsteres e a máfia",
+      "tema": "gângsteres e a máfia",
+      "llm_falhou": false,
+      "relevantes_recusados_pelas_regras": [],
+      "relevantes_recusados_pelo_llm": [
+        718930
+      ],
+      "precisao_media": {
+        "frase": 0.479519,
+        "tema": 0.479519,
+        "frase_com_filtros_das_regras": 0.479519,
+        "frase_com_filtros_do_llm": 0.468444,
+        "tema_com_filtros_do_llm": 0.468444
+      }
+    },
+    {
+      "id": "mundo_falso",
+      "texto": "personagem descobre que vive em um mundo falso",
+      "tema": "personagem descobre que vive em um mundo falso",
+      "llm_falhou": false,
+      "relevantes_recusados_pelas_regras": [],
+      "relevantes_recusados_pelo_llm": [],
+      "precisao_media": {
+        "frase": 0.472101,
+        "tema": 0.472101,
+        "frase_com_filtros_das_regras": 0.472101,
+        "frase_com_filtros_do_llm": 0.472101,
+        "tema_com_filtros_do_llm": 0.472101
+      }
+    },
+    {
+      "id": "enganar_a_morte",
+      "texto": "jovens escapam de um acidente, mas a morte volta para buscá-los",
+      "tema": "jovens escapam de um acidente, mas a morte volta para buscá-los",
+      "llm_falhou": false,
+      "relevantes_recusados_pelas_regras": [],
+      "relevantes_recusados_pelo_llm": [],
+      "precisao_media": {
+        "frase": 0.739927,
+        "tema": 0.739927,
+        "frase_com_filtros_das_regras": 0.739927,
+        "frase_com_filtros_do_llm": 0.748768,
+        "tema_com_filtros_do_llm": 0.748768
+      }
+    },
+    {
+      "id": "dinossauros",
+      "texto": "dinossauros recriados a partir de DNA",
+      "tema": "dinossauros recriados a partir de DNA",
+      "llm_falhou": false,
+      "relevantes_recusados_pelas_regras": [],
+      "relevantes_recusados_pelo_llm": [],
+      "precisao_media": {
+        "frase": 1.0,
+        "tema": 1.0,
+        "frase_com_filtros_das_regras": 1.0,
+        "frase_com_filtros_do_llm": 1.0,
+        "tema_com_filtros_do_llm": 1.0
+      }
+    }
+  ]
+}

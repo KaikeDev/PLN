@@ -2,8 +2,8 @@
 
 import unittest
 
+from app.search.filters import ExtractedFilters
 from app.search.ports import DiscoverQuery
-from app.search.rules.extractor import ExtractedFilters
 from app.search.service import PAGE_SIZE, FilterInterpretation, Notice, SearchMode, SearchService
 from tests.fakes import FakeCatalog, FakeSynopsisIndex
 

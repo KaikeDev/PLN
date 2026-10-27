@@ -1,8 +1,11 @@
-"""Portas do domínio de pesquisa: o que ele precisa de um catálogo de filmes."""
+"""Portas do domínio de pesquisa: o que ele precisa de um catálogo de filmes e de quem interpreta a frase."""
 
 from collections.abc import Mapping
 from dataclasses import dataclass, field
-from typing import Protocol
+from typing import TYPE_CHECKING, Protocol
+
+if TYPE_CHECKING:
+    from app.search.filters import ExtractedFilters
 
 POPULARITY_DESC = "popularity.desc"
 RATING_DESC = "vote_average.desc"
@@ -30,6 +33,22 @@ class DiscoverQuery:
     released_after: str | None = None
     released_before: str | None = None
     sort_by: str = POPULARITY_DESC
+
+
+class GenreSource(Protocol):
+    """Gêneros do catálogo, para resolver nomes em IDs."""
+
+    def genres(self) -> Mapping[int, str]:
+        """Mapa de ID de gênero para nome localizado."""
+        ...
+
+
+class PreferenceExtractor(Protocol):
+    """Transforma a frase do usuário em filtros: as regras (ADR 0005) ou o LLM (ADR 0030)."""
+
+    def extract(self, text: str) -> ExtractedFilters:
+        """Preferências reconhecidas em `text`."""
+        ...
 
 
 class MovieCatalog(Protocol):

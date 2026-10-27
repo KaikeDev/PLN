@@ -10,7 +10,8 @@ modelos da busca por tema (ADR 0020); se não puder ser carregado, por exemplo s
 a API sobe mesmo assim e o modo `sinopse` responde que está indisponível. O classificador de gênero da
 tela (ADR 0021) e o recomendador de filmes parecidos (ADR 0023) reaproveitam uma representação do índice;
 sem índice, `/classificacao` e `/filmes/{id}/parecidos` respondem 503. O LLM (Gemini e Groq, ADR 0029) só é montado
-para os provedores com chave; sem nenhuma, as funções com LLM respondem 503 e o restante funciona. O CORS só libera origens de navegador conhecidas; ele
+para os provedores com chave; sem nenhuma, as funções com LLM respondem 503 e o restante funciona. Com LLM, a pesquisa
+interpreta a frase por ele e recorre às regras quando ele falha (ADR 0030). O CORS só libera origens de navegador conhecidas; ele
 não é controle de acesso, papel do bind em localhost e do limite de requisições (ADR 0002).
 """
 
@@ -28,7 +29,7 @@ from app.api.router import api_router
 from app.classification.ports import GenreClassifier
 from app.entities.ports import EntityExtractor
 from app.recommendation.ports import SimilarMoviesProvider
-from app.search.ports import MovieSource, SynopsisIndex
+from app.search.ports import GenreSource, MovieSource, PreferenceExtractor, SynopsisIndex
 from app.search.service import SearchService
 from app.sentiment.ports import SentimentAnalyzer
 from app.settings import Settings, get_settings
@@ -96,7 +97,8 @@ def create_app(
         app.state.llm = language_model
         app.state.synopsis_index = index
         app.state.catalog = getattr(app.state, "catalog", None)
-        app.state.search_service = SearchService(CachedMovieCatalog(details), index)
+        cached = CachedMovieCatalog(details)
+        app.state.search_service = SearchService(cached, index, _load_llm_extractor(settings, language_model, cached))
         app.state.rate_limiter = RateLimiter(settings.rate_limit_per_minute)
         try:
             yield
@@ -219,6 +221,21 @@ def _load_llm(settings: Settings) -> LLMStack | None:
         return None
     logger.info("LLM com %s", ", ".join(stack.providers))
     return stack
+
+
+def _load_llm_extractor(settings: Settings, llm: LLMStack | None, genres: GenreSource) -> PreferenceExtractor | None:
+    """Interpretação da frase pelo LLM, com o prompt versionado (ADR 0030); None sem LLM ou com prompt inválido."""
+    if llm is None:
+        return None
+    from app.search.interpretation.llm_extractor import LLMFilterExtractor
+    from app.search.interpretation.prompt import load_prompt
+
+    try:
+        prompt = load_prompt(settings.interpretation_prompt)
+    except (ValueError, FileNotFoundError) as exc:
+        logger.warning("Interpretação por LLM indisponível: %s", exc)
+        return None
+    return LLMFilterExtractor(llm.model, genres, prompt)
 
 
 def _load_recommender(settings: Settings, index: CorpusSynopsisIndex) -> SimilarMoviesProvider | None:

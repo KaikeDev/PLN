@@ -96,6 +96,29 @@ button:hover {
   color: var(--cor-erro);
 }
 
+.interpretacao {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.75rem 0 0;
+  color: var(--cor-texto-fraco);
+  font-size: 0.9rem;
+}
+
+.interpretacao[hidden] { display: none; }
+
+.selo {
+  font-size: 0.75rem;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid currentColor;
+  white-space: nowrap;
+}
+
+.selo--llm { color: var(--cor-destaque); }
+.selo--regras { color: var(--cor-texto-fraco); }
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));

@@ -40,6 +40,7 @@ class Settings(BaseSettings):
     gemini_api_key: SecretStr | None = None
     groq_api_key: SecretStr | None = None
     llm_config: Path = REPOSITORY_DIR / "config" / "llm" / "llm.json"
+    interpretation_prompt: Path = REPOSITORY_DIR / "config" / "busca" / "interpretacao_prompt.json"
     synopsis_search: bool = True
     synopsis_processed_dir: Path = REPOSITORY_DIR / "data" / "preparacao" / CATALOG
     synopsis_raw_dir: Path = REPOSITORY_DIR / "data" / "coleta" / CATALOG
