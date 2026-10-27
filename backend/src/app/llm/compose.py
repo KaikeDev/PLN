@@ -66,3 +66,12 @@ def batch_model(settings: Settings) -> tuple[LanguageModel, LLMConfig]:
     if not providers:
         raise ValueError("Defina GEMINI_API_KEY ou GROQ_API_KEY em backend/.env")
     return FallbackModel([StructuredModel(provider, config) for provider in providers]), config
+
+
+def provider_models(settings: Settings) -> tuple[dict[str, LanguageModel], LLMConfig]:
+    """Um modelo por provedor com chave, sem reserva entre eles, para comparar provedores na mesma avaliação."""
+    config = load_config(settings.llm_config)
+    providers = available_providers(config, settings)
+    if not providers:
+        raise ValueError("Defina GEMINI_API_KEY ou GROQ_API_KEY em backend/.env")
+    return {provider.name: StructuredModel(provider, config) for provider in providers}, config

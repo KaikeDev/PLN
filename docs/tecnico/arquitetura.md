@@ -12,6 +12,7 @@ O backend (`backend/src/app`) é organizado **por tarefa da disciplina**: cada p
 | `recommendation/` | 4. Recomendação | Filme → filmes e perfil → filmes, com avaliação por gênero compartilhado (`analysis.py`), e os filmes parecidos do site (`similar.py`) |
 | `clustering/` | 5. Agrupamento e visualização | K-Means e projeção 2D (`kmeans.py`), avaliação (`analysis.py`) e gráficos SVG (`svg.py`) |
 | `classification/` | 6. Classificação | Regressão logística com validação cruzada (`pipeline.py`, `evaluation.py`), classificadores alternativos, classificador da tela (`live.py`) e o Jev (`jev/`) |
+| `sentiment/` | Aula 9 e Unidade 4 | Coleta e preparação das críticas, polaridade e nota com as oito representações (`pipeline.py`), analisador da tela (`live.py`) e o sentimento com LLM comparado aos modelos treinados (`llm/`, [ADR 0031](../adr/0031-sentimento-com-llm.md)) |
 | `api/` | Site | Rotas `/pesquisa`, `/filmes`, `/filmes/{id}/parecidos`, `/classificacao` e `/saude`, esquemas de resposta e limite de requisições |
 | `tmdb/` | Fonte de dados | Cliente HTTP do TMDB, catálogo e cache, usados pela coleta e pela API |
 | `llm/` | Unidade 4 | Porta `LanguageModel`, adaptadores Gemini e Groq, saída estruturada validada, reserva, cache, orçamento diário e replay das respostas ([ADR 0029](../adr/0029-base-de-llm-por-api-gratuita.md)) |
@@ -54,7 +55,7 @@ Cada etapa lê e grava pastas próprias. Toda saída tem `manifest.json` com o S
 | Busca combinada | `config/busca/busca.json` | `python -m app.search hybrid` | saída no terminal |
 | Classificação treinada | `config/classificacao/classificacao*.json` | `python -m app.classification build` | `data/classificacao/` |
 | Jev | `config/classificacao/jev.json` | `python -m app.classification.jev run` | `data/jev/` |
-| Análise de sentimentos | `config/sentimento/coleta_criticas.json`, `config/sentimento/sentimento.json` | `python -m app.sentiment collect`, `process`, `build` e `verify` | `data/coleta/criticas_2026-10-10/`, `data/preparacao/criticas_2026-10-10/` (fora do Git), `data/sentimento/` |
+| Análise de sentimentos | `config/sentimento/coleta_criticas.json`, `config/sentimento/sentimento.json` | `python -m app.sentiment collect`, `process`, `build` e `verify`; com LLM, `llm-sample`, `llm-eval` e `llm-verify` | `data/coleta/criticas_2026-10-10/`, `data/preparacao/criticas_2026-10-10/` (fora do Git), `data/sentimento/` (o experimento e `llm_2026-10-26/`) |
 | Número de clusters | `config/agrupamento/varredura_k.json` | `python -m app.clustering sweep` e `verify` | `data/agrupamento/` |
 | Entidades e relações | `config/entidades/entidades.json` | `python -m app.entities credits`, `build` e `verify` | `data/coleta/creditos_2026-10-10/`, `data/entidades/` |
 | Catálogo do site (busca e recomendação na API) | `config/coleta/coleta_site.json`, `config/representacoes/vetorizacao_site.json` | `corpus collect`, `corpus process` e `representations build` | `data/*/site_2026-10-05/` (fora do Git) |
@@ -109,6 +110,7 @@ Mesmo organizado por tarefa, o código mantém as dependências externas atrás 
 | `test_search_service.py` | Estratégias de pesquisa e busca por tema com índice falso |
 | `test_search_interpretation.py` | Prompt e variantes, extrator por LLM (esquema com os gêneros do catálogo, datas, limiares), reserva nas regras por falha e por prazo, rota com `interpretacao`, frases anotadas, métricas e avaliação com `--reuse` |
 | `test_classification.py` | Tarefas, validação cruzada, decisão multirrótulo, K-Means × classificador, alternativos, reaproveitamento dos vetores e classificador da tela |
+| `test_sentiment_llm.py` | Variantes do prompt, corte das críticas longas, esquema da saída, amostra equilibrada e conferida, junção com as predições gravadas, métricas, cota diária e chave ausente, e avaliação com `--reuse` sem chamadas e com os mesmos bytes |
 | `test_jev.py` | Amostra, perguntas, validação das respostas, falhas, reaproveitamento, métricas e adaptador do SDK (com um Jev falso) |
 | `test_tmdb.py` | Cliente, catálogo e cache do TMDB |
 | `test_llm.py` | Configuração, corpo e cabeçalhos dos pedidos ao Gemini e ao Groq, erros sem vazar chave, saída estruturada, reserva, cache, orçamento, replay e os modelos das avaliações em lote |

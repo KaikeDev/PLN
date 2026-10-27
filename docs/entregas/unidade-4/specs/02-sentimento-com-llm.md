@@ -1,5 +1,7 @@
 # Spec 02 — Sentimento com LLM: zero-shot e few-shot × modelos treinados
 
+> **Estado: implementada; avaliação parcial em 26/10/2026.** Amostra e prompts commitados antes das chamadas (`1880036`). A primeira execução ([`data/sentimento/llm_2026-10-26`](../../../../data/sentimento/llm_2026-10-26/report.md)) parou na **cota diária do Gemini** (cerca de 500 chamadas por dia no plano gratuito, somando as avaliações do dia): as três variantes no Gemini responderam 86 a 87 das 200 críticas, e a reserva no Groq, todas. Nas 86 críticas respondidas por todas, o LLM zero-shot teve F1 de 0,94 e erro da nota de 0,91, contra 0,91 e 1,58 do BERTimbau e 0,86 e 1,59 do TF-IDF. **Pendente:** completar com `--reuse` depois que a cota renovar, escolher a variante e escrever a ADR 0031.
+
 **Depende de:** 00 · **ADR:** 0031 · **Esforço:** 1–2 dias
 
 ## Objetivo

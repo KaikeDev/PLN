@@ -117,53 +117,60 @@ class ChunkedEncoderTests(unittest.TestCase):
         np.testing.assert_allclose(vectors[1], [0.0, 1.0])
 
 
+def build_fixture(root: Path) -> SimpleNamespace:
+    """Coleta, críticas preparadas e experimento com BoW e TF-IDF, escritos em `root` a partir do TMDB falso."""
+    write_json(
+        root / "coleta.json",
+        {
+            "language": "pt-BR",
+            "pages_per_slice": 1,
+            "genres": [18],
+            "periods": [[2000, 2010]],
+            "vote_count_gte": 50,
+            "sort_by": "popularity.desc",
+            "include_adult": False,
+            "request_interval_seconds": 0,
+            "seed_movie_ids": [],
+        },
+    )
+    stopwords = root / "stopwords.txt"
+    stopwords.write_text("a\no\nde\ne\num\numa\ncom\n", encoding="utf-8")
+    collect_movies(root / "coleta.json", root / "raw", tmdb)
+    process_movies(root / "raw", root / "movies", stopwords)
+    write_json(root / "criticas.json", REVIEW_CONFIG)
+    collected = collect(root / "movies", root / "criticas.json", root / "reviews", tmdb, sleep=lambda _: None)
+    processed = process(root / "reviews", root / "processed", stopwords)
+    config = {
+        "representations": [
+            {"name": "bow_sem_stopwords", "method": "bow", "stage": "06_without_stopwords.jsonl"},
+            {"name": "tfidf_sem_stopwords", "method": "tfidf", "stage": "06_without_stopwords.jsonl"},
+        ],
+        "negative_max": 4,
+        "positive_min": 7,
+        "folds": 2,
+        "inner_folds": 2,
+        "random_state": 42,
+        "regularization_grid": [0.1, 1, 10],
+        "ridge_alphas": [0.1, 1, 10],
+        "min_df": 1,
+        "top_features": 3,
+        "error_examples": 2,
+    }
+    write_json(root / "sentimento.json", config)
+    result = build(root / "processed", root / "experimento", root / "sentimento.json", methods=METHODS)
+    return SimpleNamespace(
+        collected=collected, processed=processed, result=result, config_path=root / "sentimento.json", output=root / "experimento"
+    )
+
+
 class SentimentPipelineTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         cls.tmp = tempfile.TemporaryDirectory()
-        root = Path(cls.tmp.name)
-        write_json(
-            root / "coleta.json",
-            {
-                "language": "pt-BR",
-                "pages_per_slice": 1,
-                "genres": [18],
-                "periods": [[2000, 2010]],
-                "vote_count_gte": 50,
-                "sort_by": "popularity.desc",
-                "include_adult": False,
-                "request_interval_seconds": 0,
-                "seed_movie_ids": [],
-            },
-        )
-        stopwords = root / "stopwords.txt"
-        stopwords.write_text("a\no\nde\ne\num\numa\ncom\n", encoding="utf-8")
-        collect_movies(root / "coleta.json", root / "raw", tmdb)
-        process_movies(root / "raw", root / "movies", stopwords)
-        write_json(root / "criticas.json", REVIEW_CONFIG)
-        cls.collected = collect(root / "movies", root / "criticas.json", root / "reviews", tmdb, sleep=lambda _: None)
-        cls.processed = process(root / "reviews", root / "processed", stopwords)
-        config = {
-            "representations": [
-                {"name": "bow_sem_stopwords", "method": "bow", "stage": "06_without_stopwords.jsonl"},
-                {"name": "tfidf_sem_stopwords", "method": "tfidf", "stage": "06_without_stopwords.jsonl"},
-            ],
-            "negative_max": 4,
-            "positive_min": 7,
-            "folds": 2,
-            "inner_folds": 2,
-            "random_state": 42,
-            "regularization_grid": [0.1, 1, 10],
-            "ridge_alphas": [0.1, 1, 10],
-            "min_df": 1,
-            "top_features": 3,
-            "error_examples": 2,
-        }
-        write_json(root / "sentimento.json", config)
-        cls.config_path = root / "sentimento.json"
-        cls.output = root / "experimento"
-        cls.result = build(root / "processed", cls.output, cls.config_path, methods=METHODS)
-        cls.root = root
+        cls.root = Path(cls.tmp.name)
+        fixture = build_fixture(cls.root)
+        cls.collected, cls.processed, cls.result = fixture.collected, fixture.processed, fixture.result
+        cls.config_path, cls.output = fixture.config_path, fixture.output
 
     @classmethod
     def tearDownClass(cls) -> None:

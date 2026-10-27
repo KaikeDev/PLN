@@ -9,6 +9,7 @@ from app.llm.ports import LanguageModel
 from app.recommendation.ports import SimilarMoviesProvider
 from app.search.ports import MovieDetailsProvider, SynopsisIndex
 from app.search.service import SearchService
+from app.sentiment.llm.classifier import LLMSentiment
 from app.sentiment.ports import SentimentAnalyzer
 
 
@@ -35,6 +36,11 @@ def get_recommender(request: Request) -> SimilarMoviesProvider | None:
 def get_sentiment_analyzer(request: Request) -> SentimentAnalyzer | None:
     """Analisador de sentimento da aplicação, ou None quando não pôde ser carregado."""
     return request.app.state.sentiment_analyzer
+
+
+def get_llm_sentiment(request: Request) -> LLMSentiment | None:
+    """Sentimento por LLM (ADR 0031), ou None sem LLM configurado."""
+    return request.app.state.llm_sentiment
 
 
 def get_entity_extractor(request: Request) -> EntityExtractor | None:

@@ -26,6 +26,7 @@ uv run --frozen python -m app.representations verify --input ../data/representac
 uv run --frozen python -m app.classification verify --input ../data/classificacao/tmdb_2026-09-12
 uv run --frozen python -m app.classification.jev verify --input ../data/jev/tmdb_2026-09-12
 uv run --frozen python -m app.search interpret-verify --input ../data/interpretacao/frases_2026-10-26
+uv run --frozen python -m app.sentiment llm-verify --input ../data/sentimento/llm_2026-10-26
 ```
 
 ## Refazer cada etapa
@@ -104,6 +105,14 @@ uv run --frozen --extra semantico python -m app.sentiment build --input ../data/
 ```
 
 Uma coleta nova de críticas (exige `TMDB_BEARER_TOKEN` e o catálogo do site) está em [7-sentimentos.md](../7-sentimentos.md#como-executar).
+
+Sentimento com LLM nas 200 críticas da amostra ([ADR 0031](../adr/0031-sentimento-com-llm.md)), comparado às predições gravadas do TF-IDF e do BERTimbau. Exige a pasta preparada acima. Reavaliar **sem gastar cota**:
+
+```bash
+uv run --frozen python -m app.sentiment llm-eval --input ../data/preparacao/criticas_2026-10-10 --predictions ../data/sentimento/criticas_2026-10-10 --config ../config/sentimento/sentimento_llm.json --sample ../config/sentimento/sentimento_llm_amostra.json --output ../data/sentimento/llm_reproducao --reuse ../data/sentimento/llm_2026-10-26
+```
+
+Sem `--reuse`, são 824 chamadas (quatro variantes por crítica, 20 repetições e os quatro casos da equipe), cerca de uma hora com o intervalo de 4 s. Se a cota do dia acabar, a pasta é gravada com as falhas registradas, e a mesma linha com `--reuse` apontando para ela pede só o que faltou. A amostra foi sorteada uma vez com `llm-sample` e não deve ser refeita.
 
 ### 7. Entidades e relações
 

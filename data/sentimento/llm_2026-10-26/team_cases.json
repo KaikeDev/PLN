@@ -1,0 +1,70 @@
+[
+  {
+    "tipo": "elogio direto",
+    "texto": "Que filme maravilhoso! A fotografia é deslumbrante, as atuações são excelentes e a trilha sonora emociona do começo ao fim. Saí do cinema querendo ver de novo.",
+    "tfidf_da_tela": {
+      "polaridade": "positivo",
+      "probabilidade_positiva": 0.9973,
+      "nota": 9.33
+    },
+    "llm": {
+      "polaridade": null,
+      "nota": null,
+      "justificativa": null,
+      "provedor": null,
+      "modelo": null,
+      "motivo_da_falha": "cota"
+    }
+  },
+  {
+    "tipo": "crítica negativa",
+    "texto": "Uma perda de tempo. O roteiro é confuso, os diálogos são fracos e o final é previsível. Fiquei entediado na metade e não recomendo.",
+    "tfidf_da_tela": {
+      "polaridade": "negativo",
+      "probabilidade_positiva": 0.4061,
+      "nota": 4.52
+    },
+    "llm": {
+      "polaridade": null,
+      "nota": null,
+      "justificativa": null,
+      "provedor": null,
+      "modelo": null,
+      "motivo_da_falha": "cota"
+    }
+  },
+  {
+    "tipo": "negações",
+    "texto": "Não é um filme ruim. Não chega a ser uma obra-prima, mas não decepciona, e o elenco não deixa a desejar.",
+    "tfidf_da_tela": {
+      "polaridade": "negativo",
+      "probabilidade_positiva": 0.2782,
+      "nota": 4.88
+    },
+    "llm": {
+      "polaridade": null,
+      "nota": null,
+      "justificativa": null,
+      "provedor": null,
+      "modelo": null,
+      "motivo_da_falha": "cota"
+    }
+  },
+  {
+    "tipo": "ironia",
+    "texto": "Ótimo, mais uma continuação que ninguém pediu, com as mesmas piadas de sempre e duas horas e meia de explosões. Genial.",
+    "tfidf_da_tela": {
+      "polaridade": "positivo",
+      "probabilidade_positiva": 0.9553,
+      "nota": 6.83
+    },
+    "llm": {
+      "polaridade": null,
+      "nota": null,
+      "justificativa": null,
+      "provedor": null,
+      "modelo": null,
+      "motivo_da_falha": "cota"
+    }
+  }
+]

@@ -40,6 +40,7 @@ from app.tmdb.client import TMDBClient
 if TYPE_CHECKING:
     from app.llm.compose import LLMStack
     from app.search.synopsis_index import CorpusSynopsisIndex
+    from app.sentiment.llm.classifier import LLMSentiment
 
 logger = logging.getLogger(__name__)
 
@@ -95,6 +96,7 @@ def create_app(
         app.state.sentiment_analyzer = sentiment
         app.state.entity_extractor = extractor
         app.state.llm = language_model
+        app.state.llm_sentiment = _load_llm_sentiment(settings, language_model)
         app.state.synopsis_index = index
         app.state.catalog = getattr(app.state, "catalog", None)
         cached = CachedMovieCatalog(details)
@@ -236,6 +238,20 @@ def _load_llm_extractor(settings: Settings, llm: LLMStack | None, genres: GenreS
         logger.warning("Interpretação por LLM indisponível: %s", exc)
         return None
     return LLMFilterExtractor(llm.model, genres, prompt)
+
+
+def _load_llm_sentiment(settings: Settings, llm: LLMStack | None) -> LLMSentiment | None:
+    """Sentimento por LLM com a variante escolhida na avaliação (ADR 0031); None sem LLM ou com configuração inválida."""
+    if llm is None:
+        return None
+    from app.sentiment.llm.classifier import LLMSentiment as Classifier
+    from app.sentiment.llm.prompt import load_config
+
+    try:
+        return Classifier(llm.model, load_config(settings.sentiment_llm_config))
+    except (ValueError, FileNotFoundError) as exc:
+        logger.warning("Sentimento por LLM indisponível: %s", exc)
+        return None
 
 
 def _load_recommender(settings: Settings, index: CorpusSynopsisIndex) -> SimilarMoviesProvider | None:

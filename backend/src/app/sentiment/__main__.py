@@ -30,6 +30,15 @@ def main() -> int:
     sample.add_argument("--predictions", type=Path, required=True, help="Pasta do experimento com as predições fora da dobra")
     sample.add_argument("--config", type=Path, required=True, help="config/sentimento/sentimento_llm.json")
     sample.add_argument("--output", type=Path, required=True, help="Arquivo novo da amostra; nunca é sobrescrito")
+    evaluate = commands.add_parser("llm-eval", help="Avaliar o LLM na amostra e comparar com o TF-IDF e o BERTimbau")
+    evaluate.add_argument("--input", type=Path, required=True, help="Pasta preparada das críticas")
+    evaluate.add_argument("--predictions", type=Path, required=True, help="Pasta do experimento com as predições fora da dobra")
+    evaluate.add_argument("--config", type=Path, required=True, help="config/sentimento/sentimento_llm.json")
+    evaluate.add_argument("--sample", type=Path, required=True, help="config/sentimento/sentimento_llm_amostra.json")
+    evaluate.add_argument("--output", type=Path, required=True, help="Pasta nova; nunca é sobrescrita")
+    evaluate.add_argument("--reuse", type=Path, help="Pasta de uma execução anterior cujas respostas serão reaproveitadas")
+    llm_verify = commands.add_parser("llm-verify", help="Validar hashes e alinhamento de uma avaliação do sentimento com LLM")
+    llm_verify.add_argument("--input", type=Path, required=True)
     args = parser.parse_args()
     try:
         if args.command == "llm-sample":
@@ -42,6 +51,12 @@ def main() -> int:
             drawn = draw_sample(load_reviews(args.input, args.predictions), load_llm_config(args.config).sample)
             write_json(args.output, drawn)
             print(json.dumps(drawn["estratos"], ensure_ascii=False))
+        elif args.command == "llm-eval":
+            print(json.dumps(run_llm_eval(args), ensure_ascii=False))
+        elif args.command == "llm-verify":
+            from app.sentiment.llm.pipeline import verify as verify_llm
+
+            print(json.dumps(verify_llm(args.input), ensure_ascii=False))
         elif args.command == "collect":
             from app.sentiment.collect import collect as collect_reviews
 
@@ -61,6 +76,22 @@ def main() -> int:
         return 0
     except (ValueError, FileExistsError, FileNotFoundError) as exc:
         parser.exit(2, f"Erro: {exc}\n")
+
+
+def run_llm_eval(args: argparse.Namespace) -> dict:
+    """Avaliação com os provedores de `config/llm/llm.json` e o TF-IDF da tela nos casos da equipe."""
+    from app.llm.compose import provider_models
+    from app.sentiment.live import SentimentAnalyzer
+    from app.sentiment.llm.pipeline import Inputs, run
+    from app.settings import get_settings
+
+    settings = get_settings()
+    inputs = Inputs(args.input, args.predictions, args.config, args.sample, settings.llm_config)
+
+    def screen() -> SentimentAnalyzer:
+        return SentimentAnalyzer.load(args.input, settings.sentiment_config, settings.sentiment_representation)
+
+    return run(inputs, args.output, lambda: provider_models(settings)[0], args.reuse, screen)
 
 
 if __name__ == "__main__":

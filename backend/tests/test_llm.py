@@ -11,7 +11,7 @@ from typing import Literal
 import requests
 from pydantic import BaseModel, Field
 
-from app.llm.batch import LazyModel, PacedModel
+from app.llm.batch import LazyModel, PacedModel, QuotaRetryModel, is_daily_quota
 from app.llm.budget import DailyBudget
 from app.llm.cache import CachedModel
 from app.llm.compose import available_providers, build_llm, stack_for
@@ -425,6 +425,53 @@ class BatchTests(unittest.TestCase):
         self.assertEqual(reuse.generate(request()).data["genero"], "Terror")
         self.assertEqual(reuse.generate(request("outra sinopse")).data["genero"], "Drama")
         self.assertEqual((reuse.reused, reuse.calls, len(inner.requests)), (1, 1, 1))
+
+
+class QuotaAndReplayOrderTests(unittest.TestCase):
+    def test_per_minute_quota_is_retried_and_daily_quota_is_not(self) -> None:
+        answers: list = [
+            LLMUnavailable("cota", "Gemini recusou por cota (HTTP 429): limit per minute"),
+            {"genero": "Terror", "confianca": 0.5},
+        ]
+
+        def flaky(_: LLMRequest) -> dict:
+            answer = answers.pop(0)
+            if isinstance(answer, LLMUnavailable):
+                raise answer
+            return answer
+
+        waits: list[float] = []
+        retry = QuotaRetryModel(FakeLanguageModel(flaky), waits=(1.0, 2.0), sleep=waits.append)
+        self.assertEqual(retry.generate(request()).data["genero"], "Terror")
+        self.assertEqual(waits, [1.0])
+        daily = LLMUnavailable("cota", "quotaId: GenerateRequestsPerDayPerProjectPerModel-FreeTier")
+        self.assertTrue(is_daily_quota(daily))
+        with self.assertRaises(LLMUnavailable):
+            QuotaRetryModel(FakeLanguageModel(daily), waits=(1.0,), sleep=waits.append).generate(request())
+        self.assertEqual(waits, [1.0])
+
+    def test_quota_message_tells_which_limit_was_hit(self) -> None:
+        violation = {
+            "@type": "type.googleapis.com/google.rpc.QuotaFailure",
+            "violations": [{"quotaId": "GenerateRequestsPerDayPerProjectPerModel-FreeTier"}],
+        }
+        session = FakeSession(FakeResponse(429, {"error": {"message": "You exceeded your current quota. " * 20, "details": [violation]}}))
+        with self.assertRaises(LLMUnavailable) as caught:
+            poster(session).post("https://x", {}, {})
+        self.assertIn("GenerateRequestsPerDayPerProjectPerModel-FreeTier", str(caught.exception))
+        self.assertTrue(is_daily_quota(caught.exception))
+
+    def test_replay_answers_repeated_requests_in_order_and_by_provider(self) -> None:
+        records = []
+        for provider, genre in (("gemini", "Terror"), ("gemini", "Drama"), ("groq", "Drama")):
+            recorder = RecordingModel(FakeLanguageModel({"genero": genre, "confianca": 0.5}, provider=provider))
+            recorder.generate(request())
+            records += recorder.records
+        gemini = ReplayModel(records, "gemini")
+        self.assertEqual(len(gemini), 2)
+        self.assertEqual([gemini.generate(request()).data["genero"] for _ in range(2)], ["Terror", "Drama"])
+        self.assertNotIn(request(), gemini)
+        self.assertEqual(ReplayModel(records, "groq").generate(request()).provider, "groq")
 
 
 if __name__ == "__main__":

@@ -56,6 +56,7 @@ class Settings(BaseSettings):
     sentiment_processed_dir: Path = REPOSITORY_DIR / "data" / "preparacao" / REVIEWS
     sentiment_config: Path = REPOSITORY_DIR / "config" / "sentimento" / "sentimento.json"
     sentiment_representation: str = "tfidf_sem_stopwords"
+    sentiment_llm_config: Path = REPOSITORY_DIR / "config" / "sentimento" / "sentimento_llm.json"
 
     def require_tmdb_token(self) -> str:
         """Token de leitura do TMDB; falha com mensagem orientativa quando não configurado."""

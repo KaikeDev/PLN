@@ -5,8 +5,13 @@
 do pedido. Um pedido não gravado vira `LLMUnavailable("indisponivel")`; assim,
 `FallbackModel([ReplayModel(...), modelo_real])` continua uma avaliação interrompida de onde parou; `ReuseModel` faz o
 mesmo sem registrar aviso a cada pedido novo e conta as chamadas feitas.
+
+O mesmo pedido pode ter sido feito mais de uma vez (o teste de estabilidade repete pedidos): cada registro
+responde uma vez, na ordem em que foi gravado, e o pedido que passar do número de registros vira uma chamada
+nova. Com `provider`, só os registros desse provedor contam, para separar o mesmo prompt em provedores diferentes.
 """
 
+from collections import deque
 from collections.abc import Iterable
 from pathlib import Path
 
@@ -33,11 +38,11 @@ def to_record(request: LLMRequest, response: LLMResponse) -> dict:
 
 
 class RecordingModel:
-    """Repassa ao modelo interno e acumula os registros das respostas em `records`."""
+    """Repassa ao modelo interno e acumula os registros das respostas em `records`, que pode ser compartilhada."""
 
-    def __init__(self, inner: LanguageModel) -> None:
+    def __init__(self, inner: LanguageModel, records: list[dict] | None = None) -> None:
         self._inner = inner
-        self.records: list[dict] = []
+        self.records: list[dict] = records if records is not None else []
 
     def generate(self, request: LLMRequest) -> LLMResponse:
         response = self._inner.generate(request)
@@ -46,29 +51,31 @@ class RecordingModel:
 
 
 class ReplayModel:
-    """Responde com os registros gravados; não acessa a rede."""
+    """Responde com os registros gravados, cada um uma vez e na ordem; não acessa a rede."""
 
-    def __init__(self, records: Iterable[dict]) -> None:
-        self._records: dict[str, dict] = {}
+    def __init__(self, records: Iterable[dict], provider: str | None = None) -> None:
+        self._records: dict[str, deque[dict]] = {}
         for position, record in enumerate(records):
             item = require_object(record, f"registro {position}", RECORD_FIELDS)
-            self._records[str(item["key"])] = item
+            if provider is None or item["provider"] == provider:
+                self._records.setdefault(str(item["key"]), deque()).append(item)
 
     @classmethod
-    def from_file(cls, path: Path) -> ReplayModel:
+    def from_file(cls, path: Path, provider: str | None = None) -> ReplayModel:
         """Registros de um `responses.jsonl` gravado por uma execução anterior."""
-        return cls(read_jsonl(path))
+        return cls(read_jsonl(path), provider)
 
     def __len__(self) -> int:
-        return len(self._records)
+        return sum(len(queue) for queue in self._records.values())
 
     def __contains__(self, request: object) -> bool:
-        return isinstance(request, LLMRequest) and request.key() in self._records
+        return isinstance(request, LLMRequest) and bool(self._records.get(request.key()))
 
     def generate(self, request: LLMRequest) -> LLMResponse:
-        record = self._records.get(request.key())
-        if record is None:
+        queue = self._records.get(request.key())
+        if not queue:
             raise LLMUnavailable("indisponivel", "Pedido não gravado na execução reaproveitada")
+        record = queue.popleft()
         try:
             data = parse(str(record["raw_text"]), request.output)
         except ValueError as exc:

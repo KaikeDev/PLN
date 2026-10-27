@@ -55,7 +55,7 @@ class JsonPoster:
             raise LLMUnavailable("indisponivel", f"Falha de comunicação com {self._provider} ({type(exc).__name__})") from exc
         status = response.status_code
         if status == 429:
-            raise LLMUnavailable("cota", f"{self._provider} recusou por cota (HTTP 429)")
+            raise LLMUnavailable("cota", f"{self._provider} recusou por cota (HTTP 429){_detail(response)}")
         if status in (401, 403):
             raise LLMUnavailable("sem_chave", f"{self._provider} recusou a chave (HTTP {status})")
         if status == 400 and "json_validate_failed" in response.text:
@@ -89,12 +89,24 @@ class JsonPoster:
 
 
 def _detail(response: requests.Response) -> str:
-    """Mensagem de erro do provedor em 400, útil para corrigir esquemas; os provedores não ecoam a chave nela."""
-    if response.status_code != 400:
+    """Mensagem do provedor em 400 e 429, útil para corrigir esquemas e saber qual cota acabou; os provedores não ecoam a chave nela."""
+    if response.status_code not in (400, 429):
         return ""
     try:
         error = response.json().get("error", {})
         message = error.get("message") if isinstance(error, dict) else None
+        quotas = _quota_ids(error) if isinstance(error, dict) else []
     except ValueError, AttributeError:
         return ""
-    return f": {str(message)[:MAX_DETAIL_CHARS]}" if message else ""
+    detail = f": {str(message)[:MAX_DETAIL_CHARS]}" if message else ""
+    return f": [cotas: {', '.join(quotas)}]{detail}" if quotas else detail
+
+
+def _quota_ids(error: dict) -> list[str]:
+    """Identificadores das cotas violadas no erro do Gemini (`QuotaFailure`), que dizem se a cota é por minuto ou por dia."""
+    ids = []
+    for detail in error.get("details") or []:
+        for violation in (detail.get("violations") or []) if isinstance(detail, dict) else []:
+            if isinstance(violation, dict) and isinstance(violation.get("quotaId"), str):
+                ids.append(violation["quotaId"][:MAX_DETAIL_CHARS])
+    return list(dict.fromkeys(ids))

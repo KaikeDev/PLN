@@ -671,3 +671,18 @@ button:disabled {
   padding: 0.1rem 0.35rem;
   border-radius: 4px;
 }
+
+.comparacao-ia {
+  display: grid;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  justify-items: start;
+}
+
+.comparacao-ia .destaque { width: 100%; }
+
+.comparacao-ia__motivo {
+  margin: 0;
+  color: var(--cor-texto);
+  font-style: italic;
+}

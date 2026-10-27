@@ -127,6 +127,19 @@ class TermWeight(BaseModel):
     peso: float
 
 
+class SentimentLLMResponse(BaseModel):
+    """Resultado de `/sentimento/llm`: polaridade, nota e justificativa dadas por um LLM sem treino (ADR 0031)."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    polaridade: Literal["positivo", "negativo"]
+    nota: float
+    justificativa: str | None
+    provedor: str
+    modelo: str
+    variante: str
+
+
 class SentimentResponse(BaseModel):
     """Resultado de `/sentimento`: polaridade, probabilidade de ser positiva, nota prevista e o modelo usado.
 

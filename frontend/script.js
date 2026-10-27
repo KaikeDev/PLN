@@ -225,6 +225,41 @@ function analisarCritica(texto) {
   return obterJson(`/sentimento?${new URLSearchParams({ texto })}`, "Falha ao analisar a crítica.");
 }
 
+function analisarCriticaComIA(texto) {
+  return obterJson(`/sentimento/llm?${new URLSearchParams({ texto })}`, "Falha ao consultar a IA.");
+}
+
+function botaoCompararComIA(texto) {
+  const caixa = elemento("div", { classe: "comparacao-ia", atributos: { "aria-live": "polite" } });
+  const botao = elemento("button", { classe: "botao-secundario", texto: "Comparar com IA", atributos: { type: "button" } });
+  botao.addEventListener("click", async () => {
+    botao.disabled = true;
+    botao.textContent = "Consultando a IA...";
+    try {
+      const dados = await analisarCriticaComIA(texto);
+      const positivo = dados.polaridade === "positivo";
+      caixa.replaceChildren(
+        elemento("div", { classe: `destaque ${positivo ? "sentimento--positivo" : "sentimento--negativo"}` }, [
+          elemento("div", {}, [
+            elemento("span", { classe: "destaque__rotulo", texto: "Segundo a IA (sem treino)" }),
+            elemento("span", { classe: "destaque__genero", texto: positivo ? "Positivo" : "Negativo" }),
+          ]),
+          elemento("span", { classe: "destaque__valor", texto: `nota ${decimal(dados.nota)}` }),
+        ]),
+        ...(typeof dados.justificativa === "string" && dados.justificativa ? [elemento("p", { classe: "comparacao-ia__motivo", texto: `“${dados.justificativa}”` })] : []),
+        elemento("p", { classe: "parecidos__aviso", texto: `Resposta de ${dados.provedor} (${dados.modelo}). Um LLM também erra: compare com o modelo treinado acima. Não digite dados pessoais.` }),
+      );
+      botao.remove();
+    } catch (erro) {
+      caixa.replaceChildren(elemento("p", { classe: "mensagem", texto: erro.message }));
+      botao.disabled = false;
+      botao.textContent = "Comparar com IA";
+    }
+  });
+  caixa.append(botao);
+  return caixa;
+}
+
 function decimal(valor, casas = 1) {
   const numero = Number(valor);
   return Number.isFinite(numero) ? numero.toFixed(casas).replace(".", ",") : "?";
@@ -240,7 +275,7 @@ function listaPalavras(titulo, palavras, classe) {
   ]);
 }
 
-function renderizarSentimento(dados) {
+function renderizarSentimento(dados, texto) {
   const positivo = dados.polaridade === "positivo";
   const classe = positivo ? "sentimento--positivo" : "sentimento--negativo";
   const chance = positivo ? Number(dados.probabilidade_positiva) : 1 - Number(dados.probabilidade_positiva);
@@ -275,6 +310,7 @@ function renderizarSentimento(dados) {
   if (exemploCriticaAtual) {
     filhos.unshift(elemento("p", { classe: "resultado__exemplo", texto: `Exemplo escrito pela equipe (${exemploCriticaAtual}), fora das críticas de treino.` }));
   }
+  filhos.push(botaoCompararComIA(texto));
   elResultadoSentimento.replaceChildren(...filhos);
 }
 
@@ -540,7 +576,8 @@ elFormSentimento.addEventListener("submit", async (evento) => {
   elBotaoAnalisar.disabled = true;
   elBotaoAnalisar.textContent = "Analisando...";
   try {
-    renderizarSentimento(await analisarCritica(elCritica.value.trim()));
+    const texto = elCritica.value.trim();
+    renderizarSentimento(await analisarCritica(texto), texto);
   } catch (erro) {
     elMensagemSentimento.textContent = erro.message;
   } finally {
