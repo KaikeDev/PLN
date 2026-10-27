@@ -53,6 +53,24 @@ const EXEMPLOS_CRITICA = [
 ];
 let proximoExemploCritica = 0;
 let exemploCriticaAtual = null;
+const elFormPergunta = document.getElementById("form-pergunta");
+const elPergunta = document.getElementById("campo-pergunta");
+const elContadorPergunta = document.getElementById("contador-pergunta");
+const elBotaoPerguntar = document.getElementById("botao-perguntar");
+const elExemplosPergunta = document.getElementById("exemplos-pergunta");
+const elMensagemPergunta = document.getElementById("mensagem-pergunta");
+const elResultadoPergunta = document.getElementById("resultado-pergunta");
+const LIMITE_PERGUNTA = 300;
+const EXEMPLOS_PERGUNTA = [
+  "Tem algum filme sobre luto e sobre lidar com a perda de alguém?",
+  "Existe algum filme de zumbis que seja engraçado?",
+  "Filmes que se passam dentro de uma prisão",
+  "O que as pessoas acharam de Oppenheimer?",
+  "O filme da Barbie agradou quem assistiu?",
+  "Quais filmes falam sobre curling?",
+];
+const CITACAO = /\[F(\d+)\]/g;
+let exemplosGravados = null;
 const elAbas = Array.from(document.querySelectorAll('[role="tab"]'));
 const LIMITE_SINOPSE = 1000;
 const EXEMPLOS = [
@@ -622,3 +640,127 @@ document.addEventListener("keydown", (evento) => {
 });
 
 verificarSaude();
+
+function perguntar(texto) {
+  return obterJson(`/pergunta?${new URLSearchParams({ q: texto })}`, "Falha ao responder a pergunta.");
+}
+
+async function carregarExemplosGravados() {
+  if (exemplosGravados) return exemplosGravados;
+  const resposta = await fetch("dados/exemplos_rag.json", { headers: { accept: "application/json" } });
+  if (!resposta.ok) throw new Error("Exemplos gravados indisponíveis.");
+  const dados = await resposta.json();
+  exemplosGravados = Array.isArray(dados.exemplos) ? dados.exemplos : [];
+  return exemplosGravados;
+}
+
+function textoComCitacoes(texto, citados) {
+  const titulos = new Map((citados ?? []).map((item) => [String(item.id), item.filme?.title ?? `filme ${item.id}`]));
+  const paragrafo = elemento("p", { classe: "resposta-rag__texto" });
+  let inicio = 0;
+  for (const marca of String(texto ?? "").matchAll(CITACAO)) {
+    paragrafo.append(document.createTextNode(texto.slice(inicio, marca.index)));
+    const id = marca[1];
+    const botao = elemento("button", {
+      classe: "citacao",
+      texto: `F${id}`,
+      atributos: { type: "button", "aria-label": `Abrir a ficha de ${titulos.get(id) ?? "filme citado"}` },
+    });
+    botao.addEventListener("click", () => abrirDetalhes(Number(id)));
+    paragrafo.append(botao);
+    inicio = marca.index + marca[0].length;
+  }
+  paragrafo.append(document.createTextNode(String(texto ?? "").slice(inicio)));
+  return paragrafo;
+}
+
+function seloResposta(dados) {
+  if (dados.exemplo_gravado) return "Exemplo gravado na avaliação, sem chamar a IA agora";
+  const segundos = Number.isFinite(dados.latencia_ms) ? ` · ${decimal(dados.latencia_ms / 1000)} s` : "";
+  return `${dados.provedor} · ${dados.modelo}${segundos}`;
+}
+
+function blocoContexto(contexto) {
+  const itens = (Array.isArray(contexto) ? contexto : []).map((filme) => {
+    const origem = filme.pontuacao === null ? "título citado na pergunta" : `pontuação ${decimal(filme.pontuacao, 2)}`;
+    const trechos = (filme.trechos ?? []).map((trecho) =>
+      elemento("li", { texto: `“${trecho.texto}” (nota do autor: ${trecho.nota === null ? "sem nota" : decimal(trecho.nota, 0)})` }),
+    );
+    return elemento("li", {}, [
+      elemento("span", { classe: "contexto-rag__titulo", texto: `[F${filme.id}] ${filme.titulo ?? "Sem título"}` }),
+      elemento("span", { classe: "contexto-rag__meta", texto: ` · ${origem} · ${filme.criticas} crítica(s) coletada(s)` }),
+      trechos.length ? elemento("ul", { classe: "contexto-rag__trechos" }, trechos) : elemento("p", { classe: "contexto-rag__meta", texto: "Sem trecho de crítica no contexto." }),
+    ]);
+  });
+  return elemento("details", { classe: "contexto-rag" }, [
+    elemento("summary", { texto: `De onde veio a resposta (${itens.length} filmes recuperados)` }),
+    elemento("ol", {}, itens),
+  ]);
+}
+
+function renderizarResposta(dados) {
+  const citados = Array.isArray(dados.filmes_citados) ? dados.filmes_citados : [];
+  const filhos = [
+    elemento("span", { classe: `selo ${dados.exemplo_gravado ? "selo--regras" : "selo--llm"}`, texto: seloResposta(dados) }),
+    textoComCitacoes(dados.resposta, citados),
+  ];
+  if (dados.citacoes_removidas > 0) {
+    filhos.push(elemento("p", { classe: "parecidos__aviso", texto: `${dados.citacoes_removidas} citação(ões) a filmes fora do contexto foram removidas da resposta.` }));
+  }
+  const cartoes = citados.filter((item) => item.filme && Number.isInteger(item.filme.id)).map((item) => criarCard(item.filme));
+  if (cartoes.length) filhos.push(elemento("section", { classe: "grid", atributos: { "aria-label": "Filmes citados" } }, cartoes));
+  filhos.push(blocoContexto(dados.contexto));
+  elResultadoPergunta.replaceChildren(...filhos);
+}
+
+async function mostrarExemploGravado(texto, motivo) {
+  try {
+    const exemplos = await carregarExemplosGravados();
+    const exemplo = exemplos.find((item) => item.pergunta === texto);
+    if (exemplo) {
+      elMensagemPergunta.textContent = `${motivo} Mostrando a resposta gravada na avaliação.`;
+      renderizarResposta(exemplo);
+      return;
+    }
+    elMensagemPergunta.textContent = `${motivo} Experimente um dos exemplos acima, que têm respostas gravadas.`;
+  } catch {
+    elMensagemPergunta.textContent = motivo;
+  }
+}
+
+async function enviarPergunta(texto) {
+  elMensagemPergunta.textContent = "";
+  elResultadoPergunta.replaceChildren();
+  elBotaoPerguntar.disabled = true;
+  elBotaoPerguntar.textContent = "Pensando...";
+  try {
+    renderizarResposta(await perguntar(texto));
+  } catch (erro) {
+    await mostrarExemploGravado(texto, erro.message.endsWith(".") ? erro.message : `${erro.message}.`);
+  } finally {
+    elBotaoPerguntar.disabled = false;
+    elBotaoPerguntar.textContent = "Perguntar";
+  }
+}
+
+function atualizarContadorPergunta() {
+  elContadorPergunta.textContent = `${elPergunta.value.length} / ${LIMITE_PERGUNTA}`;
+}
+
+for (const exemplo of EXEMPLOS_PERGUNTA) {
+  const botao = elemento("button", { classe: "botao-secundario exemplo-pergunta", texto: exemplo, atributos: { type: "button" } });
+  botao.addEventListener("click", () => {
+    elPergunta.value = exemplo;
+    atualizarContadorPergunta();
+    enviarPergunta(exemplo);
+  });
+  elExemplosPergunta.append(botao);
+}
+
+elFormPergunta.addEventListener("submit", (evento) => {
+  evento.preventDefault();
+  const texto = elPergunta.value.trim();
+  if (texto) enviarPergunta(texto);
+});
+
+elPergunta.addEventListener("input", atualizarContadorPergunta);

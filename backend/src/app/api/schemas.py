@@ -201,6 +201,52 @@ class SimilarMoviesResponse(BaseModel):
     parecidos: list[MovieSummary]
 
 
+class CitedFilm(BaseModel):
+    """Filme citado na resposta do RAG, com o motivo e os dados de exibição."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    id: int
+    motivo: str
+    filme: MovieSummary | None
+
+
+class ReviewExcerpt(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    texto: str
+    nota: float | None
+
+
+class ContextFilm(BaseModel):
+    """Filme do contexto recuperado: pontuação da busca (None quando veio do título citado) e trechos de crítica usados."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    id: int
+    titulo: str | None
+    pontuacao: float | None
+    criticas: int
+    trechos: list[ReviewExcerpt]
+
+
+class QuestionResponse(BaseModel):
+    """Resultado de `/pergunta` e dos exemplos gravados (ADR 0032)."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    pergunta: str
+    resposta: str
+    contexto_suficiente: bool
+    filmes_citados: list[CitedFilm]
+    contexto: list[ContextFilm]
+    provedor: str
+    modelo: str
+    latencia_ms: int | None
+    citacoes_removidas: int
+    exemplo_gravado: bool
+
+
 class SearchResponse(BaseModel):
     """Resultado de `/pesquisa`."""
 

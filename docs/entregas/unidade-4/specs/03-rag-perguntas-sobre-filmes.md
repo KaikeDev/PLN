@@ -1,5 +1,7 @@
 # Spec 03 — RAG: perguntas sobre filmes com respostas citadas
 
+> **Estado: implementada em 26/10/2026; avaliação pendente.** Perguntas e rubrica commitadas antes da primeira chamada (`714084f`). Pacote `app/rag`, rota `/pergunta` com limite próprio, aba "Perguntar" com exemplos clicáveis, citações como links para a ficha e o bloco "De onde veio a resposta". A recuperação também casa títulos citados na pergunta, porque a sinopse raramente traz o título ("Pecadores vale a pena?"). **Pendente:** rodar `python -m app.rag eval` quando a cota diária do Gemini renovar, exportar os exemplos gravados, o julgamento pelos dois juízes e a ADR 0032.
+
 **Depende de:** 00 (e usa a busca híbrida existente) · **ADR:** 0032 · **Esforço:** 3 dias
 
 ## Objetivo

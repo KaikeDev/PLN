@@ -114,6 +114,21 @@ uv run --frozen python -m app.sentiment llm-eval --input ../data/preparacao/crit
 
 Sem `--reuse`, são 824 chamadas (quatro variantes por crítica, 20 repetições e os quatro casos da equipe), cerca de uma hora com o intervalo de 4 s. Se a cota do dia acabar, a pasta é gravada com as falhas registradas, e a mesma linha com `--reuse` apontando para ela pede só o que faltou. A amostra foi sorteada uma vez com `llm-sample` e não deve ser refeita.
 
+### RAG (aba "Perguntar")
+
+Avaliação na amostra de 428 filmes ([ADR 0032](../adr/0032-rag-perguntas-sobre-filmes.md)); exige o extra `semantico` e as críticas preparadas (seção 6):
+
+```bash
+uv run --frozen --extra semantico python -m app.rag eval --questions ../config/rag/perguntas.json --queries ../config/busca/consultas.json --config ../config/rag/rag.json --output ../data/rag/minha_execucao
+# arquivo que os dois juízes preenchem, com a rubrica de config/rag/rubrica.md
+uv run --frozen python -m app.rag judgment-template --input ../data/rag/minha_execucao --output ../config/rag/julgamentos.json
+uv run --frozen python -m app.rag agreement --input ../data/rag/minha_execucao --judgments ../config/rag/julgamentos.json
+# respostas gravadas que o site mostra como exemplos e quando a cota acaba
+uv run --frozen python -m app.rag export-examples --input ../data/rag/minha_execucao --output ../frontend/dados/exemplos_rag.json
+```
+
+Sem `--reuse`, são cerca de 180 chamadas grandes ao LLM (as 20 consultas com 5, 10 e 20 filmes no contexto, as 33 perguntas, a ablação sem críticas e a interpretação de cada frase). `--without-ablation` pula a ablação.
+
 ### 7. Entidades e relações
 
 ```bash

@@ -6,6 +6,7 @@ from app.api.rate_limit import RateLimiter
 from app.classification.ports import GenreClassifier
 from app.entities.ports import EntityExtractor
 from app.llm.ports import LanguageModel
+from app.rag.service import QuestionAnswering
 from app.recommendation.ports import SimilarMoviesProvider
 from app.search.ports import MovieDetailsProvider, SynopsisIndex
 from app.search.service import SearchService
@@ -57,6 +58,17 @@ def get_language_model(request: Request) -> LanguageModel | None:
     """LLM do site (cache, orçamento e reserva), ou None quando nenhum provedor tem chave."""
     llm = request.app.state.llm
     return llm.model if llm is not None else None
+
+
+def get_question_answering(request: Request) -> QuestionAnswering | None:
+    """RAG da aba "Perguntar" (ADR 0032), ou None sem LLM, sem índice de sinopses ou sem críticas preparadas."""
+    return request.app.state.question_answering
+
+
+def enforce_question_rate_limit(request: Request) -> None:
+    """Limite próprio de `/pergunta`, mais baixo que o geral: cada pergunta gasta uma chamada grande ao LLM."""
+    limiter: RateLimiter = request.app.state.question_limiter
+    limiter(request)
 
 
 def enforce_rate_limit(request: Request) -> None:

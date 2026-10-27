@@ -212,9 +212,14 @@ class SearchService:
         if llm_extractor is not None:
             extractors[InterpretationMode.LLM] = llm_extractor
             extractors[InterpretationMode.AUTO] = FallbackExtractor(llm_extractor, rules)
+        self._extractors = extractors
         self._strategies = {
             interpretation: _strategies(catalog, synopsis_index, extractor) for interpretation, extractor in extractors.items()
         }
+
+    def interpreter(self, interpretation: InterpretationMode = InterpretationMode.AUTO) -> PreferenceExtractor:
+        """Intérprete da frase usado pela pesquisa; o RAG usa o mesmo (ADR 0032)."""
+        return self._extractors.get(InterpretationMode(interpretation), self._extractors[InterpretationMode.AUTO])
 
     def search(
         self,

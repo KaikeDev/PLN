@@ -13,6 +13,7 @@ O backend (`backend/src/app`) é organizado **por tarefa da disciplina**: cada p
 | `clustering/` | 5. Agrupamento e visualização | K-Means e projeção 2D (`kmeans.py`), avaliação (`analysis.py`) e gráficos SVG (`svg.py`) |
 | `classification/` | 6. Classificação | Regressão logística com validação cruzada (`pipeline.py`, `evaluation.py`), classificadores alternativos, classificador da tela (`live.py`) e o Jev (`jev/`) |
 | `sentiment/` | Aula 9 e Unidade 4 | Coleta e preparação das críticas, polaridade e nota com as oito representações (`pipeline.py`), analisador da tela (`live.py`) e o sentimento com LLM comparado aos modelos treinados (`llm/`, [ADR 0031](../adr/0031-sentimento-com-llm.md)) |
+| `rag/` | Unidade 4 | Perguntas sobre os filmes: críticas por filme e escolha dos trechos (`reviews.py`), recuperação com títulos citados e a busca híbrida (`retrieval.py`), contexto numerado (`prompt.py`), conferência das citações (`grounding.py`), serviço (`service.py`) e avaliação (`pipeline.py`, [ADR 0032](../adr/0032-rag-perguntas-sobre-filmes.md)) |
 | `api/` | Site | Rotas `/pesquisa`, `/filmes`, `/filmes/{id}/parecidos`, `/classificacao` e `/saude`, esquemas de resposta e limite de requisições |
 | `tmdb/` | Fonte de dados | Cliente HTTP do TMDB, catálogo e cache, usados pela coleta e pela API |
 | `llm/` | Unidade 4 | Porta `LanguageModel`, adaptadores Gemini e Groq, saída estruturada validada, reserva, cache, orçamento diário e replay das respostas ([ADR 0029](../adr/0029-base-de-llm-por-api-gratuita.md)) |
@@ -111,6 +112,7 @@ Mesmo organizado por tarefa, o código mantém as dependências externas atrás 
 | `test_search_interpretation.py` | Prompt e variantes, extrator por LLM (esquema com os gêneros do catálogo, datas, limiares), reserva nas regras por falha e por prazo, rota com `interpretacao`, frases anotadas, métricas e avaliação com `--reuse` |
 | `test_classification.py` | Tarefas, validação cruzada, decisão multirrótulo, K-Means × classificador, alternativos, reaproveitamento dos vetores e classificador da tela |
 | `test_sentiment_llm.py` | Variantes do prompt, corte das críticas longas, esquema da saída, amostra equilibrada e conferida, junção com as predições gravadas, métricas, cota diária e chave ausente, e avaliação com `--reuse` sem chamadas e com os mesmos bytes |
+| `test_rag.py` | Janelas e trechos de crítica sem autor, títulos citados, filtros e k, contexto determinístico e sem citações falsas, conferência das citações, rota `/pergunta` com limite próprio, kappa, avaliação com `--reuse`, julgamentos e exemplos gravados |
 | `test_jev.py` | Amostra, perguntas, validação das respostas, falhas, reaproveitamento, métricas e adaptador do SDK (com um Jev falso) |
 | `test_tmdb.py` | Cliente, catálogo e cache do TMDB |
 | `test_llm.py` | Configuração, corpo e cabeçalhos dos pedidos ao Gemini e ao Groq, erros sem vazar chave, saída estruturada, reserva, cache, orçamento, replay e os modelos das avaliações em lote |

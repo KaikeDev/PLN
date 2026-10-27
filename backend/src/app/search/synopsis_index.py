@@ -10,6 +10,7 @@ from collections.abc import Mapping
 from pathlib import Path
 
 from app.corpus.verification import verify_raw
+from app.representations.embeddings import ContextualSpace, TextEncoder
 from app.representations.methods import METHODS, Method
 from app.search.hybrid import HybridIndex, load_search_config
 from app.shared.artifacts import read_json_object, read_jsonl, sha256
@@ -25,6 +26,7 @@ class CorpusSynopsisIndex:
             raise ValueError(f"Filmes do corpus sem dados de exibição: {missing[:5]}")
         self._hybrid = hybrid
         self._movies = movies
+        self._ids = set(hybrid.corpus.ids)
 
     @classmethod
     def load(
@@ -53,6 +55,17 @@ class CorpusSynopsisIndex:
     def size(self) -> int:
         """Número de filmes com sinopse no catálogo."""
         return len(self._hybrid.corpus.ids)
+
+    def titles(self) -> dict[int, str]:
+        """Título de cada filme do catálogo, para achar filmes citados pelo nome (RAG, ADR 0032)."""
+        return {movie_id: str(movie.get("title") or "") for movie_id, movie in self._movies.items() if movie_id in self._ids}
+
+    def sentence_encoder(self) -> TextEncoder | None:
+        """Codificador do embedding de sentença da busca, quando ela usa um; reaproveitado para escolher trechos de crítica."""
+        for representation, _ in self._hybrid.members:
+            if isinstance(representation, ContextualSpace):
+                return representation.encoder
+        return None
 
     @property
     def hybrid(self) -> HybridIndex:

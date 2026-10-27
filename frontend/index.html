@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' https://image.tmdb.org; connect-src http://127.0.0.1:8000 http://localhost:8000; base-uri 'none'; form-action 'none'" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' https://image.tmdb.org; connect-src 'self' http://127.0.0.1:8000 http://localhost:8000; base-uri 'none'; form-action 'none'" />
   <meta name="referrer" content="no-referrer" />
   <meta name="api-base" content="http://127.0.0.1:8000" />
   <title>API de Filmes (TMDB)</title>
@@ -24,6 +24,7 @@
       <button type="button" class="aba aba--ativa" id="aba-busca" role="tab" aria-selected="true" aria-controls="painel-busca">Buscar filmes</button>
       <button type="button" class="aba" id="aba-classificacao" role="tab" aria-selected="false" aria-controls="painel-classificacao" tabindex="-1">Classificar sinopse</button>
       <button type="button" class="aba" id="aba-sentimento" role="tab" aria-selected="false" aria-controls="painel-sentimento" tabindex="-1">Analisar crítica</button>
+      <button type="button" class="aba" id="aba-perguntar" role="tab" aria-selected="false" aria-controls="painel-perguntar" tabindex="-1">Perguntar</button>
     </div>
 
     <section id="painel-busca" role="tabpanel" aria-labelledby="aba-busca">
@@ -94,6 +95,31 @@
         <p id="rodape-sentimento" class="painel__rodape">Modelo: regressão logística (sentimento) e Ridge (nota) sobre o TF-IDF, treinados com 1.859 críticas em português do TMDB, rotuladas pela nota que o próprio autor deu ao filme. Na validação cruzada, acerta 88% das críticas (F1 macro de 86%) e erra a nota em 1,4 ponto em média. Negação e ironia ainda enganam o modelo.</p>
       </div>
     </section>
+
+    <section id="painel-perguntar" role="tabpanel" aria-labelledby="aba-perguntar" hidden>
+      <div class="painel">
+        <div class="painel__cabecalho">
+          <h2>Perguntar sobre os filmes</h2>
+          <p class="painel__ajuda">Faça uma pergunta em português. A resposta usa só as sinopses e as críticas dos filmes do catálogo, e cada filme citado abre a sua ficha.</p>
+        </div>
+
+        <form id="form-pergunta" class="form-classificacao">
+          <textarea id="campo-pergunta" rows="3" maxlength="300" required aria-label="Pergunta" placeholder="Ex.: Tem algum filme sobre luto e sobre lidar com a perda de alguém?"></textarea>
+          <div class="form-classificacao__rodape">
+            <span id="contador-pergunta" class="contador">0 / 300</span>
+            <div class="form-classificacao__acoes">
+              <button type="submit" id="botao-perguntar">Perguntar</button>
+            </div>
+          </div>
+        </form>
+
+        <div id="exemplos-pergunta" class="exemplos-pergunta" role="group" aria-label="Perguntas de exemplo"></div>
+        <p id="mensagem-pergunta" class="mensagem" role="status"></p>
+        <div id="resultado-pergunta" class="resultado" aria-live="polite"></div>
+
+        <p class="painel__rodape">Como funciona: a busca do site recupera 8 filmes pela sinopse (e pelos títulos citados na pergunta), junta trechos das críticas de usuários do TMDB e pede a um LLM gratuito (Gemini, com o Groq de reserva) uma resposta que cite só esses filmes; citações fora deles são removidas antes de aparecer. Respostas geradas por IA podem errar: confira na ficha do filme. Não digite dados pessoais.</p>
+      </div>
+    </section>
   </main>
 
   <div id="modal" class="modal oculto" role="dialog" aria-modal="true" aria-label="Detalhes do filme">
@@ -103,6 +129,6 @@
     </div>
   </div>
 
-  <script src="script.js?v=8"></script>
+  <script src="script.js?v=9"></script>
 </body>
 </html>

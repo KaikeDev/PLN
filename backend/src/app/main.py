@@ -39,6 +39,7 @@ from app.tmdb.client import TMDBClient
 
 if TYPE_CHECKING:
     from app.llm.compose import LLMStack
+    from app.rag.service import QuestionAnswering
     from app.search.synopsis_index import CorpusSynopsisIndex
     from app.sentiment.llm.classifier import LLMSentiment
 
@@ -54,8 +55,9 @@ def create_app(
     sentiment_analyzer: SentimentAnalyzer | None = None,
     entity_extractor: EntityExtractor | None = None,
     llm: LLMStack | None = None,
+    question_answering: QuestionAnswering | None = None,
 ) -> FastAPI:
-    """Aplicação configurada; `catalog`, `synopsis_index`, `genre_classifier`, `recommender`, `sentiment_analyzer`, `entity_extractor` e `llm` substituem os reais (usados em testes).
+    """Aplicação configurada; `catalog`, `synopsis_index`, `genre_classifier`, `recommender`, `sentiment_analyzer`, `entity_extractor`, `llm` e `question_answering` substituem os reais (usados em testes).
 
     Com `catalog` injetado, o índice, o classificador, o recomendador, o analisador de sentimento, o extrator de entidades e o LLM reais não são carregados.
     """
@@ -101,7 +103,11 @@ def create_app(
         app.state.catalog = getattr(app.state, "catalog", None)
         cached = CachedMovieCatalog(details)
         app.state.search_service = SearchService(cached, index, _load_llm_extractor(settings, language_model, cached))
+        app.state.question_answering = question_answering or _load_question_answering(
+            settings, index, language_model, app.state.search_service, cached
+        )
         app.state.rate_limiter = RateLimiter(settings.rate_limit_per_minute)
+        app.state.question_limiter = RateLimiter(settings.question_rate_limit_per_minute)
         try:
             yield
         finally:
@@ -252,6 +258,30 @@ def _load_llm_sentiment(settings: Settings, llm: LLMStack | None) -> LLMSentimen
     except (ValueError, FileNotFoundError) as exc:
         logger.warning("Sentimento por LLM indisponível: %s", exc)
         return None
+
+
+def _load_question_answering(
+    settings: Settings, index: SynopsisIndex | None, llm: LLMStack | None, search: SearchService, genres: GenreSource
+) -> QuestionAnswering | None:
+    """RAG sobre o índice de sinopses e as críticas preparadas, com o intérprete da pesquisa (ADR 0032)."""
+    from app.search.synopsis_index import CorpusSynopsisIndex
+
+    if llm is None or not isinstance(index, CorpusSynopsisIndex):
+        return None
+    from app.rag.config import load_config
+    from app.rag.retrieval import Retriever, TitleMatcher
+    from app.rag.reviews import ReviewStore
+    from app.rag.service import QuestionAnswering as Service
+
+    try:
+        config = load_config(settings.rag_config)
+        reviews = ReviewStore.load(settings.sentiment_processed_dir, index.sentence_encoder())
+    except (ValueError, FileNotFoundError) as exc:
+        logger.warning("Perguntas (RAG) indisponíveis: %s", exc)
+        return None
+    retriever = Retriever(index, reviews, search.interpreter(), TitleMatcher(index.titles()), config)
+    logger.info("Perguntas (RAG) com %d filmes e críticas de %d deles", index.size, reviews.movies)
+    return Service(retriever, llm.model, genres.genres, config)
 
 
 def _load_recommender(settings: Settings, index: CorpusSynopsisIndex) -> SimilarMoviesProvider | None:

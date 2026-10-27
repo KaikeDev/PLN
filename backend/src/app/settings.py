@@ -36,6 +36,8 @@ class Settings(BaseSettings):
     tmdb_timeout: float = Field(10.0, gt=0, le=60)
     cors_origins: list[str] = ["http://127.0.0.1:5500", "http://localhost:5500"]
     rate_limit_per_minute: int = Field(60, ge=1, le=10_000)
+    question_rate_limit_per_minute: int = Field(5, ge=1, le=1_000)
+    rag_config: Path = REPOSITORY_DIR / "config" / "rag" / "rag.json"
     typesafe_api_key: SecretStr | None = None
     gemini_api_key: SecretStr | None = None
     groq_api_key: SecretStr | None = None
