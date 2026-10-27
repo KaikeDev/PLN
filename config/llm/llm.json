@@ -1,0 +1,30 @@
+{
+  "description": "LLMs por API gratuita (ADR 0029). A ordem de providers é a de tentativa: Gemini principal, Groq reserva. O modelo exato que respondeu fica em cada resposta gravada. daily_budget fica abaixo da cota gratuita; confira a cota atual no painel de cada provedor antes de mudar.",
+  "providers": [
+    {
+      "name": "gemini",
+      "model": "gemini-flash-lite-latest",
+      "base_url": "https://generativelanguage.googleapis.com/v1beta",
+      "timeout_seconds": 20
+    },
+    {
+      "name": "groq",
+      "model": "openai/gpt-oss-20b",
+      "base_url": "https://api.groq.com/openai/v1",
+      "timeout_seconds": 20,
+      "reasoning_effort": "low"
+    }
+  ],
+  "temperature": 0.0,
+  "max_output_tokens": {
+    "interpretacao": 512,
+    "sentimento": 512,
+    "rag": 1024
+  },
+  "daily_budget": {
+    "interpretacao": 400,
+    "sentimento": 150,
+    "rag": 250
+  },
+  "request_interval_seconds": 4.0
+}

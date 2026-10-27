@@ -34,6 +34,7 @@ O código não tem comentários fora de docstrings. Quando uma docstring cita �
 | [0026](#0026--análise-de-sentimentos-de-críticas-do-tmdb-aula-9) | Análise de sentimentos de críticas do TMDB (Aula 9) | Método |
 | [0027](#0027--entidades-nomeadas-e-relações-nas-sinopses-com-o-spacy-aula-9) | Entidades nomeadas e relações nas sinopses com o spaCy (Aula 9) | Método |
 | [0028](#0028--varredura-do-número-de-clusters-com-métricas-intra-e-intercluster) | Varredura do número de clusters com métricas intra e intercluster | Método |
+| [0029](#0029--base-de-llm-por-api-gratuita-unidade-4) | Base de LLM por API gratuita (Unidade 4) | Arquitetura |
 
 ---
 
@@ -339,3 +340,11 @@ As análises que estavam juntas em `vectors/analyses.py` foram separadas por tar
 **Por quê.** O Trabalho da Unidade 3 pede a melhor quantidade de clusters e a interpretação das métricas intra e intercluster; a Etapa 2 só usava k = 4 e métricas externas.
 
 **Consequência.** Silhueta abaixo de 0,10 em todas: não há grupos naturais bem separados, e as métricas internas não concordam sobre k. Contra os gêneros, o BERTimbau com k = 4 a 5 é o melhor (ARI de 0,144). [Detalhes](0028-varredura-do-numero-de-clusters.md)
+
+## 0029 — Base de LLM por API gratuita (Unidade 4)
+
+**Decisão.** O pacote `app.llm` oferece uma porta única, `LanguageModel`, que devolve JSON validado por um modelo Pydantic. O Gemini é o provedor principal e o Groq, a reserva; os dois são chamados por REST, com a chave em cabeçalho. A pilha do site é cache → orçamento diário por propósito → reserva → saída estruturada, com uma nova tentativa quando o formato vem errado. As respostas são gravadas e reavaliadas sem rede (`RecordingModel` e `ReplayModel`), como no Jev. Sem chave, as funções com LLM respondem 503.
+
+**Por quê.** A Unidade 4 pede técnicas com LLM, e o grupo escolheu só API gratuita. A cota gratuita acaba, muda sem aviso e pode ser esgotada pelo site público, e as respostas variam entre execuções. Um SDK por provedor traria políticas de erro e retry diferentes das do projeto.
+
+**Consequência.** As três técnicas da Unidade 4 usam a mesma porta e são testadas sem rede. Quando a cota acaba, o site degrada para as regras ou para os exemplos gravados. O que vale é o modelo exato gravado em cada resposta, não o alias configurado. [Detalhes](0029-base-de-llm-por-api-gratuita.md)

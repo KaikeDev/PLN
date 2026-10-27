@@ -6,9 +6,12 @@ from pathlib import Path
 from fastapi.testclient import TestClient
 
 from app.api.rate_limit import RateLimiter
+from app.llm.compose import LLMStack, stack_for
+from app.llm.config import load_config
+from app.llm.gemini import GeminiProvider
 from app.main import catalog_paths, create_app
 from app.search.ports import CatalogError
-from app.settings import Settings
+from app.settings import REPOSITORY_DIR, Settings
 from tests.fakes import FakeCatalog, FakeEntityExtractor, FakeGenreClassifier, FakeRecommender, FakeSentimentAnalyzer, FakeSynopsisIndex
 
 ORIGIN = "http://127.0.0.1:5500"
@@ -22,15 +25,26 @@ def client_for(
     recommender: FakeRecommender | None = None,
     sentiment: FakeSentimentAnalyzer | None = None,
     extractor: FakeEntityExtractor | None = None,
+    llm: LLMStack | None = None,
 ) -> TestClient:
     settings = Settings(_env_file=None, cors_origins=[ORIGIN], rate_limit_per_minute=rate_limit)
-    return TestClient(create_app(settings, catalog, synopsis_index, classifier, recommender, sentiment, extractor))
+    return TestClient(create_app(settings, catalog, synopsis_index, classifier, recommender, sentiment, extractor, llm))
 
 
 class ApiTests(unittest.TestCase):
     def test_health(self) -> None:
         with client_for(FakeCatalog()) as client:
-            self.assertEqual(client.get("/saude").json(), {"status": "ok", "catalogo": None})
+            self.assertEqual(client.get("/saude").json(), {"status": "ok", "catalogo": None, "llm": None})
+
+    def test_health_shows_llm_without_keys(self) -> None:
+        config = load_config(REPOSITORY_DIR / "config" / "llm" / "llm.json")
+        stack = stack_for([GeminiProvider(config.providers[0], "CHAVE-SECRETA")], config)
+        with client_for(FakeCatalog(), llm=stack) as client:
+            response = client.get("/saude")
+        llm = response.json()["llm"]
+        self.assertEqual(llm["provedores"], ["gemini:gemini-flash-lite-latest"])
+        self.assertEqual((llm["temperatura"], llm["orcamento_restante"]), (0.0, config.daily_budget))
+        self.assertNotIn("CHAVE-SECRETA", response.text)
 
     def test_missing_site_catalog_falls_back_to_evaluated_sample(self) -> None:
         missing = Path("nao-existe")

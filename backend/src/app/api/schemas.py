@@ -20,11 +20,22 @@ class SearchCatalog(BaseModel):
     filmes: int
 
 
+class LLMStatus(BaseModel):
+    """Provedores de LLM com chave, em ordem de tentativa (`provedor:modelo`), temperatura e chamadas que ainda cabem hoje (ADR 0029)."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    provedores: list[str]
+    temperatura: float
+    orcamento_restante: dict[str, int]
+
+
 class Health(BaseModel):
-    """Estado do servidor e, quando carregado, o catálogo da busca por tema (`null` sem busca por tema)."""
+    """Estado do servidor, o catálogo da busca por tema e o LLM (`null` quando não carregados)."""
 
     status: Literal["ok"] = "ok"
     catalogo: SearchCatalog | None = None
+    llm: LLMStatus | None = None
 
 
 class Genre(BaseModel):

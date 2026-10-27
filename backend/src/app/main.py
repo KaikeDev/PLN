@@ -9,7 +9,8 @@ inicialização falha quando `TMDB_BEARER_TOKEN` não está configurado. O índi
 modelos da busca por tema (ADR 0020); se não puder ser carregado, por exemplo sem o extra `semantico`,
 a API sobe mesmo assim e o modo `sinopse` responde que está indisponível. O classificador de gênero da
 tela (ADR 0021) e o recomendador de filmes parecidos (ADR 0023) reaproveitam uma representação do índice;
-sem índice, `/classificacao` e `/filmes/{id}/parecidos` respondem 503. O CORS só libera origens de navegador conhecidas; ele
+sem índice, `/classificacao` e `/filmes/{id}/parecidos` respondem 503. O LLM (Gemini e Groq, ADR 0029) só é montado
+para os provedores com chave; sem nenhuma, as funções com LLM respondem 503 e o restante funciona. O CORS só libera origens de navegador conhecidas; ele
 não é controle de acesso, papel do bind em localhost e do limite de requisições (ADR 0002).
 """
 
@@ -36,6 +37,7 @@ from app.tmdb.catalog import TMDBMovieCatalog
 from app.tmdb.client import TMDBClient
 
 if TYPE_CHECKING:
+    from app.llm.compose import LLMStack
     from app.search.synopsis_index import CorpusSynopsisIndex
 
 logger = logging.getLogger(__name__)
@@ -49,10 +51,11 @@ def create_app(
     recommender: SimilarMoviesProvider | None = None,
     sentiment_analyzer: SentimentAnalyzer | None = None,
     entity_extractor: EntityExtractor | None = None,
+    llm: LLMStack | None = None,
 ) -> FastAPI:
-    """Aplicação configurada; `catalog`, `synopsis_index`, `genre_classifier`, `recommender`, `sentiment_analyzer` e `entity_extractor` substituem os reais (usados em testes).
+    """Aplicação configurada; `catalog`, `synopsis_index`, `genre_classifier`, `recommender`, `sentiment_analyzer`, `entity_extractor` e `llm` substituem os reais (usados em testes).
 
-    Com `catalog` injetado, o índice, o classificador, o recomendador, o analisador de sentimento e o extrator de entidades reais não são carregados.
+    Com `catalog` injetado, o índice, o classificador, o recomendador, o analisador de sentimento, o extrator de entidades e o LLM reais não são carregados.
     """
     settings = settings or get_settings()
 
@@ -68,6 +71,9 @@ def create_app(
         similar = recommender
         sentiment = sentiment_analyzer
         extractor = entity_extractor
+        language_model = llm
+        if catalog is None and language_model is None:
+            language_model = _load_llm(settings)
         if catalog is None and settings.synopsis_search:
             if index is None:
                 loaded, origin = _load_synopsis_index(settings)
@@ -87,6 +93,7 @@ def create_app(
         app.state.recommender = similar
         app.state.sentiment_analyzer = sentiment
         app.state.entity_extractor = extractor
+        app.state.llm = language_model
         app.state.synopsis_index = index
         app.state.catalog = getattr(app.state, "catalog", None)
         app.state.search_service = SearchService(CachedMovieCatalog(details), index)
@@ -196,6 +203,22 @@ def _load_entity_extractor() -> EntityExtractor | None:
         return None
     logger.info("Entidades e relações com o spaCy %s", extractor.model_name)
     return extractor
+
+
+def _load_llm(settings: Settings) -> LLMStack | None:
+    """Pilha de LLM com os provedores que têm chave em `backend/.env` (ADR 0029)."""
+    from app.llm.compose import build_llm
+
+    try:
+        stack = build_llm(settings)
+    except (ValueError, FileNotFoundError) as exc:
+        logger.warning("LLM indisponível: %s", exc)
+        return None
+    if stack is None:
+        logger.warning("LLM indisponível: defina GEMINI_API_KEY ou GROQ_API_KEY em backend/.env")
+        return None
+    logger.info("LLM com %s", ", ".join(stack.providers))
+    return stack
 
 
 def _load_recommender(settings: Settings, index: CorpusSynopsisIndex) -> SimilarMoviesProvider | None:

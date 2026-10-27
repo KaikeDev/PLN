@@ -208,6 +208,16 @@ Execução local em Python 3.14.0, após a refatoração descrita em [docs/tecni
 | Inicialização da API | Com `backend/.env`, `/saude` responde e o OpenAPI lista `/saude`, `/filmes/{filme_id}` e `/pesquisa`; sem token, a inicialização falha com mensagem orientativa. O TMDB não foi consultado. |
 | Interface | Sintaxe verificada com `node --check`; não houve teste visual em navegador. |
 
+## Unidade 4 — Base de LLM (26/10/2026)
+
+Decisões no [ADR 0029](../adr/0029-base-de-llm-por-api-gratuita.md).
+
+| Verificação | Resultado e alcance |
+|---|---|
+| Testes automatizados | 178 testes aprovados, sem rede. Novos: configuração estrita; corpo, URL e cabeçalhos dos pedidos ao Gemini e ao Groq; conversão do esquema para o Gemini; erros traduzidos sem vazar chave nem URL; nova tentativa quando o JSON vem fora do formato; reserva só para falhas de disponibilidade; cache, orçamento diário e replay; `/saude` com o bloco `llm` sem as chaves. |
+| Lint, formatação e tipos | `ruff check`, `ruff format --check` e `mypy` sem apontamentos. |
+| Chamada real (`python -m app.llm ping`) | Gemini: o alias `gemini-flash-lite-latest` respondeu como `gemini-3.5-flash-lite`, em 1,1 s, com 43 tokens de entrada e 24 de saída. Groq: `openai/gpt-oss-20b`, em 0,4 s, com 294 e 47. Os dois devolveram o JSON no formato pedido (gênero da lista fechada e confiança entre 0 e 1). A cota gratuita não foi medida; o orçamento de `config/llm/llm.json` deve ser conferido no painel de cada provedor. |
+
 ## Limites da validação
 
 O teste original imprime “100% (12/12)” para campos selecionados de cinco frases. Isso não é acurácia geral do assistente, nem medida de recuperação por sinopse. O projeto não executa reconhecimento de nomes próprios, stemming ou lematização; na Etapa 2, os modelos pré-treinados foram usados sem ajuste fino, e a avaliação de consultas tem só dois casos anotados. Na Aula 8, a amostra de 120 filmes permite comparar os métodos, mas não é um teste estatístico formal. O rótulo é o recorte de coleta, e uma nova chamada ao Jev pode dar outro resultado se o modelo por trás do alias mudar. A interface não passou por avaliação visual em navegador nesta revisão; suas chamadas foram verificadas na API. O bônus e a nota final dependem da avaliação do professor.

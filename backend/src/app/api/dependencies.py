@@ -5,6 +5,7 @@ from fastapi import Request
 from app.api.rate_limit import RateLimiter
 from app.classification.ports import GenreClassifier
 from app.entities.ports import EntityExtractor
+from app.llm.ports import LanguageModel
 from app.recommendation.ports import SimilarMoviesProvider
 from app.search.ports import MovieDetailsProvider, SynopsisIndex
 from app.search.service import SearchService
@@ -44,6 +45,12 @@ def get_entity_extractor(request: Request) -> EntityExtractor | None:
 def get_synopsis_index(request: Request) -> SynopsisIndex | None:
     """Índice de sinopses da amostra, com os dados de exibição de cada filme."""
     return request.app.state.synopsis_index
+
+
+def get_language_model(request: Request) -> LanguageModel | None:
+    """LLM do site (cache, orçamento e reserva), ou None quando nenhum provedor tem chave."""
+    llm = request.app.state.llm
+    return llm.model if llm is not None else None
 
 
 def enforce_rate_limit(request: Request) -> None:

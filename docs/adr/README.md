@@ -32,6 +32,7 @@ Cada ADR registra uma decisão com contexto, alternativas e consequências, no f
 | [0026](0026-analise-de-sentimentos.md) | Análise de sentimentos de críticas do TMDB (Aula 9) | Aceita |
 | [0027](0027-entidades-e-relacoes.md) | Entidades nomeadas e relações nas sinopses com o spaCy (Aula 9) | Aceita |
 | [0028](0028-varredura-do-numero-de-clusters.md) | Varredura do número de clusters com métricas intra e intercluster | Aceita |
+| [0029](0029-base-de-llm-por-api-gratuita.md) | Base de LLM por API gratuita: Gemini e Groq com saída estruturada, reserva, orçamento e replay (Unidade 4) | Aceita |
 
 O resumo de todas as decisões e das justificativas está em [`resumo.md`](resumo.md).
 

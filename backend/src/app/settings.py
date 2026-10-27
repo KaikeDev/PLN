@@ -19,7 +19,7 @@ REVIEWS = "criticas_2026-10-10"
 
 
 class Settings(BaseSettings):
-    """Parâmetros de integração com o TMDB e o Jev, da busca por sinopse e de exposição da API local.
+    """Parâmetros de integração com o TMDB, o Jev e os LLMs (Gemini e Groq), da busca por sinopse e de exposição da API local.
 
     A busca por tema e os filmes parecidos usam o catálogo do site (`synopsis_*_dir`, cerca de 5 mil filmes,
     ADR 0024), com os vetores das sinopses já calculados; sem o catálogo, a API usa a amostra avaliada
@@ -37,6 +37,9 @@ class Settings(BaseSettings):
     cors_origins: list[str] = ["http://127.0.0.1:5500", "http://localhost:5500"]
     rate_limit_per_minute: int = Field(60, ge=1, le=10_000)
     typesafe_api_key: SecretStr | None = None
+    gemini_api_key: SecretStr | None = None
+    groq_api_key: SecretStr | None = None
+    llm_config: Path = REPOSITORY_DIR / "config" / "llm" / "llm.json"
     synopsis_search: bool = True
     synopsis_processed_dir: Path = REPOSITORY_DIR / "data" / "preparacao" / CATALOG
     synopsis_raw_dir: Path = REPOSITORY_DIR / "data" / "coleta" / CATALOG
@@ -64,6 +67,12 @@ class Settings(BaseSettings):
         if self.typesafe_api_key is None or not self.typesafe_api_key.get_secret_value().strip():
             raise ValueError("Defina TYPESAFE_API_KEY no ambiente ou em backend/.env")
         return self.typesafe_api_key.get_secret_value().strip()
+
+    def llm_api_key(self, provider: str) -> str | None:
+        """Chave do provedor de LLM (`gemini` ou `groq`), ou None quando não configurada (ADR 0029)."""
+        secret = {"gemini": self.gemini_api_key, "groq": self.groq_api_key}.get(provider)
+        value = secret.get_secret_value().strip() if secret is not None else ""
+        return value or None
 
 
 @lru_cache

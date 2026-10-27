@@ -153,7 +153,10 @@ Configurações opcionais em `backend/.env`: `TMDB_LANGUAGE`, `TMDB_TIMEOUT`, `C
 Crie `backend/.env` a partir de `backend/.env.example`:
 
 - `TMDB_BEARER_TOKEN`: token de leitura (Bearer) do TMDB, para o site e para uma coleta nova;
-- `TYPESAFE_API_KEY`: chave do Jev, só para chamadas novas ao Jev.
+- `TYPESAFE_API_KEY`: chave do Jev, só para chamadas novas ao Jev;
+- `GEMINI_API_KEY` e `GROQ_API_KEY` (opcionais): chaves gratuitas dos LLMs da Unidade 4 ([ADR 0029](../adr/0029-base-de-llm-por-api-gratuita.md)). Crie-as em <https://aistudio.google.com/apikey> e <https://console.groq.com/keys>. Com uma só, o site funciona sem reserva; sem nenhuma, as funções com LLM ficam indisponíveis e o resto do site funciona.
+
+Para conferir as chaves, rode `uv run --frozen python -m app.llm ping`, em `backend`. O comando faz uma chamada real a cada provedor com chave e mostra o modelo exato, a latência e os tokens. Modelos, temperatura e orçamento diário ficam em `config/llm/llm.json`.
 
 O `.env` é ignorado pelo Git, e variáveis de ambiente têm precedência sobre ele. Nunca copie credenciais para comandos versionados, notebooks, saídas ou capturas de tela.
 

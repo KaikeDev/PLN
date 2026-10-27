@@ -1,9 +1,11 @@
-"""Catálogo e índice de sinopses falsos em memória: filmes e gêneros escritos para os testes, sem rede."""
+"""Catálogo, índice de sinopses e LLM falsos em memória: filmes, gêneros e respostas escritos para os testes, sem rede."""
 
-from collections.abc import Mapping
+import json
+from collections.abc import Callable, Mapping
 
 from app.entities.extraction import Triple
 from app.entities.live import Extraction
+from app.llm.ports import LLMRequest, LLMResponse, LLMUnavailable
 from app.search.ports import CatalogError, DiscoverQuery
 from app.sentiment.live import SentimentResult
 
@@ -147,3 +149,23 @@ class FakeSynopsisIndex:
 
     def movie(self, movie_id: int) -> dict:
         return dict(self.movies[movie_id])
+
+
+class FakeLanguageModel:
+    """LLM programável: `reply` recebe o pedido e devolve os dados da saída ou levanta `LLMUnavailable`; guarda os pedidos."""
+
+    def __init__(
+        self, reply: Callable[[LLMRequest], dict] | dict | LLMUnavailable, provider: str = "falso", model: str = "falso-1"
+    ) -> None:
+        self._reply = reply
+        self.provider = provider
+        self.model = model
+        self.requests: list[LLMRequest] = []
+
+    def generate(self, request: LLMRequest) -> LLMResponse:
+        self.requests.append(request)
+        if isinstance(self._reply, LLMUnavailable):
+            raise self._reply
+        data = self._reply(request) if callable(self._reply) else self._reply
+        validated = request.output.model_validate(data).model_dump(mode="json")
+        return LLMResponse(validated, json.dumps(validated, ensure_ascii=False), self.provider, self.model, 10, 5, 1)

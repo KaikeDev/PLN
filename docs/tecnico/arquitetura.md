@@ -14,6 +14,7 @@ O backend (`backend/src/app`) é organizado **por tarefa da disciplina**: cada p
 | `classification/` | 6. Classificação | Regressão logística com validação cruzada (`pipeline.py`, `evaluation.py`), classificadores alternativos, classificador da tela (`live.py`) e o Jev (`jev/`) |
 | `api/` | Site | Rotas `/pesquisa`, `/filmes`, `/filmes/{id}/parecidos`, `/classificacao` e `/saude`, esquemas de resposta e limite de requisições |
 | `tmdb/` | Fonte de dados | Cliente HTTP do TMDB, catálogo e cache, usados pela coleta e pela API |
+| `llm/` | Unidade 4 | Porta `LanguageModel`, adaptadores Gemini e Groq, saída estruturada validada, reserva, cache, orçamento diário e replay das respostas ([ADR 0029](../adr/0029-base-de-llm-por-api-gratuita.md)) |
 | `shared/` | — | Artefatos determinísticos, manifesto, validação de configuração e regras de língua |
 | `main.py`, `settings.py` | Site | Montagem da API (`create_app`) e configuração lida do ambiente e de `backend/.env` |
 
@@ -83,6 +84,7 @@ Mesmo organizado por tarefa, o código mantém as dependências externas atrás 
 | `GenreClassifier` | `classification/ports.py` | `classification/live.py` | `FakeGenreClassifier` |
 | `SimilarMoviesProvider` | `recommendation/ports.py` | `recommendation/similar.py` | `FakeRecommender` |
 | `DecisionClient` | `classification/jev/ports.py` | `classification/jev/typesafe_client.py` | Jev falso em `test_jev.py` |
+| `LanguageModel` | `llm/ports.py` | `llm/compose.py` (cache → orçamento → reserva → `llm/gemini.py` e `llm/groq.py`) | `FakeLanguageModel` |
 
 ## Como estender
 
@@ -107,6 +109,7 @@ Mesmo organizado por tarefa, o código mantém as dependências externas atrás 
 | `test_classification.py` | Tarefas, validação cruzada, decisão multirrótulo, K-Means × classificador, alternativos, reaproveitamento dos vetores e classificador da tela |
 | `test_jev.py` | Amostra, perguntas, validação das respostas, falhas, reaproveitamento, métricas e adaptador do SDK (com um Jev falso) |
 | `test_tmdb.py` | Cliente, catálogo e cache do TMDB |
+| `test_llm.py` | Configuração, corpo e cabeçalhos dos pedidos ao Gemini e ao Groq, erros sem vazar chave, saída estruturada, reserva, cache, orçamento e replay |
 | `test_api.py` | Contrato das rotas, validação, erros, CORS e limite de requisições |
 
 `tests/fakes.py` contém os dublês compartilhados. Nenhum teste acessa a rede.
