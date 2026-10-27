@@ -1,4 +1,7 @@
-"""CLI: python -m app.sentiment collect / process / build / verify."""
+"""CLI: python -m app.sentiment collect / process / build / verify / llm-sample / llm-eval / llm-verify.
+
+Os três últimos são o sentimento com LLM (ADR 0031): sortear a amostra, avaliar e conferir uma pasta avaliada.
+"""
 
 import argparse
 import json
@@ -22,9 +25,24 @@ def main() -> int:
     build.add_argument("--config", type=Path, required=True)
     verify = commands.add_parser("verify", help="Validar hashes de uma pasta de coleta, preparação ou experimento")
     verify.add_argument("--input", type=Path, required=True)
+    sample = commands.add_parser("llm-sample", help="Sortear a amostra equilibrada do sentimento com LLM")
+    sample.add_argument("--input", type=Path, required=True, help="Pasta preparada das críticas")
+    sample.add_argument("--predictions", type=Path, required=True, help="Pasta do experimento com as predições fora da dobra")
+    sample.add_argument("--config", type=Path, required=True, help="config/sentimento/sentimento_llm.json")
+    sample.add_argument("--output", type=Path, required=True, help="Arquivo novo da amostra; nunca é sobrescrito")
     args = parser.parse_args()
     try:
-        if args.command == "collect":
+        if args.command == "llm-sample":
+            from app.sentiment.llm.prompt import load_config as load_llm_config
+            from app.sentiment.llm.sample import draw_sample, load_reviews
+            from app.shared.artifacts import write_json
+
+            if args.output.exists():
+                raise FileExistsError(f"O arquivo da amostra já existe: {args.output}")
+            drawn = draw_sample(load_reviews(args.input, args.predictions), load_llm_config(args.config).sample)
+            write_json(args.output, drawn)
+            print(json.dumps(drawn["estratos"], ensure_ascii=False))
+        elif args.command == "collect":
             from app.sentiment.collect import collect as collect_reviews
 
             print(json.dumps(collect_reviews(args.movies, args.config, args.output), ensure_ascii=False))

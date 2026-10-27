@@ -1,0 +1,1235 @@
+{
+  "description": "Gerada por `python -m app.sentiment llm-sample` a partir de config/sentimento/sentimento_llm.json. Não editar à mão.",
+  "semente": 20261026,
+  "estratos": {
+    "negativo": 100,
+    "positivo": 100,
+    "autor_principal": 100,
+    "com_negacao": 177,
+    "cortadas": 93
+  },
+  "criticas": [
+    {
+      "review_id": "62699a45f92532162337ec8a",
+      "polaridade": "positivo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "6374b38657d37800abb54fee",
+      "polaridade": "positivo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "5a8f0d2e0e0a260131002637",
+      "polaridade": "negativo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "687e9ac1a9c1f6893e38db60",
+      "polaridade": "negativo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "65205c615b1240013c7ce20b",
+      "polaridade": "negativo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "5b6cb7f49251414064132058",
+      "polaridade": "positivo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "6887e46985d545c064390514",
+      "polaridade": "positivo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "5767287b9251413e16000831",
+      "polaridade": "negativo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "6051ea361130bd003d299f7a",
+      "polaridade": "negativo",
+      "autor_principal": false,
+      "com_negacao": false
+    },
+    {
+      "review_id": "6648d8af6bd94ae85f54043e",
+      "polaridade": "positivo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "5becb0b0c3a36812e0006cec",
+      "polaridade": "positivo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "62098f7938e51011efd6edad",
+      "polaridade": "positivo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "64691222c3514c013a55b914",
+      "polaridade": "positivo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "64784d821749730135fff74d",
+      "polaridade": "positivo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "67cc7cfa42c7521252f5bcdb",
+      "polaridade": "negativo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "5ba00b0292514177c9006620",
+      "polaridade": "positivo",
+      "autor_principal": false,
+      "com_negacao": false
+    },
+    {
+      "review_id": "5d5863198d2f8d001448e706",
+      "polaridade": "positivo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "5a8c310bc3a368637c08f7b4",
+      "polaridade": "positivo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "69af3aa22c92ca89cfc1e86a",
+      "polaridade": "positivo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "5b36b90d0e0a264011030fc7",
+      "polaridade": "negativo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "5b36bc589251413c9302fdd9",
+      "polaridade": "positivo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "676de281eb742f45de9273cc",
+      "polaridade": "positivo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "690bb06e3d9169e4c2f6d23a",
+      "polaridade": "positivo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "5a8364ae9251417596004281",
+      "polaridade": "positivo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "5aae8b3e92514116bd024a60",
+      "polaridade": "positivo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "5a91e4eb0e0a2616c3012fba",
+      "polaridade": "positivo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "6239073913a320004789bdf0",
+      "polaridade": "positivo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "6ac9327ba7fe61e1f2ca6612",
+      "polaridade": "negativo",
+      "autor_principal": false,
+      "com_negacao": false
+    },
+    {
+      "review_id": "5b7e0d750e0a2615bd00a2bd",
+      "polaridade": "positivo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "641d930f8de0ae007b96a3fd",
+      "polaridade": "negativo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "6ab3f43d2159d417d328bbb4",
+      "polaridade": "negativo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "6771ecaab70013cc0f6166f5",
+      "polaridade": "positivo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "5e5d615087e63e0017748685",
+      "polaridade": "positivo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "677564054111599e3812e429",
+      "polaridade": "positivo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "6410e20bb42242008a2ec06b",
+      "polaridade": "negativo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "5b36c7fb0e0a263ff802f49f",
+      "polaridade": "negativo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "5a9155c9c3a368250b008de8",
+      "polaridade": "positivo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "60ce6e6e2da84600568cca0f",
+      "polaridade": "positivo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "692ac85474e6228cce67652d",
+      "polaridade": "positivo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "616a1cfb6bdec300908a9152",
+      "polaridade": "positivo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "68b7dbac041d1ddf93068636",
+      "polaridade": "negativo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "5dbe66f29d893900132d5f19",
+      "polaridade": "negativo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "61986cb0e2ff320026e31501",
+      "polaridade": "positivo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "5b36525bc3a368532f02fed3",
+      "polaridade": "negativo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "6a7ceda4b7eeff8b7daa9a19",
+      "polaridade": "negativo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "5b36aee2c3a368533202a534",
+      "polaridade": "negativo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "60982a09b39e35003c1974c4",
+      "polaridade": "negativo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "5bb526a39251415b4f0057fd",
+      "polaridade": "positivo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "5b36bf410e0a2640080300b1",
+      "polaridade": "negativo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "5b4264849251414f40012e61",
+      "polaridade": "negativo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "66a66d52eacd36753009546a",
+      "polaridade": "positivo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "5e487d3f134d580012306ba7",
+      "polaridade": "negativo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "617f436175110d0064e48506",
+      "polaridade": "negativo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "66252f12221ba6017c148ad0",
+      "polaridade": "positivo",
+      "autor_principal": false,
+      "com_negacao": false
+    },
+    {
+      "review_id": "5e7bf26bfea0d710f5c772c6",
+      "polaridade": "negativo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "668f12f2599ef23245384a00",
+      "polaridade": "positivo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "5a8fddf6925141646c00c8a1",
+      "polaridade": "positivo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "5af87a169251415a50000d07",
+      "polaridade": "negativo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "61d39a364284ea0041543b69",
+      "polaridade": "negativo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "65c6f9eace6c4c017cb8a5a4",
+      "polaridade": "negativo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "647510206743fa00c29b57f2",
+      "polaridade": "positivo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "64b99d3a27db6100c53c38c4",
+      "polaridade": "positivo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "5b369abb0e0a264014032af7",
+      "polaridade": "negativo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "6386c33f5ed8e90086acd500",
+      "polaridade": "negativo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "677499f43fc76ea58892b6c8",
+      "polaridade": "positivo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "6080babef9253200435ac35d",
+      "polaridade": "positivo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "6ab41e32a40517b7f9865dcf",
+      "polaridade": "positivo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "5e2915334ca67600124236f9",
+      "polaridade": "negativo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "5b36a8b09251413c9302ee3c",
+      "polaridade": "negativo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "66d436727be184cfaa4592bf",
+      "polaridade": "positivo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "5ef3b80762fcd30034d243b1",
+      "polaridade": "positivo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "5d505fe81d820f00157971db",
+      "polaridade": "negativo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "5e830cbad100b60018c215ea",
+      "polaridade": "positivo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "5b3528409251413cab01c9f2",
+      "polaridade": "negativo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "6743d6d3aab722bfa7c92fe3",
+      "polaridade": "negativo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "6005234aedeb43003d445570",
+      "polaridade": "negativo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "5a9c5547c3a3680beb038056",
+      "polaridade": "negativo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "620a522735a61e00dfda34ea",
+      "polaridade": "positivo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "5b36aba9c3a368531a02c82f",
+      "polaridade": "negativo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "662959204a4bf60188779d0c",
+      "polaridade": "negativo",
+      "autor_principal": false,
+      "com_negacao": false
+    },
+    {
+      "review_id": "661c031dcb5c8e01867590fb",
+      "polaridade": "positivo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "63336ff38a0e9b007b7c2c47",
+      "polaridade": "positivo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "5aaea21c92514116ae028578",
+      "polaridade": "negativo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "5f0a4a68d5ffcb00348a0b5c",
+      "polaridade": "negativo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "5a83d06a0e0a2653b30054f5",
+      "polaridade": "positivo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "5b7def4f92514104e90074fb",
+      "polaridade": "positivo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "6885fd4f1b63a0b008d9aebf",
+      "polaridade": "positivo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "5b6717edc3a36818880a75e9",
+      "polaridade": "negativo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "6994a77ca454af46091251c3",
+      "polaridade": "positivo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "603d5cec07216600521ecf1d",
+      "polaridade": "negativo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "5d082d079251411cd0ba3e57",
+      "polaridade": "negativo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "673e7d0dab4d6d0e8d1ac3e0",
+      "polaridade": "negativo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "5bb955c0c3a368242b015348",
+      "polaridade": "positivo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "5d6dcf1ca284eb4732338d23",
+      "polaridade": "negativo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "67f88caecce7690230ad5146",
+      "polaridade": "positivo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "63a8be8caaec71007b2ebecb",
+      "polaridade": "negativo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "5b86e9d7c3a3683f8b010985",
+      "polaridade": "negativo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "6ab4268b53ffcd63aa75b158",
+      "polaridade": "positivo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "67afc94bb1bd2f6e9f359d36",
+      "polaridade": "positivo",
+      "autor_principal": false,
+      "com_negacao": false
+    },
+    {
+      "review_id": "65c2913ccffeed017c50959a",
+      "polaridade": "positivo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "677076db6cc4caf8fb92a1d6",
+      "polaridade": "positivo",
+      "autor_principal": false,
+      "com_negacao": false
+    },
+    {
+      "review_id": "61470f16daf57c004367c46f",
+      "polaridade": "positivo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "6309c01285090f007f74c061",
+      "polaridade": "negativo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "5a8b991dc3a36862e10874b9",
+      "polaridade": "positivo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "6316da4f02842000830e09f5",
+      "polaridade": "positivo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "6491e296c3c891012d5f7bf3",
+      "polaridade": "negativo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "5a8ed793c3a368267f0162e5",
+      "polaridade": "positivo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "5af77a2a9251412c470023c6",
+      "polaridade": "positivo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "63fd113ae4b576007c76cebe",
+      "polaridade": "negativo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "5bf0ac3a9251415cc4042d2c",
+      "polaridade": "negativo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "67b22d487294be98a8e0e9fd",
+      "polaridade": "positivo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "5a8cefd0c3a3684c63001e56",
+      "polaridade": "positivo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "5eae0cf7edeb430023c66e5d",
+      "polaridade": "positivo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "5b2981d50e0a263e660000c1",
+      "polaridade": "negativo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "6299744399259c0051d923e2",
+      "polaridade": "positivo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "646bdd0a2bcf67011bf488bf",
+      "polaridade": "negativo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "67a91b1ad12793743f93685b",
+      "polaridade": "positivo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "625d670dbf09d10099377453",
+      "polaridade": "positivo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "572b94ecc3a3681efa000283",
+      "polaridade": "negativo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "5c43c250c3a3681a11238290",
+      "polaridade": "negativo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "6147de1d1689350064edf1ad",
+      "polaridade": "positivo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "639ad5788a0e9b00b6ceced3",
+      "polaridade": "negativo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "64877245058224011de46b26",
+      "polaridade": "positivo",
+      "autor_principal": false,
+      "com_negacao": false
+    },
+    {
+      "review_id": "67b450e74e89ccd7886e0ce2",
+      "polaridade": "positivo",
+      "autor_principal": false,
+      "com_negacao": false
+    },
+    {
+      "review_id": "5e4eea79a76ac500159e9c1f",
+      "polaridade": "negativo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "5ff95e42bdd5680040299dea",
+      "polaridade": "negativo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "60bfe9de2a210c0027942c9f",
+      "polaridade": "negativo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "5c007c5f9251411329065701",
+      "polaridade": "negativo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "5fe925dfbcf8c9003ebe4487",
+      "polaridade": "negativo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "67d260b6325e62b3d1608d47",
+      "polaridade": "negativo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "606372dc6f6a99002865870c",
+      "polaridade": "negativo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "5ab0969bc3a36861a300564e",
+      "polaridade": "negativo",
+      "autor_principal": false,
+      "com_negacao": false
+    },
+    {
+      "review_id": "5e36c9fe43250f0017c229ac",
+      "polaridade": "positivo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "646a769a2bcf67015583791b",
+      "polaridade": "positivo",
+      "autor_principal": false,
+      "com_negacao": false
+    },
+    {
+      "review_id": "67d952ad562e832c9736626d",
+      "polaridade": "negativo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "5e4f02719b861600136b112d",
+      "polaridade": "negativo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "64dc96aed100b614b4cc2601",
+      "polaridade": "positivo",
+      "autor_principal": false,
+      "com_negacao": false
+    },
+    {
+      "review_id": "58c55823c3a3687cbc009928",
+      "polaridade": "positivo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "67810407601acfe7bd4ebdbe",
+      "polaridade": "positivo",
+      "autor_principal": false,
+      "com_negacao": false
+    },
+    {
+      "review_id": "636daee6ca4f67009b53f7ca",
+      "polaridade": "negativo",
+      "autor_principal": false,
+      "com_negacao": false
+    },
+    {
+      "review_id": "5843fe289251416ae50083e8",
+      "polaridade": "negativo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "5eb79d57d132d60021c9fa04",
+      "polaridade": "positivo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "62659f137fcab311689ade81",
+      "polaridade": "positivo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "6354599a385202007dd091b6",
+      "polaridade": "negativo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "665b6e173cbbdcf29a364226",
+      "polaridade": "positivo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "649d1031c072a200af843a01",
+      "polaridade": "negativo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "64bbde81e9da69012e0da4f7",
+      "polaridade": "negativo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "66433b066c50c6e6b3184ce4",
+      "polaridade": "positivo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "66af4f090acba89af9406b4d",
+      "polaridade": "positivo",
+      "autor_principal": false,
+      "com_negacao": false
+    },
+    {
+      "review_id": "62682e3b5ab81a132e1c4e42",
+      "polaridade": "negativo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "6600704f7f6c8d017c7249b1",
+      "polaridade": "positivo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "5e4b26f835811d00134b04f1",
+      "polaridade": "positivo",
+      "autor_principal": true,
+      "com_negacao": true
+    },
+    {
+      "review_id": "66af46f8c1479d770cea8cbd",
+      "polaridade": "positivo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "65c9adee54a0980163024468",
+      "polaridade": "positivo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "60ed2668140bad0046244413",
+      "polaridade": "negativo",
+      "autor_principal": false,
+      "com_negacao": false
+    },
+    {
+      "review_id": "646e68da894ed600f9ac1073",
+      "polaridade": "negativo",
+      "autor_principal": false,
+      "com_negacao": false
+    },
+    {
+      "review_id": "64895511bf31f2505883a7e6",
+      "polaridade": "negativo",
+      "autor_principal": false,
+      "com_negacao": false
+    },
+    {
+      "review_id": "6884afd7b1b942dfdc38f460",
+      "polaridade": "negativo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "66a82de7cf3d09fea197d807",
+      "polaridade": "positivo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "63695708e7c097007aec7d45",
+      "polaridade": "negativo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "67b3b4baa65d6303e7e0f013",
+      "polaridade": "positivo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "65d1fbeadb72c0018639e700",
+      "polaridade": "negativo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "65f95a2b4b9bae01837ed23e",
+      "polaridade": "negativo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "652ad2bc024ec800e444aafc",
+      "polaridade": "negativo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "6284b3110859b4149c2d530d",
+      "polaridade": "positivo",
+      "autor_principal": false,
+      "com_negacao": false
+    },
+    {
+      "review_id": "64287fefc04429021305b667",
+      "polaridade": "positivo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "661c1aeca39d0b017dbffbe8",
+      "polaridade": "negativo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "65a3dc61d35dea0125431556",
+      "polaridade": "negativo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "64bbd945eb79c2011c24df3a",
+      "polaridade": "negativo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "67b3adfe4e89ccd7886df64a",
+      "polaridade": "positivo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "66650795b81f32098778d463",
+      "polaridade": "positivo",
+      "autor_principal": false,
+      "com_negacao": false
+    },
+    {
+      "review_id": "670d9a8142e1391c5666d28f",
+      "polaridade": "negativo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "64558da55a07f5017c8a1e57",
+      "polaridade": "negativo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "6967f79a98d16915cc8e5052",
+      "polaridade": "negativo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "652124aa74507d011c1188bc",
+      "polaridade": "negativo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "69408e8383c751f9350487ed",
+      "polaridade": "positivo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "6ab83e9eac76a5ec6bdc83db",
+      "polaridade": "negativo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "66a6c58ebd7e6168c50285f0",
+      "polaridade": "positivo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "67024fa5b146282f7b85865d",
+      "polaridade": "negativo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "66a647f0f4571f42d7870cc0",
+      "polaridade": "positivo",
+      "autor_principal": false,
+      "com_negacao": false
+    },
+    {
+      "review_id": "66a575e64860ef2373dce28c",
+      "polaridade": "positivo",
+      "autor_principal": false,
+      "com_negacao": false
+    },
+    {
+      "review_id": "660dcda4a88587017ce8afef",
+      "polaridade": "negativo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "6817c1b9a80e8a4e9aa21662",
+      "polaridade": "negativo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "652ad2961f3e60011c4a606c",
+      "polaridade": "positivo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "66afa798d006f791ff5b7ba4",
+      "polaridade": "negativo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "6608b0cad5191f017e316223",
+      "polaridade": "positivo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "66bbd614c2fddd06c2823a81",
+      "polaridade": "negativo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "670d9bd7b15d97b1a93d445e",
+      "polaridade": "positivo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "6862ef47dd370438110c78d0",
+      "polaridade": "negativo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "6a52ca0baa3dc731a11dbb31",
+      "polaridade": "negativo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "6678a1a7c3c42be834f22b8a",
+      "polaridade": "negativo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "67179088ee419d70db2d25ed",
+      "polaridade": "positivo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "6738af915859f981eedf85a4",
+      "polaridade": "positivo",
+      "autor_principal": false,
+      "com_negacao": false
+    },
+    {
+      "review_id": "664785fc88821f7e162f45c3",
+      "polaridade": "negativo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "671e19bf427c5c19f0263c5f",
+      "polaridade": "negativo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "69945fc416281197811250f6",
+      "polaridade": "negativo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "67ca13ed81fbb12539cb4318",
+      "polaridade": "positivo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "68fea4e9b9804d36a9938cdf",
+      "polaridade": "negativo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "69f24fb23975aede862c2041",
+      "polaridade": "positivo",
+      "autor_principal": false,
+      "com_negacao": true
+    },
+    {
+      "review_id": "68fa7389c2a6c402cc8533f4",
+      "polaridade": "negativo",
+      "autor_principal": false,
+      "com_negacao": true
+    }
+  ],
+  "estabilidade": [
+    "5a83d06a0e0a2653b30054f5",
+    "5aaea21c92514116ae028578",
+    "5b36a8b09251413c9302ee3c",
+    "5b36bc589251413c9302fdd9",
+    "5b4264849251414f40012e61",
+    "5b86e9d7c3a3683f8b010985",
+    "5e830cbad100b60018c215ea",
+    "62098f7938e51011efd6edad",
+    "6309c01285090f007f74c061",
+    "6374b38657d37800abb54fee",
+    "652ad2bc024ec800e444aafc",
+    "65c9adee54a0980163024468",
+    "66af46f8c1479d770cea8cbd",
+    "66d436727be184cfaa4592bf",
+    "670d9bd7b15d97b1a93d445e",
+    "6738af915859f981eedf85a4",
+    "673e7d0dab4d6d0e8d1ac3e0",
+    "677564054111599e3812e429",
+    "67ca13ed81fbb12539cb4318",
+    "6884afd7b1b942dfdc38f460"
+  ]
+}
