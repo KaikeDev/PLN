@@ -5,7 +5,7 @@ Cada ADR registra uma decisão com contexto, alternativas e consequências, no f
 | ADR | Decisão | Estado |
 |---|---|---|
 | [0001](0001-registrar-decisoes-em-adrs.md) | Registrar decisões em ADRs | Aceita |
-| [0002](0002-credencial-e-exposicao-da-api.md) | Credencial do TMDB, configuração e exposição da API local | Aceita |
+| [0002](0002-credencial-e-exposicao-da-api.md) | Credencial do TMDB, configuração e exposição da API local | Parcialmente substituída pela [0033](0033-publicacao-no-hugging-face-spaces.md) (exposição) |
 | [0003](0003-normalizacao-do-corpus-e-da-pesquisa.md) | Normalizações distintas para corpus e pesquisa | Aceita |
 | [0004](0004-arquitetura-em-camadas.md) | Arquitetura em camadas com portas e adaptadores | Aceita |
 | [0005](0005-pesquisa-por-regras-lexicas.md) | Pesquisa auxiliar por regras léxicas e heurísticas explícitas | Aceita |
@@ -34,6 +34,10 @@ Cada ADR registra uma decisão com contexto, alternativas e consequências, no f
 | [0028](0028-varredura-do-numero-de-clusters.md) | Varredura do número de clusters com métricas intra e intercluster | Aceita |
 | [0029](0029-base-de-llm-por-api-gratuita.md) | Base de LLM por API gratuita: Gemini e Groq com saída estruturada, reserva, orçamento e replay (Unidade 4) | Aceita |
 | [0030](0030-interpretacao-da-consulta-por-llm.md) | Interpretação da consulta por LLM com saída estruturada e reserva nas regras (Unidade 4) | Aceita |
+| [0031](0031-sentimento-com-llm.md) | Sentimento por LLM zero-shot e few-shot comparado ao TF-IDF e ao BERTimbau (Unidade 4) | Aceita |
+| [0032](0032-rag-perguntas-sobre-filmes.md) | RAG para perguntas sobre os filmes: busca híbrida como recuperador, trechos de crítica e citações conferidas (Unidade 4) | Aceita |
+| [0033](0033-publicacao-no-hugging-face-spaces.md) | Publicação no Hugging Face Spaces: contêiner Docker, mesma origem, proxy e limites (Unidade 4) | Aceita |
+| [0034](0034-paginas-do-site-e-sobre-o-projeto.md) | Páginas do site: identificação, "Sobre o projeto" gerada dos dados e acessibilidade (Unidade 4) | Aceita |
 
 O resumo de todas as decisões e das justificativas está em [`resumo.md`](resumo.md).
 

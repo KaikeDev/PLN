@@ -1,4 +1,4 @@
-# 0010 — Amostra entregue versionada no Git
+# 0010. Amostra entregue versionada no Git
 
 - Estado: Aceita
 - Data: 2026-09-14

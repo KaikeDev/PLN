@@ -1,4 +1,4 @@
-# 0017 — Classificação de gêneros a partir das sinopses (Aula 8)
+# 0017. Classificação de gêneros a partir das sinopses (Aula 8)
 
 - Estado: Aceita
 - Data: 2026-09-28

@@ -1,0 +1,60 @@
+{"consulta": "matrix_literal", "k": 5, "contexto": [603, 9323, 205596, 218, 489], "citados": [603], "tokens_entrada": 1298, "falha": null}
+{"consulta": "matrix_simulacao", "k": 5, "contexto": [550988, 603, 9502, 686, 19995], "citados": [603], "tokens_entrada": 1243, "falha": null}
+{"consulta": "acao_maquinas", "k": 5, "contexto": [218, 39254, 604, 2048, 68726], "citados": [218, 39254, 604, 2048, 68726], "tokens_entrada": 1509, "falha": null}
+{"consulta": "robo_amizade", "k": 5, "contexto": [1184918, 177572, 1064028, 552524, 10386], "citados": [1184918, 10386], "tokens_entrada": 1262, "falha": null}
+{"consulta": "ia_rebelde", "k": 5, "contexto": [1064028, 99861, 218, 2048, 78], "citados": [1064028, 99861, 2048], "tokens_entrada": 1425, "falha": null}
+{"consulta": "viagem_no_tempo", "k": 5, "contexto": [63, 105, 14139, 861, 137], "citados": [63, 105], "tokens_entrada": 1260, "falha": null}
+{"consulta": "invasao_alienigena", "k": 5, "contexto": [602, 563, 329865, 137113, 95], "citados": [602, 563, 329865, 137113], "tokens_entrada": 1444, "falha": null}
+{"consulta": "casa_assombrada", "k": 5, "contexto": [259693, 1933, 138843, 493922, 447332], "citados": [259693, 138843, 1933], "tokens_entrada": 1179, "falha": null}
+{"consulta": "possessao", "k": 5, "contexto": [21484, 423108, 439079, 2978, 561], "citados": [423108, 561], "tokens_entrada": 1159, "falha": null}
+{"consulta": "zumbis", "k": 5, "contexto": [924, 170, 1100988, 602, 9286], "citados": [924, 170, 1100988], "tokens_entrada": 1482, "falha": null}
+{"consulta": "assassino_mascarado", "k": 5, "contexto": [4232, 377, 934433, 604079, 13207], "citados": [4232, 934433], "tokens_entrada": 1330, "falha": null}
+{"consulta": "vampiros", "k": 5, "contexto": [36586, 628, 713704, 6114, 1547], "citados": [36586, 628, 6114, 1547], "tokens_entrada": 1450, "falha": null}
+{"consulta": "astronautas_perdidos", "k": 5, "contexto": [8413, 157336, 679, 945961, 950396], "citados": [8413, 157336, 679, 945961], "tokens_entrada": 1504, "falha": null}
+{"consulta": "segunda_guerra", "k": 5, "contexto": [228150, 374720, 14097, 16869, 324786], "citados": [228150, 374720, 16869, 324786], "tokens_entrada": 1181, "falha": null}
+{"consulta": "comedia_romantica", "k": 5, "contexto": [337167, 2251, 4951, 9820, 6435], "citados": [6435, 9820, 4951, 2251, 337167], "tokens_entrada": 1332, "falha": null}
+{"consulta": "prisao_injusta", "k": 5, "contexto": [1368, 278, 53653, 73, 1054867], "citados": [278], "tokens_entrada": 1301, "falha": null}
+{"consulta": "mafia", "k": 5, "contexto": [1422, 522627, 769, 718930, 9737], "citados": [1422, 522627, 769], "tokens_entrada": 1358, "falha": null}
+{"consulta": "mundo_falso", "k": 5, "contexto": [550988, 346698, 49521, 950387, 603], "citados": [550988, 603], "tokens_entrada": 1437, "falha": null}
+{"consulta": "enganar_a_morte", "k": 5, "contexto": [9286, 9358, 55779, 1233413, 49018], "citados": [9286, 9358, 55779], "tokens_entrada": 1400, "falha": null}
+{"consulta": "dinossauros", "k": 5, "contexto": [329, 1234821, 8078, 8355, 70981], "citados": [329], "tokens_entrada": 1632, "falha": null}
+{"consulta": "matrix_literal", "k": 10, "contexto": [603, 9323, 205596, 218, 489, 9426, 2048, 9502, 755898, 1184918], "citados": [603], "tokens_entrada": 2198, "falha": null}
+{"consulta": "matrix_simulacao", "k": 10, "contexto": [550988, 603, 9502, 686, 19995, 218, 9286, 299536, 861, 99861], "citados": [550988, 603, 861], "tokens_entrada": 2184, "falha": null}
+{"consulta": "acao_maquinas", "k": 10, "contexto": [218, 39254, 604, 2048, 68726, 177572, 280, 99861, 127585, 72190], "citados": [218, 39254], "tokens_entrada": 2785, "falha": null}
+{"consulta": "robo_amizade", "k": 10, "contexto": [1184918, 177572, 1064028, 552524, 10386, 269149, 2048, 78, 10681, 11544], "citados": [1184918, 10386, 10681], "tokens_entrada": 2420, "falha": null}
+{"consulta": "ia_rebelde", "k": 10, "contexto": [1064028, 99861, 218, 2048, 78, 72190, 603, 205596, 61791, 68726], "citados": [99861, 603, 1064028], "tokens_entrada": 2756, "falha": null}
+{"consulta": "viagem_no_tempo", "k": 10, "contexto": [63, 105, 14139, 861, 137, 165, 14161, 115, 284053, 120467], "citados": [63, 105], "tokens_entrada": 2742, "falha": null}
+{"consulta": "invasao_alienigena", "k": 10, "contexto": [602, 563, 329865, 137113, 95, 607, 74, 169, 2300, 957], "citados": [602, 563, 329865, 137113, 74], "tokens_entrada": 2573, "falha": null}
+{"consulta": "casa_assombrada", "k": 10, "contexto": [259693, 1933, 138843, 493922, 447332, 8913, 764, 406563, 49018, 109428], "citados": [259693, 138843], "tokens_entrada": 2402, "falha": null}
+{"consulta": "possessao", "k": 10, "contexto": [21484, 423108, 439079, 2978, 561, 622, 933260, 109428, 280092, 693134], "citados": [423108, 561], "tokens_entrada": 2465, "falha": null}
+{"consulta": "zumbis", "k": 10, "contexto": [924, 170, 1100988, 602, 9286, 425, 934433, 273248, 1233413, 14161], "citados": [924, 170], "tokens_entrada": 2730, "falha": null}
+{"consulta": "assassino_mascarado", "k": 10, "contexto": [4232, 377, 934433, 604079, 13207, 55779, 9286, 176, 270303, 945961], "citados": [4232, 934433], "tokens_entrada": 2484, "falha": null}
+{"consulta": "vampiros", "k": 10, "contexto": [36586, 628, 713704, 6114, 1547, 1038392, 36647, 109428, 912649, 280092], "citados": [36586, 628, 6114, 1547, 36647], "tokens_entrada": 2433, "falha": null}
+{"consulta": "astronautas_perdidos", "k": 10, "contexto": [8413, 157336, 679, 945961, 950396, 286217, 957, 563, 70981, 55779], "citados": [286217, 679, 8413], "tokens_entrada": 2409, "falha": null}
+{"consulta": "segunda_guerra", "k": 10, "contexto": [228150, 374720, 14097, 16869, 324786, 857, 14574, 197, 423, 25237], "citados": [228150, 374720, 16869, 324786, 857], "tokens_entrada": 2278, "falha": null}
+{"consulta": "comedia_romantica", "k": 10, "contexto": [337167, 2251, 4951, 9820, 6435, 313369, 744275, 27, 9374, 1022789], "citados": [], "tokens_entrada": 2340, "falha": null}
+{"consulta": "prisao_injusta", "k": 10, "contexto": [1368, 278, 53653, 73, 1054867, 436969, 377, 550988, 176, 497], "citados": [278], "tokens_entrada": 2285, "falha": null}
+{"consulta": "mafia", "k": 10, "contexto": [1422, 522627, 769, 718930, 9737, 829557, 629542, 269149, 598, 585], "citados": [1422, 522627, 769, 718930, 829557], "tokens_entrada": 2455, "falha": null}
+{"consulta": "mundo_falso", "k": 10, "contexto": [550988, 346698, 49521, 950387, 603, 2978, 19995, 198663, 634649, 10681], "citados": [550988, 603], "tokens_entrada": 2692, "falha": null}
+{"consulta": "enganar_a_morte", "k": 10, "contexto": [9286, 9358, 55779, 1233413, 49018, 945961, 574475, 299710, 4247, 1124620], "citados": [9286, 9358, 55779, 574475], "tokens_entrada": 2591, "falha": null}
+{"consulta": "dinossauros", "k": 10, "contexto": [329, 1234821, 8078, 8355, 70981, 1062722, 1084242, 11970, 127585, 246655], "citados": [329], "tokens_entrada": 2846, "falha": null}
+{"consulta": "matrix_literal", "k": 20, "contexto": [603, 9323, 205596, 218, 489, 9426, 2048, 9502, 755898, 1184918, 39254, 550988, 74997, 263115, 383498, 1064028, 99861, 604, 585, 27205], "citados": [603], "tokens_entrada": 4169, "falha": null}
+{"consulta": "matrix_simulacao", "k": 20, "contexto": [550988, 603, 9502, 686, 19995, 218, 9286, 299536, 861, 99861, 70981, 1064028, 4488, 39254, 198663, 950387, 489, 617126, 565, 9426], "citados": [603], "tokens_entrada": 4083, "falha": null}
+{"consulta": "acao_maquinas", "k": 20, "contexto": [218, 39254, 604, 2048, 68726, 177572, 280, 99861, 127585, 72190, 5548, 603, 102382, 9323, 10138, 271110, 18, 137113, 299536, 61791], "citados": [218, 603], "tokens_entrada": 5089, "falha": null}
+{"consulta": "robo_amizade", "k": 20, "contexto": [1184918, 177572, 1064028, 552524, 10386, 269149, 2048, 78, 10681, 11544, 617126, 68726, 1205229, 280, 39254, 1124620, 9297, 61791, 927, 862], "citados": [1184918, 10386, 280], "tokens_entrada": 5033, "falha": null}
+{"consulta": "ia_rebelde", "k": 20, "contexto": [1064028, 99861, 218, 2048, 78, 72190, 603, 205596, 61791, 68726, 127585, 329865, 49521, 39254, 602, 280, 563, 19995, 246655, 822119], "citados": [1064028, 99861, 603], "tokens_entrada": 5191, "falha": null}
+{"consulta": "viagem_no_tempo", "k": 20, "contexto": [63, 105, 14139, 861, 137, 165, 14161, 115, 284053, 120467, 72190, 425, 93456, 311, 315635, 950387, 497698, 218, 13207, 137113], "citados": [63, 105, 165], "tokens_entrada": 4783, "falha": null}
+{"consulta": "invasao_alienigena", "k": 20, "contexto": [602, 563, 329865, 137113, 95, 607, 74, 169, 2300, 957, 945961, 157336, 552524, 686, 9362, 10386, 70981, 10681, 8077, 601], "citados": [602, 74], "tokens_entrada": 5090, "falha": null}
+{"consulta": "casa_assombrada", "k": 20, "contexto": [259693, 1933, 138843, 493922, 447332, 8913, 764, 406563, 49018, 109428, 713704, 82507, 4232, 310131, 377, 9297, 574475, 1038392, 934433, 8922], "citados": [259693, 138843, 49018], "tokens_entrada": 4786, "falha": null}
+{"consulta": "possessao", "k": 20, "contexto": [21484, 423108, 439079, 2978, 561, 622, 933260, 109428, 280092, 693134, 6435, 4011, 1038392, 585, 1100988, 1246049, 950387, 1062722, 713704, 497], "citados": [423108, 561], "tokens_entrada": 5216, "falha": null}
+{"consulta": "zumbis", "k": 20, "contexto": [924, 170, 1100988, 602, 9286, 425, 934433, 273248, 1233413, 14161, 55779, 1562, 80321, 4232, 127585, 945961, 550988, 72190, 377, 460458], "citados": [924], "tokens_entrada": 4940, "falha": null}
+{"consulta": "assassino_mascarado", "k": 20, "contexto": [4232, 377, 934433, 604079, 13207, 55779, 9286, 176, 270303, 945961, 9276, 25237, 423108, 1547, 8329, 170, 19994, 10375, 628, 109428], "citados": [4232, 934433], "tokens_entrada": 4462, "falha": null}
+{"consulta": "vampiros", "k": 20, "contexto": [36586, 628, 713704, 6114, 1547, 1038392, 36647, 109428, 912649, 280092, 1246049, 4011, 561, 2978, 256274, 138843, 502356, 1234731, 6435, 36648], "citados": [36586, 628, 6114, 1547, 36648], "tokens_entrada": 5006, "falha": null}
+{"consulta": "astronautas_perdidos", "k": 20, "contexto": [8413, 157336, 679, 945961, 950396, 286217, 957, 563, 70981, 55779, 19995, 1100988, 176, 2756, 329865, 10681, 744, 601, 986056, 137113], "citados": [286217, 8413, 157336, 679], "tokens_entrada": 4790, "falha": null}
+{"consulta": "segunda_guerra", "k": 20, "contexto": [228150, 374720, 14097, 16869, 324786, 857, 14574, 197, 423, 25237, 424, 205596, 1417, 1495], "citados": [228150, 374720, 857, 324786], "tokens_entrada": 3497, "falha": null}
+{"consulta": "comedia_romantica", "k": 20, "contexto": [337167, 2251, 4951, 9820, 6435, 313369, 744275, 27, 9374, 1022789, 1156594, 214756, 81774, 829557, 1156593, 10588, 2105, 11036, 597, 216015], "citados": [], "tokens_entrada": 4322, "falha": null}
+{"consulta": "prisao_injusta", "k": 20, "contexto": [1368, 278, 53653, 73, 1054867, 436969, 377, 550988, 176, 497, 2666, 137113, 436270, 137, 11324, 772, 694, 10375, 273248, 55779], "citados": [278], "tokens_entrada": 4509, "falha": null}
+{"consulta": "mafia", "k": 20, "contexto": [1422, 522627, 769, 718930, 9737, 829557, 629542, 269149, 598, 585, 949, 2978, 107, 36586, 986056, 1124, 12153, 1100988, 36648, 27205], "citados": [1422, 769, 829557], "tokens_entrada": 4778, "falha": null}
+{"consulta": "mundo_falso", "k": 20, "contexto": [550988, 346698, 49521, 950387, 603, 2978, 19995, 198663, 634649, 10681, 585, 854, 1417, 100402, 10192, 263115, 617126, 933260, 861, 24428], "citados": [603, 550988], "tokens_entrada": 5493, "falha": null}
+{"consulta": "enganar_a_morte", "k": 20, "contexto": [9286, 9358, 55779, 1233413, 49018, 945961, 574475, 299710, 4247, 1124620, 755, 25237, 588, 377, 9276, 934433, 280, 1562, 198663, 238636], "citados": [9286, 9358, 55779, 574475], "tokens_entrada": 4581, "falha": null}
+{"consulta": "dinossauros", "k": 20, "contexto": [329, 1234821, 8078, 8355, 70981, 1062722, 1084242, 11970, 127585, 246655, 1124620, 1061474, 557, 78, 256274, 36586, 1205229, 617126, 10681, 425], "citados": [329], "tokens_entrada": 5449, "falha": null}

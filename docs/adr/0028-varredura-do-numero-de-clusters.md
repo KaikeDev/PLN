@@ -1,4 +1,4 @@
-# 0028 — Varredura do número de clusters com métricas intra e intercluster
+# 0028. Varredura do número de clusters com métricas intra e intercluster
 
 - Estado: Aceita
 - Data: 2026-10-10

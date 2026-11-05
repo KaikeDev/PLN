@@ -13,6 +13,10 @@ sem índice, `/classificacao` e `/filmes/{id}/parecidos` respondem 503. O LLM (G
 para os provedores com chave; sem nenhuma, as funções com LLM respondem 503 e o restante funciona. Com LLM, a pesquisa
 interpreta a frase por ele e recorre às regras quando ele falha (ADR 0030). O CORS só libera origens de navegador conhecidas; ele
 não é controle de acesso, papel do bind em localhost e do limite de requisições (ADR 0002).
+
+Com `SERVE_FRONTEND=true`, a API serve também as telas de `frontend/` na mesma origem, montadas depois das rotas para não
+sombreá-las. É assim no contêiner do Hugging Face Spaces (ADR 0033), o único lugar onde a API escuta em `0.0.0.0`: lá ela roda
+atrás do proxy do Space com `--proxy-headers`, para que o limite por IP veja o visitante, e com o limite próprio das rotas de LLM.
 """
 
 import logging
@@ -23,6 +27,7 @@ from typing import TYPE_CHECKING
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 
 from app.api.rate_limit import RateLimiter
 from app.api.router import api_router
@@ -107,7 +112,7 @@ def create_app(
             settings, index, language_model, app.state.search_service, cached
         )
         app.state.rate_limiter = RateLimiter(settings.rate_limit_per_minute)
-        app.state.question_limiter = RateLimiter(settings.question_rate_limit_per_minute)
+        app.state.llm_limiter = RateLimiter(settings.llm_rate_limit_per_minute)
         try:
             yield
         finally:
@@ -122,6 +127,8 @@ def create_app(
     )
     app.add_middleware(CORSMiddleware, allow_origins=settings.cors_origins, allow_methods=["GET"], allow_headers=[])
     app.include_router(api_router)
+    if settings.serve_frontend:
+        app.mount("/", StaticFiles(directory=settings.frontend_dir, html=True), name="frontend")
     return app
 
 

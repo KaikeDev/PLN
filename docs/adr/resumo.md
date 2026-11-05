@@ -6,40 +6,44 @@ O código não tem comentários fora de docstrings. Quando uma docstring cita �
 
 | ADR | Decisão | Tema |
 |---|---|---|
-| [0001](#0001--registrar-decisões-em-adrs-e-não-em-comentários) | Registrar decisões em ADRs, não em comentários | Processo |
-| [0002](#0002--credencial-do-tmdb-e-exposição-da-api-local) | Credencial do TMDB e exposição da API local | Segurança |
-| [0003](#0003--normalizações-distintas-para-corpus-e-pesquisa) | Normalizações distintas para corpus e pesquisa | PLN |
-| [0004](#0004--arquitetura-em-camadas-com-portas-e-adaptadores) | Arquitetura em camadas com portas e adaptadores | Arquitetura |
-| [0005](#0005--pesquisa-auxiliar-por-regras-léxicas) | Pesquisa auxiliar por regras léxicas | PLN |
-| [0006](#0006--título-exato-tem-prioridade-no-modo-automático) | Título exato tem prioridade no modo automático | API |
-| [0007](#0007--cliente-http-síncrono-retry-e-cache-em-memória) | Cliente HTTP síncrono, retry e cache em memória | Arquitetura |
-| [0008](#0008--código-em-inglês-contrato-e-documentação-em-português) | Código em inglês; contrato e documentação em português | Padrões |
-| [0009](#0009--saídas-imutáveis-determinísticas-e-verificáveis) | Saídas imutáveis, determinísticas e verificáveis | Reprodutibilidade |
-| [0010](#0010--amostra-entregue-versionada-no-git) | Amostra entregue versionada no Git | Dados |
-| [0011](#0011--formatos-legíveis-e-modelos-com-revisão-fixada) | Formatos legíveis e modelos com revisão fixada | Segurança |
-| [0012](#0012--parâmetros-do-experimento-vetorial) | Parâmetros do experimento vetorial | PLN |
-| [0013](#0013--ambiente-testes-lint-tipos-e-ci) | Ambiente, testes, lint, tipos e CI | Qualidade |
-| [0014](#0014--amostragem-intencional-da-coleta) | Amostragem intencional da coleta | Dados |
-| [0015](#0015--bert-cbow--skip-gram-e-polissemia-aula-7) | BERT, CBOW × skip-gram e polissemia (Aula 7) | PLN |
-| [0016](#0016--política-do-gitignore) | Política do `.gitignore` | Repositório |
-| [0017](#0017--classificação-de-gêneros-aula-8) | Classificação de gêneros (Aula 8) | PLN |
-| [0018](#0018--tarefas-do-ciclo-de-pln-para-cada-representação) | Tarefas do ciclo de PLN para cada representação | PLN |
-| [0019](#0019--jev-e-tf-idf--regressão-logística-aula-8) | Jev e TF-IDF + regressão logística (Aula 8) | PLN |
-| [0020](#0020--busca-por-tema-tf-idf--embedding-de-sentença) | Busca por tema: TF-IDF + embedding de sentença | PLN |
-| [0021](#0021--classificação-de-gênero-na-tela) | Classificação de gênero na tela | API |
-| [0022](#0022--repositório-organizado-por-tarefa) | Repositório organizado por tarefa | Repositório |
-| [0023](#0023--filmes-parecidos-na-ficha-do-filme) | Filmes parecidos na ficha do filme | API |
-| [0024](#0024--catálogo-maior-para-a-busca-e-a-recomendação-do-site) | Catálogo maior para a busca e a recomendação do site | Dados |
-| [0025](#0025--preparação-da-consulta-da-busca-por-tema) | Preparação da consulta da busca por tema | Busca |
-| [0026](#0026--análise-de-sentimentos-de-críticas-do-tmdb-aula-9) | Análise de sentimentos de críticas do TMDB (Aula 9) | Método |
-| [0027](#0027--entidades-nomeadas-e-relações-nas-sinopses-com-o-spacy-aula-9) | Entidades nomeadas e relações nas sinopses com o spaCy (Aula 9) | Método |
-| [0028](#0028--varredura-do-número-de-clusters-com-métricas-intra-e-intercluster) | Varredura do número de clusters com métricas intra e intercluster | Método |
-| [0029](#0029--base-de-llm-por-api-gratuita-unidade-4) | Base de LLM por API gratuita (Unidade 4) | Arquitetura |
-| [0030](#0030--interpretação-da-consulta-por-llm-unidade-4) | Interpretação da consulta por LLM (Unidade 4) | Busca |
+| [0001](#0001-registrar-decisões-em-adrs-e-não-em-comentários) | Registrar decisões em ADRs, não em comentários | Processo |
+| [0002](#0002-credencial-do-tmdb-e-exposição-da-api-local) | Credencial do TMDB e exposição da API local (exposição parcialmente substituída pela 0033) | Segurança |
+| [0003](#0003-normalizações-distintas-para-corpus-e-pesquisa) | Normalizações distintas para corpus e pesquisa | PLN |
+| [0004](#0004-arquitetura-em-camadas-com-portas-e-adaptadores) | Arquitetura em camadas com portas e adaptadores | Arquitetura |
+| [0005](#0005-pesquisa-auxiliar-por-regras-léxicas) | Pesquisa auxiliar por regras léxicas | PLN |
+| [0006](#0006-título-exato-tem-prioridade-no-modo-automático) | Título exato tem prioridade no modo automático | API |
+| [0007](#0007-cliente-http-síncrono-retry-e-cache-em-memória) | Cliente HTTP síncrono, retry e cache em memória | Arquitetura |
+| [0008](#0008-código-em-inglês-contrato-e-documentação-em-português) | Código em inglês; contrato e documentação em português | Padrões |
+| [0009](#0009-saídas-imutáveis-determinísticas-e-verificáveis) | Saídas imutáveis, determinísticas e verificáveis | Reprodutibilidade |
+| [0010](#0010-amostra-entregue-versionada-no-git) | Amostra entregue versionada no Git | Dados |
+| [0011](#0011-formatos-legíveis-e-modelos-com-revisão-fixada) | Formatos legíveis e modelos com revisão fixada | Segurança |
+| [0012](#0012-parâmetros-do-experimento-vetorial) | Parâmetros do experimento vetorial | PLN |
+| [0013](#0013-ambiente-testes-lint-tipos-e-ci) | Ambiente, testes, lint, tipos e CI | Qualidade |
+| [0014](#0014-amostragem-intencional-da-coleta) | Amostragem intencional da coleta | Dados |
+| [0015](#0015-bert-cbow--skip-gram-e-polissemia-aula-7) | BERT, CBOW × skip-gram e polissemia (Aula 7) | PLN |
+| [0016](#0016-política-do-gitignore) | Política do `.gitignore` | Repositório |
+| [0017](#0017-classificação-de-gêneros-aula-8) | Classificação de gêneros (Aula 8) | PLN |
+| [0018](#0018-tarefas-do-ciclo-de-pln-para-cada-representação) | Tarefas do ciclo de PLN para cada representação | PLN |
+| [0019](#0019-jev-e-tf-idf--regressão-logística-aula-8) | Jev e TF-IDF + regressão logística (Aula 8) | PLN |
+| [0020](#0020-busca-por-tema-tf-idf--embedding-de-sentença) | Busca por tema: TF-IDF + embedding de sentença | PLN |
+| [0021](#0021-classificação-de-gênero-na-tela) | Classificação de gênero na tela | API |
+| [0022](#0022-repositório-organizado-por-tarefa) | Repositório organizado por tarefa | Repositório |
+| [0023](#0023-filmes-parecidos-na-ficha-do-filme) | Filmes parecidos na ficha do filme | API |
+| [0024](#0024-catálogo-maior-para-a-busca-e-a-recomendação-do-site) | Catálogo maior para a busca e a recomendação do site | Dados |
+| [0025](#0025-preparação-da-consulta-da-busca-por-tema) | Preparação da consulta da busca por tema | Busca |
+| [0026](#0026-análise-de-sentimentos-de-críticas-do-tmdb-aula-9) | Análise de sentimentos de críticas do TMDB (Aula 9) | Método |
+| [0027](#0027-entidades-nomeadas-e-relações-nas-sinopses-com-o-spacy-aula-9) | Entidades nomeadas e relações nas sinopses com o spaCy (Aula 9) | Método |
+| [0028](#0028-varredura-do-número-de-clusters-com-métricas-intra-e-intercluster) | Varredura do número de clusters com métricas intra e intercluster | Método |
+| [0029](#0029-base-de-llm-por-api-gratuita-unidade-4) | Base de LLM por API gratuita (Unidade 4) | Arquitetura |
+| [0030](#0030-interpretação-da-consulta-por-llm-unidade-4) | Interpretação da consulta por LLM (Unidade 4) | Busca |
+| [0031](#0031-sentimento-com-llm-unidade-4) | Sentimento com LLM (Unidade 4) | Método |
+| [0032](#0032-rag-para-perguntas-sobre-os-filmes-unidade-4) | RAG para perguntas sobre os filmes (Unidade 4) | Método |
+| [0033](#0033-publicação-no-hugging-face-spaces-unidade-4) | Publicação no Hugging Face Spaces (Unidade 4) | Segurança |
+| [0034](#0034-páginas-do-site-e-sobre-o-projeto-unidade-4) | Páginas do site e "Sobre o projeto" (Unidade 4) | Interface |
 
 ---
 
-## 0001 — Registrar decisões em ADRs e não em comentários
+## 0001. Registrar decisões em ADRs e não em comentários
 
 **Decisão.** Cada decisão arquitetural ou de método vira uma ADR em `docs/adr/` e ganha um resumo neste arquivo. No código, as explicações ficam em docstrings; comentários de linha não são usados, e a regra vale também para arquivos de configuração como o `.gitignore`.
 
@@ -47,7 +51,7 @@ O código não tem comentários fora de docstrings. Quando uma docstring cita �
 
 **Consequência.** Uma decisão nova exige a ADR, a linha no índice `docs/adr/README.md` e a entrada neste arquivo. [Detalhes](0001-registrar-decisoes-em-adrs.md)
 
-## 0002 — Credencial do TMDB e exposição da API local
+## 0002. Credencial do TMDB e exposição da API local
 
 **Decisão.**
 
@@ -59,9 +63,9 @@ O código não tem comentários fora de docstrings. Quando uma docstring cita �
 
 **Por quê.** Uma credencial real foi versionada no commit `a09a21c`. A `api_key` na URL pode aparecer em logs. O CORS não protege o token: ele só restringe navegadores, não `curl` nem scripts. Sem limite de requisições, qualquer cliente da rede poderia esgotar a cota do TMDB.
 
-**Consequência.** A credencial exposta precisa ser revogada no painel do TMDB. Reescrever o histórico do Git fica a critério da equipe, e não substitui a revogação. [Detalhes](0002-credencial-e-exposicao-da-api.md)
+**Consequência.** A credencial exposta precisa ser revogada no painel do TMDB. Reescrever o histórico do Git fica a critério da equipe, e não substitui a revogação. A exposição só em `127.0.0.1` vale para o modo local; o site publicado segue a [ADR 0033](#0033-publicação-no-hugging-face-spaces-unidade-4). [Detalhes](0002-credencial-e-exposicao-da-api.md)
 
-## 0003 — Normalizações distintas para corpus e pesquisa
+## 0003. Normalizações distintas para corpus e pesquisa
 
 **Decisão.** O corpus usa NFC e `casefold`, preservando acentos. A pesquisa remove acentos. Os marcadores de negação (“não”, “nem”, “nunca”, “sem”) ficam num único módulo, `app.shared.language`.
 
@@ -69,7 +73,7 @@ O código não tem comentários fora de docstrings. Quando uma docstring cita �
 
 **Consequência.** “nem” passou a negar gêneros na pesquisa. Um marcador novo vale para os dois fluxos. [Detalhes](0003-normalizacao-do-corpus-e-da-pesquisa.md)
 
-## 0004 — Arquitetura em camadas com portas e adaptadores
+## 0004. Arquitetura em camadas com portas e adaptadores
 
 **Decisão.** O pacote é dividido em `api` (HTTP), `domain/search` (regras), `infra/tmdb` (cliente, catálogo e cache), `shared`, `corpus` (Etapa 1) e `vectors` (Etapa 2). O domínio depende de `Protocol`s (portas). O TMDB é um Adapter e o cache, um Decorator. Os modos de pesquisa e as análises vetoriais são estratégias (Strategy).
 
@@ -77,7 +81,7 @@ O código não tem comentários fora de docstrings. Quando uma docstring cita �
 
 **Consequência.** Os imports antigos (`app.services.*`, `app.core.config`, `app.corpus.io`) deixaram de existir. [Detalhes](0004-arquitetura-em-camadas.md)
 
-## 0005 — Pesquisa auxiliar por regras léxicas
+## 0005. Pesquisa auxiliar por regras léxicas
 
 **Decisão.** Preferências como “comédia recente bem avaliada, sem terror” são reconhecidas por regras explícitas, com limiares nomeados no código:
 
@@ -89,7 +93,7 @@ O código não tem comentários fora de docstrings. Quando uma docstring cita �
 
 **Consequência.** Não cobre paráfrases, títulos alternativos nem toda a semântica da negação. A acurácia de 12/12 vale só para as cinco frases de teste. [Detalhes](0005-pesquisa-por-regras-lexicas.md)
 
-## 0006 — Título exato tem prioridade no modo automático
+## 0006. Título exato tem prioridade no modo automático
 
 **Decisão.** No modo `auto`, se um filme da primeira página tiver título igual ao texto digitado, a resposta é por título. Senão, a pesquisa usa as preferências extraídas.
 
@@ -97,7 +101,7 @@ O código não tem comentários fora de docstrings. Quando uma docstring cita �
 
 **Consequência.** “quero ver Matrix” não é reconhecido como título exato; os modos explícitos resolvem a ambiguidade. [Detalhes](0006-prioridade-de-titulo-exato.md)
 
-## 0007 — Cliente HTTP síncrono, retry e cache em memória
+## 0007. Cliente HTTP síncrono, retry e cache em memória
 
 **Decisão.**
 
@@ -109,7 +113,7 @@ O código não tem comentários fora de docstrings. Quando uma docstring cita �
 
 **Consequência.** O cache é por processo e pode servir resultados de até 5 minutos atrás. A coleta usa a mesma política de retry. [Detalhes](0007-cliente-http-e-cache.md)
 
-## 0008 — Código em inglês; contrato e documentação em português
+## 0008. Código em inglês; contrato e documentação em português
 
 **Decisão.** Identificadores no código ficam em inglês. O contrato da API (`/pesquisa`, `modo`, `resultados`), as mensagens, as docstrings e a documentação ficam em português. O frontend usa identificadores em português.
 
@@ -117,7 +121,7 @@ O código não tem comentários fora de docstrings. Quando uma docstring cita �
 
 **Consequência.** O vocabulário aparece em dois idiomas nas fronteiras (`SearchMode.DISCOVERY = "descoberta"`). [Detalhes](0008-idioma-do-codigo-e-do-contrato.md)
 
-## 0009 — Saídas imutáveis, determinísticas e verificáveis
+## 0009. Saídas imutáveis, determinísticas e verificáveis
 
 **Decisão.**
 
@@ -130,7 +134,7 @@ O código não tem comentários fora de docstrings. Quando uma docstring cita �
 
 **Consequência.** Reprocessar a amostra reproduz os arquivos byte a byte, exceto o manifesto, em qualquer sistema operacional. O hash detecta alterações acidentais, mas não impede a alteração conjunta de um arquivo e do manifesto. [Detalhes](0009-saidas-imutaveis-e-verificaveis.md)
 
-## 0010 — Amostra entregue versionada no Git
+## 0010. Amostra entregue versionada no Git
 
 **Decisão.** Só a amostra oficial `tmdb_2026-09-12` é versionada, em `data/coleta`, `data/preparacao` e `data/representacoes`. Reproduções locais e modelos pré-treinados ficam fora do repositório.
 
@@ -138,7 +142,7 @@ O código não tem comentários fora de docstrings. Quando uma docstring cita �
 
 **Consequência.** Uma nova amostra oficial exige uma exceção no `.gitignore` (ADR 0016). Os termos de atribuição do TMDB se aplicam. [Detalhes](0010-dados-versionados-no-git.md)
 
-## 0011 — Formatos legíveis e modelos com revisão fixada
+## 0011. Formatos legíveis e modelos com revisão fixada
 
 **Decisão.**
 
@@ -152,7 +156,7 @@ O código não tem comentários fora de docstrings. Quando uma docstring cita �
 
 **Consequência.** As saídas são maiores. BoW e TF-IDF funcionam sem o extra `semantico`, e o CI não baixa modelos. [Detalhes](0011-formatos-e-modelos-seguros.md)
 
-## 0012 — Parâmetros do experimento vetorial
+## 0012. Parâmetros do experimento vetorial
 
 **Decisão.**
 
@@ -166,7 +170,7 @@ O código não tem comentários fora de docstrings. Quando uma docstring cita �
 
 **Consequência.** Nenhuma representação é declarada superior só por reduzir dimensões; a escolha depende de consultas anotadas. [Detalhes](0012-parametros-do-experimento-vetorial.md)
 
-## 0013 — Ambiente, testes, lint, tipos e CI
+## 0013. Ambiente, testes, lint, tipos e CI
 
 **Decisão.**
 
@@ -179,7 +183,7 @@ O código não tem comentários fora de docstrings. Quando uma docstring cita �
 
 **Consequência.** A qualidade dos modelos reais é validada só pelas execuções registradas em `docs/validacao.md`. [Detalhes](0013-ferramentas-de-qualidade.md)
 
-## 0014 — Amostragem intencional da coleta
+## 0014. Amostragem intencional da coleta
 
 **Decisão.** Quatro gêneros (Drama, Comédia, Terror, Ficção científica) × três períodos (1980–1999, 2000–2014, 2015–2025), com 2 páginas por popularidade, ≥ 50 votos e sem conteúdo adulto. Matrix (603) entra como semente, e a deduplicação é por ID.
 
@@ -187,7 +191,7 @@ O código não tem comentários fora de docstrings. Quando uma docstring cita �
 
 **Consequência.** A amostra tem viés de popularidade e não representa o catálogo. [Detalhes](0014-amostragem-intencional.md)
 
-## 0015 — BERT, CBOW × skip-gram e polissemia (Aula 7)
+## 0015. BERT, CBOW × skip-gram e polissemia (Aula 7)
 
 **Decisão.**
 
@@ -201,7 +205,7 @@ O código não tem comentários fora de docstrings. Quando uma docstring cita �
 
 **Consequência.** A primeira execução completa baixa cerca de 3,1 GB. O BERT sem ajuste para sentenças dá cossenos altos a quase qualquer par (anisotropia), então o relatório orienta a comparar diferenças entre pares. [Detalhes](0015-aula7-bert-cbow-e-polissemia.md)
 
-## 0016 — Política do `.gitignore`
+## 0016. Política do `.gitignore`
 
 **Decisão.** O `.gitignore` não tem comentários e agrupa as regras em sete blocos:
 
@@ -217,7 +221,7 @@ O código não tem comentários fora de docstrings. Quando uma docstring cita �
 
 **Consequência.** Uma nova amostra oficial exige uma exceção em `data/*`. `git ls-files -ci --exclude-standard` deve continuar vazio. [Detalhes](0016-politica-do-gitignore.md)
 
-## 0017 — Classificação de gêneros (Aula 8)
+## 0017. Classificação de gêneros (Aula 8)
 
 **Decisão.**
 
@@ -231,7 +235,7 @@ O código não tem comentários fora de docstrings. Quando uma docstring cita �
 
 **Consequência.** Na multiclasse, as representações densas superam o melhor TF-IDF em 7 a 12 pontos de F1 macro; skip-gram e BERTimbau empatam dentro do desvio entre dobras. Medidos nas mesmas dobras, o Naive Bayes vence só nas contagens brutas, o SVM empata sem dar probabilidades, e o K-Means coincide muito menos com os gêneros que o classificador ([justificativa](../6-classificacao-escolha-dos-modelos.md)). Parte dos erros confiantes vem de rótulos ruidosos (filmes de ação reduzidos a “comédia”). [Detalhes](0017-aula8-classificacao-de-generos.md)
 
-## 0018 — Tarefas do ciclo de PLN para cada representação
+## 0018. Tarefas do ciclo de PLN para cada representação
 
 **Decisão.**
 
@@ -245,7 +249,7 @@ O código não tem comentários fora de docstrings. Quando uma docstring cita �
 
 **Consequência.** Nenhuma representação vence todas as tarefas: o modelo de sentença lidera a busca, o BERTimbau a recomendação (63,6% contra 37,9% da referência) e o agrupamento, e o skip-gram a classificação. Os números de agrupamento da Etapa 2 mudaram com os novos rótulos. Com `--vectors`, a Etapa 3 cai para cerca de 2,5 minutos e dispensa o extra `semantico`. [Detalhes](0018-tarefas-do-ciclo-de-pln.md)
 
-## 0019 — Jev e TF-IDF + regressão logística (Aula 8)
+## 0019. Jev e TF-IDF + regressão logística (Aula 8)
 
 **Decisão.**
 
@@ -259,7 +263,7 @@ O código não tem comentários fora de docstrings. Quando uma docstring cita �
 
 **Consequência.** A amostra pequena ilustra a comparação, mas não é teste estatístico. A redação das perguntas faz parte da tarefa. O `uv.lock` precisa incluir o extra `jev`. [Detalhes](0019-aula8-jev-classificacao-de-genero.md)
 
-## 0020 — Busca por tema: TF-IDF + embedding de sentença
+## 0020. Busca por tema: TF-IDF + embedding de sentença
 
 **Decisão.**
 
@@ -272,7 +276,7 @@ O código não tem comentários fora de docstrings. Quando uma docstring cita �
 
 **Consequência.** A busca por tema cobre só os 428 filmes da amostra, e a API passa a depender do extra `semantico`; sem ele, o modo `sinopse` avisa que está indisponível. [Detalhes](0020-busca-hibrida-tfidf-e-sentenca.md)
 
-## 0021 — Classificação de gênero na tela
+## 0021. Classificação de gênero na tela
 
 **Decisão.** Uma seção do site recebe uma sinopse e mostra o gênero previsto, com a probabilidade de cada um. Por trás, `GET /classificacao` usa a regressão logística da Etapa 3, ajustada com as 325 sinopses de um gênero sobre o embedding de sentença `sentenca_minilm`, que a busca por tema já carrega.
 
@@ -280,7 +284,7 @@ O código não tem comentários fora de docstrings. Quando uma docstring cita �
 
 **Consequência.** A qualidade esperada é o F1 macro de 66,1% medido na validação cruzada. Comédia é o gênero mais difícil, e frases curtas fora do estilo das sinopses erram com frequência. Sem o extra `semantico`, a rota responde 503. [Detalhes](0021-classificacao-na-tela.md)
 
-## 0022 — Repositório organizado por tarefa
+## 0022. Repositório organizado por tarefa
 
 **Decisão.** O código, as configurações, os dados e a documentação passam a ser organizados pelas tarefas da disciplina, na ordem da apresentação:
 
@@ -294,7 +298,7 @@ As análises que estavam juntas em `vectors/analyses.py` foram separadas por tar
 
 **Consequência.** Os comandos mudaram de nome (`python -m app.representations`, `python -m app.search`, `python -m app.classification.jev`). Os dados não mudaram, e os quatro `verify` passam nas pastas novas. A branch antiga `luana-classificacao` fica incompatível com a estrutura nova. [Detalhes](0022-organizacao-por-tarefa.md)
 
-## 0023 — Filmes parecidos na ficha do filme
+## 0023. Filmes parecidos na ficha do filme
 
 **Decisão.** A ficha de cada filme da amostra mostra os 5 filmes de sinopse mais parecida, pela mesma conta da análise `Recommendation` (maior cosseno, sem o próprio filme), sobre o embedding de sentença que a busca já carrega. A rota é `GET /filmes/{id}/parecidos`.
 
@@ -302,7 +306,7 @@ As análises que estavam juntas em `vectors/analyses.py` foram separadas por tar
 
 **Consequência.** Funciona muito bem em franquias e temas marcados e é mais fraca em temas abstratos. Filmes fora dos 428 da amostra mostram um aviso no lugar das recomendações. [Detalhes](0023-recomendacao-no-site.md)
 
-## 0024 — Catálogo maior para a busca e a recomendação do site
+## 0024. Catálogo maior para a busca e a recomendação do site
 
 **Decisão.** A busca por tema e os filmes parecidos passam a procurar num catálogo de 5.525 sinopses de 18 gêneros (`site_2026-10-05`), coletado pelo mesmo pipeline da Etapa 1. A amostra de 428 sinopses continua sendo a base de todas as avaliações e do classificador da tela. Os vetores do catálogo são calculados uma vez; a API só codifica as consultas. O catálogo fica fora do Git e é refeito com três comandos; sem ele, a API usa a amostra.
 
@@ -310,7 +314,7 @@ As análises que estavam juntas em `vectors/analyses.py` foram separadas por tar
 
 **Consequência.** O site encontra muito mais filmes, mas a qualidade da busca no catálogo não é medida: as consultas anotadas valem só para a amostra. [Detalhes](0024-catalogo-do-site.md)
 
-## 0025 — Preparação da consulta da busca por tema
+## 0025. Preparação da consulta da busca por tema
 
 **Decisão.** Antes de ordenar, a busca por tema tira da frase as palavras de pedido ("quero", "me indica", "um filme sobre") e recoloca acentos que faltem, quando a palavra sem acento corresponde a uma só palavra acentuada do vocabulário do TF-IDF ("saude" → "saúde"). Algoritmos, pesos e regras não mudam.
 
@@ -318,7 +322,7 @@ As análises que estavam juntas em `vectors/analyses.py` foram separadas por tar
 
 **Consequência.** Nas 20 consultas anotadas, a combinação passou de MAP 0,613 para 0,627, sem nenhuma consulta pior. Temas abstratos continuam mais difíceis que temas concretos. [Detalhes](0025-preparacao-da-consulta.md)
 
-## 0026 — Análise de sentimentos de críticas do TMDB (Aula 9)
+## 0026. Análise de sentimentos de críticas do TMDB (Aula 9)
 
 **Decisão.** O sentimento é medido em críticas em português do TMDB, rotuladas pela nota do autor: polaridade (nota ≤ 4 × nota ≥ 7) e nota de 0 a 10, com as oito representações e a mesma validação cruzada da classificação de gêneros. As dobras agrupam as críticas por filme; à parte, um teste treina sem o autor que escreveu 67% das críticas e testa nele. Os transformers leem a crítica em partes. A tela usa o TF-IDF sem stopwords.
 
@@ -326,7 +330,7 @@ As análises que estavam juntas em `vectors/analyses.py` foram separadas por tar
 
 **Consequência.** F1 macro de 0,867 (BERTimbau) e 0,856 (TF-IDF); nota com erro médio de 1,33 ponto. Treinando sem o autor principal, o TF-IDF cai para 0,507, e o BERTimbau mantém 0,808. [Detalhes](0026-analise-de-sentimentos.md)
 
-## 0027 — Entidades nomeadas e relações nas sinopses com o spaCy (Aula 9)
+## 0027. Entidades nomeadas e relações nas sinopses com o spaCy (Aula 9)
 
 **Decisão.** As funções do notebook da Aula 9 (dependências, NER, sintagmas, argumentos, preposições e relações) são aplicadas às 428 sinopses com o spaCy `pt_core_news_sm`, num extra opcional `entidades`. Uma regra a mais, separável, dá aos verbos coordenados o sujeito do verbo anterior. O NER é conferido com os créditos do TMDB; as relações ficam com uma amostra para conferência manual.
 
@@ -334,7 +338,7 @@ As análises que estavam juntas em `vectors/analyses.py` foram separadas por tar
 
 **Consequência.** Revocação de pessoas de 73,7% e precisão estimada de 81,6%; 1.435 triplas, 35% delas com um pronome como sujeito, que fica sem correferência. [Detalhes](0027-entidades-e-relacoes.md)
 
-## 0028 — Varredura do número de clusters com métricas intra e intercluster
+## 0028. Varredura do número de clusters com métricas intra e intercluster
 
 **Decisão.** O mesmo K-Means da Etapa 2 roda para k de 2 a 10 nas oito representações, com métricas intracluster, intercluster, silhueta, Davies-Bouldin, Calinski-Harabasz e ARI/NMI/pureza contra os gêneros, numa pasta própria (`data/agrupamento`).
 
@@ -342,7 +346,7 @@ As análises que estavam juntas em `vectors/analyses.py` foram separadas por tar
 
 **Consequência.** Silhueta abaixo de 0,10 em todas: não há grupos naturais bem separados, e as métricas internas não concordam sobre k. Contra os gêneros, o BERTimbau com k = 4 a 5 é o melhor (ARI de 0,144). [Detalhes](0028-varredura-do-numero-de-clusters.md)
 
-## 0029 — Base de LLM por API gratuita (Unidade 4)
+## 0029. Base de LLM por API gratuita (Unidade 4)
 
 **Decisão.** O pacote `app.llm` oferece uma porta única, `LanguageModel`, que devolve JSON validado por um modelo Pydantic. O Gemini é o provedor principal e o Groq, a reserva; os dois são chamados por REST, com a chave em cabeçalho. A pilha do site é cache → orçamento diário por propósito → reserva → saída estruturada, com uma nova tentativa quando o formato vem errado. As respostas são gravadas e reavaliadas sem rede (`RecordingModel` e `ReplayModel`), como no Jev. Sem chave, as funções com LLM respondem 503.
 
@@ -350,10 +354,42 @@ As análises que estavam juntas em `vectors/analyses.py` foram separadas por tar
 
 **Consequência.** As três técnicas da Unidade 4 usam a mesma porta e são testadas sem rede. Quando a cota acaba, o site degrada para as regras ou para os exemplos gravados. O que vale é o modelo exato gravado em cada resposta, não o alias configurado. [Detalhes](0029-base-de-llm-por-api-gratuita.md)
 
-## 0030 — Interpretação da consulta por LLM (Unidade 4)
+## 0030. Interpretação da consulta por LLM (Unidade 4)
 
 **Decisão.** Um LLM com saída estruturada extrai da frase os mesmos filtros das regras: gêneros, com a lista do catálogo como `enum`, exclusões, período e qualidade. O site usa a variante few-shot e, se o LLM falhar ou passar de 4 s, as regras; a resposta diz quem interpretou. O tema que o LLM separa não substitui a frase na busca por tema.
 
 **Por quê.** Em 50 frases anotadas antes da execução, as regras acertam 44% e põem filtro errado em 11; o LLM few-shot acerta de 94% a 98%, sem filtro inventado. Ele resolve paráfrases, períodos relativos e armadilhas como "família aterrorizada por espíritos".
 
 **Consequência.** Nas 20 consultas da busca, os filtros do LLM levam o MAP de 0,627 a 0,640, e os das regras, a 0,615. Cada pesquisa custa cerca de 1 s e 1.000 tokens; com a cota no fim, volta às regras. Com temperatura 0, até 5 de 50 respostas mudaram entre duas execuções. [Detalhes](0030-interpretacao-da-consulta-por-llm.md)
+
+## 0031. Sentimento com LLM (Unidade 4)
+
+**Decisão.** O sentimento por LLM (zero-shot, few-shot e sem justificativa no Gemini; few-shot no Groq como reserva) é comparado ao TF-IDF e ao BERTimbau nas mesmas 200 críticas sorteadas antes das chamadas, com as predições fora da dobra da Aula 9. No site, o LLM aparece no botão "Comparar com IA", ao lado do modelo treinado, que continua sendo a resposta principal.
+
+**Por quê.** Negação, ironia e o autor principal limitavam os modelos treinados. Comparar com os números da Aula 9 seria injusto, porque eles foram medidos no conjunto completo, com 71% de positivas. Cada análise por LLM custa uma chamada e segundos.
+
+**Consequência.** Sem treino, o LLM teve F1 de 0,915 nas 200 críticas (reserva), contra 0,880 do BERTimbau e 0,791 do TF-IDF, com erro da nota de 1,04 contra 1,53. O few-shot não superou o zero-shot. A cota diária do Gemini deixou cerca de 28 críticas sem resposta por variante, e a estabilidade e os casos da equipe ficaram para uma nova execução com `--reuse`. [Detalhes](0031-sentimento-com-llm.md)
+
+## 0032. RAG para perguntas sobre os filmes (Unidade 4)
+
+**Decisão.** A aba "Perguntar" recupera 8 filmes com a busca híbrida que já existe, com os filtros do intérprete da consulta e os títulos citados na pergunta, junta até 2 trechos de crítica por filme (sem o autor) e pede ao LLM uma resposta em JSON que cite os filmes por id. A conferência remove citações a filmes fora do contexto. Sinopses e críticas entram como dados, não como instruções.
+
+**Por quê.** A busca já tinha sido avaliada, e o catálogo cabe na memória: um banco vetorial novo só acrescentaria dependência. Com 5, 10 e 20 filmes no contexto, a precisão dos citados ficou alta nos três casos, mas a revocação caiu e os tokens quase dobraram a cada passo. A crítica inteira estouraria o contexto.
+
+**Consequência.** Nas 20 consultas anotadas, os filmes citados tiveram precisão de 0,90 a 0,95, contra 0,57 dos 5 primeiros da busca (o LLM cita menos filmes, cerca de 2,7). Recusou as 5 perguntas sem resposta e as 3 tentativas de injeção, sem citação inventada. Sem os trechos de crítica, recusou as 10 perguntas de opinião. A fidelidade frase a frase depende do julgamento dos dois juízes. [Detalhes](0032-rag-perguntas-sobre-filmes.md)
+
+## 0033. Publicação no Hugging Face Spaces (Unidade 4)
+
+**Decisão.** O site é publicado num Space Docker do Hugging Face, com CPU gratuita. Um único processo `uvicorn` escuta em `0.0.0.0:7860` atrás do proxy do Space, com `--proxy-headers`, e serve a API e as telas na mesma origem (`SERVE_FRONTEND=true`). As rotas que sempre chamam o LLM (`/pergunta` e `/sentimento/llm`) têm limite próprio de 5 por minuto por IP, além do limite geral e do orçamento diário. No Linux, o PyTorch vem do índice CPU. O catálogo (5.458 sinopses na coleta de 01/11/2026) vem de um dataset público, numa revisão fixada e conferida por `verify` no build. As chaves são segredos do Space.
+
+**Por quê.** O enunciado pede link público. O Spaces é a única opção gratuita com memória para o MiniLM e o spaCy, que pedem cerca de 2 GB. Na mesma origem, ficam um link e nenhum CORS em produção. Atrás do proxy, sem `--proxy-headers`, todos os visitantes dividiriam um IP. As rodas CUDA ocupavam vários GB sem uso. Gerar o catálogo no build levaria 8 minutos e mudaria com o ranking do TMDB.
+
+**Consequência.** A ADR 0002 continua valendo no modo local; no contêiner, o controle de acesso passa a ser os limites e o orçamento, e o token exposto no commit `a09a21c` precisa estar revogado antes da divulgação. O Space dorme quando fica sem visitas e acorda em cerca de 1 minuto. [Detalhes](0033-publicacao-no-hugging-face-spaces.md)
+
+## 0034. Páginas do site e "Sobre o projeto" (Unidade 4)
+
+**Decisão.** Todas as páginas trazem título, autores, disciplina e descrição. Cada aba tem um bloco "Como usar e o que está por trás". A página separada `sobre.html` tem as 13 seções da spec 05, com as seis questões da avaliação crítica em títulos próprios. Os números vêm de `frontend/dados/resultados.json`, gerado de `data/` e `config/` e conferido por teste. Os gráficos são SVG gerados pelo próprio JavaScript, com tabela equivalente.
+
+**Por quê.** O enunciado da Modalidade B pede essas informações na própria página, e o avaliador não deveria precisar abrir o repositório. Os números digitados à mão nos rodapés já tinham envelhecido. Uma biblioteca de gráficos exigiria CDN e afrouxaria a CSP.
+
+**Consequência.** Atualizar um resultado é rodar o coletor, e o teste falha se o JSON divergir das fontes. A página "Sobre" abre sem a API e serve de reserva estática. Os textos qualitativos precisam ser revistos quando uma avaliação é refeita. [Detalhes](0034-paginas-do-site-e-sobre-o-projeto.md)

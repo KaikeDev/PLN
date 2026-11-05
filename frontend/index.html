@@ -5,29 +5,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' https://image.tmdb.org; connect-src 'self' http://127.0.0.1:8000 http://localhost:8000; base-uri 'none'; form-action 'none'" />
   <meta name="referrer" content="no-referrer" />
-  <meta name="api-base" content="http://127.0.0.1:8000" />
-  <title>API de Filmes (TMDB)</title>
-  <link rel="stylesheet" href="style.css?v=8" />
+  <meta name="api-base" content="" />
+  <meta name="description" content="Projeto de PLN 2026/2 (FURB): busca, recomendação, classificação, sentimento, entidades e perguntas com RAG sobre sinopses e críticas de filmes do TMDB." />
+  <title>Sinopses de filmes: do corpus ao LLM</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="style.css?v=9" />
 </head>
 <body>
-  <header>
-    <h1>API de Filmes (TMDB)</h1>
-    <div id="status" class="status status--pendente">verificando servidor...</div>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+  <header class="topo">
+    <div class="topo__projeto">
+      <h1>Sinopses de filmes: do corpus ao LLM</h1>
+      <p class="topo__autores">Kaike Ventura Tuerpe, Luana Nitsche, Pedro Henrique Ortunio e Thiago Bodnar · PLN 2026/2 · FURB</p>
+      <p class="topo__descricao">Encontrar, recomendar e entender filmes a partir do texto das sinopses e das críticas, em português: as técnicas do semestre lado a lado e, na Unidade 4, um LLM com recuperação (RAG).</p>
+    </div>
+    <div class="topo__acoes">
+      <div id="status" class="status status--pendente" role="status">verificando servidor...</div>
+      <nav class="topo__links" aria-label="Sobre o projeto">
+        <a href="sobre.html">Sobre o projeto</a>
+        <a href="https://github.com/KaikeDev/PLN" rel="noopener">Repositório</a>
+      </nav>
+    </div>
   </header>
 
   <div id="aviso-catalogo" class="aviso-catalogo" role="status" hidden>
-    <strong>Catálogo do site não gerado.</strong> A busca por tema e os filmes parecidos estão usando só os 428 filmes da amostra avaliada. Para usar o catálogo de cerca de 5.500 filmes, rode os três comandos da seção "Catálogo do site" em <code>docs/tecnico/como-executar.md</code> e reinicie a API.
+    <strong>Catálogo do site não gerado.</strong> A busca por tema, os filmes parecidos e as perguntas estão usando só os 428 filmes da amostra avaliada. Para usar o catálogo completo, rode os três comandos da seção "Catálogo do site" em <code>docs/tecnico/como-executar.md</code> e reinicie a API.
   </div>
 
-  <main>
-    <div class="abas" role="tablist" aria-label="Funções do site">
-      <button type="button" class="aba aba--ativa" id="aba-busca" role="tab" aria-selected="true" aria-controls="painel-busca">Buscar filmes</button>
-      <button type="button" class="aba" id="aba-classificacao" role="tab" aria-selected="false" aria-controls="painel-classificacao" tabindex="-1">Classificar sinopse</button>
-      <button type="button" class="aba" id="aba-sentimento" role="tab" aria-selected="false" aria-controls="painel-sentimento" tabindex="-1">Analisar crítica</button>
-      <button type="button" class="aba" id="aba-perguntar" role="tab" aria-selected="false" aria-controls="painel-perguntar" tabindex="-1">Perguntar</button>
+  <main id="conteudo">
+    <div class="abas-barra">
+      <div class="abas" role="tablist" aria-label="Funções do site">
+        <button type="button" class="aba aba--ativa" id="aba-busca" role="tab" aria-selected="true" aria-controls="painel-busca">Buscar filmes</button>
+        <button type="button" class="aba" id="aba-perguntar" role="tab" aria-selected="false" aria-controls="painel-perguntar" tabindex="-1">Perguntar (RAG)</button>
+        <button type="button" class="aba" id="aba-classificacao" role="tab" aria-selected="false" aria-controls="painel-classificacao" tabindex="-1">Classificar sinopse</button>
+        <button type="button" class="aba" id="aba-sentimento" role="tab" aria-selected="false" aria-controls="painel-sentimento" tabindex="-1">Analisar crítica</button>
+      </div>
+      <a class="aba aba--link" href="sobre.html">Sobre o projeto</a>
     </div>
 
     <section id="painel-busca" role="tabpanel" aria-labelledby="aba-busca">
+      <details class="como-usar">
+        <summary>Como usar e o que está por trás</summary>
+        <p><strong>O que fazer:</strong> digite um título ou uma frase como você pediria a um amigo. Clique num filme para ver a ficha, com entidades da sinopse e filmes parecidos. Exemplos:</p>
+        <div class="exemplos-pergunta" role="group" aria-label="Buscas de exemplo">
+          <button type="button" class="botao-secundario exemplo-pergunta" data-exemplo-busca="Matrix">Matrix</button>
+          <button type="button" class="botao-secundario exemplo-pergunta" data-exemplo-busca="quero um filme de ação sobre máquinas">quero um filme de ação sobre máquinas</button>
+          <button type="button" class="botao-secundario exemplo-pergunta" data-exemplo-busca="algo que me faça rir, dos anos 90">algo que me faça rir, dos anos 90</button>
+          <button type="button" class="botao-secundario exemplo-pergunta" data-exemplo-busca="qualquer coisa menos terror, sobre o espaço">qualquer coisa menos terror, sobre o espaço</button>
+        </div>
+        <p><strong>Técnica:</strong> um LLM extrai da frase os filtros de gênero, período e nota em JSON validado (com as regras léxicas de reserva), e a busca híbrida ordena pelo tema: 0,3 × TF-IDF + 0,7 × embedding de sentença (MiniLM). A ficha recomenda os 5 filmes de sinopse mais parecida. <a href="sobre.html#resultados-unidade-4">Detalhes</a>.</p>
+        <p><strong>Resultado medido:</strong> MAP de <span data-resultado="unidades_anteriores.busca.map">…</span> nas 20 consultas anotadas (<span data-resultado="unidade_4.interpretacao.busca_map.filtros_do_llm">…</span> com os filtros do LLM). Na interpretação de 50 frases, o LLM acerta <span data-resultado="unidade_4.interpretacao.sistemas.few_shot.acerto_exato" data-formato="pct0">…</span> e as regras, <span data-resultado="unidade_4.interpretacao.sistemas.regras.acerto_exato" data-formato="pct0">…</span>.</p>
+      </details>
+
       <form id="form-busca">
         <input type="text" id="campo-titulo" placeholder="Matrix, uma comédia recente ou um filme de ação sobre máquinas" aria-label="Título ou preferências" required maxlength="200" />
         <input type="number" id="campo-ano" placeholder="Ano (opcional)" min="1874" max="9998" aria-label="Ano de lançamento" />
@@ -43,57 +72,7 @@
       <p id="interpretacao" class="interpretacao" hidden></p>
       <p id="mensagem" class="mensagem" role="status"></p>
 
-      <section id="resultados" class="grid" aria-live="polite"></section>
-    </section>
-
-    <section id="painel-classificacao" role="tabpanel" aria-labelledby="aba-classificacao" hidden>
-      <div class="painel">
-        <div class="painel__cabecalho">
-          <h2>Classificar uma sinopse</h2>
-          <p class="painel__ajuda">Escreva ou cole a sinopse de um filme e veja qual gênero ela sugere entre Drama, Comédia, Terror e Ficção científica.</p>
-        </div>
-
-        <form id="form-classificacao" class="form-classificacao">
-          <textarea id="campo-sinopse" rows="6" maxlength="1000" required aria-label="Sinopse" placeholder="Ex.: Uma família se muda para uma casa antiga e, toda noite, ouve vozes vindas do porão."></textarea>
-          <div class="form-classificacao__rodape">
-            <span id="contador-sinopse" class="contador">0 / 1000</span>
-            <div class="form-classificacao__acoes">
-              <button type="button" id="exemplo-sinopse" class="botao-secundario">Usar um exemplo</button>
-              <button type="submit" id="botao-classificar">Classificar</button>
-            </div>
-          </div>
-        </form>
-
-        <p id="mensagem-classificacao" class="mensagem" role="status"></p>
-        <div id="resultado-classificacao" class="resultado" aria-live="polite"></div>
-
-        <p class="painel__rodape">Modelo: regressão logística sobre o embedding de sentença (MiniLM), treinada com as sinopses do corpus. Na avaliação por validação cruzada, acerta cerca de dois terços dos filmes (F1 macro de 66%); comédia é o gênero mais difícil.</p>
-      </div>
-    </section>
-
-    <section id="painel-sentimento" role="tabpanel" aria-labelledby="aba-sentimento" hidden>
-      <div class="painel">
-        <div class="painel__cabecalho">
-          <h2>Analisar uma crítica</h2>
-          <p class="painel__ajuda">Escreva ou cole uma opinião sobre um filme e veja se ela soa positiva ou negativa, a nota de 0 a 10 que o modelo espera do autor e as palavras que mais pesaram.</p>
-        </div>
-
-        <form id="form-sentimento" class="form-classificacao">
-          <textarea id="campo-critica" rows="7" maxlength="5000" required aria-label="Crítica" placeholder="Ex.: O elenco é ótimo, mas o roteiro se perde na segunda metade e o final decepciona."></textarea>
-          <div class="form-classificacao__rodape">
-            <span id="contador-critica" class="contador">0 / 5000</span>
-            <div class="form-classificacao__acoes">
-              <button type="button" id="exemplo-critica" class="botao-secundario">Usar um exemplo</button>
-              <button type="submit" id="botao-analisar">Analisar</button>
-            </div>
-          </div>
-        </form>
-
-        <p id="mensagem-sentimento" class="mensagem" role="status"></p>
-        <div id="resultado-sentimento" class="resultado" aria-live="polite"></div>
-
-        <p id="rodape-sentimento" class="painel__rodape">Modelo: regressão logística (sentimento) e Ridge (nota) sobre o TF-IDF, treinados com 1.859 críticas em português do TMDB, rotuladas pela nota que o próprio autor deu ao filme. Na validação cruzada, acerta 88% das críticas (F1 macro de 86%) e erra a nota em 1,4 ponto em média. Negação e ironia ainda enganam o modelo.</p>
-      </div>
+      <section id="resultados" class="grid" aria-live="polite" aria-label="Filmes encontrados"></section>
     </section>
 
     <section id="painel-perguntar" role="tabpanel" aria-labelledby="aba-perguntar" hidden>
@@ -102,6 +81,13 @@
           <h2>Perguntar sobre os filmes</h2>
           <p class="painel__ajuda">Faça uma pergunta em português. A resposta usa só as sinopses e as críticas dos filmes do catálogo, e cada filme citado abre a sua ficha.</p>
         </div>
+
+        <details class="como-usar">
+          <summary>Como usar e o que está por trás</summary>
+          <p><strong>O que fazer:</strong> clique num dos exemplos abaixo da caixa ou escreva uma pergunta sobre o tema de um filme ou sobre o que as pessoas acharam dele. As marcas <span class="citacao citacao--exemplo">F603</span> na resposta abrem a ficha do filme citado.</p>
+          <p><strong>Técnica:</strong> RAG (geração aumentada por recuperação). A busca híbrida do site recupera 8 filmes e trechos das críticas, e um LLM gratuito (Gemini, com o Groq de reserva) responde em JSON citando só esses filmes. Citações a filmes fora do contexto são removidas antes de aparecer. <a href="sobre.html#resultados-unidade-4">Detalhes</a>.</p>
+          <p><strong>Resultado medido:</strong> <span id="resumo-rag">avaliação nas 20 consultas anotadas e em 33 perguntas, na página "Sobre".</span></p>
+        </details>
 
         <form id="form-pergunta" class="form-classificacao">
           <textarea id="campo-pergunta" rows="3" maxlength="300" required aria-label="Pergunta" placeholder="Ex.: Tem algum filme sobre luto e sobre lidar com a perda de alguém?"></textarea>
@@ -117,18 +103,85 @@
         <p id="mensagem-pergunta" class="mensagem" role="status"></p>
         <div id="resultado-pergunta" class="resultado" aria-live="polite"></div>
 
-        <p class="painel__rodape">Como funciona: a busca do site recupera 8 filmes pela sinopse (e pelos títulos citados na pergunta), junta trechos das críticas de usuários do TMDB e pede a um LLM gratuito (Gemini, com o Groq de reserva) uma resposta que cite só esses filmes; citações fora deles são removidas antes de aparecer. Respostas geradas por IA podem errar: confira na ficha do filme. Não digite dados pessoais.</p>
+        <p class="painel__rodape">Respostas geradas por IA podem errar: confira na ficha do filme. O texto da pergunta é enviado a um provedor de LLM gratuito, que pode usá-lo para melhorar o serviço: não digite dados pessoais. Sem cota, o site mostra as respostas gravadas na avaliação para os exemplos.</p>
+      </div>
+    </section>
+
+    <section id="painel-classificacao" role="tabpanel" aria-labelledby="aba-classificacao" hidden>
+      <div class="painel">
+        <div class="painel__cabecalho">
+          <h2>Classificar uma sinopse</h2>
+          <p class="painel__ajuda">Escreva ou cole a sinopse de um filme e veja qual gênero ela sugere entre Drama, Comédia, Terror e Ficção científica.</p>
+        </div>
+
+        <details class="como-usar">
+          <summary>Como usar e o que está por trás</summary>
+          <p><strong>O que fazer:</strong> clique em "Usar um exemplo" para preencher com a sinopse de um filme conhecido, ou escreva a sua, e clique em "Classificar".</p>
+          <p><strong>Técnica:</strong> regressão logística sobre o embedding de sentença (MiniLM), treinada na hora com as sinopses da amostra avaliada. <a href="sobre.html#resultados-anteriores">Detalhes</a>.</p>
+          <p><strong>Resultado medido:</strong> F1 macro de <span data-resultado="unidades_anteriores.classificacao.tela_f1" data-formato="pct1">…</span> na validação cruzada (a melhor representação, o skip-gram, chega a <span data-resultado="unidades_anteriores.classificacao.melhor_f1" data-formato="pct1">…</span>). Comédia é o gênero mais difícil.</p>
+        </details>
+
+        <form id="form-classificacao" class="form-classificacao">
+          <textarea id="campo-sinopse" rows="6" maxlength="1000" required aria-label="Sinopse" placeholder="Ex.: Uma família se muda para uma casa antiga e, toda noite, ouve vozes vindas do porão."></textarea>
+          <div class="form-classificacao__rodape">
+            <span id="contador-sinopse" class="contador">0 / 1000</span>
+            <div class="form-classificacao__acoes">
+              <button type="button" id="exemplo-sinopse" class="botao-secundario">Usar um exemplo</button>
+              <button type="submit" id="botao-classificar">Classificar</button>
+            </div>
+          </div>
+        </form>
+
+        <p id="mensagem-classificacao" class="mensagem" role="status"></p>
+        <div id="resultado-classificacao" class="resultado" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section id="painel-sentimento" role="tabpanel" aria-labelledby="aba-sentimento" hidden>
+      <div class="painel">
+        <div class="painel__cabecalho">
+          <h2>Analisar uma crítica</h2>
+          <p class="painel__ajuda">Escreva ou cole uma opinião sobre um filme e veja se ela soa positiva ou negativa, a nota de 0 a 10 que o modelo espera do autor e as palavras que mais pesaram.</p>
+        </div>
+
+        <details class="como-usar">
+          <summary>Como usar e o que está por trás</summary>
+          <p><strong>O que fazer:</strong> clique em "Usar um exemplo" (há negação e ironia entre eles) ou escreva uma crítica e clique em "Analisar". Depois, "Comparar com IA" pede a mesma análise a um LLM, sem treino.</p>
+          <p><strong>Técnica:</strong> regressão logística (polaridade) e Ridge (nota) sobre o TF-IDF, treinadas com <span data-resultado="dados.criticas" data-formato="int">…</span> críticas do TMDB rotuladas pela nota que o próprio autor deu. O LLM recebe a crítica com alguns exemplos (few-shot) e devolve polaridade, nota e justificativa em JSON. <a href="sobre.html#resultados-unidade-4">Detalhes</a>.</p>
+          <p><strong>Resultado medido:</strong> F1 macro de <span data-resultado="unidades_anteriores.sentimento.tfidf_f1" data-formato="pct1">…</span> na validação cruzada. Nas mesmas <span data-resultado="unidade_4.sentimento.criticas" data-formato="int">…</span> críticas equilibradas, o LLM e os modelos treinados estão comparados na página "Sobre".</p>
+        </details>
+
+        <form id="form-sentimento" class="form-classificacao">
+          <textarea id="campo-critica" rows="7" maxlength="5000" required aria-label="Crítica" placeholder="Ex.: O elenco é ótimo, mas o roteiro se perde na segunda metade e o final decepciona."></textarea>
+          <div class="form-classificacao__rodape">
+            <span id="contador-critica" class="contador">0 / 5000</span>
+            <div class="form-classificacao__acoes">
+              <button type="button" id="exemplo-critica" class="botao-secundario">Usar um exemplo</button>
+              <button type="submit" id="botao-analisar">Analisar</button>
+            </div>
+          </div>
+        </form>
+
+        <p id="mensagem-sentimento" class="mensagem" role="status"></p>
+        <div id="resultado-sentimento" class="resultado" aria-live="polite"></div>
       </div>
     </section>
   </main>
 
-  <div id="modal" class="modal oculto" role="dialog" aria-modal="true" aria-label="Detalhes do filme">
+  <footer class="rodape">
+    <p>Dados fornecidos por <a href="https://www.themoviedb.org/" rel="noopener">The Movie Database (TMDB)</a>. Este projeto utiliza a API do TMDB, mas não é endossado ou certificado pelo TMDB.</p>
+    <p><a href="sobre.html#uso-de-ia">Uso de IA generativa</a> · <a href="sobre.html#custos">Custos e dependências</a> · <a href="https://github.com/KaikeDev/PLN" rel="noopener">Código no GitHub</a> · <a href="https://github.com/KaikeDev/PLN/blob/main/docs/adr/0033-publicacao-no-hugging-face-spaces.md" rel="noopener">Como o site é publicado</a></p>
+  </footer>
+
+  <div id="modal" class="modal oculto" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
     <div class="modal__conteudo">
       <button id="fechar-modal" class="modal__fechar" type="button" aria-label="Fechar">&times;</button>
+      <h2 id="modal-titulo" class="visualmente-oculto">Detalhes do filme</h2>
       <div id="modal-corpo"></div>
     </div>
   </div>
 
-  <script src="script.js?v=9"></script>
+  <script src="resultados.js?v=1"></script>
+  <script src="script.js?v=10"></script>
 </body>
 </html>

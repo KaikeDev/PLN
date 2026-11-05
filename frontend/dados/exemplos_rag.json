@@ -1,0 +1,839 @@
+{
+  "avaliacao": "2026-11-01",
+  "exemplos": [
+    {
+      "pergunta": "Tem algum filme sobre luto e sobre lidar com a perda de alguém?",
+      "resposta": "Sim, temos filmes sobre luto e perda no contexto. Em Guardiões da Galáxia: Vol. 3 [F447365], Peter Quill se recupera da perda de Gamora. Em Avatar: Fogo e Cinzas [F83533], Jake Sully e Neytiri enfrentam a perda de seu filho mais velho. Além disso, em Midsommar: O Mal Não Espera a Noite [F530385], Dani está de luto após uma tragédia familiar. Segundo as críticas de Guardiões da Galáxia: Vol. 3 [F447365], a história é super pesada e traz o passado sofrido e tristonho do Rocket bebê, enquanto Midsommar [F530385] recebeu críticas sobre falhas no roteiro e falta de conclusão convincente.",
+      "contexto_suficiente": true,
+      "filmes_citados": [
+        {
+          "id": 447365,
+          "motivo": "Peter Quill está se recuperando da perda de Gamora.",
+          "filme": {
+            "id": 447365,
+            "title": "Guardiões da Galáxia: Vol. 3",
+            "original_title": "Guardians of the Galaxy Vol. 3",
+            "overview": "Peter Quill, que ainda está se recuperando da perda de Gamora, tem que reunir a sua equipe para defender o universo e proteger um dos seus. Uma missão que, se não for concluída com sucesso, pode levar ao fim dos Guardiões como os conhecemos.",
+            "poster_path": "/4yycSPnchdNAZirGkmCYQwTd3cr.jpg",
+            "release_date": "2023-05-03",
+            "vote_average": 7.932,
+            "vote_count": 8794,
+            "genre_ids": [
+              878,
+              12,
+              28
+            ]
+          }
+        },
+        {
+          "id": 83533,
+          "motivo": "Jake Sully e Neytiri lidam com a perda de seu filho mais velho.",
+          "filme": {
+            "id": 83533,
+            "title": "Avatar: Fogo e Cinzas",
+            "original_title": "Avatar: Fire and Ash",
+            "overview": "Após a devastadora guerra contra a RDA e a perda de seu filho mais velho, Jake Sully e Neytiri enfrentam uma nova ameaça em Pandora: o Povo das Cinzas, uma tribo Na'vi violenta e sedenta por poder, liderada pela implacável Varang. A família de Jake deve lutar por sua sobrevivência e pelo futuro de Pandora em um conflito que os leva aos seus limites emocionais e físicos.",
+            "poster_path": "/3almrQT8GnrDjnQeWotdExjJhZm.jpg",
+            "release_date": "2025-12-17",
+            "vote_average": 7.647,
+            "vote_count": 4301,
+            "genre_ids": [
+              878,
+              12,
+              14
+            ]
+          }
+        },
+        {
+          "id": 530385,
+          "motivo": "Dani está de luto após sofrer uma tragédia familiar.",
+          "filme": {
+            "id": 530385,
+            "title": "Midsommar: O Mal Não Espera a Noite",
+            "original_title": "Midsommar",
+            "overview": "Dani e Christian formam um jovem casal americano com um relacionamento prestes a desmoronar. Mas depois que uma tragédia familiar os mantém juntos, Dani, que está de luto, convida-se para se juntar a Christian e seus amigos em uma viagem para um festival de verão único em uma remota vila sueca. O que começa como férias despreocupadas de verão em uma terra de luz eterna toma um rumo sinistro quando os moradores do vilarejo convidam o grupo a participar de festividades que tornam o paraíso pastoral cada vez mais preocupante e visceralmente perturbador.",
+            "poster_path": "/hR4dXPlWq5Nekwjqbp3gFGeiiZS.jpg",
+            "release_date": "2019-07-03",
+            "vote_average": 7.145,
+            "vote_count": 8394,
+            "genre_ids": [
+              27,
+              18,
+              9648
+            ]
+          }
+        }
+      ],
+      "contexto": [
+        {
+          "id": 9358,
+          "titulo": "Premonição 2",
+          "pontuacao": 0.7,
+          "criticas": 1,
+          "trechos": [
+            {
+              "texto": "memorável de toda a saga. Um momento que ficou gravado no imaginário coletivo ao ponto de ninguém voltar a olhar para um camião com troncos da mesma forma. As mortes que se seguem são mais ousadas, mais criativas em comparação com as dos filme original e com um crescendo de suspense que deixa o espectador sempre alerta. Final Destination 2 não é uma obra-prima do cinema de terror, mas é um exemplo",
+              "nota": 7.0
+            }
+          ]
+        },
+        {
+          "id": 447365,
+          "titulo": "Guardiões da Galáxia: Vol. 3",
+          "pontuacao": 0.6945,
+          "criticas": 2,
+          "trechos": [
+            {
+              "texto": "Que delicinha o revival com o passado sofrido e tristonho do Rocket bebe… Adorável ambientação e figurino ao entrarem em Orgoscópio, muito anos 90, uniformizados no remetem aos Power Rangers... Os diálogos são muito bons, cada ironia e humor ácido adorável, tudo muito bem desenvolvido, a Marvel entrega tudo em termos de super-heróis, fácil se apaixonar, até mesmo os que não são fãs de HQ, se",
+              "nota": 8.0
+            },
+            {
+              "texto": "F I L M A Ç O!!! A história é super pesada? Sim. Tudo está no ponto certo? Sim. E uso a dizer que este é o melhor trabalho de James Gun dentro da franquia Guardiões da Galáxia. As cores , efeitos visuais ,trilha sonora, roteiro ,atuações e piadas, tudo está incrível! ⭐Minha Nota:10/10",
+              "nota": 10.0
+            }
+          ]
+        },
+        {
+          "id": 83533,
+          "titulo": "Avatar: Fogo e Cinzas",
+          "pontuacao": 0.6826,
+          "criticas": 0,
+          "trechos": []
+        },
+        {
+          "id": 9286,
+          "titulo": "Premonição 3",
+          "pontuacao": 0.6797,
+          "criticas": 1,
+          "trechos": [
+            {
+              "texto": "minuto até ao desfecho, a nossa atenção acaba por ser agarrada. E a ideia de usar fotografias para tentar antecipar a próxima morte é um conceito que beneficia a fórmula da saga. As mortes são criativas, intensas e absurdas. A cena do solário já se tornou icónica e continua a ser um dos melhores momentos de toda a saga. O acidente inicial, passado numa montanha-russa, é absolutamente impactante.",
+              "nota": 8.0
+            }
+          ]
+        },
+        {
+          "id": 55779,
+          "titulo": "Premonição 5",
+          "pontuacao": 0.6459,
+          "criticas": 1,
+          "trechos": [
+            {
+              "texto": "particularmente bem. O ponto fraco, no entanto, continua a ser um dos aspetos mais importantes da saga: as mortes. Aqui, o suspense que marcou os primeiros três filmes desaparece quase por completo. As cenas parecem demasiado artificiais, e o CGI, em vez de ajudar, estraga. É tudo tão digital que retira impacto à violência, ao choque, e até ao humor negro que sempre fez parte da identidade desta",
+              "nota": 8.0
+            }
+          ]
+        },
+        {
+          "id": 4233,
+          "titulo": "Pânico 2",
+          "pontuacao": 0.6381,
+          "criticas": 1,
+          "trechos": [
+            {
+              "texto": "direcção. Se algumas pessoas o acham assustador, tenso ou cheio de momentos aterradores, outros como eu parecem achar divertido, rir e basicamente \"apoiam\" o assassino. Wes Craven volta, assim, a \"atacar\" os clichés dos filmes de terror e adolescentes, mas desta vez mais gentilmente, dando ao filme um foco aparentemente mais sério. No entanto, e apesar do filme realmente parecer sério e com",
+              "nota": 6.0
+            }
+          ]
+        },
+        {
+          "id": 530385,
+          "titulo": "Midsommar: O Mal Não Espera a Noite",
+          "pontuacao": 0.6363,
+          "criticas": 1,
+          "trechos": [
+            {
+              "texto": "roteiro escrito com os pés, o filme não é mais que isto. O director/roteirista foi incapaz de dar ao filme uma conclusão ou de criar uma ameaça crível. Claramente inspirado noutro filme (“O Escolhido”), falta um desfecho convincente, há demasiadas cenas estúpidas (por exemplo, quando uma das personagens chora desalmadamente e é rodeada por um coro que, quase, transforma isso numa melodia) e há",
+              "nota": 2.0
+            }
+          ]
+        },
+        {
+          "id": 4232,
+          "titulo": "Pânico",
+          "pontuacao": 0.6323,
+          "criticas": 1,
+          "trechos": [
+            {
+              "texto": "rir às gargalhadas. O assassino gasta pelo menos metade do filme a brincar com o telefone e a tropeçar pelo cenário e as vítimas são na maioria jovens adolescentes imaturos, patéticos e tão idiotas que nós chegamos ao ponto de gostar de os ver morrer. Não há terror nem suspense. Por isso mesmo é que tenho enormes dificuldades em levá-lo a sério, preferindo considerá-lo uma paródia para",
+              "nota": 6.0
+            }
+          ]
+        }
+      ],
+      "provedor": "gemini",
+      "modelo": "gemini-3.5-flash-lite",
+      "latencia_ms": null,
+      "citacoes_removidas": 0,
+      "exemplo_gravado": true
+    },
+    {
+      "pergunta": "Existe algum filme de zumbis que seja engraçado?",
+      "resposta": "Sim, temos \"Zumbilândia\" [F19908], que mistura comédia e terror em sua sinopse ao mostrar sobreviventes viajando por uma América cheia de zumbis.",
+      "contexto_suficiente": true,
+      "filmes_citados": [
+        {
+          "id": 19908,
+          "motivo": "O filme mistura comédia e terror em sua sinopse para tratar de um apocalipse zumbi.",
+          "filme": {
+            "id": 19908,
+            "title": "Zumbilândia",
+            "original_title": "Zombieland",
+            "overview": "Um estudante tímido tentando chegar até sua família em Ohio, um cara durão armado tentando encontrar o último Twinkie e duas irmãs tentando encontrar um parque de diversões se unem para viajar através de uma América cheia de zumbis.",
+            "poster_path": "/mXuFhb5U2FgVq8uu4k3luQVRwLK.jpg",
+            "release_date": "2009-10-02",
+            "vote_average": 7.26,
+            "vote_count": 13462,
+            "genre_ids": [
+              35,
+              27
+            ]
+          }
+        }
+      ],
+      "contexto": [
+        {
+          "id": 1022789,
+          "titulo": "Divertida Mente 2",
+          "pontuacao": 0.7,
+          "criticas": 1,
+          "trechos": [
+            {
+              "texto": "Bicho, as vezes os críticos dessa rede social são tão chatos que não perdoam nem uma animação. Não sei se eu falo sobre o filme, ou se eu desabafo. 😡 Aí, tá vendo, já tem um monte de “divertidamentes” na sala de controle do meu cérebro, apertando os botões e tentando me conter. Acho que se você não tem filhos, nunca teve ansiedade, depressão ou algo do tipo. Nunca vai alcançar um filme desses.",
+              "nota": 8.0
+            }
+          ]
+        },
+        {
+          "id": 813,
+          "titulo": "Apertem os Cintos, o Piloto Sumiu",
+          "pontuacao": 0.6641,
+          "criticas": 1,
+          "trechos": [
+            {
+              "texto": "roteiristas também não resistem à tentação de incluir algumas piadas sobre sexo, mas eu não vi nada que eu realmente ache que ultrapassou os limites do aceitável. Para o filme, foram chamados actores com uma notável veia satírica e humorística, mas que nem sempre haviam tido a oportunidade de apostar em comédias, ou não tinham feito cinema antes. Foi o caso de Peter Graves, Robert Hays, Julie",
+              "nota": 9.0
+            }
+          ]
+        },
+        {
+          "id": 72190,
+          "titulo": "Guerra Mundial Z",
+          "pontuacao": 0.6294,
+          "criticas": 1,
+          "trechos": [
+            {
+              "texto": "**Feito para vender bem e depressa, não tem muita qualidade do ponto de vista da história que conta.** Não há como negar: os zombies estão na moda, muito por causa de algumas séries de TV bem sucedidas. E Hollywood não escapou à invasão. Este filme é, basicamente, uma guerra contra os zombies, que surgem do nada e infestam o mundo. O roteiro é pobre: vindo do nada e sem razão ou explicação, o",
+              "nota": 2.0
+            }
+          ]
+        },
+        {
+          "id": 9297,
+          "titulo": "A Casa Monstro",
+          "pontuacao": 0.5932,
+          "criticas": 1,
+          "trechos": [
+            {
+              "texto": "apropriado ou não para a criança. De qualquer maneira, é um filme familiar, onde os adolescentes provavelmente se sentirão mais à vontade que os adultos.",
+              "nota": 3.0
+            }
+          ]
+        },
+        {
+          "id": 19908,
+          "titulo": "Zumbilândia",
+          "pontuacao": 0.5763,
+          "criticas": 0,
+          "trechos": []
+        },
+        {
+          "id": 924,
+          "titulo": "Madrugada dos Mortos",
+          "pontuacao": 0.5679,
+          "criticas": 1,
+          "trechos": [
+            {
+              "texto": "**Um filme de baixo orçamento, mas onde todos tentam fazer o melhor possível.** Geralmente, eu não gosto de filmes com mortos vivos, se bem que vi vários nos últimos tempos. Este foi um deles. Do nada, as personagens são atiradas para um apocalipse total onde as pessoas se tornam em mortos-vivos que eles não sabem como matar. A protagonista é uma jovem enfermeira, que perde imediatamente toda a",
+              "nota": 4.0
+            }
+          ]
+        },
+        {
+          "id": 2105,
+          "titulo": "American Pie: A Primeira Vez é Inesquecível",
+          "pontuacao": 0.5651,
+          "criticas": 2,
+          "trechos": [
+            {
+              "texto": "prudentemente longe dos seus olhos, para bem da sua educação sexual. E quem não tem filhos... veja este filme se for totalmente desprovido de bom senso ou gostar de piadas envolvendo excrementos humanos e fluidos corporais.",
+              "nota": 1.0
+            },
+            {
+              "texto": "hoje traz uma sensação diferente: além das risadas, bate uma nostalgia sincera. A trilha sonora, os romances atrapalhados e as lições sobre amizade e amadurecimento continuam funcionando, mas agora com um olhar mais maduro. Filmes como: *American Pie o Casamento* e *American Pie o Reencontro* reforçam essa ideia de crescimento tanto dos personagens quanto do público que cresceu junto com eles. Foi",
+              "nota": 10.0
+            }
+          ]
+        },
+        {
+          "id": 585,
+          "titulo": "Monstros S.A.",
+          "pontuacao": 0.5561,
+          "criticas": 1,
+          "trechos": [
+            {
+              "texto": "questão de mérito. É um filme de grande qualidade, que vale a pena ver em família. O roteiro não podia ser melhor: o filme leva-nos a um mundo paralelo ao nosso, onde vivem os monstros dos nossos pesadelos de criança. Eles arranjaram uma forma de entrar e sair do nosso mundo através de uma máquina, e aproveitam a energia dos gritos das crianças assustadas para gerar electricidade para o mundo",
+              "nota": 7.0
+            }
+          ]
+        }
+      ],
+      "provedor": "gemini",
+      "modelo": "gemini-3.5-flash-lite",
+      "latencia_ms": null,
+      "citacoes_removidas": 0,
+      "exemplo_gravado": true
+    },
+    {
+      "pergunta": "Filmes que se passam dentro de uma prisão",
+      "resposta": "No enredo, O Esquadrão Suicida [F436969] mostra a prisão Belle Reve. Um Sonho de Liberdade [F278] se passa na Penitenciária Estadual de Shawshank, onde Andy cumpre pena. Prisioneiro do Inferno [F53653] acompanha um jovem condenado à prisão. À Espera de um Milagre [F497] ocorre no corredor da morte da Penitenciária Cold Mountain. Nas críticas, leitores comentam sobre o ambiente carcerário de Um Sonho de Liberdade [F278] e de Jogos Mortais [F176].",
+      "contexto_suficiente": true,
+      "filmes_citados": [
+        {
+          "id": 436969,
+          "motivo": "A sinopse se passa na prisão Belle Reve.",
+          "filme": {
+            "id": 436969,
+            "title": "O Esquadrão Suicida",
+            "original_title": "The Suicide Squad",
+            "overview": "Bem-vindos ao inferno: Belle Reve, a prisão com a maior taxa de mortalidade dos Estados Unidos. É aqui que os piores supervilões são mantidos e onde eles fazem de tudo para sair, até mesmo se unir à misteriosa e supersecreta Força-Tarefa X.",
+            "poster_path": "/wTS3dS2DJiMFFgqKDz5fxMTri.jpg",
+            "release_date": "2021-07-28",
+            "vote_average": 7.447,
+            "vote_count": 9879,
+            "genre_ids": [
+              28,
+              35,
+              12
+            ]
+          }
+        },
+        {
+          "id": 278,
+          "motivo": "A sinopse e as críticas retratam o enredo e os eventos dentro de uma penitenciária.",
+          "filme": {
+            "id": 278,
+            "title": "Um Sonho de Liberdade",
+            "original_title": "The Shawshank Redemption",
+            "overview": "Em 1946, Andy Dufresne, um banqueiro jovem e bem sucedido, tem a sua vida radicalmente modificada ao ser condenado por um crime que nunca cometeu, o homicídio de sua esposa e do amante dela. Ele é mandado para uma prisão que é o pesadelo de qualquer detento, a Penitenciária Estadual de Shawshank, no Maine. Lá ele irá cumprir a pena perpétua. Andy logo será apresentado a Warden Norton, o corrupto e cruel agente penitenciário, que usa a Bíblia como arma de controle e ao Capitão Byron Hadley que trata os internos como animais. Andy faz amizade com Ellis Boyd Redding, um prisioneiro que cumpre pena há 20 anos e controla o mercado negro da instituição.",
+            "poster_path": "/umX3lBhHoTV7Lsci140Yr8VpXyN.jpg",
+            "release_date": "1994-09-23",
+            "vote_average": 8.73,
+            "vote_count": 31302,
+            "genre_ids": [
+              18,
+              80
+            ]
+          }
+        },
+        {
+          "id": 53653,
+          "motivo": "A sinopse menciona um condenado à prisão lidando com guardas e detentos.",
+          "filme": {
+            "id": 53653,
+            "title": "Prisioneiro do Inferno",
+            "original_title": "監獄風雲",
+            "overview": "Lo Ka Yiu, um jovem designer de publicidade que foi condenado à prisão por homicídio culposo, se mete em problemas com os guardas corruptos e com os companheiros de prisão da Tríade. Chung Tin Ching, um detento veterano e mentor de Yiu, é forçado a confrontar os inimigos de seu companheiro várias vezes, até chegar ao confronto final com o chefe de segurança.",
+            "poster_path": "/ywFyD2t6QylShE8ARjVuftS9iD4.jpg",
+            "release_date": "1987-11-13",
+            "vote_average": 7.0,
+            "vote_count": 109,
+            "genre_ids": [
+              80,
+              18
+            ]
+          }
+        },
+        {
+          "id": 176,
+          "motivo": "A crítica menciona que o filme se passa quase inteiramente num espaço decrépito onde há prisioneiros acorrentados.",
+          "filme": {
+            "id": 176,
+            "title": "Jogos Mortais",
+            "original_title": "Saw",
+            "overview": "Dois homens acordam acorrentados em um banheiro como prisioneiros de um assassino em série que leva suas vítimas a situações limítrofes em um jogo macabro. Para sobreviver, eles terão de desvendar juntos as peças desse quebra-cabeças doentio.",
+            "poster_path": "/jByGeGsJtoghNFHF5TgVvcSJ4Oc.jpg",
+            "release_date": "2004-10-01",
+            "vote_average": 7.427,
+            "vote_count": 10311,
+            "genre_ids": [
+              27,
+              9648,
+              80
+            ]
+          }
+        },
+        {
+          "id": 497,
+          "motivo": "A sinopse se passa no bloco de celas do corredor da morte de uma penitenciária.",
+          "filme": {
+            "id": 497,
+            "title": "À Espera de um Milagre",
+            "original_title": "The Green Mile",
+            "overview": "Milagres acontecem em lugares inesperados, mesmo no bloco de celas para o corredor da morte na Penitenciária Cold Mountain. Lá, John Coffey, um gentil e gigante prisioneiro com poderes sobrenaturais, traz um senso de espírito e humanidade aos seus guardas e colegas de cela.",
+            "poster_path": "/14hEqW67IiHlKpzKMLUXyktzZIV.jpg",
+            "release_date": "1999-12-10",
+            "vote_average": 8.506,
+            "vote_count": 19788,
+            "genre_ids": [
+              14,
+              18,
+              80
+            ]
+          }
+        }
+      ],
+      "contexto": [
+        {
+          "id": 436969,
+          "titulo": "O Esquadrão Suicida",
+          "pontuacao": 0.8403,
+          "criticas": 1,
+          "trechos": [
+            {
+              "texto": "muito sangue e violência fora do comum, porém tudo isso deu identidade ao filme, o tornando melhor ainda que o SnyderCut. Muita coisa precisamos relevar, como os vilões do filme (péssimos), mas funciona bem, fica tudo redondo e você sai em êxtase. Melhor seria no cinema.",
+              "nota": 9.0
+            }
+          ]
+        },
+        {
+          "id": 278,
+          "titulo": "Um Sonho de Liberdade",
+          "pontuacao": 0.7098,
+          "criticas": 1,
+          "trechos": [
+            {
+              "texto": "das grades. O que não é tão comum é vermos filmes tão excepcionalmente humanos passados neste tipo de ambiente. E melhor ainda: sem exageros, sem sentimentalismos baratos. A ênfase é colocada na mensagem de que até na prisão se pode viver o sonho da liberdade, de que mesmo os prisioneiros mais culpados continuam a ser seres humanos. Andrew Dufresne não é um mero banqueiro traído pelo destino, mas",
+              "nota": 10.0
+            }
+          ]
+        },
+        {
+          "id": 53653,
+          "titulo": "Prisioneiro do Inferno",
+          "pontuacao": 0.7012,
+          "criticas": 0,
+          "trechos": []
+        },
+        {
+          "id": 176,
+          "titulo": "Jogos Mortais",
+          "pontuacao": 0.7,
+          "criticas": 1,
+          "trechos": [
+            {
+              "texto": "pensei que seriam, e há mais elegância na maneira como tudo foi feito. Dirigido e escrito por James Wan, o filme passa-se quase inteiramente num espaço muito decrépito, uma antiga casa de banho onde duas pessoas acordam, acorrentadas aos canos. Elas não sabem como ali foram parar, mas tudo fica mais claro quando ouvem a cassete de áudio: eles estão numa armadilha da qual só sairão vivos mediante",
+              "nota": 7.0
+            }
+          ]
+        },
+        {
+          "id": 497,
+          "titulo": "À Espera de um Milagre",
+          "pontuacao": 0.682,
+          "criticas": 1,
+          "trechos": [
+            {
+              "texto": "**Verdadeiramente humano.** Paul Edgecomb é um guarda prisional que trabalha na ala dos condenados, o \"corredor da morte\", de uma prisão do Sul dos EUA nos anos Trinta. Foi nessa prisão que ele conheceu John Coffey, um gigante negro acusado de violar e assassinar uma menina branca. Mas ele é capaz de fazer coisas incríveis e tem uma bondade inquestionável que põe em causa a justiça da condenação.",
+              "nota": 8.0
+            }
+          ]
+        },
+        {
+          "id": 9737,
+          "titulo": "Os Bad Boys",
+          "pontuacao": 0.6483,
+          "criticas": 0,
+          "trechos": []
+        },
+        {
+          "id": 80321,
+          "titulo": "Madagascar 3: Os Procurados",
+          "pontuacao": 0.6234,
+          "criticas": 1,
+          "trechos": [
+            {
+              "texto": "um monte de clichés e preconceitos francófonos de notável mau gosto. As quatro personagens centrais também perdem interesse, em especial Marty e Gloria, secundados pelo protagonismo dado aos novos participantes. A nível técnico é impecável: as animações são excelentes, os actores de voz (ainda herdados dos filmes anteriores) fazem um bom trabalho e o filme é visualmente bonito. E uma nota",
+              "nota": 4.0
+            }
+          ]
+        },
+        {
+          "id": 9056,
+          "titulo": "Police Story: A Guerra das Drogas",
+          "pontuacao": 0.6108,
+          "criticas": 1,
+          "trechos": [
+            {
+              "texto": "Adoro Jackie Chan, mas esse é o tipo de filme, com muitas cenas de ação, balés de lutas, e comédia pastelão, estilo \"Os Trapalhões\" não me agrada, mas é o auge dos anos 80, e impossível não reconhecer tudo ensaiado e executado milimetricamente, perfeito, Chan ainda fraturou uma costela e queimou as mãos por erro do eletricista, um filme muito prestigiado e exaltado, tanto que são 4 sequências e um",
+              "nota": 8.0
+            }
+          ]
+        }
+      ],
+      "provedor": "gemini",
+      "modelo": "gemini-3.5-flash-lite",
+      "latencia_ms": null,
+      "citacoes_removidas": 0,
+      "exemplo_gravado": true
+    },
+    {
+      "pergunta": "O que as pessoas acharam de Oppenheimer?",
+      "resposta": "As críticas indicam que os espectadores acharam a atuação e o roteiro de Oppenheimer excelentes, com diálogos longos e discussões que podem deixar alguns adormecidos, mas que o filme é bem recebido por sua profundidade histórica e performances fortes.",
+      "contexto_suficiente": true,
+      "filmes_citados": [
+        {
+          "id": 872585,
+          "motivo": "Oppenheimer recebeu avaliações positivas sobre atuação e roteiro, destacando sua profundidade histórica.",
+          "filme": {
+            "id": 872585,
+            "title": "Oppenheimer",
+            "original_title": "Oppenheimer",
+            "overview": "A história do físico americano J. Robert Oppenheimer, seu papel no Projeto Manhattan e no desenvolvimento da bomba atômica durante a Segunda Guerra Mundial, e o quanto isso mudaria a história do mundo para sempre.",
+            "poster_path": "/uqrrZICcZFHqlNuZIR3iM1h0Rst.jpg",
+            "release_date": "2023-07-19",
+            "vote_average": 8.022,
+            "vote_count": 12454,
+            "genre_ids": [
+              18,
+              36
+            ]
+          }
+        }
+      ],
+      "contexto": [
+        {
+          "id": 872585,
+          "titulo": "Oppenheimer",
+          "pontuacao": null,
+          "criticas": 3,
+          "trechos": [
+            {
+              "texto": "é muito conhecido, a sua atuação em Oppenheimer é realmente muito boa assim como os demais membros do elenco. O roteiro e o enredo são brilhantes, se você for ao cinema esperando um filme de ação esse não é o caso, Oppenheimer é um filme com longos diálogos e discussões (o que explica em parte porque algumas pessoas fizeram criticas negativas ao filme do tipo “já estava dormindo”), mas posso",
+              "nota": 9.0
+            },
+            {
+              "texto": "nunca foi consultado sobre os efeitos da bomba, ainda jogam a culpa sobre o pobi... Concordo completamente com os Strauss quando ele diz que \"Oppenheimer na verdade nunca se arrependeu de criar e ajudar a detonar a bomba em Hiroshima e Nagazaki, e que provavelmente faria tudo isso novamente, e do mesmo jeito, porque a marior ambição dele era ser o primeiro a construir a bomba atômica, o homem que",
+              "nota": 7.0
+            }
+          ]
+        },
+        {
+          "id": 5548,
+          "titulo": "RoboCop - O Policial do Futuro",
+          "pontuacao": 0.4126,
+          "criticas": 1,
+          "trechos": [
+            {
+              "texto": "dele, brindando-nos com um trabalho muito competente. Clarence Boddicker, que deu vida ao grande vilão e mestre do crime, faz um trabalho interessante, mas que não tem a necessária profundidade ou solidez. A personagem apenas precisa de parecer detestável e cínica, e pronto. Miguel Ferrer e Ronny Cox, quando estão presentes, são igualmente boas adições.",
+              "nota": 7.0
+            }
+          ]
+        },
+        {
+          "id": 424,
+          "titulo": "A Lista de Schindler",
+          "pontuacao": 0.3883,
+          "criticas": 1,
+          "trechos": [
+            {
+              "texto": "**_Uma lição de humanidade._** Este filme conta a história de Oskar Schindler (Liam Neeson), um industrial polaco que colaborou no esforço de guerra alemão após a invasão do seu país, mantendo na sua fábrica muitos prisioneiros judeus. Consciente de que eles continuam a trabalhar para salvarem as próprias vidas, Schindler contrata quantos pode, agindo mesmo contra os seus próprios interesses",
+              "nota": 10.0
+            }
+          ]
+        },
+        {
+          "id": 620,
+          "titulo": "Os Caça-Fantasmas",
+          "pontuacao": 0.3833,
+          "criticas": 1,
+          "trechos": [
+            {
+              "texto": "irónico. É ele quem sugere que abram um negócio no ramo, estabelecendo-se como \"exterminadores de fantasmas\" como se estes fossem pragas de baratas. Estamos diante daquela que é, provavelmente, uma das mais emblemáticas comédias da década de Oitenta. O elenco, é liderado por Murray, que já era um actor de comédias experiente e atingiu aqui um nível excepcional, dominando o filme e brindando-nos",
+              "nota": 7.0
+            }
+          ]
+        },
+        {
+          "id": 637649,
+          "titulo": "Infiltrado",
+          "pontuacao": 0.3702,
+          "criticas": 0,
+          "trechos": []
+        },
+        {
+          "id": 13,
+          "titulo": "Forrest Gump: O Contador de Histórias",
+          "pontuacao": 0.3662,
+          "criticas": 1,
+          "trechos": [
+            {
+              "texto": "constantemente mostra uma grande bondade e simpatia para com todos. Forrest, sempre a correr, vai assistir e até participar de muitos momentos importantes na história recente da América sem, no entanto, deixar de lado essa bondade. É como se ele passasse pela vida, mas permanecesse tão puro que os vícios mundanos não o podem afectar. Jenny, o seu amor, seguirá um caminho diferente que determinará",
+              "nota": 9.0
+            }
+          ]
+        },
+        {
+          "id": 603,
+          "titulo": "Matrix",
+          "pontuacao": 0.3593,
+          "criticas": 1,
+          "trechos": [
+            {
+              "texto": "cara dele, desculpem-me as palavras mas é a verdade. Neste filme, ele quase nem move músculos faciais. E os outros actores (Laurence Fishburne e Carrie-Anne Moss, especialmente) seguem o mesmo caminho. Chama-se \"estilo\"! Para sorte de todos os envolvidos, o filme pedia isso e isso funciona bem na tela. Fishburne, especialmente, está incrível. Este é um dos melhores filmes dele até hoje, na minha",
+              "nota": 9.0
+            }
+          ]
+        },
+        {
+          "id": 278,
+          "titulo": "Um Sonho de Liberdade",
+          "pontuacao": 0.3564,
+          "criticas": 1,
+          "trechos": [
+            {
+              "texto": "da prisão, mas com um coração nobre e que age, ao longo do filme, como um narrador. Ainda uma palavra para Bob Gunton, que deu vida ao director da prisão. Este é o grande vilão do filme. Agindo de uma forma profundamente hipócrita, vive com a Bíblia nas mãos mas não hesita em fazer tudo aquilo que ela desaprova. Os detalhes técnicos do filme são igualmente irrepreensíveis: particularmente, destaco",
+              "nota": 10.0
+            }
+          ]
+        }
+      ],
+      "provedor": "groq",
+      "modelo": "openai/gpt-oss-20b",
+      "latencia_ms": null,
+      "citacoes_removidas": 0,
+      "exemplo_gravado": true
+    },
+    {
+      "pergunta": "O filme da Barbie agradou quem assistiu?",
+      "resposta": "A Barbie recebeu opiniões misturadas: alguns críticos acharam o filme engraçado e inspirador, enquanto outros não se encantaram e consideraram o humor inadequado para crianças.",
+      "contexto_suficiente": true,
+      "filmes_citados": [
+        {
+          "id": 346698,
+          "motivo": "O filme recebeu críticas divergentes, com alguns usuários elogiando o humor e outros não se encantando.",
+          "filme": {
+            "id": 346698,
+            "title": "Barbie",
+            "original_title": "Barbie",
+            "overview": "No mundo mágico das Barbies, \"Barbieland\", uma das bonecas começa a perceber que não se encaixa como as outras. Depois de ser expulsa, ela parte para uma aventura no \"mundo real\", onde descobre que a beleza está no interior de cada um.",
+            "poster_path": "/pP12F7Gutn6CpHYaIPBlDRHlMlk.jpg",
+            "release_date": "2023-07-19",
+            "vote_average": 6.9,
+            "vote_count": 11544,
+            "genre_ids": [
+              35,
+              12,
+              14
+            ]
+          }
+        }
+      ],
+      "contexto": [
+        {
+          "id": 346698,
+          "titulo": "Barbie",
+          "pontuacao": null,
+          "criticas": 4,
+          "trechos": [
+            {
+              "texto": "Barbie é engraçado, tem um humor mais ácido com questões contemporâneas, e é inadequado para crianças. Dito isso, Barbie não me encantou, foi como um filme de Sessão da Tarde com mais recursos financeiros para investir na ambientação e figurino. A fórmula americana já está me cansando, sempre esse final feliz com uma lição forçada. Sem falar que esse filme é de estadunidenses para estadunidenses.",
+              "nota": 7.0
+            },
+            {
+              "texto": "todos. Seja você um fã antigo da Barbie ou um novo espectador em busca de entretenimento com significado, este filme promete encantar e inspirar.",
+              "nota": 10.0
+            }
+          ]
+        },
+        {
+          "id": 2671,
+          "titulo": "O Chamado",
+          "pontuacao": 0.4232,
+          "criticas": 0,
+          "trechos": []
+        },
+        {
+          "id": 301528,
+          "titulo": "Toy Story 4",
+          "pontuacao": 0.4212,
+          "criticas": 0,
+          "trechos": []
+        },
+        {
+          "id": 345,
+          "titulo": "De Olhos Bem Fechados",
+          "pontuacao": 0.4203,
+          "criticas": 1,
+          "trechos": [
+            {
+              "texto": "e bem escrita, o filme desenvolve muito bem as personagens e permite que as conheçamos. Para isso, o filme não se importa de assumir um ritmo mais lento que pode deixar alguns públicos exasperados. Determinante foi a escolha de Tom Cruise e Nicole Kidman para os papéis principais. Na época, eles eram o casal bonito de Hollywood, e não há dúvida que Kubrick soube explorar a enorme química pessoal e",
+              "nota": 10.0
+            }
+          ]
+        },
+        {
+          "id": 508947,
+          "titulo": "Red: Crescer é Uma Fera",
+          "pontuacao": 0.4138,
+          "criticas": 1,
+          "trechos": [
+            {
+              "texto": "os seus talentos e a sua reputação no domínio da animação digital e oferece-nos um festim para os olhos, com um realismo e uma atenção aos detalhes que dificilmente encontra paralelo e que nos faz pensar muito na forma como a tecnologia evoluiu em pouquíssimos anos: “Toy Story” ainda nem tem trinta anos e já parece um pouco datado quando comparado a este filme! Um problema apenas: eu não sou fã,",
+              "nota": 6.0
+            }
+          ]
+        },
+        {
+          "id": 9100,
+          "titulo": "Jovens Bruxas",
+          "pontuacao": 0.4038,
+          "criticas": 1,
+          "trechos": [
+            {
+              "texto": "e com potencial psicológico, ela não foi capaz de exteriorizá-lo. Fairuza Balk, por sua vez, surpreendeu numa interpretação dramática e intensa, às vezes exagerada, mas de uma forma que não era má. Rachel True e Neve Campbell estão bem e cumprem com o que lhes é exigido. O resultado final de todo este esforço e trabalho é um filme para adolescentes com algum potencial adulto e que entretém bem.",
+              "nota": 5.0
+            }
+          ]
+        },
+        {
+          "id": 53064,
+          "titulo": "Midori",
+          "pontuacao": 0.4013,
+          "criticas": 0,
+          "trechos": []
+        },
+        {
+          "id": 9374,
+          "titulo": "A Morte lhe Cai Bem",
+          "pontuacao": 0.3805,
+          "criticas": 1,
+          "trechos": [
+            {
+              "texto": "inimiga de sempre. Quando sai para o mundo exterior, porém, ela apresenta-se linda, deslumbrante, poderosa… e determinada a vingar-se. Tudo graças a um elixir misterioso, ciosamente guardado por uma estranha mulher. O filme é verdadeiramente imperdível para os fãs do humor negro, e vai seguramente agradar a outras pessoas graças ao tom cómico e a uma história rocambolesca, cheia de peripécias e de",
+              "nota": 9.0
+            }
+          ]
+        }
+      ],
+      "provedor": "groq",
+      "modelo": "openai/gpt-oss-20b",
+      "latencia_ms": null,
+      "citacoes_removidas": 0,
+      "exemplo_gravado": true
+    },
+    {
+      "pergunta": "Quais filmes falam sobre curling?",
+      "resposta": "O contexto fornecido não possui informações suficientes para responder a essa pergunta.",
+      "contexto_suficiente": false,
+      "filmes_citados": [],
+      "contexto": [
+        {
+          "id": 162,
+          "titulo": "Edward Mãos de Tesoura",
+          "pontuacao": 0.7,
+          "criticas": 2,
+          "trechos": [
+            {
+              "texto": "onde a vida é sempre igual, feita de aparências de perfeição. Dirigido por Tim Burton, tem um roteiro de Caroline Thompson e conta com a participação de Johnny Depp e Winona Ryder. Este filme é um conto de Natal moderno e, durante uma década, foi muito transmitido em televisão por volta dessa época do ano. A história é bonita e emocionante, e faz-nos pensar em questões como o direito a ser",
+              "nota": 8.0
+            },
+            {
+              "texto": "celebra a originalidade e a beleza da individualidade. O filme aborda temas atemporais de forma delicada e impactante, ensinando importantes lições sobre empatia, compreensão e aceitação. Sua mensagem positiva sobre a importância de abraçar a singularidade de cada indivíduo ressoa com o público e torna o filme relevante mesmo após tantos anos de seu lançamento. Em conclusão, \"Edward Mãos de",
+              "nota": 10.0
+            }
+          ]
+        },
+        {
+          "id": 57800,
+          "titulo": "A Era do Gelo 4",
+          "pontuacao": 0.5424,
+          "criticas": 1,
+          "trechos": [
+            {
+              "texto": "**Uma fórmula que já cansou o público** Este filme passa-se na deriva continental e é outra sequela de \"Ice Age\". Neste filme, os animais enfrentarão os perigos de um planeta em mudança e tentarão manter-se juntos antes de se separarem e deriva dos continentes. Dirigido por Steve Martino e Mike Thurmeier, tem actores de voz como Ray Romano, John Leguizamo, Queen Latifah e Denis Leary. Após o",
+              "nota": 3.0
+            }
+          ]
+        },
+        {
+          "id": 8457,
+          "titulo": "Meu Nome é Taylor, Drillbit Taylor",
+          "pontuacao": 0.5415,
+          "criticas": 0,
+          "trechos": []
+        },
+        {
+          "id": 101299,
+          "titulo": "Jogos Vorazes: Em Chamas",
+          "pontuacao": 0.5246,
+          "criticas": 1,
+          "trechos": [
+            {
+              "texto": "acompanhar a história de Katniss Everdeen e de Peeta Mellark, os dois improváveis vencedores dos Jogos da Fome que vimos no primeiro filme. Eles têm de viver a vida de vencedores, mas essa vida significa tornarem-se alvo do escrutínio de todo o país, graças à sua popularidade e à máquina de propaganda do Presidente Snow, desejoso de os usar para manter o povo entretido, sem pensar em política. Mas",
+              "nota": 10.0
+            }
+          ]
+        },
+        {
+          "id": 36647,
+          "titulo": "Blade: O Caçador de Vampiros",
+          "pontuacao": 0.4781,
+          "criticas": 1,
+          "trechos": [
+            {
+              "texto": "**Sangue, testosterona, espadas e porrada.** Estamos perante um filme que foi planeado e pensado para o público adolescente sedento de acção, pura e dura, com lutas mais coreografadas que o ballet e litros, verdadeiramente, de sangue por toda a parte. Eu poderia estar a exagerar, mas este filme é apenas isso. É bom, se o que procurarmos é algo para entreter sem pensar muito. A acção do filme",
+              "nota": 4.0
+            }
+          ]
+        },
+        {
+          "id": 417859,
+          "titulo": "Gato de Botas",
+          "pontuacao": 0.4725,
+          "criticas": 1,
+          "trechos": [
+            {
+              "texto": "**Um bom filme animado.** Este filme foi dos primeiros a dar protagonismo a uma personagem secundária (mas engraçada) de outro filme de animação. É uma moda dos estúdios de animação que nem sempre foi capaz de nos dar bons filmes mas certamente ajudou a aumentar os seus lucros. A primeira aparição deste gato é na franquia \"Shrek\", mas neste filme podemos vê-lo de maneira diferente, misturando",
+              "nota": 8.0
+            }
+          ]
+        },
+        {
+          "id": 216015,
+          "titulo": "Cinquenta Tons de Cinza",
+          "pontuacao": 0.4684,
+          "criticas": 1,
+          "trechos": [
+            {
+              "texto": "definido. Mas como eu não li os livros (nem tenciono) falarei apenas do filme. No geral, achei o enredo muito fraco. Anastasia Steele é uma jovem tímida, sexualmente inexperiente e que sente imediatamente uma forte atracção por Christian Gray, um jovem milionário com uma agressividade quase latente. A partir daí, os dois têm um relacionamento carregado de fetiches de autoridade e dor, onde o",
+              "nota": 3.0
+            }
+          ]
+        },
+        {
+          "id": 11544,
+          "titulo": "Lilo & Stitch",
+          "pontuacao": 0.4674,
+          "criticas": 0,
+          "trechos": []
+        }
+      ],
+      "provedor": "gemini",
+      "modelo": "gemini-3.5-flash-lite",
+      "latencia_ms": null,
+      "citacoes_removidas": 0,
+      "exemplo_gravado": true
+    }
+  ]
+}

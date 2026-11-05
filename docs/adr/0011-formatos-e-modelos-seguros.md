@@ -1,4 +1,4 @@
-# 0011 — Formatos legíveis e modelos pré-treinados com revisão fixada
+# 0011. Formatos legíveis e modelos pré-treinados com revisão fixada
 
 - Estado: Aceita
 - Data: 2026-09-14

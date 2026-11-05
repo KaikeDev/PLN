@@ -1,9 +1,11 @@
-"""Rotas HTTP com catálogo falso injetado: contrato JSON, validação, erros, CORS e limite."""
+"""Rotas HTTP com catálogo falso injetado: contrato JSON, validação, erros, CORS, limite e telas na mesma origem."""
 
+import tempfile
 import unittest
 from pathlib import Path
 
 from fastapi.testclient import TestClient
+from uvicorn.middleware.proxy_headers import ProxyHeadersMiddleware
 
 from app.api.rate_limit import RateLimiter
 from app.llm.compose import LLMStack, stack_for
@@ -214,6 +216,36 @@ class ApiTests(unittest.TestCase):
             self.assertEqual(client.get("/saude").status_code, 200)
         self.assertEqual(statuses, [200, 200, 429])
         self.assertIn("retry-after", last.headers)
+
+    def test_rate_limit_uses_forwarded_ip_behind_trusted_proxy(self) -> None:
+        settings = Settings(_env_file=None, rate_limit_per_minute=1)
+        app = ProxyHeadersMiddleware(create_app(settings, FakeCatalog()), trusted_hosts="*")
+        with TestClient(app) as client:
+            first = client.get("/pesquisa", params={"q": "a"}, headers={"X-Forwarded-For": "203.0.113.7"})
+            repeated = client.get("/pesquisa", params={"q": "a"}, headers={"X-Forwarded-For": "203.0.113.7"})
+            other = client.get("/pesquisa", params={"q": "a"}, headers={"X-Forwarded-For": "198.51.100.9"})
+        self.assertEqual([first.status_code, repeated.status_code, other.status_code], [200, 429, 200])
+
+    def test_serves_frontend_on_same_origin_after_api_routes(self) -> None:
+        with tempfile.TemporaryDirectory() as folder:
+            frontend = Path(folder)
+            (frontend / "index.html").write_text("<!doctype html><title>Site</title>", encoding="utf-8")
+            (frontend / "script.js").write_text('"use strict";', encoding="utf-8")
+            settings = Settings(_env_file=None, serve_frontend=True, frontend_dir=frontend)
+            with TestClient(create_app(settings, FakeCatalog())) as client:
+                page = client.get("/")
+                script = client.get("/script.js")
+                health = client.get("/saude")
+                missing = client.get("/nao-existe.html")
+        self.assertEqual((page.status_code, page.headers["content-type"].split(";")[0]), (200, "text/html"))
+        self.assertIn("<title>Site</title>", page.text)
+        self.assertEqual(script.status_code, 200)
+        self.assertEqual(health.json()["status"], "ok")
+        self.assertEqual(missing.status_code, 404)
+
+    def test_frontend_is_not_served_by_default(self) -> None:
+        with client_for(FakeCatalog()) as client:
+            self.assertEqual(client.get("/").status_code, 404)
 
     def test_rate_limiter_window_slides(self) -> None:
         now = [0.0]

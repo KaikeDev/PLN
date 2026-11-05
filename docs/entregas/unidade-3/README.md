@@ -24,4 +24,4 @@ uv run --frozen --no-sync --with python-docx --with matplotlib python ../docs/en
 
 ## Uso de IA generativa
 
-O documento e os scripts foram produzidos com o Claude Opus 5.5 (Anthropic), pelo Claude Code; a seção "Uso de IA generativa" do documento traz o modelo e os prompts. A marcação inicial das 40 triplas de relações (`config/entidades/conferencia_relacoes.json`) também foi feita pelo assistente.
+Usamos o Claude Opus 5.5 (Anthropic), pelo Claude Code, nos scripts e na redação do documento; a seção "Uso de IA generativa" do documento traz o modelo e os prompts. A marcação inicial das 40 triplas de relações (`config/entidades/conferencia_relacoes.json`) também foi feita com essa ferramenta.

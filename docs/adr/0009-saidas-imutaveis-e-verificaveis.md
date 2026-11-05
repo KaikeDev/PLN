@@ -1,4 +1,4 @@
-# 0009 — Saídas imutáveis, determinísticas e verificáveis por manifesto
+# 0009. Saídas imutáveis, determinísticas e verificáveis por manifesto
 
 - Estado: Aceita
 - Data: 2026-09-14 (imutabilidade e manifesto desde a Etapa 1; quebra de linha LF nesta data)

@@ -28,7 +28,7 @@ uv run --frozen python -m app.corpus process --input ../data/coleta/tmdb_2026-09
 
 A pasta `reproducao` deve ser nova. Os testes exercitam paginação, duplicidade, ausência de texto, negação, integridade, repetição determinística, recusa a sobrescrita e falhas de coleta sem vazamento da credencial. Os testes auxiliares verificam prioridade de título exato, limites de período, mapeamento para descoberta e ausência de filtro positivo para qualidade negada.
 
-## Etapa 2 — Representações vetoriais (14/09/2026)
+## Etapa 2: Representações vetoriais (14/09/2026)
 
 Execução local em Python 3.14.0, com scikit-learn 1.9.1, NumPy 2.5.3 e SciPy 1.18.1. No extra `semantico`: torch 2.14.0 (CPU), transformers 5.17.0 e sentence-transformers 6.0.1. Todas as versões estão fixadas em `uv.lock`.
 
@@ -44,7 +44,7 @@ Execução local em Python 3.14.0, com scikit-learn 1.9.1, NumPy 2.5.3 e SciPy 1
 uv run --frozen python -m app.representations verify --input ../data/representacoes/tmdb_2026-09-12
 ```
 
-## Aula 7 — BERT, CBOW × skip-gram e polissemia (21/09/2026)
+## Aula 7: BERT, CBOW × skip-gram e polissemia (21/09/2026)
 
 Mesmo ambiente da Etapa 2. Modelos novos com revisão fixada: `neuralmind/bert-base-portuguese-cased` (`94d69c95…`) e `pt-mteb/average_pt_nilc_word2vec_cbow_s300` (`0d556458…`). Decisões no [ADR 0015](../adr/0015-aula7-bert-cbow-e-polissemia.md).
 
@@ -56,7 +56,7 @@ Mesmo ambiente da Etapa 2. Modelos novos com revisão fixada: `neuralmind/bert-b
 | Repetição | Segunda execução completa em outra pasta: todos os arquivos, exceto o manifesto, idênticos byte a byte, inclusive BERT e modelo de sentença. |
 | Regeneração | `data/representacoes/tmdb_2026-09-12` foi regenerada com LF e substitui a execução de 14/09 (seis representações); os valores das representações que já existiam não mudaram. |
 
-## Aula 8 — Jev × TF-IDF + regressão logística (28/09/2026)
+## Aula 8: Jev × TF-IDF + regressão logística (28/09/2026)
 
 Execução local em Python 3.14.7, com typesafe-sdk 0.7.2 (extra `jev`), scikit-learn 1.9.1, NumPy 2.5.3 e SciPy 1.18.1, fixados em `uv.lock`. Modelo informado pela API: `jev-1.13.0`. Decisões no [ADR 0019](../adr/0019-aula8-jev-classificacao-de-genero.md).
 
@@ -208,7 +208,7 @@ Execução local em Python 3.14.0, após a refatoração descrita em [docs/tecni
 | Inicialização da API | Com `backend/.env`, `/saude` responde e o OpenAPI lista `/saude`, `/filmes/{filme_id}` e `/pesquisa`; sem token, a inicialização falha com mensagem orientativa. O TMDB não foi consultado. |
 | Interface | Sintaxe verificada com `node --check`; não houve teste visual em navegador. |
 
-## Unidade 4 — Base de LLM (26/10/2026)
+## Unidade 4: Base de LLM (26/10/2026)
 
 Decisões no [ADR 0029](../adr/0029-base-de-llm-por-api-gratuita.md).
 
@@ -218,7 +218,7 @@ Decisões no [ADR 0029](../adr/0029-base-de-llm-por-api-gratuita.md).
 | Lint, formatação e tipos | `ruff check`, `ruff format --check` e `mypy` sem apontamentos. |
 | Chamada real (`python -m app.llm ping`) | Gemini: o alias `gemini-flash-lite-latest` respondeu como `gemini-3.5-flash-lite`, em 1,1 s, com 43 tokens de entrada e 24 de saída. Groq: `openai/gpt-oss-20b`, em 0,4 s, com 294 e 47. Os dois devolveram o JSON no formato pedido (gênero da lista fechada e confiança entre 0 e 1). A cota gratuita não foi medida; o orçamento de `config/llm/llm.json` deve ser conferido no painel de cada provedor. |
 
-## Unidade 4 — Interpretação da consulta por LLM (26/10/2026)
+## Unidade 4: Interpretação da consulta por LLM (26/10/2026)
 
 Decisões e resultados no [ADR 0030](../adr/0030-interpretacao-da-consulta-por-llm.md); relatório em [`data/interpretacao/frases_2026-10-26/report.md`](../../data/interpretacao/frases_2026-10-26/report.md).
 
@@ -229,6 +229,45 @@ Decisões e resultados no [ADR 0030](../adr/0030-interpretacao-da-consulta-por-l
 | Ordem do gabarito | As 50 frases foram commitadas (`1c15e37`) antes da primeira execução de `interpret-eval`. |
 | Execução real | Duas execuções completas de 120 chamadas cada (50 frases × 2 variantes + 20 consultas). O Gemini respondeu 237 vezes e o Groq, 3, quando a cota por minuto estourou. Few-shot: acerto exato de 0,94 e 0,98, sem filtro inventado; regras: 0,44, com 11 filtros inventados. |
 | Reprodução | `interpret-eval --reuse` sem chaves gerou arquivos de conteúdo idênticos byte a byte aos da execução de referência; `interpret-verify` confere as duas pastas no CI. |
+
+## Unidade 4: Sentimento com LLM (26/10 e 01/11/2026)
+
+Decisões e resultados no [ADR 0031](../adr/0031-sentimento-com-llm.md); relatório em [`data/sentimento/llm_2026-11-01/report.md`](../../data/sentimento/llm_2026-11-01/report.md).
+
+| Verificação | Resultado e alcance |
+|---|---|
+| Ordem do gabarito | Amostra de 200 críticas, prompts e casos da equipe commitados (`1880036`) antes da primeira chamada. |
+| Execução real | Duas execuções somadas com `--reuse` (264 chamadas na segunda). As duas pararam na cota diária do Gemini: cada variante respondeu 171 a 173 críticas; a reserva no Groq, as 200. A estabilidade (20 repetições) e os quatro casos da equipe ficaram sem resposta. |
+| Comparação justa | TF-IDF e BERTimbau com as predições fora da dobra da Aula 9, recalculados na amostra equilibrada. Reserva (200 críticas): F1 de 0,915 contra 0,880 e 0,791; erro da nota de 1,04 contra 1,53 e 1,80. |
+| Integridade | `llm-verify` aprovado nas pastas `llm_2026-10-26` e `llm_2026-11-01` (também no CI). |
+
+## Unidade 4: RAG (01/11/2026)
+
+Decisões e resultados no [ADR 0032](../adr/0032-rag-perguntas-sobre-filmes.md); relatório em [`data/rag/2026-11-01/report.md`](../../data/rag/2026-11-01/report.md).
+
+| Verificação | Resultado e alcance |
+|---|---|
+| Ordem do gabarito | 33 perguntas e a rubrica commitadas (`714084f`) antes da primeira chamada. |
+| Execução real | 179 chamadas, sem falha, em cerca de 50 minutos. O Gemini respondeu 114 e o Groq 12, nas vezes em que o Gemini devolveu HTTP 503 ou falhou a conexão. Latência mediana de 12 s e p95 de 124 s, inflados pelas novas tentativas. |
+| Métricas automáticas | Precisão dos citados de 0,95, 0,90 e 0,93 (k = 5, 10 e 20) contra 0,57 da busca; 5 de 5 perguntas sem resposta recusadas; 0 citações inventadas; 3 de 3 injeções recusadas (o sinal automático da do poema é falso positivo, conferido na resposta). |
+| Reprodução | `rag eval --reuse ../data/rag/2026-11-01` sem chaves fez 0 chamadas e gerou `metrics.json`, `predictions.jsonl`, `ranking.jsonl`, `report.md`, `responses.jsonl`, `without_reviews.jsonl` e `questions.json` idênticos byte a byte; `rag verify` confere a pasta no CI. |
+| Julgamento humano | Pendente: fidelidade, utilidade e citação correta pelos dois juízes (`judgment-template` e `agreement`). |
+
+## Unidade 4: Publicação e páginas do site (01/11/2026)
+
+Decisões nas ADRs [0033](../adr/0033-publicacao-no-hugging-face-spaces.md) e [0034](../adr/0034-paginas-do-site-e-sobre-o-projeto.md).
+
+| Verificação | Resultado e alcance |
+|---|---|
+| Testes automatizados | 250 testes aprovados, sem rede. Novos: frontend servido na mesma origem (`/` devolve o `index.html`, as rotas da API continuam em JSON, caminho inexistente dá 404), frontend desligado por padrão, limite por IP atrás do proxy (`X-Forwarded-For`) e `resultados.json` igual ao que o coletor gera das fontes. |
+| Lint, formatação e tipos | `ruff check`, `ruff format --check` e `mypy` sem apontamentos; `node --check` em todos os `.js` do frontend. |
+| PyTorch CPU | O `uv.lock` resolve `torch 2.14.0+cpu` (roda cp314 do índice CPU) no Linux e `torch 2.14.0` no Windows e no macOS; nenhum pacote `nvidia-*`, `cuda-*` ou `triton` restou no lock. |
+| Catálogo do site | Coleta refeita em 01/11/2026 com `config/coleta/coleta_site.json` para a publicação: 5.834 filmes únicos e 5.458 sinopses (em 05/10/2026: 5.853 e 5.525). A diferença vem do ranking do TMDB. As métricas do projeto não mudam, porque são medidas na amostra. |
+| Modo de mesma origem, local | `SERVE_FRONTEND=true uvicorn app.main:app`: a API ficou pronta em cerca de 60 s (carga do catálogo de 5.458 filmes, do MiniLM, do spaCy e treino dos classificadores) e ocupou cerca de 1,4 GB de memória (conjunto de trabalho do processo no Windows). `/saude` informou `catalogo_do_site` com 5.458 filmes e os dois provedores de LLM. `/`, `/sobre.html`, `/dados/resultados.json` e `/pesquisa?q=Matrix` responderam 200; um caminho inexistente, 404. |
+| Acessibilidade (Lighthouse 12, modo celular) | Demonstração e "Sobre o projeto": 100 em Acessibilidade e 100 em Boas práticas (Lighthouse 12.8.2, no servidor local). Comando: `npx lighthouse@12 http://127.0.0.1:8000/ --only-categories=accessibility,best-practices`. Relatórios em [`acessibilidade/`](acessibilidade/). A primeira rodada apontou o favicon ausente (erro 404 no console) e os links do índice pequenos para toque; os dois foram corrigidos. |
+| Largura de 360 px | Medida com o Chrome em viewport de 360 px: a largura do documento é igual à da tela nas duas páginas (sem rolagem horizontal); as tabelas largas rolam dentro do próprio contêiner. |
+| Navegação por teclado | Abas por setas, Home e End; modal com foco preso, `Esc` e devolução do foco; link "Pular para o conteúdo". Conferido no código e nos testes do Lighthouse; a passada manual em cada aba fica no checklist da entrega. |
+| Imagem Docker e Space | Não construídas nesta máquina (sem Docker). O CI constrói a imagem sem o catálogo (`SKIP_CATALOG=1`). **Pendente de medir no Space publicado:** tamanho da imagem, memória em uso e arranque a frio. |
 
 ## Limites da validação
 

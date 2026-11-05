@@ -1,4 +1,4 @@
-"""CLI: python -m app.llm ping — uma chamada real a cada provedor com chave, para conferir chave, modelo e formato.
+"""CLI: python -m app.llm ping faz uma chamada real a cada provedor com chave, para conferir chave, modelo e formato.
 
 Não passa pelo orçamento nem pelo cache, e não grava nada. Cada provedor gasta uma chamada da cota gratuita.
 Devolve 0 quando todos responderam no formato pedido e 1 quando algum falhou.

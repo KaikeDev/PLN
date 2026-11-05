@@ -1,4 +1,4 @@
-# 0019 — Classificação de gênero com o Jev comparada a TF-IDF + regressão logística (Aula 8)
+# 0019. Classificação de gênero com o Jev comparada a TF-IDF + regressão logística (Aula 8)
 
 - Estado: Aceita
 - Data: 2026-09-28

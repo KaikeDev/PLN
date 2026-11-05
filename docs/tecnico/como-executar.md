@@ -109,7 +109,7 @@ Uma coleta nova de críticas (exige `TMDB_BEARER_TOKEN` e o catálogo do site) e
 Sentimento com LLM nas 200 críticas da amostra ([ADR 0031](../adr/0031-sentimento-com-llm.md)), comparado às predições gravadas do TF-IDF e do BERTimbau. Exige a pasta preparada acima. Reavaliar **sem gastar cota**:
 
 ```bash
-uv run --frozen python -m app.sentiment llm-eval --input ../data/preparacao/criticas_2026-10-10 --predictions ../data/sentimento/criticas_2026-10-10 --config ../config/sentimento/sentimento_llm.json --sample ../config/sentimento/sentimento_llm_amostra.json --output ../data/sentimento/llm_reproducao --reuse ../data/sentimento/llm_2026-10-26
+uv run --frozen python -m app.sentiment llm-eval --input ../data/preparacao/criticas_2026-10-10 --predictions ../data/sentimento/criticas_2026-10-10 --config ../config/sentimento/sentimento_llm.json --sample ../config/sentimento/sentimento_llm_amostra.json --output ../data/sentimento/llm_reproducao --reuse ../data/sentimento/llm_2026-11-01
 ```
 
 Sem `--reuse`, são 824 chamadas (quatro variantes por crítica, 20 repetições e os quatro casos da equipe), cerca de uma hora com o intervalo de 4 s. Se a cota do dia acabar, a pasta é gravada com as falhas registradas, e a mesma linha com `--reuse` apontando para ela pede só o que faltou. A amostra foi sorteada uma vez com `llm-sample` e não deve ser refeita.
@@ -127,6 +127,8 @@ uv run --frozen python -m app.rag agreement --input ../data/rag/minha_execucao -
 uv run --frozen python -m app.rag export-examples --input ../data/rag/minha_execucao --output ../frontend/dados/exemplos_rag.json
 ```
 
+A avaliação entregue é `data/rag/2026-11-01`. Para reproduzi-la **sem gastar cota**, acrescente `--reuse ../data/rag/2026-11-01` à primeira linha, com outra pasta de saída; `python -m app.rag verify --input ../data/rag/2026-11-01` confere os hashes (também no CI).
+
 Sem `--reuse`, são cerca de 180 chamadas grandes ao LLM (as 20 consultas com 5, 10 e 20 filmes no contexto, as 33 perguntas, a ablação sem críticas e a interpretação de cada frase). `--without-ablation` pula a ablação.
 
 ### 7. Entidades e relações
@@ -141,7 +143,7 @@ uv run --frozen --extra entidades python -m app.entities build --input ../data/p
 
 > **Obrigatório depois de clonar o repositório**, para o site usar o catálogo completo. Sem ele, a API registra um aviso no terminal, o site mostra uma faixa amarela no topo, e a busca e os filmes parecidos usam só a amostra de 428 filmes. A rota `/saude` informa a origem e o tamanho do catálogo carregado.
 
-A busca por tema e os filmes parecidos do site procuram num catálogo de cerca de 5.500 filmes de 18 gêneros, separado da amostra avaliada ([ADR 0024](../adr/0024-catalogo-do-site.md)). Ele fica fora do Git e é gerado com três comandos, em `backend` (exige `TMDB_BEARER_TOKEN`; cerca de 5 minutos de coleta e alguns minutos de vetores):
+A busca por tema, os filmes parecidos e as perguntas do site procuram num catálogo de cerca de 5.500 filmes de 18 gêneros (5.458 sinopses na coleta refeita em 01/11/2026 para a publicação; 5.525 na de 05/10/2026), separado da amostra avaliada ([ADR 0024](../adr/0024-catalogo-do-site.md)). Ele fica fora do Git e é gerado com três comandos, em `backend` (exige `TMDB_BEARER_TOKEN`; cerca de 5 minutos de coleta e alguns minutos de vetores):
 
 ```bash
 uv run --frozen python -m app.corpus collect --config ../config/coleta/coleta_site.json --output ../data/coleta/site_2026-10-05
@@ -167,7 +169,17 @@ Terminal 2, também em `backend`:
 uv run --frozen python -m http.server 5500 --directory ../frontend
 ```
 
-Abra <http://127.0.0.1:5500>. A API leva alguns segundos para iniciar, porque carrega os modelos da busca por tema e treina o classificador da tela. Sem o extra `semantico`, ela sobe mesmo assim, e a busca por tema e a classificação avisam que estão indisponíveis; o mesmo vale para o extra `entidades` e para as críticas preparadas. A documentação interativa da API fica em <http://127.0.0.1:8000/docs>.
+Abra <http://127.0.0.1:5500>. O `script.js` reconhece a porta 5500 e chama a API em `127.0.0.1:8000`.
+
+**Modo de um terminal (mesma origem, como no site publicado):** com `SERVE_FRONTEND=true`, a própria API serve as páginas, e basta abrir <http://127.0.0.1:8000> ([ADR 0033](../adr/0033-publicacao-no-hugging-face-spaces.md)):
+
+```bash
+SERVE_FRONTEND=true uv run --frozen --extra semantico --extra entidades uvicorn app.main:app --host 127.0.0.1
+```
+
+No PowerShell, defina antes `$env:SERVE_FRONTEND = "true"`. A página "Sobre o projeto" (`sobre.html`) também abre sem a API, só com `frontend/dados/resultados.json`.
+
+A API leva alguns segundos para iniciar, porque carrega os modelos da busca por tema e treina o classificador da tela. Sem o extra `semantico`, ela sobe mesmo assim, e a busca por tema e a classificação avisam que estão indisponíveis; o mesmo vale para o extra `entidades` e para as críticas preparadas. A documentação interativa da API fica em <http://127.0.0.1:8000/docs>.
 
 | Rota | Função |
 |---|---|
@@ -177,9 +189,25 @@ Abra <http://127.0.0.1:5500>. A API leva alguns segundos para iniciar, porque ca
 | `GET /filmes/603/parecidos?quantidade=5` | Filmes de sinopse mais parecida (só para os filmes do catálogo do site) |
 | `GET /classificacao?texto=...` | Gênero previsto para uma sinopse e a probabilidade de cada gênero; até 1.000 caracteres |
 | `GET /sentimento?texto=...` | Polaridade, probabilidade de ser positiva, nota prevista e palavras de maior peso de uma crítica; até 5.000 caracteres |
-| `GET /entidades?texto=...` | Entidades (PER, LOC, ORG, MISC) e triplas sujeito — relação → objeto de um texto; até 2.000 caracteres |
+| `GET /entidades?texto=...` | Entidades (PER, LOC, ORG, MISC) e triplas sujeito → relação → objeto de um texto; até 2.000 caracteres |
+| `GET /sentimento/llm?texto=...` | Polaridade, nota e justificativa dadas pelo LLM, para comparar com o modelo treinado; limite próprio de 5 por minuto |
+| `GET /pergunta?q=...` | Resposta do RAG com os filmes citados e o contexto usado; até 300 caracteres; limite próprio de 5 por minuto |
 
-Configurações opcionais em `backend/.env`: `TMDB_LANGUAGE`, `TMDB_TIMEOUT`, `CORS_ORIGINS` e `RATE_LIMIT_PER_MINUTE` (padrão de 60 requisições por minuto por IP). O CORS só libera as origens da interface, e a API roda em `127.0.0.1` ([ADR 0002](../adr/0002-credencial-e-exposicao-da-api.md)).
+Configurações opcionais em `backend/.env`: `TMDB_LANGUAGE`, `TMDB_TIMEOUT`, `CORS_ORIGINS`, `RATE_LIMIT_PER_MINUTE` (padrão de 60 requisições por minuto por IP), `LLM_RATE_LIMIT_PER_MINUTE` (padrão de 5, nas rotas que sempre chamam o LLM) e `SERVE_FRONTEND`. O CORS só libera as origens da interface, e localmente a API roda em `127.0.0.1` ([ADR 0002](../adr/0002-credencial-e-exposicao-da-api.md)); no contêiner publicado, em `0.0.0.0` atrás do proxy ([ADR 0033](../adr/0033-publicacao-no-hugging-face-spaces.md)).
+
+## Página "Sobre o projeto": números e verificações
+
+Os números da página vêm de `frontend/dados/resultados.json`, gerado a partir de `data/` e `config/` ([ADR 0034](../adr/0034-paginas-do-site-e-sobre-o-projeto.md)). Depois de refazer qualquer avaliação, na raiz do repositório:
+
+```bash
+python docs/entregas/unidade-4/coletar_resultados.py
+```
+
+`tests/test_resultados.py` falha se o JSON não bater com as fontes. Os relatórios do Lighthouse ficam em `docs/tecnico/acessibilidade/` (comando em [validacao.md](validacao.md)).
+
+## Publicação
+
+O site publicado roda no Hugging Face Spaces, num contêiner Docker ([ADR 0033](../adr/0033-publicacao-no-hugging-face-spaces.md)). O passo a passo (dataset do catálogo, segredos, envio manual ou pelo workflow `deploy-space.yml`) está em [`deploy/space/README.md`](../../deploy/space/README.md).
 
 ## Credenciais
 

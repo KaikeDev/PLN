@@ -1,4 +1,4 @@
-# 0007 — Cliente HTTP síncrono, sessão por thread, retry e cache em memória
+# 0007. Cliente HTTP síncrono, sessão por thread, retry e cache em memória
 
 - Estado: Aceita
 - Data: 2026-09-14

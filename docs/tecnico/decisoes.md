@@ -19,7 +19,7 @@ Na orientação em vídeo de 31/08/2026, o professor pede representações suces
 | Vetorização | Tokens da Etapa 1, cosseno com norma L2, K-Means com k = 4, SVD 2D, modelos com revisão fixa | [0011](../adr/0011-formatos-e-modelos-seguros.md), [0012](../adr/0012-parametros-do-experimento-vetorial.md) |
 | Aula 7 | BERTimbau, word2vec CBOW × skip-gram, sondas de polissemia e síntese comparativa | [0015](../adr/0015-aula7-bert-cbow-e-polissemia.md) |
 | Organização | Código, configurações, dados e documentação separados por tarefa da disciplina | [0022](../adr/0022-organizacao-por-tarefa.md) |
-| Catálogo do site | Busca por tema e filmes parecidos num catálogo de 5.525 sinopses de 18 gêneros, separado da amostra avaliada; vetores calculados uma vez | [0024](../adr/0024-catalogo-do-site.md) |
+| Catálogo do site | Busca por tema e filmes parecidos num catálogo de cerca de 5.500 sinopses de 18 gêneros (5.458 na coleta de 01/11/2026 publicada no site), separado da amostra avaliada; vetores calculados uma vez | [0024](../adr/0024-catalogo-do-site.md) |
 | Preparação da consulta | A busca por tema tira palavras de pedido e recoloca acentos do vocabulário antes de ordenar | [0025](../adr/0025-preparacao-da-consulta.md) |
 | Análise de sentimentos | Críticas do TMDB rotuladas pela nota do autor; polaridade e nota com as 8 representações; dobras por filme e teste entre autores; tela com TF-IDF | [0026](../adr/0026-analise-de-sentimentos.md) |
 | Entidades e relações | spaCy `pt_core_news_sm` com as regras do notebook da Aula 9 e a regra de coordenação; NER conferido com os créditos do TMDB; rota `/entidades` na ficha do filme | [0027](../adr/0027-entidades-e-relacoes.md) |
@@ -31,6 +31,12 @@ Na orientação em vídeo de 31/08/2026, o professor pede representações suces
 | Busca por tema | 0,3 × TF-IDF sem stopwords + 0,7 × embedding de sentença, escolhida em 20 consultas anotadas; filtros das regras aplicados aos filmes da amostra | [0020](../adr/0020-busca-hibrida-tfidf-e-sentenca.md) |
 | Aula 8 | Gênero pelo Jev (Choice + um Noul por gênero, sem treino) × TF-IDF + regressão logística treinada fora da amostra; 120 filmes; respostas guardadas e reaproveitáveis | [0019](../adr/0019-aula8-jev-classificacao-de-genero.md) |
 | Repositório | Sem comentários fora de docstrings; `.gitignore` para segredos, modelos, dados não entregues e arquivos locais | [0001](../adr/0001-registrar-decisoes-em-adrs.md), [0016](../adr/0016-politica-do-gitignore.md) |
+| Base de LLM | Gemini (principal) e Groq (reserva) por API gratuita, atrás da porta `LanguageModel`; JSON validado, cache, orçamento diário e replay das respostas | [0029](../adr/0029-base-de-llm-por-api-gratuita.md) |
+| Interpretação da consulta | Filtros extraídos por LLM few-shot com saída estruturada; regras como reserva em falha ou após 4 s | [0030](../adr/0030-interpretacao-da-consulta-por-llm.md) |
+| Sentimento com LLM | Zero-shot, few-shot e sem justificativa × TF-IDF × BERTimbau nas mesmas 200 críticas; botão "Comparar com IA" na tela | [0031](../adr/0031-sentimento-com-llm.md) |
+| RAG | Busca híbrida existente como recuperador (k = 8), trechos de crítica, citações por id conferidas e defesas contra injeção | [0032](../adr/0032-rag-perguntas-sobre-filmes.md) |
+| Publicação | Hugging Face Spaces (Docker, CPU gratuita), mesma origem, `0.0.0.0` atrás do proxy com limites, PyTorch CPU e catálogo por dataset | [0033](../adr/0033-publicacao-no-hugging-face-spaces.md) |
+| Páginas do site | Identificação em todas as páginas, "Sobre o projeto" com números gerados de `data/`, gráficos SVG sem biblioteca e página estática de reserva | [0034](../adr/0034-paginas-do-site-e-sobre-o-projeto.md) |
 | Código | Camadas com portas e adaptadores; identificadores em inglês e contrato em português; ruff, mypy e CI | [0004](../adr/0004-arquitetura-em-camadas.md), [0008](../adr/0008-idioma-do-codigo-e-do-contrato.md), [0013](../adr/0013-ferramentas-de-qualidade.md) |
 
 ## Limitações
@@ -42,6 +48,10 @@ Na orientação em vídeo de 31/08/2026, o professor pede representações suces
 - As 20 consultas anotadas foram escritas e julgadas pela equipe; servem para comparar representações, não como avaliação com usuários. A busca por tema cobre só os filmes da amostra.
 - A recomendação é avaliada por gênero compartilhado: dois filmes do mesmo gênero não são necessariamente boas recomendações um para o outro. Não há avaliações de usuários para uma avaliação colaborativa.
 - Na Aula 8, o rótulo de gênero são os `genre_ids` do TMDB restritos aos quatro gêneros, e muitos filmes têm gêneros fora dessas opções (ação, romance, suspense). O Jev foi refeito com esse rótulo ([ADR 0019](../adr/0019-aula8-jev-classificacao-de-genero.md)). O Jev é um serviço externo e pago: uma nova execução depende da chave e pode usar outro modelo por trás do alias `jev-latest`. A redação das perguntas faz parte da tarefa.
+
+- **LLM (Unidade 4):** depende de cota gratuita de terceiros. Quando ela acaba, a interpretação volta às regras e as respostas com IA viram exemplos gravados. Mesmo com temperatura 0, as respostas mudam entre execuções (até 5 de 50 frases na interpretação), por isso as avaliações gravam as respostas brutas e são reavaliadas com `--reuse`. O alias `gemini-flash-lite-latest` pode apontar para outro modelo no futuro; cada resposta gravada registra o modelo exato.
+- **Fidelidade do RAG:** a conferência garante que só filmes do contexto sejam citados, mas não que cada frase seja fiel ao trecho. A fidelidade depende do julgamento humano com a rubrica de `config/rag/rubrica.md`.
+- **Catálogo publicado:** o catálogo de 01/11/2026 difere do de 05/10/2026 (ranking do TMDB), com 5.458 sinopses contra 5.525. Os exemplos da `APRESENTACAO.md` podem trazer filmes um pouco diferentes; as métricas não mudam, porque são medidas na amostra.
 
 ## Próximas experiências
 

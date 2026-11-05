@@ -1,4 +1,6 @@
-# Spec 05 — Páginas do site: identificação, "Sobre o projeto" e acessibilidade
+# Spec 05. Páginas do site: identificação, "Sobre o projeto" e acessibilidade
+
+> **Estado: implementada em 01/11/2026** ([ADR 0034](../../../adr/0034-paginas-do-site-e-sobre-o-projeto.md)). Cabeçalho com título e autores, blocos "Como usar" em cada aba, `frontend/sobre.html` com as 13 seções e as seis questões, números de `frontend/dados/resultados.json` conferidos por `test_resultados.py`, gráficos SVG sem biblioteca e Lighthouse 100/100 nas duas páginas (relatórios em `docs/tecnico/acessibilidade/`). **Pendente:** a lista de verificação manual de cada aba no link público.
 
 **Depende de:** 01–03 para os números (a estrutura pode ser feita antes) · **ADR:** 0034 · **Esforço:** 2 dias
 
@@ -38,7 +40,7 @@ Uma seção por item, na ordem abaixo. Os números são **lidos de `frontend/dad
 | 9 | Limitações | Técnicas e metodológicas: rótulos aproximados, consultas julgadas pela equipe, catálogo sem gabarito, correferência, viés de popularidade e do autor principal, não determinismo do LLM | B.5 |
 | 10 | Custos e dependências externas | TMDB (token gratuito), Gemini e Groq (cota gratuita: o que acontece quando acaba), Hugging Face Spaces (dorme quando inativo), tamanho dos modelos e memória medida (spec 04) | B, último parágrafo |
 | 11 | Tecnologias e modelos | Lista com versões: MiniLM (revisão), BERTimbau, word2vec NILC, spaCy `pt_core_news_sm`, scikit-learn, FastAPI, modelo exato e configurações do LLM (temperatura, máximo de tokens, provedor e acesso por API) | Item 5 |
-| 12 | Uso de IA generativa | Fornecedor e modelo (Anthropic, Claude Opus 5.5, pelo Claude Code), principais usos (código, testes, documentação, páginas, primeira marcação de anotações revisada pela equipe) e principais prompts. Dizer o que foi **revisado pela equipe** | Item 5 |
+| 12 | Uso de IA generativa | Fornecedor e modelo (Anthropic, Claude Opus 5.5, pelo Claude Code), principais usos (código, testes, documentação, páginas, primeira redação de anotações) e decisões do grupo | Item 5 |
 | 13 | Referências | TMDB (com a atribuição obrigatória), artigos e modelos, bibliotecas e o repositório | Pôster 8, B.5 |
 
 ### As seis questões: o que cada resposta precisa conter

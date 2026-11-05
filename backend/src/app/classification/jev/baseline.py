@@ -5,7 +5,7 @@ duas saídas que o Jev, para que as métricas sejam idênticas:
 
 - `choice`: regressão logística multinomial treinada só com filmes de um gênero avaliado;
 - `labels`: uma regressão logística binária por gênero (um contra os demais), com classes
-  balanceadas, treinada com todos os filmes fora da amostra — equivale aos Nouls.
+  balanceadas, treinada com todos os filmes fora da amostra; equivale aos Nouls.
 
 Nenhum filme da amostra entra no treino nem no vocabulário do TF-IDF.
 """

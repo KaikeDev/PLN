@@ -41,6 +41,7 @@ jobs:
           uv run --frozen python -m app.sentiment verify --input ../data/coleta/criticas_2026-10-10
           uv run --frozen python -m app.sentiment verify --input ../data/sentimento/criticas_2026-10-10
           uv run --frozen python -m app.sentiment llm-verify --input ../data/sentimento/llm_2026-10-26
+          uv run --frozen python -m app.sentiment llm-verify --input ../data/sentimento/llm_2026-11-01
       - name: Integridade da varredura de clusters
         run: uv run --frozen python -m app.clustering verify --input ../data/agrupamento/tmdb_2026-09-12
       - name: Integridade de entidades e relações
@@ -51,6 +52,19 @@ jobs:
         run: |
           uv run --frozen python -m app.search interpret-verify --input ../data/interpretacao/frases_2026-10-26
           uv run --frozen python -m app.search interpret-verify --input ../data/interpretacao/frases_2026-10-26_execucao_1
+      - name: Integridade da avaliação do RAG
+        run: uv run --frozen python -m app.rag verify --input ../data/rag/2026-11-01
+
+  imagem-do-space:
+    # Pega quebras de dependência da imagem publicada (ADR 0033) sem baixar o catálogo; só na main e em pull requests.
+    if: github.ref == 'refs/heads/main' || github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Montar a pasta do Space
+        run: bash deploy/space/stage.sh build/space
+      - name: Construir a imagem sem o catálogo
+        run: docker build --build-arg SKIP_CATALOG=1 -t pln-space build/space
 
   frontend:
     runs-on: ubuntu-latest
@@ -60,4 +74,8 @@ jobs:
         with:
           node-version: "22"
       - name: Sintaxe do JavaScript
-        run: node --check frontend/script.js
+        run: for arquivo in frontend/*.js; do node --check "$arquivo"; done
+      - name: Dados das páginas
+        run: |
+          node -e "JSON.parse(require('fs').readFileSync('frontend/dados/resultados.json','utf8'))"
+          node -e "JSON.parse(require('fs').readFileSync('frontend/dados/exemplos_rag.json','utf8'))"

@@ -21,7 +21,7 @@ flowchart TD
     Q["Frase do usuário<br/>“quero um filme de ação sobre máquinas”"] --> T{Título exato no TMDB?}
     T -- sim --> RT[Resultados por título]
     T -- não --> R[Regras léxicas<br/>gênero = Ação]
-    R --> H[Busca por tema no catálogo do site<br/>5.525 sinopses · 0,3 × TF-IDF + 0,7 × MiniLM]
+    R --> H[Busca por tema no catálogo do site<br/>~5.500 sinopses · 0,3 × TF-IDF + 0,7 × MiniLM]
     H --> F[Filtro das regras<br/>só filmes de ação]
     F --> OK{Achou filmes?}
     OK -- sim --> RS[Resultados por tema, com pontuação]
@@ -30,7 +30,7 @@ flowchart TD
 
 ## Onde a busca procura
 
-Os algoritmos foram **escolhidos e medidos** na amostra avaliada de 428 sinopses, onde as respostas certas de 20 consultas foram anotadas à mão. No site, eles procuram num **catálogo maior**, de 5.525 sinopses de 18 gêneros, coletado pelo mesmo pipeline ([ADR 0024](adr/0024-catalogo-do-site.md)). Sem o catálogo gerado, o site usa a própria amostra.
+Os algoritmos foram **escolhidos e medidos** na amostra avaliada de 428 sinopses, onde as respostas certas de 20 consultas foram anotadas à mão. No site, eles procuram num **catálogo maior**, de cerca de 5.500 sinopses de 18 gêneros, coletado pelo mesmo pipeline ([ADR 0024](adr/0024-catalogo-do-site.md)). Sem o catálogo gerado, o site usa a própria amostra.
 
 ## Os modos de busca
 
@@ -181,7 +181,7 @@ Para testar outra combinação, basta mudar os nomes e os pesos em `config/busca
 
 ## Limitações
 
-- **Só encontra o que está no catálogo.** A busca por tema procura entre as 5.525 sinopses do catálogo do site, os filmes mais populares de 18 gêneros. Filmes fora dele continuam acessíveis pelo título e pela descoberta do TMDB.
+- **Só encontra o que está no catálogo.** A busca por tema procura entre as cerca de 5.500 sinopses do catálogo do site (5.458 na coleta publicada de 01/11/2026), os filmes mais populares de 18 gêneros. Filmes fora dele continuam acessíveis pelo título e pela descoberta do TMDB.
 - **Qualidade não medida no catálogo.** As consultas anotadas valem só para a amostra. No catálogo, há mais candidatos parecidos, e o ranking fica mais ruidoso: "cobras gigantes" traz *Anaconda 3* em 1º, mas "filme de cobra" traz *Stallone: Cobra* e *G.I. Joe: A Origem de Cobra*, em que "Cobra" é nome de personagem, e o TF-IDF casa a palavra idêntica.
 - **Não há nota mínima.** A busca mostra todo filme com alguma semelhança, então sempre completa a página, mesmo quando poucos resultados são relevantes.
 - **Palavras de pedido fora da lista.** A limpeza reconhece as formas mais comuns ("quero", "me indica", "filme sobre"…). Outras, como "tem algum filme…", continuam entrando na busca por tema.

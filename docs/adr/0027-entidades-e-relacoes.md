@@ -1,4 +1,4 @@
-# 0027 — Entidades nomeadas e relações nas sinopses com o spaCy (Aula 9)
+# 0027. Entidades nomeadas e relações nas sinopses com o spaCy (Aula 9)
 
 - Estado: Aceita
 - Data: 2026-10-10

@@ -59,7 +59,9 @@ data/jev/*
 data/sentimento/*
 !data/sentimento/criticas_2026-10-10/
 !data/sentimento/llm_2026-10-26/
+!data/sentimento/llm_2026-11-01/
 data/rag/*
+!data/rag/2026-11-01/
 data/entidades/*
 !data/entidades/tmdb_2026-09-12/
 data/interpretacao/*

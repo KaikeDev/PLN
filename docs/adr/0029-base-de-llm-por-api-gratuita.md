@@ -1,4 +1,4 @@
-# 0029 — Base de LLM por API gratuita: Gemini e Groq com saída estruturada, reserva, orçamento e replay (Unidade 4)
+# 0029. Base de LLM por API gratuita: Gemini e Groq com saída estruturada, reserva, orçamento e replay (Unidade 4)
 
 - Estado: Aceita
 - Data: 2026-10-26

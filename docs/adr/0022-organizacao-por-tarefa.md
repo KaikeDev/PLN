@@ -1,4 +1,4 @@
-# 0022 — Repositório organizado por tarefa da disciplina
+# 0022. Repositório organizado por tarefa da disciplina
 
 - Estado: Aceita
 - Data: 2026-10-03

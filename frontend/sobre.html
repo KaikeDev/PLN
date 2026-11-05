@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'self' http://127.0.0.1:8000 http://localhost:8000; base-uri 'none'; form-action 'none'" />
+  <meta name="referrer" content="no-referrer" />
+  <meta name="description" content="Sobre o projeto de PLN 2026/2 (FURB): problema, dados, metodologia, resultados, técnicas da Unidade 4, avaliação crítica, limitações, custos, tecnologias e uso de IA." />
+  <title>Sobre o projeto · Sinopses de filmes: do corpus ao LLM</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="style.css?v=9" />
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+  <header class="topo">
+    <div class="topo__projeto">
+      <p class="topo__titulo-site"><a href="index.html">Sinopses de filmes: do corpus ao LLM</a></p>
+      <p class="topo__autores">Kaike Ventura Tuerpe, Luana Nitsche, Pedro Henrique Ortunio e Thiago Bodnar · PLN 2026/2 · FURB</p>
+      <p class="topo__descricao">Encontrar, recomendar e entender filmes a partir do texto das sinopses e das críticas, em português: as técnicas do semestre lado a lado e, na Unidade 4, um LLM com recuperação (RAG).</p>
+    </div>
+    <div class="topo__acoes">
+      <div id="status" class="status status--pendente" role="status">verificando demonstração...</div>
+      <nav class="topo__links" aria-label="Navegação do site">
+        <a href="index.html">Demonstração</a>
+        <a href="https://github.com/KaikeDev/PLN" rel="noopener">Repositório</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo" class="sobre">
+    <h1>Sobre o projeto</h1>
+    <p id="aviso-estatico" class="aviso-estatico" role="status" hidden>Esta é a <strong>versão estática</strong> da página, que não precisa do servidor. A demonstração interativa fica no site publicado (link no topo do <a href="https://github.com/KaikeDev/PLN#readme" rel="noopener">README do repositório</a>) ou roda localmente, seguindo <code>docs/tecnico/rodar-o-site.md</code>.</p>
+    <p id="erro-resultados" class="aviso-estatico" role="alert" hidden>Não foi possível ler <code>dados/resultados.json</code>: os números e os gráficos desta página não aparecem. Gere o arquivo com <code>python docs/entregas/unidade-4/coletar_resultados.py</code>.</p>
+
+    <nav class="indice" aria-label="Seções da página">
+      <strong>Nesta página</strong>
+      <ol>
+        <li><a href="#problema">Problema</a></li>
+        <li><a href="#objetivos">Objetivos</a></li>
+        <li><a href="#dados">Dados</a></li>
+        <li><a href="#metodologia">Metodologia</a></li>
+        <li><a href="#resultados-anteriores">Resultados das unidades anteriores</a></li>
+        <li><a href="#tecnicas-avancadas">Técnicas avançadas (Unidade 4)</a></li>
+        <li><a href="#resultados-unidade-4">Resultados da Unidade 4</a></li>
+        <li><a href="#avaliacao-critica">Avaliação crítica: as seis questões</a></li>
+        <li><a href="#limitacoes">Limitações</a></li>
+        <li><a href="#custos">Custos e dependências externas</a></li>
+        <li><a href="#tecnologias">Tecnologias e modelos</a></li>
+        <li><a href="#uso-de-ia">Uso de IA generativa</a></li>
+        <li><a href="#referencias">Referências</a></li>
+      </ol>
+    </nav>
+
+    <section id="problema" aria-labelledby="titulo-problema">
+      <h2 id="titulo-problema">1. Problema</h2>
+      <p>Quem procura um filme raramente sabe o título: pede "algo que me faça rir", "um filme sobre luto" ou quer saber se as pessoas gostaram de um lançamento. Os catálogos respondem bem a títulos e filtros, mas mal a pedidos em linguagem natural. O projeto investiga como <strong>encontrar, recomendar e entender filmes a partir do texto</strong> (sinopses e críticas), em português, <strong>sem avaliações de usuários</strong>, e compara as técnicas de PLN do semestre lado a lado nos mesmos dados.</p>
+    </section>
+
+    <section id="objetivos" aria-labelledby="titulo-objetivos">
+      <h2 id="titulo-objetivos">2. Objetivos</h2>
+      <p><strong>Da proposta inicial:</strong> montar um corpus de sinopses do TMDB em português e reprodutível; comparar representações de texto (de contagem a contextuais) em busca, recomendação, agrupamento e classificação; e oferecer uma demonstração que recupere filmes por conteúdo.</p>
+      <p><strong>Ao longo do semestre:</strong> análise de sentimentos em críticas e extração de entidades e relações nas sinopses (Aula 9).</p>
+      <p><strong>Da Unidade 4:</strong> aplicar LLMs onde as técnicas anteriores tinham limites claros e <strong>medir</strong> o ganho contra elas: (a) entender a frase do usuário (paráfrase e negação), (b) ler o sentimento de críticas com negação e ironia, e (c) responder perguntas sobre os filmes com citações conferidas (RAG). E publicar o site num link público.</p>
+    </section>
+
+    <section id="dados" aria-labelledby="titulo-dados">
+      <h2 id="titulo-dados">3. Dados</h2>
+      <ul>
+        <li><strong>Amostra avaliada:</strong> <span data-resultado="dados.filmes_coletados" data-formato="int">…</span> filmes do TMDB (<span data-resultado="dados.sinopses" data-formato="int">…</span> com sinopse em português), uma amostra intencional de 4 gêneros (Drama, Comédia, Terror e Ficção científica) × 3 períodos (1980–1999, 2000–2014 e 2015–2025), dos mais populares de cada recorte.</li>
+        <li><strong>Catálogo do site:</strong> <span data-resultado="dados.catalogo_do_site" data-formato="int">…</span> filmes com sinopse, de 18 gêneros, coletados pelo mesmo pipeline e usados <strong>só na demonstração</strong> (busca, filmes parecidos e perguntas).</li>
+        <li><strong>Críticas:</strong> <span data-resultado="dados.criticas" data-formato="int">…</span> críticas em português de <span data-resultado="dados.filmes_com_critica" data-formato="int">…</span> filmes, de <span data-resultado="dados.autores" data-formato="int">…</span> autores, rotuladas pela nota que o próprio autor deu ao filme. Um autor escreveu <span data-resultado="dados.participacao_do_autor_principal" data-formato="pct0">…</span> delas.</li>
+      </ul>
+      <p class="aviso-estatico"><strong>As métricas foram medidas na amostra menor; o catálogo maior não tem gabarito.</strong> As consultas, as frases e as perguntas de avaliação foram anotadas sobre a amostra, antes de rodar os sistemas. No catálogo, os resultados só podem ser inspecionados, não medidos.</p>
+    </section>
+
+    <section id="metodologia" aria-labelledby="titulo-metodologia">
+      <h2 id="titulo-metodologia">4. Metodologia</h2>
+      <figure class="grafico pipeline">
+        <figcaption>Pipeline do projeto: a mesma base passa por todas as etapas</figcaption>
+        <svg viewBox="0 0 900 250" role="img" aria-label="Diagrama: coleta no TMDB, 6 preparações do texto, 8 representações, tarefas de busca, recomendação, agrupamento, classificação, sentimento e entidades, e a camada de LLM com interpretação da consulta, sentimento e RAG, que alimentam o site.">
+          <defs>
+            <marker id="ponta" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M 0 0 L 10 5 L 0 10 z" fill="#9aa4b1" />
+            </marker>
+          </defs>
+          <rect class="caixa" x="10" y="85" width="140" height="80" rx="10" />
+          <text class="texto-caixa" x="80" y="118" text-anchor="middle">Coleta (TMDB)</text>
+          <text class="texto-fraco" x="80" y="138" text-anchor="middle">sinopses e críticas</text>
+          <rect class="caixa" x="190" y="85" width="140" height="80" rx="10" />
+          <text class="texto-caixa" x="260" y="118" text-anchor="middle">6 preparações</text>
+          <text class="texto-fraco" x="260" y="138" text-anchor="middle">limpa → sem stopwords</text>
+          <rect class="caixa" x="370" y="85" width="150" height="80" rx="10" />
+          <text class="texto-caixa" x="445" y="118" text-anchor="middle">8 representações</text>
+          <text class="texto-fraco" x="445" y="138" text-anchor="middle">BoW, TF-IDF, word2vec,</text>
+          <text class="texto-fraco" x="445" y="153" text-anchor="middle">BERTimbau, MiniLM</text>
+          <rect class="caixa" x="560" y="15" width="160" height="220" rx="10" />
+          <text class="texto-caixa" x="640" y="45" text-anchor="middle">Tarefas</text>
+          <text class="texto-fraco" x="640" y="75" text-anchor="middle">busca</text>
+          <text class="texto-fraco" x="640" y="100" text-anchor="middle">recomendação</text>
+          <text class="texto-fraco" x="640" y="125" text-anchor="middle">agrupamento</text>
+          <text class="texto-fraco" x="640" y="150" text-anchor="middle">classificação</text>
+          <text class="texto-fraco" x="640" y="175" text-anchor="middle">sentimento</text>
+          <text class="texto-fraco" x="640" y="200" text-anchor="middle">entidades e relações</text>
+          <rect class="caixa caixa--llm" x="760" y="35" width="130" height="180" rx="10" />
+          <text class="texto-caixa" x="825" y="65" text-anchor="middle">LLM (Unid. 4)</text>
+          <text class="texto-fraco" x="825" y="100" text-anchor="middle">interpretação</text>
+          <text class="texto-fraco" x="825" y="115" text-anchor="middle">da consulta</text>
+          <text class="texto-fraco" x="825" y="145" text-anchor="middle">sentimento</text>
+          <text class="texto-fraco" x="825" y="175" text-anchor="middle">RAG com</text>
+          <text class="texto-fraco" x="825" y="190" text-anchor="middle">citações</text>
+          <line class="seta" x1="150" y1="125" x2="186" y2="125" marker-end="url(#ponta)" />
+          <line class="seta" x1="330" y1="125" x2="366" y2="125" marker-end="url(#ponta)" />
+          <line class="seta" x1="520" y1="125" x2="556" y2="125" marker-end="url(#ponta)" />
+          <line class="seta" x1="720" y1="125" x2="756" y2="125" marker-end="url(#ponta)" />
+        </svg>
+      </figure>
+      <ul>
+        <li><strong>Coleta e preparação:</strong> respostas da API guardadas, deduplicação por id e seis versões do texto (original, limpa, normalizada, tokenizada, sem pontuação e sem stopwords), com manifesto e hashes.</li>
+        <li><strong>Representações:</strong> BoW e TF-IDF (com e sem stopwords), word2vec CBOW e skip-gram (NILC), BERTimbau e embedding de sentença (MiniLM multilíngue).</li>
+        <li><strong>Busca:</strong> 20 consultas anotadas antes de rodar; combinação 0,3 × TF-IDF + 0,7 × MiniLM, escolhida com reamostragem das consultas.</li>
+        <li><strong>Recomendação:</strong> vizinhos mais próximos pela sinopse, avaliados pelo gênero em comum (sem usuários).</li>
+        <li><strong>Agrupamento:</strong> K-Means sem rótulos e projeção 2D, com varredura de k.</li>
+        <li><strong>Classificação:</strong> regressão logística com validação cruzada aninhada, sem vazamento entre dobras; o Jev (LLM da TypeSafe AI) sem treino.</li>
+        <li><strong>Sentimento:</strong> polaridade e nota das críticas, com teste de generalização entre autores.</li>
+        <li><strong>Entidades e relações:</strong> spaCy <code>pt_core_news_sm</code> e regras de dependência, conferidos com os créditos do TMDB.</li>
+        <li><strong>LLM (Unidade 4):</strong> uma camada única (porta <code>LanguageModel</code>) com Gemini e Groq, saída JSON validada, reserva automática, cache, orçamento diário e gravação das respostas para reavaliar sem gastar cota.</li>
+      </ul>
+    </section>
+
+    <section id="resultados-anteriores" aria-labelledby="titulo-resultados-anteriores">
+      <h2 id="titulo-resultados-anteriores">5. Resultados das unidades anteriores</h2>
+      <div id="tabela-tarefas"></div>
+      <div id="grafico-tarefas"></div>
+      <p><strong>Nenhuma representação vence todas as tarefas:</strong> o embedding de sentença é o melhor na busca, o BERTimbau na recomendação e no agrupamento, e o skip-gram na classificação. A busca do site combina o TF-IDF com o MiniLM e chega a MAP de <span data-resultado="unidades_anteriores.busca.map">…</span>. O Jev, sem treino, acertou <span data-resultado="unidades_anteriores.classificacao.jev_acuracia" data-formato="pct1">…</span> dos gêneros em <span data-resultado="unidades_anteriores.classificacao.jev_filmes" data-formato="int">…</span> filmes. No sentimento, o BERTimbau teve F1 macro de <span data-resultado="unidades_anteriores.sentimento.bertimbau_f1" data-formato="pct1">…</span> e o TF-IDF, <span data-resultado="unidades_anteriores.sentimento.tfidf_f1" data-formato="pct1">…</span>. No NER, <span data-resultado="unidades_anteriores.entidades.revocacao_pessoas" data-formato="pct1">…</span> das pessoas creditadas foram reconhecidas como pessoa.</p>
+      <p class="fraco">O agrupamento é o resultado negativo do semestre: os grupos do K-Means lembram pouco os gêneros (ARI perto de zero nas representações de contagem). Ele agrupa por outros temas.</p>
+    </section>
+
+    <section id="tecnicas-avancadas" aria-labelledby="titulo-tecnicas">
+      <h2 id="titulo-tecnicas">6. Técnicas avançadas (Unidade 4)</h2>
+      <div id="quadro"></div>
+    </section>
+
+    <section id="resultados-unidade-4" aria-labelledby="titulo-resultados-u4">
+      <h2 id="titulo-resultados-u4">7. Resultados da Unidade 4</h2>
+
+      <h3>7.1 Interpretação da consulta: regras × LLM</h3>
+      <p>O LLM recebe a frase e devolve os filtros em JSON, com os gêneros do catálogo como <code>enum</code>. Nas <span data-resultado="unidade_4.interpretacao.frases" data-formato="int">…</span> frases anotadas (explícitas, paráfrases, negações, períodos e armadilhas léxicas), o few-shot acerta todos os filtros em <span data-resultado="unidade_4.interpretacao.sistemas.few_shot.acerto_exato" data-formato="pct0">…</span> delas, contra <span data-resultado="unidade_4.interpretacao.sistemas.regras.acerto_exato" data-formato="pct0">…</span> das regras, e não inventa nenhum filtro (as regras inventaram <span data-resultado="unidade_4.interpretacao.sistemas.regras.filtro_inventado" data-formato="int">…</span>). <strong>Na busca, o ganho é pequeno:</strong> nas 20 consultas, o MAP vai de <span data-resultado="unidade_4.interpretacao.busca_map.sem_filtros">…</span> para <span data-resultado="unidade_4.interpretacao.busca_map.filtros_do_llm">…</span>, porque elas falam mais de tema do que de gênero e período. Separar o tema da frase pelo LLM não melhorou a ordenação e ficou fora do site.</p>
+      <div id="grafico-interpretacao"></div>
+      <div id="tabela-interpretacao"></div>
+      <div id="exemplos-interpretacao"></div>
+
+      <h3>7.2 Sentimento: TF-IDF × BERTimbau × LLM</h3>
+      <p>As mesmas <span data-resultado="unidade_4.sentimento.criticas" data-formato="int">…</span> críticas, sorteadas antes das chamadas (metade negativas, metade do autor principal), comparadas com as predições fora da dobra do TF-IDF e do BERTimbau: nenhum sistema viu essas críticas no treino. Os números da Aula 9 (F1 de <span data-resultado="unidades_anteriores.sentimento.tfidf_f1" data-formato="pct1">…</span> e <span data-resultado="unidades_anteriores.sentimento.bertimbau_f1" data-formato="pct1">…</span>) valem para o conjunto completo, com <span data-resultado="unidades_anteriores.sentimento.participacao_positivas" data-formato="pct0">…</span> de positivas; aqui eles são recalculados na amostra equilibrada.</p>
+      <div id="grafico-sentimento"></div>
+      <div id="tabela-sentimento"></div>
+      <p>Exemplos de discordância (o LLM é a variante do site, <span id="variante-sentimento">few-shot</span>):</p>
+      <div id="exemplos-sentimento"></div>
+
+      <h3>7.3 Perguntas com RAG × busca híbrida</h3>
+      <p>Para cada pergunta, a busca híbrida recupera 8 filmes (com os filtros interpretados pelo LLM e os títulos citados), junta até 2 trechos de crítica por filme e pede ao LLM uma resposta que cite os filmes por id. A conferência remove qualquer citação a filme fora do contexto. A ordenação é medida nas 20 consultas anotadas da busca: os filmes que o LLM escolhe citar são mais relevantes que os 5 primeiros da busca?</p>
+      <div id="grafico-rag"></div>
+      <div id="tabela-rag"></div>
+      <p class="fraco">O sinal automático de injeção procura palavras do pedido na resposta bruta. Na pergunta "escreva um poema sobre gatos", ele disparou porque a recusa repete "gatos"; conferindo as respostas, as 3 tentativas foram recusadas.</p>
+      <div id="exemplos-rag"></div>
+      <p class="fraco">A fidelidade (tudo o que a resposta afirma está no contexto?) é julgada por dois integrantes, separadamente, com a rubrica de <code>config/rag/rubrica.md</code>. A concordância entre eles é calculada por <code>python -m app.rag agreement</code> e entra nesta página quando o julgamento termina.</p>
+    </section>
+
+    <section id="avaliacao-critica" aria-labelledby="titulo-avaliacao">
+      <h2 id="titulo-avaliacao">8. Avaliação crítica: as seis questões</h2>
+
+      <h3 id="questao-1">8.1 Em que medida os objetivos inicialmente propostos foram alcançados?</h3>
+      <div class="tabela-rolagem">
+        <table class="tabela">
+          <thead><tr><th scope="col">Objetivo</th><th scope="col">Situação</th><th scope="col">Evidência</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Corpus de sinopses em português, reprodutível</th><td>Alcançado</td><td><span data-resultado="dados.sinopses" data-formato="int">…</span> sinopses, 6 preparações, manifesto com hashes conferido no CI</td></tr>
+            <tr><th scope="row">Comparar representações</th><td>Alcançado</td><td>8 representações nas mesmas tarefas (seção 5)</td></tr>
+            <tr><th scope="row">Busca por conteúdo</th><td>Alcançado</td><td>MAP de <span data-resultado="unidades_anteriores.busca.map">…</span> em 20 consultas anotadas; no site, com interpretação por LLM</td></tr>
+            <tr><th scope="row">Recomendação</th><td>Parcial</td><td>Avaliada pelo gênero em comum, não por usuários reais</td></tr>
+            <tr><th scope="row">Agrupamento</th><td>Alcançado, resultado negativo</td><td>Os grupos não reproduzem os gêneros (seção 5)</td></tr>
+            <tr><th scope="row">Classificação</th><td>Alcançado</td><td>F1 macro de <span data-resultado="unidades_anteriores.classificacao.melhor_f1" data-formato="pct1">…</span>; Jev com <span data-resultado="unidades_anteriores.classificacao.jev_acuracia" data-formato="pct1">…</span> de acurácia</td></tr>
+            <tr><th scope="row">Sentimento e entidades</th><td>Alcançado</td><td>F1 de <span data-resultado="unidades_anteriores.sentimento.bertimbau_f1" data-formato="pct1">…</span>; <span data-resultado="unidades_anteriores.entidades.triplas" data-formato="int">…</span> triplas extraídas</td></tr>
+            <tr><th scope="row">Técnica avançada com comparação</th><td>Alcançado</td><td>Três comparações com o que já existia (seção 7), inclusive onde não houve ganho</td></tr>
+            <tr><th scope="row">Demonstração online</th><td>Alcançado</td><td>Site publicado no Hugging Face Spaces, com reserva estática desta página</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 id="questao-2">8.2 Quais técnicas apresentaram resultados mais adequados ao problema investigado?</h3>
+      <p>Depende da tarefa: nenhuma representação vence todas (seção 5). Para o problema central, achar filmes por um pedido em linguagem natural, o mais adequado foi <strong>combinar</strong>: a busca híbrida (TF-IDF para palavras-chave, MiniLM para o tema) com o LLM interpretando gênero, período e negação. Na classificação, os vetores pré-treinados (skip-gram e BERTimbau) superam a contagem. No sentimento, o BERTimbau generaliza melhor entre autores que o TF-IDF, e o LLM, sem nenhum treino, fica à frente dos dois na amostra equilibrada (seção 7.2).</p>
+
+      <h3 id="questao-3">8.3 As técnicas avançadas e os LLMs trouxeram melhorias ou novas possibilidades? Quais?</h3>
+      <ul>
+        <li><strong>Melhoria clara:</strong> entender a frase. Paráfrases como "algo que me faça rir" passam de 0% para quase todas certas, e o LLM deixa de inventar filtros (seção 7.1).</li>
+        <li><strong>Melhoria pequena:</strong> a ordenação da busca (MAP <span data-resultado="unidade_4.interpretacao.busca_map.sem_filtros">…</span> → <span data-resultado="unidade_4.interpretacao.busca_map.filtros_do_llm">…</span>), porque as consultas anotadas são de tema.</li>
+        <li><strong>Sem melhoria:</strong> separar o tema da frase pelo LLM não melhorou a ordenação, e o few-shot não superou o zero-shot no sentimento. Os dois resultados ficaram registrados e influenciaram o que foi para a tela.</li>
+        <li><strong>Possibilidade nova:</strong> responder perguntas ("o que acharam de Oppenheimer?") juntando sinopse e críticas, com citações que levam à ficha do filme. Nenhuma técnica anterior fazia isso.</li>
+        <li><strong>Custo novo:</strong> dependência de cota externa, latência de segundos e respostas não determinísticas. Por isso o site cai para as regras e para respostas gravadas quando o LLM falha.</li>
+      </ul>
+
+      <h3 id="questao-4">8.4 Quais são as principais limitações técnicas e metodológicas?</h3>
+      <p>Em ordem de importância: o catálogo da demonstração não tem gabarito; os rótulos são aproximados (gênero para recomendação, nota do autor para sentimento); as consultas e frases foram anotadas dentro do próprio projeto, sem avaliadores externos; e o LLM depende de cota gratuita e não é determinístico. A lista completa está na <a href="#limitacoes">seção 9</a>.</p>
+
+      <h3 id="questao-5">8.5 Como a qualidade dos resultados foi verificada?</h3>
+      <ul>
+        <li><strong>Anotar antes de rodar:</strong> consultas, frases, críticas sorteadas e perguntas do RAG foram commitadas antes da primeira chamada aos sistemas.</li>
+        <li><strong>Validação cruzada sem vazamento:</strong> hiperparâmetros escolhidos dentro de cada dobra; sentimento também testado entre autores.</li>
+        <li><strong>Comparações justas:</strong> o LLM e os modelos treinados nas mesmas críticas, com predições fora da dobra; o RAG e a busca nas mesmas consultas.</li>
+        <li><strong>Reprodutibilidade:</strong> respostas brutas do LLM gravadas e reavaliadas sem rede (<code>--reuse</code>); manifestos com hashes conferidos por <code>verify</code> no CI.</li>
+        <li><strong>Testes automatizados:</strong> <span data-resultado="projeto.testes" data-formato="int">…</span> testes, sem rede (o LLM é substituído por dublês), além de <code>ruff</code> e <code>mypy</code>.</li>
+        <li><strong>Julgamento humano:</strong> fidelidade e utilidade das respostas do RAG, por dois juízes, com concordância (kappa de Cohen).</li>
+      </ul>
+
+      <h3 id="questao-6">8.6 Quais aprimoramentos poderiam ser realizados futuramente?</h3>
+      <ul>
+        <li>Resolver <strong>correferência</strong> antes de extrair relações (<span data-resultado="unidades_anteriores.entidades.sujeito_pronome" data-formato="pct0">…</span> das triplas têm "ele", "ela" ou "que" como sujeito).</li>
+        <li>Avaliar com <strong>usuários reais</strong> (cliques ou julgamentos) em vez de gênero como aproximação.</li>
+        <li><strong>Reordenar</strong> os candidatos da busca com um <em>cross-encoder</em>.</li>
+        <li><strong>Ajuste fino do BERTimbau</strong> no sentimento e na classificação.</li>
+        <li>Um <strong>LLM local quantizado</strong> para tirar a dependência de cota, se houver CPU suficiente.</li>
+        <li><strong>Multimodal:</strong> usar os pôsteres junto com a sinopse.</li>
+      </ul>
+    </section>
+
+    <section id="limitacoes" aria-labelledby="titulo-limitacoes">
+      <h2 id="titulo-limitacoes">9. Limitações</h2>
+      <ul>
+        <li><strong>Catálogo sem gabarito:</strong> os números valem para a amostra avaliada; no catálogo maior, só há inspeção.</li>
+        <li><strong>Rótulos aproximados:</strong> a recomendação conta gênero em comum, não gosto de usuários; o sentimento usa a nota do autor, que nem sempre combina com o texto.</li>
+        <li><strong>Avaliação interna:</strong> consultas, frases e perguntas anotadas dentro do projeto, sem avaliadores externos; a primeira redação das frases e das perguntas teve apoio de IA e foi revisada pela equipe (seção 12).</li>
+        <li><strong>Viés da amostra:</strong> filmes populares e majoritariamente de língua inglesa; um único autor escreveu a maioria das críticas.</li>
+        <li><strong>Correferência:</strong> pronomes como sujeito limitam as relações extraídas.</li>
+        <li><strong>LLM:</strong> respostas não determinísticas mesmo com temperatura 0; dependência de cota gratuita; o modelo "latest" do Gemini pode mudar de versão (cada resposta gravada registra o modelo exato).</li>
+        <li><strong>Fidelidade do RAG:</strong> a conferência garante que só filmes do contexto sejam citados, mas não que cada frase seja fiel ao trecho; isso depende do julgamento humano.</li>
+        <li><strong>Amostra menor do sentimento com LLM:</strong> 200 críticas, por causa da cota diária; no Gemini, cada variante respondeu cerca de 172 delas antes de a cota acabar (a reserva no Groq respondeu as 200).</li>
+      </ul>
+    </section>
+
+    <section id="custos" aria-labelledby="titulo-custos">
+      <h2 id="titulo-custos">10. Custos e dependências externas</h2>
+      <ul>
+        <li><strong>TMDB:</strong> token de leitura gratuito; a busca por título e a ficha dependem dele. Se o TMDB cair, a busca por tema, as perguntas, a classificação e o sentimento continuam (dados locais).</li>
+        <li><strong>Gemini e Groq:</strong> cota gratuita, sem cartão. O site tem um orçamento diário abaixo da cota (seção 11) e um limite de 5 chamadas de LLM por minuto por visitante. Quando a cota acaba, a interpretação cai para as regras, e "Perguntar" e "Comparar com IA" mostram as respostas gravadas. O plano gratuito do Gemini pode usar as entradas para melhorar o produto: não digite dados pessoais.</li>
+        <li><strong>Hugging Face Spaces:</strong> CPU gratuita; o servidor dorme quando ninguém usa e leva cerca de 1 minuto para acordar.</li>
+        <li><strong>Modelos locais:</strong> MiniLM, spaCy e os classificadores carregam na inicialização e treinam na hora (segundos), sem GPU. A memória e o arranque medidos no servidor estão em <code>docs/tecnico/validacao.md</code>.</li>
+        <li><strong>Custo em dinheiro:</strong> zero. O Jev (Aula 8) é pago por chamada e por isso não é usado no site.</li>
+      </ul>
+    </section>
+
+    <section id="tecnologias" aria-labelledby="titulo-tecnologias">
+      <h2 id="titulo-tecnologias">11. Tecnologias e modelos</h2>
+      <p><strong>LLM no processamento:</strong> acesso por API, com os provedores <span id="provedores-llm">…</span>. O identificador <code>gemini-flash-lite-latest</code> aponta para a versão mais nova do modelo; a versão que respondeu fica em cada resposta gravada.</p>
+      <div id="tabela-llm"></div>
+      <div id="tabela-modelos"></div>
+      <div id="tabela-bibliotecas"></div>
+      <p>Site: FastAPI servindo a API e as páginas (HTML, CSS e JavaScript sem build nem biblioteca externa), num contêiner Docker no Hugging Face Spaces. Código organizado por tarefa, com portas e adaptadores; dados com manifesto e hashes.</p>
+    </section>
+
+    <section id="uso-de-ia" aria-labelledby="titulo-uso-de-ia">
+      <h2 id="titulo-uso-de-ia">12. Uso de IA generativa</h2>
+      <p><strong>Como ferramenta de desenvolvimento</strong> (diferente do LLM no processamento, da seção 11):</p>
+      <ul>
+        <li><strong>Fornecedor e modelo:</strong> Anthropic, Claude Opus 5.5, pelo Claude Code (extensão do VS Code).</li>
+        <li><strong>Principais usos:</strong> planejamento das etapas, programação e testes, documentação, construção das páginas e primeira redação das frases e das perguntas de avaliação.</li>
+        <li><strong>Decisões e revisão da equipe:</strong> a modalidade, o acesso ao LLM e as técnicas da Unidade 4 foram escolhidos pelo grupo, e a equipe revisou o código, a documentação, as páginas e as anotações.</li>
+        <li><strong>Verificação:</strong> o código passa por testes automatizados, lint e checagem de tipos no CI, e os números das páginas vêm dos arquivos de <code>data/</code>, conferidos por teste.</li>
+      </ul>
+    </section>
+
+    <section id="referencias" aria-labelledby="titulo-referencias">
+      <h2 id="titulo-referencias">13. Referências</h2>
+      <ul>
+        <li><strong>Dados:</strong> <a href="https://www.themoviedb.org/" rel="noopener">The Movie Database (TMDB)</a>, via <a href="https://developer.themoviedb.org/docs/getting-started" rel="noopener">API TMDB</a>. Este projeto utiliza a API do TMDB, mas não é endossado ou certificado pelo TMDB.</li>
+        <li><strong>Modelos:</strong> Reimers e Gurevych (2019), Sentence-BERT, e o modelo <code>paraphrase-multilingual-MiniLM-L12-v2</code>; Souza, Nogueira e Lotufo (2020), BERTimbau; Hartmann et al. (2017), word2vec do NILC; spaCy <code>pt_core_news_sm</code>.</li>
+        <li><strong>Técnicas:</strong> Lewis et al. (2020), <em>Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks</em>; Brown et al. (2020), <em>Language Models are Few-Shot Learners</em>; Manning, Raghavan e Schütze (2008), <em>Introduction to Information Retrieval</em>.</li>
+        <li><strong>LLMs:</strong> Google Gemini API e Groq API (planos gratuitos).</li>
+        <li><strong>Bibliotecas:</strong> scikit-learn, PyTorch, Hugging Face Transformers e Sentence Transformers, spaCy, FastAPI e Pydantic.</li>
+        <li><strong>Material da disciplina:</strong> notebooks das Aulas 7, 8 e 9 de PLN 2026/2 (FURB).</li>
+        <li><strong>Repositório:</strong> <a href="https://github.com/KaikeDev/PLN" rel="noopener">github.com/KaikeDev/PLN</a>, com o código, os dados entregues, as ADRs e a documentação técnica.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>Dados fornecidos por <a href="https://www.themoviedb.org/" rel="noopener">The Movie Database (TMDB)</a>. Este projeto utiliza a API do TMDB, mas não é endossado ou certificado pelo TMDB.</p>
+    <p><a href="index.html">Voltar à demonstração</a> · <a href="https://github.com/KaikeDev/PLN" rel="noopener">Código no GitHub</a></p>
+  </footer>
+
+  <script src="resultados.js?v=1"></script>
+  <script src="sobre.js?v=1"></script>
+</body>
+</html>

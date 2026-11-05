@@ -13,7 +13,7 @@ MAX_TEXT_CHARS = 2000
 
 @dataclass(frozen=True)
 class Extraction:
-    """Menções reconhecidas e triplas sujeito — relação → objeto de um texto."""
+    """Menções reconhecidas e triplas sujeito → relação → objeto de um texto."""
 
     entities: list[dict]
     triples: list[Triple]

@@ -1,4 +1,4 @@
-# 0015 — BERT contextual, CBOW × skip-gram e sondas de polissemia (Aula 7)
+# 0015. BERT contextual, CBOW × skip-gram e sondas de polissemia (Aula 7)
 
 - Estado: Aceita
 - Data: 2026-09-21

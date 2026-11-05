@@ -169,7 +169,7 @@ class EntityMention(BaseModel):
 
 
 class RelationTriple(BaseModel):
-    """Tripla sujeito — relação → objeto, a sentença de origem (a partir de 1) e a regra que a gerou."""
+    """Tripla sujeito → relação → objeto, a sentença de origem (a partir de 1) e a regra que a gerou."""
 
     model_config = ConfigDict(extra="forbid")
 

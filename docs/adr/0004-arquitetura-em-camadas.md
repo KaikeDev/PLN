@@ -1,4 +1,4 @@
-# 0004 — Arquitetura em camadas com portas e adaptadores
+# 0004. Arquitetura em camadas com portas e adaptadores
 
 - Estado: Aceita
 - Data: 2026-09-14

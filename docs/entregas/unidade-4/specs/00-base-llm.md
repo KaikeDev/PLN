@@ -1,4 +1,4 @@
-# Spec 00 — Base de LLM: porta, provedores gratuitos, saída estruturada e orçamento
+# Spec 00. Base de LLM: porta, provedores gratuitos, saída estruturada e orçamento
 
 > **Estado: implementada em 26/10/2026** ([ADR 0029](../../../adr/0029-base-de-llm-por-api-gratuita.md)). `ping` real em 26/10/2026: Gemini (`gemini-flash-lite-latest` → `gemini-3.5-flash-lite`, 1,1 s) e Groq (`openai/gpt-oss-20b`, 0,4 s) responderam no formato pedido.
 

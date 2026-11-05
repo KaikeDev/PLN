@@ -1,8 +1,11 @@
-# PLN 2026/2 — Sinopses de filmes
+# Sinopses de filmes: do corpus ao LLM (PLN 2026/2)
 
-Sinopses de filmes do TMDB coletadas, preparadas, transformadas em oito representações e usadas nas quatro tarefas de PLN da disciplina: **busca, recomendação, agrupamento com visualização e classificação**. Um site de demonstração usa a busca, a recomendação e a classificação.
+> **Site publicado (Mostra Virtual de PLN): *a preencher depois da publicação ([passos](deploy/space/README.md))***
+> Reserva estática da página "Sobre o projeto": *GitHub Pages com `frontend/`, a configurar* · Vídeo da demonstração: *a gravar*
 
-Equipe: Kaike Ventura Tuerpe, Luana Nitsche, Pedro Henrique Ortunio e Thiago Bodnar — Ciência da Computação, FURB.
+Sinopses e críticas de filmes do TMDB coletadas, preparadas, transformadas em oito representações e usadas em **oito tarefas de PLN**: busca, recomendação, agrupamento com visualização, classificação, análise de sentimentos e entidades e relações e, na Unidade 4, **LLMs** na interpretação da consulta, no sentimento e em perguntas com **RAG**. O site de demonstração (Modalidade B, aplicação web) usa a busca, os filmes parecidos, a classificação, o sentimento, as entidades e as perguntas, e traz a página "Sobre o projeto" com a metodologia, os resultados e a avaliação crítica.
+
+Equipe: Kaike Ventura Tuerpe, Luana Nitsche, Pedro Henrique Ortunio e Thiago Bodnar (Ciência da Computação, FURB).
 
 
 ## As tarefas
@@ -11,12 +14,13 @@ Equipe: Kaike Ventura Tuerpe, Luana Nitsche, Pedro Henrique Ortunio e Thiago Bod
 |---|---|---|---|---|---|
 | 1 | Coleta e preparação | 430 filmes de 4 gêneros e 3 períodos; 6 preparações do texto | 428 sinopses, todas as etapas alinhadas pelo ID | [1-coleta-e-preparacao.md](docs/1-coleta-e-preparacao.md) | [`corpus/`](backend/src/app/corpus/) |
 | 2 | Representações | BoW, TF-IDF, word2vec (CBOW e skip-gram), BERTimbau e embedding de sentença | 8 representações comparadas em todas as tarefas | [2-representacoes.md](docs/2-representacoes.md) | [`representations/`](backend/src/app/representations/) |
-| 3 | Busca | Regras para gênero e período + 0,3 × TF-IDF + 0,7 × embedding de sentença; no site, num catálogo de 5.525 filmes | MAP de 0,613 em 20 consultas anotadas | [3-busca.md](docs/3-busca.md) | [`search/`](backend/src/app/search/) |
+| 3 | Busca | Regras para gênero e período + 0,3 × TF-IDF + 0,7 × embedding de sentença; no site, num catálogo de cerca de 5.500 filmes | MAP de 0,627 em 20 consultas anotadas | [3-busca.md](docs/3-busca.md) | [`search/`](backend/src/app/search/) |
 | 4 | Recomendação | Filmes parecidos com um filme ou com um perfil; no site, na ficha de cada filme, no mesmo catálogo | Precisão @5 de 63,6% (BERTimbau) contra 37,9% ao acaso | [4-recomendacao.md](docs/4-recomendacao.md) | [`recommendation/`](backend/src/app/recommendation/) |
 | 5 | Agrupamento e visualização | K-Means sem rótulos, projeção 2D e varredura de k = 2 a 10 | Grupos lembram pouco os gêneros (ARI de até 0,144) | [5-agrupamento.md](docs/5-agrupamento.md) | [`clustering/`](backend/src/app/clustering/) |
 | 6 | Classificação | Regressão logística nas 8 representações, Jev sem treino e classificação na tela | F1 de 71,0% (skip-gram); Jev com 85,0% de acurácia | [6-classificacao.md](docs/6-classificacao.md) | [`classification/`](backend/src/app/classification/) |
 | 7 | Análise de sentimentos (Aula 9) | 1.859 críticas do TMDB rotuladas pela nota do autor; polaridade e nota com as 8 representações; análise de críticas na tela | F1 macro de 86,7% (BERTimbau) e 85,6% (TF-IDF); nota com erro médio de 1,33 ponto | [7-sentimentos.md](docs/7-sentimentos.md) | [`sentiment/`](backend/src/app/sentiment/) |
 | 8 | Entidades e relações (Aula 9) | spaCy `pt_core_news_sm` e as regras de dependência do notebook nas 428 sinopses; entidades e relações na ficha do filme | 73,7% das pessoas creditadas reconhecidas como pessoa; 1.435 triplas | [8-entidades-e-relacoes.md](docs/8-entidades-e-relacoes.md) | [`entities/`](backend/src/app/entities/) |
+| 9 | Técnicas avançadas com LLM (Unidade 4) | Interpretação da consulta por LLM, sentimento zero-shot e few-shot e perguntas com RAG, todos comparados com as técnicas anteriores; site publicado | Interpretação: 94% de acerto contra 44% das regras; sentimento: F1 de 91,5% sem treino contra 88,0% do BERTimbau; RAG: precisão dos citados de 0,90 a 0,95 contra 0,57 da busca | [9-tecnicas-avancadas.md](docs/9-tecnicas-avancadas.md) | [`llm/`](backend/src/app/llm/), [`rag/`](backend/src/app/rag/) |
 
 ## Tarefas × representações
 
@@ -36,6 +40,32 @@ Uma métrica por célula, calculada nos arquivos entregues:
 
 Nenhuma representação vence todas as tarefas: o embedding de sentença é o melhor na busca, o BERTimbau na recomendação e no agrupamento, e o skip-gram na classificação, empatado com o BERTimbau dentro do desvio entre dobras.
 
+## Unidade 4: técnicas avançadas e Mostra Virtual
+
+- **Quadro de técnicas** (item 1 do enunciado): [docs/9-tecnicas-avancadas.md](docs/9-tecnicas-avancadas.md#quadro-de-técnicas-item-1-do-enunciado), igual ao da página "Sobre o projeto".
+- **Índice da entrega**, com a correspondência entre o enunciado e o projeto: [docs/entregas/unidade-4/](docs/entregas/unidade-4/README.md).
+- **As seis questões de avaliação crítica:** seção 8 da página "Sobre o projeto" (`frontend/sobre.html`).
+- **Uso de IA generativa:** veja a seção abaixo.
+
+## Tecnologias
+
+| Camada | O que usamos |
+|---|---|
+| Linguagem | Python 3.14 (backend, gerenciado pelo [uv](https://docs.astral.sh/uv/)); HTML, CSS e JavaScript sem build nem biblioteca externa (frontend) |
+| PLN e aprendizado de máquina | scikit-learn (BoW, TF-IDF, regressão logística, K-Means), PyTorch, Hugging Face Transformers e Sentence Transformers, spaCy 3.8 (`pt_core_news_sm` 3.8.0) |
+| Modelos pré-treinados (locais, com revisão fixada) | `sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2`, `neuralmind/bert-base-portuguese-cased` (BERTimbau), word2vec CBOW e skip-gram do NILC (300 dimensões) |
+| LLM no processamento | Por API gratuita: Google Gemini (`gemini-flash-lite-latest`, que respondeu como `gemini-3.5-flash-lite`) como principal e Groq (`openai/gpt-oss-20b`) como reserva; temperatura 0, saída JSON validada e orçamento diário ([`config/llm/llm.json`](config/llm/llm.json), [ADR 0029](docs/adr/0029-base-de-llm-por-api-gratuita.md)). Na Aula 8, o Jev (TypeSafe AI), pago por chamada e fora do site |
+| Site | FastAPI e Uvicorn servindo a API e as páginas na mesma origem; dados do TMDB pela API oficial |
+| Hospedagem | Hugging Face Spaces (Docker, CPU gratuita), com o catálogo num dataset público do Hugging Face ([ADR 0033](docs/adr/0033-publicacao-no-hugging-face-spaces.md)) |
+| Qualidade | `unittest` sem rede, ruff, mypy, manifestos com SHA-256 conferidos por `verify` e GitHub Actions |
+
+Versões exatas em [`backend/uv.lock`](backend/uv.lock) e na seção 11 da página "Sobre o projeto".
+
+## Uso de IA generativa
+
+- **No desenvolvimento:** Anthropic Claude Opus 5.5, pelo Claude Code (extensão do VS Code), no planejamento, na programação e nos testes, na documentação, na construção das páginas e na primeira redação das frases e das perguntas de avaliação, sempre com revisão da equipe. A modalidade, o acesso ao LLM e as técnicas foram escolhidos pelo grupo.
+- **No processamento:** Gemini e Groq, como descrito em "Tecnologias", nas três técnicas da Unidade 4.
+
 ## Estrutura do repositório
 
 ```
@@ -45,33 +75,35 @@ docs/
   1-coleta-e-preparacao.md … 8-entidades-e-relacoes.md   ← uma explicação por tarefa
   tecnico/                ← como executar, arquitetura, validação, decisões, dicionário de dados
   adr/                    ← registro das decisões (ADRs) e resumo
-  entregas/               ← documentos de entrega: Etapa 1 e Trabalho da Unidade 3 (unidade-3/)
-config/                   ← parâmetros de cada etapa: coleta/, representacoes/, busca/, classificacao/, sentimento/, entidades/
+  9-tecnicas-avancadas.md ← Unidade 4: quadro de técnicas, LLM e RAG
+  entregas/               ← documentos de entrega: Etapa 1, Unidade 3 (unidade-3/) e Unidade 4 (unidade-4/)
+config/                   ← parâmetros de cada etapa: coleta/, representacoes/, busca/, classificacao/, sentimento/, entidades/, llm/, rag/
 data/                     ← resultados entregues, com manifesto e hashes
-  coleta/  preparacao/  representacoes/  classificacao/  jev/  sentimento/  entidades/
+  coleta/  preparacao/  representacoes/  classificacao/  jev/  sentimento/  entidades/  interpretacao/  rag/
 backend/src/app/          ← código, uma pasta por tarefa
-  corpus/  representations/  search/  recommendation/  clustering/  classification/  sentiment/  entities/
+  corpus/  representations/  search/  recommendation/  clustering/  classification/  sentiment/  entities/  llm/  rag/
   api/  tmdb/  shared/  main.py  settings.py   ← site e utilitários
 backend/tests/            ← testes automatizados (sem rede)
-frontend/                 ← site: busca de filmes, filmes parecidos, classificação de sinopses, análise de críticas e entidades e relações
+frontend/                 ← site: busca, perguntas (RAG), classificação, análise de críticas, ficha com entidades e parecidos; sobre.html
+deploy/space/             ← Dockerfile e envio para o Hugging Face Spaces
 ```
 
 ## Como executar
 
-📘 **Passo a passo completo, do zero até o site aberto: [docs/tecnico/rodar-o-site.md](docs/tecnico/rodar-o-site.md)**, com o que instalar, onde rodar cada comando, o que testar em cada tela e como resolver os problemas comuns.
+**Passo a passo completo, do zero até o site aberto: [docs/tecnico/rodar-o-site.md](docs/tecnico/rodar-o-site.md)**, com o que instalar, onde rodar cada comando, o que testar em cada tela e como resolver os problemas comuns.
 
 Resumo. Todos os comandos rodam **na pasta `backend`**, com o [uv](https://docs.astral.sh/uv/) instalado:
 
 | Quando | Passo | Comando |
 |---|---|---|
-| 1ª vez | 1. Token do TMDB | Copie `backend/.env.example` para `backend/.env` e preencha `TMDB_BEARER_TOKEN` |
+| 1ª vez | 1. Token do TMDB | Copie `backend/.env.example` para `backend/.env` e preencha `TMDB_BEARER_TOKEN`; para as funções com IA, também `GEMINI_API_KEY` e `GROQ_API_KEY` (opcionais e gratuitas) |
 | 1ª vez | 2. Instalar | `uv sync --frozen --extra semantico --extra jev --extra entidades` |
-| 1ª vez | 3. Catálogo do site (~8 min) | os 3 comandos de [rodar-o-site.md](docs/tecnico/rodar-o-site.md#passo-3--gerar-o-catálogo-do-site-cerca-de-8-minutos-uma-vez-só) |
+| 1ª vez | 3. Catálogo do site (~8 min) | os 3 comandos de [rodar-o-site.md](docs/tecnico/rodar-o-site.md#passo-3-gerar-o-catálogo-do-site-cerca-de-8-minutos-uma-vez-só) |
 | 1ª vez | 4. Críticas (segundos) | `uv run --frozen python -m app.sentiment process --input ../data/coleta/criticas_2026-10-10 --output ../data/preparacao/criticas_2026-10-10 --stopwords ../config/coleta/stopwords_pt.txt` |
 | **Sempre** | 5a. API, no terminal 1 | `uv run --frozen --extra semantico --extra jev --extra entidades uvicorn app.main:app --host 127.0.0.1` |
 | **Sempre** | 5b. Telas, no terminal 2 | `uv run --frozen python -m http.server 5500 --directory ../frontend` |
 
-Depois, abra <http://127.0.0.1:5500>.
+Depois, abra <http://127.0.0.1:5500>. Sem as chaves de LLM, o site funciona: a busca interpreta a frase pelas regras, e "Perguntar" mostra as respostas gravadas dos exemplos. Com `SERVE_FRONTEND=true`, a API serve também as páginas, em <http://127.0.0.1:8000>, como no site publicado.
 
 > [!IMPORTANT]
 > O **catálogo do site** (passo 3) e as **críticas preparadas** (passo 4) não vêm no repositório. Sem o catálogo, a busca por tema e os filmes parecidos usam só os 428 filmes da amostra, e aparece uma faixa amarela no topo. Sem as críticas, a aba "Analisar crítica" fica indisponível. Todas as **avaliações** do projeto usam os dados que vêm no repositório ([por quê](docs/adr/0024-catalogo-do-site.md)).
@@ -85,6 +117,7 @@ Refazer cada etapa e conferir os dados entregues: [docs/tecnico/como-executar.md
 - [Validação técnica](docs/tecnico/validacao.md): o que foi testado e verificado em cada etapa
 - [Decisões e limitações](docs/tecnico/decisoes.md), [resumo das ADRs](docs/adr/resumo.md) e [ADRs completas](docs/adr/README.md)
 - [Dicionário de dados](docs/tecnico/dicionario.md)
+- [Publicação no Hugging Face Spaces](deploy/space/README.md)
 
 ## Fonte e atribuição
 

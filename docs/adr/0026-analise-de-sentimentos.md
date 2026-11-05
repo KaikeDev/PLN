@@ -1,4 +1,4 @@
-# 0026 — Análise de sentimentos de críticas do TMDB (Aula 9)
+# 0026. Análise de sentimentos de críticas do TMDB (Aula 9)
 
 - Estado: Aceita
 - Data: 2026-10-10

@@ -1,4 +1,4 @@
-# 0016 — Política do `.gitignore`
+# 0016. Política do `.gitignore`
 
 - Estado: Aceita
 - Data: 2026-09-21

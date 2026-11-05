@@ -180,7 +180,7 @@ def qa(reply: object = cite_first) -> QuestionAnswering:
 
 class RouteTests(unittest.TestCase):
     def client(self, service: QuestionAnswering | None, limit: int = 5) -> TestClient:
-        settings = Settings(_env_file=None, rate_limit_per_minute=100, question_rate_limit_per_minute=limit)
+        settings = Settings(_env_file=None, rate_limit_per_minute=100, llm_rate_limit_per_minute=limit)
         return TestClient(create_app(settings, FakeCatalog(), question_answering=service))
 
     def test_answer_contract(self) -> None:

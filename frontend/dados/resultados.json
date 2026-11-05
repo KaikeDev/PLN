@@ -1,0 +1,658 @@
+{
+  "dados": {
+    "filmes_coletados": 430,
+    "sinopses": 428,
+    "catalogo_do_site": 5458,
+    "criticas": 1859,
+    "filmes_com_critica": 1634,
+    "autores": 86,
+    "participacao_do_autor_principal": 0.6654
+  },
+  "tarefas_representacoes": {
+    "referencia": {
+      "recomendacao_precisao_5": 0.3791,
+      "agrupamento_ari": 0,
+      "classificacao_f1": 0.1075
+    },
+    "linhas": [
+      {
+        "representacao": "bow_sem_pontuacao",
+        "busca_map": 0.1875,
+        "recomendacao_precisao_5": 0.4505,
+        "agrupamento_ari": 0.0025,
+        "classificacao_f1": 0.4611
+      },
+      {
+        "representacao": "bow_sem_stopwords",
+        "busca_map": 0.3751,
+        "recomendacao_precisao_5": 0.5607,
+        "agrupamento_ari": 0.0003,
+        "classificacao_f1": 0.5635
+      },
+      {
+        "representacao": "tfidf_sem_pontuacao",
+        "busca_map": 0.4603,
+        "recomendacao_precisao_5": 0.5696,
+        "agrupamento_ari": 0.0011,
+        "classificacao_f1": 0.5929
+      },
+      {
+        "representacao": "tfidf_sem_stopwords",
+        "busca_map": 0.4459,
+        "recomendacao_precisao_5": 0.578,
+        "agrupamento_ari": 0.0244,
+        "classificacao_f1": 0.5919
+      },
+      {
+        "representacao": "word2vec_cbow",
+        "busca_map": 0.3328,
+        "recomendacao_precisao_5": 0.5575,
+        "agrupamento_ari": 0.06,
+        "classificacao_f1": 0.6761
+      },
+      {
+        "representacao": "word2vec_skipgram",
+        "busca_map": 0.3559,
+        "recomendacao_precisao_5": 0.6019,
+        "agrupamento_ari": 0.0615,
+        "classificacao_f1": 0.71
+      },
+      {
+        "representacao": "bert_base_pt",
+        "busca_map": 0.2953,
+        "recomendacao_precisao_5": 0.6355,
+        "agrupamento_ari": 0.1442,
+        "classificacao_f1": 0.7016
+      },
+      {
+        "representacao": "sentenca_minilm",
+        "busca_map": 0.5598,
+        "recomendacao_precisao_5": 0.6257,
+        "agrupamento_ari": 0.0869,
+        "classificacao_f1": 0.6609
+      }
+    ]
+  },
+  "unidades_anteriores": {
+    "busca": {
+      "map": 0.6269,
+      "mrr": 0.9125,
+      "precisao_5": 0.57
+    },
+    "classificacao": {
+      "melhor": "word2vec_skipgram",
+      "melhor_f1": 0.71,
+      "tela_f1": 0.6609,
+      "jev_acuracia": 0.85,
+      "jev_filmes": 120
+    },
+    "sentimento": {
+      "tfidf_f1": 0.8557,
+      "tfidf_acuracia": 0.8854,
+      "bertimbau_f1": 0.8669,
+      "tfidf_erro_nota": 1.3667,
+      "bertimbau_erro_nota": 1.3339,
+      "media_erro_nota": 1.9788,
+      "participacao_positivas": 0.7089
+    },
+    "entidades": {
+      "revocacao_pessoas": 0.7365,
+      "triplas": 1435,
+      "sujeito_pronome": 0.3477,
+      "sinopses": 428
+    }
+  },
+  "quadro": [
+    {
+      "tecnologia": "LLMs e modelos de linguagem",
+      "utilizada": "Sim",
+      "justificativa": "Gemini (principal) e Groq (reserva), por API gratuita, em três tarefas: interpretação da consulta, sentimento e perguntas com RAG. Na classificação de gênero (Aula 8), o Jev (TypeSafe AI). Desde a Etapa 2, os modelos pré-treinados MiniLM e BERTimbau sustentam as representações."
+    },
+    {
+      "tecnologia": "Prompt engineering e saídas estruturadas",
+      "utilizada": "Sim",
+      "justificativa": "Respostas em JSON com esquema (gêneros do catálogo como enum, datas validadas, nota de 0 a 10, citações por id), validadas com Pydantic e com uma nova tentativa quando o JSON vem quebrado. Comparações zero-shot × few-shot (interpretação e sentimento) e com e sem justificativa (sentimento). Prompts versionados em config/."
+    },
+    {
+      "tecnologia": "RAG e recuperação de informações",
+      "utilizada": "Sim",
+      "justificativa": "Aba \"Perguntar\": a busca híbrida já avaliada recupera 8 filmes pela sinopse e pelos títulos citados, junta trechos das críticas, e o LLM responde citando só esses filmes; citações fora do contexto são removidas antes de aparecer. Avaliado nas 20 consultas anotadas contra a busca sozinha e em 33 perguntas (tema, opinião, sem resposta e injeção de prompt)."
+    },
+    {
+      "tecnologia": "Agentes e integração com ferramentas",
+      "utilizada": "Não",
+      "justificativa": "O RAG com etapas fixas responde às perguntas do projeto com uma chamada ao LLM. Um agente que escolhesse entre busca, ficha, parecidos e sentimento faria várias chamadas por pergunta (incompatível com a cota gratuita) e seria mais difícil de avaliar com o gabarito que temos. A integração com serviços existe no sentido de API: o site junta TMDB, LLM e os modelos locais."
+    },
+    {
+      "tecnologia": "Modelos locais ou quantizados",
+      "utilizada": "Parcial",
+      "justificativa": "Locais, sim: MiniLM, BERTimbau, word2vec NILC e spaCy rodam na máquina, sem API, com revisão fixada. Quantizados, não: um LLM local quantizado foi descartado para a demonstração, porque na CPU gratuita do servidor seria lento demais e mais fraco em português. Fica como trabalho futuro."
+    },
+    {
+      "tecnologia": "Processamento multimodal (texto, imagem, áudio)",
+      "utilizada": "Não",
+      "justificativa": "O problema é textual. Os pôsteres do TMDB aparecem no site, mas não são processados. Pôster + sinopse (por exemplo, com CLIP) fica como trabalho futuro."
+    },
+    {
+      "tecnologia": "Outras técnicas avançadas de PLN",
+      "utilizada": "Sim",
+      "justificativa": "Busca híbrida (TF-IDF + embedding de sentença) com preparação da consulta; NER e extração de relações por dependências (spaCy); sentimento com teste de generalização por autor; classificação multirrótulo; comparação sistemática de 8 representações em 5 tarefas."
+    }
+  ],
+  "unidade_4": {
+    "interpretacao": {
+      "frases": 50,
+      "sistemas": {
+        "regras": {
+          "acerto_exato": 0.44,
+          "f1_generos": 0.6301,
+          "acerto_periodo": 0.86,
+          "filtro_inventado": 11,
+          "falhas": 0
+        },
+        "zero_shot": {
+          "acerto_exato": 0.92,
+          "f1_generos": 0.9512,
+          "acerto_periodo": 0.98,
+          "filtro_inventado": 2,
+          "falhas": 0
+        },
+        "few_shot": {
+          "acerto_exato": 0.94,
+          "f1_generos": 0.9873,
+          "acerto_periodo": 0.96,
+          "filtro_inventado": 0,
+          "falhas": 0
+        },
+        "reserva": {
+          "acerto_exato": 0.94,
+          "f1_generos": 0.9873,
+          "acerto_periodo": 0.96,
+          "filtro_inventado": 0,
+          "falhas": 0
+        }
+      },
+      "por_categoria": {
+        "explicita": {
+          "regras": 1.0,
+          "zero_shot": 1.0,
+          "few_shot": 1.0,
+          "reserva": 1.0
+        },
+        "parafrase": {
+          "regras": 0.0,
+          "zero_shot": 0.9,
+          "few_shot": 1.0,
+          "reserva": 1.0
+        },
+        "negacao": {
+          "regras": 0.625,
+          "zero_shot": 0.875,
+          "few_shot": 0.875,
+          "reserva": 0.875
+        },
+        "periodo": {
+          "regras": 0.125,
+          "zero_shot": 1.0,
+          "few_shot": 0.875,
+          "reserva": 0.875
+        },
+        "armadilha_lexica": {
+          "regras": 0.0,
+          "zero_shot": 0.75,
+          "few_shot": 0.875,
+          "reserva": 0.875
+        },
+        "sem_filtro": {
+          "regras": 1.0,
+          "zero_shot": 1.0,
+          "few_shot": 1.0,
+          "reserva": 1.0
+        }
+      },
+      "busca_map": {
+        "sem_filtros": 0.6269,
+        "filtros_das_regras": 0.6147,
+        "filtros_do_llm": 0.6397
+      },
+      "tokens_entrada_medio": {
+        "zero_shot": 541.7,
+        "few_shot": 980.5
+      },
+      "exemplos": [
+        {
+          "frase": "algo que me faça rir",
+          "esperado": {
+            "generos": [
+              "Comédia"
+            ],
+            "generos_excluidos": [],
+            "lancado_depois": null,
+            "lancado_antes": null,
+            "bem_avaliado": false
+          },
+          "regras": {
+            "generos": [],
+            "generos_excluidos": [],
+            "lancado_depois": null,
+            "lancado_antes": null,
+            "bem_avaliado": false
+          },
+          "llm": {
+            "generos": [
+              "Comédia"
+            ],
+            "generos_excluidos": [],
+            "lancado_depois": null,
+            "lancado_antes": null,
+            "bem_avaliado": false
+          }
+        },
+        {
+          "frase": "qualquer coisa menos terror",
+          "esperado": {
+            "generos": [],
+            "generos_excluidos": [
+              "Terror"
+            ],
+            "lancado_depois": null,
+            "lancado_antes": null,
+            "bem_avaliado": false
+          },
+          "regras": {
+            "generos": [
+              "Terror"
+            ],
+            "generos_excluidos": [],
+            "lancado_depois": null,
+            "lancado_antes": null,
+            "bem_avaliado": false
+          },
+          "llm": {
+            "generos": [],
+            "generos_excluidos": [
+              "Terror"
+            ],
+            "lancado_depois": null,
+            "lancado_antes": null,
+            "bem_avaliado": false
+          }
+        }
+      ]
+    },
+    "sentimento": {
+      "criticas": 200,
+      "media_erro_nota": 2.83,
+      "sistemas": [
+        {
+          "sistema": "tfidf",
+          "nome": "TF-IDF (Aula 9)",
+          "f1_macro": 0.7906,
+          "acuracia": 0.795,
+          "respondidas": 200,
+          "erro_nota": 1.797
+        },
+        {
+          "sistema": "bertimbau",
+          "nome": "BERTimbau (Aula 9)",
+          "f1_macro": 0.8798,
+          "acuracia": 0.88,
+          "respondidas": 200,
+          "erro_nota": 1.534
+        },
+        {
+          "sistema": "zero_shot",
+          "nome": "LLM zero-shot",
+          "f1_macro": 0.9299,
+          "acuracia": 0.9302,
+          "respondidas": 172,
+          "erro_nota": 0.912
+        },
+        {
+          "sistema": "few_shot",
+          "nome": "LLM few-shot",
+          "f1_macro": 0.9246,
+          "acuracia": 0.9249,
+          "respondidas": 173,
+          "erro_nota": 1.002
+        },
+        {
+          "sistema": "zero_shot_sem_justificativa",
+          "nome": "LLM zero-shot sem justificativa",
+          "f1_macro": 0.9295,
+          "acuracia": 0.9298,
+          "respondidas": 171,
+          "erro_nota": 0.937
+        },
+        {
+          "sistema": "reserva",
+          "nome": "LLM reserva (Groq)",
+          "f1_macro": 0.9149,
+          "acuracia": 0.915,
+          "respondidas": 200,
+          "erro_nota": 1.039
+        }
+      ],
+      "por_estrato": {
+        "com_negacao=true": {
+          "tfidf": 0.8065,
+          "bertimbau": 0.8926,
+          "zero_shot": 0.9344,
+          "few_shot": 0.928,
+          "zero_shot_sem_justificativa": 0.9336,
+          "reserva": 0.9149
+        },
+        "com_negacao=false": {
+          "tfidf": 0.5165,
+          "bertimbau": 0.7319,
+          "zero_shot": 0.892,
+          "few_shot": 0.8958,
+          "zero_shot_sem_justificativa": 0.8958,
+          "reserva": 0.9042
+        },
+        "autor_principal=true": {
+          "tfidf": 0.87,
+          "bertimbau": 0.8899,
+          "zero_shot": 0.9093,
+          "few_shot": 0.9195,
+          "zero_shot_sem_justificativa": 0.9195,
+          "reserva": 0.9
+        },
+        "autor_principal=false": {
+          "tfidf": 0.6962,
+          "bertimbau": 0.8684,
+          "zero_shot": 0.9583,
+          "few_shot": 0.9315,
+          "zero_shot_sem_justificativa": 0.9436,
+          "reserva": 0.9299
+        }
+      },
+      "variante_do_site": "few_shot",
+      "so_o_llm_acerta": 10,
+      "so_os_modelos_acertam": 8,
+      "exemplos": [
+        {
+          "filme": "Duna",
+          "nota_do_autor": 4.0,
+          "trecho": "**Duna: Beleza estética em uma história que não cativa** Uma grande decepção. Gosto muito do Villeneuve e Duna, assim como seus filmes anteriores, tem um visual sensacional, fotografia e efeitos visuais, a produção de arte desse filme é impecável. No entanto, particularmente, eu…",
+          "llm": {
+            "polaridade": "negativo",
+            "nota": 4.0,
+            "justificativa": "Apesar do visual impecável, o autor achou a história e os personagens desinteressantes e chatos."
+          },
+          "tfidf": {
+            "polaridade": "positivo",
+            "nota": 6.0628
+          },
+          "bertimbau": {
+            "polaridade": "positivo",
+            "nota": 5.5451
+          }
+        },
+        {
+          "filme": "Querida, Encolhi as Crianças",
+          "nota_do_autor": 4.0,
+          "trecho": "**Um bom filme familiar, ainda que não seja brilhante.** Há alguns filmes que deixam pouca memória na história do cinema mas que fazem a nossa memória pessoal voltar atrás no tempo. Este é um deles. Trata-se de uma comédia familiar bastante divertida, em que um cientista muito d…",
+          "llm": {
+            "polaridade": "positivo",
+            "nota": 6.5,
+            "justificativa": "Apesar de não ser brilhante, o autor o considera divertido e um bom filme familiar."
+          },
+          "tfidf": {
+            "polaridade": "negativo",
+            "nota": 5.0676
+          },
+          "bertimbau": {
+            "polaridade": "negativo",
+            "nota": 5.1807
+          }
+        }
+      ],
+      "estabilidade": {
+        "repetidas": 20,
+        "respondidas": 0,
+        "polaridade_igual": null,
+        "nota_igual": null,
+        "diferenca_media_da_nota": null
+      },
+      "uso": {
+        "zero_shot": {
+          "respostas": 172,
+          "tokens_entrada_medio": 520.6,
+          "tokens_saida_medio": 55.3,
+          "provedores": {
+            "gemini": 172
+          }
+        },
+        "few_shot": {
+          "respostas": 173,
+          "tokens_entrada_medio": 825.1,
+          "tokens_saida_medio": 49.0,
+          "provedores": {
+            "gemini": 173
+          }
+        },
+        "zero_shot_sem_justificativa": {
+          "respostas": 171,
+          "tokens_entrada_medio": 494.3,
+          "tokens_saida_medio": 21.2,
+          "provedores": {
+            "gemini": 171
+          }
+        },
+        "reserva": {
+          "respostas": 200,
+          "tokens_entrada_medio": 1071.1,
+          "tokens_saida_medio": 98.8,
+          "provedores": {
+            "groq": 200
+          }
+        }
+      }
+    },
+    "rag": {
+      "busca_precisao_5": 0.57,
+      "contextos": [
+        {
+          "filmes": 5,
+          "precisao_dos_citados": 0.9475,
+          "revocacao_no_contexto": 0.8675,
+          "citados_por_resposta": 2.75,
+          "tokens_entrada_medio": 1359.3,
+          "falhas": 0
+        },
+        {
+          "filmes": 10,
+          "precisao_dos_citados": 0.8967,
+          "revocacao_no_contexto": 0.6769,
+          "citados_por_resposta": 2.65,
+          "tokens_entrada_medio": 2503.4,
+          "falhas": 0
+        },
+        {
+          "filmes": 20,
+          "precisao_dos_citados": 0.9333,
+          "revocacao_no_contexto": 0.5898,
+          "citados_por_resposta": 2.35,
+          "tokens_entrada_medio": 4763.4,
+          "falhas": 0
+        }
+      ],
+      "perguntas": {
+        "tema": {
+          "perguntas": 15,
+          "respondidas": 15,
+          "recusou": 1,
+          "citacoes_inventadas": 0,
+          "respostas_com_citacao_inventada": 0,
+          "trocadas_por_nao_encontrei": 0,
+          "citados_por_resposta": 2.6,
+          "injecao_obedecida": null
+        },
+        "opiniao": {
+          "perguntas": 10,
+          "respondidas": 10,
+          "recusou": 1,
+          "citacoes_inventadas": 0,
+          "respostas_com_citacao_inventada": 0,
+          "trocadas_por_nao_encontrei": 0,
+          "citados_por_resposta": 1.0,
+          "injecao_obedecida": null
+        },
+        "sem_resposta": {
+          "perguntas": 5,
+          "respondidas": 5,
+          "recusou": 5,
+          "citacoes_inventadas": 0,
+          "respostas_com_citacao_inventada": 0,
+          "trocadas_por_nao_encontrei": 0,
+          "citados_por_resposta": 0.0,
+          "injecao_obedecida": null
+        },
+        "injecao": {
+          "perguntas": 3,
+          "respondidas": 3,
+          "recusou": 3,
+          "citacoes_inventadas": 0,
+          "respostas_com_citacao_inventada": 0,
+          "trocadas_por_nao_encontrei": 0,
+          "citados_por_resposta": 0.0,
+          "injecao_obedecida": 1
+        }
+      },
+      "sem_criticas": {
+        "tema": {
+          "perguntas": 15,
+          "respondidas": 15,
+          "recusou": 1,
+          "citacoes_inventadas": 0,
+          "respostas_com_citacao_inventada": 0,
+          "trocadas_por_nao_encontrei": 0,
+          "citados_por_resposta": 2.67,
+          "injecao_obedecida": null
+        },
+        "opiniao": {
+          "perguntas": 10,
+          "respondidas": 10,
+          "recusou": 10,
+          "citacoes_inventadas": 0,
+          "respostas_com_citacao_inventada": 0,
+          "trocadas_por_nao_encontrei": 0,
+          "citados_por_resposta": 0.7,
+          "injecao_obedecida": null
+        },
+        "sem_resposta": {
+          "perguntas": 5,
+          "respondidas": 5,
+          "recusou": 5,
+          "citacoes_inventadas": 0,
+          "respostas_com_citacao_inventada": 0,
+          "trocadas_por_nao_encontrei": 0,
+          "citados_por_resposta": 0.0,
+          "injecao_obedecida": null
+        },
+        "injecao": {
+          "perguntas": 3,
+          "respondidas": 3,
+          "recusou": 3,
+          "citacoes_inventadas": 0,
+          "respostas_com_citacao_inventada": 0,
+          "trocadas_por_nao_encontrei": 0,
+          "citados_por_resposta": 0.0,
+          "injecao_obedecida": 0
+        }
+      },
+      "uso": {
+        "respostas": 126,
+        "tokens_entrada_medio": 2264.1,
+        "tokens_saida_medio": 219.9,
+        "provedores": {
+          "gemini": 114,
+          "groq": 12
+        }
+      },
+      "exemplos": [
+        {
+          "pergunta": "Tem algum filme sobre luto e sobre lidar com a perda de alguém?",
+          "resposta": "Sim, temos filmes sobre luto e perda no contexto. Em Guardiões da Galáxia: Vol. 3 [F447365], Peter Quill se recupera da perda de Gamora. Em Avatar: Fogo e Cinzas [F83533], Jake Sully e Neytiri enfrentam a perda de seu filho mais velho. Além disso, em Midsommar: O Mal Não Espera…",
+          "citados": [
+            "Guardiões da Galáxia: Vol. 3",
+            "Avatar: Fogo e Cinzas",
+            "Midsommar: O Mal Não Espera a Noite"
+          ]
+        },
+        {
+          "pergunta": "Quais filmes falam sobre curling?",
+          "resposta": "O contexto fornecido não possui informações suficientes para responder a essa pergunta.",
+          "citados": []
+        }
+      ],
+      "julgamentos": null
+    }
+  },
+  "llm": {
+    "provedores": [
+      {
+        "nome": "gemini",
+        "modelo": "gemini-flash-lite-latest"
+      },
+      {
+        "nome": "groq",
+        "modelo": "openai/gpt-oss-20b"
+      }
+    ],
+    "temperatura": 0.0,
+    "maximo_de_tokens": {
+      "interpretacao": 512,
+      "sentimento": 512,
+      "rag": 1024
+    },
+    "orcamento_diario": {
+      "interpretacao": 400,
+      "sentimento": 150,
+      "rag": 250
+    }
+  },
+  "tecnologias": {
+    "modelos": [
+      {
+        "representacao": "word2vec_cbow",
+        "modelo": "pt-mteb/average_pt_nilc_word2vec_cbow_s300",
+        "revisao": "0d556458839fa3a7f39a61dcce56dc50ce7b7314"
+      },
+      {
+        "representacao": "word2vec_skipgram",
+        "modelo": "pt-mteb/average_pt_nilc_word2vec_skip_s300",
+        "revisao": "27facc2558330d2e9af54611734b94e957aa8301"
+      },
+      {
+        "representacao": "bert_base_pt",
+        "modelo": "neuralmind/bert-base-portuguese-cased",
+        "revisao": "94d69c95f98f7d5b2a8700c420230ae10def0baa"
+      },
+      {
+        "representacao": "sentenca_minilm",
+        "modelo": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "revisao": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+      }
+    ],
+    "bibliotecas": {
+      "fastapi": "0.141.1",
+      "uvicorn": "0.52.4",
+      "pydantic": "2.13.4",
+      "requests": "2.34.2",
+      "numpy": "2.5.3",
+      "scikit-learn": "1.9.1",
+      "torch": "2.14.0",
+      "transformers": "5.17.0",
+      "sentence-transformers": "6.0.1",
+      "spacy": "3.8.16",
+      "pt-core-news-sm": "3.8.0"
+    },
+    "python": ">=3.14"
+  },
+  "projeto": {
+    "testes": 250,
+    "adrs": 34
+  }
+}

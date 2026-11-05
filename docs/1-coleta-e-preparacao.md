@@ -4,7 +4,7 @@ CURSO DE CIÊNCIA DA COMPUTAÇÃO
 
 Disciplina: Processamento de Linguagem Natural (2026/2)
 
-# Etapa Prática 1 — Coleta e preparação de dados textuais
+# Etapa Prática 1: Coleta e preparação de dados textuais
 
 > **Onde está no repositório:** código em [`backend/src/app/corpus/`](../backend/src/app/corpus/), configuração em [`config/coleta/`](../config/coleta/), coleta bruta em [`data/coleta/tmdb_2026-09-12/`](../data/coleta/tmdb_2026-09-12/) e textos preparados em [`data/preparacao/tmdb_2026-09-12/`](../data/preparacao/tmdb_2026-09-12/). A versão em Word da entrega está em [`docs/entregas/`](entregas/PLN_2026_2_Avaliacao_Pratica_1_Atualizado.docx).
 
@@ -27,7 +27,7 @@ A coleta real produziu 430 filmes únicos, com 428 sinopses preenchidas e 2 ause
 
 ## 2 Amostragem e caracterização
 
-A amostra foi coletada em 12/09/2026, entre 21:08:39 e 21:09:01 UTC. Foram cruzados quatro gêneros — Drama, Comédia, Terror e Ficção científica — com três intervalos de lançamento: 1980–1999, 2000–2014 e 2015–2025. Para cada um dos 12 recortes foram solicitadas duas páginas, ordenadas por popularidade, com mínimo de 50 votos e exclusão de conteúdo adulto. Esses limites são escolhas operacionais da experiência.
+A amostra foi coletada em 12/09/2026, entre 21:08:39 e 21:09:01 UTC. Foram cruzados quatro gêneros (Drama, Comédia, Terror e Ficção científica) com três intervalos de lançamento: 1980–1999, 2000–2014 e 2015–2025. Para cada um dos 12 recortes foram solicitadas duas páginas, ordenadas por popularidade, com mínimo de 50 votos e exclusão de conteúdo adulto. Esses limites são escolhas operacionais da experiência.
 
 A execução realizou 26 chamadas bem-sucedidas: uma lista de gêneros, 24 páginas de descoberta e uma consulta de detalhes de Matrix, ID 603, incluída para acompanhar o exemplo citado pelo professor. O total de 481 ocorrências foi deduplicado por ID, conservando a primeira ocorrência de cada filme e registrando todos os recortes nos quais ele apareceu. O manifesto indica coleta completa.
 
@@ -35,9 +35,9 @@ A execução realizou 26 chamadas bem-sucedidas: uma lista de gêneros, 24 pági
 | --- | --- |
 | Ocorrências recebidas / duplicatas removidas | 481 / 51 |
 | Filmes únicos / sinopses preenchidas | 430 / 428 |
-| Sinopses ausentes | 2 de 430 — 0,47% |
+| Sinopses ausentes | 2 de 430 (0,47%) |
 | Extensão original média / mediana | 347,44 / 327 caracteres |
-| Tokens lexicais por sinopse — média / mediana | 58,44 / 54 |
+| Tokens lexicais por sinopse (média / mediana) | 58,44 / 54 |
 | Idiomas originais distintos das obras | 15 |
 | Sinopses alteradas pela limpeza | 4 |
 
@@ -171,7 +171,7 @@ A próxima etapa é definir consultas e filmes relevantes de referência, vetori
 
 ### Materiais utilizados
 
-FURB. PLN 2026/2 — Template — Avaliação Prática 1. Rubrica fornecida para a atividade.
+FURB. PLN 2026/2: template da Avaliação Prática 1. Rubrica fornecida para a atividade.
 Orientação do professor em vídeo de 31/08/2026, com transcrição fornecida pela equipe.
 The Movie Database. API e catálogo. https://www.themoviedb.org/ e https://developer.themoviedb.org/docs/getting-started. Coleta em 12/09/2026.
 Repositório da equipe. https://github.com/KaikeDev/PLN.
@@ -184,11 +184,11 @@ A amostra de 12/09/2026 contém **430 filmes únicos**, **428 sinopses preenchid
 
 | Critério do professor | Onde localizar | Evidência |
 |---|---|---|
-| Justificativa, volume e abrangência — 0,4 | Este documento, [configuração](../config/coleta/coleta.json) | Amostra intencional de quatro gêneros e três períodos; critérios e limitações explícitos |
-| Organização e dicionário — 0,4 | [Dicionário](tecnico/dicionario.md), [dados brutos](../data/coleta/tmdb_2026-09-12/) | IDs, campos, tipos, valores ausentes e proveniência |
-| Script Python e reprodução — 0,3 | [Coleta](../backend/src/app/corpus/collect.py), [CLI](../backend/src/app/corpus/__main__.py), [ambiente](../backend/uv.lock) | Paginação, retries, deduplicação, respostas salvas e manifesto |
-| Limpeza, normalização e tokenização — 0,3 | [Transformações](../backend/src/app/corpus/transform.py), [saídas](../data/preparacao/tmdb_2026-09-12/) | Seis representações identificadas, sem sobrescrever as anteriores |
-| Stopwords e pontuação — 0,3 | [Lista versionada](../config/coleta/stopwords_pt.txt), [lista efetivamente usada](../data/preparacao/tmdb_2026-09-12/stopwords_used.json) | Acentos, números e negações preservados; títulos fora do filtro |
-| Comparação entre recortes e coleta automatizada — bônus a avaliar | [Resultados calculados](../data/preparacao/tmdb_2026-09-12/report.md) | Comparação dos 12 recortes e coleta de múltiplas páginas em um comando |
+| Justificativa, volume e abrangência (0,4) | Este documento, [configuração](../config/coleta/coleta.json) | Amostra intencional de quatro gêneros e três períodos; critérios e limitações explícitos |
+| Organização e dicionário (0,4) | [Dicionário](tecnico/dicionario.md), [dados brutos](../data/coleta/tmdb_2026-09-12/) | IDs, campos, tipos, valores ausentes e proveniência |
+| Script Python e reprodução (0,3) | [Coleta](../backend/src/app/corpus/collect.py), [CLI](../backend/src/app/corpus/__main__.py), [ambiente](../backend/uv.lock) | Paginação, retries, deduplicação, respostas salvas e manifesto |
+| Limpeza, normalização e tokenização (0,3) | [Transformações](../backend/src/app/corpus/transform.py), [saídas](../data/preparacao/tmdb_2026-09-12/) | Seis representações identificadas, sem sobrescrever as anteriores |
+| Stopwords e pontuação (0,3) | [Lista versionada](../config/coleta/stopwords_pt.txt), [lista efetivamente usada](../data/preparacao/tmdb_2026-09-12/stopwords_used.json) | Acentos, números e negações preservados; títulos fora do filtro |
+| Comparação entre recortes e coleta automatizada (bônus a avaliar) | [Resultados calculados](../data/preparacao/tmdb_2026-09-12/report.md) | Comparação dos 12 recortes e coleta de múltiplas páginas em um comando |
 
 Os pesos identificam dimensões da rubrica; não são notas atribuídas à entrega.

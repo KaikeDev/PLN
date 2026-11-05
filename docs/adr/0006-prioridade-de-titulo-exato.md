@@ -1,4 +1,4 @@
-# 0006 — Modo automático prioriza título exato da primeira página
+# 0006. Modo automático prioriza título exato da primeira página
 
 - Estado: Aceita
 - Data: 2026-09-14 (decisão original na Etapa 1)

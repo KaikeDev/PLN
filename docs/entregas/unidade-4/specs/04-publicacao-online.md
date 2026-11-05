@@ -1,4 +1,6 @@
-# Spec 04 — Publicação online: Docker no Hugging Face Spaces
+# Spec 04. Publicação online: Docker no Hugging Face Spaces
+
+> **Estado: implementada em 01/11/2026; publicação pendente** ([ADR 0033](../../../adr/0033-publicacao-no-hugging-face-spaces.md)). A API serve o frontend na mesma origem (`SERVE_FRONTEND`), limite próprio nas rotas com LLM, PyTorch CPU no Linux, `deploy/space/` (Dockerfile, `stage.sh`, README do Space e do dataset), workflow manual `deploy-space.yml` e build da imagem no CI. Catálogo regenerado em 01/11/2026 (5.458 sinopses). **Pendente, com as contas da equipe:** publicar o dataset do catálogo, criar o Space e os segredos, rodar o workflow, revogar o token antigo do TMDB e medir memória, arranque e imagem no Space.
 
 **Depende de:** nada (começar já, com o site atual) · **ADR:** 0033, que substitui parcialmente a 0002 · **Esforço:** 2 dias
 

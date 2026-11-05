@@ -1,4 +1,4 @@
-# 0012 — Parâmetros do experimento vetorial
+# 0012. Parâmetros do experimento vetorial
 
 - Estado: Aceita
 - Data: 2026-09-14

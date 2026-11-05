@@ -1,4 +1,4 @@
-# 0023 — Filmes parecidos na ficha do filme
+# 0023. Filmes parecidos na ficha do filme
 
 - Estado: Aceita
 - Data: 2026-10-05

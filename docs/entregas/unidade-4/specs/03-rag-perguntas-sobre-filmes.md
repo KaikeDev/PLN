@@ -1,6 +1,6 @@
-# Spec 03 — RAG: perguntas sobre filmes com respostas citadas
+# Spec 03. RAG: perguntas sobre filmes com respostas citadas
 
-> **Estado: implementada em 26/10/2026; avaliação pendente.** Perguntas e rubrica commitadas antes da primeira chamada (`714084f`). Pacote `app/rag`, rota `/pergunta` com limite próprio, aba "Perguntar" com exemplos clicáveis, citações como links para a ficha e o bloco "De onde veio a resposta". A recuperação também casa títulos citados na pergunta, porque a sinopse raramente traz o título ("Pecadores vale a pena?"). **Pendente:** rodar `python -m app.rag eval` quando a cota diária do Gemini renovar, exportar os exemplos gravados, o julgamento pelos dois juízes e a ADR 0032.
+> **Estado: implementada e avaliada em 01/11/2026** ([ADR 0032](../../../adr/0032-rag-perguntas-sobre-filmes.md), [relatório](../../../../data/rag/2026-11-01/report.md)). 179 chamadas, sem falha: precisão dos citados de 0,90 a 0,95 contra 0,57 da busca; 5 de 5 perguntas sem resposta recusadas; 0 citações inventadas; 3 injeções recusadas; sem críticas, as 10 perguntas de opinião foram recusadas. Exemplos gravados em `frontend/dados/exemplos_rag.json`. **Pendente:** o julgamento de fidelidade pelos dois juízes (`judgment-template` e `agreement`).
 
 **Depende de:** 00 (e usa a busca híbrida existente) · **ADR:** 0032 · **Esforço:** 3 dias
 

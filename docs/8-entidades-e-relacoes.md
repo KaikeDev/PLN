@@ -9,7 +9,7 @@ Decisões na [ADR 0027](adr/0027-entidades-e-relacoes.md).
 | Parte | Resultado | Onde |
 |---|---|---|
 | NER | 1.671 menções nas 428 sinopses; **73,7%** das pessoas creditadas marcadas como pessoa | [relatório](../data/entidades/tmdb_2026-09-12/report.md) |
-| Relações | 1.435 triplas sujeito — relação → objeto; 63,5% das sentenças com ao menos uma | [relatório](../data/entidades/tmdb_2026-09-12/report.md) |
+| Relações | 1.435 triplas sujeito → relação → objeto; 63,5% das sentenças com ao menos uma | [relatório](../data/entidades/tmdb_2026-09-12/report.md) |
 | No site | Ficha do filme: sinopse com as entidades marcadas, pessoas, lugares e relações | [`entities/live.py`](../backend/src/app/entities/live.py) |
 
 ## O que vem do notebook
@@ -93,7 +93,7 @@ O relatório traz também *Forrest Gump*, *Um Sonho de Liberdade* e *Ilha do Med
 Ao abrir a ficha de um filme, a seção **"Personagens, lugares e relações"** mostra:
 - a sinopse com as entidades marcadas por cor e categoria, como o `displacy` do notebook;
 - as pessoas, os lugares, as organizações e os outros;
-- as triplas sujeito — relação → objeto.
+- as triplas sujeito → relação → objeto.
 
 Funciona para qualquer filme, inclusive os de fora do catálogo, porque a rota `GET /entidades` analisa a sinopse na hora. Sem o extra `entidades`, a seção mostra "Entidades e relações indisponíveis".
 

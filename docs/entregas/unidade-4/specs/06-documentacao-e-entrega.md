@@ -1,4 +1,6 @@
-# Spec 06 — Documentação, quadro de técnicas e entrega
+# Spec 06. Documentação, quadro de técnicas e entrega
+
+> **Estado: implementada em 01/11/2026.** README, `APRESENTACAO.md`, `docs/9-tecnicas-avancadas.md`, documentação técnica, ADRs 0031 a 0034, `.gitignore` e CI atualizados; índice da entrega em [`../README.md`](../README.md). **Pendente:** os itens do checklist que dependem da publicação.
 
 **Depende de:** todas · **Esforço:** 1 dia
 
@@ -56,25 +58,24 @@ Rascunho a completar com os números finais. A versão final aparece **igual** n
 Seção no README e na página "Sobre":
 
 - **Fornecedor e modelo:** Anthropic, Claude Opus 5.5, pelo Claude Code (extensão do VS Code).
-- **Usos:** planejamento (estas specs), código, testes, documentação, páginas do site e marcação inicial de anotações, **sempre revisada pela equipe**. Dizer quais anotações foram feitas só pela equipe: as frases da spec 01, as perguntas da spec 03 e os julgamentos de fidelidade.
-- **Principais prompts:** guardar 5 a 10 prompts representativos em `docs/entregas/unidade-4/prompts-ia.md`.
+- **Usos:** planejamento (estas specs), código, testes, documentação, páginas do site e primeira redação de anotações (as frases da spec 01 e as perguntas da spec 03).
 - **Separar** o uso de IA como **ferramenta de desenvolvimento** (Claude) do uso de LLM **no processamento** (Gemini e Groq, com modelo e configurações). O enunciado pede os dois.
 
 ## 6. Checklist final, antes da apresentação
 
 | Item do enunciado | Conferência |
 |---|---|
-| 1 — Quadro | [ ] No repositório e na página, iguais |
-| 1 — Comparação com o anterior | [ ] Três comparações com números, inclusive as sem melhoria |
+| 1. Quadro | [ ] No repositório e na página, iguais |
+| 1. Comparação com o anterior | [ ] Três comparações com números, inclusive as sem melhoria |
 | 2B.1 a 2B.6 | [ ] Título e autores; problema e técnicas; interface; exemplos; dados, metodologia e limitações; instruções |
-| 2B — Custos e dependências externas | [ ] Seção 10 da página "Sobre" |
+| 2B. Custos e dependências externas | [ ] Seção 10 da página "Sobre" |
 | 3.1 a 3.6 | [ ] Seis títulos na página, cada resposta com número ou exemplo |
-| 4 — Link público | [ ] Abre de outra rede e de um celular; o indicador fica verde |
-| 4 — Repositório e README | [ ] Branch mesclada na `main`; README com link, tecnologias e instruções |
-| 5 — Amostra menor explicitada | [ ] Seção 3 da página "Sobre" |
-| 5 — IA generativa e LLM declarados | [ ] Seções 11 e 12 |
-| 5 — Sem segredos | [ ] Token antigo revogado; `git ls-files -ci --exclude-standard` vazio; nenhuma chave no Space nem nas imagens |
-| 5 — Acessibilidade e funcionamento | [ ] Relatórios do Lighthouse e do axe; teste manual de cada aba no link público |
+| 4. Link público | [ ] Abre de outra rede e de um celular; o indicador fica verde |
+| 4. Repositório e README | [ ] Branch mesclada na `main`; README com link, tecnologias e instruções |
+| 5. Amostra menor explicitada | [ ] Seção 3 da página "Sobre" |
+| 5. IA generativa e LLM declarados | [ ] Seções 11 e 12 |
+| 5. Sem segredos | [ ] Token antigo revogado; `git ls-files -ci --exclude-standard` vazio; nenhuma chave no Space nem nas imagens |
+| 5. Acessibilidade e funcionamento | [ ] Relatórios do Lighthouse e do axe; teste manual de cada aba no link público |
 | Demonstração | [ ] Space acordado 10 minutos antes; roteiro da `APRESENTACAO.md` ensaiado; reservas (GitHub Pages e vídeo) testadas |
 
 ## Critérios de aceite

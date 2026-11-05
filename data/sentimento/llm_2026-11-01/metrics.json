@@ -1,0 +1,757 @@
+{
+  "avaliacao": {
+    "criticas": 200,
+    "sistemas": [
+      "tfidf",
+      "bertimbau",
+      "zero_shot",
+      "few_shot",
+      "zero_shot_sem_justificativa",
+      "reserva"
+    ],
+    "mesmas_criticas": {
+      "criticas": 169,
+      "polaridade": {
+        "tfidf": {
+          "respondidas": 169,
+          "falhas": 0,
+          "acuracia": 0.8047,
+          "f1_macro": 0.8,
+          "confusao": {
+            "negativo": {
+              "negativo": 55,
+              "positivo": 27
+            },
+            "positivo": {
+              "negativo": 6,
+              "positivo": 81
+            }
+          }
+        },
+        "bertimbau": {
+          "respondidas": 169,
+          "falhas": 0,
+          "acuracia": 0.8817,
+          "f1_macro": 0.8812,
+          "confusao": {
+            "negativo": {
+              "negativo": 69,
+              "positivo": 13
+            },
+            "positivo": {
+              "negativo": 7,
+              "positivo": 80
+            }
+          }
+        },
+        "zero_shot": {
+          "respondidas": 169,
+          "falhas": 0,
+          "acuracia": 0.929,
+          "f1_macro": 0.9286,
+          "confusao": {
+            "negativo": {
+              "negativo": 72,
+              "positivo": 10
+            },
+            "positivo": {
+              "negativo": 2,
+              "positivo": 85
+            }
+          }
+        },
+        "few_shot": {
+          "respondidas": 169,
+          "falhas": 0,
+          "acuracia": 0.9231,
+          "f1_macro": 0.9228,
+          "confusao": {
+            "negativo": {
+              "negativo": 73,
+              "positivo": 9
+            },
+            "positivo": {
+              "negativo": 4,
+              "positivo": 83
+            }
+          }
+        },
+        "zero_shot_sem_justificativa": {
+          "respondidas": 169,
+          "falhas": 0,
+          "acuracia": 0.929,
+          "f1_macro": 0.9287,
+          "confusao": {
+            "negativo": {
+              "negativo": 73,
+              "positivo": 9
+            },
+            "positivo": {
+              "negativo": 3,
+              "positivo": 84
+            }
+          }
+        },
+        "reserva": {
+          "respondidas": 169,
+          "falhas": 0,
+          "acuracia": 0.9053,
+          "f1_macro": 0.9053,
+          "confusao": {
+            "negativo": {
+              "negativo": 77,
+              "positivo": 5
+            },
+            "positivo": {
+              "negativo": 11,
+              "positivo": 76
+            }
+          }
+        }
+      },
+      "nota": {
+        "tfidf": {
+          "respondidas": 169,
+          "erro_absoluto_medio": 1.779,
+          "ate_1_ponto": 0.3077
+        },
+        "bertimbau": {
+          "respondidas": 169,
+          "erro_absoluto_medio": 1.598,
+          "ate_1_ponto": 0.3669
+        },
+        "zero_shot": {
+          "respondidas": 169,
+          "erro_absoluto_medio": 0.916,
+          "ate_1_ponto": 0.7456
+        },
+        "few_shot": {
+          "respondidas": 169,
+          "erro_absoluto_medio": 1.008,
+          "ate_1_ponto": 0.7219
+        },
+        "zero_shot_sem_justificativa": {
+          "respondidas": 169,
+          "erro_absoluto_medio": 0.94,
+          "ate_1_ponto": 0.7219
+        },
+        "reserva": {
+          "respondidas": 169,
+          "erro_absoluto_medio": 1.085,
+          "ate_1_ponto": 0.7219
+        }
+      }
+    },
+    "polaridade": {
+      "tfidf": {
+        "respondidas": 200,
+        "falhas": 0,
+        "acuracia": 0.795,
+        "f1_macro": 0.7906,
+        "confusao": {
+          "negativo": {
+            "negativo": 65,
+            "positivo": 35
+          },
+          "positivo": {
+            "negativo": 6,
+            "positivo": 94
+          }
+        }
+      },
+      "bertimbau": {
+        "respondidas": 200,
+        "falhas": 0,
+        "acuracia": 0.88,
+        "f1_macro": 0.8798,
+        "confusao": {
+          "negativo": {
+            "negativo": 84,
+            "positivo": 16
+          },
+          "positivo": {
+            "negativo": 8,
+            "positivo": 92
+          }
+        }
+      },
+      "zero_shot": {
+        "respondidas": 172,
+        "falhas": 28,
+        "acuracia": 0.9302,
+        "f1_macro": 0.9299,
+        "confusao": {
+          "negativo": {
+            "negativo": 74,
+            "positivo": 10
+          },
+          "positivo": {
+            "negativo": 2,
+            "positivo": 86
+          }
+        }
+      },
+      "few_shot": {
+        "respondidas": 173,
+        "falhas": 27,
+        "acuracia": 0.9249,
+        "f1_macro": 0.9246,
+        "confusao": {
+          "negativo": {
+            "negativo": 75,
+            "positivo": 9
+          },
+          "positivo": {
+            "negativo": 4,
+            "positivo": 85
+          }
+        }
+      },
+      "zero_shot_sem_justificativa": {
+        "respondidas": 171,
+        "falhas": 29,
+        "acuracia": 0.9298,
+        "f1_macro": 0.9295,
+        "confusao": {
+          "negativo": {
+            "negativo": 74,
+            "positivo": 9
+          },
+          "positivo": {
+            "negativo": 3,
+            "positivo": 85
+          }
+        }
+      },
+      "reserva": {
+        "respondidas": 200,
+        "falhas": 0,
+        "acuracia": 0.915,
+        "f1_macro": 0.9149,
+        "confusao": {
+          "negativo": {
+            "negativo": 94,
+            "positivo": 6
+          },
+          "positivo": {
+            "negativo": 11,
+            "positivo": 89
+          }
+        }
+      }
+    },
+    "nota": {
+      "media_fora_da_amostra": {
+        "valor": 6.477,
+        "respondidas": 200,
+        "erro_absoluto_medio": 2.83,
+        "ate_1_ponto": 0.135
+      },
+      "tfidf": {
+        "respondidas": 200,
+        "erro_absoluto_medio": 1.797,
+        "ate_1_ponto": 0.3
+      },
+      "bertimbau": {
+        "respondidas": 200,
+        "erro_absoluto_medio": 1.534,
+        "ate_1_ponto": 0.405
+      },
+      "zero_shot": {
+        "respondidas": 172,
+        "erro_absoluto_medio": 0.912,
+        "ate_1_ponto": 0.75
+      },
+      "few_shot": {
+        "respondidas": 173,
+        "erro_absoluto_medio": 1.002,
+        "ate_1_ponto": 0.7283
+      },
+      "zero_shot_sem_justificativa": {
+        "respondidas": 171,
+        "erro_absoluto_medio": 0.937,
+        "ate_1_ponto": 0.7251
+      },
+      "reserva": {
+        "respondidas": 200,
+        "erro_absoluto_medio": 1.039,
+        "ate_1_ponto": 0.74
+      }
+    },
+    "por_estrato": {
+      "com_negacao=true": {
+        "criticas": 177,
+        "tfidf": {
+          "respondidas": 177,
+          "falhas": 0,
+          "acuracia": 0.8079,
+          "f1_macro": 0.8065,
+          "confusao": {
+            "negativo": {
+              "negativo": 64,
+              "positivo": 28
+            },
+            "positivo": {
+              "negativo": 6,
+              "positivo": 79
+            }
+          }
+        },
+        "bertimbau": {
+          "respondidas": 177,
+          "falhas": 0,
+          "acuracia": 0.8927,
+          "f1_macro": 0.8926,
+          "confusao": {
+            "negativo": {
+              "negativo": 80,
+              "positivo": 12
+            },
+            "positivo": {
+              "negativo": 7,
+              "positivo": 78
+            }
+          }
+        },
+        "zero_shot": {
+          "respondidas": 153,
+          "falhas": 24,
+          "acuracia": 0.9346,
+          "f1_macro": 0.9344,
+          "confusao": {
+            "negativo": {
+              "negativo": 67,
+              "positivo": 9
+            },
+            "positivo": {
+              "negativo": 1,
+              "positivo": 76
+            }
+          }
+        },
+        "few_shot": {
+          "respondidas": 153,
+          "falhas": 24,
+          "acuracia": 0.9281,
+          "f1_macro": 0.928,
+          "confusao": {
+            "negativo": {
+              "negativo": 68,
+              "positivo": 8
+            },
+            "positivo": {
+              "negativo": 3,
+              "positivo": 74
+            }
+          }
+        },
+        "zero_shot_sem_justificativa": {
+          "respondidas": 151,
+          "falhas": 26,
+          "acuracia": 0.9338,
+          "f1_macro": 0.9336,
+          "confusao": {
+            "negativo": {
+              "negativo": 67,
+              "positivo": 8
+            },
+            "positivo": {
+              "negativo": 2,
+              "positivo": 74
+            }
+          }
+        },
+        "reserva": {
+          "respondidas": 177,
+          "falhas": 0,
+          "acuracia": 0.9153,
+          "f1_macro": 0.9149,
+          "confusao": {
+            "negativo": {
+              "negativo": 87,
+              "positivo": 5
+            },
+            "positivo": {
+              "negativo": 10,
+              "positivo": 75
+            }
+          }
+        }
+      },
+      "com_negacao=false": {
+        "criticas": 23,
+        "tfidf": {
+          "respondidas": 23,
+          "falhas": 0,
+          "acuracia": 0.6957,
+          "f1_macro": 0.5165,
+          "confusao": {
+            "negativo": {
+              "negativo": 1,
+              "positivo": 7
+            },
+            "positivo": {
+              "negativo": 0,
+              "positivo": 15
+            }
+          }
+        },
+        "bertimbau": {
+          "respondidas": 23,
+          "falhas": 0,
+          "acuracia": 0.7826,
+          "f1_macro": 0.7319,
+          "confusao": {
+            "negativo": {
+              "negativo": 4,
+              "positivo": 4
+            },
+            "positivo": {
+              "negativo": 1,
+              "positivo": 14
+            }
+          }
+        },
+        "zero_shot": {
+          "respondidas": 19,
+          "falhas": 4,
+          "acuracia": 0.8947,
+          "f1_macro": 0.892,
+          "confusao": {
+            "negativo": {
+              "negativo": 7,
+              "positivo": 1
+            },
+            "positivo": {
+              "negativo": 1,
+              "positivo": 10
+            }
+          }
+        },
+        "few_shot": {
+          "respondidas": 20,
+          "falhas": 3,
+          "acuracia": 0.9,
+          "f1_macro": 0.8958,
+          "confusao": {
+            "negativo": {
+              "negativo": 7,
+              "positivo": 1
+            },
+            "positivo": {
+              "negativo": 1,
+              "positivo": 11
+            }
+          }
+        },
+        "zero_shot_sem_justificativa": {
+          "respondidas": 20,
+          "falhas": 3,
+          "acuracia": 0.9,
+          "f1_macro": 0.8958,
+          "confusao": {
+            "negativo": {
+              "negativo": 7,
+              "positivo": 1
+            },
+            "positivo": {
+              "negativo": 1,
+              "positivo": 11
+            }
+          }
+        },
+        "reserva": {
+          "respondidas": 23,
+          "falhas": 0,
+          "acuracia": 0.913,
+          "f1_macro": 0.9042,
+          "confusao": {
+            "negativo": {
+              "negativo": 7,
+              "positivo": 1
+            },
+            "positivo": {
+              "negativo": 1,
+              "positivo": 14
+            }
+          }
+        }
+      },
+      "autor_principal=true": {
+        "criticas": 100,
+        "tfidf": {
+          "respondidas": 100,
+          "falhas": 0,
+          "acuracia": 0.87,
+          "f1_macro": 0.87,
+          "confusao": {
+            "negativo": {
+              "negativo": 43,
+              "positivo": 7
+            },
+            "positivo": {
+              "negativo": 6,
+              "positivo": 44
+            }
+          }
+        },
+        "bertimbau": {
+          "respondidas": 100,
+          "falhas": 0,
+          "acuracia": 0.89,
+          "f1_macro": 0.8899,
+          "confusao": {
+            "negativo": {
+              "negativo": 46,
+              "positivo": 4
+            },
+            "positivo": {
+              "negativo": 7,
+              "positivo": 43
+            }
+          }
+        },
+        "zero_shot": {
+          "respondidas": 100,
+          "falhas": 0,
+          "acuracia": 0.91,
+          "f1_macro": 0.9093,
+          "confusao": {
+            "negativo": {
+              "negativo": 41,
+              "positivo": 9
+            },
+            "positivo": {
+              "negativo": 0,
+              "positivo": 50
+            }
+          }
+        },
+        "few_shot": {
+          "respondidas": 100,
+          "falhas": 0,
+          "acuracia": 0.92,
+          "f1_macro": 0.9195,
+          "confusao": {
+            "negativo": {
+              "negativo": 42,
+              "positivo": 8
+            },
+            "positivo": {
+              "negativo": 0,
+              "positivo": 50
+            }
+          }
+        },
+        "zero_shot_sem_justificativa": {
+          "respondidas": 100,
+          "falhas": 0,
+          "acuracia": 0.92,
+          "f1_macro": 0.9195,
+          "confusao": {
+            "negativo": {
+              "negativo": 42,
+              "positivo": 8
+            },
+            "positivo": {
+              "negativo": 0,
+              "positivo": 50
+            }
+          }
+        },
+        "reserva": {
+          "respondidas": 100,
+          "falhas": 0,
+          "acuracia": 0.9,
+          "f1_macro": 0.9,
+          "confusao": {
+            "negativo": {
+              "negativo": 46,
+              "positivo": 4
+            },
+            "positivo": {
+              "negativo": 6,
+              "positivo": 44
+            }
+          }
+        }
+      },
+      "autor_principal=false": {
+        "criticas": 100,
+        "tfidf": {
+          "respondidas": 100,
+          "falhas": 0,
+          "acuracia": 0.72,
+          "f1_macro": 0.6962,
+          "confusao": {
+            "negativo": {
+              "negativo": 22,
+              "positivo": 28
+            },
+            "positivo": {
+              "negativo": 0,
+              "positivo": 50
+            }
+          }
+        },
+        "bertimbau": {
+          "respondidas": 100,
+          "falhas": 0,
+          "acuracia": 0.87,
+          "f1_macro": 0.8684,
+          "confusao": {
+            "negativo": {
+              "negativo": 38,
+              "positivo": 12
+            },
+            "positivo": {
+              "negativo": 1,
+              "positivo": 49
+            }
+          }
+        },
+        "zero_shot": {
+          "respondidas": 72,
+          "falhas": 28,
+          "acuracia": 0.9583,
+          "f1_macro": 0.9583,
+          "confusao": {
+            "negativo": {
+              "negativo": 33,
+              "positivo": 1
+            },
+            "positivo": {
+              "negativo": 2,
+              "positivo": 36
+            }
+          }
+        },
+        "few_shot": {
+          "respondidas": 73,
+          "falhas": 27,
+          "acuracia": 0.9315,
+          "f1_macro": 0.9315,
+          "confusao": {
+            "negativo": {
+              "negativo": 33,
+              "positivo": 1
+            },
+            "positivo": {
+              "negativo": 4,
+              "positivo": 35
+            }
+          }
+        },
+        "zero_shot_sem_justificativa": {
+          "respondidas": 71,
+          "falhas": 29,
+          "acuracia": 0.9437,
+          "f1_macro": 0.9436,
+          "confusao": {
+            "negativo": {
+              "negativo": 32,
+              "positivo": 1
+            },
+            "positivo": {
+              "negativo": 3,
+              "positivo": 35
+            }
+          }
+        },
+        "reserva": {
+          "respondidas": 100,
+          "falhas": 0,
+          "acuracia": 0.93,
+          "f1_macro": 0.9299,
+          "confusao": {
+            "negativo": {
+              "negativo": 48,
+              "positivo": 2
+            },
+            "positivo": {
+              "negativo": 5,
+              "positivo": 45
+            }
+          }
+        }
+      }
+    }
+  },
+  "concordancia": {
+    "variante": "few_shot",
+    "so_o_llm_acerta": [
+      "5767287b9251413e16000831",
+      "6051ea361130bd003d299f7a",
+      "661c031dcb5c8e01867590fb",
+      "6994a77ca454af46091251c3",
+      "5ab0969bc3a36861a300564e",
+      "649d1031c072a200af843a01",
+      "60ed2668140bad0046244413",
+      "652ad2bc024ec800e444aafc",
+      "661c1aeca39d0b017dbffbe8",
+      "64558da55a07f5017c8a1e57"
+    ],
+    "so_os_modelos_treinados_acertam": [
+      "60982a09b39e35003c1974c4",
+      "5af87a169251415a50000d07",
+      "66d436727be184cfaa4592bf",
+      "5f0a4a68d5ffcb00348a0b5c",
+      "677076db6cc4caf8fb92a1d6",
+      "639ad5788a0e9b00b6ceced3",
+      "66a82de7cf3d09fea197d807",
+      "67b3b4baa65d6303e7e0f013"
+    ]
+  },
+  "estabilidade": {
+    "repetidas": 20,
+    "respondidas": 0,
+    "polaridade_igual": null,
+    "nota_igual": null,
+    "diferenca_media_da_nota": null
+  },
+  "uso": {
+    "zero_shot": {
+      "respostas": 172,
+      "tokens_entrada_medio": 520.6,
+      "tokens_saida_medio": 55.3,
+      "provedores": {
+        "gemini": 172
+      },
+      "falhas_por_motivo": {
+        "cota": 28
+      }
+    },
+    "few_shot": {
+      "respostas": 173,
+      "tokens_entrada_medio": 825.1,
+      "tokens_saida_medio": 49.0,
+      "provedores": {
+        "gemini": 173
+      },
+      "falhas_por_motivo": {
+        "cota": 27
+      }
+    },
+    "zero_shot_sem_justificativa": {
+      "respostas": 171,
+      "tokens_entrada_medio": 494.3,
+      "tokens_saida_medio": 21.2,
+      "provedores": {
+        "gemini": 171
+      },
+      "falhas_por_motivo": {
+        "cota": 29
+      }
+    },
+    "reserva": {
+      "respostas": 200,
+      "tokens_entrada_medio": 1071.1,
+      "tokens_saida_medio": 98.8,
+      "provedores": {
+        "groq": 200
+      },
+      "falhas_por_motivo": {}
+    }
+  },
+  "criticas_cortadas": 93
+}

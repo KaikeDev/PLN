@@ -1,4 +1,4 @@
-# 0030 — Interpretação da consulta por LLM com saída estruturada e reserva nas regras (Unidade 4)
+# 0030. Interpretação da consulta por LLM com saída estruturada e reserva nas regras (Unidade 4)
 
 - Estado: Aceita
 - Data: 2026-10-26
@@ -85,7 +85,7 @@ Duas execuções completas com `gemini-3.5-flash-lite` (alias `gemini-flash-lite
   - acabado o orçamento, a pesquisa volta para as regras sem falhar;
   - a pesquisa fica cerca de 1 s mais lenta, com teto de 4 s.
 - **Limites da evidência:**
-  - as 50 frases foram redigidas com apoio de IA e precisam de revisão da equipe;
+  - as 50 frases foram redigidas com apoio de IA e revisadas pela equipe;
   - o gabarito reflete as convenções escolhidas (por exemplo, "o assunto sozinho não é gênero");
   - o resultado muda um pouco entre execuções;
   - a amostra de 20 consultas é pequena para afirmar que 0,640 é melhor que 0,627 em geral.

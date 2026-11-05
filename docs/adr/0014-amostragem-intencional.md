@@ -1,4 +1,4 @@
-# 0014 — Amostragem intencional da coleta
+# 0014. Amostragem intencional da coleta
 
 - Estado: Aceita
 - Data: 2026-09-14 (coleta realizada em 12/09/2026)

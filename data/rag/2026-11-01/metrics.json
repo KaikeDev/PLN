@@ -1,0 +1,132 @@
+{
+  "ordenacao": {
+    "busca_hibrida_sozinha": {
+      "precisao_at_5": 0.57
+    },
+    "k_5": {
+      "consultas": 20,
+      "precisao_dos_citados": 0.9475,
+      "revocacao_no_contexto": 0.8675,
+      "citados_por_resposta": 2.75,
+      "precisao_do_contexto_at_5": 0.58,
+      "tokens_entrada_medio": 1359.3,
+      "falhas": 0
+    },
+    "k_10": {
+      "consultas": 20,
+      "precisao_dos_citados": 0.8967,
+      "revocacao_no_contexto": 0.6769,
+      "citados_por_resposta": 2.65,
+      "precisao_do_contexto_at_5": 0.58,
+      "tokens_entrada_medio": 2503.4,
+      "falhas": 0
+    },
+    "k_20": {
+      "consultas": 20,
+      "precisao_dos_citados": 0.9333,
+      "revocacao_no_contexto": 0.5898,
+      "citados_por_resposta": 2.35,
+      "precisao_do_contexto_at_5": 0.58,
+      "tokens_entrada_medio": 4763.4,
+      "falhas": 0
+    }
+  },
+  "perguntas": {
+    "tema": {
+      "perguntas": 15,
+      "respondidas": 15,
+      "recusou": 1,
+      "citacoes_inventadas": 0,
+      "respostas_com_citacao_inventada": 0,
+      "trocadas_por_nao_encontrei": 0,
+      "citados_por_resposta": 2.6,
+      "injecao_obedecida": null
+    },
+    "opiniao": {
+      "perguntas": 10,
+      "respondidas": 10,
+      "recusou": 1,
+      "citacoes_inventadas": 0,
+      "respostas_com_citacao_inventada": 0,
+      "trocadas_por_nao_encontrei": 0,
+      "citados_por_resposta": 1.0,
+      "injecao_obedecida": null
+    },
+    "sem_resposta": {
+      "perguntas": 5,
+      "respondidas": 5,
+      "recusou": 5,
+      "citacoes_inventadas": 0,
+      "respostas_com_citacao_inventada": 0,
+      "trocadas_por_nao_encontrei": 0,
+      "citados_por_resposta": 0.0,
+      "injecao_obedecida": null
+    },
+    "injecao": {
+      "perguntas": 3,
+      "respondidas": 3,
+      "recusou": 3,
+      "citacoes_inventadas": 0,
+      "respostas_com_citacao_inventada": 0,
+      "trocadas_por_nao_encontrei": 0,
+      "citados_por_resposta": 0.0,
+      "injecao_obedecida": 1
+    }
+  },
+  "sem_criticas": {
+    "tema": {
+      "perguntas": 15,
+      "respondidas": 15,
+      "recusou": 1,
+      "citacoes_inventadas": 0,
+      "respostas_com_citacao_inventada": 0,
+      "trocadas_por_nao_encontrei": 0,
+      "citados_por_resposta": 2.67,
+      "injecao_obedecida": null
+    },
+    "opiniao": {
+      "perguntas": 10,
+      "respondidas": 10,
+      "recusou": 10,
+      "citacoes_inventadas": 0,
+      "respostas_com_citacao_inventada": 0,
+      "trocadas_por_nao_encontrei": 0,
+      "citados_por_resposta": 0.7,
+      "injecao_obedecida": null
+    },
+    "sem_resposta": {
+      "perguntas": 5,
+      "respondidas": 5,
+      "recusou": 5,
+      "citacoes_inventadas": 0,
+      "respostas_com_citacao_inventada": 0,
+      "trocadas_por_nao_encontrei": 0,
+      "citados_por_resposta": 0.0,
+      "injecao_obedecida": null
+    },
+    "injecao": {
+      "perguntas": 3,
+      "respondidas": 3,
+      "recusou": 3,
+      "citacoes_inventadas": 0,
+      "respostas_com_citacao_inventada": 0,
+      "trocadas_por_nao_encontrei": 0,
+      "citados_por_resposta": 0.0,
+      "injecao_obedecida": 0
+    }
+  },
+  "uso": {
+    "respostas": 126,
+    "tokens_entrada_medio": 2264.1,
+    "tokens_saida_medio": 219.9,
+    "provedores": {
+      "gemini": 114,
+      "groq": 12
+    },
+    "falhas_por_motivo": {}
+  },
+  "interpretacao": {
+    "llm": 53,
+    "regras": 0
+  }
+}

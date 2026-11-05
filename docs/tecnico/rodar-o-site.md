@@ -9,6 +9,8 @@ Guia do zero até o site aberto no navegador. O site tem duas partes, e cada uma
 
 Na **primeira vez**, siga os passos 1 a 5. **Nas próximas**, basta o passo 5.
 
+> **Só quer ver o site?** Ele está publicado no Hugging Face Spaces (link no topo do [README](../../README.md)). Este guia é para rodar na sua máquina.
+
 ## Antes de começar
 
 - **Git**, para clonar o repositório.
@@ -18,7 +20,7 @@ Na **primeira vez**, siga os passos 1 a 5. **Nas próximas**, basta o passo 5.
 
 > Todos os comandos abaixo rodam **dentro da pasta `backend`**, num terminal (PowerShell, Prompt de Comando ou o terminal do VS Code).
 
-## Passo 1 — Colocar o token
+## Passo 1. Colocar o token
 
 Na pasta `backend`, copie `.env.example` para um arquivo novo chamado **`.env`** e cole o token depois do `=`:
 
@@ -26,9 +28,18 @@ Na pasta `backend`, copie `.env.example` para um arquivo novo chamado **`.env`**
 TMDB_BEARER_TOKEN=eyJhbGciOi...
 ```
 
-O `.env` fica só no seu computador: o Git o ignora. Não coloque o token em nenhum outro arquivo.
+**Opcional, para as funções com IA** (aba "Perguntar", "Comparar com IA" e a interpretação da busca por LLM): chaves gratuitas do Gemini (<https://aistudio.google.com/apikey>) e do Groq (<https://console.groq.com/keys>), no mesmo arquivo:
 
-## Passo 2 — Instalar
+```
+GEMINI_API_KEY=...
+GROQ_API_KEY=...
+```
+
+Sem elas, o site funciona: a busca usa as regras, e "Perguntar" mostra as respostas gravadas dos exemplos.
+
+O `.env` fica só no seu computador: o Git o ignora. Não coloque o token nem as chaves em nenhum outro arquivo.
+
+## Passo 2. Instalar
 
 ```bash
 cd backend
@@ -46,7 +57,7 @@ Para conferir a instalação, rode os testes. Eles devem terminar com `OK`:
 uv run --frozen python -m unittest discover -s tests
 ```
 
-## Passo 3 — Gerar o catálogo do site (cerca de 8 minutos, uma vez só)
+## Passo 3. Gerar o catálogo do site (cerca de 8 minutos, uma vez só)
 
 A busca por tema e os filmes parecidos procuram num catálogo de cerca de 5.500 filmes, que **não vem no repositório**. Gere-o com três comandos:
 
@@ -60,7 +71,7 @@ Sem o catálogo, o site funciona, mas a busca por tema e os filmes parecidos usa
 
 > Se um comando disser que a pasta de saída já existe, aquele passo já foi feito. Pule para o próximo.
 
-## Passo 4 — Preparar as críticas (segundos, uma vez só)
+## Passo 4. Preparar as críticas (segundos, uma vez só)
 
 A aba "Analisar crítica" treina o modelo com as críticas que vêm no repositório, mas elas precisam ser preparadas antes:
 
@@ -68,7 +79,7 @@ A aba "Analisar crítica" treina o modelo com as críticas que vêm no repositó
 uv run --frozen python -m app.sentiment process --input ../data/coleta/criticas_2026-10-10 --output ../data/preparacao/criticas_2026-10-10 --stopwords ../config/coleta/stopwords_pt.txt
 ```
 
-## Passo 5 — Ligar o site (toda vez)
+## Passo 5. Ligar o site (toda vez)
 
 **Terminal 1: a API.** Na pasta `backend`:
 
@@ -86,16 +97,20 @@ uv run --frozen python -m http.server 5500 --directory ../frontend
 
 **Deixe este terminal aberto também.** Agora abra **<http://127.0.0.1:5500>** no navegador.
 
-O indicador no canto superior direito deve ficar verde, com "servidor online · 5.525 filmes". Para desligar, aperte **Ctrl + C** em cada terminal.
+O indicador no canto superior direito deve ficar verde, com "servidor online" e o número de filmes do catálogo (cerca de 5.500). Para desligar, aperte **Ctrl + C** em cada terminal.
+
+**Alternativa com um terminal só**, como no site publicado: a API serve também as telas. No PowerShell, `$env:SERVE_FRONTEND = "true"` antes do comando do terminal 1; no Git Bash, `SERVE_FRONTEND=true uv run ...`. Depois, abra <http://127.0.0.1:8000>.
 
 ## O que testar em cada tela
 
 | Onde | O que fazer | Precisa de |
 |---|---|---|
-| Aba **"Buscar filmes"** | Digite um título ("Matrix"), preferências ("uma comédia recente") ou um tema ("astronautas perdidos no espaço") | Token do TMDB; catálogo (passo 3) para a busca por tema |
+| Aba **"Buscar filmes"** | Digite um título ("Matrix"), preferências ("uma comédia recente") ou um tema ("astronautas perdidos no espaço"); o selo mostra se a frase foi interpretada por IA ou pelas regras | Token do TMDB; catálogo (passo 3) para a busca por tema; chave de LLM para a interpretação por IA |
+| Aba **"Perguntar (RAG)"** | Clique num dos exemplos ou pergunte "O que as pessoas acharam de Oppenheimer?"; as marcas F… abrem a ficha | Chave de LLM; catálogo e críticas (passos 3 e 4) |
 | **Ficha do filme** (clique num filme) | Veja **"Personagens, lugares e relações"** e **"Filmes parecidos"** | Extra `entidades`; catálogo (passo 3) |
 | Aba **"Classificar sinopse"** | Cole uma sinopse ou clique em "Usar um exemplo" | Extra `semantico` |
-| Aba **"Analisar crítica"** | Escreva uma opinião sobre um filme ou clique em "Usar um exemplo" | Críticas preparadas (passo 4) |
+| Aba **"Analisar crítica"** | Escreva uma opinião sobre um filme ou clique em "Usar um exemplo"; depois, "Comparar com IA" | Críticas preparadas (passo 4); chave de LLM para comparar |
+| **Sobre o projeto** (link no topo) | Metodologia, resultados, quadro de técnicas e as seis questões | Nada: abre até sem a API |
 
 A documentação interativa da API, com todas as rotas, fica em <http://127.0.0.1:8000/docs>.
 
@@ -107,6 +122,8 @@ A documentação interativa da API, com todas as rotas, fica em <http://127.0.0.
 | "Defina TMDB_BEARER_TOKEN" | Falta o `.env` com o token (passo 1), ou ele foi salvo fora da pasta `backend` |
 | Faixa amarela "Catálogo do site não gerado" | Rode o passo 3 e reinicie a API |
 | "Análise de sentimento indisponível" | Rode o passo 4 e reinicie a API |
+| "Perguntas (RAG) indisponíveis" ou "Sentimento por LLM indisponível" | Falta `GEMINI_API_KEY` ou `GROQ_API_KEY` no `.env`; confira com `uv run --frozen python -m app.llm ping` |
+| "A cota gratuita de IA do dia acabou" | O orçamento diário ou a cota do provedor acabou; as outras funções continuam, e a cota renova no dia seguinte |
 | "Entidades e relações indisponíveis" ou "Busca por sinopse indisponível" | Faltou um extra no `uv sync` (passo 2) ou no comando da API |
 | A tela não mudou depois de uma atualização do projeto | Recarregue sem cache: **Ctrl + F5** |
 | "Address already in use" / porta em uso | Já há uma API ou um servidor de telas aberto; feche o terminal antigo ou aperte Ctrl + C nele |

@@ -1,4 +1,4 @@
-# 0024 — Catálogo maior para a busca e a recomendação do site
+# 0024. Catálogo maior para a busca e a recomendação do site
 
 - Estado: Aceita
 - Data: 2026-10-05

@@ -30,7 +30,7 @@ PRONOUNS = frozenset({"ele", "ela", "eles", "elas", "que", "quem", "o qual", "a 
 
 @dataclass(frozen=True)
 class Triple:
-    """Sujeito — relação → objeto, com a sentença de origem e a regra que gerou a tripla."""
+    """Sujeito → relação → objeto, com a sentença de origem e a regra que gerou a tripla."""
 
     subject: str
     relation: str

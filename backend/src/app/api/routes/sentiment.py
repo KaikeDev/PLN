@@ -9,7 +9,7 @@ from typing import Annotated
 
 from fastapi import APIRouter, Depends, HTTPException, Query, status
 
-from app.api.dependencies import enforce_rate_limit, get_llm_sentiment, get_sentiment_analyzer
+from app.api.dependencies import enforce_llm_rate_limit, enforce_rate_limit, get_llm_sentiment, get_sentiment_analyzer
 from app.api.schemas import SentimentLLMResponse, SentimentResponse, TermWeight
 from app.llm.ports import LLMUnavailable
 from app.sentiment.live import MAX_TEXT_CHARS
@@ -42,7 +42,7 @@ def analyze(
     )
 
 
-@router.get("/sentimento/llm")
+@router.get("/sentimento/llm", dependencies=[Depends(enforce_llm_rate_limit)])
 def analyze_with_llm(
     classifier: Annotated[LLMSentiment | None, Depends(get_llm_sentiment)],
     texto: Annotated[str, Query(min_length=1, max_length=MAX_TEXT_CHARS, description="Crítica ou opinião sobre um filme")],

@@ -1,0 +1,72 @@
+name: Publicar no Hugging Face Space
+
+# Manual (ADR 0033): monta a pasta do Space com deploy/space/stage.sh e a envia com huggingface_hub.
+# Exige o segredo HF_TOKEN do repositório (token de escrita do Hugging Face). As chaves do TMDB, do Gemini e do
+# Groq NÃO passam por aqui: ficam nos segredos do próprio Space.
+
+on:
+  workflow_dispatch:
+    inputs:
+      space:
+        description: "Space de destino (conta/nome)"
+        required: true
+      catalog_dataset:
+        description: "Dataset do catálogo do site (conta/nome); vazio publica só com a amostra de 428 filmes"
+        required: false
+        default: ""
+      catalog_revision:
+        description: "Hash completo do commit do dataset do catálogo"
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Montar a pasta do Space
+        env:
+          CATALOG_DATASET: ${{ inputs.catalog_dataset }}
+          CATALOG_REVISION: ${{ inputs.catalog_revision }}
+        run: |
+          if [ -n "$CATALOG_DATASET" ]; then
+            bash deploy/space/stage.sh build/space "$CATALOG_DATASET" "$CATALOG_REVISION"
+          else
+            bash deploy/space/stage.sh build/space
+            sed -i 's/^ARG SKIP_CATALOG=0/ARG SKIP_CATALOG=1/' build/space/Dockerfile
+          fi
+      - name: Conferir que nenhum segredo entrou na pasta
+        run: |
+          if find build/space -name '.env' -o -name '*.env' -o -name '*.pem' -o -name '*.key' | grep -q .; then
+            echo "Arquivo de segredo na pasta do Space" >&2
+            exit 1
+          fi
+      - name: Enviar ao Space
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          SPACE: ${{ inputs.space }}
+        run: |
+          python -m pip install "huggingface_hub>=0.34"
+          python - <<'EOF'
+          import os
+
+          from huggingface_hub import HfApi
+
+          api = HfApi(token=os.environ["HF_TOKEN"])
+          space = os.environ["SPACE"]
+          api.create_repo(space, repo_type="space", space_sdk="docker", exist_ok=True)
+          commit = api.upload_folder(
+              repo_id=space,
+              repo_type="space",
+              folder_path="build/space",
+              delete_patterns=["backend/**", "config/**", "frontend/**", "data/**"],
+              commit_message=f"Publica {os.environ['GITHUB_SHA'][:7]} do repositório",
+          )
+          print(commit.commit_url)
+          EOF

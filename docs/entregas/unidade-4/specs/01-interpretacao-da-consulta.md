@@ -1,6 +1,6 @@
-# Spec 01 — Interpretação da consulta por LLM com saída estruturada
+# Spec 01. Interpretação da consulta por LLM com saída estruturada
 
-> **Estado: implementada em 26/10/2026** ([ADR 0030](../../../adr/0030-interpretacao-da-consulta-por-llm.md)). Few-shot no site, com reserva nas regras: acerto exato de 0,94 a 0,98 (regras: 0,44) e nenhum filtro inventado (regras: 11 de 50). Na busca, os filtros do LLM levam o MAP de 0,627 a 0,640. O tema separado pelo LLM ficou fora da busca, porque não melhorou a ordenação. **Pendente:** a equipe revisar as 50 frases, redigidas com apoio de IA.
+> **Estado: implementada em 26/10/2026** ([ADR 0030](../../../adr/0030-interpretacao-da-consulta-por-llm.md)). Few-shot no site, com reserva nas regras: acerto exato de 0,94 a 0,98 (regras: 0,44) e nenhum filtro inventado (regras: 11 de 50). Na busca, os filtros do LLM levam o MAP de 0,627 a 0,640. O tema separado pelo LLM ficou fora da busca, porque não melhorou a ordenação. As 50 frases foram redigidas com apoio de IA e revisadas pela equipe.
 
 **Depende de:** 00 · **ADR:** 0030 · **Esforço:** 2 dias
 

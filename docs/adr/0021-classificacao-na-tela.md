@@ -1,4 +1,4 @@
-# 0021 — Classificação de gênero na tela do site
+# 0021. Classificação de gênero na tela do site
 
 - Estado: Aceita
 - Data: 2026-10-03

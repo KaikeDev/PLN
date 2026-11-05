@@ -1,4 +1,4 @@
-# 0018 — Tarefas do ciclo de PLN para cada representação
+# 0018. Tarefas do ciclo de PLN para cada representação
 
 - Estado: Aceita
 - Data: 2026-09-29

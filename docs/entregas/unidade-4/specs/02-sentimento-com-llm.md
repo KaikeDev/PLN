@@ -1,6 +1,6 @@
-# Spec 02 — Sentimento com LLM: zero-shot e few-shot × modelos treinados
+# Spec 02. Sentimento com LLM: zero-shot e few-shot × modelos treinados
 
-> **Estado: implementada; avaliação parcial em 26/10/2026.** Amostra e prompts commitados antes das chamadas (`1880036`). A primeira execução ([`data/sentimento/llm_2026-10-26`](../../../../data/sentimento/llm_2026-10-26/report.md)) parou na **cota diária do Gemini** (cerca de 500 chamadas por dia no plano gratuito, somando as avaliações do dia): as três variantes no Gemini responderam 86 a 87 das 200 críticas, e a reserva no Groq, todas. Nas 86 críticas respondidas por todas, o LLM zero-shot teve F1 de 0,94 e erro da nota de 0,91, contra 0,91 e 1,58 do BERTimbau e 0,86 e 1,59 do TF-IDF. **Pendente:** completar com `--reuse` depois que a cota renovar, escolher a variante e escrever a ADR 0031.
+> **Estado: implementada e avaliada em 01/11/2026** ([ADR 0031](../../../adr/0031-sentimento-com-llm.md), [relatório](../../../../data/sentimento/llm_2026-11-01/report.md)). Duas execuções somadas com `--reuse`: o Gemini respondeu 171 a 173 das 200 críticas por variante (cota diária) e a reserva no Groq, as 200. Sem treino, F1 de 0,915 (reserva) contra 0,880 do BERTimbau e 0,791 do TF-IDF; erro da nota de 1,04 contra 1,53. O few-shot não superou o zero-shot. **Pendente:** estabilidade e casos da equipe, que dependiam do Gemini depois da cota (`--reuse ../data/sentimento/llm_2026-11-01`).
 
 **Depende de:** 00 · **ADR:** 0031 · **Esforço:** 1–2 dias
 

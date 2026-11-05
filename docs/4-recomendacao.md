@@ -40,7 +40,7 @@ Sem avaliações de usuários, a avaliação usa os gêneros como aproximação.
 
 Ao abrir a ficha de um filme, a seção **"Filmes parecidos"** mostra os 5 filmes de sinopse mais próxima, com a similaridade do cosseno. Cada um abre a própria ficha. Por trás, `GET /filmes/{id}/parecidos` faz a mesma conta da avaliação, sobre o embedding de sentença que a busca já carrega; um teste confirma que o cálculo do site é o mesmo da avaliação.
 
-No site, a recomendação procura no **catálogo de 5.525 sinopses** de 18 gêneros ([ADR 0024](adr/0024-catalogo-do-site.md)), e não só na amostra avaliada. Com mais filmes, as recomendações melhoram visivelmente:
+No site, a recomendação procura no **catálogo de cerca de 5.500 sinopses** de 18 gêneros ([ADR 0024](adr/0024-catalogo-do-site.md)), e não só na amostra avaliada. Com mais filmes, as recomendações melhoram visivelmente:
 
 | Filme | Na amostra de 428 | No catálogo do site |
 |---|---|---|

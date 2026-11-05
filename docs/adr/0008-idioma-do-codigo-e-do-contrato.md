@@ -1,4 +1,4 @@
-# 0008 — Identificadores em inglês; contrato, mensagens e documentação em português
+# 0008. Identificadores em inglês; contrato, mensagens e documentação em português
 
 - Estado: Aceita
 - Data: 2026-09-14

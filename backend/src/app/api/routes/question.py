@@ -10,7 +10,7 @@ from typing import Annotated
 
 from fastapi import APIRouter, Depends, HTTPException, Query, status
 
-from app.api.dependencies import enforce_question_rate_limit, enforce_rate_limit, get_question_answering
+from app.api.dependencies import enforce_llm_rate_limit, enforce_rate_limit, get_question_answering
 from app.api.schemas import CitedFilm, ContextFilm, MovieSummary, QuestionResponse, ReviewExcerpt
 from app.llm.ports import LLMUnavailable
 from app.rag.service import Answer, QuestionAnswering
@@ -18,7 +18,7 @@ from app.rag.service import Answer, QuestionAnswering
 MAX_QUESTION_CHARS = 300
 UNAVAILABLE = "Perguntas indisponíveis no momento"
 
-router = APIRouter(tags=["perguntas"], dependencies=[Depends(enforce_rate_limit), Depends(enforce_question_rate_limit)])
+router = APIRouter(tags=["perguntas"], dependencies=[Depends(enforce_rate_limit), Depends(enforce_llm_rate_limit)])
 
 
 @router.get("/pergunta")

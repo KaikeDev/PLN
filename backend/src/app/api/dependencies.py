@@ -65,9 +65,9 @@ def get_question_answering(request: Request) -> QuestionAnswering | None:
     return request.app.state.question_answering
 
 
-def enforce_question_rate_limit(request: Request) -> None:
-    """Limite próprio de `/pergunta`, mais baixo que o geral: cada pergunta gasta uma chamada grande ao LLM."""
-    limiter: RateLimiter = request.app.state.question_limiter
+def enforce_llm_rate_limit(request: Request) -> None:
+    """Limite próprio das rotas que sempre chamam o LLM (`/pergunta` e `/sentimento/llm`), mais baixo que o geral (ADR 0033)."""
+    limiter: RateLimiter = request.app.state.llm_limiter
     limiter(request)
 
 

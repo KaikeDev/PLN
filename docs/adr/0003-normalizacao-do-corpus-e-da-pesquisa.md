@@ -1,4 +1,4 @@
-# 0003 — Normalizações distintas para corpus e pesquisa
+# 0003. Normalizações distintas para corpus e pesquisa
 
 - Estado: Aceita
 - Data: 2026-09-14 (decisão original na Etapa 1, 12/09/2026)

@@ -1,4 +1,4 @@
-# 0013 — Ambiente, testes, lint, tipos e CI
+# 0013. Ambiente, testes, lint, tipos e CI
 
 - Estado: Aceita
 - Data: 2026-09-14

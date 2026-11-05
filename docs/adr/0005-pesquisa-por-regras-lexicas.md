@@ -1,4 +1,4 @@
-# 0005 — Pesquisa auxiliar por regras léxicas e heurísticas explícitas
+# 0005. Pesquisa auxiliar por regras léxicas e heurísticas explícitas
 
 - Estado: Aceita
 - Data: 2026-09-14 (regras originais do protótipo, revisadas na Etapa 1)

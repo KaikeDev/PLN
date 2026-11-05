@@ -20,7 +20,7 @@ def extract(
     extractor: Annotated[EntityExtractor | None, Depends(get_entity_extractor)],
     texto: Annotated[str, Query(min_length=1, max_length=MAX_TEXT_CHARS, description="Sinopse ou outro texto em português")],
 ) -> EntitiesResponse:
-    """Pessoas, lugares, organizações e outras menções do texto, e as triplas sujeito — relação → objeto."""
+    """Pessoas, lugares, organizações e outras menções do texto, e as triplas sujeito → relação → objeto."""
     if extractor is None:
         raise HTTPException(status.HTTP_503_SERVICE_UNAVAILABLE, detail="Entidades e relações indisponíveis")
     try:

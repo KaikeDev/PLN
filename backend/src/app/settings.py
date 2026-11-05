@@ -25,7 +25,8 @@ class Settings(BaseSettings):
     ADR 0024), com os vetores das sinopses já calculados; sem o catálogo, a API usa a amostra avaliada
     (`sample_*_dir`, 428 filmes). O classificador da tela é sempre treinado na amostra avaliada, e a análise de sentimento, nas críticas
     preparadas (`sentiment_processed_dir`, ADR 0026).
-    `synopsis_search` falso desliga o carregamento dos modelos na inicialização.
+    `synopsis_search` falso desliga o carregamento dos modelos na inicialização. Com `serve_frontend`, a API também
+    serve as telas de `frontend_dir` na mesma origem, como no contêiner publicado (ADR 0033).
     """
 
     model_config = SettingsConfigDict(env_file=BACKEND_DIR / ".env", env_file_encoding="utf-8", extra="ignore")
@@ -36,7 +37,9 @@ class Settings(BaseSettings):
     tmdb_timeout: float = Field(10.0, gt=0, le=60)
     cors_origins: list[str] = ["http://127.0.0.1:5500", "http://localhost:5500"]
     rate_limit_per_minute: int = Field(60, ge=1, le=10_000)
-    question_rate_limit_per_minute: int = Field(5, ge=1, le=1_000)
+    llm_rate_limit_per_minute: int = Field(5, ge=1, le=1_000)
+    serve_frontend: bool = False
+    frontend_dir: Path = REPOSITORY_DIR / "frontend"
     rag_config: Path = REPOSITORY_DIR / "config" / "rag" / "rag.json"
     typesafe_api_key: SecretStr | None = None
     gemini_api_key: SecretStr | None = None

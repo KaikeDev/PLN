@@ -2,7 +2,8 @@
 
 A API repassa chamadas ao TMDB com a credencial do servidor; o limite impede que um cliente local
 esgote a cota. O estado fica em memória do processo e o cliente é identificado pelo IP da conexão
-(ADR 0002). Excedido o limite, a resposta é 429 com `Retry-After`.
+(ADR 0002); no Space, com `--proxy-headers`, esse IP é o do visitante, vindo de `X-Forwarded-For` (ADR 0033).
+Excedido o limite, a resposta é 429 com `Retry-After`.
 """
 
 import math

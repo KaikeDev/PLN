@@ -1,4 +1,4 @@
-# 0001 — Registrar decisões em ADRs
+# 0001. Registrar decisões em ADRs
 
 - Estado: Aceita
 - Data: 2026-09-14

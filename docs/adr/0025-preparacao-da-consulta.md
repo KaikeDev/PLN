@@ -1,4 +1,4 @@
-# 0025 — Preparação da consulta da busca por tema
+# 0025. Preparação da consulta da busca por tema
 
 - Estado: Aceita
 - Data: 2026-10-05

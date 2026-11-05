@@ -1,6 +1,6 @@
-# 0002 — Credencial do TMDB, configuração e exposição da API local
+# 0002. Credencial do TMDB, configuração e exposição da API local
 
-- Estado: Aceita
+- Estado: Aceita; o item 4 (exposição só em `127.0.0.1`) foi parcialmente substituído pela [ADR 0033](0033-publicacao-no-hugging-face-spaces.md) no site publicado
 - Data: 2026-09-14
 
 ## Contexto

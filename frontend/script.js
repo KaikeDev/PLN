@@ -1,6 +1,10 @@
 "use strict";
 
-const API_BASE = document.querySelector('meta[name="api-base"]').content.replace(/\/$/, "");
+// Vazio = mesma origem (a API serve o frontend, ADR 0033). Aberto pelo servidor estático da porta 5500 (modo local de dois terminais), usa a API em 127.0.0.1:8000.
+const API_BASE_META = document.querySelector('meta[name="api-base"]').content.replace(/\/$/, "");
+const API_BASE = API_BASE_META || (location.port === "5500" ? `http://${location.hostname === "localhost" ? "localhost" : "127.0.0.1"}:8000` : "");
+const SAUDE_TENTATIVAS = 24;
+const SAUDE_INTERVALO_MS = 5000;
 const TMDB_IMAGE_BASE = "https://image.tmdb.org/t/p/w200";
 const SEM_POSTER = "sem-poster.svg";
 const POSTER_PATH = /^\/[\w.-]+$/;
@@ -93,6 +97,7 @@ const EXEMPLOS = [
 ];
 let proximoExemplo = 0;
 let aberturaAtual = 0;
+let focoAntesDoModal = null;
 let exemploAtual = null;
 
 function elemento(tag, { classe, texto, atributos = {} } = {}, filhos = []) {
@@ -118,17 +123,32 @@ function nota(valor) {
   return Number.isFinite(numero) ? numero.toFixed(1) : "0.0";
 }
 
+function mensagemDeErro(status, detalhe, mensagemPadrao, retryAfter) {
+  if (status === 429) {
+    const espera = Number(retryAfter);
+    return `Muitas requisições em pouco tempo; tente de novo${Number.isFinite(espera) && espera > 0 ? ` em ${espera} s` : " em instantes"}.`;
+  }
+  if (status === 502 || status === 504) return "O TMDB não respondeu agora. A busca por tema, as perguntas, a classificação e o sentimento continuam funcionando.";
+  if (status === 503 && /\((cota|orcamento)\)/.test(detalhe ?? "")) return "A cota gratuita de IA do dia acabou. As funções sem IA continuam funcionando; tente de novo amanhã.";
+  if (status === 503 && /\(timeout\)/.test(detalhe ?? "")) return "O provedor de IA demorou demais para responder; tente de novo.";
+  return typeof detalhe === "string" ? detalhe : mensagemPadrao;
+}
+
 async function obterJson(caminho, mensagemPadrao) {
-  const resposta = await fetch(`${API_BASE}${caminho}`, { headers: { accept: "application/json" } });
+  let resposta;
+  try {
+    resposta = await fetch(`${API_BASE}${caminho}`, { headers: { accept: "application/json" } });
+  } catch {
+    throw new Error("Sem resposta do servidor. Se o site estava parado, ele leva cerca de 1 minuto para acordar; tente de novo.");
+  }
   const dados = await resposta.json().catch(() => ({}));
   if (!resposta.ok) {
-    const detalhe = typeof dados.detail === "string" ? dados.detail : mensagemPadrao;
-    throw new Error(detalhe);
+    throw new Error(mensagemDeErro(resposta.status, dados.detail, mensagemPadrao, resposta.headers.get("Retry-After")));
   }
   return dados;
 }
 
-async function verificarSaude() {
+async function verificarSaude(tentativa = 1) {
   try {
     const dados = await obterJson("/saude", "offline");
     const catalogo = dados.catalogo;
@@ -143,7 +163,13 @@ async function verificarSaude() {
       elAvisoCatalogo.hidden = true;
     }
   } catch {
-    elStatus.textContent = "servidor offline (rode o uvicorn)";
+    if (tentativa < SAUDE_TENTATIVAS) {
+      elStatus.textContent = "servidor acordando… (até 1 minuto)";
+      elStatus.className = "status status--pendente";
+      setTimeout(() => verificarSaude(tentativa + 1), SAUDE_INTERVALO_MS);
+      return;
+    }
+    elStatus.textContent = API_BASE ? "servidor offline (rode o uvicorn)" : "servidor offline";
     elStatus.className = "status status--erro";
   }
 }
@@ -360,7 +386,7 @@ function criarCard(filme) {
     elemento("img", { atributos: { src: urlPoster(filme.poster_path), alt: `Pôster de ${titulo}`, loading: "lazy" } }),
     elemento("div", { classe: "card__corpo" }, [
       elemento("p", { classe: "card__titulo", texto: titulo }),
-      elemento("p", { classe: "card__meta", texto: `${anoDe(filme.release_date)} · ⭐ ${nota(filme.vote_average)}` }),
+      elemento("p", { classe: "card__meta", texto: `${anoDe(filme.release_date)} · nota ${nota(filme.vote_average)}` }),
     ]),
   ]);
   const abrir = () => abrirDetalhes(filme.id);
@@ -452,7 +478,7 @@ function listaRelacoes(relacoes) {
     relacoes.map((tripla) =>
       elemento("li", { classe: "relacao" }, [
         elemento("span", { classe: "relacao__argumento", texto: String(tripla.sujeito) }),
-        elemento("span", { classe: "relacao__verbo", texto: `— ${tripla.relacao} →` }),
+        elemento("span", { classe: "relacao__verbo", texto: `→ ${tripla.relacao} →` }),
         elemento("span", { classe: "relacao__argumento", texto: String(tripla.objeto) }),
       ]),
     ),
@@ -476,7 +502,7 @@ async function carregarEntidades(sinopse, secao, abertura) {
     corpo.replaceWith(
       textoMarcado(texto.slice(0, LIMITE_ENTIDADES), entidades),
       gruposEntidades(entidades),
-      elemento("h4", { classe: "entidades__subtitulo", texto: "Relações (sujeito — relação → objeto)" }),
+      elemento("h4", { classe: "entidades__subtitulo", texto: "Relações (sujeito → relação → objeto)" }),
       listaRelacoes(relacoes),
       elemento("p", { classe: "parecidos__aviso", texto: `Pelo spaCy ${dados.modelo}, com as regras de dependência da Aula 9. São previsões do modelo: confira com a sinopse.` }),
     );
@@ -522,6 +548,7 @@ async function carregarParecidos(filmeId, secao, abertura) {
 
 async function abrirDetalhes(filmeId) {
   const abertura = ++aberturaAtual;
+  if (elModal.classList.contains("oculto")) focoAntesDoModal = document.activeElement;
   elModalCorpo.replaceChildren(elemento("p", { texto: "Carregando..." }));
   elModal.classList.remove("oculto");
   elFecharModal.focus();
@@ -540,7 +567,25 @@ async function abrirDetalhes(filmeId) {
 }
 
 function fecharModal() {
+  if (elModal.classList.contains("oculto")) return;
   elModal.classList.add("oculto");
+  if (focoAntesDoModal instanceof HTMLElement && document.contains(focoAntesDoModal)) focoAntesDoModal.focus();
+  focoAntesDoModal = null;
+}
+
+function prenderFoco(evento) {
+  if (evento.key !== "Tab" || elModal.classList.contains("oculto")) return;
+  const focaveis = Array.from(elModal.querySelectorAll('button, [href], [tabindex]:not([tabindex="-1"])')).filter((el) => !el.disabled && el.offsetParent !== null);
+  if (focaveis.length === 0) return;
+  const primeiro = focaveis[0];
+  const ultimo = focaveis[focaveis.length - 1];
+  if (evento.shiftKey && document.activeElement === primeiro) {
+    evento.preventDefault();
+    ultimo.focus();
+  } else if (!evento.shiftKey && document.activeElement === ultimo) {
+    evento.preventDefault();
+    primeiro.focus();
+  }
 }
 
 elForm.addEventListener("submit", async (evento) => {
@@ -623,9 +668,11 @@ elExemploCritica.addEventListener("click", () => {
 for (const aba of elAbas) {
   aba.addEventListener("click", () => selecionarAba(aba));
   aba.addEventListener("keydown", (evento) => {
-    if (evento.key !== "ArrowRight" && evento.key !== "ArrowLeft") return;
+    if (!["ArrowRight", "ArrowLeft", "Home", "End"].includes(evento.key)) return;
+    evento.preventDefault();
     const passo = evento.key === "ArrowRight" ? 1 : -1;
-    const proxima = elAbas[(elAbas.indexOf(aba) + passo + elAbas.length) % elAbas.length];
+    const proxima =
+      evento.key === "Home" ? elAbas[0] : evento.key === "End" ? elAbas[elAbas.length - 1] : elAbas[(elAbas.indexOf(aba) + passo + elAbas.length) % elAbas.length];
     selecionarAba(proxima);
     proxima.focus();
   });
@@ -637,9 +684,34 @@ elModal.addEventListener("click", (evento) => {
 });
 document.addEventListener("keydown", (evento) => {
   if (evento.key === "Escape") fecharModal();
+  prenderFoco(evento);
 });
 
+for (const botao of document.querySelectorAll("[data-exemplo-busca]")) {
+  botao.addEventListener("click", () => {
+    elTitulo.value = botao.dataset.exemploBusca;
+    elAno.value = "";
+    elModo.value = "auto";
+    elForm.requestSubmit();
+  });
+}
+
 verificarSaude();
+carregarResultados()
+  .then(resumirRag)
+  .catch(() => {});
+
+function resumirRag(dados) {
+  const rag = dados.unidade_4?.rag;
+  const contexto = (rag?.contextos ?? []).find((item) => item.filmes === 8) ?? rag?.contextos?.[0];
+  if (!rag || !contexto) return;
+  const recusas = rag.perguntas?.sem_resposta;
+  const partes = [
+    `nas 20 consultas anotadas, ${formatarNumero(contexto.precisao_dos_citados, "pct0")} dos filmes citados são relevantes, contra ${formatarNumero(rag.busca_precisao_5, "pct0")} dos 5 primeiros da busca sozinha`,
+  ];
+  if (recusas) partes.push(`recusou ${recusas.recusou} de ${recusas.perguntas} perguntas sem resposta no catálogo`);
+  document.getElementById("resumo-rag").textContent = `${partes.join("; ")}.`;
+}
 
 function perguntar(texto) {
   return obterJson(`/pergunta?${new URLSearchParams({ q: texto })}`, "Falha ao responder a pergunta.");
