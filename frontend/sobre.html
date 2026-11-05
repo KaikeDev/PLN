@@ -181,7 +181,7 @@
             <tr><th scope="row">Classificação</th><td>Alcançado</td><td>F1 macro de <span data-resultado="unidades_anteriores.classificacao.melhor_f1" data-formato="pct1">…</span>; Jev com <span data-resultado="unidades_anteriores.classificacao.jev_acuracia" data-formato="pct1">…</span> de acurácia</td></tr>
             <tr><th scope="row">Sentimento e entidades</th><td>Alcançado</td><td>F1 de <span data-resultado="unidades_anteriores.sentimento.bertimbau_f1" data-formato="pct1">…</span>; <span data-resultado="unidades_anteriores.entidades.triplas" data-formato="int">…</span> triplas extraídas</td></tr>
             <tr><th scope="row">Técnica avançada com comparação</th><td>Alcançado</td><td>Três comparações com o que já existia (seção 7), inclusive onde não houve ganho</td></tr>
-            <tr><th scope="row">Demonstração online</th><td>Alcançado</td><td>Site publicado no Hugging Face Spaces, com reserva estática desta página</td></tr>
+            <tr><th scope="row">Demonstração online</th><td>Alcançado</td><td>Site publicado no Hugging Face Spaces</td></tr>
           </tbody>
         </table>
       </div>
@@ -241,9 +241,9 @@
       <ul>
         <li><strong>TMDB:</strong> token de leitura gratuito; a busca por título e a ficha dependem dele. Se o TMDB cair, a busca por tema, as perguntas, a classificação e o sentimento continuam (dados locais).</li>
         <li><strong>Gemini e Groq:</strong> cota gratuita, sem cartão. O site tem um orçamento diário abaixo da cota (seção 11) e um limite de 5 chamadas de LLM por minuto por visitante. Quando a cota acaba, a interpretação cai para as regras, e "Perguntar" e "Comparar com IA" mostram as respostas gravadas. O plano gratuito do Gemini pode usar as entradas para melhorar o produto: não digite dados pessoais.</li>
-        <li><strong>Hugging Face Spaces:</strong> CPU gratuita; o servidor dorme quando ninguém usa e leva cerca de 1 minuto para acordar.</li>
+        <li><strong>Hugging Face Spaces:</strong> Space Docker, que exige o plano PRO (US$ 9 por mês), no hardware CPU Basic, sem custo por hora; o servidor dorme quando ninguém usa e leva cerca de 1 minuto para acordar.</li>
         <li><strong>Modelos locais:</strong> MiniLM, spaCy e os classificadores carregam na inicialização e treinam na hora (segundos), sem GPU. A memória e o arranque medidos no servidor estão em <code>docs/tecnico/validacao.md</code>.</li>
-        <li><strong>Custo em dinheiro:</strong> zero. O Jev (Aula 8) é pago por chamada e por isso não é usado no site.</li>
+        <li><strong>Custo em dinheiro:</strong> US$ 9 por mês do plano PRO do Hugging Face, para manter o site publicado. TMDB, Gemini e Groq são usados sem custo. O Jev (Aula 8) é pago por chamada e por isso não é usado no site.</li>
       </ul>
     </section>
 

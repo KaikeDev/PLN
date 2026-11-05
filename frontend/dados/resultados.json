@@ -126,7 +126,7 @@
     {
       "tecnologia": "Modelos locais ou quantizados",
       "utilizada": "Parcial",
-      "justificativa": "Locais, sim: MiniLM, BERTimbau, word2vec NILC e spaCy rodam na máquina, sem API, com revisão fixada. Quantizados, não: um LLM local quantizado foi descartado para a demonstração, porque na CPU gratuita do servidor seria lento demais e mais fraco em português. Fica como trabalho futuro."
+      "justificativa": "Locais, sim: MiniLM, BERTimbau, word2vec NILC e spaCy rodam na máquina, sem API, com revisão fixada. Quantizados, não: um LLM local quantizado foi descartado para a demonstração, porque na CPU do servidor seria lento demais e mais fraco em português. Fica como trabalho futuro."
     },
     {
       "tecnologia": "Processamento multimodal (texto, imagem, áudio)",

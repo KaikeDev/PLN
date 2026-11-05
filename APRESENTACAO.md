@@ -144,7 +144,7 @@ Três técnicas com LLM (Gemini por API gratuita, com o Groq de reserva), **cada
 - **O que só o LLM faz:** responder "o que acharam de Oppenheimer?" juntando sinopse e críticas, com citações que abrem a ficha do filme.
 - **Onde não melhorou:** separar o tema da frase pelo LLM não melhorou a busca. No sentimento, o few-shot não superou o zero-shot e gasta 60% mais tokens.
 - **Custo:** cota gratuita, segundos de latência e respostas que variam. Por isso o site cai para as regras e para respostas gravadas quando o LLM falha.
-- **Publicação:** Hugging Face Spaces (Docker, CPU gratuita), um processo servindo a API e as páginas, com limite de chamadas de LLM por visitante e orçamento diário ([ADR 0033](docs/adr/0033-publicacao-no-hugging-face-spaces.md)).
+- **Publicação:** Hugging Face Spaces (Docker, hardware CPU Basic, plano PRO de US$ 9 por mês), um processo servindo a API e as páginas, com limite de chamadas de LLM por visitante e orçamento diário ([ADR 0033](docs/adr/0033-publicacao-no-hugging-face-spaces.md)).
 
 ## 8. Roteiro da demonstração
 

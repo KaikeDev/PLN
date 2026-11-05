@@ -56,7 +56,7 @@ Nenhuma representação vence todas as tarefas: o embedding de sentença é o me
 | Modelos pré-treinados (locais, com revisão fixada) | `sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2`, `neuralmind/bert-base-portuguese-cased` (BERTimbau), word2vec CBOW e skip-gram do NILC (300 dimensões) |
 | LLM no processamento | Por API gratuita: Google Gemini (`gemini-flash-lite-latest`, que respondeu como `gemini-3.5-flash-lite`) como principal e Groq (`openai/gpt-oss-20b`) como reserva; temperatura 0, saída JSON validada e orçamento diário ([`config/llm/llm.json`](config/llm/llm.json), [ADR 0029](docs/adr/0029-base-de-llm-por-api-gratuita.md)). Na Aula 8, o Jev (TypeSafe AI), pago por chamada e fora do site |
 | Site | FastAPI e Uvicorn servindo a API e as páginas na mesma origem; dados do TMDB pela API oficial |
-| Hospedagem | Hugging Face Spaces (Docker, CPU gratuita), com o catálogo num dataset público do Hugging Face ([ADR 0033](docs/adr/0033-publicacao-no-hugging-face-spaces.md)) |
+| Hospedagem | Hugging Face Spaces (Docker, hardware CPU Basic, plano PRO de US$ 9 por mês), com o catálogo num dataset público do Hugging Face ([ADR 0033](docs/adr/0033-publicacao-no-hugging-face-spaces.md)) |
 | Qualidade | `unittest` sem rede, ruff, mypy, manifestos com SHA-256 conferidos por `verify` e GitHub Actions |
 
 Versões exatas em [`backend/uv.lock`](backend/uv.lock) e na seção 11 da página "Sobre o projeto".

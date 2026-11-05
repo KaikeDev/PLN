@@ -131,7 +131,7 @@ Planejamento da etapa final: o que o enunciado pede, o que o projeto já tem, o 
 | Vercel / Netlify (serverless) | — | Não | Limite de tamanho de função e arranque a frio |
 | GitHub Pages | — | Só estático | Serve só a Modalidade A. Fica como **link de reserva** para a página "Sobre" (spec 04) |
 
-Confiram no painel do Hugging Face os limites atuais do plano gratuito no momento da publicação.
+Atualização de 05/11/2026: o Space Docker passou a exigir o plano PRO (US$ 9 por mês), e o grupo decidiu pagá-lo ([ADR 0033](../../adr/0033-publicacao-no-hugging-face-spaces.md)).
 
 ---
 

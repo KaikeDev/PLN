@@ -35,7 +35,7 @@ Na orientação em vídeo de 31/08/2026, o professor pede representações suces
 | Interpretação da consulta | Filtros extraídos por LLM few-shot com saída estruturada; regras como reserva em falha ou após 4 s | [0030](../adr/0030-interpretacao-da-consulta-por-llm.md) |
 | Sentimento com LLM | Zero-shot, few-shot e sem justificativa × TF-IDF × BERTimbau nas mesmas 200 críticas; botão "Comparar com IA" na tela | [0031](../adr/0031-sentimento-com-llm.md) |
 | RAG | Busca híbrida existente como recuperador (k = 8), trechos de crítica, citações por id conferidas e defesas contra injeção | [0032](../adr/0032-rag-perguntas-sobre-filmes.md) |
-| Publicação | Hugging Face Spaces (Docker, CPU gratuita), mesma origem, `0.0.0.0` atrás do proxy com limites, PyTorch CPU e catálogo por dataset | [0033](../adr/0033-publicacao-no-hugging-face-spaces.md) |
+| Publicação | Hugging Face Spaces (Docker, CPU Basic, plano PRO), mesma origem, `0.0.0.0` atrás do proxy com limites, PyTorch CPU e catálogo por dataset | [0033](../adr/0033-publicacao-no-hugging-face-spaces.md) |
 | Páginas do site | Identificação em todas as páginas, "Sobre o projeto" com números gerados de `data/`, gráficos SVG sem biblioteca e página estática de reserva | [0034](../adr/0034-paginas-do-site-e-sobre-o-projeto.md) |
 | Código | Camadas com portas e adaptadores; identificadores em inglês e contrato em português; ruff, mypy e CI | [0004](../adr/0004-arquitetura-em-camadas.md), [0008](../adr/0008-idioma-do-codigo-e-do-contrato.md), [0013](../adr/0013-ferramentas-de-qualidade.md) |
 

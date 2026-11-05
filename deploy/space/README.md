@@ -35,6 +35,10 @@ O restante deste arquivo é para quem mantém o site: como publicar e manter o S
 | `config/`, `frontend/` | Inteiros |
 | `data/` | Só o que a API lê: a amostra avaliada (`coleta`, `preparacao` e `representacoes` de `tmdb_2026-09-12`) e as críticas (`coleta/criticas_2026-10-10`). O catálogo do site vem do dataset (abaixo), e as críticas são preparadas no build |
 
+## Plano
+
+Spaces Docker exigem o plano PRO (US$ 9 por mês) na conta dona do Space; o hardware CPU Basic não tem custo por hora.
+
 ## Segredos do Space
 
 Em *Settings → Variables and secrets → New secret* do Space, como **segredos** (nunca como variáveis públicas):

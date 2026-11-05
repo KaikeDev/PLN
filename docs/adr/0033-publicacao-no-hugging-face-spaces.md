@@ -18,7 +18,7 @@ A API carrega o MiniLM, o spaCy e os classificadores na memória, cerca de 2 GB.
 
 ## Decisão
 
-- **Hospedagem: Hugging Face Spaces, Docker, CPU gratuita.** São 16 GB de memória, segredos por Space e um link estável (`https://huggingface.co/spaces/<conta>/<nome>`). O Space dorme quando fica sem visitas e acorda em cerca de 1 minuto; a tela mostra que o servidor está acordando.
+- **Hospedagem: Hugging Face Spaces, Docker, hardware CPU Basic.** Quando esta decisão foi escrita, o Space Docker era gratuito. Na publicação, em 05/11/2026, ele já exigia o plano PRO (US$ 9 por mês), e o grupo decidiu pagar um plano em vez de mudar a hospedagem; o hardware continua sem custo por hora. São 16 GB de memória, segredos por Space e um link estável (`https://huggingface.co/spaces/<conta>/<nome>`). O Space dorme quando fica sem visitas e acorda em cerca de 1 minuto; a tela mostra que o servidor está acordando.
 - **Mesma origem.** Com `SERVE_FRONTEND=true`, a API serve também `frontend/` (`StaticFiles` em `/`, montado **depois** das rotas, para não sombrear `/pesquisa` e as demais). São um processo e um link, sem CORS em produção, com CSP `connect-src 'self'`. O modo local de dois terminais continua igual: `serve_frontend` é falso por padrão.
 - **`0.0.0.0` só no contêiner, atrás do proxy.** O `uvicorn` roda com `--proxy-headers --forwarded-allow-ips "*"`: o contêiner só recebe tráfego pelo proxy do Space, então `request.client.host` passa a ser o IP real do visitante (`X-Forwarded-For`). Um único processo (`--workers 1`), porque os limites, o cache e o orçamento ficam em memória.
 - **Três camadas contra abuso de cota:**
@@ -51,6 +51,8 @@ Credencial só em cabeçalho, `SecretStr`, erros sem URL e o `.gitignore` contin
 ## Alternativas consideradas
 
 - **Render ou Railway gratuitos:** 512 MB não bastam para o MiniLM e o spaCy.
+- **Azure for Students ou Google Cloud Run:** cobrem a memória sem mensalidade, mas exigiriam adaptar e testar outra publicação.
+- **Mudar para a Modalidade A (pôster estático):** gratuita, mas sem demonstração interativa no link público.
 - **Vercel ou Netlify (*serverless*):** limite de tamanho de função e arranque a frio a cada chamada, com os modelos carregados de novo.
 - **GitHub Pages:** só serve arquivos estáticos (Modalidade A). Fica como reserva para a página "Sobre" (spec 05).
 - **Dois serviços (telas estáticas + API) com CORS:** dois links, CSP com o domínio da API e CORS em produção, sem ganho.
@@ -61,6 +63,7 @@ Credencial só em cabeçalho, `SecretStr`, erros sem URL e o `.gitignore` contin
 ## Consequências
 
 - O site tem link público, e os visitantes não instalam nada.
+- A publicação custa US$ 9 por mês enquanto o site precisar ficar no ar, pelo menos até o fim da Mostra.
 - O primeiro acesso depois de um tempo parado espera o Space acordar (cerca de 1 minuto). No dia da Mostra, o link deve ser aberto uns 10 minutos antes.
 - `X-Forwarded-For` só é confiável porque o contêiner não é alcançável fora do proxy do Space. Rodando a imagem em outro lugar, sem proxy, `--forwarded-allow-ips "*"` deixaria o visitante escolher o próprio IP e contornar o limite por IP. Nesse caso, o orçamento diário global continua valendo.
 - O catálogo é redistribuído num dataset público, com a atribuição ao TMDB e o aviso de uso acadêmico.
