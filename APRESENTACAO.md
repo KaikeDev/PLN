@@ -2,7 +2,7 @@
 
 **Sinopses de filmes: do corpus ao LLM (PLN 2026/2)**
 
-Site publicado: *a preencher depois da publicação ([passos](deploy/space/README.md))* (Mostra Virtual de PLN, Modalidade B)
+Site publicado: <https://huggingface.co/spaces/joabeba/pln-trabalho-final> (Mostra Virtual de PLN, Modalidade B)
 
 Equipe: Kaike Ventura Tuerpe, Luana Nitsche, Pedro Henrique Ortunio e Thiago Bodnar (Ciência da Computação, FURB).
 
@@ -150,7 +150,7 @@ Três técnicas com LLM (Gemini por API gratuita, com o Groq de reserva), **cada
 
 > **Antes da apresentação:** abra o link público uns 10 minutos antes, porque o Space dorme sem visitas e leva cerca de 1 minuto para acordar. O indicador no topo deve ficar verde, com o número de filmes do catálogo (5.458). Reservas: a página "Sobre" estática e o site rodando localmente ([rodar-o-site.md](docs/tecnico/rodar-o-site.md)). Os filmes dos exemplos abaixo vieram do catálogo de outubro; com o catálogo publicado, alguns podem mudar de posição.
 
-No link público (*a preencher depois da publicação ([passos](deploy/space/README.md))*) ou localmente, em <http://127.0.0.1:5500>:
+No link público (<https://huggingface.co/spaces/joabeba/pln-trabalho-final>) ou localmente, em <http://127.0.0.1:5500>:
 
 **Cabeçalho e "Sobre o projeto"**
 

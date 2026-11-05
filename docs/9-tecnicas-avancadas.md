@@ -98,7 +98,7 @@ Os três filmes citados estão no contexto e as frases vêm das sinopses, mas um
 - **Avaliação na amostra:** todas as métricas são da amostra de 428 filmes; o catálogo do site não tem gabarito.
 - **Anotações internas:** a primeira redação das 50 frases e das perguntas do RAG teve apoio de IA e foi revisada pela equipe; não houve avaliadores externos.
 - **Cota e não determinismo:** com temperatura 0, até 5 de 50 interpretações mudaram entre duas execuções. A cota gratuita do Gemini acabou durante a avaliação do sentimento e o serviço devolveu 503 durante a do RAG; a reserva no Groq cobriu parte dessas falhas.
-- **Fidelidade:** a conferência garante só que os filmes citados estão no contexto; a fidelidade de cada frase depende do julgamento humano, que ainda não tinha sido feito em 01/11/2026.
+- **Fidelidade:** a conferência garante só que os filmes citados estão no contexto; a fidelidade de cada frase depende do julgamento humano, feito depois da avaliação por dois integrantes, com a rubrica.
 
 ## Como executar
 

@@ -1,7 +1,6 @@
 # Sinopses de filmes: do corpus ao LLM (PLN 2026/2)
 
-> **Site publicado (Mostra Virtual de PLN): *a preencher depois da publicação ([passos](deploy/space/README.md))***
-> Reserva estática da página "Sobre o projeto": *GitHub Pages com `frontend/`, a configurar* · Vídeo da demonstração: *a gravar*
+> **Site publicado (Mostra Virtual de PLN): <https://huggingface.co/spaces/joabeba/pln-trabalho-final>**
 
 Sinopses e críticas de filmes do TMDB coletadas, preparadas, transformadas em oito representações e usadas em **oito tarefas de PLN**: busca, recomendação, agrupamento com visualização, classificação, análise de sentimentos e entidades e relações e, na Unidade 4, **LLMs** na interpretação da consulta, no sentimento e em perguntas com **RAG**. O site de demonstração (Modalidade B, aplicação web) usa a busca, os filmes parecidos, a classificação, o sentimento, as entidades e as perguntas, e traz a página "Sobre o projeto" com a metodologia, os resultados e a avaliação crítica.
 

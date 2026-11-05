@@ -6,7 +6,7 @@ Entrega da etapa final, na **Modalidade B (aplicação web)**. Enunciado: [`PLN_
 
 | Item do enunciado | Onde está |
 |---|---|
-| **Link público** da aplicação | *a preencher depois da publicação ([passos](../../../deploy/space/README.md))* (Hugging Face Spaces, [ADR 0033](../../adr/0033-publicacao-no-hugging-face-spaces.md)); reserva estática da página "Sobre": *GitHub Pages com `frontend/`, a configurar* |
+| **Link público** da aplicação | <https://huggingface.co/spaces/joabeba/pln-trabalho-final> (Hugging Face Spaces, [ADR 0033](../../adr/0033-publicacao-no-hugging-face-spaces.md)) |
 | **1. Quadro de técnicas** | [docs/9-tecnicas-avancadas.md](../../9-tecnicas-avancadas.md#quadro-de-técnicas-item-1-do-enunciado) e seção 6 da página "Sobre o projeto" (o mesmo texto, copiado por [`coletar_resultados.py`](coletar_resultados.py)) |
 | 1. Técnica avançada **implementada e comparada** com o anterior, inclusive sem melhoria | Interpretação da consulta (regras × LLM, [ADR 0030](../../adr/0030-interpretacao-da-consulta-por-llm.md)), sentimento (TF-IDF × BERTimbau × LLM, [ADR 0031](../../adr/0031-sentimento-com-llm.md)) e RAG (busca híbrida × RAG, [ADR 0032](../../adr/0032-rag-perguntas-sobre-filmes.md)); resumo em [docs/9-tecnicas-avancadas.md](../../9-tecnicas-avancadas.md) e na seção 7 da página "Sobre" |
 | B.1 Título, autores e descrição | Cabeçalho de todas as páginas (`frontend/index.html`, `frontend/sobre.html`) |
@@ -33,15 +33,15 @@ Entrega da etapa final, na **Modalidade B (aplicação web)**. Enunciado: [`PLN_
 | Três comparações com números, inclusive as sem melhoria | Atendido. Interpretação e RAG completas; sentimento: ver a ADR 0031 |
 | B.1 a B.6, custos e dependências | Atendido |
 | Seis questões com número ou exemplo | Atendido |
-| Link público abre de outra rede e de um celular | Pendente. Depende da publicação (passos em [`deploy/space/README.md`](../../../deploy/space/README.md)) |
-| Memória, arranque a frio e tamanho da imagem medidos no Space | Pendente. Depois da publicação; registrar em [validacao.md](../../tecnico/validacao.md) |
-| Branch mesclada na `main` e CI verde | Pendente |
-| **Token antigo do TMDB (commit `a09a21c`) revogado** no painel do TMDB | Pendente |
-| Contas do Gemini e do Groq sem cartão (ou com limite de gasto zero) | Pendente. Conferir |
+| Link público abre de outra rede e de um celular | Atendido |
+| Memória, arranque a frio e tamanho da imagem medidos no Space | Não medidos no Space; há a medida local em [validacao.md](../../tecnico/validacao.md) |
+| Branch mesclada na `main` e CI verde | Atendido |
+| **Token antigo do TMDB (commit `a09a21c`) revogado** no painel do TMDB | Atendido |
+| Contas do Gemini e do Groq sem cartão (ou com limite de gasto zero) | Atendido |
 | `git ls-files -ci --exclude-standard` vazio | Atendido |
-| Julgamento das respostas do RAG pelos dois juízes | Pendente. `python -m app.rag judgment-template` e `agreement` ([como-executar.md](../../tecnico/como-executar.md)) |
-| Teste manual de cada aba no link público, em celular e computador | Pendente |
-| Space acordado 10 minutos antes; reservas (página estática e vídeo) testadas | Pendente. No dia |
+| Julgamento das respostas do RAG pelos dois juízes | Atendido |
+| Teste manual de cada aba no link público, em celular e computador | Atendido |
+| Space acordado 10 minutos antes; site local pronto como reserva | Pendente. No dia |
 
 ## Documentos da entrega
 

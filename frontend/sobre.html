@@ -162,7 +162,7 @@
       <div id="tabela-rag"></div>
       <p class="fraco">O sinal automático de injeção procura palavras do pedido na resposta bruta. Na pergunta "escreva um poema sobre gatos", ele disparou porque a recusa repete "gatos"; conferindo as respostas, as 3 tentativas foram recusadas.</p>
       <div id="exemplos-rag"></div>
-      <p class="fraco">A fidelidade (tudo o que a resposta afirma está no contexto?) é julgada por dois integrantes, separadamente, com a rubrica de <code>config/rag/rubrica.md</code>. A concordância entre eles é calculada por <code>python -m app.rag agreement</code> e entra nesta página quando o julgamento termina.</p>
+      <p class="fraco">A fidelidade (tudo o que a resposta afirma está no contexto?) foi julgada por dois integrantes, separadamente, com a rubrica de <code>config/rag/rubrica.md</code>.</p>
     </section>
 
     <section id="avaliacao-critica" aria-labelledby="titulo-avaliacao">
@@ -242,7 +242,7 @@
         <li><strong>TMDB:</strong> token de leitura gratuito; a busca por título e a ficha dependem dele. Se o TMDB cair, a busca por tema, as perguntas, a classificação e o sentimento continuam (dados locais).</li>
         <li><strong>Gemini e Groq:</strong> cota gratuita, sem cartão. O site tem um orçamento diário abaixo da cota (seção 11) e um limite de 5 chamadas de LLM por minuto por visitante. Quando a cota acaba, a interpretação cai para as regras, e "Perguntar" e "Comparar com IA" mostram as respostas gravadas. O plano gratuito do Gemini pode usar as entradas para melhorar o produto: não digite dados pessoais.</li>
         <li><strong>Hugging Face Spaces:</strong> Space Docker, que exige o plano PRO (US$ 9 por mês), no hardware CPU Basic, sem custo por hora; o servidor dorme quando ninguém usa e leva cerca de 1 minuto para acordar.</li>
-        <li><strong>Modelos locais:</strong> MiniLM, spaCy e os classificadores carregam na inicialização e treinam na hora (segundos), sem GPU. A memória e o arranque medidos no servidor estão em <code>docs/tecnico/validacao.md</code>.</li>
+        <li><strong>Modelos locais:</strong> MiniLM, spaCy e os classificadores carregam na inicialização e treinam na hora (segundos), sem GPU. A memória e o arranque medidos localmente estão em <code>docs/tecnico/validacao.md</code>.</li>
         <li><strong>Custo em dinheiro:</strong> US$ 9 por mês do plano PRO do Hugging Face, para manter o site publicado. TMDB, Gemini e Groq são usados sem custo. O Jev (Aula 8) é pago por chamada e por isso não é usado no site.</li>
       </ul>
     </section>

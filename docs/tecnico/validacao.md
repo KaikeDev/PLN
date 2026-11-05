@@ -251,7 +251,7 @@ Decisões e resultados no [ADR 0032](../adr/0032-rag-perguntas-sobre-filmes.md);
 | Execução real | 179 chamadas, sem falha, em cerca de 50 minutos. O Gemini respondeu 114 e o Groq 12, nas vezes em que o Gemini devolveu HTTP 503 ou falhou a conexão. Latência mediana de 12 s e p95 de 124 s, inflados pelas novas tentativas. |
 | Métricas automáticas | Precisão dos citados de 0,95, 0,90 e 0,93 (k = 5, 10 e 20) contra 0,57 da busca; 5 de 5 perguntas sem resposta recusadas; 0 citações inventadas; 3 de 3 injeções recusadas (o sinal automático da do poema é falso positivo, conferido na resposta). |
 | Reprodução | `rag eval --reuse ../data/rag/2026-11-01` sem chaves fez 0 chamadas e gerou `metrics.json`, `predictions.jsonl`, `ranking.jsonl`, `report.md`, `responses.jsonl`, `without_reviews.jsonl` e `questions.json` idênticos byte a byte; `rag verify` confere a pasta no CI. |
-| Julgamento humano | Pendente: fidelidade, utilidade e citação correta pelos dois juízes (`judgment-template` e `agreement`). |
+| Julgamento humano | Feito pelos dois juízes: fidelidade, utilidade e citação correta, com a rubrica (`judgment-template` e `agreement`). |
 
 ## Unidade 4: Publicação e páginas do site (01/11/2026)
 
@@ -267,7 +267,7 @@ Decisões nas ADRs [0033](../adr/0033-publicacao-no-hugging-face-spaces.md) e [0
 | Acessibilidade (Lighthouse 12, modo celular) | Demonstração e "Sobre o projeto": 100 em Acessibilidade e 100 em Boas práticas (Lighthouse 12.8.2, no servidor local). Comando: `npx lighthouse@12 http://127.0.0.1:8000/ --only-categories=accessibility,best-practices`. Relatórios em [`acessibilidade/`](acessibilidade/). A primeira rodada apontou o favicon ausente (erro 404 no console) e os links do índice pequenos para toque; os dois foram corrigidos. |
 | Largura de 360 px | Medida com o Chrome em viewport de 360 px: a largura do documento é igual à da tela nas duas páginas (sem rolagem horizontal); as tabelas largas rolam dentro do próprio contêiner. |
 | Navegação por teclado | Abas por setas, Home e End; modal com foco preso, `Esc` e devolução do foco; link "Pular para o conteúdo". Conferido no código e nos testes do Lighthouse; a passada manual em cada aba fica no checklist da entrega. |
-| Imagem Docker e Space | Não construídas nesta máquina (sem Docker). O CI constrói a imagem sem o catálogo (`SKIP_CATALOG=1`). **Pendente de medir no Space publicado:** tamanho da imagem, memória em uso e arranque a frio. |
+| Imagem Docker e Space | Não construídas nesta máquina (sem Docker). O CI constrói a imagem sem o catálogo (`SKIP_CATALOG=1`). **Space publicado em 05/11/2026:** build de poucos minutos, `/saude` com 5.458 filmes e as rotas de busca, ficha, parecidos, classificação, sentimento, entidades e LLM respondendo no link público. Tamanho da imagem, memória em uso e arranque a frio não foram medidos no Space. |
 
 ## Limites da validação
 
